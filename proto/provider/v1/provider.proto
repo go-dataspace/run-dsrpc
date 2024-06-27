@@ -41,7 +41,7 @@ message PingRequest {}
 
 // PingResponse contains infomational data about the provider.
 message PingResponse {
-  string provider_name = 1;
+  string providerName = 1;
   string provider_description = 2;
   bool authenticated = 3;
 }
