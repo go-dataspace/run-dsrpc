@@ -1,0 +1,55 @@
+// Copyright 2024 go-dataspace
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+syntax = "proto3";
+
+package dsp.v1alpha1;
+
+import "google/protobuf/timestamp.proto";
+
+// Dataset represents a dataset. What exactly is in a dataset is up to the service.
+// An example of a dataset could be a file that's served, or multiple files
+// that are considered a set.
+message Dataset {
+  string id = 1;
+  string title = 2;
+  string access_methods = 3;
+  repeated Multilingual description = 4;
+  repeated string keywords = 5;
+  optional string creator = 6;
+  optional google.protobuf.Timestamp issued = 7;
+  optional google.protobuf.Timestamp modified = 8;
+  map<string, string> metadata = 9;
+}
+
+// PublishInfo represents a published file, where to get it and its authentication details.
+message PublishInfo {
+  string url = 1;
+  AuthenticationType authentication_type = 2;
+  string username = 3;
+  string password = 4;
+}
+
+// AuthenticationType represents the way to authenticate to get a published information.
+enum AuthenticationType {
+  AUTHENTICATION_TYPE_UNSPECIFIED = 0;
+  AUTHENTICATION_TYPE_BEARER = 1;
+  AUTHENTICATION_TYPE_BASIC = 2;
+}
+
+// Multilingual represents a message with language metadata attached.
+message Multilingual {
+  string value = 1;
+  string language = 2;
+}
