@@ -14,9 +14,9 @@
 
 syntax = "proto3";
 
-package provider.v1;
+package dsp.v1alpha1;
 
-import "google/protobuf/timestamp.proto";
+import "dsp/v1alpha1/types.proto";
 
 // The ProviderService is the expected grpc service that RUN-DSP will interface with.
 // Outside of the defined calls, RUN-DSP will also forward the `authorization` header.
@@ -33,6 +33,10 @@ service ProviderService {
   rpc PublishDataset(PublishDatasetRequest) returns (PublishDatasetResponse) {}
   // Unpublishes a dataset.
   rpc UnpublishDataset(UnpublishDatasetRequest) returns (UnpublishDatasetResponse) {}
+  // Asks provider to suspend a transfer
+  rpc SuspendPublishedDataset(SuspendPublishedDatasetRequest) returns (SuspendPublishedDatasetResponse) {}
+  // Asks provider to unsuspend (re-publish?) a transfer
+  rpc UnsuspendPublishedDataset(UnsuspendPublishedDatasetRequest) returns (UnsuspendPublishedDatasetResponse) {}
 }
 
 // PingRequest is an empty message, used instead of the Empty type in case we want
@@ -90,38 +94,18 @@ message UnpublishDatasetResponse {
   bool success = 1;
 }
 
-// Dataset represents a dataset. What exactly is in a dataset is up to the service.
-// An example of a dataset could be a file that's served, or multiple files
-// that are considered a set.
-message Dataset {
-  string id = 1;
-  string title = 2;
-  string access_methods = 3;
-  repeated Multilingual description = 4;
-  repeated string keywords = 5;
-  optional string creator = 6;
-  optional google.protobuf.Timestamp issued = 7;
-  optional google.protobuf.Timestamp modified = 8;
-  map<string, string> metadata = 9;
+// SuspendPublishedDatasetRequest contains the publish ID of the published dataset.
+message SuspendPublishedDatasetRequest {
+  string publish_id = 1;
 }
 
-// PublishInfo represents a published file, where to get it and its authentication details.
-message PublishInfo {
-  string url = 1;
-  AuthenticationType authentication_type = 2;
-  string username = 3;
-  string password = 4;
+// SuspendPublshedDatasetResponse indicates success
+message SuspendPublishedDatasetResponse {}
+
+// UnsuspendPublishedDataset contains the publish ID of the published dataset.
+message UnsuspendPublishedDatasetRequest {
+  string publish_id = 1;
 }
 
-// AuthenticationType represents the way to authenticate to get a published information.
-enum AuthenticationType {
-  AUTHENTICATION_TYPE_UNSPECIFIED = 0;
-  AUTHENTICATION_TYPE_BEARER = 1;
-  AUTHENTICATION_TYPE_BASIC = 2;
-}
-
-// Multilingual represents a message with language metadata attached.
-message Multilingual {
-  string value = 1;
-  string language = 2;
-}
+// UnsuspendPublishedDatasetResponse indicates success
+message UnsuspendPublishedDatasetResponse {}

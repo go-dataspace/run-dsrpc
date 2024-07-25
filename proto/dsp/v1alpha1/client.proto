@@ -1,0 +1,123 @@
+// Copyright 2024 go-dataspace
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+syntax = "proto3";
+
+package dsp.v1alpha1;
+
+import "dsp/v1alpha1/types.proto";
+
+// The ClientService is the expected grpc service that RUN-DSP will interface with.
+// Outside of the defined calls, RUN-DSP will also forward the `authorization` header.
+// The reason for this is that authorization will vary between dataspaces. Also, the provider
+// will want to show different data dependent on the credentials.
+service ClientService {
+  // Ping is a request to test if the provider is working, and to test the auth information.
+  rpc Ping(ClientServicePingRequest) returns (ClientServicePingResponse) {}
+  // Gets the catalogue based on the query parameters and the authorization header.
+  rpc GetProviderCatalogue(GetProviderCatalogueRequest) returns (GetProviderCatalogueResponse) {}
+  // Gets information about a single dataset.
+  rpc GetProviderDataset(GetProviderDatasetRequest) returns (GetProviderDatasetResponse) {}
+  // Publishes a dataset,
+  rpc GetProviderDatasetDownloadInformation(GetProviderDatasetDownloadInformationRequest) returns (GetProviderDatasetDownloadInformationResponse) {}
+  // Tells provider that we have finished our transfer.
+  rpc SignalTransferComplete(SignalTransferCompleteRequest) returns (SignalTransferCompleteResponse) {}
+  // Tells provider to cancel file transfer
+  rpc SignalTransferCancelled(SignalTransferCancelledRequest) returns (SignalTransferCancelledResponse) {}
+  // Tells provider to suspend file transfer
+  rpc SignalTransferSuspend(SignalTransferSuspendRequest) returns (SignalTransferSuspendResponse) {}
+  // Tells provider to resume file transfer
+  rpc SignalTransferResume(SignalTransferResumeRequest) returns (SignalTransferResumeResponse) {}
+}
+
+// ClientServicePingRequest is an empty message, used instead of the Empty type in case we want
+// to add parameters.
+message ClientServicePingRequest {}
+
+// ClientServicePingResponse is an empty message for checking GRPC connection.
+message ClientServicePingResponse {}
+
+// GetProviderCatalogueRequest represents the parameters for the GetProviderCatalogue request
+message GetProviderCatalogueRequest {
+  string provider_uri = 1;
+  // query_parameters is just a key/value map. These are not specified in the dataspace standard.
+  // RUN-DSP also does not define them yet, so for now this is a placeholder.
+
+  map<string, string> query_parameters = 2;
+}
+
+// GetProviderCatalogueResponse returns all the datasets matched by GetProviderCatalogue.
+message GetProviderCatalogueResponse {
+  repeated Dataset datasets = 1;
+}
+
+// GetProviderDatasetRequest contains the dataset ID.
+message GetProviderDatasetRequest {
+  string provider_url = 1;
+  string dataset_id = 2;
+}
+
+// GetProviderDatasetResponse contains the requested dataset.
+message GetProviderDatasetResponse {
+  string provider_url = 1;
+  Dataset dataset = 2;
+}
+
+// GetProviderDatasetDownloadInformationRequest contains the ID for the dataset
+// we want to be able to download.
+message GetProviderDatasetDownloadInformationRequest {
+  string provider_url = 1;
+  string dataset_id = 2;
+}
+
+// GetProviderDatasetDownloadInformationResponse contains the information needed
+// to download a file, including authentication etc.
+message GetProviderDatasetDownloadInformationResponse {
+  PublishInfo publish_info = 1;
+  string transfer_id = 2;
+}
+
+// SignalTransferCompleteRequest is for telling the provider that we are done
+// receiving the dataset.
+message SignalTransferCompleteRequest {
+  string transfer_id = 1;
+}
+
+// SignalTransferCompleteResponse is received when we successfully sent a
+// transfer complete request.
+message SignalTransferCompleteResponse {}
+
+// SignalTransferCancelledRequest is sent when the client wants to cancel a transfer.
+message SignalTransferCancelledRequest {
+  string transfer_id = 1;
+}
+
+// SignalTransferCancelledResponse tells that the cancellation requests was received.
+message SignalTransferCancelledResponse {}
+
+// SignalTransferSuspendRequest is sent when the client wishes to pause the transfer.
+message SignalTransferSuspendRequest {
+  string transfer_id = 1;
+}
+
+// SignalTransferSuspendResponse tells the client that the pause request was received.
+message SignalTransferSuspendResponse {}
+
+// SignalTransferResumeRequest tells the provider that the client wants to resume transfer.
+message SignalTransferResumeRequest {
+  string transfer_id = 1;
+}
+
+// SignalTransferResumeResponse tells the client that the resume request was accepted.
+message SignalTransferResumeResponse {}

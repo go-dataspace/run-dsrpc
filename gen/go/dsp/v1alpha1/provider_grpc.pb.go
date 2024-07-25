@@ -16,9 +16,9 @@
 // versions:
 // - protoc-gen-go-grpc v1.4.0
 // - protoc             (unknown)
-// source: provider/v1/provider.proto
+// source: dsp/v1alpha1/provider.proto
 
-package providerv1
+package dspv1alpha1
 
 import (
 	context "context"
@@ -33,11 +33,13 @@ import (
 const _ = grpc.SupportPackageIsVersion8
 
 const (
-	ProviderService_Ping_FullMethodName             = "/provider.v1.ProviderService/Ping"
-	ProviderService_GetCatalogue_FullMethodName     = "/provider.v1.ProviderService/GetCatalogue"
-	ProviderService_GetDataset_FullMethodName       = "/provider.v1.ProviderService/GetDataset"
-	ProviderService_PublishDataset_FullMethodName   = "/provider.v1.ProviderService/PublishDataset"
-	ProviderService_UnpublishDataset_FullMethodName = "/provider.v1.ProviderService/UnpublishDataset"
+	ProviderService_Ping_FullMethodName                      = "/dsp.v1alpha1.ProviderService/Ping"
+	ProviderService_GetCatalogue_FullMethodName              = "/dsp.v1alpha1.ProviderService/GetCatalogue"
+	ProviderService_GetDataset_FullMethodName                = "/dsp.v1alpha1.ProviderService/GetDataset"
+	ProviderService_PublishDataset_FullMethodName            = "/dsp.v1alpha1.ProviderService/PublishDataset"
+	ProviderService_UnpublishDataset_FullMethodName          = "/dsp.v1alpha1.ProviderService/UnpublishDataset"
+	ProviderService_SuspendPublishedDataset_FullMethodName   = "/dsp.v1alpha1.ProviderService/SuspendPublishedDataset"
+	ProviderService_UnsuspendPublishedDataset_FullMethodName = "/dsp.v1alpha1.ProviderService/UnsuspendPublishedDataset"
 )
 
 // ProviderServiceClient is the client API for ProviderService service.
@@ -59,6 +61,10 @@ type ProviderServiceClient interface {
 	PublishDataset(ctx context.Context, in *PublishDatasetRequest, opts ...grpc.CallOption) (*PublishDatasetResponse, error)
 	// Unpublishes a dataset.
 	UnpublishDataset(ctx context.Context, in *UnpublishDatasetRequest, opts ...grpc.CallOption) (*UnpublishDatasetResponse, error)
+	// Asks provider to suspend a transfer
+	SuspendPublishedDataset(ctx context.Context, in *SuspendPublishedDatasetRequest, opts ...grpc.CallOption) (*SuspendPublishedDatasetResponse, error)
+	// Asks provider to unsuspend (re-publish?) a transfer
+	UnsuspendPublishedDataset(ctx context.Context, in *UnsuspendPublishedDatasetRequest, opts ...grpc.CallOption) (*UnsuspendPublishedDatasetResponse, error)
 }
 
 type providerServiceClient struct {
@@ -119,6 +125,26 @@ func (c *providerServiceClient) UnpublishDataset(ctx context.Context, in *Unpubl
 	return out, nil
 }
 
+func (c *providerServiceClient) SuspendPublishedDataset(ctx context.Context, in *SuspendPublishedDatasetRequest, opts ...grpc.CallOption) (*SuspendPublishedDatasetResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(SuspendPublishedDatasetResponse)
+	err := c.cc.Invoke(ctx, ProviderService_SuspendPublishedDataset_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *providerServiceClient) UnsuspendPublishedDataset(ctx context.Context, in *UnsuspendPublishedDatasetRequest, opts ...grpc.CallOption) (*UnsuspendPublishedDatasetResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(UnsuspendPublishedDatasetResponse)
+	err := c.cc.Invoke(ctx, ProviderService_UnsuspendPublishedDataset_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // ProviderServiceServer is the server API for ProviderService service.
 // All implementations must embed UnimplementedProviderServiceServer
 // for forward compatibility
@@ -138,6 +164,10 @@ type ProviderServiceServer interface {
 	PublishDataset(context.Context, *PublishDatasetRequest) (*PublishDatasetResponse, error)
 	// Unpublishes a dataset.
 	UnpublishDataset(context.Context, *UnpublishDatasetRequest) (*UnpublishDatasetResponse, error)
+	// Asks provider to suspend a transfer
+	SuspendPublishedDataset(context.Context, *SuspendPublishedDatasetRequest) (*SuspendPublishedDatasetResponse, error)
+	// Asks provider to unsuspend (re-publish?) a transfer
+	UnsuspendPublishedDataset(context.Context, *UnsuspendPublishedDatasetRequest) (*UnsuspendPublishedDatasetResponse, error)
 	mustEmbedUnimplementedProviderServiceServer()
 }
 
@@ -159,6 +189,12 @@ func (UnimplementedProviderServiceServer) PublishDataset(context.Context, *Publi
 }
 func (UnimplementedProviderServiceServer) UnpublishDataset(context.Context, *UnpublishDatasetRequest) (*UnpublishDatasetResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UnpublishDataset not implemented")
+}
+func (UnimplementedProviderServiceServer) SuspendPublishedDataset(context.Context, *SuspendPublishedDatasetRequest) (*SuspendPublishedDatasetResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SuspendPublishedDataset not implemented")
+}
+func (UnimplementedProviderServiceServer) UnsuspendPublishedDataset(context.Context, *UnsuspendPublishedDatasetRequest) (*UnsuspendPublishedDatasetResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UnsuspendPublishedDataset not implemented")
 }
 func (UnimplementedProviderServiceServer) mustEmbedUnimplementedProviderServiceServer() {}
 
@@ -263,11 +299,47 @@ func _ProviderService_UnpublishDataset_Handler(srv interface{}, ctx context.Cont
 	return interceptor(ctx, in, info, handler)
 }
 
+func _ProviderService_SuspendPublishedDataset_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SuspendPublishedDatasetRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ProviderServiceServer).SuspendPublishedDataset(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ProviderService_SuspendPublishedDataset_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ProviderServiceServer).SuspendPublishedDataset(ctx, req.(*SuspendPublishedDatasetRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ProviderService_UnsuspendPublishedDataset_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UnsuspendPublishedDatasetRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ProviderServiceServer).UnsuspendPublishedDataset(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ProviderService_UnsuspendPublishedDataset_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ProviderServiceServer).UnsuspendPublishedDataset(ctx, req.(*UnsuspendPublishedDatasetRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // ProviderService_ServiceDesc is the grpc.ServiceDesc for ProviderService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var ProviderService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "provider.v1.ProviderService",
+	ServiceName: "dsp.v1alpha1.ProviderService",
 	HandlerType: (*ProviderServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -290,7 +362,15 @@ var ProviderService_ServiceDesc = grpc.ServiceDesc{
 			MethodName: "UnpublishDataset",
 			Handler:    _ProviderService_UnpublishDataset_Handler,
 		},
+		{
+			MethodName: "SuspendPublishedDataset",
+			Handler:    _ProviderService_SuspendPublishedDataset_Handler,
+		},
+		{
+			MethodName: "UnsuspendPublishedDataset",
+			Handler:    _ProviderService_UnsuspendPublishedDataset_Handler,
+		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "provider/v1/provider.proto",
+	Metadata: "dsp/v1alpha1/provider.proto",
 }
