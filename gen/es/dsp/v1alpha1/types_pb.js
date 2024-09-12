@@ -52,6 +52,15 @@ export const Dataset = /*@__PURE__*/ proto3.makeMessageType(
     { no: 7, name: "issued", kind: "message", T: Timestamp, opt: true },
     { no: 8, name: "modified", kind: "message", T: Timestamp, opt: true },
     { no: 9, name: "metadata", kind: "map", K: 9 /* ScalarType.STRING */, V: {kind: "scalar", T: 9 /* ScalarType.STRING */} },
+    { no: 10, name: "license", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
+    { no: 11, name: "access_rights", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
+    { no: 12, name: "rights", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
+    { no: 13, name: "byte_size", kind: "scalar", T: 3 /* ScalarType.INT64 */ },
+    { no: 14, name: "media_type", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 15, name: "format", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
+    { no: 16, name: "compress_format", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
+    { no: 17, name: "package_format", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
+    { no: 18, name: "checksum", kind: "message", T: Checksum, opt: true },
   ],
 );
 
@@ -80,6 +89,19 @@ export const Multilingual = /*@__PURE__*/ proto3.makeMessageType(
   () => [
     { no: 1, name: "value", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "language", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
+ * Checksum represents the checksum of a dataset.
+ *
+ * @generated from message dsp.v1alpha1.Checksum
+ */
+export const Checksum = /*@__PURE__*/ proto3.makeMessageType(
+  "dsp.v1alpha1.Checksum",
+  () => [
+    { no: 1, name: "algorithm", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "value", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
 );
 

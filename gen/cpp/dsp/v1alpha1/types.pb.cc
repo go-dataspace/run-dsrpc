@@ -90,6 +90,30 @@ struct Dataset_MetadataEntry_DoNotUseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Dataset_MetadataEntry_DoNotUseDefaultTypeInternal _Dataset_MetadataEntry_DoNotUse_default_instance_;
 
+inline constexpr Checksum::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : algorithm_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        value_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        _cached_size_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR Checksum::Checksum(::_pbi::ConstantInitialized)
+    : _impl_(::_pbi::ConstantInitialized()) {}
+struct ChecksumDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ChecksumDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ChecksumDefaultTypeInternal() {}
+  union {
+    Checksum _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ChecksumDefaultTypeInternal _Checksum_default_instance_;
+
 inline constexpr Dataset::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : _cached_size_{0},
@@ -108,8 +132,31 @@ inline constexpr Dataset::Impl_::Impl_(
         creator_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
+        license_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        access_rights_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        rights_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        media_type_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        format_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        compress_format_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        package_format_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
         issued_{nullptr},
-        modified_{nullptr} {}
+        modified_{nullptr},
+        checksum_{nullptr},
+        byte_size_{::int64_t{0}} {}
 
 template <typename>
 PROTOBUF_CONSTEXPR Dataset::Dataset(::_pbi::ConstantInitialized)
@@ -161,15 +208,33 @@ const ::uint32_t
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha1::Dataset, _impl_.issued_),
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha1::Dataset, _impl_.modified_),
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha1::Dataset, _impl_.metadata_),
+        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha1::Dataset, _impl_.license_),
+        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha1::Dataset, _impl_.access_rights_),
+        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha1::Dataset, _impl_.rights_),
+        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha1::Dataset, _impl_.byte_size_),
+        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha1::Dataset, _impl_.media_type_),
+        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha1::Dataset, _impl_.format_),
+        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha1::Dataset, _impl_.compress_format_),
+        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha1::Dataset, _impl_.package_format_),
+        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha1::Dataset, _impl_.checksum_),
         ~0u,
         ~0u,
         ~0u,
         ~0u,
         ~0u,
         0,
+        7,
+        8,
+        ~0u,
         1,
         2,
+        3,
         ~0u,
+        ~0u,
+        4,
+        5,
+        6,
+        9,
         ~0u,  // no _has_bits_
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha1::PublishInfo, _internal_metadata_),
         ~0u,  // no _extensions_
@@ -192,25 +257,37 @@ const ::uint32_t
         ~0u,  // no sizeof(Split)
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha1::Multilingual, _impl_.value_),
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha1::Multilingual, _impl_.language_),
+        ~0u,  // no _has_bits_
+        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha1::Checksum, _internal_metadata_),
+        ~0u,  // no _extensions_
+        ~0u,  // no _oneof_case_
+        ~0u,  // no _weak_field_map_
+        ~0u,  // no _inlined_string_donated_
+        ~0u,  // no _split_
+        ~0u,  // no sizeof(Split)
+        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha1::Checksum, _impl_.algorithm_),
+        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha1::Checksum, _impl_.value_),
 };
 
 static const ::_pbi::MigrationSchema
     schemas[] ABSL_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
         {0, 10, -1, sizeof(::dsp::v1alpha1::Dataset_MetadataEntry_DoNotUse)},
-        {12, 29, -1, sizeof(::dsp::v1alpha1::Dataset)},
-        {38, -1, -1, sizeof(::dsp::v1alpha1::PublishInfo)},
-        {50, -1, -1, sizeof(::dsp::v1alpha1::Multilingual)},
+        {12, 38, -1, sizeof(::dsp::v1alpha1::Dataset)},
+        {56, -1, -1, sizeof(::dsp::v1alpha1::PublishInfo)},
+        {68, -1, -1, sizeof(::dsp::v1alpha1::Multilingual)},
+        {78, -1, -1, sizeof(::dsp::v1alpha1::Checksum)},
 };
 static const ::_pb::Message* const file_default_instances[] = {
     &::dsp::v1alpha1::_Dataset_MetadataEntry_DoNotUse_default_instance_._instance,
     &::dsp::v1alpha1::_Dataset_default_instance_._instance,
     &::dsp::v1alpha1::_PublishInfo_default_instance_._instance,
     &::dsp::v1alpha1::_Multilingual_default_instance_._instance,
+    &::dsp::v1alpha1::_Checksum_default_instance_._instance,
 };
 const char descriptor_table_protodef_dsp_2fv1alpha1_2ftypes_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
     protodesc_cold) = {
     "\n\030dsp/v1alpha1/types.proto\022\014dsp.v1alpha1"
-    "\032\037google/protobuf/timestamp.proto\"\347\003\n\007Da"
+    "\032\037google/protobuf/timestamp.proto\"\241\007\n\007Da"
     "taset\022\016\n\002id\030\001 \001(\tR\002id\022\024\n\005title\030\002 \001(\tR\005ti"
     "tle\022%\n\016access_methods\030\003 \001(\tR\raccessMetho"
     "ds\022<\n\013description\030\004 \003(\0132\032.dsp.v1alpha1.M"
@@ -220,23 +297,36 @@ const char descriptor_table_protodef_dsp_2fv1alpha1_2ftypes_2eproto[] ABSL_ATTRI
     "mestampH\001R\006issued\210\001\001\022;\n\010modified\030\010 \001(\0132\032"
     ".google.protobuf.TimestampH\002R\010modified\210\001"
     "\001\022\?\n\010metadata\030\t \003(\0132#.dsp.v1alpha1.Datas"
-    "et.MetadataEntryR\010metadata\032;\n\rMetadataEn"
-    "try\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005va"
-    "lue:\0028\001B\n\n\010_creatorB\t\n\007_issuedB\013\n\t_modif"
-    "ied\"\252\001\n\013PublishInfo\022\020\n\003url\030\001 \001(\tR\003url\022Q\n"
-    "\023authentication_type\030\002 \001(\0162 .dsp.v1alpha"
-    "1.AuthenticationTypeR\022authenticationType"
-    "\022\032\n\010username\030\003 \001(\tR\010username\022\032\n\010password"
-    "\030\004 \001(\tR\010password\"@\n\014Multilingual\022\024\n\005valu"
-    "e\030\001 \001(\tR\005value\022\032\n\010language\030\002 \001(\tR\010langua"
-    "ge*x\n\022AuthenticationType\022#\n\037AUTHENTICATI"
-    "ON_TYPE_UNSPECIFIED\020\000\022\036\n\032AUTHENTICATION_"
-    "TYPE_BEARER\020\001\022\035\n\031AUTHENTICATION_TYPE_BAS"
-    "IC\020\002B\246\001\n\020com.dsp.v1alpha1B\nTypesProtoP\001Z"
-    "5github.com/bufbuild/buf-tour/dsp/v1alph"
-    "a1;dspv1alpha1\242\002\003DXX\252\002\014Dsp.V1alpha1\312\002\014Ds"
-    "p\\V1alpha1\342\002\030Dsp\\V1alpha1\\GPBMetadata\352\002\r"
-    "Dsp::V1alpha1b\006proto3"
+    "et.MetadataEntryR\010metadata\022\035\n\007license\030\n "
+    "\001(\tH\003R\007license\210\001\001\022(\n\raccess_rights\030\013 \001(\t"
+    "H\004R\014accessRights\210\001\001\022\033\n\006rights\030\014 \001(\tH\005R\006r"
+    "ights\210\001\001\022\033\n\tbyte_size\030\r \001(\003R\010byteSize\022\035\n"
+    "\nmedia_type\030\016 \001(\tR\tmediaType\022\033\n\006format\030\017"
+    " \001(\tH\006R\006format\210\001\001\022,\n\017compress_format\030\020 \001"
+    "(\tH\007R\016compressFormat\210\001\001\022*\n\016package_forma"
+    "t\030\021 \001(\tH\010R\rpackageFormat\210\001\001\0227\n\010checksum\030"
+    "\022 \001(\0132\026.dsp.v1alpha1.ChecksumH\tR\010checksu"
+    "m\210\001\001\032;\n\rMetadataEntry\022\020\n\003key\030\001 \001(\tR\003key\022"
+    "\024\n\005value\030\002 \001(\tR\005value:\0028\001B\n\n\010_creatorB\t\n"
+    "\007_issuedB\013\n\t_modifiedB\n\n\010_licenseB\020\n\016_ac"
+    "cess_rightsB\t\n\007_rightsB\t\n\007_formatB\022\n\020_co"
+    "mpress_formatB\021\n\017_package_formatB\013\n\t_che"
+    "cksum\"\252\001\n\013PublishInfo\022\020\n\003url\030\001 \001(\tR\003url\022"
+    "Q\n\023authentication_type\030\002 \001(\0162 .dsp.v1alp"
+    "ha1.AuthenticationTypeR\022authenticationTy"
+    "pe\022\032\n\010username\030\003 \001(\tR\010username\022\032\n\010passwo"
+    "rd\030\004 \001(\tR\010password\"@\n\014Multilingual\022\024\n\005va"
+    "lue\030\001 \001(\tR\005value\022\032\n\010language\030\002 \001(\tR\010lang"
+    "uage\">\n\010Checksum\022\034\n\talgorithm\030\001 \001(\tR\talg"
+    "orithm\022\024\n\005value\030\002 \001(\tR\005value*x\n\022Authenti"
+    "cationType\022#\n\037AUTHENTICATION_TYPE_UNSPEC"
+    "IFIED\020\000\022\036\n\032AUTHENTICATION_TYPE_BEARER\020\001\022"
+    "\035\n\031AUTHENTICATION_TYPE_BASIC\020\002B\246\001\n\020com.d"
+    "sp.v1alpha1B\nTypesProtoP\001Z5github.com/bu"
+    "fbuild/buf-tour/dsp/v1alpha1;dspv1alpha1"
+    "\242\002\003DXX\252\002\014Dsp.V1alpha1\312\002\014Dsp\\V1alpha1\342\002\030D"
+    "sp\\V1alpha1\\GPBMetadata\352\002\rDsp::V1alpha1b"
+    "\006proto3"
 };
 static const ::_pbi::DescriptorTable* const descriptor_table_dsp_2fv1alpha1_2ftypes_2eproto_deps[1] =
     {
@@ -246,13 +336,13 @@ static ::absl::once_flag descriptor_table_dsp_2fv1alpha1_2ftypes_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_dsp_2fv1alpha1_2ftypes_2eproto = {
     false,
     false,
-    1101,
+    1607,
     descriptor_table_protodef_dsp_2fv1alpha1_2ftypes_2eproto,
     "dsp/v1alpha1/types.proto",
     &descriptor_table_dsp_2fv1alpha1_2ftypes_2eproto_once,
     descriptor_table_dsp_2fv1alpha1_2ftypes_2eproto_deps,
     1,
-    4,
+    5,
     schemas,
     file_default_instances,
     TableStruct_dsp_2fv1alpha1_2ftypes_2eproto::offsets,
@@ -307,12 +397,12 @@ class Dataset::_Internal {
 void Dataset::clear_issued() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.issued_ != nullptr) _impl_.issued_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  _impl_._has_bits_[0] &= ~0x00000080u;
 }
 void Dataset::clear_modified() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.modified_ != nullptr) _impl_.modified_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00000100u;
 }
 Dataset::Dataset(::google::protobuf::Arena* arena)
     : ::google::protobuf::Message(arena) {
@@ -330,7 +420,14 @@ inline PROTOBUF_NDEBUG_INLINE Dataset::Impl_::Impl_(
         id_(arena, from.id_),
         title_(arena, from.title_),
         access_methods_(arena, from.access_methods_),
-        creator_(arena, from.creator_) {}
+        creator_(arena, from.creator_),
+        license_(arena, from.license_),
+        access_rights_(arena, from.access_rights_),
+        rights_(arena, from.rights_),
+        media_type_(arena, from.media_type_),
+        format_(arena, from.format_),
+        compress_format_(arena, from.compress_format_),
+        package_format_(arena, from.package_format_) {}
 
 Dataset::Dataset(
     ::google::protobuf::Arena* arena,
@@ -342,12 +439,16 @@ Dataset::Dataset(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
   ::uint32_t cached_has_bits = _impl_._has_bits_[0];
-  _impl_.issued_ = (cached_has_bits & 0x00000002u) ? ::google::protobuf::Message::CopyConstruct<::google::protobuf::Timestamp>(
+  _impl_.issued_ = (cached_has_bits & 0x00000080u) ? ::google::protobuf::Message::CopyConstruct<::google::protobuf::Timestamp>(
                               arena, *from._impl_.issued_)
                         : nullptr;
-  _impl_.modified_ = (cached_has_bits & 0x00000004u) ? ::google::protobuf::Message::CopyConstruct<::google::protobuf::Timestamp>(
+  _impl_.modified_ = (cached_has_bits & 0x00000100u) ? ::google::protobuf::Message::CopyConstruct<::google::protobuf::Timestamp>(
                               arena, *from._impl_.modified_)
                         : nullptr;
+  _impl_.checksum_ = (cached_has_bits & 0x00000200u) ? ::google::protobuf::Message::CopyConstruct<::dsp::v1alpha1::Checksum>(
+                              arena, *from._impl_.checksum_)
+                        : nullptr;
+  _impl_.byte_size_ = from._impl_.byte_size_;
 
   // @@protoc_insertion_point(copy_constructor:dsp.v1alpha1.Dataset)
 }
@@ -361,16 +462,23 @@ inline PROTOBUF_NDEBUG_INLINE Dataset::Impl_::Impl_(
         id_(arena),
         title_(arena),
         access_methods_(arena),
-        creator_(arena) {}
+        creator_(arena),
+        license_(arena),
+        access_rights_(arena),
+        rights_(arena),
+        media_type_(arena),
+        format_(arena),
+        compress_format_(arena),
+        package_format_(arena) {}
 
 inline void Dataset::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   ::memset(reinterpret_cast<char *>(&_impl_) +
                offsetof(Impl_, issued_),
            0,
-           offsetof(Impl_, modified_) -
+           offsetof(Impl_, byte_size_) -
                offsetof(Impl_, issued_) +
-               sizeof(Impl_::modified_));
+               sizeof(Impl_::byte_size_));
 }
 Dataset::~Dataset() {
   // @@protoc_insertion_point(destructor:dsp.v1alpha1.Dataset)
@@ -383,8 +491,16 @@ inline void Dataset::SharedDtor() {
   _impl_.title_.Destroy();
   _impl_.access_methods_.Destroy();
   _impl_.creator_.Destroy();
+  _impl_.license_.Destroy();
+  _impl_.access_rights_.Destroy();
+  _impl_.rights_.Destroy();
+  _impl_.media_type_.Destroy();
+  _impl_.format_.Destroy();
+  _impl_.compress_format_.Destroy();
+  _impl_.package_format_.Destroy();
   delete _impl_.issued_;
   delete _impl_.modified_;
+  delete _impl_.checksum_;
   _impl_.~Impl_();
 }
 
@@ -409,16 +525,16 @@ Dataset::GetClassData() const {
   return _data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<3, 9, 4, 81, 2> Dataset::_table_ = {
+const ::_pbi::TcParseTable<5, 18, 5, 160, 2> Dataset::_table_ = {
   {
     PROTOBUF_FIELD_OFFSET(Dataset, _impl_._has_bits_),
     0, // no _extensions_
-    9, 56,  // max_field_number, fast_idx_mask
+    18, 248,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
-    4294966784,  // skipmap
+    4294705152,  // skipmap
     offsetof(decltype(_table_), field_entries),
-    9,  // num_field_entries
-    4,  // num_aux_entries
+    18,  // num_field_entries
+    5,  // num_aux_entries
     offsetof(decltype(_table_), aux_entries),
     &_Dataset_default_instance_._instance,
     nullptr,  // post_loop_handler
@@ -427,9 +543,7 @@ const ::_pbi::TcParseTable<3, 9, 4, 81, 2> Dataset::_table_ = {
     ::_pbi::TcParser::GetTable<::dsp::v1alpha1::Dataset>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // optional .google.protobuf.Timestamp modified = 8 [json_name = "modified"];
-    {::_pbi::TcParser::FastMtS1,
-     {66, 2, 2, PROTOBUF_FIELD_OFFSET(Dataset, _impl_.modified_)}},
+    {::_pbi::TcParser::MiniParse, {}},
     // string id = 1 [json_name = "id"];
     {::_pbi::TcParser::FastUS1,
      {10, 63, 0, PROTOBUF_FIELD_OFFSET(Dataset, _impl_.id_)}},
@@ -450,7 +564,51 @@ const ::_pbi::TcParseTable<3, 9, 4, 81, 2> Dataset::_table_ = {
      {50, 0, 0, PROTOBUF_FIELD_OFFSET(Dataset, _impl_.creator_)}},
     // optional .google.protobuf.Timestamp issued = 7 [json_name = "issued"];
     {::_pbi::TcParser::FastMtS1,
-     {58, 1, 1, PROTOBUF_FIELD_OFFSET(Dataset, _impl_.issued_)}},
+     {58, 7, 1, PROTOBUF_FIELD_OFFSET(Dataset, _impl_.issued_)}},
+    // optional .google.protobuf.Timestamp modified = 8 [json_name = "modified"];
+    {::_pbi::TcParser::FastMtS1,
+     {66, 8, 2, PROTOBUF_FIELD_OFFSET(Dataset, _impl_.modified_)}},
+    {::_pbi::TcParser::MiniParse, {}},
+    // optional string license = 10 [json_name = "license"];
+    {::_pbi::TcParser::FastUS1,
+     {82, 1, 0, PROTOBUF_FIELD_OFFSET(Dataset, _impl_.license_)}},
+    // optional string access_rights = 11 [json_name = "accessRights"];
+    {::_pbi::TcParser::FastUS1,
+     {90, 2, 0, PROTOBUF_FIELD_OFFSET(Dataset, _impl_.access_rights_)}},
+    // optional string rights = 12 [json_name = "rights"];
+    {::_pbi::TcParser::FastUS1,
+     {98, 3, 0, PROTOBUF_FIELD_OFFSET(Dataset, _impl_.rights_)}},
+    // int64 byte_size = 13 [json_name = "byteSize"];
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(Dataset, _impl_.byte_size_), 63>(),
+     {104, 63, 0, PROTOBUF_FIELD_OFFSET(Dataset, _impl_.byte_size_)}},
+    // string media_type = 14 [json_name = "mediaType"];
+    {::_pbi::TcParser::FastUS1,
+     {114, 63, 0, PROTOBUF_FIELD_OFFSET(Dataset, _impl_.media_type_)}},
+    // optional string format = 15 [json_name = "format"];
+    {::_pbi::TcParser::FastUS1,
+     {122, 4, 0, PROTOBUF_FIELD_OFFSET(Dataset, _impl_.format_)}},
+    // optional string compress_format = 16 [json_name = "compressFormat"];
+    {::_pbi::TcParser::FastUS2,
+     {386, 5, 0, PROTOBUF_FIELD_OFFSET(Dataset, _impl_.compress_format_)}},
+    // optional string package_format = 17 [json_name = "packageFormat"];
+    {::_pbi::TcParser::FastUS2,
+     {394, 6, 0, PROTOBUF_FIELD_OFFSET(Dataset, _impl_.package_format_)}},
+    // optional .dsp.v1alpha1.Checksum checksum = 18 [json_name = "checksum"];
+    {::_pbi::TcParser::FastMtS2,
+     {402, 9, 3, PROTOBUF_FIELD_OFFSET(Dataset, _impl_.checksum_)}},
+    {::_pbi::TcParser::MiniParse, {}},
+    {::_pbi::TcParser::MiniParse, {}},
+    {::_pbi::TcParser::MiniParse, {}},
+    {::_pbi::TcParser::MiniParse, {}},
+    {::_pbi::TcParser::MiniParse, {}},
+    {::_pbi::TcParser::MiniParse, {}},
+    {::_pbi::TcParser::MiniParse, {}},
+    {::_pbi::TcParser::MiniParse, {}},
+    {::_pbi::TcParser::MiniParse, {}},
+    {::_pbi::TcParser::MiniParse, {}},
+    {::_pbi::TcParser::MiniParse, {}},
+    {::_pbi::TcParser::MiniParse, {}},
+    {::_pbi::TcParser::MiniParse, {}},
   }}, {{
     65535, 65535
   }}, {{
@@ -473,24 +631,52 @@ const ::_pbi::TcParseTable<3, 9, 4, 81, 2> Dataset::_table_ = {
     {PROTOBUF_FIELD_OFFSET(Dataset, _impl_.creator_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // optional .google.protobuf.Timestamp issued = 7 [json_name = "issued"];
-    {PROTOBUF_FIELD_OFFSET(Dataset, _impl_.issued_), _Internal::kHasBitsOffset + 1, 1,
+    {PROTOBUF_FIELD_OFFSET(Dataset, _impl_.issued_), _Internal::kHasBitsOffset + 7, 1,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
     // optional .google.protobuf.Timestamp modified = 8 [json_name = "modified"];
-    {PROTOBUF_FIELD_OFFSET(Dataset, _impl_.modified_), _Internal::kHasBitsOffset + 2, 2,
+    {PROTOBUF_FIELD_OFFSET(Dataset, _impl_.modified_), _Internal::kHasBitsOffset + 8, 2,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
     // map<string, string> metadata = 9 [json_name = "metadata"];
-    {PROTOBUF_FIELD_OFFSET(Dataset, _impl_.metadata_), -1, 3,
+    {PROTOBUF_FIELD_OFFSET(Dataset, _impl_.metadata_), -1, 4,
     (0 | ::_fl::kFcRepeated | ::_fl::kMap)},
+    // optional string license = 10 [json_name = "license"];
+    {PROTOBUF_FIELD_OFFSET(Dataset, _impl_.license_), _Internal::kHasBitsOffset + 1, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // optional string access_rights = 11 [json_name = "accessRights"];
+    {PROTOBUF_FIELD_OFFSET(Dataset, _impl_.access_rights_), _Internal::kHasBitsOffset + 2, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // optional string rights = 12 [json_name = "rights"];
+    {PROTOBUF_FIELD_OFFSET(Dataset, _impl_.rights_), _Internal::kHasBitsOffset + 3, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // int64 byte_size = 13 [json_name = "byteSize"];
+    {PROTOBUF_FIELD_OFFSET(Dataset, _impl_.byte_size_), -1, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
+    // string media_type = 14 [json_name = "mediaType"];
+    {PROTOBUF_FIELD_OFFSET(Dataset, _impl_.media_type_), -1, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // optional string format = 15 [json_name = "format"];
+    {PROTOBUF_FIELD_OFFSET(Dataset, _impl_.format_), _Internal::kHasBitsOffset + 4, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // optional string compress_format = 16 [json_name = "compressFormat"];
+    {PROTOBUF_FIELD_OFFSET(Dataset, _impl_.compress_format_), _Internal::kHasBitsOffset + 5, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // optional string package_format = 17 [json_name = "packageFormat"];
+    {PROTOBUF_FIELD_OFFSET(Dataset, _impl_.package_format_), _Internal::kHasBitsOffset + 6, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // optional .dsp.v1alpha1.Checksum checksum = 18 [json_name = "checksum"];
+    {PROTOBUF_FIELD_OFFSET(Dataset, _impl_.checksum_), _Internal::kHasBitsOffset + 9, 3,
+    (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
   }}, {{
     {::_pbi::TcParser::GetTable<::dsp::v1alpha1::Multilingual>()},
     {::_pbi::TcParser::GetTable<::google::protobuf::Timestamp>()},
     {::_pbi::TcParser::GetTable<::google::protobuf::Timestamp>()},
+    {::_pbi::TcParser::GetTable<::dsp::v1alpha1::Checksum>()},
     {::_pbi::TcParser::GetMapAuxInfo<
         decltype(Dataset()._impl_.metadata_)>(
         1, 0, 0, 9,
         9)},
   }}, {{
-    "\24\2\5\16\0\10\7\0\0\10\0\0\0\0\0\0"
+    "\24\2\5\16\0\10\7\0\0\10\7\15\6\0\12\6\17\16\0\0\0\0\0\0"
     "dsp.v1alpha1.Dataset"
     "id"
     "title"
@@ -498,6 +684,13 @@ const ::_pbi::TcParseTable<3, 9, 4, 81, 2> Dataset::_table_ = {
     "keywords"
     "creator"
     "metadata"
+    "license"
+    "access_rights"
+    "rights"
+    "media_type"
+    "format"
+    "compress_format"
+    "package_format"
   }},
 };
 
@@ -515,19 +708,47 @@ PROTOBUF_NOINLINE void Dataset::Clear() {
   _impl_.title_.ClearToEmpty();
   _impl_.access_methods_.ClearToEmpty();
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
+  if (cached_has_bits & 0x0000000fu) {
     if (cached_has_bits & 0x00000001u) {
       _impl_.creator_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
+      _impl_.license_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _impl_.access_rights_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _impl_.rights_.ClearNonDefaultToEmpty();
+    }
+  }
+  _impl_.media_type_.ClearToEmpty();
+  if (cached_has_bits & 0x000000f0u) {
+    if (cached_has_bits & 0x00000010u) {
+      _impl_.format_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _impl_.compress_format_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000040u) {
+      _impl_.package_format_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000080u) {
       ABSL_DCHECK(_impl_.issued_ != nullptr);
       _impl_.issued_->Clear();
     }
-    if (cached_has_bits & 0x00000004u) {
+  }
+  if (cached_has_bits & 0x00000300u) {
+    if (cached_has_bits & 0x00000100u) {
       ABSL_DCHECK(_impl_.modified_ != nullptr);
       _impl_.modified_->Clear();
     }
+    if (cached_has_bits & 0x00000200u) {
+      ABSL_DCHECK(_impl_.checksum_ != nullptr);
+      _impl_.checksum_->Clear();
+    }
   }
+  _impl_.byte_size_ = ::int64_t{0};
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
@@ -592,13 +813,13 @@ PROTOBUF_NOINLINE void Dataset::Clear() {
   }
 
   // optional .google.protobuf.Timestamp issued = 7 [json_name = "issued"];
-  if (cached_has_bits & 0x00000002u) {
+  if (cached_has_bits & 0x00000080u) {
     target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
         7, *_impl_.issued_, _impl_.issued_->GetCachedSize(), target, stream);
   }
 
   // optional .google.protobuf.Timestamp modified = 8 [json_name = "modified"];
-  if (cached_has_bits & 0x00000004u) {
+  if (cached_has_bits & 0x00000100u) {
     target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
         8, *_impl_.modified_, _impl_.modified_->GetCachedSize(), target, stream);
   }
@@ -634,6 +855,75 @@ PROTOBUF_NOINLINE void Dataset::Clear() {
  ::google::protobuf::internal::WireFormatLite::SERIALIZE, "dsp.v1alpha1.Dataset.metadata");
       }
     }
+  }
+
+  // optional string license = 10 [json_name = "license"];
+  if (cached_has_bits & 0x00000002u) {
+    const std::string& _s = this->_internal_license();
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "dsp.v1alpha1.Dataset.license");
+    target = stream->WriteStringMaybeAliased(10, _s, target);
+  }
+
+  // optional string access_rights = 11 [json_name = "accessRights"];
+  if (cached_has_bits & 0x00000004u) {
+    const std::string& _s = this->_internal_access_rights();
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "dsp.v1alpha1.Dataset.access_rights");
+    target = stream->WriteStringMaybeAliased(11, _s, target);
+  }
+
+  // optional string rights = 12 [json_name = "rights"];
+  if (cached_has_bits & 0x00000008u) {
+    const std::string& _s = this->_internal_rights();
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "dsp.v1alpha1.Dataset.rights");
+    target = stream->WriteStringMaybeAliased(12, _s, target);
+  }
+
+  // int64 byte_size = 13 [json_name = "byteSize"];
+  if (this->_internal_byte_size() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::
+        WriteInt64ToArrayWithField<13>(
+            stream, this->_internal_byte_size(), target);
+  }
+
+  // string media_type = 14 [json_name = "mediaType"];
+  if (!this->_internal_media_type().empty()) {
+    const std::string& _s = this->_internal_media_type();
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "dsp.v1alpha1.Dataset.media_type");
+    target = stream->WriteStringMaybeAliased(14, _s, target);
+  }
+
+  // optional string format = 15 [json_name = "format"];
+  if (cached_has_bits & 0x00000010u) {
+    const std::string& _s = this->_internal_format();
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "dsp.v1alpha1.Dataset.format");
+    target = stream->WriteStringMaybeAliased(15, _s, target);
+  }
+
+  // optional string compress_format = 16 [json_name = "compressFormat"];
+  if (cached_has_bits & 0x00000020u) {
+    const std::string& _s = this->_internal_compress_format();
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "dsp.v1alpha1.Dataset.compress_format");
+    target = stream->WriteStringMaybeAliased(16, _s, target);
+  }
+
+  // optional string package_format = 17 [json_name = "packageFormat"];
+  if (cached_has_bits & 0x00000040u) {
+    const std::string& _s = this->_internal_package_format();
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "dsp.v1alpha1.Dataset.package_format");
+    target = stream->WriteStringMaybeAliased(17, _s, target);
+  }
+
+  // optional .dsp.v1alpha1.Checksum checksum = 18 [json_name = "checksum"];
+  if (cached_has_bits & 0x00000200u) {
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        18, *_impl_.checksum_, _impl_.checksum_->GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -691,26 +981,84 @@ PROTOBUF_NOINLINE void Dataset::Clear() {
   }
 
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
+  if (cached_has_bits & 0x0000000fu) {
     // optional string creator = 6 [json_name = "creator"];
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                       this->_internal_creator());
     }
 
-    // optional .google.protobuf.Timestamp issued = 7 [json_name = "issued"];
+    // optional string license = 10 [json_name = "license"];
     if (cached_has_bits & 0x00000002u) {
+      total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                      this->_internal_license());
+    }
+
+    // optional string access_rights = 11 [json_name = "accessRights"];
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                      this->_internal_access_rights());
+    }
+
+    // optional string rights = 12 [json_name = "rights"];
+    if (cached_has_bits & 0x00000008u) {
+      total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                      this->_internal_rights());
+    }
+
+  }
+  // string media_type = 14 [json_name = "mediaType"];
+  if (!this->_internal_media_type().empty()) {
+    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                    this->_internal_media_type());
+  }
+
+  if (cached_has_bits & 0x000000f0u) {
+    // optional string format = 15 [json_name = "format"];
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                      this->_internal_format());
+    }
+
+    // optional string compress_format = 16 [json_name = "compressFormat"];
+    if (cached_has_bits & 0x00000020u) {
+      total_size += 2 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                      this->_internal_compress_format());
+    }
+
+    // optional string package_format = 17 [json_name = "packageFormat"];
+    if (cached_has_bits & 0x00000040u) {
+      total_size += 2 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                      this->_internal_package_format());
+    }
+
+    // optional .google.protobuf.Timestamp issued = 7 [json_name = "issued"];
+    if (cached_has_bits & 0x00000080u) {
       total_size +=
           1 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.issued_);
     }
 
+  }
+  if (cached_has_bits & 0x00000300u) {
     // optional .google.protobuf.Timestamp modified = 8 [json_name = "modified"];
-    if (cached_has_bits & 0x00000004u) {
+    if (cached_has_bits & 0x00000100u) {
       total_size +=
           1 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.modified_);
     }
 
+    // optional .dsp.v1alpha1.Checksum checksum = 18 [json_name = "checksum"];
+    if (cached_has_bits & 0x00000200u) {
+      total_size +=
+          2 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.checksum_);
+    }
+
   }
+  // int64 byte_size = 13 [json_name = "byteSize"];
+  if (this->_internal_byte_size() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
+        this->_internal_byte_size());
+  }
+
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
@@ -738,11 +1086,34 @@ void Dataset::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google:
     _this->_internal_set_access_methods(from._internal_access_methods());
   }
   cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
+  if (cached_has_bits & 0x0000000fu) {
     if (cached_has_bits & 0x00000001u) {
       _this->_internal_set_creator(from._internal_creator());
     }
     if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_license(from._internal_license());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_set_access_rights(from._internal_access_rights());
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_internal_set_rights(from._internal_rights());
+    }
+  }
+  if (!from._internal_media_type().empty()) {
+    _this->_internal_set_media_type(from._internal_media_type());
+  }
+  if (cached_has_bits & 0x000000f0u) {
+    if (cached_has_bits & 0x00000010u) {
+      _this->_internal_set_format(from._internal_format());
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_internal_set_compress_format(from._internal_compress_format());
+    }
+    if (cached_has_bits & 0x00000040u) {
+      _this->_internal_set_package_format(from._internal_package_format());
+    }
+    if (cached_has_bits & 0x00000080u) {
       ABSL_DCHECK(from._impl_.issued_ != nullptr);
       if (_this->_impl_.issued_ == nullptr) {
         _this->_impl_.issued_ =
@@ -751,7 +1122,9 @@ void Dataset::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google:
         _this->_impl_.issued_->MergeFrom(*from._impl_.issued_);
       }
     }
-    if (cached_has_bits & 0x00000004u) {
+  }
+  if (cached_has_bits & 0x00000300u) {
+    if (cached_has_bits & 0x00000100u) {
       ABSL_DCHECK(from._impl_.modified_ != nullptr);
       if (_this->_impl_.modified_ == nullptr) {
         _this->_impl_.modified_ =
@@ -760,6 +1133,18 @@ void Dataset::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google:
         _this->_impl_.modified_->MergeFrom(*from._impl_.modified_);
       }
     }
+    if (cached_has_bits & 0x00000200u) {
+      ABSL_DCHECK(from._impl_.checksum_ != nullptr);
+      if (_this->_impl_.checksum_ == nullptr) {
+        _this->_impl_.checksum_ =
+            ::google::protobuf::Message::CopyConstruct<::dsp::v1alpha1::Checksum>(arena, *from._impl_.checksum_);
+      } else {
+        _this->_impl_.checksum_->MergeFrom(*from._impl_.checksum_);
+      }
+    }
+  }
+  if (from._internal_byte_size() != 0) {
+    _this->_impl_.byte_size_ = from._impl_.byte_size_;
   }
   _this->_impl_._has_bits_[0] |= cached_has_bits;
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
@@ -786,9 +1171,16 @@ void Dataset::InternalSwap(Dataset* PROTOBUF_RESTRICT other) {
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.title_, &other->_impl_.title_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.access_methods_, &other->_impl_.access_methods_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.creator_, &other->_impl_.creator_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.license_, &other->_impl_.license_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.access_rights_, &other->_impl_.access_rights_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.rights_, &other->_impl_.rights_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.media_type_, &other->_impl_.media_type_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.format_, &other->_impl_.format_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.compress_format_, &other->_impl_.compress_format_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.package_format_, &other->_impl_.package_format_, arena);
   ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Dataset, _impl_.modified_)
-      + sizeof(Dataset::_impl_.modified_)
+      PROTOBUF_FIELD_OFFSET(Dataset, _impl_.byte_size_)
+      + sizeof(Dataset::_impl_.byte_size_)
       - PROTOBUF_FIELD_OFFSET(Dataset, _impl_.issued_)>(
           reinterpret_cast<char*>(&_impl_.issued_),
           reinterpret_cast<char*>(&other->_impl_.issued_));
@@ -1294,6 +1686,228 @@ void Multilingual::InternalSwap(Multilingual* PROTOBUF_RESTRICT other) {
 }
 
 ::google::protobuf::Metadata Multilingual::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+class Checksum::_Internal {
+ public:
+};
+
+Checksum::Checksum(::google::protobuf::Arena* arena)
+    : ::google::protobuf::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:dsp.v1alpha1.Checksum)
+}
+inline PROTOBUF_NDEBUG_INLINE Checksum::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from, const ::dsp::v1alpha1::Checksum& from_msg)
+      : algorithm_(arena, from.algorithm_),
+        value_(arena, from.value_),
+        _cached_size_{0} {}
+
+Checksum::Checksum(
+    ::google::protobuf::Arena* arena,
+    const Checksum& from)
+    : ::google::protobuf::Message(arena) {
+  Checksum* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+
+  // @@protoc_insertion_point(copy_constructor:dsp.v1alpha1.Checksum)
+}
+inline PROTOBUF_NDEBUG_INLINE Checksum::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : algorithm_(arena),
+        value_(arena),
+        _cached_size_{0} {}
+
+inline void Checksum::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+}
+Checksum::~Checksum() {
+  // @@protoc_insertion_point(destructor:dsp.v1alpha1.Checksum)
+  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  SharedDtor();
+}
+inline void Checksum::SharedDtor() {
+  ABSL_DCHECK(GetArena() == nullptr);
+  _impl_.algorithm_.Destroy();
+  _impl_.value_.Destroy();
+  _impl_.~Impl_();
+}
+
+const ::google::protobuf::MessageLite::ClassData*
+Checksum::GetClassData() const {
+  PROTOBUF_CONSTINIT static const ::google::protobuf::MessageLite::
+      ClassDataFull _data_ = {
+          {
+              &_table_.header,
+              nullptr,  // OnDemandRegisterArenaDtor
+              nullptr,  // IsInitialized
+              PROTOBUF_FIELD_OFFSET(Checksum, _impl_._cached_size_),
+              false,
+          },
+          &Checksum::MergeImpl,
+          &Checksum::kDescriptorMethods,
+          &descriptor_table_dsp_2fv1alpha1_2ftypes_2eproto,
+          nullptr,  // tracker
+      };
+  ::google::protobuf::internal::PrefetchToLocalCache(&_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(_data_.tc_table);
+  return _data_.base();
+}
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<1, 2, 0, 44, 2> Checksum::_table_ = {
+  {
+    0,  // no _has_bits_
+    0, // no _extensions_
+    2, 8,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967292,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    2,  // num_field_entries
+    0,  // num_aux_entries
+    offsetof(decltype(_table_), field_names),  // no aux_entries
+    &_Checksum_default_instance_._instance,
+    nullptr,  // post_loop_handler
+    ::_pbi::TcParser::GenericFallback,  // fallback
+    #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+    ::_pbi::TcParser::GetTable<::dsp::v1alpha1::Checksum>(),  // to_prefetch
+    #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+  }, {{
+    // string value = 2 [json_name = "value"];
+    {::_pbi::TcParser::FastUS1,
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(Checksum, _impl_.value_)}},
+    // string algorithm = 1 [json_name = "algorithm"];
+    {::_pbi::TcParser::FastUS1,
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(Checksum, _impl_.algorithm_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // string algorithm = 1 [json_name = "algorithm"];
+    {PROTOBUF_FIELD_OFFSET(Checksum, _impl_.algorithm_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // string value = 2 [json_name = "value"];
+    {PROTOBUF_FIELD_OFFSET(Checksum, _impl_.value_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+  }},
+  // no aux_entries
+  {{
+    "\25\11\5\0\0\0\0\0"
+    "dsp.v1alpha1.Checksum"
+    "algorithm"
+    "value"
+  }},
+};
+
+PROTOBUF_NOINLINE void Checksum::Clear() {
+// @@protoc_insertion_point(message_clear_start:dsp.v1alpha1.Checksum)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.algorithm_.ClearToEmpty();
+  _impl_.value_.ClearToEmpty();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+::uint8_t* Checksum::_InternalSerialize(
+    ::uint8_t* target,
+    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:dsp.v1alpha1.Checksum)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  // string algorithm = 1 [json_name = "algorithm"];
+  if (!this->_internal_algorithm().empty()) {
+    const std::string& _s = this->_internal_algorithm();
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "dsp.v1alpha1.Checksum.algorithm");
+    target = stream->WriteStringMaybeAliased(1, _s, target);
+  }
+
+  // string value = 2 [json_name = "value"];
+  if (!this->_internal_value().empty()) {
+    const std::string& _s = this->_internal_value();
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "dsp.v1alpha1.Checksum.value");
+    target = stream->WriteStringMaybeAliased(2, _s, target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:dsp.v1alpha1.Checksum)
+  return target;
+}
+
+::size_t Checksum::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:dsp.v1alpha1.Checksum)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  ::_pbi::Prefetch5LinesFrom7Lines(reinterpret_cast<const void*>(this));
+  // string algorithm = 1 [json_name = "algorithm"];
+  if (!this->_internal_algorithm().empty()) {
+    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                    this->_internal_algorithm());
+  }
+
+  // string value = 2 [json_name = "value"];
+  if (!this->_internal_value().empty()) {
+    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                    this->_internal_value());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+
+void Checksum::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<Checksum*>(&to_msg);
+  auto& from = static_cast<const Checksum&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:dsp.v1alpha1.Checksum)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_algorithm().empty()) {
+    _this->_internal_set_algorithm(from._internal_algorithm());
+  }
+  if (!from._internal_value().empty()) {
+    _this->_internal_set_value(from._internal_value());
+  }
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void Checksum::CopyFrom(const Checksum& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:dsp.v1alpha1.Checksum)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void Checksum::InternalSwap(Checksum* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.algorithm_, &other->_impl_.algorithm_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.value_, &other->_impl_.value_, arena);
+}
+
+::google::protobuf::Metadata Checksum::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // @@protoc_insertion_point(namespace_scope)

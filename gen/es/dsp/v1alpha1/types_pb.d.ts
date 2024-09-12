@@ -95,6 +95,51 @@ export declare class Dataset extends Message<Dataset> {
    */
   metadata: { [key: string]: string };
 
+  /**
+   * @generated from field: optional string license = 10;
+   */
+  license?: string;
+
+  /**
+   * @generated from field: optional string access_rights = 11;
+   */
+  accessRights?: string;
+
+  /**
+   * @generated from field: optional string rights = 12;
+   */
+  rights?: string;
+
+  /**
+   * @generated from field: int64 byte_size = 13;
+   */
+  byteSize: bigint;
+
+  /**
+   * @generated from field: string media_type = 14;
+   */
+  mediaType: string;
+
+  /**
+   * @generated from field: optional string format = 15;
+   */
+  format?: string;
+
+  /**
+   * @generated from field: optional string compress_format = 16;
+   */
+  compressFormat?: string;
+
+  /**
+   * @generated from field: optional string package_format = 17;
+   */
+  packageFormat?: string;
+
+  /**
+   * @generated from field: optional dsp.v1alpha1.Checksum checksum = 18;
+   */
+  checksum?: Checksum;
+
   constructor(data?: PartialMessage<Dataset>);
 
   static readonly runtime: typeof proto3;
@@ -180,5 +225,36 @@ export declare class Multilingual extends Message<Multilingual> {
   static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Multilingual;
 
   static equals(a: Multilingual | PlainMessage<Multilingual> | undefined, b: Multilingual | PlainMessage<Multilingual> | undefined): boolean;
+}
+
+/**
+ * Checksum represents the checksum of a dataset.
+ *
+ * @generated from message dsp.v1alpha1.Checksum
+ */
+export declare class Checksum extends Message<Checksum> {
+  /**
+   * @generated from field: string algorithm = 1;
+   */
+  algorithm: string;
+
+  /**
+   * @generated from field: string value = 2;
+   */
+  value: string;
+
+  constructor(data?: PartialMessage<Checksum>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "dsp.v1alpha1.Checksum";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Checksum;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Checksum;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Checksum;
+
+  static equals(a: Checksum | PlainMessage<Checksum> | undefined, b: Checksum | PlainMessage<Checksum> | undefined): boolean;
 }
 

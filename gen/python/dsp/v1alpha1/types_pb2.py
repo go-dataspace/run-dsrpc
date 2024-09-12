@@ -25,7 +25,7 @@ _sym_db = _symbol_database.Default()
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x18\x64sp/v1alpha1/types.proto\x12\x0c\x64sp.v1alpha1\x1a\x1fgoogle/protobuf/timestamp.proto\"\xe7\x03\n\x07\x44\x61taset\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\x12\x14\n\x05title\x18\x02 \x01(\tR\x05title\x12%\n\x0e\x61\x63\x63\x65ss_methods\x18\x03 \x01(\tR\raccessMethods\x12<\n\x0b\x64\x65scription\x18\x04 \x03(\x0b\x32\x1a.dsp.v1alpha1.MultilingualR\x0b\x64\x65scription\x12\x1a\n\x08keywords\x18\x05 \x03(\tR\x08keywords\x12\x1d\n\x07\x63reator\x18\x06 \x01(\tH\x00R\x07\x63reator\x88\x01\x01\x12\x37\n\x06issued\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.TimestampH\x01R\x06issued\x88\x01\x01\x12;\n\x08modified\x18\x08 \x01(\x0b\x32\x1a.google.protobuf.TimestampH\x02R\x08modified\x88\x01\x01\x12?\n\x08metadata\x18\t \x03(\x0b\x32#.dsp.v1alpha1.Dataset.MetadataEntryR\x08metadata\x1a;\n\rMetadataEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n\x05value\x18\x02 \x01(\tR\x05value:\x02\x38\x01\x42\n\n\x08_creatorB\t\n\x07_issuedB\x0b\n\t_modified\"\xaa\x01\n\x0bPublishInfo\x12\x10\n\x03url\x18\x01 \x01(\tR\x03url\x12Q\n\x13\x61uthentication_type\x18\x02 \x01(\x0e\x32 .dsp.v1alpha1.AuthenticationTypeR\x12\x61uthenticationType\x12\x1a\n\x08username\x18\x03 \x01(\tR\x08username\x12\x1a\n\x08password\x18\x04 \x01(\tR\x08password\"@\n\x0cMultilingual\x12\x14\n\x05value\x18\x01 \x01(\tR\x05value\x12\x1a\n\x08language\x18\x02 \x01(\tR\x08language*x\n\x12\x41uthenticationType\x12#\n\x1f\x41UTHENTICATION_TYPE_UNSPECIFIED\x10\x00\x12\x1e\n\x1a\x41UTHENTICATION_TYPE_BEARER\x10\x01\x12\x1d\n\x19\x41UTHENTICATION_TYPE_BASIC\x10\x02\x42\xa6\x01\n\x10\x63om.dsp.v1alpha1B\nTypesProtoP\x01Z5github.com/bufbuild/buf-tour/dsp/v1alpha1;dspv1alpha1\xa2\x02\x03\x44XX\xaa\x02\x0c\x44sp.V1alpha1\xca\x02\x0c\x44sp\\V1alpha1\xe2\x02\x18\x44sp\\V1alpha1\\GPBMetadata\xea\x02\rDsp::V1alpha1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x18\x64sp/v1alpha1/types.proto\x12\x0c\x64sp.v1alpha1\x1a\x1fgoogle/protobuf/timestamp.proto\"\xa1\x07\n\x07\x44\x61taset\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\x12\x14\n\x05title\x18\x02 \x01(\tR\x05title\x12%\n\x0e\x61\x63\x63\x65ss_methods\x18\x03 \x01(\tR\raccessMethods\x12<\n\x0b\x64\x65scription\x18\x04 \x03(\x0b\x32\x1a.dsp.v1alpha1.MultilingualR\x0b\x64\x65scription\x12\x1a\n\x08keywords\x18\x05 \x03(\tR\x08keywords\x12\x1d\n\x07\x63reator\x18\x06 \x01(\tH\x00R\x07\x63reator\x88\x01\x01\x12\x37\n\x06issued\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.TimestampH\x01R\x06issued\x88\x01\x01\x12;\n\x08modified\x18\x08 \x01(\x0b\x32\x1a.google.protobuf.TimestampH\x02R\x08modified\x88\x01\x01\x12?\n\x08metadata\x18\t \x03(\x0b\x32#.dsp.v1alpha1.Dataset.MetadataEntryR\x08metadata\x12\x1d\n\x07license\x18\n \x01(\tH\x03R\x07license\x88\x01\x01\x12(\n\raccess_rights\x18\x0b \x01(\tH\x04R\x0c\x61\x63\x63\x65ssRights\x88\x01\x01\x12\x1b\n\x06rights\x18\x0c \x01(\tH\x05R\x06rights\x88\x01\x01\x12\x1b\n\tbyte_size\x18\r \x01(\x03R\x08\x62yteSize\x12\x1d\n\nmedia_type\x18\x0e \x01(\tR\tmediaType\x12\x1b\n\x06\x66ormat\x18\x0f \x01(\tH\x06R\x06\x66ormat\x88\x01\x01\x12,\n\x0f\x63ompress_format\x18\x10 \x01(\tH\x07R\x0e\x63ompressFormat\x88\x01\x01\x12*\n\x0epackage_format\x18\x11 \x01(\tH\x08R\rpackageFormat\x88\x01\x01\x12\x37\n\x08\x63hecksum\x18\x12 \x01(\x0b\x32\x16.dsp.v1alpha1.ChecksumH\tR\x08\x63hecksum\x88\x01\x01\x1a;\n\rMetadataEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n\x05value\x18\x02 \x01(\tR\x05value:\x02\x38\x01\x42\n\n\x08_creatorB\t\n\x07_issuedB\x0b\n\t_modifiedB\n\n\x08_licenseB\x10\n\x0e_access_rightsB\t\n\x07_rightsB\t\n\x07_formatB\x12\n\x10_compress_formatB\x11\n\x0f_package_formatB\x0b\n\t_checksum\"\xaa\x01\n\x0bPublishInfo\x12\x10\n\x03url\x18\x01 \x01(\tR\x03url\x12Q\n\x13\x61uthentication_type\x18\x02 \x01(\x0e\x32 .dsp.v1alpha1.AuthenticationTypeR\x12\x61uthenticationType\x12\x1a\n\x08username\x18\x03 \x01(\tR\x08username\x12\x1a\n\x08password\x18\x04 \x01(\tR\x08password\"@\n\x0cMultilingual\x12\x14\n\x05value\x18\x01 \x01(\tR\x05value\x12\x1a\n\x08language\x18\x02 \x01(\tR\x08language\">\n\x08\x43hecksum\x12\x1c\n\talgorithm\x18\x01 \x01(\tR\talgorithm\x12\x14\n\x05value\x18\x02 \x01(\tR\x05value*x\n\x12\x41uthenticationType\x12#\n\x1f\x41UTHENTICATION_TYPE_UNSPECIFIED\x10\x00\x12\x1e\n\x1a\x41UTHENTICATION_TYPE_BEARER\x10\x01\x12\x1d\n\x19\x41UTHENTICATION_TYPE_BASIC\x10\x02\x42\xa6\x01\n\x10\x63om.dsp.v1alpha1B\nTypesProtoP\x01Z5github.com/bufbuild/buf-tour/dsp/v1alpha1;dspv1alpha1\xa2\x02\x03\x44XX\xaa\x02\x0c\x44sp.V1alpha1\xca\x02\x0c\x44sp\\V1alpha1\xe2\x02\x18\x44sp\\V1alpha1\\GPBMetadata\xea\x02\rDsp::V1alpha1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -35,14 +35,16 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['DESCRIPTOR']._serialized_options = b'\n\020com.dsp.v1alpha1B\nTypesProtoP\001Z5github.com/bufbuild/buf-tour/dsp/v1alpha1;dspv1alpha1\242\002\003DXX\252\002\014Dsp.V1alpha1\312\002\014Dsp\\V1alpha1\342\002\030Dsp\\V1alpha1\\GPBMetadata\352\002\rDsp::V1alpha1'
   _globals['_DATASET_METADATAENTRY']._loaded_options = None
   _globals['_DATASET_METADATAENTRY']._serialized_options = b'8\001'
-  _globals['_AUTHENTICATIONTYPE']._serialized_start=804
-  _globals['_AUTHENTICATIONTYPE']._serialized_end=924
+  _globals['_AUTHENTICATIONTYPE']._serialized_start=1310
+  _globals['_AUTHENTICATIONTYPE']._serialized_end=1430
   _globals['_DATASET']._serialized_start=76
-  _globals['_DATASET']._serialized_end=563
-  _globals['_DATASET_METADATAENTRY']._serialized_start=468
-  _globals['_DATASET_METADATAENTRY']._serialized_end=527
-  _globals['_PUBLISHINFO']._serialized_start=566
-  _globals['_PUBLISHINFO']._serialized_end=736
-  _globals['_MULTILINGUAL']._serialized_start=738
-  _globals['_MULTILINGUAL']._serialized_end=802
+  _globals['_DATASET']._serialized_end=1005
+  _globals['_DATASET_METADATAENTRY']._serialized_start=806
+  _globals['_DATASET_METADATAENTRY']._serialized_end=865
+  _globals['_PUBLISHINFO']._serialized_start=1008
+  _globals['_PUBLISHINFO']._serialized_end=1178
+  _globals['_MULTILINGUAL']._serialized_start=1180
+  _globals['_MULTILINGUAL']._serialized_end=1244
+  _globals['_CHECKSUM']._serialized_start=1246
+  _globals['_CHECKSUM']._serialized_end=1308
 # @@protoc_insertion_point(module_scope)

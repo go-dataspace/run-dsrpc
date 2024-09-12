@@ -42,12 +42,28 @@ const Dataset$json = {
     {'1': 'issued', '3': 7, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '9': 1, '10': 'issued', '17': true},
     {'1': 'modified', '3': 8, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '9': 2, '10': 'modified', '17': true},
     {'1': 'metadata', '3': 9, '4': 3, '5': 11, '6': '.dsp.v1alpha1.Dataset.MetadataEntry', '10': 'metadata'},
+    {'1': 'license', '3': 10, '4': 1, '5': 9, '9': 3, '10': 'license', '17': true},
+    {'1': 'access_rights', '3': 11, '4': 1, '5': 9, '9': 4, '10': 'accessRights', '17': true},
+    {'1': 'rights', '3': 12, '4': 1, '5': 9, '9': 5, '10': 'rights', '17': true},
+    {'1': 'byte_size', '3': 13, '4': 1, '5': 3, '10': 'byteSize'},
+    {'1': 'media_type', '3': 14, '4': 1, '5': 9, '10': 'mediaType'},
+    {'1': 'format', '3': 15, '4': 1, '5': 9, '9': 6, '10': 'format', '17': true},
+    {'1': 'compress_format', '3': 16, '4': 1, '5': 9, '9': 7, '10': 'compressFormat', '17': true},
+    {'1': 'package_format', '3': 17, '4': 1, '5': 9, '9': 8, '10': 'packageFormat', '17': true},
+    {'1': 'checksum', '3': 18, '4': 1, '5': 11, '6': '.dsp.v1alpha1.Checksum', '9': 9, '10': 'checksum', '17': true},
   ],
   '3': [Dataset_MetadataEntry$json],
   '8': [
     {'1': '_creator'},
     {'1': '_issued'},
     {'1': '_modified'},
+    {'1': '_license'},
+    {'1': '_access_rights'},
+    {'1': '_rights'},
+    {'1': '_format'},
+    {'1': '_compress_format'},
+    {'1': '_package_format'},
+    {'1': '_checksum'},
   ],
 };
 
@@ -70,8 +86,16 @@ final $typed_data.Uint8List datasetDescriptor = $convert.base64Decode(
     'CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAVIGaXNzdWVkiAEBEjsKCG1vZGlmaWVkGA'
     'ggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgCUghtb2RpZmllZIgBARI/CghtZXRh'
     'ZGF0YRgJIAMoCzIjLmRzcC52MWFscGhhMS5EYXRhc2V0Lk1ldGFkYXRhRW50cnlSCG1ldGFkYX'
-    'RhGjsKDU1ldGFkYXRhRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKAlSBXZh'
-    'bHVlOgI4AUIKCghfY3JlYXRvckIJCgdfaXNzdWVkQgsKCV9tb2RpZmllZA==');
+    'RhEh0KB2xpY2Vuc2UYCiABKAlIA1IHbGljZW5zZYgBARIoCg1hY2Nlc3NfcmlnaHRzGAsgASgJ'
+    'SARSDGFjY2Vzc1JpZ2h0c4gBARIbCgZyaWdodHMYDCABKAlIBVIGcmlnaHRziAEBEhsKCWJ5dG'
+    'Vfc2l6ZRgNIAEoA1IIYnl0ZVNpemUSHQoKbWVkaWFfdHlwZRgOIAEoCVIJbWVkaWFUeXBlEhsK'
+    'BmZvcm1hdBgPIAEoCUgGUgZmb3JtYXSIAQESLAoPY29tcHJlc3NfZm9ybWF0GBAgASgJSAdSDm'
+    'NvbXByZXNzRm9ybWF0iAEBEioKDnBhY2thZ2VfZm9ybWF0GBEgASgJSAhSDXBhY2thZ2VGb3Jt'
+    'YXSIAQESNwoIY2hlY2tzdW0YEiABKAsyFi5kc3AudjFhbHBoYTEuQ2hlY2tzdW1ICVIIY2hlY2'
+    'tzdW2IAQEaOwoNTWV0YWRhdGFFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEo'
+    'CVIFdmFsdWU6AjgBQgoKCF9jcmVhdG9yQgkKB19pc3N1ZWRCCwoJX21vZGlmaWVkQgoKCF9saW'
+    'NlbnNlQhAKDl9hY2Nlc3NfcmlnaHRzQgkKB19yaWdodHNCCQoHX2Zvcm1hdEISChBfY29tcHJl'
+    'c3NfZm9ybWF0QhEKD19wYWNrYWdlX2Zvcm1hdEILCglfY2hlY2tzdW0=');
 
 @$core.Deprecated('Use publishInfoDescriptor instead')
 const PublishInfo$json = {
@@ -104,4 +128,18 @@ const Multilingual$json = {
 final $typed_data.Uint8List multilingualDescriptor = $convert.base64Decode(
     'CgxNdWx0aWxpbmd1YWwSFAoFdmFsdWUYASABKAlSBXZhbHVlEhoKCGxhbmd1YWdlGAIgASgJUg'
     'hsYW5ndWFnZQ==');
+
+@$core.Deprecated('Use checksumDescriptor instead')
+const Checksum$json = {
+  '1': 'Checksum',
+  '2': [
+    {'1': 'algorithm', '3': 1, '4': 1, '5': 9, '10': 'algorithm'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  ],
+};
+
+/// Descriptor for `Checksum`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List checksumDescriptor = $convert.base64Decode(
+    'CghDaGVja3N1bRIcCglhbGdvcml0aG0YASABKAlSCWFsZ29yaXRobRIUCgV2YWx1ZRgCIAEoCV'
+    'IFdmFsdWU=');
 
