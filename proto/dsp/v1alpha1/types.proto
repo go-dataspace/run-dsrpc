@@ -31,6 +31,15 @@ message Dataset {
   optional google.protobuf.Timestamp issued = 7;
   optional google.protobuf.Timestamp modified = 8;
   map<string, string> metadata = 9;
+  optional string license = 10;
+  optional string access_rights = 11;
+  optional string rights = 12;
+  int64 byte_size = 13;
+  string media_type = 14;
+  optional string format = 15;
+  optional string compress_format = 16;
+  optional string package_format = 17;
+  optional Checksum checksum = 18;
 }
 
 // PublishInfo represents a published file, where to get it and its authentication details.
@@ -52,4 +61,10 @@ enum AuthenticationType {
 message Multilingual {
   string value = 1;
   string language = 2;
+}
+
+// Checksum represents the checksum of a dataset.
+message Checksum {
+  string algorithm = 1;
+  string value = 2;
 }

@@ -87,52 +87,141 @@ struct Dsp_V1alpha1_Dataset {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var id: String = String()
+  var id: String {
+    get {return _storage._id}
+    set {_uniqueStorage()._id = newValue}
+  }
 
-  var title: String = String()
+  var title: String {
+    get {return _storage._title}
+    set {_uniqueStorage()._title = newValue}
+  }
 
-  var accessMethods: String = String()
+  var accessMethods: String {
+    get {return _storage._accessMethods}
+    set {_uniqueStorage()._accessMethods = newValue}
+  }
 
-  var description_p: [Dsp_V1alpha1_Multilingual] = []
+  var description_p: [Dsp_V1alpha1_Multilingual] {
+    get {return _storage._description_p}
+    set {_uniqueStorage()._description_p = newValue}
+  }
 
-  var keywords: [String] = []
+  var keywords: [String] {
+    get {return _storage._keywords}
+    set {_uniqueStorage()._keywords = newValue}
+  }
 
   var creator: String {
-    get {return _creator ?? String()}
-    set {_creator = newValue}
+    get {return _storage._creator ?? String()}
+    set {_uniqueStorage()._creator = newValue}
   }
   /// Returns true if `creator` has been explicitly set.
-  var hasCreator: Bool {return self._creator != nil}
+  var hasCreator: Bool {return _storage._creator != nil}
   /// Clears the value of `creator`. Subsequent reads from it will return its default value.
-  mutating func clearCreator() {self._creator = nil}
+  mutating func clearCreator() {_uniqueStorage()._creator = nil}
 
   var issued: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _issued ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_issued = newValue}
+    get {return _storage._issued ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+    set {_uniqueStorage()._issued = newValue}
   }
   /// Returns true if `issued` has been explicitly set.
-  var hasIssued: Bool {return self._issued != nil}
+  var hasIssued: Bool {return _storage._issued != nil}
   /// Clears the value of `issued`. Subsequent reads from it will return its default value.
-  mutating func clearIssued() {self._issued = nil}
+  mutating func clearIssued() {_uniqueStorage()._issued = nil}
 
   var modified: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _modified ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_modified = newValue}
+    get {return _storage._modified ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+    set {_uniqueStorage()._modified = newValue}
   }
   /// Returns true if `modified` has been explicitly set.
-  var hasModified: Bool {return self._modified != nil}
+  var hasModified: Bool {return _storage._modified != nil}
   /// Clears the value of `modified`. Subsequent reads from it will return its default value.
-  mutating func clearModified() {self._modified = nil}
+  mutating func clearModified() {_uniqueStorage()._modified = nil}
 
-  var metadata: Dictionary<String,String> = [:]
+  var metadata: Dictionary<String,String> {
+    get {return _storage._metadata}
+    set {_uniqueStorage()._metadata = newValue}
+  }
+
+  var license: String {
+    get {return _storage._license ?? String()}
+    set {_uniqueStorage()._license = newValue}
+  }
+  /// Returns true if `license` has been explicitly set.
+  var hasLicense: Bool {return _storage._license != nil}
+  /// Clears the value of `license`. Subsequent reads from it will return its default value.
+  mutating func clearLicense() {_uniqueStorage()._license = nil}
+
+  var accessRights: String {
+    get {return _storage._accessRights ?? String()}
+    set {_uniqueStorage()._accessRights = newValue}
+  }
+  /// Returns true if `accessRights` has been explicitly set.
+  var hasAccessRights: Bool {return _storage._accessRights != nil}
+  /// Clears the value of `accessRights`. Subsequent reads from it will return its default value.
+  mutating func clearAccessRights() {_uniqueStorage()._accessRights = nil}
+
+  var rights: String {
+    get {return _storage._rights ?? String()}
+    set {_uniqueStorage()._rights = newValue}
+  }
+  /// Returns true if `rights` has been explicitly set.
+  var hasRights: Bool {return _storage._rights != nil}
+  /// Clears the value of `rights`. Subsequent reads from it will return its default value.
+  mutating func clearRights() {_uniqueStorage()._rights = nil}
+
+  var byteSize: Int64 {
+    get {return _storage._byteSize}
+    set {_uniqueStorage()._byteSize = newValue}
+  }
+
+  var mediaType: String {
+    get {return _storage._mediaType}
+    set {_uniqueStorage()._mediaType = newValue}
+  }
+
+  var format: String {
+    get {return _storage._format ?? String()}
+    set {_uniqueStorage()._format = newValue}
+  }
+  /// Returns true if `format` has been explicitly set.
+  var hasFormat: Bool {return _storage._format != nil}
+  /// Clears the value of `format`. Subsequent reads from it will return its default value.
+  mutating func clearFormat() {_uniqueStorage()._format = nil}
+
+  var compressFormat: String {
+    get {return _storage._compressFormat ?? String()}
+    set {_uniqueStorage()._compressFormat = newValue}
+  }
+  /// Returns true if `compressFormat` has been explicitly set.
+  var hasCompressFormat: Bool {return _storage._compressFormat != nil}
+  /// Clears the value of `compressFormat`. Subsequent reads from it will return its default value.
+  mutating func clearCompressFormat() {_uniqueStorage()._compressFormat = nil}
+
+  var packageFormat: String {
+    get {return _storage._packageFormat ?? String()}
+    set {_uniqueStorage()._packageFormat = newValue}
+  }
+  /// Returns true if `packageFormat` has been explicitly set.
+  var hasPackageFormat: Bool {return _storage._packageFormat != nil}
+  /// Clears the value of `packageFormat`. Subsequent reads from it will return its default value.
+  mutating func clearPackageFormat() {_uniqueStorage()._packageFormat = nil}
+
+  var checksum: Dsp_V1alpha1_Checksum {
+    get {return _storage._checksum ?? Dsp_V1alpha1_Checksum()}
+    set {_uniqueStorage()._checksum = newValue}
+  }
+  /// Returns true if `checksum` has been explicitly set.
+  var hasChecksum: Bool {return _storage._checksum != nil}
+  /// Clears the value of `checksum`. Subsequent reads from it will return its default value.
+  mutating func clearChecksum() {_uniqueStorage()._checksum = nil}
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
 
-  fileprivate var _creator: String? = nil
-  fileprivate var _issued: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
-  fileprivate var _modified: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+  fileprivate var _storage = _StorageClass.defaultInstance
 }
 
 /// PublishInfo represents a published file, where to get it and its authentication details.
@@ -169,11 +258,27 @@ struct Dsp_V1alpha1_Multilingual {
   init() {}
 }
 
+/// Checksum represents the checksum of a dataset.
+struct Dsp_V1alpha1_Checksum {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var algorithm: String = String()
+
+  var value: String = String()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Dsp_V1alpha1_AuthenticationType: @unchecked Sendable {}
 extension Dsp_V1alpha1_Dataset: @unchecked Sendable {}
 extension Dsp_V1alpha1_PublishInfo: @unchecked Sendable {}
 extension Dsp_V1alpha1_Multilingual: @unchecked Sendable {}
+extension Dsp_V1alpha1_Checksum: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -200,73 +305,201 @@ extension Dsp_V1alpha1_Dataset: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     7: .same(proto: "issued"),
     8: .same(proto: "modified"),
     9: .same(proto: "metadata"),
+    10: .same(proto: "license"),
+    11: .standard(proto: "access_rights"),
+    12: .same(proto: "rights"),
+    13: .standard(proto: "byte_size"),
+    14: .standard(proto: "media_type"),
+    15: .same(proto: "format"),
+    16: .standard(proto: "compress_format"),
+    17: .standard(proto: "package_format"),
+    18: .same(proto: "checksum"),
   ]
 
+  fileprivate class _StorageClass {
+    var _id: String = String()
+    var _title: String = String()
+    var _accessMethods: String = String()
+    var _description_p: [Dsp_V1alpha1_Multilingual] = []
+    var _keywords: [String] = []
+    var _creator: String? = nil
+    var _issued: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    var _modified: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    var _metadata: Dictionary<String,String> = [:]
+    var _license: String? = nil
+    var _accessRights: String? = nil
+    var _rights: String? = nil
+    var _byteSize: Int64 = 0
+    var _mediaType: String = String()
+    var _format: String? = nil
+    var _compressFormat: String? = nil
+    var _packageFormat: String? = nil
+    var _checksum: Dsp_V1alpha1_Checksum? = nil
+
+    #if swift(>=5.10)
+      // This property is used as the initial default value for new instances of the type.
+      // The type itself is protecting the reference to its storage via CoW semantics.
+      // This will force a copy to be made of this reference when the first mutation occurs;
+      // hence, it is safe to mark this as `nonisolated(unsafe)`.
+      static nonisolated(unsafe) let defaultInstance = _StorageClass()
+    #else
+      static let defaultInstance = _StorageClass()
+    #endif
+
+    private init() {}
+
+    init(copying source: _StorageClass) {
+      _id = source._id
+      _title = source._title
+      _accessMethods = source._accessMethods
+      _description_p = source._description_p
+      _keywords = source._keywords
+      _creator = source._creator
+      _issued = source._issued
+      _modified = source._modified
+      _metadata = source._metadata
+      _license = source._license
+      _accessRights = source._accessRights
+      _rights = source._rights
+      _byteSize = source._byteSize
+      _mediaType = source._mediaType
+      _format = source._format
+      _compressFormat = source._compressFormat
+      _packageFormat = source._packageFormat
+      _checksum = source._checksum
+    }
+  }
+
+  fileprivate mutating func _uniqueStorage() -> _StorageClass {
+    if !isKnownUniquelyReferenced(&_storage) {
+      _storage = _StorageClass(copying: _storage)
+    }
+    return _storage
+  }
+
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.id) }()
-      case 2: try { try decoder.decodeSingularStringField(value: &self.title) }()
-      case 3: try { try decoder.decodeSingularStringField(value: &self.accessMethods) }()
-      case 4: try { try decoder.decodeRepeatedMessageField(value: &self.description_p) }()
-      case 5: try { try decoder.decodeRepeatedStringField(value: &self.keywords) }()
-      case 6: try { try decoder.decodeSingularStringField(value: &self._creator) }()
-      case 7: try { try decoder.decodeSingularMessageField(value: &self._issued) }()
-      case 8: try { try decoder.decodeSingularMessageField(value: &self._modified) }()
-      case 9: try { try decoder.decodeMapField(fieldType: SwiftProtobuf._ProtobufMap<SwiftProtobuf.ProtobufString,SwiftProtobuf.ProtobufString>.self, value: &self.metadata) }()
-      default: break
+    _ = _uniqueStorage()
+    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+      while let fieldNumber = try decoder.nextFieldNumber() {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every case branch when no optimizations are
+        // enabled. https://github.com/apple/swift-protobuf/issues/1034
+        switch fieldNumber {
+        case 1: try { try decoder.decodeSingularStringField(value: &_storage._id) }()
+        case 2: try { try decoder.decodeSingularStringField(value: &_storage._title) }()
+        case 3: try { try decoder.decodeSingularStringField(value: &_storage._accessMethods) }()
+        case 4: try { try decoder.decodeRepeatedMessageField(value: &_storage._description_p) }()
+        case 5: try { try decoder.decodeRepeatedStringField(value: &_storage._keywords) }()
+        case 6: try { try decoder.decodeSingularStringField(value: &_storage._creator) }()
+        case 7: try { try decoder.decodeSingularMessageField(value: &_storage._issued) }()
+        case 8: try { try decoder.decodeSingularMessageField(value: &_storage._modified) }()
+        case 9: try { try decoder.decodeMapField(fieldType: SwiftProtobuf._ProtobufMap<SwiftProtobuf.ProtobufString,SwiftProtobuf.ProtobufString>.self, value: &_storage._metadata) }()
+        case 10: try { try decoder.decodeSingularStringField(value: &_storage._license) }()
+        case 11: try { try decoder.decodeSingularStringField(value: &_storage._accessRights) }()
+        case 12: try { try decoder.decodeSingularStringField(value: &_storage._rights) }()
+        case 13: try { try decoder.decodeSingularInt64Field(value: &_storage._byteSize) }()
+        case 14: try { try decoder.decodeSingularStringField(value: &_storage._mediaType) }()
+        case 15: try { try decoder.decodeSingularStringField(value: &_storage._format) }()
+        case 16: try { try decoder.decodeSingularStringField(value: &_storage._compressFormat) }()
+        case 17: try { try decoder.decodeSingularStringField(value: &_storage._packageFormat) }()
+        case 18: try { try decoder.decodeSingularMessageField(value: &_storage._checksum) }()
+        default: break
+        }
       }
     }
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    if !self.id.isEmpty {
-      try visitor.visitSingularStringField(value: self.id, fieldNumber: 1)
-    }
-    if !self.title.isEmpty {
-      try visitor.visitSingularStringField(value: self.title, fieldNumber: 2)
-    }
-    if !self.accessMethods.isEmpty {
-      try visitor.visitSingularStringField(value: self.accessMethods, fieldNumber: 3)
-    }
-    if !self.description_p.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.description_p, fieldNumber: 4)
-    }
-    if !self.keywords.isEmpty {
-      try visitor.visitRepeatedStringField(value: self.keywords, fieldNumber: 5)
-    }
-    try { if let v = self._creator {
-      try visitor.visitSingularStringField(value: v, fieldNumber: 6)
-    } }()
-    try { if let v = self._issued {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 7)
-    } }()
-    try { if let v = self._modified {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 8)
-    } }()
-    if !self.metadata.isEmpty {
-      try visitor.visitMapField(fieldType: SwiftProtobuf._ProtobufMap<SwiftProtobuf.ProtobufString,SwiftProtobuf.ProtobufString>.self, value: self.metadata, fieldNumber: 9)
+    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every if/case branch local when no optimizations
+      // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+      // https://github.com/apple/swift-protobuf/issues/1182
+      if !_storage._id.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._id, fieldNumber: 1)
+      }
+      if !_storage._title.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._title, fieldNumber: 2)
+      }
+      if !_storage._accessMethods.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._accessMethods, fieldNumber: 3)
+      }
+      if !_storage._description_p.isEmpty {
+        try visitor.visitRepeatedMessageField(value: _storage._description_p, fieldNumber: 4)
+      }
+      if !_storage._keywords.isEmpty {
+        try visitor.visitRepeatedStringField(value: _storage._keywords, fieldNumber: 5)
+      }
+      try { if let v = _storage._creator {
+        try visitor.visitSingularStringField(value: v, fieldNumber: 6)
+      } }()
+      try { if let v = _storage._issued {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 7)
+      } }()
+      try { if let v = _storage._modified {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 8)
+      } }()
+      if !_storage._metadata.isEmpty {
+        try visitor.visitMapField(fieldType: SwiftProtobuf._ProtobufMap<SwiftProtobuf.ProtobufString,SwiftProtobuf.ProtobufString>.self, value: _storage._metadata, fieldNumber: 9)
+      }
+      try { if let v = _storage._license {
+        try visitor.visitSingularStringField(value: v, fieldNumber: 10)
+      } }()
+      try { if let v = _storage._accessRights {
+        try visitor.visitSingularStringField(value: v, fieldNumber: 11)
+      } }()
+      try { if let v = _storage._rights {
+        try visitor.visitSingularStringField(value: v, fieldNumber: 12)
+      } }()
+      if _storage._byteSize != 0 {
+        try visitor.visitSingularInt64Field(value: _storage._byteSize, fieldNumber: 13)
+      }
+      if !_storage._mediaType.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._mediaType, fieldNumber: 14)
+      }
+      try { if let v = _storage._format {
+        try visitor.visitSingularStringField(value: v, fieldNumber: 15)
+      } }()
+      try { if let v = _storage._compressFormat {
+        try visitor.visitSingularStringField(value: v, fieldNumber: 16)
+      } }()
+      try { if let v = _storage._packageFormat {
+        try visitor.visitSingularStringField(value: v, fieldNumber: 17)
+      } }()
+      try { if let v = _storage._checksum {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 18)
+      } }()
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Dsp_V1alpha1_Dataset, rhs: Dsp_V1alpha1_Dataset) -> Bool {
-    if lhs.id != rhs.id {return false}
-    if lhs.title != rhs.title {return false}
-    if lhs.accessMethods != rhs.accessMethods {return false}
-    if lhs.description_p != rhs.description_p {return false}
-    if lhs.keywords != rhs.keywords {return false}
-    if lhs._creator != rhs._creator {return false}
-    if lhs._issued != rhs._issued {return false}
-    if lhs._modified != rhs._modified {return false}
-    if lhs.metadata != rhs.metadata {return false}
+    if lhs._storage !== rhs._storage {
+      let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
+        let _storage = _args.0
+        let rhs_storage = _args.1
+        if _storage._id != rhs_storage._id {return false}
+        if _storage._title != rhs_storage._title {return false}
+        if _storage._accessMethods != rhs_storage._accessMethods {return false}
+        if _storage._description_p != rhs_storage._description_p {return false}
+        if _storage._keywords != rhs_storage._keywords {return false}
+        if _storage._creator != rhs_storage._creator {return false}
+        if _storage._issued != rhs_storage._issued {return false}
+        if _storage._modified != rhs_storage._modified {return false}
+        if _storage._metadata != rhs_storage._metadata {return false}
+        if _storage._license != rhs_storage._license {return false}
+        if _storage._accessRights != rhs_storage._accessRights {return false}
+        if _storage._rights != rhs_storage._rights {return false}
+        if _storage._byteSize != rhs_storage._byteSize {return false}
+        if _storage._mediaType != rhs_storage._mediaType {return false}
+        if _storage._format != rhs_storage._format {return false}
+        if _storage._compressFormat != rhs_storage._compressFormat {return false}
+        if _storage._packageFormat != rhs_storage._packageFormat {return false}
+        if _storage._checksum != rhs_storage._checksum {return false}
+        return true
+      }
+      if !storagesAreEqual {return false}
+    }
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -355,6 +588,44 @@ extension Dsp_V1alpha1_Multilingual: SwiftProtobuf.Message, SwiftProtobuf._Messa
   static func ==(lhs: Dsp_V1alpha1_Multilingual, rhs: Dsp_V1alpha1_Multilingual) -> Bool {
     if lhs.value != rhs.value {return false}
     if lhs.language != rhs.language {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Dsp_V1alpha1_Checksum: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".Checksum"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "algorithm"),
+    2: .same(proto: "value"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.algorithm) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.value) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.algorithm.isEmpty {
+      try visitor.visitSingularStringField(value: self.algorithm, fieldNumber: 1)
+    }
+    if !self.value.isEmpty {
+      try visitor.visitSingularStringField(value: self.value, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Dsp_V1alpha1_Checksum, rhs: Dsp_V1alpha1_Checksum) -> Bool {
+    if lhs.algorithm != rhs.algorithm {return false}
+    if lhs.value != rhs.value {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

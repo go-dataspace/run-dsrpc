@@ -362,6 +362,210 @@ public object DatasetKt {
       .clear() {
          _builder.clearMetadata()
        }
+
+    /**
+     * `optional string license = 10 [json_name = "license"];`
+     */
+    public var license: kotlin.String
+      @JvmName("getLicense")
+      get() = _builder.getLicense()
+      @JvmName("setLicense")
+      set(value) {
+        _builder.setLicense(value)
+      }
+    /**
+     * `optional string license = 10 [json_name = "license"];`
+     */
+    public fun clearLicense() {
+      _builder.clearLicense()
+    }
+    /**
+     * `optional string license = 10 [json_name = "license"];`
+     * @return Whether the license field is set.
+     */
+    public fun hasLicense(): kotlin.Boolean {
+      return _builder.hasLicense()
+    }
+
+    /**
+     * `optional string access_rights = 11 [json_name = "accessRights"];`
+     */
+    public var accessRights: kotlin.String
+      @JvmName("getAccessRights")
+      get() = _builder.getAccessRights()
+      @JvmName("setAccessRights")
+      set(value) {
+        _builder.setAccessRights(value)
+      }
+    /**
+     * `optional string access_rights = 11 [json_name = "accessRights"];`
+     */
+    public fun clearAccessRights() {
+      _builder.clearAccessRights()
+    }
+    /**
+     * `optional string access_rights = 11 [json_name = "accessRights"];`
+     * @return Whether the accessRights field is set.
+     */
+    public fun hasAccessRights(): kotlin.Boolean {
+      return _builder.hasAccessRights()
+    }
+
+    /**
+     * `optional string rights = 12 [json_name = "rights"];`
+     */
+    public var rights: kotlin.String
+      @JvmName("getRights")
+      get() = _builder.getRights()
+      @JvmName("setRights")
+      set(value) {
+        _builder.setRights(value)
+      }
+    /**
+     * `optional string rights = 12 [json_name = "rights"];`
+     */
+    public fun clearRights() {
+      _builder.clearRights()
+    }
+    /**
+     * `optional string rights = 12 [json_name = "rights"];`
+     * @return Whether the rights field is set.
+     */
+    public fun hasRights(): kotlin.Boolean {
+      return _builder.hasRights()
+    }
+
+    /**
+     * `int64 byte_size = 13 [json_name = "byteSize"];`
+     */
+    public var byteSize: kotlin.Long
+      @JvmName("getByteSize")
+      get() = _builder.getByteSize()
+      @JvmName("setByteSize")
+      set(value) {
+        _builder.setByteSize(value)
+      }
+    /**
+     * `int64 byte_size = 13 [json_name = "byteSize"];`
+     */
+    public fun clearByteSize() {
+      _builder.clearByteSize()
+    }
+
+    /**
+     * `string media_type = 14 [json_name = "mediaType"];`
+     */
+    public var mediaType: kotlin.String
+      @JvmName("getMediaType")
+      get() = _builder.getMediaType()
+      @JvmName("setMediaType")
+      set(value) {
+        _builder.setMediaType(value)
+      }
+    /**
+     * `string media_type = 14 [json_name = "mediaType"];`
+     */
+    public fun clearMediaType() {
+      _builder.clearMediaType()
+    }
+
+    /**
+     * `optional string format = 15 [json_name = "format"];`
+     */
+    public var format: kotlin.String
+      @JvmName("getFormat")
+      get() = _builder.getFormat()
+      @JvmName("setFormat")
+      set(value) {
+        _builder.setFormat(value)
+      }
+    /**
+     * `optional string format = 15 [json_name = "format"];`
+     */
+    public fun clearFormat() {
+      _builder.clearFormat()
+    }
+    /**
+     * `optional string format = 15 [json_name = "format"];`
+     * @return Whether the format field is set.
+     */
+    public fun hasFormat(): kotlin.Boolean {
+      return _builder.hasFormat()
+    }
+
+    /**
+     * `optional string compress_format = 16 [json_name = "compressFormat"];`
+     */
+    public var compressFormat: kotlin.String
+      @JvmName("getCompressFormat")
+      get() = _builder.getCompressFormat()
+      @JvmName("setCompressFormat")
+      set(value) {
+        _builder.setCompressFormat(value)
+      }
+    /**
+     * `optional string compress_format = 16 [json_name = "compressFormat"];`
+     */
+    public fun clearCompressFormat() {
+      _builder.clearCompressFormat()
+    }
+    /**
+     * `optional string compress_format = 16 [json_name = "compressFormat"];`
+     * @return Whether the compressFormat field is set.
+     */
+    public fun hasCompressFormat(): kotlin.Boolean {
+      return _builder.hasCompressFormat()
+    }
+
+    /**
+     * `optional string package_format = 17 [json_name = "packageFormat"];`
+     */
+    public var packageFormat: kotlin.String
+      @JvmName("getPackageFormat")
+      get() = _builder.getPackageFormat()
+      @JvmName("setPackageFormat")
+      set(value) {
+        _builder.setPackageFormat(value)
+      }
+    /**
+     * `optional string package_format = 17 [json_name = "packageFormat"];`
+     */
+    public fun clearPackageFormat() {
+      _builder.clearPackageFormat()
+    }
+    /**
+     * `optional string package_format = 17 [json_name = "packageFormat"];`
+     * @return Whether the packageFormat field is set.
+     */
+    public fun hasPackageFormat(): kotlin.Boolean {
+      return _builder.hasPackageFormat()
+    }
+
+    /**
+     * `optional .dsp.v1alpha1.Checksum checksum = 18 [json_name = "checksum"];`
+     */
+    public var checksum: com.dsp.v1alpha1.Checksum
+      @JvmName("getChecksum")
+      get() = _builder.getChecksum()
+      @JvmName("setChecksum")
+      set(value) {
+        _builder.setChecksum(value)
+      }
+    /**
+     * `optional .dsp.v1alpha1.Checksum checksum = 18 [json_name = "checksum"];`
+     */
+    public fun clearChecksum() {
+      _builder.clearChecksum()
+    }
+    /**
+     * `optional .dsp.v1alpha1.Checksum checksum = 18 [json_name = "checksum"];`
+     * @return Whether the checksum field is set.
+     */
+    public fun hasChecksum(): kotlin.Boolean {
+      return _builder.hasChecksum()
+    }
+    public val DatasetKt.Dsl.checksumOrNull: com.dsp.v1alpha1.Checksum?
+      get() = _builder.checksumOrNull
   }
 }
 @kotlin.jvm.JvmSynthetic
@@ -373,4 +577,7 @@ public val com.dsp.v1alpha1.DatasetOrBuilder.issuedOrNull: com.google.protobuf.T
 
 public val com.dsp.v1alpha1.DatasetOrBuilder.modifiedOrNull: com.google.protobuf.Timestamp?
   get() = if (hasModified()) getModified() else null
+
+public val com.dsp.v1alpha1.DatasetOrBuilder.checksumOrNull: com.dsp.v1alpha1.Checksum?
+  get() = if (hasChecksum()) getChecksum() else null
 

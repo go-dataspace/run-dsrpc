@@ -24,6 +24,24 @@ pub struct Dataset {
     pub modified: ::core::option::Option<::prost_types::Timestamp>,
     #[prost(map="string, string", tag="9")]
     pub metadata: ::std::collections::HashMap<::prost::alloc::string::String, ::prost::alloc::string::String>,
+    #[prost(string, optional, tag="10")]
+    pub license: ::core::option::Option<::prost::alloc::string::String>,
+    #[prost(string, optional, tag="11")]
+    pub access_rights: ::core::option::Option<::prost::alloc::string::String>,
+    #[prost(string, optional, tag="12")]
+    pub rights: ::core::option::Option<::prost::alloc::string::String>,
+    #[prost(int64, tag="13")]
+    pub byte_size: i64,
+    #[prost(string, tag="14")]
+    pub media_type: ::prost::alloc::string::String,
+    #[prost(string, optional, tag="15")]
+    pub format: ::core::option::Option<::prost::alloc::string::String>,
+    #[prost(string, optional, tag="16")]
+    pub compress_format: ::core::option::Option<::prost::alloc::string::String>,
+    #[prost(string, optional, tag="17")]
+    pub package_format: ::core::option::Option<::prost::alloc::string::String>,
+    #[prost(message, optional, tag="18")]
+    pub checksum: ::core::option::Option<Checksum>,
 }
 /// PublishInfo represents a published file, where to get it and its authentication details.
 #[allow(clippy::derive_partial_eq_without_eq)]
@@ -46,6 +64,15 @@ pub struct Multilingual {
     pub value: ::prost::alloc::string::String,
     #[prost(string, tag="2")]
     pub language: ::prost::alloc::string::String,
+}
+/// Checksum represents the checksum of a dataset.
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct Checksum {
+    #[prost(string, tag="1")]
+    pub algorithm: ::prost::alloc::string::String,
+    #[prost(string, tag="2")]
+    pub value: ::prost::alloc::string::String,
 }
 /// AuthenticationType represents the way to authenticate to get a published information.
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

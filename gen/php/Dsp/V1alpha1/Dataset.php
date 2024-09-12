@@ -54,6 +54,42 @@ class Dataset extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>map<string, string> metadata = 9 [json_name = "metadata"];</code>
      */
     private $metadata;
+    /**
+     * Generated from protobuf field <code>optional string license = 10 [json_name = "license"];</code>
+     */
+    protected $license = null;
+    /**
+     * Generated from protobuf field <code>optional string access_rights = 11 [json_name = "accessRights"];</code>
+     */
+    protected $access_rights = null;
+    /**
+     * Generated from protobuf field <code>optional string rights = 12 [json_name = "rights"];</code>
+     */
+    protected $rights = null;
+    /**
+     * Generated from protobuf field <code>int64 byte_size = 13 [json_name = "byteSize"];</code>
+     */
+    protected $byte_size = 0;
+    /**
+     * Generated from protobuf field <code>string media_type = 14 [json_name = "mediaType"];</code>
+     */
+    protected $media_type = '';
+    /**
+     * Generated from protobuf field <code>optional string format = 15 [json_name = "format"];</code>
+     */
+    protected $format = null;
+    /**
+     * Generated from protobuf field <code>optional string compress_format = 16 [json_name = "compressFormat"];</code>
+     */
+    protected $compress_format = null;
+    /**
+     * Generated from protobuf field <code>optional string package_format = 17 [json_name = "packageFormat"];</code>
+     */
+    protected $package_format = null;
+    /**
+     * Generated from protobuf field <code>optional .dsp.v1alpha1.Checksum checksum = 18 [json_name = "checksum"];</code>
+     */
+    protected $checksum = null;
 
     /**
      * Constructor.
@@ -70,6 +106,15 @@ class Dataset extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $issued
      *     @type \Google\Protobuf\Timestamp $modified
      *     @type array|\Google\Protobuf\Internal\MapField $metadata
+     *     @type string $license
+     *     @type string $access_rights
+     *     @type string $rights
+     *     @type int|string $byte_size
+     *     @type string $media_type
+     *     @type string $format
+     *     @type string $compress_format
+     *     @type string $package_format
+     *     @type \Dsp\V1alpha1\Checksum $checksum
      * }
      */
     public function __construct($data = NULL) {
@@ -301,6 +346,274 @@ class Dataset extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
         $this->metadata = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional string license = 10 [json_name = "license"];</code>
+     * @return string
+     */
+    public function getLicense()
+    {
+        return isset($this->license) ? $this->license : '';
+    }
+
+    public function hasLicense()
+    {
+        return isset($this->license);
+    }
+
+    public function clearLicense()
+    {
+        unset($this->license);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional string license = 10 [json_name = "license"];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setLicense($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->license = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional string access_rights = 11 [json_name = "accessRights"];</code>
+     * @return string
+     */
+    public function getAccessRights()
+    {
+        return isset($this->access_rights) ? $this->access_rights : '';
+    }
+
+    public function hasAccessRights()
+    {
+        return isset($this->access_rights);
+    }
+
+    public function clearAccessRights()
+    {
+        unset($this->access_rights);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional string access_rights = 11 [json_name = "accessRights"];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setAccessRights($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->access_rights = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional string rights = 12 [json_name = "rights"];</code>
+     * @return string
+     */
+    public function getRights()
+    {
+        return isset($this->rights) ? $this->rights : '';
+    }
+
+    public function hasRights()
+    {
+        return isset($this->rights);
+    }
+
+    public function clearRights()
+    {
+        unset($this->rights);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional string rights = 12 [json_name = "rights"];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setRights($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->rights = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 byte_size = 13 [json_name = "byteSize"];</code>
+     * @return int|string
+     */
+    public function getByteSize()
+    {
+        return $this->byte_size;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 byte_size = 13 [json_name = "byteSize"];</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setByteSize($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->byte_size = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string media_type = 14 [json_name = "mediaType"];</code>
+     * @return string
+     */
+    public function getMediaType()
+    {
+        return $this->media_type;
+    }
+
+    /**
+     * Generated from protobuf field <code>string media_type = 14 [json_name = "mediaType"];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setMediaType($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->media_type = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional string format = 15 [json_name = "format"];</code>
+     * @return string
+     */
+    public function getFormat()
+    {
+        return isset($this->format) ? $this->format : '';
+    }
+
+    public function hasFormat()
+    {
+        return isset($this->format);
+    }
+
+    public function clearFormat()
+    {
+        unset($this->format);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional string format = 15 [json_name = "format"];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setFormat($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->format = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional string compress_format = 16 [json_name = "compressFormat"];</code>
+     * @return string
+     */
+    public function getCompressFormat()
+    {
+        return isset($this->compress_format) ? $this->compress_format : '';
+    }
+
+    public function hasCompressFormat()
+    {
+        return isset($this->compress_format);
+    }
+
+    public function clearCompressFormat()
+    {
+        unset($this->compress_format);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional string compress_format = 16 [json_name = "compressFormat"];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setCompressFormat($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->compress_format = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional string package_format = 17 [json_name = "packageFormat"];</code>
+     * @return string
+     */
+    public function getPackageFormat()
+    {
+        return isset($this->package_format) ? $this->package_format : '';
+    }
+
+    public function hasPackageFormat()
+    {
+        return isset($this->package_format);
+    }
+
+    public function clearPackageFormat()
+    {
+        unset($this->package_format);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional string package_format = 17 [json_name = "packageFormat"];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPackageFormat($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->package_format = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .dsp.v1alpha1.Checksum checksum = 18 [json_name = "checksum"];</code>
+     * @return \Dsp\V1alpha1\Checksum|null
+     */
+    public function getChecksum()
+    {
+        return $this->checksum;
+    }
+
+    public function hasChecksum()
+    {
+        return isset($this->checksum);
+    }
+
+    public function clearChecksum()
+    {
+        unset($this->checksum);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .dsp.v1alpha1.Checksum checksum = 18 [json_name = "checksum"];</code>
+     * @param \Dsp\V1alpha1\Checksum $var
+     * @return $this
+     */
+    public function setChecksum($var)
+    {
+        GPBUtil::checkMessage($var, \Dsp\V1alpha1\Checksum::class);
+        $this->checksum = $var;
 
         return $this;
     }

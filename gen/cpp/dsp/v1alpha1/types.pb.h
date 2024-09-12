@@ -56,6 +56,9 @@ extern const ::google::protobuf::internal::DescriptorTable
     descriptor_table_dsp_2fv1alpha1_2ftypes_2eproto;
 namespace dsp {
 namespace v1alpha1 {
+class Checksum;
+struct ChecksumDefaultTypeInternal;
+extern ChecksumDefaultTypeInternal _Checksum_default_instance_;
 class Dataset;
 struct DatasetDefaultTypeInternal;
 extern DatasetDefaultTypeInternal _Dataset_default_instance_;
@@ -561,6 +564,201 @@ const ::google::protobuf::Message::ClassData* GetClassData() const final;
 };
 // -------------------------------------------------------------------
 
+class Checksum final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:dsp.v1alpha1.Checksum) */ {
+ public:
+  inline Checksum() : Checksum(nullptr) {}
+  ~Checksum() override;
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR Checksum(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline Checksum(const Checksum& from) : Checksum(nullptr, from) {}
+  inline Checksum(Checksum&& from) noexcept
+      : Checksum(nullptr, std::move(from)) {}
+  inline Checksum& operator=(const Checksum& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline Checksum& operator=(Checksum&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetArena() == from.GetArena()
+#ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetArena() != nullptr
+#endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const Checksum& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const Checksum* internal_default_instance() {
+    return reinterpret_cast<const Checksum*>(
+        &_Checksum_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 4;
+  friend void swap(Checksum& a, Checksum& b) { a.Swap(&b); }
+  inline void Swap(Checksum* other) {
+    if (other == this) return;
+#ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() != nullptr && GetArena() == other->GetArena()) {
+#else   // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() == other->GetArena()) {
+#endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(Checksum* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  Checksum* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return ::google::protobuf::Message::DefaultConstruct<Checksum>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const Checksum& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const Checksum& from) { Checksum::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() final;
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  void SharedDtor();
+  void InternalSwap(Checksum* other);
+ private:
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() { return "dsp.v1alpha1.Checksum"; }
+
+ protected:
+  explicit Checksum(::google::protobuf::Arena* arena);
+  Checksum(::google::protobuf::Arena* arena, const Checksum& from);
+  Checksum(::google::protobuf::Arena* arena, Checksum&& from) noexcept
+      : Checksum(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::Message::ClassData* GetClassData() const final;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kAlgorithmFieldNumber = 1,
+    kValueFieldNumber = 2,
+  };
+  // string algorithm = 1 [json_name = "algorithm"];
+  void clear_algorithm() ;
+  const std::string& algorithm() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_algorithm(Arg_&& arg, Args_... args);
+  std::string* mutable_algorithm();
+  PROTOBUF_NODISCARD std::string* release_algorithm();
+  void set_allocated_algorithm(std::string* value);
+
+  private:
+  const std::string& _internal_algorithm() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_algorithm(
+      const std::string& value);
+  std::string* _internal_mutable_algorithm();
+
+  public:
+  // string value = 2 [json_name = "value"];
+  void clear_value() ;
+  const std::string& value() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_value(Arg_&& arg, Args_... args);
+  std::string* mutable_value();
+  PROTOBUF_NODISCARD std::string* release_value();
+  void set_allocated_value(std::string* value);
+
+  private:
+  const std::string& _internal_value() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_value(
+      const std::string& value);
+  std::string* _internal_mutable_value();
+
+  public:
+  // @@protoc_insertion_point(class_scope:dsp.v1alpha1.Checksum)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      1, 2, 0,
+      44, 2>
+      _table_;
+
+  static constexpr const void* _raw_default_instance_ =
+      &_Checksum_default_instance_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const Checksum& from_msg);
+    ::google::protobuf::internal::ArenaStringPtr algorithm_;
+    ::google::protobuf::internal::ArenaStringPtr value_;
+    mutable ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_dsp_2fv1alpha1_2ftypes_2eproto;
+};
+// -------------------------------------------------------------------
+
 class Dataset final : public ::google::protobuf::Message
 /* @@protoc_insertion_point(class_definition:dsp.v1alpha1.Dataset) */ {
  public:
@@ -692,8 +890,17 @@ class Dataset final : public ::google::protobuf::Message
     kTitleFieldNumber = 2,
     kAccessMethodsFieldNumber = 3,
     kCreatorFieldNumber = 6,
+    kLicenseFieldNumber = 10,
+    kAccessRightsFieldNumber = 11,
+    kRightsFieldNumber = 12,
+    kMediaTypeFieldNumber = 14,
+    kFormatFieldNumber = 15,
+    kCompressFormatFieldNumber = 16,
+    kPackageFormatFieldNumber = 17,
     kIssuedFieldNumber = 7,
     kModifiedFieldNumber = 8,
+    kChecksumFieldNumber = 18,
+    kByteSizeFieldNumber = 13,
   };
   // repeated .dsp.v1alpha1.Multilingual description = 4 [json_name = "description"];
   int description_size() const;
@@ -820,6 +1027,124 @@ class Dataset final : public ::google::protobuf::Message
   std::string* _internal_mutable_creator();
 
   public:
+  // optional string license = 10 [json_name = "license"];
+  bool has_license() const;
+  void clear_license() ;
+  const std::string& license() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_license(Arg_&& arg, Args_... args);
+  std::string* mutable_license();
+  PROTOBUF_NODISCARD std::string* release_license();
+  void set_allocated_license(std::string* value);
+
+  private:
+  const std::string& _internal_license() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_license(
+      const std::string& value);
+  std::string* _internal_mutable_license();
+
+  public:
+  // optional string access_rights = 11 [json_name = "accessRights"];
+  bool has_access_rights() const;
+  void clear_access_rights() ;
+  const std::string& access_rights() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_access_rights(Arg_&& arg, Args_... args);
+  std::string* mutable_access_rights();
+  PROTOBUF_NODISCARD std::string* release_access_rights();
+  void set_allocated_access_rights(std::string* value);
+
+  private:
+  const std::string& _internal_access_rights() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_access_rights(
+      const std::string& value);
+  std::string* _internal_mutable_access_rights();
+
+  public:
+  // optional string rights = 12 [json_name = "rights"];
+  bool has_rights() const;
+  void clear_rights() ;
+  const std::string& rights() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_rights(Arg_&& arg, Args_... args);
+  std::string* mutable_rights();
+  PROTOBUF_NODISCARD std::string* release_rights();
+  void set_allocated_rights(std::string* value);
+
+  private:
+  const std::string& _internal_rights() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_rights(
+      const std::string& value);
+  std::string* _internal_mutable_rights();
+
+  public:
+  // string media_type = 14 [json_name = "mediaType"];
+  void clear_media_type() ;
+  const std::string& media_type() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_media_type(Arg_&& arg, Args_... args);
+  std::string* mutable_media_type();
+  PROTOBUF_NODISCARD std::string* release_media_type();
+  void set_allocated_media_type(std::string* value);
+
+  private:
+  const std::string& _internal_media_type() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_media_type(
+      const std::string& value);
+  std::string* _internal_mutable_media_type();
+
+  public:
+  // optional string format = 15 [json_name = "format"];
+  bool has_format() const;
+  void clear_format() ;
+  const std::string& format() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_format(Arg_&& arg, Args_... args);
+  std::string* mutable_format();
+  PROTOBUF_NODISCARD std::string* release_format();
+  void set_allocated_format(std::string* value);
+
+  private:
+  const std::string& _internal_format() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_format(
+      const std::string& value);
+  std::string* _internal_mutable_format();
+
+  public:
+  // optional string compress_format = 16 [json_name = "compressFormat"];
+  bool has_compress_format() const;
+  void clear_compress_format() ;
+  const std::string& compress_format() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_compress_format(Arg_&& arg, Args_... args);
+  std::string* mutable_compress_format();
+  PROTOBUF_NODISCARD std::string* release_compress_format();
+  void set_allocated_compress_format(std::string* value);
+
+  private:
+  const std::string& _internal_compress_format() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_compress_format(
+      const std::string& value);
+  std::string* _internal_mutable_compress_format();
+
+  public:
+  // optional string package_format = 17 [json_name = "packageFormat"];
+  bool has_package_format() const;
+  void clear_package_format() ;
+  const std::string& package_format() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_package_format(Arg_&& arg, Args_... args);
+  std::string* mutable_package_format();
+  PROTOBUF_NODISCARD std::string* release_package_format();
+  void set_allocated_package_format(std::string* value);
+
+  private:
+  const std::string& _internal_package_format() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_package_format(
+      const std::string& value);
+  std::string* _internal_mutable_package_format();
+
+  public:
   // optional .google.protobuf.Timestamp issued = 7 [json_name = "issued"];
   bool has_issued() const;
   void clear_issued() ;
@@ -850,13 +1175,38 @@ class Dataset final : public ::google::protobuf::Message
   ::google::protobuf::Timestamp* _internal_mutable_modified();
 
   public:
+  // optional .dsp.v1alpha1.Checksum checksum = 18 [json_name = "checksum"];
+  bool has_checksum() const;
+  void clear_checksum() ;
+  const ::dsp::v1alpha1::Checksum& checksum() const;
+  PROTOBUF_NODISCARD ::dsp::v1alpha1::Checksum* release_checksum();
+  ::dsp::v1alpha1::Checksum* mutable_checksum();
+  void set_allocated_checksum(::dsp::v1alpha1::Checksum* value);
+  void unsafe_arena_set_allocated_checksum(::dsp::v1alpha1::Checksum* value);
+  ::dsp::v1alpha1::Checksum* unsafe_arena_release_checksum();
+
+  private:
+  const ::dsp::v1alpha1::Checksum& _internal_checksum() const;
+  ::dsp::v1alpha1::Checksum* _internal_mutable_checksum();
+
+  public:
+  // int64 byte_size = 13 [json_name = "byteSize"];
+  void clear_byte_size() ;
+  ::int64_t byte_size() const;
+  void set_byte_size(::int64_t value);
+
+  private:
+  ::int64_t _internal_byte_size() const;
+  void _internal_set_byte_size(::int64_t value);
+
+  public:
   // @@protoc_insertion_point(class_scope:dsp.v1alpha1.Dataset)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      3, 9, 4,
-      81, 2>
+      5, 18, 5,
+      160, 2>
       _table_;
 
   static constexpr const void* _raw_default_instance_ =
@@ -888,8 +1238,17 @@ class Dataset final : public ::google::protobuf::Message
     ::google::protobuf::internal::ArenaStringPtr title_;
     ::google::protobuf::internal::ArenaStringPtr access_methods_;
     ::google::protobuf::internal::ArenaStringPtr creator_;
+    ::google::protobuf::internal::ArenaStringPtr license_;
+    ::google::protobuf::internal::ArenaStringPtr access_rights_;
+    ::google::protobuf::internal::ArenaStringPtr rights_;
+    ::google::protobuf::internal::ArenaStringPtr media_type_;
+    ::google::protobuf::internal::ArenaStringPtr format_;
+    ::google::protobuf::internal::ArenaStringPtr compress_format_;
+    ::google::protobuf::internal::ArenaStringPtr package_format_;
     ::google::protobuf::Timestamp* issued_;
     ::google::protobuf::Timestamp* modified_;
+    ::dsp::v1alpha1::Checksum* checksum_;
+    ::int64_t byte_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -1288,7 +1647,7 @@ inline void Dataset::set_allocated_creator(std::string* value) {
 
 // optional .google.protobuf.Timestamp issued = 7 [json_name = "issued"];
 inline bool Dataset::has_issued() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.issued_ != nullptr);
   return value;
 }
@@ -1308,16 +1667,16 @@ inline void Dataset::unsafe_arena_set_allocated_issued(::google::protobuf::Times
   }
   _impl_.issued_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
   if (value != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    _impl_._has_bits_[0] |= 0x00000080u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    _impl_._has_bits_[0] &= ~0x00000080u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:dsp.v1alpha1.Dataset.issued)
 }
 inline ::google::protobuf::Timestamp* Dataset::release_issued() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  _impl_._has_bits_[0] &= ~0x00000080u;
   ::google::protobuf::Timestamp* released = _impl_.issued_;
   _impl_.issued_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1337,7 +1696,7 @@ inline ::google::protobuf::Timestamp* Dataset::unsafe_arena_release_issued() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:dsp.v1alpha1.Dataset.issued)
 
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  _impl_._has_bits_[0] &= ~0x00000080u;
   ::google::protobuf::Timestamp* temp = _impl_.issued_;
   _impl_.issued_ = nullptr;
   return temp;
@@ -1351,7 +1710,7 @@ inline ::google::protobuf::Timestamp* Dataset::_internal_mutable_issued() {
   return _impl_.issued_;
 }
 inline ::google::protobuf::Timestamp* Dataset::mutable_issued() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_._has_bits_[0] |= 0x00000080u;
   ::google::protobuf::Timestamp* _msg = _internal_mutable_issued();
   // @@protoc_insertion_point(field_mutable:dsp.v1alpha1.Dataset.issued)
   return _msg;
@@ -1368,9 +1727,9 @@ inline void Dataset::set_allocated_issued(::google::protobuf::Timestamp* value) 
     if (message_arena != submessage_arena) {
       value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000002u;
+    _impl_._has_bits_[0] |= 0x00000080u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    _impl_._has_bits_[0] &= ~0x00000080u;
   }
 
   _impl_.issued_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
@@ -1379,7 +1738,7 @@ inline void Dataset::set_allocated_issued(::google::protobuf::Timestamp* value) 
 
 // optional .google.protobuf.Timestamp modified = 8 [json_name = "modified"];
 inline bool Dataset::has_modified() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.modified_ != nullptr);
   return value;
 }
@@ -1399,16 +1758,16 @@ inline void Dataset::unsafe_arena_set_allocated_modified(::google::protobuf::Tim
   }
   _impl_.modified_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
   if (value != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    _impl_._has_bits_[0] |= 0x00000100u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    _impl_._has_bits_[0] &= ~0x00000100u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:dsp.v1alpha1.Dataset.modified)
 }
 inline ::google::protobuf::Timestamp* Dataset::release_modified() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00000100u;
   ::google::protobuf::Timestamp* released = _impl_.modified_;
   _impl_.modified_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1428,7 +1787,7 @@ inline ::google::protobuf::Timestamp* Dataset::unsafe_arena_release_modified() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   // @@protoc_insertion_point(field_release:dsp.v1alpha1.Dataset.modified)
 
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00000100u;
   ::google::protobuf::Timestamp* temp = _impl_.modified_;
   _impl_.modified_ = nullptr;
   return temp;
@@ -1442,7 +1801,7 @@ inline ::google::protobuf::Timestamp* Dataset::_internal_mutable_modified() {
   return _impl_.modified_;
 }
 inline ::google::protobuf::Timestamp* Dataset::mutable_modified() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_._has_bits_[0] |= 0x00000100u;
   ::google::protobuf::Timestamp* _msg = _internal_mutable_modified();
   // @@protoc_insertion_point(field_mutable:dsp.v1alpha1.Dataset.modified)
   return _msg;
@@ -1459,9 +1818,9 @@ inline void Dataset::set_allocated_modified(::google::protobuf::Timestamp* value
     if (message_arena != submessage_arena) {
       value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000004u;
+    _impl_._has_bits_[0] |= 0x00000100u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    _impl_._has_bits_[0] &= ~0x00000100u;
   }
 
   _impl_.modified_ = reinterpret_cast<::google::protobuf::Timestamp*>(value);
@@ -1494,6 +1853,600 @@ inline ::google::protobuf::Map<std::string, std::string>* Dataset::_internal_mut
 inline ::google::protobuf::Map<std::string, std::string>* Dataset::mutable_metadata() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   // @@protoc_insertion_point(field_mutable_map:dsp.v1alpha1.Dataset.metadata)
   return _internal_mutable_metadata();
+}
+
+// optional string license = 10 [json_name = "license"];
+inline bool Dataset::has_license() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline void Dataset::clear_license() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.license_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline const std::string& Dataset::license() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:dsp.v1alpha1.Dataset.license)
+  return _internal_license();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void Dataset::set_license(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.license_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:dsp.v1alpha1.Dataset.license)
+}
+inline std::string* Dataset::mutable_license() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_license();
+  // @@protoc_insertion_point(field_mutable:dsp.v1alpha1.Dataset.license)
+  return _s;
+}
+inline const std::string& Dataset::_internal_license() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.license_.Get();
+}
+inline void Dataset::_internal_set_license(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.license_.Set(value, GetArena());
+}
+inline std::string* Dataset::_internal_mutable_license() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_._has_bits_[0] |= 0x00000002u;
+  return _impl_.license_.Mutable( GetArena());
+}
+inline std::string* Dataset::release_license() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:dsp.v1alpha1.Dataset.license)
+  if ((_impl_._has_bits_[0] & 0x00000002u) == 0) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* released = _impl_.license_.Release();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.license_.Set("", GetArena());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return released;
+}
+inline void Dataset::set_allocated_license(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000002u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000002u;
+  }
+  _impl_.license_.SetAllocated(value, GetArena());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        if (_impl_.license_.IsDefault()) {
+          _impl_.license_.Set("", GetArena());
+        }
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha1.Dataset.license)
+}
+
+// optional string access_rights = 11 [json_name = "accessRights"];
+inline bool Dataset::has_access_rights() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline void Dataset::clear_access_rights() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.access_rights_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline const std::string& Dataset::access_rights() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:dsp.v1alpha1.Dataset.access_rights)
+  return _internal_access_rights();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void Dataset::set_access_rights(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.access_rights_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:dsp.v1alpha1.Dataset.access_rights)
+}
+inline std::string* Dataset::mutable_access_rights() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_access_rights();
+  // @@protoc_insertion_point(field_mutable:dsp.v1alpha1.Dataset.access_rights)
+  return _s;
+}
+inline const std::string& Dataset::_internal_access_rights() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.access_rights_.Get();
+}
+inline void Dataset::_internal_set_access_rights(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.access_rights_.Set(value, GetArena());
+}
+inline std::string* Dataset::_internal_mutable_access_rights() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_._has_bits_[0] |= 0x00000004u;
+  return _impl_.access_rights_.Mutable( GetArena());
+}
+inline std::string* Dataset::release_access_rights() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:dsp.v1alpha1.Dataset.access_rights)
+  if ((_impl_._has_bits_[0] & 0x00000004u) == 0) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  auto* released = _impl_.access_rights_.Release();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.access_rights_.Set("", GetArena());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return released;
+}
+inline void Dataset::set_allocated_access_rights(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000004u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000004u;
+  }
+  _impl_.access_rights_.SetAllocated(value, GetArena());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        if (_impl_.access_rights_.IsDefault()) {
+          _impl_.access_rights_.Set("", GetArena());
+        }
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha1.Dataset.access_rights)
+}
+
+// optional string rights = 12 [json_name = "rights"];
+inline bool Dataset::has_rights() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline void Dataset::clear_rights() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.rights_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000008u;
+}
+inline const std::string& Dataset::rights() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:dsp.v1alpha1.Dataset.rights)
+  return _internal_rights();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void Dataset::set_rights(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_.rights_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:dsp.v1alpha1.Dataset.rights)
+}
+inline std::string* Dataset::mutable_rights() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_rights();
+  // @@protoc_insertion_point(field_mutable:dsp.v1alpha1.Dataset.rights)
+  return _s;
+}
+inline const std::string& Dataset::_internal_rights() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.rights_.Get();
+}
+inline void Dataset::_internal_set_rights(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_.rights_.Set(value, GetArena());
+}
+inline std::string* Dataset::_internal_mutable_rights() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_._has_bits_[0] |= 0x00000008u;
+  return _impl_.rights_.Mutable( GetArena());
+}
+inline std::string* Dataset::release_rights() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:dsp.v1alpha1.Dataset.rights)
+  if ((_impl_._has_bits_[0] & 0x00000008u) == 0) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000008u;
+  auto* released = _impl_.rights_.Release();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.rights_.Set("", GetArena());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return released;
+}
+inline void Dataset::set_allocated_rights(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000008u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000008u;
+  }
+  _impl_.rights_.SetAllocated(value, GetArena());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        if (_impl_.rights_.IsDefault()) {
+          _impl_.rights_.Set("", GetArena());
+        }
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha1.Dataset.rights)
+}
+
+// int64 byte_size = 13 [json_name = "byteSize"];
+inline void Dataset::clear_byte_size() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.byte_size_ = ::int64_t{0};
+}
+inline ::int64_t Dataset::byte_size() const {
+  // @@protoc_insertion_point(field_get:dsp.v1alpha1.Dataset.byte_size)
+  return _internal_byte_size();
+}
+inline void Dataset::set_byte_size(::int64_t value) {
+  _internal_set_byte_size(value);
+  // @@protoc_insertion_point(field_set:dsp.v1alpha1.Dataset.byte_size)
+}
+inline ::int64_t Dataset::_internal_byte_size() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.byte_size_;
+}
+inline void Dataset::_internal_set_byte_size(::int64_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.byte_size_ = value;
+}
+
+// string media_type = 14 [json_name = "mediaType"];
+inline void Dataset::clear_media_type() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.media_type_.ClearToEmpty();
+}
+inline const std::string& Dataset::media_type() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:dsp.v1alpha1.Dataset.media_type)
+  return _internal_media_type();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void Dataset::set_media_type(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.media_type_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:dsp.v1alpha1.Dataset.media_type)
+}
+inline std::string* Dataset::mutable_media_type() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_media_type();
+  // @@protoc_insertion_point(field_mutable:dsp.v1alpha1.Dataset.media_type)
+  return _s;
+}
+inline const std::string& Dataset::_internal_media_type() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.media_type_.Get();
+}
+inline void Dataset::_internal_set_media_type(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.media_type_.Set(value, GetArena());
+}
+inline std::string* Dataset::_internal_mutable_media_type() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.media_type_.Mutable( GetArena());
+}
+inline std::string* Dataset::release_media_type() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:dsp.v1alpha1.Dataset.media_type)
+  return _impl_.media_type_.Release();
+}
+inline void Dataset::set_allocated_media_type(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.media_type_.SetAllocated(value, GetArena());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        if (_impl_.media_type_.IsDefault()) {
+          _impl_.media_type_.Set("", GetArena());
+        }
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha1.Dataset.media_type)
+}
+
+// optional string format = 15 [json_name = "format"];
+inline bool Dataset::has_format() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline void Dataset::clear_format() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.format_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000010u;
+}
+inline const std::string& Dataset::format() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:dsp.v1alpha1.Dataset.format)
+  return _internal_format();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void Dataset::set_format(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_._has_bits_[0] |= 0x00000010u;
+  _impl_.format_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:dsp.v1alpha1.Dataset.format)
+}
+inline std::string* Dataset::mutable_format() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_format();
+  // @@protoc_insertion_point(field_mutable:dsp.v1alpha1.Dataset.format)
+  return _s;
+}
+inline const std::string& Dataset::_internal_format() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.format_.Get();
+}
+inline void Dataset::_internal_set_format(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_._has_bits_[0] |= 0x00000010u;
+  _impl_.format_.Set(value, GetArena());
+}
+inline std::string* Dataset::_internal_mutable_format() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_._has_bits_[0] |= 0x00000010u;
+  return _impl_.format_.Mutable( GetArena());
+}
+inline std::string* Dataset::release_format() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:dsp.v1alpha1.Dataset.format)
+  if ((_impl_._has_bits_[0] & 0x00000010u) == 0) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000010u;
+  auto* released = _impl_.format_.Release();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.format_.Set("", GetArena());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return released;
+}
+inline void Dataset::set_allocated_format(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000010u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000010u;
+  }
+  _impl_.format_.SetAllocated(value, GetArena());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        if (_impl_.format_.IsDefault()) {
+          _impl_.format_.Set("", GetArena());
+        }
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha1.Dataset.format)
+}
+
+// optional string compress_format = 16 [json_name = "compressFormat"];
+inline bool Dataset::has_compress_format() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline void Dataset::clear_compress_format() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.compress_format_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000020u;
+}
+inline const std::string& Dataset::compress_format() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:dsp.v1alpha1.Dataset.compress_format)
+  return _internal_compress_format();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void Dataset::set_compress_format(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_._has_bits_[0] |= 0x00000020u;
+  _impl_.compress_format_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:dsp.v1alpha1.Dataset.compress_format)
+}
+inline std::string* Dataset::mutable_compress_format() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_compress_format();
+  // @@protoc_insertion_point(field_mutable:dsp.v1alpha1.Dataset.compress_format)
+  return _s;
+}
+inline const std::string& Dataset::_internal_compress_format() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.compress_format_.Get();
+}
+inline void Dataset::_internal_set_compress_format(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_._has_bits_[0] |= 0x00000020u;
+  _impl_.compress_format_.Set(value, GetArena());
+}
+inline std::string* Dataset::_internal_mutable_compress_format() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_._has_bits_[0] |= 0x00000020u;
+  return _impl_.compress_format_.Mutable( GetArena());
+}
+inline std::string* Dataset::release_compress_format() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:dsp.v1alpha1.Dataset.compress_format)
+  if ((_impl_._has_bits_[0] & 0x00000020u) == 0) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000020u;
+  auto* released = _impl_.compress_format_.Release();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.compress_format_.Set("", GetArena());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return released;
+}
+inline void Dataset::set_allocated_compress_format(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000020u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000020u;
+  }
+  _impl_.compress_format_.SetAllocated(value, GetArena());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        if (_impl_.compress_format_.IsDefault()) {
+          _impl_.compress_format_.Set("", GetArena());
+        }
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha1.Dataset.compress_format)
+}
+
+// optional string package_format = 17 [json_name = "packageFormat"];
+inline bool Dataset::has_package_format() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline void Dataset::clear_package_format() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.package_format_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000040u;
+}
+inline const std::string& Dataset::package_format() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:dsp.v1alpha1.Dataset.package_format)
+  return _internal_package_format();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void Dataset::set_package_format(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_._has_bits_[0] |= 0x00000040u;
+  _impl_.package_format_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:dsp.v1alpha1.Dataset.package_format)
+}
+inline std::string* Dataset::mutable_package_format() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_package_format();
+  // @@protoc_insertion_point(field_mutable:dsp.v1alpha1.Dataset.package_format)
+  return _s;
+}
+inline const std::string& Dataset::_internal_package_format() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.package_format_.Get();
+}
+inline void Dataset::_internal_set_package_format(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_._has_bits_[0] |= 0x00000040u;
+  _impl_.package_format_.Set(value, GetArena());
+}
+inline std::string* Dataset::_internal_mutable_package_format() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_._has_bits_[0] |= 0x00000040u;
+  return _impl_.package_format_.Mutable( GetArena());
+}
+inline std::string* Dataset::release_package_format() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:dsp.v1alpha1.Dataset.package_format)
+  if ((_impl_._has_bits_[0] & 0x00000040u) == 0) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000040u;
+  auto* released = _impl_.package_format_.Release();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.package_format_.Set("", GetArena());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return released;
+}
+inline void Dataset::set_allocated_package_format(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000040u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000040u;
+  }
+  _impl_.package_format_.SetAllocated(value, GetArena());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        if (_impl_.package_format_.IsDefault()) {
+          _impl_.package_format_.Set("", GetArena());
+        }
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha1.Dataset.package_format)
+}
+
+// optional .dsp.v1alpha1.Checksum checksum = 18 [json_name = "checksum"];
+inline bool Dataset::has_checksum() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.checksum_ != nullptr);
+  return value;
+}
+inline void Dataset::clear_checksum() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (_impl_.checksum_ != nullptr) _impl_.checksum_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000200u;
+}
+inline const ::dsp::v1alpha1::Checksum& Dataset::_internal_checksum() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  const ::dsp::v1alpha1::Checksum* p = _impl_.checksum_;
+  return p != nullptr ? *p : reinterpret_cast<const ::dsp::v1alpha1::Checksum&>(::dsp::v1alpha1::_Checksum_default_instance_);
+}
+inline const ::dsp::v1alpha1::Checksum& Dataset::checksum() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:dsp.v1alpha1.Dataset.checksum)
+  return _internal_checksum();
+}
+inline void Dataset::unsafe_arena_set_allocated_checksum(::dsp::v1alpha1::Checksum* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.checksum_);
+  }
+  _impl_.checksum_ = reinterpret_cast<::dsp::v1alpha1::Checksum*>(value);
+  if (value != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000200u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000200u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:dsp.v1alpha1.Dataset.checksum)
+}
+inline ::dsp::v1alpha1::Checksum* Dataset::release_checksum() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+
+  _impl_._has_bits_[0] &= ~0x00000200u;
+  ::dsp::v1alpha1::Checksum* released = _impl_.checksum_;
+  _impl_.checksum_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
+  released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+  if (GetArena() == nullptr) {
+    delete old;
+  }
+#else   // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArena() != nullptr) {
+    released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return released;
+}
+inline ::dsp::v1alpha1::Checksum* Dataset::unsafe_arena_release_checksum() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:dsp.v1alpha1.Dataset.checksum)
+
+  _impl_._has_bits_[0] &= ~0x00000200u;
+  ::dsp::v1alpha1::Checksum* temp = _impl_.checksum_;
+  _impl_.checksum_ = nullptr;
+  return temp;
+}
+inline ::dsp::v1alpha1::Checksum* Dataset::_internal_mutable_checksum() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (_impl_.checksum_ == nullptr) {
+    auto* p = ::google::protobuf::Message::DefaultConstruct<::dsp::v1alpha1::Checksum>(GetArena());
+    _impl_.checksum_ = reinterpret_cast<::dsp::v1alpha1::Checksum*>(p);
+  }
+  return _impl_.checksum_;
+}
+inline ::dsp::v1alpha1::Checksum* Dataset::mutable_checksum() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  _impl_._has_bits_[0] |= 0x00000200u;
+  ::dsp::v1alpha1::Checksum* _msg = _internal_mutable_checksum();
+  // @@protoc_insertion_point(field_mutable:dsp.v1alpha1.Dataset.checksum)
+  return _msg;
+}
+inline void Dataset::set_allocated_checksum(::dsp::v1alpha1::Checksum* value) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (message_arena == nullptr) {
+    delete (_impl_.checksum_);
+  }
+
+  if (value != nullptr) {
+    ::google::protobuf::Arena* submessage_arena = (value)->GetArena();
+    if (message_arena != submessage_arena) {
+      value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
+    }
+    _impl_._has_bits_[0] |= 0x00000200u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000200u;
+  }
+
+  _impl_.checksum_ = reinterpret_cast<::dsp::v1alpha1::Checksum*>(value);
+  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha1.Dataset.checksum)
 }
 
 // -------------------------------------------------------------------
@@ -1774,6 +2727,110 @@ inline void Multilingual::set_allocated_language(std::string* value) {
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha1.Multilingual.language)
+}
+
+// -------------------------------------------------------------------
+
+// Checksum
+
+// string algorithm = 1 [json_name = "algorithm"];
+inline void Checksum::clear_algorithm() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.algorithm_.ClearToEmpty();
+}
+inline const std::string& Checksum::algorithm() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:dsp.v1alpha1.Checksum.algorithm)
+  return _internal_algorithm();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void Checksum::set_algorithm(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.algorithm_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:dsp.v1alpha1.Checksum.algorithm)
+}
+inline std::string* Checksum::mutable_algorithm() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_algorithm();
+  // @@protoc_insertion_point(field_mutable:dsp.v1alpha1.Checksum.algorithm)
+  return _s;
+}
+inline const std::string& Checksum::_internal_algorithm() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.algorithm_.Get();
+}
+inline void Checksum::_internal_set_algorithm(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.algorithm_.Set(value, GetArena());
+}
+inline std::string* Checksum::_internal_mutable_algorithm() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.algorithm_.Mutable( GetArena());
+}
+inline std::string* Checksum::release_algorithm() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:dsp.v1alpha1.Checksum.algorithm)
+  return _impl_.algorithm_.Release();
+}
+inline void Checksum::set_allocated_algorithm(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.algorithm_.SetAllocated(value, GetArena());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        if (_impl_.algorithm_.IsDefault()) {
+          _impl_.algorithm_.Set("", GetArena());
+        }
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha1.Checksum.algorithm)
+}
+
+// string value = 2 [json_name = "value"];
+inline void Checksum::clear_value() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.value_.ClearToEmpty();
+}
+inline const std::string& Checksum::value() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:dsp.v1alpha1.Checksum.value)
+  return _internal_value();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void Checksum::set_value(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.value_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:dsp.v1alpha1.Checksum.value)
+}
+inline std::string* Checksum::mutable_value() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_value();
+  // @@protoc_insertion_point(field_mutable:dsp.v1alpha1.Checksum.value)
+  return _s;
+}
+inline const std::string& Checksum::_internal_value() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.value_.Get();
+}
+inline void Checksum::_internal_set_value(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.value_.Set(value, GetArena());
+}
+inline std::string* Checksum::_internal_mutable_value() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.value_.Mutable( GetArena());
+}
+inline std::string* Checksum::release_value() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:dsp.v1alpha1.Checksum.value)
+  return _impl_.value_.Release();
+}
+inline void Checksum::set_allocated_value(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.value_.SetAllocated(value, GetArena());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        if (_impl_.value_.IsDefault()) {
+          _impl_.value_.Set("", GetArena());
+        }
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha1.Checksum.value)
 }
 
 #ifdef __GNUC__

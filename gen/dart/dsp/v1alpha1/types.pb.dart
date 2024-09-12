@@ -11,6 +11,7 @@
 
 import 'dart:core' as $core;
 
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../google/protobuf/timestamp.pb.dart' as $2;
@@ -32,6 +33,15 @@ class Dataset extends $pb.GeneratedMessage {
     $2.Timestamp? issued,
     $2.Timestamp? modified,
     $core.Map<$core.String, $core.String>? metadata,
+    $core.String? license,
+    $core.String? accessRights,
+    $core.String? rights,
+    $fixnum.Int64? byteSize,
+    $core.String? mediaType,
+    $core.String? format,
+    $core.String? compressFormat,
+    $core.String? packageFormat,
+    Checksum? checksum,
   }) {
     final $result = create();
     if (id != null) {
@@ -61,6 +71,33 @@ class Dataset extends $pb.GeneratedMessage {
     if (metadata != null) {
       $result.metadata.addAll(metadata);
     }
+    if (license != null) {
+      $result.license = license;
+    }
+    if (accessRights != null) {
+      $result.accessRights = accessRights;
+    }
+    if (rights != null) {
+      $result.rights = rights;
+    }
+    if (byteSize != null) {
+      $result.byteSize = byteSize;
+    }
+    if (mediaType != null) {
+      $result.mediaType = mediaType;
+    }
+    if (format != null) {
+      $result.format = format;
+    }
+    if (compressFormat != null) {
+      $result.compressFormat = compressFormat;
+    }
+    if (packageFormat != null) {
+      $result.packageFormat = packageFormat;
+    }
+    if (checksum != null) {
+      $result.checksum = checksum;
+    }
     return $result;
   }
   Dataset._() : super();
@@ -77,6 +114,15 @@ class Dataset extends $pb.GeneratedMessage {
     ..aOM<$2.Timestamp>(7, _omitFieldNames ? '' : 'issued', subBuilder: $2.Timestamp.create)
     ..aOM<$2.Timestamp>(8, _omitFieldNames ? '' : 'modified', subBuilder: $2.Timestamp.create)
     ..m<$core.String, $core.String>(9, _omitFieldNames ? '' : 'metadata', entryClassName: 'Dataset.MetadataEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('dsp.v1alpha1'))
+    ..aOS(10, _omitFieldNames ? '' : 'license')
+    ..aOS(11, _omitFieldNames ? '' : 'accessRights')
+    ..aOS(12, _omitFieldNames ? '' : 'rights')
+    ..aInt64(13, _omitFieldNames ? '' : 'byteSize')
+    ..aOS(14, _omitFieldNames ? '' : 'mediaType')
+    ..aOS(15, _omitFieldNames ? '' : 'format')
+    ..aOS(16, _omitFieldNames ? '' : 'compressFormat')
+    ..aOS(17, _omitFieldNames ? '' : 'packageFormat')
+    ..aOM<Checksum>(18, _omitFieldNames ? '' : 'checksum', subBuilder: Checksum.create)
     ..hasRequiredFields = false
   ;
 
@@ -167,6 +213,89 @@ class Dataset extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(9)
   $core.Map<$core.String, $core.String> get metadata => $_getMap(8);
+
+  @$pb.TagNumber(10)
+  $core.String get license => $_getSZ(9);
+  @$pb.TagNumber(10)
+  set license($core.String v) { $_setString(9, v); }
+  @$pb.TagNumber(10)
+  $core.bool hasLicense() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearLicense() => clearField(10);
+
+  @$pb.TagNumber(11)
+  $core.String get accessRights => $_getSZ(10);
+  @$pb.TagNumber(11)
+  set accessRights($core.String v) { $_setString(10, v); }
+  @$pb.TagNumber(11)
+  $core.bool hasAccessRights() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearAccessRights() => clearField(11);
+
+  @$pb.TagNumber(12)
+  $core.String get rights => $_getSZ(11);
+  @$pb.TagNumber(12)
+  set rights($core.String v) { $_setString(11, v); }
+  @$pb.TagNumber(12)
+  $core.bool hasRights() => $_has(11);
+  @$pb.TagNumber(12)
+  void clearRights() => clearField(12);
+
+  @$pb.TagNumber(13)
+  $fixnum.Int64 get byteSize => $_getI64(12);
+  @$pb.TagNumber(13)
+  set byteSize($fixnum.Int64 v) { $_setInt64(12, v); }
+  @$pb.TagNumber(13)
+  $core.bool hasByteSize() => $_has(12);
+  @$pb.TagNumber(13)
+  void clearByteSize() => clearField(13);
+
+  @$pb.TagNumber(14)
+  $core.String get mediaType => $_getSZ(13);
+  @$pb.TagNumber(14)
+  set mediaType($core.String v) { $_setString(13, v); }
+  @$pb.TagNumber(14)
+  $core.bool hasMediaType() => $_has(13);
+  @$pb.TagNumber(14)
+  void clearMediaType() => clearField(14);
+
+  @$pb.TagNumber(15)
+  $core.String get format => $_getSZ(14);
+  @$pb.TagNumber(15)
+  set format($core.String v) { $_setString(14, v); }
+  @$pb.TagNumber(15)
+  $core.bool hasFormat() => $_has(14);
+  @$pb.TagNumber(15)
+  void clearFormat() => clearField(15);
+
+  @$pb.TagNumber(16)
+  $core.String get compressFormat => $_getSZ(15);
+  @$pb.TagNumber(16)
+  set compressFormat($core.String v) { $_setString(15, v); }
+  @$pb.TagNumber(16)
+  $core.bool hasCompressFormat() => $_has(15);
+  @$pb.TagNumber(16)
+  void clearCompressFormat() => clearField(16);
+
+  @$pb.TagNumber(17)
+  $core.String get packageFormat => $_getSZ(16);
+  @$pb.TagNumber(17)
+  set packageFormat($core.String v) { $_setString(16, v); }
+  @$pb.TagNumber(17)
+  $core.bool hasPackageFormat() => $_has(16);
+  @$pb.TagNumber(17)
+  void clearPackageFormat() => clearField(17);
+
+  @$pb.TagNumber(18)
+  Checksum get checksum => $_getN(17);
+  @$pb.TagNumber(18)
+  set checksum(Checksum v) { setField(18, v); }
+  @$pb.TagNumber(18)
+  $core.bool hasChecksum() => $_has(17);
+  @$pb.TagNumber(18)
+  void clearChecksum() => clearField(18);
+  @$pb.TagNumber(18)
+  Checksum ensureChecksum() => $_ensure(17);
 }
 
 /// PublishInfo represents a published file, where to get it and its authentication details.
@@ -325,6 +454,71 @@ class Multilingual extends $pb.GeneratedMessage {
   $core.bool hasLanguage() => $_has(1);
   @$pb.TagNumber(2)
   void clearLanguage() => clearField(2);
+}
+
+/// Checksum represents the checksum of a dataset.
+class Checksum extends $pb.GeneratedMessage {
+  factory Checksum({
+    $core.String? algorithm,
+    $core.String? value,
+  }) {
+    final $result = create();
+    if (algorithm != null) {
+      $result.algorithm = algorithm;
+    }
+    if (value != null) {
+      $result.value = value;
+    }
+    return $result;
+  }
+  Checksum._() : super();
+  factory Checksum.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Checksum.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Checksum', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'algorithm')
+    ..aOS(2, _omitFieldNames ? '' : 'value')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Checksum clone() => Checksum()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Checksum copyWith(void Function(Checksum) updates) => super.copyWith((message) => updates(message as Checksum)) as Checksum;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Checksum create() => Checksum._();
+  Checksum createEmptyInstance() => create();
+  static $pb.PbList<Checksum> createRepeated() => $pb.PbList<Checksum>();
+  @$core.pragma('dart2js:noInline')
+  static Checksum getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Checksum>(create);
+  static Checksum? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get algorithm => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set algorithm($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasAlgorithm() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAlgorithm() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get value => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set value($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasValue() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearValue() => clearField(2);
 }
 
 

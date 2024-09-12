@@ -35,6 +35,11 @@ public final class TypesProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_dsp_v1alpha1_Multilingual_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_dsp_v1alpha1_Checksum_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_dsp_v1alpha1_Checksum_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -45,7 +50,7 @@ public final class TypesProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\030dsp/v1alpha1/types.proto\022\014dsp.v1alpha1" +
-      "\032\037google/protobuf/timestamp.proto\"\347\003\n\007Da" +
+      "\032\037google/protobuf/timestamp.proto\"\241\007\n\007Da" +
       "taset\022\016\n\002id\030\001 \001(\tR\002id\022\024\n\005title\030\002 \001(\tR\005ti" +
       "tle\022%\n\016access_methods\030\003 \001(\tR\raccessMetho" +
       "ds\022<\n\013description\030\004 \003(\0132\032.dsp.v1alpha1.M" +
@@ -55,23 +60,36 @@ public final class TypesProto {
       "mestampH\001R\006issued\210\001\001\022;\n\010modified\030\010 \001(\0132\032" +
       ".google.protobuf.TimestampH\002R\010modified\210\001" +
       "\001\022?\n\010metadata\030\t \003(\0132#.dsp.v1alpha1.Datas" +
-      "et.MetadataEntryR\010metadata\032;\n\rMetadataEn" +
-      "try\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005va" +
-      "lue:\0028\001B\n\n\010_creatorB\t\n\007_issuedB\013\n\t_modif" +
-      "ied\"\252\001\n\013PublishInfo\022\020\n\003url\030\001 \001(\tR\003url\022Q\n" +
-      "\023authentication_type\030\002 \001(\0162 .dsp.v1alpha" +
-      "1.AuthenticationTypeR\022authenticationType" +
-      "\022\032\n\010username\030\003 \001(\tR\010username\022\032\n\010password" +
-      "\030\004 \001(\tR\010password\"@\n\014Multilingual\022\024\n\005valu" +
-      "e\030\001 \001(\tR\005value\022\032\n\010language\030\002 \001(\tR\010langua" +
-      "ge*x\n\022AuthenticationType\022#\n\037AUTHENTICATI" +
-      "ON_TYPE_UNSPECIFIED\020\000\022\036\n\032AUTHENTICATION_" +
-      "TYPE_BEARER\020\001\022\035\n\031AUTHENTICATION_TYPE_BAS" +
-      "IC\020\002B\246\001\n\020com.dsp.v1alpha1B\nTypesProtoP\001Z" +
-      "5github.com/bufbuild/buf-tour/dsp/v1alph" +
-      "a1;dspv1alpha1\242\002\003DXX\252\002\014Dsp.V1alpha1\312\002\014Ds" +
-      "p\\V1alpha1\342\002\030Dsp\\V1alpha1\\GPBMetadata\352\002\r" +
-      "Dsp::V1alpha1b\006proto3"
+      "et.MetadataEntryR\010metadata\022\035\n\007license\030\n " +
+      "\001(\tH\003R\007license\210\001\001\022(\n\raccess_rights\030\013 \001(\t" +
+      "H\004R\014accessRights\210\001\001\022\033\n\006rights\030\014 \001(\tH\005R\006r" +
+      "ights\210\001\001\022\033\n\tbyte_size\030\r \001(\003R\010byteSize\022\035\n" +
+      "\nmedia_type\030\016 \001(\tR\tmediaType\022\033\n\006format\030\017" +
+      " \001(\tH\006R\006format\210\001\001\022,\n\017compress_format\030\020 \001" +
+      "(\tH\007R\016compressFormat\210\001\001\022*\n\016package_forma" +
+      "t\030\021 \001(\tH\010R\rpackageFormat\210\001\001\0227\n\010checksum\030" +
+      "\022 \001(\0132\026.dsp.v1alpha1.ChecksumH\tR\010checksu" +
+      "m\210\001\001\032;\n\rMetadataEntry\022\020\n\003key\030\001 \001(\tR\003key\022" +
+      "\024\n\005value\030\002 \001(\tR\005value:\0028\001B\n\n\010_creatorB\t\n" +
+      "\007_issuedB\013\n\t_modifiedB\n\n\010_licenseB\020\n\016_ac" +
+      "cess_rightsB\t\n\007_rightsB\t\n\007_formatB\022\n\020_co" +
+      "mpress_formatB\021\n\017_package_formatB\013\n\t_che" +
+      "cksum\"\252\001\n\013PublishInfo\022\020\n\003url\030\001 \001(\tR\003url\022" +
+      "Q\n\023authentication_type\030\002 \001(\0162 .dsp.v1alp" +
+      "ha1.AuthenticationTypeR\022authenticationTy" +
+      "pe\022\032\n\010username\030\003 \001(\tR\010username\022\032\n\010passwo" +
+      "rd\030\004 \001(\tR\010password\"@\n\014Multilingual\022\024\n\005va" +
+      "lue\030\001 \001(\tR\005value\022\032\n\010language\030\002 \001(\tR\010lang" +
+      "uage\">\n\010Checksum\022\034\n\talgorithm\030\001 \001(\tR\talg" +
+      "orithm\022\024\n\005value\030\002 \001(\tR\005value*x\n\022Authenti" +
+      "cationType\022#\n\037AUTHENTICATION_TYPE_UNSPEC" +
+      "IFIED\020\000\022\036\n\032AUTHENTICATION_TYPE_BEARER\020\001\022" +
+      "\035\n\031AUTHENTICATION_TYPE_BASIC\020\002B\246\001\n\020com.d" +
+      "sp.v1alpha1B\nTypesProtoP\001Z5github.com/bu" +
+      "fbuild/buf-tour/dsp/v1alpha1;dspv1alpha1" +
+      "\242\002\003DXX\252\002\014Dsp.V1alpha1\312\002\014Dsp\\V1alpha1\342\002\030D" +
+      "sp\\V1alpha1\\GPBMetadata\352\002\rDsp::V1alpha1b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -83,7 +101,7 @@ public final class TypesProto {
     internal_static_dsp_v1alpha1_Dataset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dsp_v1alpha1_Dataset_descriptor,
-        new java.lang.String[] { "Id", "Title", "AccessMethods", "Description", "Keywords", "Creator", "Issued", "Modified", "Metadata", });
+        new java.lang.String[] { "Id", "Title", "AccessMethods", "Description", "Keywords", "Creator", "Issued", "Modified", "Metadata", "License", "AccessRights", "Rights", "ByteSize", "MediaType", "Format", "CompressFormat", "PackageFormat", "Checksum", });
     internal_static_dsp_v1alpha1_Dataset_MetadataEntry_descriptor =
       internal_static_dsp_v1alpha1_Dataset_descriptor.getNestedTypes().get(0);
     internal_static_dsp_v1alpha1_Dataset_MetadataEntry_fieldAccessorTable = new
@@ -102,6 +120,12 @@ public final class TypesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dsp_v1alpha1_Multilingual_descriptor,
         new java.lang.String[] { "Value", "Language", });
+    internal_static_dsp_v1alpha1_Checksum_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_dsp_v1alpha1_Checksum_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_dsp_v1alpha1_Checksum_descriptor,
+        new java.lang.String[] { "Algorithm", "Value", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

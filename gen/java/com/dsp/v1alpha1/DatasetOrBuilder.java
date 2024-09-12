@@ -173,4 +173,139 @@ java.lang.String defaultValue);
    */
   java.lang.String getMetadataOrThrow(
       java.lang.String key);
+
+  /**
+   * <code>optional string license = 10 [json_name = "license"];</code>
+   * @return Whether the license field is set.
+   */
+  boolean hasLicense();
+  /**
+   * <code>optional string license = 10 [json_name = "license"];</code>
+   * @return The license.
+   */
+  java.lang.String getLicense();
+  /**
+   * <code>optional string license = 10 [json_name = "license"];</code>
+   * @return The bytes for license.
+   */
+  com.google.protobuf.ByteString
+      getLicenseBytes();
+
+  /**
+   * <code>optional string access_rights = 11 [json_name = "accessRights"];</code>
+   * @return Whether the accessRights field is set.
+   */
+  boolean hasAccessRights();
+  /**
+   * <code>optional string access_rights = 11 [json_name = "accessRights"];</code>
+   * @return The accessRights.
+   */
+  java.lang.String getAccessRights();
+  /**
+   * <code>optional string access_rights = 11 [json_name = "accessRights"];</code>
+   * @return The bytes for accessRights.
+   */
+  com.google.protobuf.ByteString
+      getAccessRightsBytes();
+
+  /**
+   * <code>optional string rights = 12 [json_name = "rights"];</code>
+   * @return Whether the rights field is set.
+   */
+  boolean hasRights();
+  /**
+   * <code>optional string rights = 12 [json_name = "rights"];</code>
+   * @return The rights.
+   */
+  java.lang.String getRights();
+  /**
+   * <code>optional string rights = 12 [json_name = "rights"];</code>
+   * @return The bytes for rights.
+   */
+  com.google.protobuf.ByteString
+      getRightsBytes();
+
+  /**
+   * <code>int64 byte_size = 13 [json_name = "byteSize"];</code>
+   * @return The byteSize.
+   */
+  long getByteSize();
+
+  /**
+   * <code>string media_type = 14 [json_name = "mediaType"];</code>
+   * @return The mediaType.
+   */
+  java.lang.String getMediaType();
+  /**
+   * <code>string media_type = 14 [json_name = "mediaType"];</code>
+   * @return The bytes for mediaType.
+   */
+  com.google.protobuf.ByteString
+      getMediaTypeBytes();
+
+  /**
+   * <code>optional string format = 15 [json_name = "format"];</code>
+   * @return Whether the format field is set.
+   */
+  boolean hasFormat();
+  /**
+   * <code>optional string format = 15 [json_name = "format"];</code>
+   * @return The format.
+   */
+  java.lang.String getFormat();
+  /**
+   * <code>optional string format = 15 [json_name = "format"];</code>
+   * @return The bytes for format.
+   */
+  com.google.protobuf.ByteString
+      getFormatBytes();
+
+  /**
+   * <code>optional string compress_format = 16 [json_name = "compressFormat"];</code>
+   * @return Whether the compressFormat field is set.
+   */
+  boolean hasCompressFormat();
+  /**
+   * <code>optional string compress_format = 16 [json_name = "compressFormat"];</code>
+   * @return The compressFormat.
+   */
+  java.lang.String getCompressFormat();
+  /**
+   * <code>optional string compress_format = 16 [json_name = "compressFormat"];</code>
+   * @return The bytes for compressFormat.
+   */
+  com.google.protobuf.ByteString
+      getCompressFormatBytes();
+
+  /**
+   * <code>optional string package_format = 17 [json_name = "packageFormat"];</code>
+   * @return Whether the packageFormat field is set.
+   */
+  boolean hasPackageFormat();
+  /**
+   * <code>optional string package_format = 17 [json_name = "packageFormat"];</code>
+   * @return The packageFormat.
+   */
+  java.lang.String getPackageFormat();
+  /**
+   * <code>optional string package_format = 17 [json_name = "packageFormat"];</code>
+   * @return The bytes for packageFormat.
+   */
+  com.google.protobuf.ByteString
+      getPackageFormatBytes();
+
+  /**
+   * <code>optional .dsp.v1alpha1.Checksum checksum = 18 [json_name = "checksum"];</code>
+   * @return Whether the checksum field is set.
+   */
+  boolean hasChecksum();
+  /**
+   * <code>optional .dsp.v1alpha1.Checksum checksum = 18 [json_name = "checksum"];</code>
+   * @return The checksum.
+   */
+  com.dsp.v1alpha1.Checksum getChecksum();
+  /**
+   * <code>optional .dsp.v1alpha1.Checksum checksum = 18 [json_name = "checksum"];</code>
+   */
+  com.dsp.v1alpha1.ChecksumOrBuilder getChecksumOrBuilder();
 }
