@@ -19,11 +19,59 @@ managed:
     - file_option: go_package_prefix
       value: github.com/bufbuild/buf-tour
 plugins:
+  # Go
   - out: gen/go
     opt: paths=source_relative
     remote: buf.build/protocolbuffers/go
   - remote: buf.build/grpc/go
     out: gen/go
     opt: paths=source_relative
+  # JS/TS
+  - remote: buf.build/connectrpc/es:v1.5.0
+    out: gen/es
+  - remote: buf.build/bufbuild/es:v1.10.0
+    out: gen/es
+  # Ruby
+  - remote: buf.build/grpc/ruby:v1.66.1
+    out: gen/ruby
+  - remote: buf.build/protocolbuffers/ruby:v27.4
+    out: gen/ruby
+  # Kotlin/Java
+  - remote: buf.build/grpc/kotlin:v1.4.1
+    out: gen/kotlin
+  - remote: buf.build/protocolbuffers/kotlin:v24.4
+    out: gen/kotlin
+  - remote: buf.build/grpc/java:v1.66.0
+    out: gen/java
+  - remote: buf.build/protocolbuffers/java:v25.3
+    out: gen/java
+  # PHP
+  - remote: buf.build/grpc/php:v1.66.1
+    out: gen/php
+  - remote: buf.build/protocolbuffers/php:v27.4
+    out: gen/php
+  # Swift
+  - remote: buf.build/connectrpc/swift:v0.14.0
+    out: gen/swift
+  - remote: buf.build/apple/swift:v1.26.0
+    out: gen/swift
+  # C++
+  - remote: buf.build/grpc/cpp:v1.66.1
+    out: gen/cpp
+  - remote: buf.build/protocolbuffers/cpp:v27.4
+    out: gen/cpp
+  # Dart
+  - remote: buf.build/protocolbuffers/dart:v21.1.2
+    out: gen/dart
+    opt:
+      - grpc
+  # Rust
+  - remote: buf.build/community/neoeinstein-prost:v0.4.0
+    out: gen/rust
+  # Python
+  - remote: buf.build/grpc/python:v1.66.1
+    out: gen/python
+  - remote: buf.build/protocolbuffers/python:v27.4
+    out: gen/python
 inputs:
   - directory: proto
