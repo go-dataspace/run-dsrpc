@@ -1,0 +1,206 @@
+// Copyright 2024 go-dataspace
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+syntax = "proto3";
+
+package dsp.v1alpha2;
+
+import "dsp/v1alpha2/types.proto";
+
+// ControlService contains methods that are not specific to catalogue, contract, or transfer operations.
+// Configuration, and convenience methods will be put here.
+service ControlService {
+  // Publishes a dataset,
+  rpc GetProviderDatasetDownloadInformation(GetProviderDatasetDownloadInformationRequest) returns (GetProviderDatasetDownloadInformationResponse) {}
+
+  // VerifyConnection takes a token and verifies it's the same token it passed to the contract service.
+  rpc VerifyConnection(VerifyConnectionRequest) returns (VerifyConnectionResponse) {}
+}
+
+// CatalogueControlService contains methods to interact with dataspace catalogues.
+service CatalogueControlService {
+  // Gets the catalogue based on the query parameters and the authorization header.
+  rpc GetProviderCatalogue(GetProviderCatalogueRequest) returns (GetProviderCatalogueResponse) {}
+  // Gets information about a single dataset.
+  rpc GetProviderDataset(GetProviderDatasetRequest) returns (GetProviderDatasetResponse) {}
+}
+
+// ContractControlService contains low level methods to send contract negotiation operations.
+service ContractControlService {
+  // Request sends a ContractRequestMessage.
+  rpc Request(RequestRequest) returns (RequestResponse) {}
+  // Offer sends a ContractOfferMessage.
+  rpc Offer(OfferRequest) returns (OfferResponse) {}
+  // Accept sends an accepted event message.
+  rpc Accept(AcceptRequest) returns (AcceptResponse) {}
+  // Agree sends a ContractAcceptedMessage.
+  rpc Agree(AgreeRequest) returns (AgreeResponse) {}
+  // Verify sends a ContractVerificationMessage.
+  rpc Verify(VerifyRequest) returns (VerifyResponse) {}
+  // Finalize sends a finalization event.
+  rpc Finalize(FinalizeRequest) returns (FinalizeResponse) {}
+  // Terminate sends a ContractTerminationMessage.
+  rpc Terminate(TerminateRequest) returns (TerminateResponse) {}
+}
+
+// TransferControlService contains low level methods to send transfer negotiation operations.
+service TransferControlService {
+  // Tells provider that we have finished our transfer.
+  rpc SignalTransferComplete(SignalTransferCompleteRequest) returns (SignalTransferCompleteResponse) {}
+  // Tells provider to cancel file transfer
+  rpc SignalTransferCancelled(SignalTransferCancelledRequest) returns (SignalTransferCancelledResponse) {}
+  // Tells provider to suspend file transfer
+  rpc SignalTransferSuspend(SignalTransferSuspendRequest) returns (SignalTransferSuspendResponse) {}
+  // Tells provider to resume file transfer
+  rpc SignalTransferResume(SignalTransferResumeRequest) returns (SignalTransferResumeResponse) {}
+}
+
+// VerifyConnectionRequest contains a verification token that can be compared to the one locally generated.
+message VerifyConnectionRequest {
+  string verification_token = 1;
+}
+
+message VerifyConnectionResponse {}
+
+// GetProviderCatalogueRequest represents the parameters for the GetProviderCatalogue request
+message GetProviderCatalogueRequest {
+  string provider_uri = 1;
+  // query_parameters is just a key/value map. These are not specified in the dataspace standard.
+  // RUN-DSP also does not define them yet, so for now this is a placeholder.
+
+  map<string, string> query_parameters = 2;
+}
+
+// GetProviderCatalogueResponse returns all the datasets matched by GetProviderCatalogue.
+message GetProviderCatalogueResponse {
+  repeated Dataset datasets = 1;
+}
+
+// GetProviderDatasetRequest contains the dataset ID.
+message GetProviderDatasetRequest {
+  string provider_url = 1;
+  string dataset_id = 2;
+}
+
+// GetProviderDatasetResponse contains the requested dataset.
+message GetProviderDatasetResponse {
+  string provider_url = 1;
+  Dataset dataset = 2;
+}
+
+// GetProviderDatasetDownloadInformationRequest contains the ID for the dataset
+// we want to be able to download.
+message GetProviderDatasetDownloadInformationRequest {
+  string provider_url = 1;
+  string dataset_id = 2;
+}
+
+// GetProviderDatasetDownloadInformationResponse contains the information needed
+// to download a file, including authentication etc.
+message GetProviderDatasetDownloadInformationResponse {
+  PublishInfo publish_info = 1;
+  string transfer_id = 2;
+}
+
+// RequestRequest contains the offer, and a pid if this is needs to send a request for an already
+// existing offer, or a participant_address if this is a request for a new offer.
+message RequestRequest {
+  string offer = 1;
+  optional string pid = 2;
+  optional string participant_address = 3;
+}
+
+message RequestResponse {}
+
+// OfferRequest contains the offer, and a pid if this is needs to send an offer for an already
+// existing offer, or a participant_address if this is a a new offer.
+message OfferRequest {
+  string offer = 1;
+  optional string pid = 2;
+  optional string participant_address = 3;
+}
+
+message OfferResponse {}
+
+// AcceptRequest contains the pid of the contract negotiation to be accepted.
+message AcceptRequest {
+  string pid = 1;
+}
+
+message AcceptResponse {}
+
+// AgreeRequest contains the agreement and pid of the contract negotiation to agree to.
+message AgreeRequest {
+  string agreement = 1;
+  string pid = 2;
+}
+
+message AgreeResponse {}
+
+// VerifyRequest contains the pid of the contract negotiation to verify.
+message VerifyRequest {
+  string pid = 1;
+}
+
+message VerifyResponse {}
+
+// FinalizeRequest contains the pid of the contract negotiation to finalize.
+message FinalizeRequest {
+  string pid = 1;
+}
+
+message FinalizeResponse {}
+
+// TerminateRequest contains the pid, code, and reason of the contract negotiation to terminate.
+message TerminateRequest {
+  string pid = 1;
+  string code = 2;
+  repeated string reason = 3;
+}
+
+message TerminateResponse {}
+
+// SignalTransferCompleteRequest is for telling the provider that we are done
+// receiving the dataset.
+message SignalTransferCompleteRequest {
+  string transfer_id = 1;
+}
+
+// SignalTransferCompleteResponse is received when we successfully sent a
+// transfer complete request.
+message SignalTransferCompleteResponse {}
+
+// SignalTransferCancelledRequest is sent when the client wants to cancel a transfer.
+message SignalTransferCancelledRequest {
+  string transfer_id = 1;
+}
+
+// SignalTransferCancelledResponse tells that the cancellation requests was received.
+message SignalTransferCancelledResponse {}
+
+// SignalTransferSuspendRequest is sent when the client wishes to pause the transfer.
+message SignalTransferSuspendRequest {
+  string transfer_id = 1;
+}
+
+// SignalTransferSuspendResponse tells the client that the pause request was received.
+message SignalTransferSuspendResponse {}
+
+// SignalTransferResumeRequest tells the provider that the client wants to resume transfer.
+message SignalTransferResumeRequest {
+  string transfer_id = 1;
+}
+
+// SignalTransferResumeResponse tells the client that the resume request was accepted.
+message SignalTransferResumeResponse {}
