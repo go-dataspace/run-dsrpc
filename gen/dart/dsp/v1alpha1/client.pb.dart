@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'types.pb.dart' as $3;
+import 'types.pb.dart' as $4;
 
 /// ClientServicePingRequest is an empty message, used instead of the Empty type in case we want
 /// to add parameters.
@@ -144,7 +144,7 @@ class GetProviderCatalogueRequest extends $pb.GeneratedMessage {
 /// GetProviderCatalogueResponse returns all the datasets matched by GetProviderCatalogue.
 class GetProviderCatalogueResponse extends $pb.GeneratedMessage {
   factory GetProviderCatalogueResponse({
-    $core.Iterable<$3.Dataset>? datasets,
+    $core.Iterable<$4.Dataset>? datasets,
   }) {
     final $result = create();
     if (datasets != null) {
@@ -157,7 +157,7 @@ class GetProviderCatalogueResponse extends $pb.GeneratedMessage {
   factory GetProviderCatalogueResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetProviderCatalogueResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha1'), createEmptyInstance: create)
-    ..pc<$3.Dataset>(1, _omitFieldNames ? '' : 'datasets', $pb.PbFieldType.PM, subBuilder: $3.Dataset.create)
+    ..pc<$4.Dataset>(1, _omitFieldNames ? '' : 'datasets', $pb.PbFieldType.PM, subBuilder: $4.Dataset.create)
     ..hasRequiredFields = false
   ;
 
@@ -183,7 +183,7 @@ class GetProviderCatalogueResponse extends $pb.GeneratedMessage {
   static GetProviderCatalogueResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$3.Dataset> get datasets => $_getList(0);
+  $core.List<$4.Dataset> get datasets => $_getList(0);
 }
 
 /// GetProviderDatasetRequest contains the dataset ID.
@@ -255,7 +255,7 @@ class GetProviderDatasetRequest extends $pb.GeneratedMessage {
 class GetProviderDatasetResponse extends $pb.GeneratedMessage {
   factory GetProviderDatasetResponse({
     $core.String? providerUrl,
-    $3.Dataset? dataset,
+    $4.Dataset? dataset,
   }) {
     final $result = create();
     if (providerUrl != null) {
@@ -272,7 +272,7 @@ class GetProviderDatasetResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetProviderDatasetResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'providerUrl')
-    ..aOM<$3.Dataset>(2, _omitFieldNames ? '' : 'dataset', subBuilder: $3.Dataset.create)
+    ..aOM<$4.Dataset>(2, _omitFieldNames ? '' : 'dataset', subBuilder: $4.Dataset.create)
     ..hasRequiredFields = false
   ;
 
@@ -307,15 +307,15 @@ class GetProviderDatasetResponse extends $pb.GeneratedMessage {
   void clearProviderUrl() => clearField(1);
 
   @$pb.TagNumber(2)
-  $3.Dataset get dataset => $_getN(1);
+  $4.Dataset get dataset => $_getN(1);
   @$pb.TagNumber(2)
-  set dataset($3.Dataset v) { setField(2, v); }
+  set dataset($4.Dataset v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasDataset() => $_has(1);
   @$pb.TagNumber(2)
   void clearDataset() => clearField(2);
   @$pb.TagNumber(2)
-  $3.Dataset ensureDataset() => $_ensure(1);
+  $4.Dataset ensureDataset() => $_ensure(1);
 }
 
 /// GetProviderDatasetDownloadInformationRequest contains the ID for the dataset
@@ -388,7 +388,7 @@ class GetProviderDatasetDownloadInformationRequest extends $pb.GeneratedMessage 
 /// to download a file, including authentication etc.
 class GetProviderDatasetDownloadInformationResponse extends $pb.GeneratedMessage {
   factory GetProviderDatasetDownloadInformationResponse({
-    $3.PublishInfo? publishInfo,
+    $4.PublishInfo? publishInfo,
     $core.String? transferId,
   }) {
     final $result = create();
@@ -405,7 +405,7 @@ class GetProviderDatasetDownloadInformationResponse extends $pb.GeneratedMessage
   factory GetProviderDatasetDownloadInformationResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetProviderDatasetDownloadInformationResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha1'), createEmptyInstance: create)
-    ..aOM<$3.PublishInfo>(1, _omitFieldNames ? '' : 'publishInfo', subBuilder: $3.PublishInfo.create)
+    ..aOM<$4.PublishInfo>(1, _omitFieldNames ? '' : 'publishInfo', subBuilder: $4.PublishInfo.create)
     ..aOS(2, _omitFieldNames ? '' : 'transferId')
     ..hasRequiredFields = false
   ;
@@ -432,15 +432,15 @@ class GetProviderDatasetDownloadInformationResponse extends $pb.GeneratedMessage
   static GetProviderDatasetDownloadInformationResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.PublishInfo get publishInfo => $_getN(0);
+  $4.PublishInfo get publishInfo => $_getN(0);
   @$pb.TagNumber(1)
-  set publishInfo($3.PublishInfo v) { setField(1, v); }
+  set publishInfo($4.PublishInfo v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPublishInfo() => $_has(0);
   @$pb.TagNumber(1)
   void clearPublishInfo() => clearField(1);
   @$pb.TagNumber(1)
-  $3.PublishInfo ensurePublishInfo() => $_ensure(0);
+  $4.PublishInfo ensurePublishInfo() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.String get transferId => $_getSZ(1);

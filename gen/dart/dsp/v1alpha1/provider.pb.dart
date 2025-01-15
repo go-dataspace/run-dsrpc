@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'types.pb.dart' as $3;
+import 'types.pb.dart' as $4;
 
 /// PingRequest is an empty message, used instead of the Empty type in case we want
 /// to add parameters.
@@ -206,7 +206,7 @@ class GetCatalogueRequest extends $pb.GeneratedMessage {
 /// GetCatalogueResponse returns all the datasets matched by GetCatalogue.
 class GetCatalogueResponse extends $pb.GeneratedMessage {
   factory GetCatalogueResponse({
-    $core.Iterable<$3.Dataset>? datasets,
+    $core.Iterable<$4.Dataset>? datasets,
   }) {
     final $result = create();
     if (datasets != null) {
@@ -219,7 +219,7 @@ class GetCatalogueResponse extends $pb.GeneratedMessage {
   factory GetCatalogueResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetCatalogueResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha1'), createEmptyInstance: create)
-    ..pc<$3.Dataset>(1, _omitFieldNames ? '' : 'datasets', $pb.PbFieldType.PM, subBuilder: $3.Dataset.create)
+    ..pc<$4.Dataset>(1, _omitFieldNames ? '' : 'datasets', $pb.PbFieldType.PM, subBuilder: $4.Dataset.create)
     ..hasRequiredFields = false
   ;
 
@@ -245,7 +245,7 @@ class GetCatalogueResponse extends $pb.GeneratedMessage {
   static GetCatalogueResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$3.Dataset> get datasets => $_getList(0);
+  $core.List<$4.Dataset> get datasets => $_getList(0);
 }
 
 /// GetDatasetRequest contains the dataset ID.
@@ -302,7 +302,7 @@ class GetDatasetRequest extends $pb.GeneratedMessage {
 /// GetDatasetResponse contains the requested dataset.
 class GetDatasetResponse extends $pb.GeneratedMessage {
   factory GetDatasetResponse({
-    $3.Dataset? dataset,
+    $4.Dataset? dataset,
   }) {
     final $result = create();
     if (dataset != null) {
@@ -315,7 +315,7 @@ class GetDatasetResponse extends $pb.GeneratedMessage {
   factory GetDatasetResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetDatasetResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha1'), createEmptyInstance: create)
-    ..aOM<$3.Dataset>(1, _omitFieldNames ? '' : 'dataset', subBuilder: $3.Dataset.create)
+    ..aOM<$4.Dataset>(1, _omitFieldNames ? '' : 'dataset', subBuilder: $4.Dataset.create)
     ..hasRequiredFields = false
   ;
 
@@ -341,15 +341,15 @@ class GetDatasetResponse extends $pb.GeneratedMessage {
   static GetDatasetResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.Dataset get dataset => $_getN(0);
+  $4.Dataset get dataset => $_getN(0);
   @$pb.TagNumber(1)
-  set dataset($3.Dataset v) { setField(1, v); }
+  set dataset($4.Dataset v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasDataset() => $_has(0);
   @$pb.TagNumber(1)
   void clearDataset() => clearField(1);
   @$pb.TagNumber(1)
-  $3.Dataset ensureDataset() => $_ensure(0);
+  $4.Dataset ensureDataset() => $_ensure(0);
 }
 
 /// PublishDatasetRequest contains the ID for the dataset, and a publish ID that's specific to
@@ -421,7 +421,7 @@ class PublishDatasetRequest extends $pb.GeneratedMessage {
 /// PublishDatasetResponse contains the publish information.
 class PublishDatasetResponse extends $pb.GeneratedMessage {
   factory PublishDatasetResponse({
-    $3.PublishInfo? publishInfo,
+    $4.PublishInfo? publishInfo,
   }) {
     final $result = create();
     if (publishInfo != null) {
@@ -434,7 +434,7 @@ class PublishDatasetResponse extends $pb.GeneratedMessage {
   factory PublishDatasetResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'PublishDatasetResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha1'), createEmptyInstance: create)
-    ..aOM<$3.PublishInfo>(1, _omitFieldNames ? '' : 'publishInfo', subBuilder: $3.PublishInfo.create)
+    ..aOM<$4.PublishInfo>(1, _omitFieldNames ? '' : 'publishInfo', subBuilder: $4.PublishInfo.create)
     ..hasRequiredFields = false
   ;
 
@@ -460,15 +460,15 @@ class PublishDatasetResponse extends $pb.GeneratedMessage {
   static PublishDatasetResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.PublishInfo get publishInfo => $_getN(0);
+  $4.PublishInfo get publishInfo => $_getN(0);
   @$pb.TagNumber(1)
-  set publishInfo($3.PublishInfo v) { setField(1, v); }
+  set publishInfo($4.PublishInfo v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPublishInfo() => $_has(0);
   @$pb.TagNumber(1)
   void clearPublishInfo() => clearField(1);
   @$pb.TagNumber(1)
-  $3.PublishInfo ensurePublishInfo() => $_ensure(0);
+  $4.PublishInfo ensurePublishInfo() => $_ensure(0);
 }
 
 /// UnpublishDatasetRequest contains the publish ID of the published dataset.

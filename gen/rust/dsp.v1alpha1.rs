@@ -221,6 +221,94 @@ pub struct SignalTransferResumeRequest {
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct SignalTransferResumeResponse {
 }
+/// ContractServiceConfigureRequest represents the configuration request RUN-DSP does to the contract service.
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct ContractServiceConfigureRequest {
+    /// The address RUN-DSP will listen to for contract directives.
+    #[prost(string, tag="1")]
+    pub connector_address: ::prost::alloc::string::String,
+    /// The verification token to use when we are verifying the above address.
+    #[prost(string, tag="2")]
+    pub verification_token: ::prost::alloc::string::String,
+}
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct ContractServiceConfigureResponse {
+}
+/// ContractServiceRequestReceivedRequest contains the pid RUN-DSP uses to refer to the negotiation and offer contains
+/// the raw JSON of the offer ODRL.
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct ContractServiceRequestReceivedRequest {
+    #[prost(string, tag="1")]
+    pub pid: ::prost::alloc::string::String,
+    #[prost(string, tag="2")]
+    pub offer: ::prost::alloc::string::String,
+}
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct ContractServiceRequestReceivedResponse {
+}
+/// ContractServiceOfferReceivedRequest contains the pid RUN-DSP uses to refer to the negotiation and the raw ODRL offer JSON.
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct ContractServiceOfferReceivedRequest {
+    #[prost(string, tag="1")]
+    pub pid: ::prost::alloc::string::String,
+    #[prost(string, tag="2")]
+    pub offer: ::prost::alloc::string::String,
+}
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct ContractServiceOfferReceivedResponse {
+}
+/// ContractServiceAcceptedReceivedRequest contains the pid RUN-DSP uses to refer to the negotiation that just got accepted.
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct ContractServiceAcceptedReceivedRequest {
+    #[prost(string, tag="1")]
+    pub pid: ::prost::alloc::string::String,
+}
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct ContractServiceAcceptedReceivedResponse {
+}
+/// ContractServiceAgreementReceivedRequest contains the pid RUN-DSP uses to refer to the negotiation that just got agreed to.
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct ContractServiceAgreementReceivedRequest {
+    #[prost(string, tag="1")]
+    pub pid: ::prost::alloc::string::String,
+    #[prost(string, tag="2")]
+    pub agreement: ::prost::alloc::string::String,
+}
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct ContractServiceAgreementReceivedResponse {
+}
+/// ContractServiceVerificationReceivedRequest contains the pid RUN-DSP uses to refer to the negotiation that just verified to.
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct ContractServiceVerificationReceivedRequest {
+    #[prost(string, tag="1")]
+    pub pid: ::prost::alloc::string::String,
+}
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct ContractServiceVerificationReceivedResponse {
+}
+/// ContractServiceFinalizationReceivedRequest contains the pid RUN-DSP uses to refer to the negotiation that just got finalized.
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct ContractServiceFinalizationReceivedRequest {
+    #[prost(string, tag="1")]
+    pub pid: ::prost::alloc::string::String,
+}
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct ContractServiceFinalizationReceivedResponse {
+}
 /// PingRequest is an empty message, used instead of the Empty type in case we want
 /// to add parameters.
 #[allow(clippy::derive_partial_eq_without_eq)]

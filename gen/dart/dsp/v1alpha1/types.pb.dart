@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../google/protobuf/timestamp.pb.dart' as $2;
+import '../../google/protobuf/timestamp.pb.dart' as $3;
 import 'types.pbenum.dart';
 
 export 'types.pbenum.dart';
@@ -30,8 +30,8 @@ class Dataset extends $pb.GeneratedMessage {
     $core.Iterable<Multilingual>? description,
     $core.Iterable<$core.String>? keywords,
     $core.String? creator,
-    $2.Timestamp? issued,
-    $2.Timestamp? modified,
+    $3.Timestamp? issued,
+    $3.Timestamp? modified,
     $core.Map<$core.String, $core.String>? metadata,
     $core.String? license,
     $core.String? accessRights,
@@ -111,8 +111,8 @@ class Dataset extends $pb.GeneratedMessage {
     ..pc<Multilingual>(4, _omitFieldNames ? '' : 'description', $pb.PbFieldType.PM, subBuilder: Multilingual.create)
     ..pPS(5, _omitFieldNames ? '' : 'keywords')
     ..aOS(6, _omitFieldNames ? '' : 'creator')
-    ..aOM<$2.Timestamp>(7, _omitFieldNames ? '' : 'issued', subBuilder: $2.Timestamp.create)
-    ..aOM<$2.Timestamp>(8, _omitFieldNames ? '' : 'modified', subBuilder: $2.Timestamp.create)
+    ..aOM<$3.Timestamp>(7, _omitFieldNames ? '' : 'issued', subBuilder: $3.Timestamp.create)
+    ..aOM<$3.Timestamp>(8, _omitFieldNames ? '' : 'modified', subBuilder: $3.Timestamp.create)
     ..m<$core.String, $core.String>(9, _omitFieldNames ? '' : 'metadata', entryClassName: 'Dataset.MetadataEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('dsp.v1alpha1'))
     ..aOS(10, _omitFieldNames ? '' : 'license')
     ..aOS(11, _omitFieldNames ? '' : 'accessRights')
@@ -190,26 +190,26 @@ class Dataset extends $pb.GeneratedMessage {
   void clearCreator() => clearField(6);
 
   @$pb.TagNumber(7)
-  $2.Timestamp get issued => $_getN(6);
+  $3.Timestamp get issued => $_getN(6);
   @$pb.TagNumber(7)
-  set issued($2.Timestamp v) { setField(7, v); }
+  set issued($3.Timestamp v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasIssued() => $_has(6);
   @$pb.TagNumber(7)
   void clearIssued() => clearField(7);
   @$pb.TagNumber(7)
-  $2.Timestamp ensureIssued() => $_ensure(6);
+  $3.Timestamp ensureIssued() => $_ensure(6);
 
   @$pb.TagNumber(8)
-  $2.Timestamp get modified => $_getN(7);
+  $3.Timestamp get modified => $_getN(7);
   @$pb.TagNumber(8)
-  set modified($2.Timestamp v) { setField(8, v); }
+  set modified($3.Timestamp v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasModified() => $_has(7);
   @$pb.TagNumber(8)
   void clearModified() => clearField(8);
   @$pb.TagNumber(8)
-  $2.Timestamp ensureModified() => $_ensure(7);
+  $3.Timestamp ensureModified() => $_ensure(7);
 
   @$pb.TagNumber(9)
   $core.Map<$core.String, $core.String> get metadata => $_getMap(8);
