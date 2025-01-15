@@ -16,7 +16,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.5.1
 // - protoc             (unknown)
-// source: dsp/v1alpha2/client.proto
+// source: dsp/v1alpha2/control.proto
 
 package dspv1alpha2
 
@@ -179,7 +179,7 @@ var ControlService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "dsp/v1alpha2/client.proto",
+	Metadata: "dsp/v1alpha2/control.proto",
 }
 
 const (
@@ -328,7 +328,7 @@ var CatalogueControlService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "dsp/v1alpha2/client.proto",
+	Metadata: "dsp/v1alpha2/control.proto",
 }
 
 const (
@@ -677,7 +677,7 @@ var ContractControlService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "dsp/v1alpha2/client.proto",
+	Metadata: "dsp/v1alpha2/control.proto",
 }
 
 const (
@@ -906,5 +906,5 @@ var TransferControlService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "dsp/v1alpha2/client.proto",
+	Metadata: "dsp/v1alpha2/control.proto",
 }

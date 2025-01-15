@@ -9,7 +9,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.66.0)",
-    comments = "Source: dsp/v1alpha2/client.proto")
+    comments = "Source: dsp/v1alpha2/control.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CatalogueControlServiceGrpc {
 
@@ -359,7 +359,7 @@ public final class CatalogueControlServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.dsp.v1alpha2.ClientProto.getDescriptor();
+      return com.dsp.v1alpha2.ControlProto.getDescriptor();
     }
 
     @java.lang.Override

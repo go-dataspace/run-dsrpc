@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from dsp.v1alpha2 import client_pb2 as dsp_dot_v1alpha2_dot_client__pb2
+from dsp.v1alpha2 import control_pb2 as dsp_dot_v1alpha2_dot_control__pb2
 
 
 class ControlServiceStub(object):
@@ -18,13 +18,13 @@ class ControlServiceStub(object):
         """
         self.GetProviderDatasetDownloadInformation = channel.unary_unary(
                 '/dsp.v1alpha2.ControlService/GetProviderDatasetDownloadInformation',
-                request_serializer=dsp_dot_v1alpha2_dot_client__pb2.GetProviderDatasetDownloadInformationRequest.SerializeToString,
-                response_deserializer=dsp_dot_v1alpha2_dot_client__pb2.GetProviderDatasetDownloadInformationResponse.FromString,
+                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.GetProviderDatasetDownloadInformationRequest.SerializeToString,
+                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.GetProviderDatasetDownloadInformationResponse.FromString,
                 _registered_method=True)
         self.VerifyConnection = channel.unary_unary(
                 '/dsp.v1alpha2.ControlService/VerifyConnection',
-                request_serializer=dsp_dot_v1alpha2_dot_client__pb2.VerifyConnectionRequest.SerializeToString,
-                response_deserializer=dsp_dot_v1alpha2_dot_client__pb2.VerifyConnectionResponse.FromString,
+                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.VerifyConnectionRequest.SerializeToString,
+                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.VerifyConnectionResponse.FromString,
                 _registered_method=True)
 
 
@@ -52,13 +52,13 @@ def add_ControlServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'GetProviderDatasetDownloadInformation': grpc.unary_unary_rpc_method_handler(
                     servicer.GetProviderDatasetDownloadInformation,
-                    request_deserializer=dsp_dot_v1alpha2_dot_client__pb2.GetProviderDatasetDownloadInformationRequest.FromString,
-                    response_serializer=dsp_dot_v1alpha2_dot_client__pb2.GetProviderDatasetDownloadInformationResponse.SerializeToString,
+                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.GetProviderDatasetDownloadInformationRequest.FromString,
+                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.GetProviderDatasetDownloadInformationResponse.SerializeToString,
             ),
             'VerifyConnection': grpc.unary_unary_rpc_method_handler(
                     servicer.VerifyConnection,
-                    request_deserializer=dsp_dot_v1alpha2_dot_client__pb2.VerifyConnectionRequest.FromString,
-                    response_serializer=dsp_dot_v1alpha2_dot_client__pb2.VerifyConnectionResponse.SerializeToString,
+                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.VerifyConnectionRequest.FromString,
+                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.VerifyConnectionResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -88,8 +88,8 @@ class ControlService(object):
             request,
             target,
             '/dsp.v1alpha2.ControlService/GetProviderDatasetDownloadInformation',
-            dsp_dot_v1alpha2_dot_client__pb2.GetProviderDatasetDownloadInformationRequest.SerializeToString,
-            dsp_dot_v1alpha2_dot_client__pb2.GetProviderDatasetDownloadInformationResponse.FromString,
+            dsp_dot_v1alpha2_dot_control__pb2.GetProviderDatasetDownloadInformationRequest.SerializeToString,
+            dsp_dot_v1alpha2_dot_control__pb2.GetProviderDatasetDownloadInformationResponse.FromString,
             options,
             channel_credentials,
             insecure,
@@ -115,8 +115,8 @@ class ControlService(object):
             request,
             target,
             '/dsp.v1alpha2.ControlService/VerifyConnection',
-            dsp_dot_v1alpha2_dot_client__pb2.VerifyConnectionRequest.SerializeToString,
-            dsp_dot_v1alpha2_dot_client__pb2.VerifyConnectionResponse.FromString,
+            dsp_dot_v1alpha2_dot_control__pb2.VerifyConnectionRequest.SerializeToString,
+            dsp_dot_v1alpha2_dot_control__pb2.VerifyConnectionResponse.FromString,
             options,
             channel_credentials,
             insecure,
@@ -140,13 +140,13 @@ class CatalogueControlServiceStub(object):
         """
         self.GetProviderCatalogue = channel.unary_unary(
                 '/dsp.v1alpha2.CatalogueControlService/GetProviderCatalogue',
-                request_serializer=dsp_dot_v1alpha2_dot_client__pb2.GetProviderCatalogueRequest.SerializeToString,
-                response_deserializer=dsp_dot_v1alpha2_dot_client__pb2.GetProviderCatalogueResponse.FromString,
+                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.GetProviderCatalogueRequest.SerializeToString,
+                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.GetProviderCatalogueResponse.FromString,
                 _registered_method=True)
         self.GetProviderDataset = channel.unary_unary(
                 '/dsp.v1alpha2.CatalogueControlService/GetProviderDataset',
-                request_serializer=dsp_dot_v1alpha2_dot_client__pb2.GetProviderDatasetRequest.SerializeToString,
-                response_deserializer=dsp_dot_v1alpha2_dot_client__pb2.GetProviderDatasetResponse.FromString,
+                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.GetProviderDatasetRequest.SerializeToString,
+                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.GetProviderDatasetResponse.FromString,
                 _registered_method=True)
 
 
@@ -173,13 +173,13 @@ def add_CatalogueControlServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'GetProviderCatalogue': grpc.unary_unary_rpc_method_handler(
                     servicer.GetProviderCatalogue,
-                    request_deserializer=dsp_dot_v1alpha2_dot_client__pb2.GetProviderCatalogueRequest.FromString,
-                    response_serializer=dsp_dot_v1alpha2_dot_client__pb2.GetProviderCatalogueResponse.SerializeToString,
+                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.GetProviderCatalogueRequest.FromString,
+                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.GetProviderCatalogueResponse.SerializeToString,
             ),
             'GetProviderDataset': grpc.unary_unary_rpc_method_handler(
                     servicer.GetProviderDataset,
-                    request_deserializer=dsp_dot_v1alpha2_dot_client__pb2.GetProviderDatasetRequest.FromString,
-                    response_serializer=dsp_dot_v1alpha2_dot_client__pb2.GetProviderDatasetResponse.SerializeToString,
+                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.GetProviderDatasetRequest.FromString,
+                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.GetProviderDatasetResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -208,8 +208,8 @@ class CatalogueControlService(object):
             request,
             target,
             '/dsp.v1alpha2.CatalogueControlService/GetProviderCatalogue',
-            dsp_dot_v1alpha2_dot_client__pb2.GetProviderCatalogueRequest.SerializeToString,
-            dsp_dot_v1alpha2_dot_client__pb2.GetProviderCatalogueResponse.FromString,
+            dsp_dot_v1alpha2_dot_control__pb2.GetProviderCatalogueRequest.SerializeToString,
+            dsp_dot_v1alpha2_dot_control__pb2.GetProviderCatalogueResponse.FromString,
             options,
             channel_credentials,
             insecure,
@@ -235,8 +235,8 @@ class CatalogueControlService(object):
             request,
             target,
             '/dsp.v1alpha2.CatalogueControlService/GetProviderDataset',
-            dsp_dot_v1alpha2_dot_client__pb2.GetProviderDatasetRequest.SerializeToString,
-            dsp_dot_v1alpha2_dot_client__pb2.GetProviderDatasetResponse.FromString,
+            dsp_dot_v1alpha2_dot_control__pb2.GetProviderDatasetRequest.SerializeToString,
+            dsp_dot_v1alpha2_dot_control__pb2.GetProviderDatasetResponse.FromString,
             options,
             channel_credentials,
             insecure,
@@ -260,38 +260,38 @@ class ContractControlServiceStub(object):
         """
         self.Request = channel.unary_unary(
                 '/dsp.v1alpha2.ContractControlService/Request',
-                request_serializer=dsp_dot_v1alpha2_dot_client__pb2.RequestRequest.SerializeToString,
-                response_deserializer=dsp_dot_v1alpha2_dot_client__pb2.RequestResponse.FromString,
+                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.RequestRequest.SerializeToString,
+                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.RequestResponse.FromString,
                 _registered_method=True)
         self.Offer = channel.unary_unary(
                 '/dsp.v1alpha2.ContractControlService/Offer',
-                request_serializer=dsp_dot_v1alpha2_dot_client__pb2.OfferRequest.SerializeToString,
-                response_deserializer=dsp_dot_v1alpha2_dot_client__pb2.OfferResponse.FromString,
+                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.OfferRequest.SerializeToString,
+                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.OfferResponse.FromString,
                 _registered_method=True)
         self.Accept = channel.unary_unary(
                 '/dsp.v1alpha2.ContractControlService/Accept',
-                request_serializer=dsp_dot_v1alpha2_dot_client__pb2.AcceptRequest.SerializeToString,
-                response_deserializer=dsp_dot_v1alpha2_dot_client__pb2.AcceptResponse.FromString,
+                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.AcceptRequest.SerializeToString,
+                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.AcceptResponse.FromString,
                 _registered_method=True)
         self.Agree = channel.unary_unary(
                 '/dsp.v1alpha2.ContractControlService/Agree',
-                request_serializer=dsp_dot_v1alpha2_dot_client__pb2.AgreeRequest.SerializeToString,
-                response_deserializer=dsp_dot_v1alpha2_dot_client__pb2.AgreeResponse.FromString,
+                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.AgreeRequest.SerializeToString,
+                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.AgreeResponse.FromString,
                 _registered_method=True)
         self.Verify = channel.unary_unary(
                 '/dsp.v1alpha2.ContractControlService/Verify',
-                request_serializer=dsp_dot_v1alpha2_dot_client__pb2.VerifyRequest.SerializeToString,
-                response_deserializer=dsp_dot_v1alpha2_dot_client__pb2.VerifyResponse.FromString,
+                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.VerifyRequest.SerializeToString,
+                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.VerifyResponse.FromString,
                 _registered_method=True)
         self.Finalize = channel.unary_unary(
                 '/dsp.v1alpha2.ContractControlService/Finalize',
-                request_serializer=dsp_dot_v1alpha2_dot_client__pb2.FinalizeRequest.SerializeToString,
-                response_deserializer=dsp_dot_v1alpha2_dot_client__pb2.FinalizeResponse.FromString,
+                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.FinalizeRequest.SerializeToString,
+                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.FinalizeResponse.FromString,
                 _registered_method=True)
         self.Terminate = channel.unary_unary(
                 '/dsp.v1alpha2.ContractControlService/Terminate',
-                request_serializer=dsp_dot_v1alpha2_dot_client__pb2.TerminateRequest.SerializeToString,
-                response_deserializer=dsp_dot_v1alpha2_dot_client__pb2.TerminateResponse.FromString,
+                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.TerminateRequest.SerializeToString,
+                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.TerminateResponse.FromString,
                 _registered_method=True)
 
 
@@ -353,38 +353,38 @@ def add_ContractControlServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'Request': grpc.unary_unary_rpc_method_handler(
                     servicer.Request,
-                    request_deserializer=dsp_dot_v1alpha2_dot_client__pb2.RequestRequest.FromString,
-                    response_serializer=dsp_dot_v1alpha2_dot_client__pb2.RequestResponse.SerializeToString,
+                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.RequestRequest.FromString,
+                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.RequestResponse.SerializeToString,
             ),
             'Offer': grpc.unary_unary_rpc_method_handler(
                     servicer.Offer,
-                    request_deserializer=dsp_dot_v1alpha2_dot_client__pb2.OfferRequest.FromString,
-                    response_serializer=dsp_dot_v1alpha2_dot_client__pb2.OfferResponse.SerializeToString,
+                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.OfferRequest.FromString,
+                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.OfferResponse.SerializeToString,
             ),
             'Accept': grpc.unary_unary_rpc_method_handler(
                     servicer.Accept,
-                    request_deserializer=dsp_dot_v1alpha2_dot_client__pb2.AcceptRequest.FromString,
-                    response_serializer=dsp_dot_v1alpha2_dot_client__pb2.AcceptResponse.SerializeToString,
+                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.AcceptRequest.FromString,
+                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.AcceptResponse.SerializeToString,
             ),
             'Agree': grpc.unary_unary_rpc_method_handler(
                     servicer.Agree,
-                    request_deserializer=dsp_dot_v1alpha2_dot_client__pb2.AgreeRequest.FromString,
-                    response_serializer=dsp_dot_v1alpha2_dot_client__pb2.AgreeResponse.SerializeToString,
+                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.AgreeRequest.FromString,
+                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.AgreeResponse.SerializeToString,
             ),
             'Verify': grpc.unary_unary_rpc_method_handler(
                     servicer.Verify,
-                    request_deserializer=dsp_dot_v1alpha2_dot_client__pb2.VerifyRequest.FromString,
-                    response_serializer=dsp_dot_v1alpha2_dot_client__pb2.VerifyResponse.SerializeToString,
+                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.VerifyRequest.FromString,
+                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.VerifyResponse.SerializeToString,
             ),
             'Finalize': grpc.unary_unary_rpc_method_handler(
                     servicer.Finalize,
-                    request_deserializer=dsp_dot_v1alpha2_dot_client__pb2.FinalizeRequest.FromString,
-                    response_serializer=dsp_dot_v1alpha2_dot_client__pb2.FinalizeResponse.SerializeToString,
+                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.FinalizeRequest.FromString,
+                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.FinalizeResponse.SerializeToString,
             ),
             'Terminate': grpc.unary_unary_rpc_method_handler(
                     servicer.Terminate,
-                    request_deserializer=dsp_dot_v1alpha2_dot_client__pb2.TerminateRequest.FromString,
-                    response_serializer=dsp_dot_v1alpha2_dot_client__pb2.TerminateResponse.SerializeToString,
+                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.TerminateRequest.FromString,
+                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.TerminateResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -413,8 +413,8 @@ class ContractControlService(object):
             request,
             target,
             '/dsp.v1alpha2.ContractControlService/Request',
-            dsp_dot_v1alpha2_dot_client__pb2.RequestRequest.SerializeToString,
-            dsp_dot_v1alpha2_dot_client__pb2.RequestResponse.FromString,
+            dsp_dot_v1alpha2_dot_control__pb2.RequestRequest.SerializeToString,
+            dsp_dot_v1alpha2_dot_control__pb2.RequestResponse.FromString,
             options,
             channel_credentials,
             insecure,
@@ -440,8 +440,8 @@ class ContractControlService(object):
             request,
             target,
             '/dsp.v1alpha2.ContractControlService/Offer',
-            dsp_dot_v1alpha2_dot_client__pb2.OfferRequest.SerializeToString,
-            dsp_dot_v1alpha2_dot_client__pb2.OfferResponse.FromString,
+            dsp_dot_v1alpha2_dot_control__pb2.OfferRequest.SerializeToString,
+            dsp_dot_v1alpha2_dot_control__pb2.OfferResponse.FromString,
             options,
             channel_credentials,
             insecure,
@@ -467,8 +467,8 @@ class ContractControlService(object):
             request,
             target,
             '/dsp.v1alpha2.ContractControlService/Accept',
-            dsp_dot_v1alpha2_dot_client__pb2.AcceptRequest.SerializeToString,
-            dsp_dot_v1alpha2_dot_client__pb2.AcceptResponse.FromString,
+            dsp_dot_v1alpha2_dot_control__pb2.AcceptRequest.SerializeToString,
+            dsp_dot_v1alpha2_dot_control__pb2.AcceptResponse.FromString,
             options,
             channel_credentials,
             insecure,
@@ -494,8 +494,8 @@ class ContractControlService(object):
             request,
             target,
             '/dsp.v1alpha2.ContractControlService/Agree',
-            dsp_dot_v1alpha2_dot_client__pb2.AgreeRequest.SerializeToString,
-            dsp_dot_v1alpha2_dot_client__pb2.AgreeResponse.FromString,
+            dsp_dot_v1alpha2_dot_control__pb2.AgreeRequest.SerializeToString,
+            dsp_dot_v1alpha2_dot_control__pb2.AgreeResponse.FromString,
             options,
             channel_credentials,
             insecure,
@@ -521,8 +521,8 @@ class ContractControlService(object):
             request,
             target,
             '/dsp.v1alpha2.ContractControlService/Verify',
-            dsp_dot_v1alpha2_dot_client__pb2.VerifyRequest.SerializeToString,
-            dsp_dot_v1alpha2_dot_client__pb2.VerifyResponse.FromString,
+            dsp_dot_v1alpha2_dot_control__pb2.VerifyRequest.SerializeToString,
+            dsp_dot_v1alpha2_dot_control__pb2.VerifyResponse.FromString,
             options,
             channel_credentials,
             insecure,
@@ -548,8 +548,8 @@ class ContractControlService(object):
             request,
             target,
             '/dsp.v1alpha2.ContractControlService/Finalize',
-            dsp_dot_v1alpha2_dot_client__pb2.FinalizeRequest.SerializeToString,
-            dsp_dot_v1alpha2_dot_client__pb2.FinalizeResponse.FromString,
+            dsp_dot_v1alpha2_dot_control__pb2.FinalizeRequest.SerializeToString,
+            dsp_dot_v1alpha2_dot_control__pb2.FinalizeResponse.FromString,
             options,
             channel_credentials,
             insecure,
@@ -575,8 +575,8 @@ class ContractControlService(object):
             request,
             target,
             '/dsp.v1alpha2.ContractControlService/Terminate',
-            dsp_dot_v1alpha2_dot_client__pb2.TerminateRequest.SerializeToString,
-            dsp_dot_v1alpha2_dot_client__pb2.TerminateResponse.FromString,
+            dsp_dot_v1alpha2_dot_control__pb2.TerminateRequest.SerializeToString,
+            dsp_dot_v1alpha2_dot_control__pb2.TerminateResponse.FromString,
             options,
             channel_credentials,
             insecure,
@@ -600,23 +600,23 @@ class TransferControlServiceStub(object):
         """
         self.SignalTransferComplete = channel.unary_unary(
                 '/dsp.v1alpha2.TransferControlService/SignalTransferComplete',
-                request_serializer=dsp_dot_v1alpha2_dot_client__pb2.SignalTransferCompleteRequest.SerializeToString,
-                response_deserializer=dsp_dot_v1alpha2_dot_client__pb2.SignalTransferCompleteResponse.FromString,
+                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCompleteRequest.SerializeToString,
+                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCompleteResponse.FromString,
                 _registered_method=True)
         self.SignalTransferCancelled = channel.unary_unary(
                 '/dsp.v1alpha2.TransferControlService/SignalTransferCancelled',
-                request_serializer=dsp_dot_v1alpha2_dot_client__pb2.SignalTransferCancelledRequest.SerializeToString,
-                response_deserializer=dsp_dot_v1alpha2_dot_client__pb2.SignalTransferCancelledResponse.FromString,
+                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCancelledRequest.SerializeToString,
+                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCancelledResponse.FromString,
                 _registered_method=True)
         self.SignalTransferSuspend = channel.unary_unary(
                 '/dsp.v1alpha2.TransferControlService/SignalTransferSuspend',
-                request_serializer=dsp_dot_v1alpha2_dot_client__pb2.SignalTransferSuspendRequest.SerializeToString,
-                response_deserializer=dsp_dot_v1alpha2_dot_client__pb2.SignalTransferSuspendResponse.FromString,
+                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferSuspendRequest.SerializeToString,
+                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferSuspendResponse.FromString,
                 _registered_method=True)
         self.SignalTransferResume = channel.unary_unary(
                 '/dsp.v1alpha2.TransferControlService/SignalTransferResume',
-                request_serializer=dsp_dot_v1alpha2_dot_client__pb2.SignalTransferResumeRequest.SerializeToString,
-                response_deserializer=dsp_dot_v1alpha2_dot_client__pb2.SignalTransferResumeResponse.FromString,
+                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferResumeRequest.SerializeToString,
+                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferResumeResponse.FromString,
                 _registered_method=True)
 
 
@@ -657,23 +657,23 @@ def add_TransferControlServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'SignalTransferComplete': grpc.unary_unary_rpc_method_handler(
                     servicer.SignalTransferComplete,
-                    request_deserializer=dsp_dot_v1alpha2_dot_client__pb2.SignalTransferCompleteRequest.FromString,
-                    response_serializer=dsp_dot_v1alpha2_dot_client__pb2.SignalTransferCompleteResponse.SerializeToString,
+                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCompleteRequest.FromString,
+                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCompleteResponse.SerializeToString,
             ),
             'SignalTransferCancelled': grpc.unary_unary_rpc_method_handler(
                     servicer.SignalTransferCancelled,
-                    request_deserializer=dsp_dot_v1alpha2_dot_client__pb2.SignalTransferCancelledRequest.FromString,
-                    response_serializer=dsp_dot_v1alpha2_dot_client__pb2.SignalTransferCancelledResponse.SerializeToString,
+                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCancelledRequest.FromString,
+                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCancelledResponse.SerializeToString,
             ),
             'SignalTransferSuspend': grpc.unary_unary_rpc_method_handler(
                     servicer.SignalTransferSuspend,
-                    request_deserializer=dsp_dot_v1alpha2_dot_client__pb2.SignalTransferSuspendRequest.FromString,
-                    response_serializer=dsp_dot_v1alpha2_dot_client__pb2.SignalTransferSuspendResponse.SerializeToString,
+                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferSuspendRequest.FromString,
+                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferSuspendResponse.SerializeToString,
             ),
             'SignalTransferResume': grpc.unary_unary_rpc_method_handler(
                     servicer.SignalTransferResume,
-                    request_deserializer=dsp_dot_v1alpha2_dot_client__pb2.SignalTransferResumeRequest.FromString,
-                    response_serializer=dsp_dot_v1alpha2_dot_client__pb2.SignalTransferResumeResponse.SerializeToString,
+                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferResumeRequest.FromString,
+                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferResumeResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -702,8 +702,8 @@ class TransferControlService(object):
             request,
             target,
             '/dsp.v1alpha2.TransferControlService/SignalTransferComplete',
-            dsp_dot_v1alpha2_dot_client__pb2.SignalTransferCompleteRequest.SerializeToString,
-            dsp_dot_v1alpha2_dot_client__pb2.SignalTransferCompleteResponse.FromString,
+            dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCompleteRequest.SerializeToString,
+            dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCompleteResponse.FromString,
             options,
             channel_credentials,
             insecure,
@@ -729,8 +729,8 @@ class TransferControlService(object):
             request,
             target,
             '/dsp.v1alpha2.TransferControlService/SignalTransferCancelled',
-            dsp_dot_v1alpha2_dot_client__pb2.SignalTransferCancelledRequest.SerializeToString,
-            dsp_dot_v1alpha2_dot_client__pb2.SignalTransferCancelledResponse.FromString,
+            dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCancelledRequest.SerializeToString,
+            dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCancelledResponse.FromString,
             options,
             channel_credentials,
             insecure,
@@ -756,8 +756,8 @@ class TransferControlService(object):
             request,
             target,
             '/dsp.v1alpha2.TransferControlService/SignalTransferSuspend',
-            dsp_dot_v1alpha2_dot_client__pb2.SignalTransferSuspendRequest.SerializeToString,
-            dsp_dot_v1alpha2_dot_client__pb2.SignalTransferSuspendResponse.FromString,
+            dsp_dot_v1alpha2_dot_control__pb2.SignalTransferSuspendRequest.SerializeToString,
+            dsp_dot_v1alpha2_dot_control__pb2.SignalTransferSuspendResponse.FromString,
             options,
             channel_credentials,
             insecure,
@@ -783,8 +783,8 @@ class TransferControlService(object):
             request,
             target,
             '/dsp.v1alpha2.TransferControlService/SignalTransferResume',
-            dsp_dot_v1alpha2_dot_client__pb2.SignalTransferResumeRequest.SerializeToString,
-            dsp_dot_v1alpha2_dot_client__pb2.SignalTransferResumeResponse.FromString,
+            dsp_dot_v1alpha2_dot_control__pb2.SignalTransferResumeRequest.SerializeToString,
+            dsp_dot_v1alpha2_dot_control__pb2.SignalTransferResumeResponse.FromString,
             options,
             channel_credentials,
             insecure,

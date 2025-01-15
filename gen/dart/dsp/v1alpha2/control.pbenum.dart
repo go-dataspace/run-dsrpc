@@ -1,6 +1,6 @@
 //
 //  Generated code. Do not modify.
-//  source: dsp/v1alpha2/client.proto
+//  source: dsp/v1alpha2/control.proto
 //
 // @dart = 2.12
 
