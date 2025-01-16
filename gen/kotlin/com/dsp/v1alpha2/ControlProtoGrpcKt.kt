@@ -1,5 +1,6 @@
 package com.dsp.v1alpha2
 
+import com.dsp.v1alpha2.ControlServiceGrpc.getServiceDescriptor
 import io.grpc.CallOptions
 import io.grpc.CallOptions.DEFAULT
 import io.grpc.Channel
@@ -20,10 +21,6 @@ import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.EmptyCoroutineContext
 import kotlin.jvm.JvmOverloads
 import kotlin.jvm.JvmStatic
-import com.dsp.v1alpha2.CatalogueControlServiceGrpc.getServiceDescriptor as catalogueControlServiceGrpcGetServiceDescriptor
-import com.dsp.v1alpha2.ContractControlServiceGrpc.getServiceDescriptor as contractControlServiceGrpcGetServiceDescriptor
-import com.dsp.v1alpha2.ControlServiceGrpc.getServiceDescriptor as controlServiceGrpcGetServiceDescriptor
-import com.dsp.v1alpha2.TransferControlServiceGrpc.getServiceDescriptor as transferControlServiceGrpcGetServiceDescriptor
 
 /**
  * Holder for Kotlin coroutine-based client and server APIs for dsp.v1alpha2.ControlService.
@@ -33,7 +30,7 @@ public object ControlServiceGrpcKt {
 
   @JvmStatic
   public val serviceDescriptor: ServiceDescriptor
-    get() = controlServiceGrpcGetServiceDescriptor()
+    get() = getServiceDescriptor()
 
   public val getProviderDatasetDownloadInformationMethod:
       MethodDescriptor<GetProviderDatasetDownloadInformationRequest, GetProviderDatasetDownloadInformationResponse>
@@ -44,6 +41,67 @@ public object ControlServiceGrpcKt {
       MethodDescriptor<VerifyConnectionRequest, VerifyConnectionResponse>
     @JvmStatic
     get() = ControlServiceGrpc.getVerifyConnectionMethod()
+
+  public val getProviderCatalogueMethod:
+      MethodDescriptor<GetProviderCatalogueRequest, GetProviderCatalogueResponse>
+    @JvmStatic
+    get() = ControlServiceGrpc.getGetProviderCatalogueMethod()
+
+  public val getProviderDatasetMethod:
+      MethodDescriptor<GetProviderDatasetRequest, GetProviderDatasetResponse>
+    @JvmStatic
+    get() = ControlServiceGrpc.getGetProviderDatasetMethod()
+
+  public val contractRequestMethod:
+      MethodDescriptor<ContractRequestRequest, ContractRequestResponse>
+    @JvmStatic
+    get() = ControlServiceGrpc.getContractRequestMethod()
+
+  public val contractOfferMethod: MethodDescriptor<ContractOfferRequest, ContractOfferResponse>
+    @JvmStatic
+    get() = ControlServiceGrpc.getContractOfferMethod()
+
+  public val contractAcceptMethod: MethodDescriptor<ContractAcceptRequest, ContractAcceptResponse>
+    @JvmStatic
+    get() = ControlServiceGrpc.getContractAcceptMethod()
+
+  public val contractAgreeMethod: MethodDescriptor<ContractAgreeRequest, ContractAgreeResponse>
+    @JvmStatic
+    get() = ControlServiceGrpc.getContractAgreeMethod()
+
+  public val contractVerifyMethod: MethodDescriptor<ContractVerifyRequest, ContractVerifyResponse>
+    @JvmStatic
+    get() = ControlServiceGrpc.getContractVerifyMethod()
+
+  public val contractFinalizeMethod:
+      MethodDescriptor<ContractFinalizeRequest, ContractFinalizeResponse>
+    @JvmStatic
+    get() = ControlServiceGrpc.getContractFinalizeMethod()
+
+  public val contractTerminateMethod:
+      MethodDescriptor<ContractTerminateRequest, ContractTerminateResponse>
+    @JvmStatic
+    get() = ControlServiceGrpc.getContractTerminateMethod()
+
+  public val signalTransferCompleteMethod:
+      MethodDescriptor<SignalTransferCompleteRequest, SignalTransferCompleteResponse>
+    @JvmStatic
+    get() = ControlServiceGrpc.getSignalTransferCompleteMethod()
+
+  public val signalTransferCancelledMethod:
+      MethodDescriptor<SignalTransferCancelledRequest, SignalTransferCancelledResponse>
+    @JvmStatic
+    get() = ControlServiceGrpc.getSignalTransferCancelledMethod()
+
+  public val signalTransferSuspendMethod:
+      MethodDescriptor<SignalTransferSuspendRequest, SignalTransferSuspendResponse>
+    @JvmStatic
+    get() = ControlServiceGrpc.getSignalTransferSuspendMethod()
+
+  public val signalTransferResumeMethod:
+      MethodDescriptor<SignalTransferResumeRequest, SignalTransferResumeResponse>
+    @JvmStatic
+    get() = ControlServiceGrpc.getSignalTransferResumeMethod()
 
   /**
    * A stub for issuing RPCs to a(n) dsp.v1alpha2.ControlService service as suspending coroutines.
@@ -100,6 +158,292 @@ public object ControlServiceGrpcKt {
       callOptions,
       headers
     )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
+     * corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
+    public suspend fun getProviderCatalogue(request: GetProviderCatalogueRequest, headers: Metadata
+        = Metadata()): GetProviderCatalogueResponse = unaryRpc(
+      channel,
+      ControlServiceGrpc.getGetProviderCatalogueMethod(),
+      request,
+      callOptions,
+      headers
+    )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
+     * corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
+    public suspend fun getProviderDataset(request: GetProviderDatasetRequest, headers: Metadata =
+        Metadata()): GetProviderDatasetResponse = unaryRpc(
+      channel,
+      ControlServiceGrpc.getGetProviderDatasetMethod(),
+      request,
+      callOptions,
+      headers
+    )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
+     * corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
+    public suspend fun contractRequest(request: ContractRequestRequest, headers: Metadata =
+        Metadata()): ContractRequestResponse = unaryRpc(
+      channel,
+      ControlServiceGrpc.getContractRequestMethod(),
+      request,
+      callOptions,
+      headers
+    )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
+     * corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
+    public suspend fun contractOffer(request: ContractOfferRequest, headers: Metadata = Metadata()):
+        ContractOfferResponse = unaryRpc(
+      channel,
+      ControlServiceGrpc.getContractOfferMethod(),
+      request,
+      callOptions,
+      headers
+    )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
+     * corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
+    public suspend fun contractAccept(request: ContractAcceptRequest, headers: Metadata =
+        Metadata()): ContractAcceptResponse = unaryRpc(
+      channel,
+      ControlServiceGrpc.getContractAcceptMethod(),
+      request,
+      callOptions,
+      headers
+    )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
+     * corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
+    public suspend fun contractAgree(request: ContractAgreeRequest, headers: Metadata = Metadata()):
+        ContractAgreeResponse = unaryRpc(
+      channel,
+      ControlServiceGrpc.getContractAgreeMethod(),
+      request,
+      callOptions,
+      headers
+    )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
+     * corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
+    public suspend fun contractVerify(request: ContractVerifyRequest, headers: Metadata =
+        Metadata()): ContractVerifyResponse = unaryRpc(
+      channel,
+      ControlServiceGrpc.getContractVerifyMethod(),
+      request,
+      callOptions,
+      headers
+    )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
+     * corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
+    public suspend fun contractFinalize(request: ContractFinalizeRequest, headers: Metadata =
+        Metadata()): ContractFinalizeResponse = unaryRpc(
+      channel,
+      ControlServiceGrpc.getContractFinalizeMethod(),
+      request,
+      callOptions,
+      headers
+    )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
+     * corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
+    public suspend fun contractTerminate(request: ContractTerminateRequest, headers: Metadata =
+        Metadata()): ContractTerminateResponse = unaryRpc(
+      channel,
+      ControlServiceGrpc.getContractTerminateMethod(),
+      request,
+      callOptions,
+      headers
+    )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
+     * corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
+    public suspend fun signalTransferComplete(request: SignalTransferCompleteRequest,
+        headers: Metadata = Metadata()): SignalTransferCompleteResponse = unaryRpc(
+      channel,
+      ControlServiceGrpc.getSignalTransferCompleteMethod(),
+      request,
+      callOptions,
+      headers
+    )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
+     * corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
+    public suspend fun signalTransferCancelled(request: SignalTransferCancelledRequest,
+        headers: Metadata = Metadata()): SignalTransferCancelledResponse = unaryRpc(
+      channel,
+      ControlServiceGrpc.getSignalTransferCancelledMethod(),
+      request,
+      callOptions,
+      headers
+    )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
+     * corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
+    public suspend fun signalTransferSuspend(request: SignalTransferSuspendRequest,
+        headers: Metadata = Metadata()): SignalTransferSuspendResponse = unaryRpc(
+      channel,
+      ControlServiceGrpc.getSignalTransferSuspendMethod(),
+      request,
+      callOptions,
+      headers
+    )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
+     * corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
+    public suspend fun signalTransferResume(request: SignalTransferResumeRequest, headers: Metadata
+        = Metadata()): SignalTransferResumeResponse = unaryRpc(
+      channel,
+      ControlServiceGrpc.getSignalTransferResumeMethod(),
+      request,
+      callOptions,
+      headers
+    )
   }
 
   /**
@@ -140,109 +484,8 @@ public object ControlServiceGrpcKt {
         VerifyConnectionResponse = throw
         StatusException(UNIMPLEMENTED.withDescription("Method dsp.v1alpha2.ControlService.VerifyConnection is unimplemented"))
 
-    final override fun bindService(): ServerServiceDefinition =
-        builder(controlServiceGrpcGetServiceDescriptor())
-      .addMethod(unaryServerMethodDefinition(
-      context = this.context,
-      descriptor = ControlServiceGrpc.getGetProviderDatasetDownloadInformationMethod(),
-      implementation = ::getProviderDatasetDownloadInformation
-    ))
-      .addMethod(unaryServerMethodDefinition(
-      context = this.context,
-      descriptor = ControlServiceGrpc.getVerifyConnectionMethod(),
-      implementation = ::verifyConnection
-    )).build()
-  }
-}
-
-/**
- * Holder for Kotlin coroutine-based client and server APIs for
- * dsp.v1alpha2.CatalogueControlService.
- */
-public object CatalogueControlServiceGrpcKt {
-  public const val SERVICE_NAME: String = CatalogueControlServiceGrpc.SERVICE_NAME
-
-  @JvmStatic
-  public val serviceDescriptor: ServiceDescriptor
-    get() = catalogueControlServiceGrpcGetServiceDescriptor()
-
-  public val getProviderCatalogueMethod:
-      MethodDescriptor<GetProviderCatalogueRequest, GetProviderCatalogueResponse>
-    @JvmStatic
-    get() = CatalogueControlServiceGrpc.getGetProviderCatalogueMethod()
-
-  public val getProviderDatasetMethod:
-      MethodDescriptor<GetProviderDatasetRequest, GetProviderDatasetResponse>
-    @JvmStatic
-    get() = CatalogueControlServiceGrpc.getGetProviderDatasetMethod()
-
-  /**
-   * A stub for issuing RPCs to a(n) dsp.v1alpha2.CatalogueControlService service as suspending
-   * coroutines.
-   */
-  @StubFor(CatalogueControlServiceGrpc::class)
-  public class CatalogueControlServiceCoroutineStub @JvmOverloads constructor(
-    channel: Channel,
-    callOptions: CallOptions = DEFAULT,
-  ) : AbstractCoroutineStub<CatalogueControlServiceCoroutineStub>(channel, callOptions) {
-    override fun build(channel: Channel, callOptions: CallOptions):
-        CatalogueControlServiceCoroutineStub = CatalogueControlServiceCoroutineStub(channel,
-        callOptions)
-
     /**
-     * Executes this RPC and returns the response message, suspending until the RPC completes
-     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
-     * corresponding
-     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
-     * with the corresponding exception as a cause.
-     *
-     * @param request The request message to send to the server.
-     *
-     * @param headers Metadata to attach to the request.  Most users will not need this.
-     *
-     * @return The single response from the server.
-     */
-    public suspend fun getProviderCatalogue(request: GetProviderCatalogueRequest, headers: Metadata
-        = Metadata()): GetProviderCatalogueResponse = unaryRpc(
-      channel,
-      CatalogueControlServiceGrpc.getGetProviderCatalogueMethod(),
-      request,
-      callOptions,
-      headers
-    )
-
-    /**
-     * Executes this RPC and returns the response message, suspending until the RPC completes
-     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
-     * corresponding
-     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
-     * with the corresponding exception as a cause.
-     *
-     * @param request The request message to send to the server.
-     *
-     * @param headers Metadata to attach to the request.  Most users will not need this.
-     *
-     * @return The single response from the server.
-     */
-    public suspend fun getProviderDataset(request: GetProviderDatasetRequest, headers: Metadata =
-        Metadata()): GetProviderDatasetResponse = unaryRpc(
-      channel,
-      CatalogueControlServiceGrpc.getGetProviderDatasetMethod(),
-      request,
-      callOptions,
-      headers
-    )
-  }
-
-  /**
-   * Skeletal implementation of the dsp.v1alpha2.CatalogueControlService service based on Kotlin
-   * coroutines.
-   */
-  public abstract class CatalogueControlServiceCoroutineImplBase(
-    coroutineContext: CoroutineContext = EmptyCoroutineContext,
-  ) : AbstractCoroutineServerImpl(coroutineContext) {
-    /**
-     * Returns the response to an RPC for dsp.v1alpha2.CatalogueControlService.GetProviderCatalogue.
+     * Returns the response to an RPC for dsp.v1alpha2.ControlService.GetProviderCatalogue.
      *
      * If this method fails with a [StatusException], the RPC will fail with the corresponding
      * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException],
@@ -254,10 +497,10 @@ public object CatalogueControlServiceGrpcKt {
      */
     public open suspend fun getProviderCatalogue(request: GetProviderCatalogueRequest):
         GetProviderCatalogueResponse = throw
-        StatusException(UNIMPLEMENTED.withDescription("Method dsp.v1alpha2.CatalogueControlService.GetProviderCatalogue is unimplemented"))
+        StatusException(UNIMPLEMENTED.withDescription("Method dsp.v1alpha2.ControlService.GetProviderCatalogue is unimplemented"))
 
     /**
-     * Returns the response to an RPC for dsp.v1alpha2.CatalogueControlService.GetProviderDataset.
+     * Returns the response to an RPC for dsp.v1alpha2.ControlService.GetProviderDataset.
      *
      * If this method fails with a [StatusException], the RPC will fail with the corresponding
      * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException],
@@ -269,238 +512,10 @@ public object CatalogueControlServiceGrpcKt {
      */
     public open suspend fun getProviderDataset(request: GetProviderDatasetRequest):
         GetProviderDatasetResponse = throw
-        StatusException(UNIMPLEMENTED.withDescription("Method dsp.v1alpha2.CatalogueControlService.GetProviderDataset is unimplemented"))
-
-    final override fun bindService(): ServerServiceDefinition =
-        builder(catalogueControlServiceGrpcGetServiceDescriptor())
-      .addMethod(unaryServerMethodDefinition(
-      context = this.context,
-      descriptor = CatalogueControlServiceGrpc.getGetProviderCatalogueMethod(),
-      implementation = ::getProviderCatalogue
-    ))
-      .addMethod(unaryServerMethodDefinition(
-      context = this.context,
-      descriptor = CatalogueControlServiceGrpc.getGetProviderDatasetMethod(),
-      implementation = ::getProviderDataset
-    )).build()
-  }
-}
-
-/**
- * Holder for Kotlin coroutine-based client and server APIs for dsp.v1alpha2.ContractControlService.
- */
-public object ContractControlServiceGrpcKt {
-  public const val SERVICE_NAME: String = ContractControlServiceGrpc.SERVICE_NAME
-
-  @JvmStatic
-  public val serviceDescriptor: ServiceDescriptor
-    get() = contractControlServiceGrpcGetServiceDescriptor()
-
-  public val requestMethod: MethodDescriptor<RequestRequest, RequestResponse>
-    @JvmStatic
-    get() = ContractControlServiceGrpc.getRequestMethod()
-
-  public val offerMethod: MethodDescriptor<OfferRequest, OfferResponse>
-    @JvmStatic
-    get() = ContractControlServiceGrpc.getOfferMethod()
-
-  public val acceptMethod: MethodDescriptor<AcceptRequest, AcceptResponse>
-    @JvmStatic
-    get() = ContractControlServiceGrpc.getAcceptMethod()
-
-  public val agreeMethod: MethodDescriptor<AgreeRequest, AgreeResponse>
-    @JvmStatic
-    get() = ContractControlServiceGrpc.getAgreeMethod()
-
-  public val verifyMethod: MethodDescriptor<VerifyRequest, VerifyResponse>
-    @JvmStatic
-    get() = ContractControlServiceGrpc.getVerifyMethod()
-
-  public val finalizeMethod: MethodDescriptor<FinalizeRequest, FinalizeResponse>
-    @JvmStatic
-    get() = ContractControlServiceGrpc.getFinalizeMethod()
-
-  public val terminateMethod: MethodDescriptor<TerminateRequest, TerminateResponse>
-    @JvmStatic
-    get() = ContractControlServiceGrpc.getTerminateMethod()
-
-  /**
-   * A stub for issuing RPCs to a(n) dsp.v1alpha2.ContractControlService service as suspending
-   * coroutines.
-   */
-  @StubFor(ContractControlServiceGrpc::class)
-  public class ContractControlServiceCoroutineStub @JvmOverloads constructor(
-    channel: Channel,
-    callOptions: CallOptions = DEFAULT,
-  ) : AbstractCoroutineStub<ContractControlServiceCoroutineStub>(channel, callOptions) {
-    override fun build(channel: Channel, callOptions: CallOptions):
-        ContractControlServiceCoroutineStub = ContractControlServiceCoroutineStub(channel,
-        callOptions)
+        StatusException(UNIMPLEMENTED.withDescription("Method dsp.v1alpha2.ControlService.GetProviderDataset is unimplemented"))
 
     /**
-     * Executes this RPC and returns the response message, suspending until the RPC completes
-     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
-     * corresponding
-     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
-     * with the corresponding exception as a cause.
-     *
-     * @param request The request message to send to the server.
-     *
-     * @param headers Metadata to attach to the request.  Most users will not need this.
-     *
-     * @return The single response from the server.
-     */
-    public suspend fun request(request: RequestRequest, headers: Metadata = Metadata()):
-        RequestResponse = unaryRpc(
-      channel,
-      ContractControlServiceGrpc.getRequestMethod(),
-      request,
-      callOptions,
-      headers
-    )
-
-    /**
-     * Executes this RPC and returns the response message, suspending until the RPC completes
-     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
-     * corresponding
-     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
-     * with the corresponding exception as a cause.
-     *
-     * @param request The request message to send to the server.
-     *
-     * @param headers Metadata to attach to the request.  Most users will not need this.
-     *
-     * @return The single response from the server.
-     */
-    public suspend fun offer(request: OfferRequest, headers: Metadata = Metadata()): OfferResponse =
-        unaryRpc(
-      channel,
-      ContractControlServiceGrpc.getOfferMethod(),
-      request,
-      callOptions,
-      headers
-    )
-
-    /**
-     * Executes this RPC and returns the response message, suspending until the RPC completes
-     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
-     * corresponding
-     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
-     * with the corresponding exception as a cause.
-     *
-     * @param request The request message to send to the server.
-     *
-     * @param headers Metadata to attach to the request.  Most users will not need this.
-     *
-     * @return The single response from the server.
-     */
-    public suspend fun accept(request: AcceptRequest, headers: Metadata = Metadata()):
-        AcceptResponse = unaryRpc(
-      channel,
-      ContractControlServiceGrpc.getAcceptMethod(),
-      request,
-      callOptions,
-      headers
-    )
-
-    /**
-     * Executes this RPC and returns the response message, suspending until the RPC completes
-     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
-     * corresponding
-     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
-     * with the corresponding exception as a cause.
-     *
-     * @param request The request message to send to the server.
-     *
-     * @param headers Metadata to attach to the request.  Most users will not need this.
-     *
-     * @return The single response from the server.
-     */
-    public suspend fun agree(request: AgreeRequest, headers: Metadata = Metadata()): AgreeResponse =
-        unaryRpc(
-      channel,
-      ContractControlServiceGrpc.getAgreeMethod(),
-      request,
-      callOptions,
-      headers
-    )
-
-    /**
-     * Executes this RPC and returns the response message, suspending until the RPC completes
-     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
-     * corresponding
-     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
-     * with the corresponding exception as a cause.
-     *
-     * @param request The request message to send to the server.
-     *
-     * @param headers Metadata to attach to the request.  Most users will not need this.
-     *
-     * @return The single response from the server.
-     */
-    public suspend fun verify(request: VerifyRequest, headers: Metadata = Metadata()):
-        VerifyResponse = unaryRpc(
-      channel,
-      ContractControlServiceGrpc.getVerifyMethod(),
-      request,
-      callOptions,
-      headers
-    )
-
-    /**
-     * Executes this RPC and returns the response message, suspending until the RPC completes
-     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
-     * corresponding
-     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
-     * with the corresponding exception as a cause.
-     *
-     * @param request The request message to send to the server.
-     *
-     * @param headers Metadata to attach to the request.  Most users will not need this.
-     *
-     * @return The single response from the server.
-     */
-    public suspend fun finalize(request: FinalizeRequest, headers: Metadata = Metadata()):
-        FinalizeResponse = unaryRpc(
-      channel,
-      ContractControlServiceGrpc.getFinalizeMethod(),
-      request,
-      callOptions,
-      headers
-    )
-
-    /**
-     * Executes this RPC and returns the response message, suspending until the RPC completes
-     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
-     * corresponding
-     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
-     * with the corresponding exception as a cause.
-     *
-     * @param request The request message to send to the server.
-     *
-     * @param headers Metadata to attach to the request.  Most users will not need this.
-     *
-     * @return The single response from the server.
-     */
-    public suspend fun terminate(request: TerminateRequest, headers: Metadata = Metadata()):
-        TerminateResponse = unaryRpc(
-      channel,
-      ContractControlServiceGrpc.getTerminateMethod(),
-      request,
-      callOptions,
-      headers
-    )
-  }
-
-  /**
-   * Skeletal implementation of the dsp.v1alpha2.ContractControlService service based on Kotlin
-   * coroutines.
-   */
-  public abstract class ContractControlServiceCoroutineImplBase(
-    coroutineContext: CoroutineContext = EmptyCoroutineContext,
-  ) : AbstractCoroutineServerImpl(coroutineContext) {
-    /**
-     * Returns the response to an RPC for dsp.v1alpha2.ContractControlService.Request.
+     * Returns the response to an RPC for dsp.v1alpha2.ControlService.ContractRequest.
      *
      * If this method fails with a [StatusException], the RPC will fail with the corresponding
      * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException],
@@ -510,11 +525,12 @@ public object ContractControlServiceGrpcKt {
      *
      * @param request The request from the client.
      */
-    public open suspend fun request(request: RequestRequest): RequestResponse = throw
-        StatusException(UNIMPLEMENTED.withDescription("Method dsp.v1alpha2.ContractControlService.Request is unimplemented"))
+    public open suspend fun contractRequest(request: ContractRequestRequest):
+        ContractRequestResponse = throw
+        StatusException(UNIMPLEMENTED.withDescription("Method dsp.v1alpha2.ControlService.ContractRequest is unimplemented"))
 
     /**
-     * Returns the response to an RPC for dsp.v1alpha2.ContractControlService.Offer.
+     * Returns the response to an RPC for dsp.v1alpha2.ControlService.ContractOffer.
      *
      * If this method fails with a [StatusException], the RPC will fail with the corresponding
      * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException],
@@ -524,11 +540,12 @@ public object ContractControlServiceGrpcKt {
      *
      * @param request The request from the client.
      */
-    public open suspend fun offer(request: OfferRequest): OfferResponse = throw
-        StatusException(UNIMPLEMENTED.withDescription("Method dsp.v1alpha2.ContractControlService.Offer is unimplemented"))
+    public open suspend fun contractOffer(request: ContractOfferRequest): ContractOfferResponse =
+        throw
+        StatusException(UNIMPLEMENTED.withDescription("Method dsp.v1alpha2.ControlService.ContractOffer is unimplemented"))
 
     /**
-     * Returns the response to an RPC for dsp.v1alpha2.ContractControlService.Accept.
+     * Returns the response to an RPC for dsp.v1alpha2.ControlService.ContractAccept.
      *
      * If this method fails with a [StatusException], the RPC will fail with the corresponding
      * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException],
@@ -538,11 +555,12 @@ public object ContractControlServiceGrpcKt {
      *
      * @param request The request from the client.
      */
-    public open suspend fun accept(request: AcceptRequest): AcceptResponse = throw
-        StatusException(UNIMPLEMENTED.withDescription("Method dsp.v1alpha2.ContractControlService.Accept is unimplemented"))
+    public open suspend fun contractAccept(request: ContractAcceptRequest): ContractAcceptResponse =
+        throw
+        StatusException(UNIMPLEMENTED.withDescription("Method dsp.v1alpha2.ControlService.ContractAccept is unimplemented"))
 
     /**
-     * Returns the response to an RPC for dsp.v1alpha2.ContractControlService.Agree.
+     * Returns the response to an RPC for dsp.v1alpha2.ControlService.ContractAgree.
      *
      * If this method fails with a [StatusException], the RPC will fail with the corresponding
      * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException],
@@ -552,11 +570,12 @@ public object ContractControlServiceGrpcKt {
      *
      * @param request The request from the client.
      */
-    public open suspend fun agree(request: AgreeRequest): AgreeResponse = throw
-        StatusException(UNIMPLEMENTED.withDescription("Method dsp.v1alpha2.ContractControlService.Agree is unimplemented"))
+    public open suspend fun contractAgree(request: ContractAgreeRequest): ContractAgreeResponse =
+        throw
+        StatusException(UNIMPLEMENTED.withDescription("Method dsp.v1alpha2.ControlService.ContractAgree is unimplemented"))
 
     /**
-     * Returns the response to an RPC for dsp.v1alpha2.ContractControlService.Verify.
+     * Returns the response to an RPC for dsp.v1alpha2.ControlService.ContractVerify.
      *
      * If this method fails with a [StatusException], the RPC will fail with the corresponding
      * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException],
@@ -566,11 +585,12 @@ public object ContractControlServiceGrpcKt {
      *
      * @param request The request from the client.
      */
-    public open suspend fun verify(request: VerifyRequest): VerifyResponse = throw
-        StatusException(UNIMPLEMENTED.withDescription("Method dsp.v1alpha2.ContractControlService.Verify is unimplemented"))
+    public open suspend fun contractVerify(request: ContractVerifyRequest): ContractVerifyResponse =
+        throw
+        StatusException(UNIMPLEMENTED.withDescription("Method dsp.v1alpha2.ControlService.ContractVerify is unimplemented"))
 
     /**
-     * Returns the response to an RPC for dsp.v1alpha2.ContractControlService.Finalize.
+     * Returns the response to an RPC for dsp.v1alpha2.ControlService.ContractFinalize.
      *
      * If this method fails with a [StatusException], the RPC will fail with the corresponding
      * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException],
@@ -580,11 +600,12 @@ public object ContractControlServiceGrpcKt {
      *
      * @param request The request from the client.
      */
-    public open suspend fun finalize(request: FinalizeRequest): FinalizeResponse = throw
-        StatusException(UNIMPLEMENTED.withDescription("Method dsp.v1alpha2.ContractControlService.Finalize is unimplemented"))
+    public open suspend fun contractFinalize(request: ContractFinalizeRequest):
+        ContractFinalizeResponse = throw
+        StatusException(UNIMPLEMENTED.withDescription("Method dsp.v1alpha2.ControlService.ContractFinalize is unimplemented"))
 
     /**
-     * Returns the response to an RPC for dsp.v1alpha2.ContractControlService.Terminate.
+     * Returns the response to an RPC for dsp.v1alpha2.ControlService.ContractTerminate.
      *
      * If this method fails with a [StatusException], the RPC will fail with the corresponding
      * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException],
@@ -594,191 +615,12 @@ public object ContractControlServiceGrpcKt {
      *
      * @param request The request from the client.
      */
-    public open suspend fun terminate(request: TerminateRequest): TerminateResponse = throw
-        StatusException(UNIMPLEMENTED.withDescription("Method dsp.v1alpha2.ContractControlService.Terminate is unimplemented"))
-
-    final override fun bindService(): ServerServiceDefinition =
-        builder(contractControlServiceGrpcGetServiceDescriptor())
-      .addMethod(unaryServerMethodDefinition(
-      context = this.context,
-      descriptor = ContractControlServiceGrpc.getRequestMethod(),
-      implementation = ::request
-    ))
-      .addMethod(unaryServerMethodDefinition(
-      context = this.context,
-      descriptor = ContractControlServiceGrpc.getOfferMethod(),
-      implementation = ::offer
-    ))
-      .addMethod(unaryServerMethodDefinition(
-      context = this.context,
-      descriptor = ContractControlServiceGrpc.getAcceptMethod(),
-      implementation = ::accept
-    ))
-      .addMethod(unaryServerMethodDefinition(
-      context = this.context,
-      descriptor = ContractControlServiceGrpc.getAgreeMethod(),
-      implementation = ::agree
-    ))
-      .addMethod(unaryServerMethodDefinition(
-      context = this.context,
-      descriptor = ContractControlServiceGrpc.getVerifyMethod(),
-      implementation = ::verify
-    ))
-      .addMethod(unaryServerMethodDefinition(
-      context = this.context,
-      descriptor = ContractControlServiceGrpc.getFinalizeMethod(),
-      implementation = ::finalize
-    ))
-      .addMethod(unaryServerMethodDefinition(
-      context = this.context,
-      descriptor = ContractControlServiceGrpc.getTerminateMethod(),
-      implementation = ::terminate
-    )).build()
-  }
-}
-
-/**
- * Holder for Kotlin coroutine-based client and server APIs for dsp.v1alpha2.TransferControlService.
- */
-public object TransferControlServiceGrpcKt {
-  public const val SERVICE_NAME: String = TransferControlServiceGrpc.SERVICE_NAME
-
-  @JvmStatic
-  public val serviceDescriptor: ServiceDescriptor
-    get() = transferControlServiceGrpcGetServiceDescriptor()
-
-  public val signalTransferCompleteMethod:
-      MethodDescriptor<SignalTransferCompleteRequest, SignalTransferCompleteResponse>
-    @JvmStatic
-    get() = TransferControlServiceGrpc.getSignalTransferCompleteMethod()
-
-  public val signalTransferCancelledMethod:
-      MethodDescriptor<SignalTransferCancelledRequest, SignalTransferCancelledResponse>
-    @JvmStatic
-    get() = TransferControlServiceGrpc.getSignalTransferCancelledMethod()
-
-  public val signalTransferSuspendMethod:
-      MethodDescriptor<SignalTransferSuspendRequest, SignalTransferSuspendResponse>
-    @JvmStatic
-    get() = TransferControlServiceGrpc.getSignalTransferSuspendMethod()
-
-  public val signalTransferResumeMethod:
-      MethodDescriptor<SignalTransferResumeRequest, SignalTransferResumeResponse>
-    @JvmStatic
-    get() = TransferControlServiceGrpc.getSignalTransferResumeMethod()
-
-  /**
-   * A stub for issuing RPCs to a(n) dsp.v1alpha2.TransferControlService service as suspending
-   * coroutines.
-   */
-  @StubFor(TransferControlServiceGrpc::class)
-  public class TransferControlServiceCoroutineStub @JvmOverloads constructor(
-    channel: Channel,
-    callOptions: CallOptions = DEFAULT,
-  ) : AbstractCoroutineStub<TransferControlServiceCoroutineStub>(channel, callOptions) {
-    override fun build(channel: Channel, callOptions: CallOptions):
-        TransferControlServiceCoroutineStub = TransferControlServiceCoroutineStub(channel,
-        callOptions)
+    public open suspend fun contractTerminate(request: ContractTerminateRequest):
+        ContractTerminateResponse = throw
+        StatusException(UNIMPLEMENTED.withDescription("Method dsp.v1alpha2.ControlService.ContractTerminate is unimplemented"))
 
     /**
-     * Executes this RPC and returns the response message, suspending until the RPC completes
-     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
-     * corresponding
-     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
-     * with the corresponding exception as a cause.
-     *
-     * @param request The request message to send to the server.
-     *
-     * @param headers Metadata to attach to the request.  Most users will not need this.
-     *
-     * @return The single response from the server.
-     */
-    public suspend fun signalTransferComplete(request: SignalTransferCompleteRequest,
-        headers: Metadata = Metadata()): SignalTransferCompleteResponse = unaryRpc(
-      channel,
-      TransferControlServiceGrpc.getSignalTransferCompleteMethod(),
-      request,
-      callOptions,
-      headers
-    )
-
-    /**
-     * Executes this RPC and returns the response message, suspending until the RPC completes
-     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
-     * corresponding
-     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
-     * with the corresponding exception as a cause.
-     *
-     * @param request The request message to send to the server.
-     *
-     * @param headers Metadata to attach to the request.  Most users will not need this.
-     *
-     * @return The single response from the server.
-     */
-    public suspend fun signalTransferCancelled(request: SignalTransferCancelledRequest,
-        headers: Metadata = Metadata()): SignalTransferCancelledResponse = unaryRpc(
-      channel,
-      TransferControlServiceGrpc.getSignalTransferCancelledMethod(),
-      request,
-      callOptions,
-      headers
-    )
-
-    /**
-     * Executes this RPC and returns the response message, suspending until the RPC completes
-     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
-     * corresponding
-     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
-     * with the corresponding exception as a cause.
-     *
-     * @param request The request message to send to the server.
-     *
-     * @param headers Metadata to attach to the request.  Most users will not need this.
-     *
-     * @return The single response from the server.
-     */
-    public suspend fun signalTransferSuspend(request: SignalTransferSuspendRequest,
-        headers: Metadata = Metadata()): SignalTransferSuspendResponse = unaryRpc(
-      channel,
-      TransferControlServiceGrpc.getSignalTransferSuspendMethod(),
-      request,
-      callOptions,
-      headers
-    )
-
-    /**
-     * Executes this RPC and returns the response message, suspending until the RPC completes
-     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a
-     * corresponding
-     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
-     * with the corresponding exception as a cause.
-     *
-     * @param request The request message to send to the server.
-     *
-     * @param headers Metadata to attach to the request.  Most users will not need this.
-     *
-     * @return The single response from the server.
-     */
-    public suspend fun signalTransferResume(request: SignalTransferResumeRequest, headers: Metadata
-        = Metadata()): SignalTransferResumeResponse = unaryRpc(
-      channel,
-      TransferControlServiceGrpc.getSignalTransferResumeMethod(),
-      request,
-      callOptions,
-      headers
-    )
-  }
-
-  /**
-   * Skeletal implementation of the dsp.v1alpha2.TransferControlService service based on Kotlin
-   * coroutines.
-   */
-  public abstract class TransferControlServiceCoroutineImplBase(
-    coroutineContext: CoroutineContext = EmptyCoroutineContext,
-  ) : AbstractCoroutineServerImpl(coroutineContext) {
-    /**
-     * Returns the response to an RPC for
-     * dsp.v1alpha2.TransferControlService.SignalTransferComplete.
+     * Returns the response to an RPC for dsp.v1alpha2.ControlService.SignalTransferComplete.
      *
      * If this method fails with a [StatusException], the RPC will fail with the corresponding
      * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException],
@@ -790,11 +632,10 @@ public object TransferControlServiceGrpcKt {
      */
     public open suspend fun signalTransferComplete(request: SignalTransferCompleteRequest):
         SignalTransferCompleteResponse = throw
-        StatusException(UNIMPLEMENTED.withDescription("Method dsp.v1alpha2.TransferControlService.SignalTransferComplete is unimplemented"))
+        StatusException(UNIMPLEMENTED.withDescription("Method dsp.v1alpha2.ControlService.SignalTransferComplete is unimplemented"))
 
     /**
-     * Returns the response to an RPC for
-     * dsp.v1alpha2.TransferControlService.SignalTransferCancelled.
+     * Returns the response to an RPC for dsp.v1alpha2.ControlService.SignalTransferCancelled.
      *
      * If this method fails with a [StatusException], the RPC will fail with the corresponding
      * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException],
@@ -806,10 +647,10 @@ public object TransferControlServiceGrpcKt {
      */
     public open suspend fun signalTransferCancelled(request: SignalTransferCancelledRequest):
         SignalTransferCancelledResponse = throw
-        StatusException(UNIMPLEMENTED.withDescription("Method dsp.v1alpha2.TransferControlService.SignalTransferCancelled is unimplemented"))
+        StatusException(UNIMPLEMENTED.withDescription("Method dsp.v1alpha2.ControlService.SignalTransferCancelled is unimplemented"))
 
     /**
-     * Returns the response to an RPC for dsp.v1alpha2.TransferControlService.SignalTransferSuspend.
+     * Returns the response to an RPC for dsp.v1alpha2.ControlService.SignalTransferSuspend.
      *
      * If this method fails with a [StatusException], the RPC will fail with the corresponding
      * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException],
@@ -821,10 +662,10 @@ public object TransferControlServiceGrpcKt {
      */
     public open suspend fun signalTransferSuspend(request: SignalTransferSuspendRequest):
         SignalTransferSuspendResponse = throw
-        StatusException(UNIMPLEMENTED.withDescription("Method dsp.v1alpha2.TransferControlService.SignalTransferSuspend is unimplemented"))
+        StatusException(UNIMPLEMENTED.withDescription("Method dsp.v1alpha2.ControlService.SignalTransferSuspend is unimplemented"))
 
     /**
-     * Returns the response to an RPC for dsp.v1alpha2.TransferControlService.SignalTransferResume.
+     * Returns the response to an RPC for dsp.v1alpha2.ControlService.SignalTransferResume.
      *
      * If this method fails with a [StatusException], the RPC will fail with the corresponding
      * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException],
@@ -836,28 +677,82 @@ public object TransferControlServiceGrpcKt {
      */
     public open suspend fun signalTransferResume(request: SignalTransferResumeRequest):
         SignalTransferResumeResponse = throw
-        StatusException(UNIMPLEMENTED.withDescription("Method dsp.v1alpha2.TransferControlService.SignalTransferResume is unimplemented"))
+        StatusException(UNIMPLEMENTED.withDescription("Method dsp.v1alpha2.ControlService.SignalTransferResume is unimplemented"))
 
-    final override fun bindService(): ServerServiceDefinition =
-        builder(transferControlServiceGrpcGetServiceDescriptor())
+    final override fun bindService(): ServerServiceDefinition = builder(getServiceDescriptor())
       .addMethod(unaryServerMethodDefinition(
       context = this.context,
-      descriptor = TransferControlServiceGrpc.getSignalTransferCompleteMethod(),
+      descriptor = ControlServiceGrpc.getGetProviderDatasetDownloadInformationMethod(),
+      implementation = ::getProviderDatasetDownloadInformation
+    ))
+      .addMethod(unaryServerMethodDefinition(
+      context = this.context,
+      descriptor = ControlServiceGrpc.getVerifyConnectionMethod(),
+      implementation = ::verifyConnection
+    ))
+      .addMethod(unaryServerMethodDefinition(
+      context = this.context,
+      descriptor = ControlServiceGrpc.getGetProviderCatalogueMethod(),
+      implementation = ::getProviderCatalogue
+    ))
+      .addMethod(unaryServerMethodDefinition(
+      context = this.context,
+      descriptor = ControlServiceGrpc.getGetProviderDatasetMethod(),
+      implementation = ::getProviderDataset
+    ))
+      .addMethod(unaryServerMethodDefinition(
+      context = this.context,
+      descriptor = ControlServiceGrpc.getContractRequestMethod(),
+      implementation = ::contractRequest
+    ))
+      .addMethod(unaryServerMethodDefinition(
+      context = this.context,
+      descriptor = ControlServiceGrpc.getContractOfferMethod(),
+      implementation = ::contractOffer
+    ))
+      .addMethod(unaryServerMethodDefinition(
+      context = this.context,
+      descriptor = ControlServiceGrpc.getContractAcceptMethod(),
+      implementation = ::contractAccept
+    ))
+      .addMethod(unaryServerMethodDefinition(
+      context = this.context,
+      descriptor = ControlServiceGrpc.getContractAgreeMethod(),
+      implementation = ::contractAgree
+    ))
+      .addMethod(unaryServerMethodDefinition(
+      context = this.context,
+      descriptor = ControlServiceGrpc.getContractVerifyMethod(),
+      implementation = ::contractVerify
+    ))
+      .addMethod(unaryServerMethodDefinition(
+      context = this.context,
+      descriptor = ControlServiceGrpc.getContractFinalizeMethod(),
+      implementation = ::contractFinalize
+    ))
+      .addMethod(unaryServerMethodDefinition(
+      context = this.context,
+      descriptor = ControlServiceGrpc.getContractTerminateMethod(),
+      implementation = ::contractTerminate
+    ))
+      .addMethod(unaryServerMethodDefinition(
+      context = this.context,
+      descriptor = ControlServiceGrpc.getSignalTransferCompleteMethod(),
       implementation = ::signalTransferComplete
     ))
       .addMethod(unaryServerMethodDefinition(
       context = this.context,
-      descriptor = TransferControlServiceGrpc.getSignalTransferCancelledMethod(),
+      descriptor = ControlServiceGrpc.getSignalTransferCancelledMethod(),
       implementation = ::signalTransferCancelled
     ))
       .addMethod(unaryServerMethodDefinition(
       context = this.context,
-      descriptor = TransferControlServiceGrpc.getSignalTransferSuspendMethod(),
+      descriptor = ControlServiceGrpc.getSignalTransferSuspendMethod(),
       implementation = ::signalTransferSuspend
     ))
       .addMethod(unaryServerMethodDefinition(
       context = this.context,
-      descriptor = TransferControlServiceGrpc.getSignalTransferResumeMethod(),
+      descriptor = ControlServiceGrpc.getSignalTransferResumeMethod(),
       implementation = ::signalTransferResume
     )).build()
   }

@@ -17,7 +17,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { AcceptRequest, AcceptResponse, AgreeRequest, AgreeResponse, FinalizeRequest, FinalizeResponse, GetProviderCatalogueRequest, GetProviderCatalogueResponse, GetProviderDatasetDownloadInformationRequest, GetProviderDatasetDownloadInformationResponse, GetProviderDatasetRequest, GetProviderDatasetResponse, OfferRequest, OfferResponse, RequestRequest, RequestResponse, SignalTransferCancelledRequest, SignalTransferCancelledResponse, SignalTransferCompleteRequest, SignalTransferCompleteResponse, SignalTransferResumeRequest, SignalTransferResumeResponse, SignalTransferSuspendRequest, SignalTransferSuspendResponse, TerminateRequest, TerminateResponse, VerifyConnectionRequest, VerifyConnectionResponse, VerifyRequest, VerifyResponse } from "./control_pb.js";
+import { ContractAcceptRequest, ContractAcceptResponse, ContractAgreeRequest, ContractAgreeResponse, ContractFinalizeRequest, ContractFinalizeResponse, ContractOfferRequest, ContractOfferResponse, ContractRequestRequest, ContractRequestResponse, ContractTerminateRequest, ContractTerminateResponse, ContractVerifyRequest, ContractVerifyResponse, GetProviderCatalogueRequest, GetProviderCatalogueResponse, GetProviderDatasetDownloadInformationRequest, GetProviderDatasetDownloadInformationResponse, GetProviderDatasetRequest, GetProviderDatasetResponse, SignalTransferCancelledRequest, SignalTransferCancelledResponse, SignalTransferCompleteRequest, SignalTransferCompleteResponse, SignalTransferResumeRequest, SignalTransferResumeResponse, SignalTransferSuspendRequest, SignalTransferSuspendResponse, VerifyConnectionRequest, VerifyConnectionResponse } from "./control_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -51,21 +51,10 @@ export declare const ControlService: {
       readonly O: typeof VerifyConnectionResponse,
       readonly kind: MethodKind.Unary,
     },
-  }
-};
-
-/**
- * CatalogueControlService contains methods to interact with dataspace catalogues.
- *
- * @generated from service dsp.v1alpha2.CatalogueControlService
- */
-export declare const CatalogueControlService: {
-  readonly typeName: "dsp.v1alpha2.CatalogueControlService",
-  readonly methods: {
     /**
      * Gets the catalogue based on the query parameters and the authorization header.
      *
-     * @generated from rpc dsp.v1alpha2.CatalogueControlService.GetProviderCatalogue
+     * @generated from rpc dsp.v1alpha2.ControlService.GetProviderCatalogue
      */
     readonly getProviderCatalogue: {
       readonly name: "GetProviderCatalogue",
@@ -76,7 +65,7 @@ export declare const CatalogueControlService: {
     /**
      * Gets information about a single dataset.
      *
-     * @generated from rpc dsp.v1alpha2.CatalogueControlService.GetProviderDataset
+     * @generated from rpc dsp.v1alpha2.ControlService.GetProviderDataset
      */
     readonly getProviderDataset: {
       readonly name: "GetProviderDataset",
@@ -84,109 +73,87 @@ export declare const CatalogueControlService: {
       readonly O: typeof GetProviderDatasetResponse,
       readonly kind: MethodKind.Unary,
     },
-  }
-};
-
-/**
- * ContractControlService contains low level methods to send contract negotiation operations.
- *
- * @generated from service dsp.v1alpha2.ContractControlService
- */
-export declare const ContractControlService: {
-  readonly typeName: "dsp.v1alpha2.ContractControlService",
-  readonly methods: {
     /**
-     * Request sends a ContractRequestMessage.
+     * ContractRequest sends a ContractRequestMessage.
      *
-     * @generated from rpc dsp.v1alpha2.ContractControlService.Request
+     * @generated from rpc dsp.v1alpha2.ControlService.ContractRequest
      */
-    readonly request: {
-      readonly name: "Request",
-      readonly I: typeof RequestRequest,
-      readonly O: typeof RequestResponse,
+    readonly contractRequest: {
+      readonly name: "ContractRequest",
+      readonly I: typeof ContractRequestRequest,
+      readonly O: typeof ContractRequestResponse,
       readonly kind: MethodKind.Unary,
     },
     /**
-     * Offer sends a ContractOfferMessage.
+     * ContractOffer sends a ContractOfferMessage.
      *
-     * @generated from rpc dsp.v1alpha2.ContractControlService.Offer
+     * @generated from rpc dsp.v1alpha2.ControlService.ContractOffer
      */
-    readonly offer: {
-      readonly name: "Offer",
-      readonly I: typeof OfferRequest,
-      readonly O: typeof OfferResponse,
+    readonly contractOffer: {
+      readonly name: "ContractOffer",
+      readonly I: typeof ContractOfferRequest,
+      readonly O: typeof ContractOfferResponse,
       readonly kind: MethodKind.Unary,
     },
     /**
-     * Accept sends an accepted event message.
+     * ContractAccept sends an accepted event message.
      *
-     * @generated from rpc dsp.v1alpha2.ContractControlService.Accept
+     * @generated from rpc dsp.v1alpha2.ControlService.ContractAccept
      */
-    readonly accept: {
-      readonly name: "Accept",
-      readonly I: typeof AcceptRequest,
-      readonly O: typeof AcceptResponse,
+    readonly contractAccept: {
+      readonly name: "ContractAccept",
+      readonly I: typeof ContractAcceptRequest,
+      readonly O: typeof ContractAcceptResponse,
       readonly kind: MethodKind.Unary,
     },
     /**
-     * Agree sends a ContractAcceptedMessage.
+     * ContractAgree sends a ContractAcceptedMessage.
      *
-     * @generated from rpc dsp.v1alpha2.ContractControlService.Agree
+     * @generated from rpc dsp.v1alpha2.ControlService.ContractAgree
      */
-    readonly agree: {
-      readonly name: "Agree",
-      readonly I: typeof AgreeRequest,
-      readonly O: typeof AgreeResponse,
+    readonly contractAgree: {
+      readonly name: "ContractAgree",
+      readonly I: typeof ContractAgreeRequest,
+      readonly O: typeof ContractAgreeResponse,
       readonly kind: MethodKind.Unary,
     },
     /**
-     * Verify sends a ContractVerificationMessage.
+     * ContractVerify sends a ContractVerificationMessage.
      *
-     * @generated from rpc dsp.v1alpha2.ContractControlService.Verify
+     * @generated from rpc dsp.v1alpha2.ControlService.ContractVerify
      */
-    readonly verify: {
-      readonly name: "Verify",
-      readonly I: typeof VerifyRequest,
-      readonly O: typeof VerifyResponse,
+    readonly contractVerify: {
+      readonly name: "ContractVerify",
+      readonly I: typeof ContractVerifyRequest,
+      readonly O: typeof ContractVerifyResponse,
       readonly kind: MethodKind.Unary,
     },
     /**
-     * Finalize sends a finalization event.
+     * ContractFinalize sends a finalization event.
      *
-     * @generated from rpc dsp.v1alpha2.ContractControlService.Finalize
+     * @generated from rpc dsp.v1alpha2.ControlService.ContractFinalize
      */
-    readonly finalize: {
-      readonly name: "Finalize",
-      readonly I: typeof FinalizeRequest,
-      readonly O: typeof FinalizeResponse,
+    readonly contractFinalize: {
+      readonly name: "ContractFinalize",
+      readonly I: typeof ContractFinalizeRequest,
+      readonly O: typeof ContractFinalizeResponse,
       readonly kind: MethodKind.Unary,
     },
     /**
-     * Terminate sends a ContractTerminationMessage.
+     * ContractTerminate sends a ContractTerminationMessage.
      *
-     * @generated from rpc dsp.v1alpha2.ContractControlService.Terminate
+     * @generated from rpc dsp.v1alpha2.ControlService.ContractTerminate
      */
-    readonly terminate: {
-      readonly name: "Terminate",
-      readonly I: typeof TerminateRequest,
-      readonly O: typeof TerminateResponse,
+    readonly contractTerminate: {
+      readonly name: "ContractTerminate",
+      readonly I: typeof ContractTerminateRequest,
+      readonly O: typeof ContractTerminateResponse,
       readonly kind: MethodKind.Unary,
     },
-  }
-};
-
-/**
- * TransferControlService contains low level methods to send transfer negotiation operations.
- *
- * @generated from service dsp.v1alpha2.TransferControlService
- */
-export declare const TransferControlService: {
-  readonly typeName: "dsp.v1alpha2.TransferControlService",
-  readonly methods: {
     /**
      * Tells provider that we have finished our transfer.
      *
-     * @generated from rpc dsp.v1alpha2.TransferControlService.SignalTransferComplete
+     * @generated from rpc dsp.v1alpha2.ControlService.SignalTransferComplete
      */
     readonly signalTransferComplete: {
       readonly name: "SignalTransferComplete",
@@ -197,7 +164,7 @@ export declare const TransferControlService: {
     /**
      * Tells provider to cancel file transfer
      *
-     * @generated from rpc dsp.v1alpha2.TransferControlService.SignalTransferCancelled
+     * @generated from rpc dsp.v1alpha2.ControlService.SignalTransferCancelled
      */
     readonly signalTransferCancelled: {
       readonly name: "SignalTransferCancelled",
@@ -208,7 +175,7 @@ export declare const TransferControlService: {
     /**
      * Tells provider to suspend file transfer
      *
-     * @generated from rpc dsp.v1alpha2.TransferControlService.SignalTransferSuspend
+     * @generated from rpc dsp.v1alpha2.ControlService.SignalTransferSuspend
      */
     readonly signalTransferSuspend: {
       readonly name: "SignalTransferSuspend",
@@ -219,7 +186,7 @@ export declare const TransferControlService: {
     /**
      * Tells provider to resume file transfer
      *
-     * @generated from rpc dsp.v1alpha2.TransferControlService.SignalTransferResume
+     * @generated from rpc dsp.v1alpha2.ControlService.SignalTransferResume
      */
     readonly signalTransferResume: {
       readonly name: "SignalTransferResume",

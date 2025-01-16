@@ -69,6 +69,110 @@ class ControlService final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::VerifyConnectionResponse>> PrepareAsyncVerifyConnection(::grpc::ClientContext* context, const ::dsp::v1alpha2::VerifyConnectionRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::VerifyConnectionResponse>>(PrepareAsyncVerifyConnectionRaw(context, request, cq));
     }
+    // Gets the catalogue based on the query parameters and the authorization header.
+    virtual ::grpc::Status GetProviderCatalogue(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest& request, ::dsp::v1alpha2::GetProviderCatalogueResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::GetProviderCatalogueResponse>> AsyncGetProviderCatalogue(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::GetProviderCatalogueResponse>>(AsyncGetProviderCatalogueRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::GetProviderCatalogueResponse>> PrepareAsyncGetProviderCatalogue(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::GetProviderCatalogueResponse>>(PrepareAsyncGetProviderCatalogueRaw(context, request, cq));
+    }
+    // Gets information about a single dataset.
+    virtual ::grpc::Status GetProviderDataset(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest& request, ::dsp::v1alpha2::GetProviderDatasetResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::GetProviderDatasetResponse>> AsyncGetProviderDataset(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::GetProviderDatasetResponse>>(AsyncGetProviderDatasetRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::GetProviderDatasetResponse>> PrepareAsyncGetProviderDataset(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::GetProviderDatasetResponse>>(PrepareAsyncGetProviderDatasetRaw(context, request, cq));
+    }
+    // ContractRequest sends a ContractRequestMessage.
+    virtual ::grpc::Status ContractRequest(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractRequestRequest& request, ::dsp::v1alpha2::ContractRequestResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractRequestResponse>> AsyncContractRequest(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractRequestRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractRequestResponse>>(AsyncContractRequestRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractRequestResponse>> PrepareAsyncContractRequest(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractRequestRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractRequestResponse>>(PrepareAsyncContractRequestRaw(context, request, cq));
+    }
+    // ContractOffer sends a ContractOfferMessage.
+    virtual ::grpc::Status ContractOffer(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractOfferRequest& request, ::dsp::v1alpha2::ContractOfferResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractOfferResponse>> AsyncContractOffer(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractOfferRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractOfferResponse>>(AsyncContractOfferRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractOfferResponse>> PrepareAsyncContractOffer(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractOfferRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractOfferResponse>>(PrepareAsyncContractOfferRaw(context, request, cq));
+    }
+    // ContractAccept sends an accepted event message.
+    virtual ::grpc::Status ContractAccept(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractAcceptRequest& request, ::dsp::v1alpha2::ContractAcceptResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractAcceptResponse>> AsyncContractAccept(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractAcceptRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractAcceptResponse>>(AsyncContractAcceptRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractAcceptResponse>> PrepareAsyncContractAccept(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractAcceptRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractAcceptResponse>>(PrepareAsyncContractAcceptRaw(context, request, cq));
+    }
+    // ContractAgree sends a ContractAcceptedMessage.
+    virtual ::grpc::Status ContractAgree(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractAgreeRequest& request, ::dsp::v1alpha2::ContractAgreeResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractAgreeResponse>> AsyncContractAgree(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractAgreeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractAgreeResponse>>(AsyncContractAgreeRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractAgreeResponse>> PrepareAsyncContractAgree(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractAgreeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractAgreeResponse>>(PrepareAsyncContractAgreeRaw(context, request, cq));
+    }
+    // ContractVerify sends a ContractVerificationMessage.
+    virtual ::grpc::Status ContractVerify(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractVerifyRequest& request, ::dsp::v1alpha2::ContractVerifyResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractVerifyResponse>> AsyncContractVerify(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractVerifyRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractVerifyResponse>>(AsyncContractVerifyRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractVerifyResponse>> PrepareAsyncContractVerify(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractVerifyRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractVerifyResponse>>(PrepareAsyncContractVerifyRaw(context, request, cq));
+    }
+    // ContractFinalize sends a finalization event.
+    virtual ::grpc::Status ContractFinalize(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractFinalizeRequest& request, ::dsp::v1alpha2::ContractFinalizeResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractFinalizeResponse>> AsyncContractFinalize(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractFinalizeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractFinalizeResponse>>(AsyncContractFinalizeRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractFinalizeResponse>> PrepareAsyncContractFinalize(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractFinalizeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractFinalizeResponse>>(PrepareAsyncContractFinalizeRaw(context, request, cq));
+    }
+    // ContractTerminate sends a ContractTerminationMessage.
+    virtual ::grpc::Status ContractTerminate(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractTerminateRequest& request, ::dsp::v1alpha2::ContractTerminateResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractTerminateResponse>> AsyncContractTerminate(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractTerminateRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractTerminateResponse>>(AsyncContractTerminateRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractTerminateResponse>> PrepareAsyncContractTerminate(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractTerminateRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractTerminateResponse>>(PrepareAsyncContractTerminateRaw(context, request, cq));
+    }
+    // Tells provider that we have finished our transfer.
+    virtual ::grpc::Status SignalTransferComplete(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest& request, ::dsp::v1alpha2::SignalTransferCompleteResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferCompleteResponse>> AsyncSignalTransferComplete(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferCompleteResponse>>(AsyncSignalTransferCompleteRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferCompleteResponse>> PrepareAsyncSignalTransferComplete(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferCompleteResponse>>(PrepareAsyncSignalTransferCompleteRaw(context, request, cq));
+    }
+    // Tells provider to cancel file transfer
+    virtual ::grpc::Status SignalTransferCancelled(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest& request, ::dsp::v1alpha2::SignalTransferCancelledResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferCancelledResponse>> AsyncSignalTransferCancelled(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferCancelledResponse>>(AsyncSignalTransferCancelledRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferCancelledResponse>> PrepareAsyncSignalTransferCancelled(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferCancelledResponse>>(PrepareAsyncSignalTransferCancelledRaw(context, request, cq));
+    }
+    // Tells provider to suspend file transfer
+    virtual ::grpc::Status SignalTransferSuspend(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest& request, ::dsp::v1alpha2::SignalTransferSuspendResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferSuspendResponse>> AsyncSignalTransferSuspend(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferSuspendResponse>>(AsyncSignalTransferSuspendRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferSuspendResponse>> PrepareAsyncSignalTransferSuspend(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferSuspendResponse>>(PrepareAsyncSignalTransferSuspendRaw(context, request, cq));
+    }
+    // Tells provider to resume file transfer
+    virtual ::grpc::Status SignalTransferResume(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest& request, ::dsp::v1alpha2::SignalTransferResumeResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferResumeResponse>> AsyncSignalTransferResume(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferResumeResponse>>(AsyncSignalTransferResumeRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferResumeResponse>> PrepareAsyncSignalTransferResume(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferResumeResponse>>(PrepareAsyncSignalTransferResumeRaw(context, request, cq));
+    }
     class async_interface {
      public:
       virtual ~async_interface() {}
@@ -78,6 +182,45 @@ class ControlService final {
       // VerifyConnection takes a token and verifies it's the same token it passed to the contract service.
       virtual void VerifyConnection(::grpc::ClientContext* context, const ::dsp::v1alpha2::VerifyConnectionRequest* request, ::dsp::v1alpha2::VerifyConnectionResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void VerifyConnection(::grpc::ClientContext* context, const ::dsp::v1alpha2::VerifyConnectionRequest* request, ::dsp::v1alpha2::VerifyConnectionResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      // Gets the catalogue based on the query parameters and the authorization header.
+      virtual void GetProviderCatalogue(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest* request, ::dsp::v1alpha2::GetProviderCatalogueResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetProviderCatalogue(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest* request, ::dsp::v1alpha2::GetProviderCatalogueResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      // Gets information about a single dataset.
+      virtual void GetProviderDataset(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest* request, ::dsp::v1alpha2::GetProviderDatasetResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetProviderDataset(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest* request, ::dsp::v1alpha2::GetProviderDatasetResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      // ContractRequest sends a ContractRequestMessage.
+      virtual void ContractRequest(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractRequestRequest* request, ::dsp::v1alpha2::ContractRequestResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void ContractRequest(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractRequestRequest* request, ::dsp::v1alpha2::ContractRequestResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      // ContractOffer sends a ContractOfferMessage.
+      virtual void ContractOffer(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractOfferRequest* request, ::dsp::v1alpha2::ContractOfferResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void ContractOffer(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractOfferRequest* request, ::dsp::v1alpha2::ContractOfferResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      // ContractAccept sends an accepted event message.
+      virtual void ContractAccept(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractAcceptRequest* request, ::dsp::v1alpha2::ContractAcceptResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void ContractAccept(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractAcceptRequest* request, ::dsp::v1alpha2::ContractAcceptResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      // ContractAgree sends a ContractAcceptedMessage.
+      virtual void ContractAgree(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractAgreeRequest* request, ::dsp::v1alpha2::ContractAgreeResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void ContractAgree(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractAgreeRequest* request, ::dsp::v1alpha2::ContractAgreeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      // ContractVerify sends a ContractVerificationMessage.
+      virtual void ContractVerify(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractVerifyRequest* request, ::dsp::v1alpha2::ContractVerifyResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void ContractVerify(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractVerifyRequest* request, ::dsp::v1alpha2::ContractVerifyResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      // ContractFinalize sends a finalization event.
+      virtual void ContractFinalize(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractFinalizeRequest* request, ::dsp::v1alpha2::ContractFinalizeResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void ContractFinalize(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractFinalizeRequest* request, ::dsp::v1alpha2::ContractFinalizeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      // ContractTerminate sends a ContractTerminationMessage.
+      virtual void ContractTerminate(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractTerminateRequest* request, ::dsp::v1alpha2::ContractTerminateResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void ContractTerminate(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractTerminateRequest* request, ::dsp::v1alpha2::ContractTerminateResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      // Tells provider that we have finished our transfer.
+      virtual void SignalTransferComplete(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest* request, ::dsp::v1alpha2::SignalTransferCompleteResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void SignalTransferComplete(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest* request, ::dsp::v1alpha2::SignalTransferCompleteResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      // Tells provider to cancel file transfer
+      virtual void SignalTransferCancelled(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest* request, ::dsp::v1alpha2::SignalTransferCancelledResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void SignalTransferCancelled(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest* request, ::dsp::v1alpha2::SignalTransferCancelledResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      // Tells provider to suspend file transfer
+      virtual void SignalTransferSuspend(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest* request, ::dsp::v1alpha2::SignalTransferSuspendResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void SignalTransferSuspend(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest* request, ::dsp::v1alpha2::SignalTransferSuspendResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      // Tells provider to resume file transfer
+      virtual void SignalTransferResume(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest* request, ::dsp::v1alpha2::SignalTransferResumeResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void SignalTransferResume(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest* request, ::dsp::v1alpha2::SignalTransferResumeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
     };
     typedef class async_interface experimental_async_interface;
     virtual class async_interface* async() { return nullptr; }
@@ -87,6 +230,32 @@ class ControlService final {
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::GetProviderDatasetDownloadInformationResponse>* PrepareAsyncGetProviderDatasetDownloadInformationRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetDownloadInformationRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::VerifyConnectionResponse>* AsyncVerifyConnectionRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::VerifyConnectionRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::VerifyConnectionResponse>* PrepareAsyncVerifyConnectionRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::VerifyConnectionRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::GetProviderCatalogueResponse>* AsyncGetProviderCatalogueRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::GetProviderCatalogueResponse>* PrepareAsyncGetProviderCatalogueRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::GetProviderDatasetResponse>* AsyncGetProviderDatasetRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::GetProviderDatasetResponse>* PrepareAsyncGetProviderDatasetRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractRequestResponse>* AsyncContractRequestRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractRequestRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractRequestResponse>* PrepareAsyncContractRequestRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractRequestRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractOfferResponse>* AsyncContractOfferRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractOfferRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractOfferResponse>* PrepareAsyncContractOfferRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractOfferRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractAcceptResponse>* AsyncContractAcceptRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractAcceptRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractAcceptResponse>* PrepareAsyncContractAcceptRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractAcceptRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractAgreeResponse>* AsyncContractAgreeRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractAgreeRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractAgreeResponse>* PrepareAsyncContractAgreeRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractAgreeRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractVerifyResponse>* AsyncContractVerifyRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractVerifyRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractVerifyResponse>* PrepareAsyncContractVerifyRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractVerifyRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractFinalizeResponse>* AsyncContractFinalizeRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractFinalizeRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractFinalizeResponse>* PrepareAsyncContractFinalizeRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractFinalizeRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractTerminateResponse>* AsyncContractTerminateRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractTerminateRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::ContractTerminateResponse>* PrepareAsyncContractTerminateRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractTerminateRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferCompleteResponse>* AsyncSignalTransferCompleteRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferCompleteResponse>* PrepareAsyncSignalTransferCompleteRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferCancelledResponse>* AsyncSignalTransferCancelledRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferCancelledResponse>* PrepareAsyncSignalTransferCancelledRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferSuspendResponse>* AsyncSignalTransferSuspendRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferSuspendResponse>* PrepareAsyncSignalTransferSuspendRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferResumeResponse>* AsyncSignalTransferResumeRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferResumeResponse>* PrepareAsyncSignalTransferResumeRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
@@ -105,6 +274,97 @@ class ControlService final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::VerifyConnectionResponse>> PrepareAsyncVerifyConnection(::grpc::ClientContext* context, const ::dsp::v1alpha2::VerifyConnectionRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::VerifyConnectionResponse>>(PrepareAsyncVerifyConnectionRaw(context, request, cq));
     }
+    ::grpc::Status GetProviderCatalogue(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest& request, ::dsp::v1alpha2::GetProviderCatalogueResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::GetProviderCatalogueResponse>> AsyncGetProviderCatalogue(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::GetProviderCatalogueResponse>>(AsyncGetProviderCatalogueRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::GetProviderCatalogueResponse>> PrepareAsyncGetProviderCatalogue(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::GetProviderCatalogueResponse>>(PrepareAsyncGetProviderCatalogueRaw(context, request, cq));
+    }
+    ::grpc::Status GetProviderDataset(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest& request, ::dsp::v1alpha2::GetProviderDatasetResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::GetProviderDatasetResponse>> AsyncGetProviderDataset(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::GetProviderDatasetResponse>>(AsyncGetProviderDatasetRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::GetProviderDatasetResponse>> PrepareAsyncGetProviderDataset(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::GetProviderDatasetResponse>>(PrepareAsyncGetProviderDatasetRaw(context, request, cq));
+    }
+    ::grpc::Status ContractRequest(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractRequestRequest& request, ::dsp::v1alpha2::ContractRequestResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractRequestResponse>> AsyncContractRequest(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractRequestRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractRequestResponse>>(AsyncContractRequestRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractRequestResponse>> PrepareAsyncContractRequest(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractRequestRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractRequestResponse>>(PrepareAsyncContractRequestRaw(context, request, cq));
+    }
+    ::grpc::Status ContractOffer(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractOfferRequest& request, ::dsp::v1alpha2::ContractOfferResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractOfferResponse>> AsyncContractOffer(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractOfferRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractOfferResponse>>(AsyncContractOfferRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractOfferResponse>> PrepareAsyncContractOffer(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractOfferRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractOfferResponse>>(PrepareAsyncContractOfferRaw(context, request, cq));
+    }
+    ::grpc::Status ContractAccept(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractAcceptRequest& request, ::dsp::v1alpha2::ContractAcceptResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractAcceptResponse>> AsyncContractAccept(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractAcceptRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractAcceptResponse>>(AsyncContractAcceptRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractAcceptResponse>> PrepareAsyncContractAccept(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractAcceptRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractAcceptResponse>>(PrepareAsyncContractAcceptRaw(context, request, cq));
+    }
+    ::grpc::Status ContractAgree(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractAgreeRequest& request, ::dsp::v1alpha2::ContractAgreeResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractAgreeResponse>> AsyncContractAgree(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractAgreeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractAgreeResponse>>(AsyncContractAgreeRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractAgreeResponse>> PrepareAsyncContractAgree(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractAgreeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractAgreeResponse>>(PrepareAsyncContractAgreeRaw(context, request, cq));
+    }
+    ::grpc::Status ContractVerify(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractVerifyRequest& request, ::dsp::v1alpha2::ContractVerifyResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractVerifyResponse>> AsyncContractVerify(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractVerifyRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractVerifyResponse>>(AsyncContractVerifyRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractVerifyResponse>> PrepareAsyncContractVerify(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractVerifyRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractVerifyResponse>>(PrepareAsyncContractVerifyRaw(context, request, cq));
+    }
+    ::grpc::Status ContractFinalize(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractFinalizeRequest& request, ::dsp::v1alpha2::ContractFinalizeResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractFinalizeResponse>> AsyncContractFinalize(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractFinalizeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractFinalizeResponse>>(AsyncContractFinalizeRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractFinalizeResponse>> PrepareAsyncContractFinalize(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractFinalizeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractFinalizeResponse>>(PrepareAsyncContractFinalizeRaw(context, request, cq));
+    }
+    ::grpc::Status ContractTerminate(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractTerminateRequest& request, ::dsp::v1alpha2::ContractTerminateResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractTerminateResponse>> AsyncContractTerminate(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractTerminateRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractTerminateResponse>>(AsyncContractTerminateRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractTerminateResponse>> PrepareAsyncContractTerminate(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractTerminateRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractTerminateResponse>>(PrepareAsyncContractTerminateRaw(context, request, cq));
+    }
+    ::grpc::Status SignalTransferComplete(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest& request, ::dsp::v1alpha2::SignalTransferCompleteResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferCompleteResponse>> AsyncSignalTransferComplete(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferCompleteResponse>>(AsyncSignalTransferCompleteRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferCompleteResponse>> PrepareAsyncSignalTransferComplete(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferCompleteResponse>>(PrepareAsyncSignalTransferCompleteRaw(context, request, cq));
+    }
+    ::grpc::Status SignalTransferCancelled(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest& request, ::dsp::v1alpha2::SignalTransferCancelledResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferCancelledResponse>> AsyncSignalTransferCancelled(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferCancelledResponse>>(AsyncSignalTransferCancelledRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferCancelledResponse>> PrepareAsyncSignalTransferCancelled(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferCancelledResponse>>(PrepareAsyncSignalTransferCancelledRaw(context, request, cq));
+    }
+    ::grpc::Status SignalTransferSuspend(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest& request, ::dsp::v1alpha2::SignalTransferSuspendResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferSuspendResponse>> AsyncSignalTransferSuspend(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferSuspendResponse>>(AsyncSignalTransferSuspendRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferSuspendResponse>> PrepareAsyncSignalTransferSuspend(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferSuspendResponse>>(PrepareAsyncSignalTransferSuspendRaw(context, request, cq));
+    }
+    ::grpc::Status SignalTransferResume(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest& request, ::dsp::v1alpha2::SignalTransferResumeResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferResumeResponse>> AsyncSignalTransferResume(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferResumeResponse>>(AsyncSignalTransferResumeRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferResumeResponse>> PrepareAsyncSignalTransferResume(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferResumeResponse>>(PrepareAsyncSignalTransferResumeRaw(context, request, cq));
+    }
     class async final :
       public StubInterface::async_interface {
      public:
@@ -112,6 +372,32 @@ class ControlService final {
       void GetProviderDatasetDownloadInformation(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetDownloadInformationRequest* request, ::dsp::v1alpha2::GetProviderDatasetDownloadInformationResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void VerifyConnection(::grpc::ClientContext* context, const ::dsp::v1alpha2::VerifyConnectionRequest* request, ::dsp::v1alpha2::VerifyConnectionResponse* response, std::function<void(::grpc::Status)>) override;
       void VerifyConnection(::grpc::ClientContext* context, const ::dsp::v1alpha2::VerifyConnectionRequest* request, ::dsp::v1alpha2::VerifyConnectionResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void GetProviderCatalogue(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest* request, ::dsp::v1alpha2::GetProviderCatalogueResponse* response, std::function<void(::grpc::Status)>) override;
+      void GetProviderCatalogue(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest* request, ::dsp::v1alpha2::GetProviderCatalogueResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void GetProviderDataset(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest* request, ::dsp::v1alpha2::GetProviderDatasetResponse* response, std::function<void(::grpc::Status)>) override;
+      void GetProviderDataset(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest* request, ::dsp::v1alpha2::GetProviderDatasetResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void ContractRequest(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractRequestRequest* request, ::dsp::v1alpha2::ContractRequestResponse* response, std::function<void(::grpc::Status)>) override;
+      void ContractRequest(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractRequestRequest* request, ::dsp::v1alpha2::ContractRequestResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void ContractOffer(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractOfferRequest* request, ::dsp::v1alpha2::ContractOfferResponse* response, std::function<void(::grpc::Status)>) override;
+      void ContractOffer(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractOfferRequest* request, ::dsp::v1alpha2::ContractOfferResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void ContractAccept(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractAcceptRequest* request, ::dsp::v1alpha2::ContractAcceptResponse* response, std::function<void(::grpc::Status)>) override;
+      void ContractAccept(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractAcceptRequest* request, ::dsp::v1alpha2::ContractAcceptResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void ContractAgree(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractAgreeRequest* request, ::dsp::v1alpha2::ContractAgreeResponse* response, std::function<void(::grpc::Status)>) override;
+      void ContractAgree(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractAgreeRequest* request, ::dsp::v1alpha2::ContractAgreeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void ContractVerify(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractVerifyRequest* request, ::dsp::v1alpha2::ContractVerifyResponse* response, std::function<void(::grpc::Status)>) override;
+      void ContractVerify(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractVerifyRequest* request, ::dsp::v1alpha2::ContractVerifyResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void ContractFinalize(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractFinalizeRequest* request, ::dsp::v1alpha2::ContractFinalizeResponse* response, std::function<void(::grpc::Status)>) override;
+      void ContractFinalize(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractFinalizeRequest* request, ::dsp::v1alpha2::ContractFinalizeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void ContractTerminate(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractTerminateRequest* request, ::dsp::v1alpha2::ContractTerminateResponse* response, std::function<void(::grpc::Status)>) override;
+      void ContractTerminate(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractTerminateRequest* request, ::dsp::v1alpha2::ContractTerminateResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void SignalTransferComplete(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest* request, ::dsp::v1alpha2::SignalTransferCompleteResponse* response, std::function<void(::grpc::Status)>) override;
+      void SignalTransferComplete(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest* request, ::dsp::v1alpha2::SignalTransferCompleteResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void SignalTransferCancelled(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest* request, ::dsp::v1alpha2::SignalTransferCancelledResponse* response, std::function<void(::grpc::Status)>) override;
+      void SignalTransferCancelled(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest* request, ::dsp::v1alpha2::SignalTransferCancelledResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void SignalTransferSuspend(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest* request, ::dsp::v1alpha2::SignalTransferSuspendResponse* response, std::function<void(::grpc::Status)>) override;
+      void SignalTransferSuspend(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest* request, ::dsp::v1alpha2::SignalTransferSuspendResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void SignalTransferResume(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest* request, ::dsp::v1alpha2::SignalTransferResumeResponse* response, std::function<void(::grpc::Status)>) override;
+      void SignalTransferResume(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest* request, ::dsp::v1alpha2::SignalTransferResumeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
      private:
       friend class Stub;
       explicit async(Stub* stub): stub_(stub) { }
@@ -127,8 +413,47 @@ class ControlService final {
     ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::GetProviderDatasetDownloadInformationResponse>* PrepareAsyncGetProviderDatasetDownloadInformationRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetDownloadInformationRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::VerifyConnectionResponse>* AsyncVerifyConnectionRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::VerifyConnectionRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::VerifyConnectionResponse>* PrepareAsyncVerifyConnectionRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::VerifyConnectionRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::GetProviderCatalogueResponse>* AsyncGetProviderCatalogueRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::GetProviderCatalogueResponse>* PrepareAsyncGetProviderCatalogueRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::GetProviderDatasetResponse>* AsyncGetProviderDatasetRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::GetProviderDatasetResponse>* PrepareAsyncGetProviderDatasetRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractRequestResponse>* AsyncContractRequestRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractRequestRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractRequestResponse>* PrepareAsyncContractRequestRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractRequestRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractOfferResponse>* AsyncContractOfferRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractOfferRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractOfferResponse>* PrepareAsyncContractOfferRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractOfferRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractAcceptResponse>* AsyncContractAcceptRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractAcceptRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractAcceptResponse>* PrepareAsyncContractAcceptRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractAcceptRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractAgreeResponse>* AsyncContractAgreeRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractAgreeRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractAgreeResponse>* PrepareAsyncContractAgreeRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractAgreeRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractVerifyResponse>* AsyncContractVerifyRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractVerifyRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractVerifyResponse>* PrepareAsyncContractVerifyRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractVerifyRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractFinalizeResponse>* AsyncContractFinalizeRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractFinalizeRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractFinalizeResponse>* PrepareAsyncContractFinalizeRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractFinalizeRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractTerminateResponse>* AsyncContractTerminateRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractTerminateRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::ContractTerminateResponse>* PrepareAsyncContractTerminateRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::ContractTerminateRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferCompleteResponse>* AsyncSignalTransferCompleteRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferCompleteResponse>* PrepareAsyncSignalTransferCompleteRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferCancelledResponse>* AsyncSignalTransferCancelledRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferCancelledResponse>* PrepareAsyncSignalTransferCancelledRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferSuspendResponse>* AsyncSignalTransferSuspendRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferSuspendResponse>* PrepareAsyncSignalTransferSuspendRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferResumeResponse>* AsyncSignalTransferResumeRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferResumeResponse>* PrepareAsyncSignalTransferResumeRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_GetProviderDatasetDownloadInformation_;
     const ::grpc::internal::RpcMethod rpcmethod_VerifyConnection_;
+    const ::grpc::internal::RpcMethod rpcmethod_GetProviderCatalogue_;
+    const ::grpc::internal::RpcMethod rpcmethod_GetProviderDataset_;
+    const ::grpc::internal::RpcMethod rpcmethod_ContractRequest_;
+    const ::grpc::internal::RpcMethod rpcmethod_ContractOffer_;
+    const ::grpc::internal::RpcMethod rpcmethod_ContractAccept_;
+    const ::grpc::internal::RpcMethod rpcmethod_ContractAgree_;
+    const ::grpc::internal::RpcMethod rpcmethod_ContractVerify_;
+    const ::grpc::internal::RpcMethod rpcmethod_ContractFinalize_;
+    const ::grpc::internal::RpcMethod rpcmethod_ContractTerminate_;
+    const ::grpc::internal::RpcMethod rpcmethod_SignalTransferComplete_;
+    const ::grpc::internal::RpcMethod rpcmethod_SignalTransferCancelled_;
+    const ::grpc::internal::RpcMethod rpcmethod_SignalTransferSuspend_;
+    const ::grpc::internal::RpcMethod rpcmethod_SignalTransferResume_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
 
@@ -140,6 +465,32 @@ class ControlService final {
     virtual ::grpc::Status GetProviderDatasetDownloadInformation(::grpc::ServerContext* context, const ::dsp::v1alpha2::GetProviderDatasetDownloadInformationRequest* request, ::dsp::v1alpha2::GetProviderDatasetDownloadInformationResponse* response);
     // VerifyConnection takes a token and verifies it's the same token it passed to the contract service.
     virtual ::grpc::Status VerifyConnection(::grpc::ServerContext* context, const ::dsp::v1alpha2::VerifyConnectionRequest* request, ::dsp::v1alpha2::VerifyConnectionResponse* response);
+    // Gets the catalogue based on the query parameters and the authorization header.
+    virtual ::grpc::Status GetProviderCatalogue(::grpc::ServerContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest* request, ::dsp::v1alpha2::GetProviderCatalogueResponse* response);
+    // Gets information about a single dataset.
+    virtual ::grpc::Status GetProviderDataset(::grpc::ServerContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest* request, ::dsp::v1alpha2::GetProviderDatasetResponse* response);
+    // ContractRequest sends a ContractRequestMessage.
+    virtual ::grpc::Status ContractRequest(::grpc::ServerContext* context, const ::dsp::v1alpha2::ContractRequestRequest* request, ::dsp::v1alpha2::ContractRequestResponse* response);
+    // ContractOffer sends a ContractOfferMessage.
+    virtual ::grpc::Status ContractOffer(::grpc::ServerContext* context, const ::dsp::v1alpha2::ContractOfferRequest* request, ::dsp::v1alpha2::ContractOfferResponse* response);
+    // ContractAccept sends an accepted event message.
+    virtual ::grpc::Status ContractAccept(::grpc::ServerContext* context, const ::dsp::v1alpha2::ContractAcceptRequest* request, ::dsp::v1alpha2::ContractAcceptResponse* response);
+    // ContractAgree sends a ContractAcceptedMessage.
+    virtual ::grpc::Status ContractAgree(::grpc::ServerContext* context, const ::dsp::v1alpha2::ContractAgreeRequest* request, ::dsp::v1alpha2::ContractAgreeResponse* response);
+    // ContractVerify sends a ContractVerificationMessage.
+    virtual ::grpc::Status ContractVerify(::grpc::ServerContext* context, const ::dsp::v1alpha2::ContractVerifyRequest* request, ::dsp::v1alpha2::ContractVerifyResponse* response);
+    // ContractFinalize sends a finalization event.
+    virtual ::grpc::Status ContractFinalize(::grpc::ServerContext* context, const ::dsp::v1alpha2::ContractFinalizeRequest* request, ::dsp::v1alpha2::ContractFinalizeResponse* response);
+    // ContractTerminate sends a ContractTerminationMessage.
+    virtual ::grpc::Status ContractTerminate(::grpc::ServerContext* context, const ::dsp::v1alpha2::ContractTerminateRequest* request, ::dsp::v1alpha2::ContractTerminateResponse* response);
+    // Tells provider that we have finished our transfer.
+    virtual ::grpc::Status SignalTransferComplete(::grpc::ServerContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest* request, ::dsp::v1alpha2::SignalTransferCompleteResponse* response);
+    // Tells provider to cancel file transfer
+    virtual ::grpc::Status SignalTransferCancelled(::grpc::ServerContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest* request, ::dsp::v1alpha2::SignalTransferCancelledResponse* response);
+    // Tells provider to suspend file transfer
+    virtual ::grpc::Status SignalTransferSuspend(::grpc::ServerContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest* request, ::dsp::v1alpha2::SignalTransferSuspendResponse* response);
+    // Tells provider to resume file transfer
+    virtual ::grpc::Status SignalTransferResume(::grpc::ServerContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest* request, ::dsp::v1alpha2::SignalTransferResumeResponse* response);
   };
   template <class BaseClass>
   class WithAsyncMethod_GetProviderDatasetDownloadInformation : public BaseClass {
@@ -181,7 +532,267 @@ class ControlService final {
       ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_GetProviderDatasetDownloadInformation<WithAsyncMethod_VerifyConnection<Service > > AsyncService;
+  template <class BaseClass>
+  class WithAsyncMethod_GetProviderCatalogue : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_GetProviderCatalogue() {
+      ::grpc::Service::MarkMethodAsync(2);
+    }
+    ~WithAsyncMethod_GetProviderCatalogue() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetProviderCatalogue(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::GetProviderCatalogueRequest* /*request*/, ::dsp::v1alpha2::GetProviderCatalogueResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetProviderCatalogue(::grpc::ServerContext* context, ::dsp::v1alpha2::GetProviderCatalogueRequest* request, ::grpc::ServerAsyncResponseWriter< ::dsp::v1alpha2::GetProviderCatalogueResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_GetProviderDataset : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_GetProviderDataset() {
+      ::grpc::Service::MarkMethodAsync(3);
+    }
+    ~WithAsyncMethod_GetProviderDataset() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetProviderDataset(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::GetProviderDatasetRequest* /*request*/, ::dsp::v1alpha2::GetProviderDatasetResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetProviderDataset(::grpc::ServerContext* context, ::dsp::v1alpha2::GetProviderDatasetRequest* request, ::grpc::ServerAsyncResponseWriter< ::dsp::v1alpha2::GetProviderDatasetResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_ContractRequest : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_ContractRequest() {
+      ::grpc::Service::MarkMethodAsync(4);
+    }
+    ~WithAsyncMethod_ContractRequest() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractRequest(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractRequestRequest* /*request*/, ::dsp::v1alpha2::ContractRequestResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestContractRequest(::grpc::ServerContext* context, ::dsp::v1alpha2::ContractRequestRequest* request, ::grpc::ServerAsyncResponseWriter< ::dsp::v1alpha2::ContractRequestResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_ContractOffer : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_ContractOffer() {
+      ::grpc::Service::MarkMethodAsync(5);
+    }
+    ~WithAsyncMethod_ContractOffer() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractOffer(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractOfferRequest* /*request*/, ::dsp::v1alpha2::ContractOfferResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestContractOffer(::grpc::ServerContext* context, ::dsp::v1alpha2::ContractOfferRequest* request, ::grpc::ServerAsyncResponseWriter< ::dsp::v1alpha2::ContractOfferResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_ContractAccept : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_ContractAccept() {
+      ::grpc::Service::MarkMethodAsync(6);
+    }
+    ~WithAsyncMethod_ContractAccept() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractAccept(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractAcceptRequest* /*request*/, ::dsp::v1alpha2::ContractAcceptResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestContractAccept(::grpc::ServerContext* context, ::dsp::v1alpha2::ContractAcceptRequest* request, ::grpc::ServerAsyncResponseWriter< ::dsp::v1alpha2::ContractAcceptResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_ContractAgree : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_ContractAgree() {
+      ::grpc::Service::MarkMethodAsync(7);
+    }
+    ~WithAsyncMethod_ContractAgree() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractAgree(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractAgreeRequest* /*request*/, ::dsp::v1alpha2::ContractAgreeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestContractAgree(::grpc::ServerContext* context, ::dsp::v1alpha2::ContractAgreeRequest* request, ::grpc::ServerAsyncResponseWriter< ::dsp::v1alpha2::ContractAgreeResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(7, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_ContractVerify : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_ContractVerify() {
+      ::grpc::Service::MarkMethodAsync(8);
+    }
+    ~WithAsyncMethod_ContractVerify() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractVerify(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractVerifyRequest* /*request*/, ::dsp::v1alpha2::ContractVerifyResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestContractVerify(::grpc::ServerContext* context, ::dsp::v1alpha2::ContractVerifyRequest* request, ::grpc::ServerAsyncResponseWriter< ::dsp::v1alpha2::ContractVerifyResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(8, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_ContractFinalize : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_ContractFinalize() {
+      ::grpc::Service::MarkMethodAsync(9);
+    }
+    ~WithAsyncMethod_ContractFinalize() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractFinalize(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractFinalizeRequest* /*request*/, ::dsp::v1alpha2::ContractFinalizeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestContractFinalize(::grpc::ServerContext* context, ::dsp::v1alpha2::ContractFinalizeRequest* request, ::grpc::ServerAsyncResponseWriter< ::dsp::v1alpha2::ContractFinalizeResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(9, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_ContractTerminate : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_ContractTerminate() {
+      ::grpc::Service::MarkMethodAsync(10);
+    }
+    ~WithAsyncMethod_ContractTerminate() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractTerminate(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractTerminateRequest* /*request*/, ::dsp::v1alpha2::ContractTerminateResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestContractTerminate(::grpc::ServerContext* context, ::dsp::v1alpha2::ContractTerminateRequest* request, ::grpc::ServerAsyncResponseWriter< ::dsp::v1alpha2::ContractTerminateResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(10, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_SignalTransferComplete : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_SignalTransferComplete() {
+      ::grpc::Service::MarkMethodAsync(11);
+    }
+    ~WithAsyncMethod_SignalTransferComplete() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SignalTransferComplete(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferCompleteRequest* /*request*/, ::dsp::v1alpha2::SignalTransferCompleteResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestSignalTransferComplete(::grpc::ServerContext* context, ::dsp::v1alpha2::SignalTransferCompleteRequest* request, ::grpc::ServerAsyncResponseWriter< ::dsp::v1alpha2::SignalTransferCompleteResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(11, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_SignalTransferCancelled : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_SignalTransferCancelled() {
+      ::grpc::Service::MarkMethodAsync(12);
+    }
+    ~WithAsyncMethod_SignalTransferCancelled() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SignalTransferCancelled(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferCancelledRequest* /*request*/, ::dsp::v1alpha2::SignalTransferCancelledResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestSignalTransferCancelled(::grpc::ServerContext* context, ::dsp::v1alpha2::SignalTransferCancelledRequest* request, ::grpc::ServerAsyncResponseWriter< ::dsp::v1alpha2::SignalTransferCancelledResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(12, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_SignalTransferSuspend : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_SignalTransferSuspend() {
+      ::grpc::Service::MarkMethodAsync(13);
+    }
+    ~WithAsyncMethod_SignalTransferSuspend() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SignalTransferSuspend(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferSuspendRequest* /*request*/, ::dsp::v1alpha2::SignalTransferSuspendResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestSignalTransferSuspend(::grpc::ServerContext* context, ::dsp::v1alpha2::SignalTransferSuspendRequest* request, ::grpc::ServerAsyncResponseWriter< ::dsp::v1alpha2::SignalTransferSuspendResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(13, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_SignalTransferResume : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_SignalTransferResume() {
+      ::grpc::Service::MarkMethodAsync(14);
+    }
+    ~WithAsyncMethod_SignalTransferResume() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SignalTransferResume(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferResumeRequest* /*request*/, ::dsp::v1alpha2::SignalTransferResumeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestSignalTransferResume(::grpc::ServerContext* context, ::dsp::v1alpha2::SignalTransferResumeRequest* request, ::grpc::ServerAsyncResponseWriter< ::dsp::v1alpha2::SignalTransferResumeResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(14, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  typedef WithAsyncMethod_GetProviderDatasetDownloadInformation<WithAsyncMethod_VerifyConnection<WithAsyncMethod_GetProviderCatalogue<WithAsyncMethod_GetProviderDataset<WithAsyncMethod_ContractRequest<WithAsyncMethod_ContractOffer<WithAsyncMethod_ContractAccept<WithAsyncMethod_ContractAgree<WithAsyncMethod_ContractVerify<WithAsyncMethod_ContractFinalize<WithAsyncMethod_ContractTerminate<WithAsyncMethod_SignalTransferComplete<WithAsyncMethod_SignalTransferCancelled<WithAsyncMethod_SignalTransferSuspend<WithAsyncMethod_SignalTransferResume<Service > > > > > > > > > > > > > > > AsyncService;
   template <class BaseClass>
   class WithCallbackMethod_GetProviderDatasetDownloadInformation : public BaseClass {
    private:
@@ -236,7 +847,358 @@ class ControlService final {
     virtual ::grpc::ServerUnaryReactor* VerifyConnection(
       ::grpc::CallbackServerContext* /*context*/, const ::dsp::v1alpha2::VerifyConnectionRequest* /*request*/, ::dsp::v1alpha2::VerifyConnectionResponse* /*response*/)  { return nullptr; }
   };
-  typedef WithCallbackMethod_GetProviderDatasetDownloadInformation<WithCallbackMethod_VerifyConnection<Service > > CallbackService;
+  template <class BaseClass>
+  class WithCallbackMethod_GetProviderCatalogue : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_GetProviderCatalogue() {
+      ::grpc::Service::MarkMethodCallback(2,
+          new ::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::GetProviderCatalogueRequest, ::dsp::v1alpha2::GetProviderCatalogueResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest* request, ::dsp::v1alpha2::GetProviderCatalogueResponse* response) { return this->GetProviderCatalogue(context, request, response); }));}
+    void SetMessageAllocatorFor_GetProviderCatalogue(
+        ::grpc::MessageAllocator< ::dsp::v1alpha2::GetProviderCatalogueRequest, ::dsp::v1alpha2::GetProviderCatalogueResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(2);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::GetProviderCatalogueRequest, ::dsp::v1alpha2::GetProviderCatalogueResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_GetProviderCatalogue() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetProviderCatalogue(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::GetProviderCatalogueRequest* /*request*/, ::dsp::v1alpha2::GetProviderCatalogueResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* GetProviderCatalogue(
+      ::grpc::CallbackServerContext* /*context*/, const ::dsp::v1alpha2::GetProviderCatalogueRequest* /*request*/, ::dsp::v1alpha2::GetProviderCatalogueResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_GetProviderDataset : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_GetProviderDataset() {
+      ::grpc::Service::MarkMethodCallback(3,
+          new ::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::GetProviderDatasetRequest, ::dsp::v1alpha2::GetProviderDatasetResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest* request, ::dsp::v1alpha2::GetProviderDatasetResponse* response) { return this->GetProviderDataset(context, request, response); }));}
+    void SetMessageAllocatorFor_GetProviderDataset(
+        ::grpc::MessageAllocator< ::dsp::v1alpha2::GetProviderDatasetRequest, ::dsp::v1alpha2::GetProviderDatasetResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(3);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::GetProviderDatasetRequest, ::dsp::v1alpha2::GetProviderDatasetResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_GetProviderDataset() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetProviderDataset(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::GetProviderDatasetRequest* /*request*/, ::dsp::v1alpha2::GetProviderDatasetResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* GetProviderDataset(
+      ::grpc::CallbackServerContext* /*context*/, const ::dsp::v1alpha2::GetProviderDatasetRequest* /*request*/, ::dsp::v1alpha2::GetProviderDatasetResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_ContractRequest : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_ContractRequest() {
+      ::grpc::Service::MarkMethodCallback(4,
+          new ::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::ContractRequestRequest, ::dsp::v1alpha2::ContractRequestResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::dsp::v1alpha2::ContractRequestRequest* request, ::dsp::v1alpha2::ContractRequestResponse* response) { return this->ContractRequest(context, request, response); }));}
+    void SetMessageAllocatorFor_ContractRequest(
+        ::grpc::MessageAllocator< ::dsp::v1alpha2::ContractRequestRequest, ::dsp::v1alpha2::ContractRequestResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(4);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::ContractRequestRequest, ::dsp::v1alpha2::ContractRequestResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_ContractRequest() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractRequest(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractRequestRequest* /*request*/, ::dsp::v1alpha2::ContractRequestResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* ContractRequest(
+      ::grpc::CallbackServerContext* /*context*/, const ::dsp::v1alpha2::ContractRequestRequest* /*request*/, ::dsp::v1alpha2::ContractRequestResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_ContractOffer : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_ContractOffer() {
+      ::grpc::Service::MarkMethodCallback(5,
+          new ::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::ContractOfferRequest, ::dsp::v1alpha2::ContractOfferResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::dsp::v1alpha2::ContractOfferRequest* request, ::dsp::v1alpha2::ContractOfferResponse* response) { return this->ContractOffer(context, request, response); }));}
+    void SetMessageAllocatorFor_ContractOffer(
+        ::grpc::MessageAllocator< ::dsp::v1alpha2::ContractOfferRequest, ::dsp::v1alpha2::ContractOfferResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(5);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::ContractOfferRequest, ::dsp::v1alpha2::ContractOfferResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_ContractOffer() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractOffer(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractOfferRequest* /*request*/, ::dsp::v1alpha2::ContractOfferResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* ContractOffer(
+      ::grpc::CallbackServerContext* /*context*/, const ::dsp::v1alpha2::ContractOfferRequest* /*request*/, ::dsp::v1alpha2::ContractOfferResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_ContractAccept : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_ContractAccept() {
+      ::grpc::Service::MarkMethodCallback(6,
+          new ::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::ContractAcceptRequest, ::dsp::v1alpha2::ContractAcceptResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::dsp::v1alpha2::ContractAcceptRequest* request, ::dsp::v1alpha2::ContractAcceptResponse* response) { return this->ContractAccept(context, request, response); }));}
+    void SetMessageAllocatorFor_ContractAccept(
+        ::grpc::MessageAllocator< ::dsp::v1alpha2::ContractAcceptRequest, ::dsp::v1alpha2::ContractAcceptResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(6);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::ContractAcceptRequest, ::dsp::v1alpha2::ContractAcceptResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_ContractAccept() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractAccept(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractAcceptRequest* /*request*/, ::dsp::v1alpha2::ContractAcceptResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* ContractAccept(
+      ::grpc::CallbackServerContext* /*context*/, const ::dsp::v1alpha2::ContractAcceptRequest* /*request*/, ::dsp::v1alpha2::ContractAcceptResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_ContractAgree : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_ContractAgree() {
+      ::grpc::Service::MarkMethodCallback(7,
+          new ::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::ContractAgreeRequest, ::dsp::v1alpha2::ContractAgreeResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::dsp::v1alpha2::ContractAgreeRequest* request, ::dsp::v1alpha2::ContractAgreeResponse* response) { return this->ContractAgree(context, request, response); }));}
+    void SetMessageAllocatorFor_ContractAgree(
+        ::grpc::MessageAllocator< ::dsp::v1alpha2::ContractAgreeRequest, ::dsp::v1alpha2::ContractAgreeResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(7);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::ContractAgreeRequest, ::dsp::v1alpha2::ContractAgreeResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_ContractAgree() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractAgree(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractAgreeRequest* /*request*/, ::dsp::v1alpha2::ContractAgreeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* ContractAgree(
+      ::grpc::CallbackServerContext* /*context*/, const ::dsp::v1alpha2::ContractAgreeRequest* /*request*/, ::dsp::v1alpha2::ContractAgreeResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_ContractVerify : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_ContractVerify() {
+      ::grpc::Service::MarkMethodCallback(8,
+          new ::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::ContractVerifyRequest, ::dsp::v1alpha2::ContractVerifyResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::dsp::v1alpha2::ContractVerifyRequest* request, ::dsp::v1alpha2::ContractVerifyResponse* response) { return this->ContractVerify(context, request, response); }));}
+    void SetMessageAllocatorFor_ContractVerify(
+        ::grpc::MessageAllocator< ::dsp::v1alpha2::ContractVerifyRequest, ::dsp::v1alpha2::ContractVerifyResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(8);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::ContractVerifyRequest, ::dsp::v1alpha2::ContractVerifyResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_ContractVerify() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractVerify(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractVerifyRequest* /*request*/, ::dsp::v1alpha2::ContractVerifyResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* ContractVerify(
+      ::grpc::CallbackServerContext* /*context*/, const ::dsp::v1alpha2::ContractVerifyRequest* /*request*/, ::dsp::v1alpha2::ContractVerifyResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_ContractFinalize : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_ContractFinalize() {
+      ::grpc::Service::MarkMethodCallback(9,
+          new ::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::ContractFinalizeRequest, ::dsp::v1alpha2::ContractFinalizeResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::dsp::v1alpha2::ContractFinalizeRequest* request, ::dsp::v1alpha2::ContractFinalizeResponse* response) { return this->ContractFinalize(context, request, response); }));}
+    void SetMessageAllocatorFor_ContractFinalize(
+        ::grpc::MessageAllocator< ::dsp::v1alpha2::ContractFinalizeRequest, ::dsp::v1alpha2::ContractFinalizeResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(9);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::ContractFinalizeRequest, ::dsp::v1alpha2::ContractFinalizeResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_ContractFinalize() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractFinalize(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractFinalizeRequest* /*request*/, ::dsp::v1alpha2::ContractFinalizeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* ContractFinalize(
+      ::grpc::CallbackServerContext* /*context*/, const ::dsp::v1alpha2::ContractFinalizeRequest* /*request*/, ::dsp::v1alpha2::ContractFinalizeResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_ContractTerminate : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_ContractTerminate() {
+      ::grpc::Service::MarkMethodCallback(10,
+          new ::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::ContractTerminateRequest, ::dsp::v1alpha2::ContractTerminateResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::dsp::v1alpha2::ContractTerminateRequest* request, ::dsp::v1alpha2::ContractTerminateResponse* response) { return this->ContractTerminate(context, request, response); }));}
+    void SetMessageAllocatorFor_ContractTerminate(
+        ::grpc::MessageAllocator< ::dsp::v1alpha2::ContractTerminateRequest, ::dsp::v1alpha2::ContractTerminateResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(10);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::ContractTerminateRequest, ::dsp::v1alpha2::ContractTerminateResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_ContractTerminate() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractTerminate(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractTerminateRequest* /*request*/, ::dsp::v1alpha2::ContractTerminateResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* ContractTerminate(
+      ::grpc::CallbackServerContext* /*context*/, const ::dsp::v1alpha2::ContractTerminateRequest* /*request*/, ::dsp::v1alpha2::ContractTerminateResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_SignalTransferComplete : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_SignalTransferComplete() {
+      ::grpc::Service::MarkMethodCallback(11,
+          new ::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::SignalTransferCompleteRequest, ::dsp::v1alpha2::SignalTransferCompleteResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest* request, ::dsp::v1alpha2::SignalTransferCompleteResponse* response) { return this->SignalTransferComplete(context, request, response); }));}
+    void SetMessageAllocatorFor_SignalTransferComplete(
+        ::grpc::MessageAllocator< ::dsp::v1alpha2::SignalTransferCompleteRequest, ::dsp::v1alpha2::SignalTransferCompleteResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(11);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::SignalTransferCompleteRequest, ::dsp::v1alpha2::SignalTransferCompleteResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_SignalTransferComplete() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SignalTransferComplete(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferCompleteRequest* /*request*/, ::dsp::v1alpha2::SignalTransferCompleteResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* SignalTransferComplete(
+      ::grpc::CallbackServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferCompleteRequest* /*request*/, ::dsp::v1alpha2::SignalTransferCompleteResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_SignalTransferCancelled : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_SignalTransferCancelled() {
+      ::grpc::Service::MarkMethodCallback(12,
+          new ::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::SignalTransferCancelledRequest, ::dsp::v1alpha2::SignalTransferCancelledResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest* request, ::dsp::v1alpha2::SignalTransferCancelledResponse* response) { return this->SignalTransferCancelled(context, request, response); }));}
+    void SetMessageAllocatorFor_SignalTransferCancelled(
+        ::grpc::MessageAllocator< ::dsp::v1alpha2::SignalTransferCancelledRequest, ::dsp::v1alpha2::SignalTransferCancelledResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(12);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::SignalTransferCancelledRequest, ::dsp::v1alpha2::SignalTransferCancelledResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_SignalTransferCancelled() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SignalTransferCancelled(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferCancelledRequest* /*request*/, ::dsp::v1alpha2::SignalTransferCancelledResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* SignalTransferCancelled(
+      ::grpc::CallbackServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferCancelledRequest* /*request*/, ::dsp::v1alpha2::SignalTransferCancelledResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_SignalTransferSuspend : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_SignalTransferSuspend() {
+      ::grpc::Service::MarkMethodCallback(13,
+          new ::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::SignalTransferSuspendRequest, ::dsp::v1alpha2::SignalTransferSuspendResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest* request, ::dsp::v1alpha2::SignalTransferSuspendResponse* response) { return this->SignalTransferSuspend(context, request, response); }));}
+    void SetMessageAllocatorFor_SignalTransferSuspend(
+        ::grpc::MessageAllocator< ::dsp::v1alpha2::SignalTransferSuspendRequest, ::dsp::v1alpha2::SignalTransferSuspendResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(13);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::SignalTransferSuspendRequest, ::dsp::v1alpha2::SignalTransferSuspendResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_SignalTransferSuspend() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SignalTransferSuspend(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferSuspendRequest* /*request*/, ::dsp::v1alpha2::SignalTransferSuspendResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* SignalTransferSuspend(
+      ::grpc::CallbackServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferSuspendRequest* /*request*/, ::dsp::v1alpha2::SignalTransferSuspendResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_SignalTransferResume : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_SignalTransferResume() {
+      ::grpc::Service::MarkMethodCallback(14,
+          new ::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::SignalTransferResumeRequest, ::dsp::v1alpha2::SignalTransferResumeResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest* request, ::dsp::v1alpha2::SignalTransferResumeResponse* response) { return this->SignalTransferResume(context, request, response); }));}
+    void SetMessageAllocatorFor_SignalTransferResume(
+        ::grpc::MessageAllocator< ::dsp::v1alpha2::SignalTransferResumeRequest, ::dsp::v1alpha2::SignalTransferResumeResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(14);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::SignalTransferResumeRequest, ::dsp::v1alpha2::SignalTransferResumeResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_SignalTransferResume() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SignalTransferResume(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferResumeRequest* /*request*/, ::dsp::v1alpha2::SignalTransferResumeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* SignalTransferResume(
+      ::grpc::CallbackServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferResumeRequest* /*request*/, ::dsp::v1alpha2::SignalTransferResumeResponse* /*response*/)  { return nullptr; }
+  };
+  typedef WithCallbackMethod_GetProviderDatasetDownloadInformation<WithCallbackMethod_VerifyConnection<WithCallbackMethod_GetProviderCatalogue<WithCallbackMethod_GetProviderDataset<WithCallbackMethod_ContractRequest<WithCallbackMethod_ContractOffer<WithCallbackMethod_ContractAccept<WithCallbackMethod_ContractAgree<WithCallbackMethod_ContractVerify<WithCallbackMethod_ContractFinalize<WithCallbackMethod_ContractTerminate<WithCallbackMethod_SignalTransferComplete<WithCallbackMethod_SignalTransferCancelled<WithCallbackMethod_SignalTransferSuspend<WithCallbackMethod_SignalTransferResume<Service > > > > > > > > > > > > > > > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_GetProviderDatasetDownloadInformation : public BaseClass {
@@ -268,6 +1230,227 @@ class ControlService final {
     }
     // disable synchronous version of this method
     ::grpc::Status VerifyConnection(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::VerifyConnectionRequest* /*request*/, ::dsp::v1alpha2::VerifyConnectionResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_GetProviderCatalogue : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_GetProviderCatalogue() {
+      ::grpc::Service::MarkMethodGeneric(2);
+    }
+    ~WithGenericMethod_GetProviderCatalogue() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetProviderCatalogue(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::GetProviderCatalogueRequest* /*request*/, ::dsp::v1alpha2::GetProviderCatalogueResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_GetProviderDataset : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_GetProviderDataset() {
+      ::grpc::Service::MarkMethodGeneric(3);
+    }
+    ~WithGenericMethod_GetProviderDataset() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetProviderDataset(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::GetProviderDatasetRequest* /*request*/, ::dsp::v1alpha2::GetProviderDatasetResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_ContractRequest : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_ContractRequest() {
+      ::grpc::Service::MarkMethodGeneric(4);
+    }
+    ~WithGenericMethod_ContractRequest() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractRequest(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractRequestRequest* /*request*/, ::dsp::v1alpha2::ContractRequestResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_ContractOffer : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_ContractOffer() {
+      ::grpc::Service::MarkMethodGeneric(5);
+    }
+    ~WithGenericMethod_ContractOffer() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractOffer(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractOfferRequest* /*request*/, ::dsp::v1alpha2::ContractOfferResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_ContractAccept : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_ContractAccept() {
+      ::grpc::Service::MarkMethodGeneric(6);
+    }
+    ~WithGenericMethod_ContractAccept() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractAccept(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractAcceptRequest* /*request*/, ::dsp::v1alpha2::ContractAcceptResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_ContractAgree : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_ContractAgree() {
+      ::grpc::Service::MarkMethodGeneric(7);
+    }
+    ~WithGenericMethod_ContractAgree() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractAgree(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractAgreeRequest* /*request*/, ::dsp::v1alpha2::ContractAgreeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_ContractVerify : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_ContractVerify() {
+      ::grpc::Service::MarkMethodGeneric(8);
+    }
+    ~WithGenericMethod_ContractVerify() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractVerify(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractVerifyRequest* /*request*/, ::dsp::v1alpha2::ContractVerifyResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_ContractFinalize : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_ContractFinalize() {
+      ::grpc::Service::MarkMethodGeneric(9);
+    }
+    ~WithGenericMethod_ContractFinalize() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractFinalize(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractFinalizeRequest* /*request*/, ::dsp::v1alpha2::ContractFinalizeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_ContractTerminate : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_ContractTerminate() {
+      ::grpc::Service::MarkMethodGeneric(10);
+    }
+    ~WithGenericMethod_ContractTerminate() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractTerminate(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractTerminateRequest* /*request*/, ::dsp::v1alpha2::ContractTerminateResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_SignalTransferComplete : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_SignalTransferComplete() {
+      ::grpc::Service::MarkMethodGeneric(11);
+    }
+    ~WithGenericMethod_SignalTransferComplete() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SignalTransferComplete(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferCompleteRequest* /*request*/, ::dsp::v1alpha2::SignalTransferCompleteResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_SignalTransferCancelled : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_SignalTransferCancelled() {
+      ::grpc::Service::MarkMethodGeneric(12);
+    }
+    ~WithGenericMethod_SignalTransferCancelled() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SignalTransferCancelled(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferCancelledRequest* /*request*/, ::dsp::v1alpha2::SignalTransferCancelledResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_SignalTransferSuspend : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_SignalTransferSuspend() {
+      ::grpc::Service::MarkMethodGeneric(13);
+    }
+    ~WithGenericMethod_SignalTransferSuspend() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SignalTransferSuspend(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferSuspendRequest* /*request*/, ::dsp::v1alpha2::SignalTransferSuspendResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_SignalTransferResume : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_SignalTransferResume() {
+      ::grpc::Service::MarkMethodGeneric(14);
+    }
+    ~WithGenericMethod_SignalTransferResume() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SignalTransferResume(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferResumeRequest* /*request*/, ::dsp::v1alpha2::SignalTransferResumeResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -313,6 +1496,266 @@ class ControlService final {
     }
   };
   template <class BaseClass>
+  class WithRawMethod_GetProviderCatalogue : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_GetProviderCatalogue() {
+      ::grpc::Service::MarkMethodRaw(2);
+    }
+    ~WithRawMethod_GetProviderCatalogue() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetProviderCatalogue(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::GetProviderCatalogueRequest* /*request*/, ::dsp::v1alpha2::GetProviderCatalogueResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetProviderCatalogue(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetProviderDataset : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_GetProviderDataset() {
+      ::grpc::Service::MarkMethodRaw(3);
+    }
+    ~WithRawMethod_GetProviderDataset() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetProviderDataset(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::GetProviderDatasetRequest* /*request*/, ::dsp::v1alpha2::GetProviderDatasetResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetProviderDataset(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_ContractRequest : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_ContractRequest() {
+      ::grpc::Service::MarkMethodRaw(4);
+    }
+    ~WithRawMethod_ContractRequest() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractRequest(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractRequestRequest* /*request*/, ::dsp::v1alpha2::ContractRequestResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestContractRequest(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_ContractOffer : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_ContractOffer() {
+      ::grpc::Service::MarkMethodRaw(5);
+    }
+    ~WithRawMethod_ContractOffer() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractOffer(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractOfferRequest* /*request*/, ::dsp::v1alpha2::ContractOfferResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestContractOffer(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_ContractAccept : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_ContractAccept() {
+      ::grpc::Service::MarkMethodRaw(6);
+    }
+    ~WithRawMethod_ContractAccept() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractAccept(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractAcceptRequest* /*request*/, ::dsp::v1alpha2::ContractAcceptResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestContractAccept(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_ContractAgree : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_ContractAgree() {
+      ::grpc::Service::MarkMethodRaw(7);
+    }
+    ~WithRawMethod_ContractAgree() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractAgree(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractAgreeRequest* /*request*/, ::dsp::v1alpha2::ContractAgreeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestContractAgree(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(7, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_ContractVerify : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_ContractVerify() {
+      ::grpc::Service::MarkMethodRaw(8);
+    }
+    ~WithRawMethod_ContractVerify() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractVerify(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractVerifyRequest* /*request*/, ::dsp::v1alpha2::ContractVerifyResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestContractVerify(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(8, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_ContractFinalize : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_ContractFinalize() {
+      ::grpc::Service::MarkMethodRaw(9);
+    }
+    ~WithRawMethod_ContractFinalize() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractFinalize(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractFinalizeRequest* /*request*/, ::dsp::v1alpha2::ContractFinalizeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestContractFinalize(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(9, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_ContractTerminate : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_ContractTerminate() {
+      ::grpc::Service::MarkMethodRaw(10);
+    }
+    ~WithRawMethod_ContractTerminate() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractTerminate(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractTerminateRequest* /*request*/, ::dsp::v1alpha2::ContractTerminateResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestContractTerminate(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(10, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_SignalTransferComplete : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_SignalTransferComplete() {
+      ::grpc::Service::MarkMethodRaw(11);
+    }
+    ~WithRawMethod_SignalTransferComplete() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SignalTransferComplete(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferCompleteRequest* /*request*/, ::dsp::v1alpha2::SignalTransferCompleteResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestSignalTransferComplete(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(11, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_SignalTransferCancelled : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_SignalTransferCancelled() {
+      ::grpc::Service::MarkMethodRaw(12);
+    }
+    ~WithRawMethod_SignalTransferCancelled() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SignalTransferCancelled(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferCancelledRequest* /*request*/, ::dsp::v1alpha2::SignalTransferCancelledResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestSignalTransferCancelled(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(12, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_SignalTransferSuspend : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_SignalTransferSuspend() {
+      ::grpc::Service::MarkMethodRaw(13);
+    }
+    ~WithRawMethod_SignalTransferSuspend() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SignalTransferSuspend(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferSuspendRequest* /*request*/, ::dsp::v1alpha2::SignalTransferSuspendResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestSignalTransferSuspend(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(13, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_SignalTransferResume : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_SignalTransferResume() {
+      ::grpc::Service::MarkMethodRaw(14);
+    }
+    ~WithRawMethod_SignalTransferResume() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SignalTransferResume(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferResumeRequest* /*request*/, ::dsp::v1alpha2::SignalTransferResumeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestSignalTransferResume(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(14, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
   class WithRawCallbackMethod_GetProviderDatasetDownloadInformation : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
@@ -354,6 +1797,292 @@ class ControlService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     virtual ::grpc::ServerUnaryReactor* VerifyConnection(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_GetProviderCatalogue : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_GetProviderCatalogue() {
+      ::grpc::Service::MarkMethodRawCallback(2,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetProviderCatalogue(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_GetProviderCatalogue() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetProviderCatalogue(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::GetProviderCatalogueRequest* /*request*/, ::dsp::v1alpha2::GetProviderCatalogueResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* GetProviderCatalogue(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_GetProviderDataset : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_GetProviderDataset() {
+      ::grpc::Service::MarkMethodRawCallback(3,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetProviderDataset(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_GetProviderDataset() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetProviderDataset(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::GetProviderDatasetRequest* /*request*/, ::dsp::v1alpha2::GetProviderDatasetResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* GetProviderDataset(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_ContractRequest : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_ContractRequest() {
+      ::grpc::Service::MarkMethodRawCallback(4,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ContractRequest(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_ContractRequest() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractRequest(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractRequestRequest* /*request*/, ::dsp::v1alpha2::ContractRequestResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* ContractRequest(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_ContractOffer : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_ContractOffer() {
+      ::grpc::Service::MarkMethodRawCallback(5,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ContractOffer(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_ContractOffer() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractOffer(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractOfferRequest* /*request*/, ::dsp::v1alpha2::ContractOfferResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* ContractOffer(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_ContractAccept : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_ContractAccept() {
+      ::grpc::Service::MarkMethodRawCallback(6,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ContractAccept(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_ContractAccept() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractAccept(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractAcceptRequest* /*request*/, ::dsp::v1alpha2::ContractAcceptResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* ContractAccept(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_ContractAgree : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_ContractAgree() {
+      ::grpc::Service::MarkMethodRawCallback(7,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ContractAgree(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_ContractAgree() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractAgree(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractAgreeRequest* /*request*/, ::dsp::v1alpha2::ContractAgreeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* ContractAgree(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_ContractVerify : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_ContractVerify() {
+      ::grpc::Service::MarkMethodRawCallback(8,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ContractVerify(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_ContractVerify() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractVerify(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractVerifyRequest* /*request*/, ::dsp::v1alpha2::ContractVerifyResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* ContractVerify(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_ContractFinalize : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_ContractFinalize() {
+      ::grpc::Service::MarkMethodRawCallback(9,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ContractFinalize(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_ContractFinalize() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractFinalize(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractFinalizeRequest* /*request*/, ::dsp::v1alpha2::ContractFinalizeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* ContractFinalize(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_ContractTerminate : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_ContractTerminate() {
+      ::grpc::Service::MarkMethodRawCallback(10,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ContractTerminate(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_ContractTerminate() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ContractTerminate(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractTerminateRequest* /*request*/, ::dsp::v1alpha2::ContractTerminateResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* ContractTerminate(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_SignalTransferComplete : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_SignalTransferComplete() {
+      ::grpc::Service::MarkMethodRawCallback(11,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->SignalTransferComplete(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_SignalTransferComplete() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SignalTransferComplete(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferCompleteRequest* /*request*/, ::dsp::v1alpha2::SignalTransferCompleteResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* SignalTransferComplete(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_SignalTransferCancelled : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_SignalTransferCancelled() {
+      ::grpc::Service::MarkMethodRawCallback(12,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->SignalTransferCancelled(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_SignalTransferCancelled() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SignalTransferCancelled(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferCancelledRequest* /*request*/, ::dsp::v1alpha2::SignalTransferCancelledResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* SignalTransferCancelled(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_SignalTransferSuspend : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_SignalTransferSuspend() {
+      ::grpc::Service::MarkMethodRawCallback(13,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->SignalTransferSuspend(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_SignalTransferSuspend() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SignalTransferSuspend(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferSuspendRequest* /*request*/, ::dsp::v1alpha2::SignalTransferSuspendResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* SignalTransferSuspend(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_SignalTransferResume : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_SignalTransferResume() {
+      ::grpc::Service::MarkMethodRawCallback(14,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->SignalTransferResume(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_SignalTransferResume() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SignalTransferResume(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferResumeRequest* /*request*/, ::dsp::v1alpha2::SignalTransferResumeResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* SignalTransferResume(
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
@@ -410,330 +2139,13 @@ class ControlService final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedVerifyConnection(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::dsp::v1alpha2::VerifyConnectionRequest,::dsp::v1alpha2::VerifyConnectionResponse>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_GetProviderDatasetDownloadInformation<WithStreamedUnaryMethod_VerifyConnection<Service > > StreamedUnaryService;
-  typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_GetProviderDatasetDownloadInformation<WithStreamedUnaryMethod_VerifyConnection<Service > > StreamedService;
-};
-
-// CatalogueControlService contains methods to interact with dataspace catalogues.
-class CatalogueControlService final {
- public:
-  static constexpr char const* service_full_name() {
-    return "dsp.v1alpha2.CatalogueControlService";
-  }
-  class StubInterface {
-   public:
-    virtual ~StubInterface() {}
-    // Gets the catalogue based on the query parameters and the authorization header.
-    virtual ::grpc::Status GetProviderCatalogue(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest& request, ::dsp::v1alpha2::GetProviderCatalogueResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::GetProviderCatalogueResponse>> AsyncGetProviderCatalogue(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::GetProviderCatalogueResponse>>(AsyncGetProviderCatalogueRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::GetProviderCatalogueResponse>> PrepareAsyncGetProviderCatalogue(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::GetProviderCatalogueResponse>>(PrepareAsyncGetProviderCatalogueRaw(context, request, cq));
-    }
-    // Gets information about a single dataset.
-    virtual ::grpc::Status GetProviderDataset(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest& request, ::dsp::v1alpha2::GetProviderDatasetResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::GetProviderDatasetResponse>> AsyncGetProviderDataset(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::GetProviderDatasetResponse>>(AsyncGetProviderDatasetRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::GetProviderDatasetResponse>> PrepareAsyncGetProviderDataset(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::GetProviderDatasetResponse>>(PrepareAsyncGetProviderDatasetRaw(context, request, cq));
-    }
-    class async_interface {
-     public:
-      virtual ~async_interface() {}
-      // Gets the catalogue based on the query parameters and the authorization header.
-      virtual void GetProviderCatalogue(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest* request, ::dsp::v1alpha2::GetProviderCatalogueResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void GetProviderCatalogue(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest* request, ::dsp::v1alpha2::GetProviderCatalogueResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      // Gets information about a single dataset.
-      virtual void GetProviderDataset(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest* request, ::dsp::v1alpha2::GetProviderDatasetResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void GetProviderDataset(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest* request, ::dsp::v1alpha2::GetProviderDatasetResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-    };
-    typedef class async_interface experimental_async_interface;
-    virtual class async_interface* async() { return nullptr; }
-    class async_interface* experimental_async() { return async(); }
-   private:
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::GetProviderCatalogueResponse>* AsyncGetProviderCatalogueRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::GetProviderCatalogueResponse>* PrepareAsyncGetProviderCatalogueRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::GetProviderDatasetResponse>* AsyncGetProviderDatasetRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::GetProviderDatasetResponse>* PrepareAsyncGetProviderDatasetRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest& request, ::grpc::CompletionQueue* cq) = 0;
-  };
-  class Stub final : public StubInterface {
-   public:
-    Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
-    ::grpc::Status GetProviderCatalogue(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest& request, ::dsp::v1alpha2::GetProviderCatalogueResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::GetProviderCatalogueResponse>> AsyncGetProviderCatalogue(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::GetProviderCatalogueResponse>>(AsyncGetProviderCatalogueRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::GetProviderCatalogueResponse>> PrepareAsyncGetProviderCatalogue(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::GetProviderCatalogueResponse>>(PrepareAsyncGetProviderCatalogueRaw(context, request, cq));
-    }
-    ::grpc::Status GetProviderDataset(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest& request, ::dsp::v1alpha2::GetProviderDatasetResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::GetProviderDatasetResponse>> AsyncGetProviderDataset(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::GetProviderDatasetResponse>>(AsyncGetProviderDatasetRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::GetProviderDatasetResponse>> PrepareAsyncGetProviderDataset(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::GetProviderDatasetResponse>>(PrepareAsyncGetProviderDatasetRaw(context, request, cq));
-    }
-    class async final :
-      public StubInterface::async_interface {
-     public:
-      void GetProviderCatalogue(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest* request, ::dsp::v1alpha2::GetProviderCatalogueResponse* response, std::function<void(::grpc::Status)>) override;
-      void GetProviderCatalogue(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest* request, ::dsp::v1alpha2::GetProviderCatalogueResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void GetProviderDataset(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest* request, ::dsp::v1alpha2::GetProviderDatasetResponse* response, std::function<void(::grpc::Status)>) override;
-      void GetProviderDataset(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest* request, ::dsp::v1alpha2::GetProviderDatasetResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-     private:
-      friend class Stub;
-      explicit async(Stub* stub): stub_(stub) { }
-      Stub* stub() { return stub_; }
-      Stub* stub_;
-    };
-    class async* async() override { return &async_stub_; }
-
-   private:
-    std::shared_ptr< ::grpc::ChannelInterface> channel_;
-    class async async_stub_{this};
-    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::GetProviderCatalogueResponse>* AsyncGetProviderCatalogueRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::GetProviderCatalogueResponse>* PrepareAsyncGetProviderCatalogueRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::GetProviderDatasetResponse>* AsyncGetProviderDatasetRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::GetProviderDatasetResponse>* PrepareAsyncGetProviderDatasetRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest& request, ::grpc::CompletionQueue* cq) override;
-    const ::grpc::internal::RpcMethod rpcmethod_GetProviderCatalogue_;
-    const ::grpc::internal::RpcMethod rpcmethod_GetProviderDataset_;
-  };
-  static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
-
-  class Service : public ::grpc::Service {
-   public:
-    Service();
-    virtual ~Service();
-    // Gets the catalogue based on the query parameters and the authorization header.
-    virtual ::grpc::Status GetProviderCatalogue(::grpc::ServerContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest* request, ::dsp::v1alpha2::GetProviderCatalogueResponse* response);
-    // Gets information about a single dataset.
-    virtual ::grpc::Status GetProviderDataset(::grpc::ServerContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest* request, ::dsp::v1alpha2::GetProviderDatasetResponse* response);
-  };
-  template <class BaseClass>
-  class WithAsyncMethod_GetProviderCatalogue : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithAsyncMethod_GetProviderCatalogue() {
-      ::grpc::Service::MarkMethodAsync(0);
-    }
-    ~WithAsyncMethod_GetProviderCatalogue() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetProviderCatalogue(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::GetProviderCatalogueRequest* /*request*/, ::dsp::v1alpha2::GetProviderCatalogueResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestGetProviderCatalogue(::grpc::ServerContext* context, ::dsp::v1alpha2::GetProviderCatalogueRequest* request, ::grpc::ServerAsyncResponseWriter< ::dsp::v1alpha2::GetProviderCatalogueResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithAsyncMethod_GetProviderDataset : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithAsyncMethod_GetProviderDataset() {
-      ::grpc::Service::MarkMethodAsync(1);
-    }
-    ~WithAsyncMethod_GetProviderDataset() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetProviderDataset(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::GetProviderDatasetRequest* /*request*/, ::dsp::v1alpha2::GetProviderDatasetResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestGetProviderDataset(::grpc::ServerContext* context, ::dsp::v1alpha2::GetProviderDatasetRequest* request, ::grpc::ServerAsyncResponseWriter< ::dsp::v1alpha2::GetProviderDatasetResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  typedef WithAsyncMethod_GetProviderCatalogue<WithAsyncMethod_GetProviderDataset<Service > > AsyncService;
-  template <class BaseClass>
-  class WithCallbackMethod_GetProviderCatalogue : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_GetProviderCatalogue() {
-      ::grpc::Service::MarkMethodCallback(0,
-          new ::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::GetProviderCatalogueRequest, ::dsp::v1alpha2::GetProviderCatalogueResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::dsp::v1alpha2::GetProviderCatalogueRequest* request, ::dsp::v1alpha2::GetProviderCatalogueResponse* response) { return this->GetProviderCatalogue(context, request, response); }));}
-    void SetMessageAllocatorFor_GetProviderCatalogue(
-        ::grpc::MessageAllocator< ::dsp::v1alpha2::GetProviderCatalogueRequest, ::dsp::v1alpha2::GetProviderCatalogueResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::GetProviderCatalogueRequest, ::dsp::v1alpha2::GetProviderCatalogueResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_GetProviderCatalogue() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetProviderCatalogue(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::GetProviderCatalogueRequest* /*request*/, ::dsp::v1alpha2::GetProviderCatalogueResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* GetProviderCatalogue(
-      ::grpc::CallbackServerContext* /*context*/, const ::dsp::v1alpha2::GetProviderCatalogueRequest* /*request*/, ::dsp::v1alpha2::GetProviderCatalogueResponse* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithCallbackMethod_GetProviderDataset : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_GetProviderDataset() {
-      ::grpc::Service::MarkMethodCallback(1,
-          new ::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::GetProviderDatasetRequest, ::dsp::v1alpha2::GetProviderDatasetResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::dsp::v1alpha2::GetProviderDatasetRequest* request, ::dsp::v1alpha2::GetProviderDatasetResponse* response) { return this->GetProviderDataset(context, request, response); }));}
-    void SetMessageAllocatorFor_GetProviderDataset(
-        ::grpc::MessageAllocator< ::dsp::v1alpha2::GetProviderDatasetRequest, ::dsp::v1alpha2::GetProviderDatasetResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::GetProviderDatasetRequest, ::dsp::v1alpha2::GetProviderDatasetResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_GetProviderDataset() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetProviderDataset(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::GetProviderDatasetRequest* /*request*/, ::dsp::v1alpha2::GetProviderDatasetResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* GetProviderDataset(
-      ::grpc::CallbackServerContext* /*context*/, const ::dsp::v1alpha2::GetProviderDatasetRequest* /*request*/, ::dsp::v1alpha2::GetProviderDatasetResponse* /*response*/)  { return nullptr; }
-  };
-  typedef WithCallbackMethod_GetProviderCatalogue<WithCallbackMethod_GetProviderDataset<Service > > CallbackService;
-  typedef CallbackService ExperimentalCallbackService;
-  template <class BaseClass>
-  class WithGenericMethod_GetProviderCatalogue : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_GetProviderCatalogue() {
-      ::grpc::Service::MarkMethodGeneric(0);
-    }
-    ~WithGenericMethod_GetProviderCatalogue() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetProviderCatalogue(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::GetProviderCatalogueRequest* /*request*/, ::dsp::v1alpha2::GetProviderCatalogueResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
-  class WithGenericMethod_GetProviderDataset : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_GetProviderDataset() {
-      ::grpc::Service::MarkMethodGeneric(1);
-    }
-    ~WithGenericMethod_GetProviderDataset() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetProviderDataset(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::GetProviderDatasetRequest* /*request*/, ::dsp::v1alpha2::GetProviderDatasetResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
-  class WithRawMethod_GetProviderCatalogue : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_GetProviderCatalogue() {
-      ::grpc::Service::MarkMethodRaw(0);
-    }
-    ~WithRawMethod_GetProviderCatalogue() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetProviderCatalogue(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::GetProviderCatalogueRequest* /*request*/, ::dsp::v1alpha2::GetProviderCatalogueResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestGetProviderCatalogue(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithRawMethod_GetProviderDataset : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_GetProviderDataset() {
-      ::grpc::Service::MarkMethodRaw(1);
-    }
-    ~WithRawMethod_GetProviderDataset() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetProviderDataset(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::GetProviderDatasetRequest* /*request*/, ::dsp::v1alpha2::GetProviderDatasetResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestGetProviderDataset(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithRawCallbackMethod_GetProviderCatalogue : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_GetProviderCatalogue() {
-      ::grpc::Service::MarkMethodRawCallback(0,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetProviderCatalogue(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_GetProviderCatalogue() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetProviderCatalogue(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::GetProviderCatalogueRequest* /*request*/, ::dsp::v1alpha2::GetProviderCatalogueResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* GetProviderCatalogue(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithRawCallbackMethod_GetProviderDataset : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_GetProviderDataset() {
-      ::grpc::Service::MarkMethodRawCallback(1,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetProviderDataset(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_GetProviderDataset() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetProviderDataset(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::GetProviderDatasetRequest* /*request*/, ::dsp::v1alpha2::GetProviderDatasetResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* GetProviderDataset(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetProviderCatalogue : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_GetProviderCatalogue() {
-      ::grpc::Service::MarkMethodStreamed(0,
+      ::grpc::Service::MarkMethodStreamed(2,
         new ::grpc::internal::StreamedUnaryHandler<
           ::dsp::v1alpha2::GetProviderCatalogueRequest, ::dsp::v1alpha2::GetProviderCatalogueResponse>(
             [this](::grpc::ServerContext* context,
@@ -760,7 +2172,7 @@ class CatalogueControlService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_GetProviderDataset() {
-      ::grpc::Service::MarkMethodStreamed(1,
+      ::grpc::Service::MarkMethodStreamed(3,
         new ::grpc::internal::StreamedUnaryHandler<
           ::dsp::v1alpha2::GetProviderDatasetRequest, ::dsp::v1alpha2::GetProviderDatasetResponse>(
             [this](::grpc::ServerContext* context,
@@ -781,1759 +2193,194 @@ class CatalogueControlService final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedGetProviderDataset(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::dsp::v1alpha2::GetProviderDatasetRequest,::dsp::v1alpha2::GetProviderDatasetResponse>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_GetProviderCatalogue<WithStreamedUnaryMethod_GetProviderDataset<Service > > StreamedUnaryService;
-  typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_GetProviderCatalogue<WithStreamedUnaryMethod_GetProviderDataset<Service > > StreamedService;
-};
-
-// ContractControlService contains low level methods to send contract negotiation operations.
-class ContractControlService final {
- public:
-  static constexpr char const* service_full_name() {
-    return "dsp.v1alpha2.ContractControlService";
-  }
-  class StubInterface {
-   public:
-    virtual ~StubInterface() {}
-    // Request sends a ContractRequestMessage.
-    virtual ::grpc::Status Request(::grpc::ClientContext* context, const ::dsp::v1alpha2::RequestRequest& request, ::dsp::v1alpha2::RequestResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::RequestResponse>> AsyncRequest(::grpc::ClientContext* context, const ::dsp::v1alpha2::RequestRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::RequestResponse>>(AsyncRequestRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::RequestResponse>> PrepareAsyncRequest(::grpc::ClientContext* context, const ::dsp::v1alpha2::RequestRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::RequestResponse>>(PrepareAsyncRequestRaw(context, request, cq));
-    }
-    // Offer sends a ContractOfferMessage.
-    virtual ::grpc::Status Offer(::grpc::ClientContext* context, const ::dsp::v1alpha2::OfferRequest& request, ::dsp::v1alpha2::OfferResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::OfferResponse>> AsyncOffer(::grpc::ClientContext* context, const ::dsp::v1alpha2::OfferRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::OfferResponse>>(AsyncOfferRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::OfferResponse>> PrepareAsyncOffer(::grpc::ClientContext* context, const ::dsp::v1alpha2::OfferRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::OfferResponse>>(PrepareAsyncOfferRaw(context, request, cq));
-    }
-    // Accept sends an accepted event message.
-    virtual ::grpc::Status Accept(::grpc::ClientContext* context, const ::dsp::v1alpha2::AcceptRequest& request, ::dsp::v1alpha2::AcceptResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::AcceptResponse>> AsyncAccept(::grpc::ClientContext* context, const ::dsp::v1alpha2::AcceptRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::AcceptResponse>>(AsyncAcceptRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::AcceptResponse>> PrepareAsyncAccept(::grpc::ClientContext* context, const ::dsp::v1alpha2::AcceptRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::AcceptResponse>>(PrepareAsyncAcceptRaw(context, request, cq));
-    }
-    // Agree sends a ContractAcceptedMessage.
-    virtual ::grpc::Status Agree(::grpc::ClientContext* context, const ::dsp::v1alpha2::AgreeRequest& request, ::dsp::v1alpha2::AgreeResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::AgreeResponse>> AsyncAgree(::grpc::ClientContext* context, const ::dsp::v1alpha2::AgreeRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::AgreeResponse>>(AsyncAgreeRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::AgreeResponse>> PrepareAsyncAgree(::grpc::ClientContext* context, const ::dsp::v1alpha2::AgreeRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::AgreeResponse>>(PrepareAsyncAgreeRaw(context, request, cq));
-    }
-    // Verify sends a ContractVerificationMessage.
-    virtual ::grpc::Status Verify(::grpc::ClientContext* context, const ::dsp::v1alpha2::VerifyRequest& request, ::dsp::v1alpha2::VerifyResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::VerifyResponse>> AsyncVerify(::grpc::ClientContext* context, const ::dsp::v1alpha2::VerifyRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::VerifyResponse>>(AsyncVerifyRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::VerifyResponse>> PrepareAsyncVerify(::grpc::ClientContext* context, const ::dsp::v1alpha2::VerifyRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::VerifyResponse>>(PrepareAsyncVerifyRaw(context, request, cq));
-    }
-    // Finalize sends a finalization event.
-    virtual ::grpc::Status Finalize(::grpc::ClientContext* context, const ::dsp::v1alpha2::FinalizeRequest& request, ::dsp::v1alpha2::FinalizeResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::FinalizeResponse>> AsyncFinalize(::grpc::ClientContext* context, const ::dsp::v1alpha2::FinalizeRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::FinalizeResponse>>(AsyncFinalizeRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::FinalizeResponse>> PrepareAsyncFinalize(::grpc::ClientContext* context, const ::dsp::v1alpha2::FinalizeRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::FinalizeResponse>>(PrepareAsyncFinalizeRaw(context, request, cq));
-    }
-    // Terminate sends a ContractTerminationMessage.
-    virtual ::grpc::Status Terminate(::grpc::ClientContext* context, const ::dsp::v1alpha2::TerminateRequest& request, ::dsp::v1alpha2::TerminateResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::TerminateResponse>> AsyncTerminate(::grpc::ClientContext* context, const ::dsp::v1alpha2::TerminateRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::TerminateResponse>>(AsyncTerminateRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::TerminateResponse>> PrepareAsyncTerminate(::grpc::ClientContext* context, const ::dsp::v1alpha2::TerminateRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::TerminateResponse>>(PrepareAsyncTerminateRaw(context, request, cq));
-    }
-    class async_interface {
-     public:
-      virtual ~async_interface() {}
-      // Request sends a ContractRequestMessage.
-      virtual void Request(::grpc::ClientContext* context, const ::dsp::v1alpha2::RequestRequest* request, ::dsp::v1alpha2::RequestResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void Request(::grpc::ClientContext* context, const ::dsp::v1alpha2::RequestRequest* request, ::dsp::v1alpha2::RequestResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      // Offer sends a ContractOfferMessage.
-      virtual void Offer(::grpc::ClientContext* context, const ::dsp::v1alpha2::OfferRequest* request, ::dsp::v1alpha2::OfferResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void Offer(::grpc::ClientContext* context, const ::dsp::v1alpha2::OfferRequest* request, ::dsp::v1alpha2::OfferResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      // Accept sends an accepted event message.
-      virtual void Accept(::grpc::ClientContext* context, const ::dsp::v1alpha2::AcceptRequest* request, ::dsp::v1alpha2::AcceptResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void Accept(::grpc::ClientContext* context, const ::dsp::v1alpha2::AcceptRequest* request, ::dsp::v1alpha2::AcceptResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      // Agree sends a ContractAcceptedMessage.
-      virtual void Agree(::grpc::ClientContext* context, const ::dsp::v1alpha2::AgreeRequest* request, ::dsp::v1alpha2::AgreeResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void Agree(::grpc::ClientContext* context, const ::dsp::v1alpha2::AgreeRequest* request, ::dsp::v1alpha2::AgreeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      // Verify sends a ContractVerificationMessage.
-      virtual void Verify(::grpc::ClientContext* context, const ::dsp::v1alpha2::VerifyRequest* request, ::dsp::v1alpha2::VerifyResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void Verify(::grpc::ClientContext* context, const ::dsp::v1alpha2::VerifyRequest* request, ::dsp::v1alpha2::VerifyResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      // Finalize sends a finalization event.
-      virtual void Finalize(::grpc::ClientContext* context, const ::dsp::v1alpha2::FinalizeRequest* request, ::dsp::v1alpha2::FinalizeResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void Finalize(::grpc::ClientContext* context, const ::dsp::v1alpha2::FinalizeRequest* request, ::dsp::v1alpha2::FinalizeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      // Terminate sends a ContractTerminationMessage.
-      virtual void Terminate(::grpc::ClientContext* context, const ::dsp::v1alpha2::TerminateRequest* request, ::dsp::v1alpha2::TerminateResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void Terminate(::grpc::ClientContext* context, const ::dsp::v1alpha2::TerminateRequest* request, ::dsp::v1alpha2::TerminateResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-    };
-    typedef class async_interface experimental_async_interface;
-    virtual class async_interface* async() { return nullptr; }
-    class async_interface* experimental_async() { return async(); }
-   private:
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::RequestResponse>* AsyncRequestRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::RequestRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::RequestResponse>* PrepareAsyncRequestRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::RequestRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::OfferResponse>* AsyncOfferRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::OfferRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::OfferResponse>* PrepareAsyncOfferRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::OfferRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::AcceptResponse>* AsyncAcceptRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::AcceptRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::AcceptResponse>* PrepareAsyncAcceptRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::AcceptRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::AgreeResponse>* AsyncAgreeRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::AgreeRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::AgreeResponse>* PrepareAsyncAgreeRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::AgreeRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::VerifyResponse>* AsyncVerifyRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::VerifyRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::VerifyResponse>* PrepareAsyncVerifyRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::VerifyRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::FinalizeResponse>* AsyncFinalizeRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::FinalizeRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::FinalizeResponse>* PrepareAsyncFinalizeRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::FinalizeRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::TerminateResponse>* AsyncTerminateRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::TerminateRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::TerminateResponse>* PrepareAsyncTerminateRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::TerminateRequest& request, ::grpc::CompletionQueue* cq) = 0;
-  };
-  class Stub final : public StubInterface {
-   public:
-    Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
-    ::grpc::Status Request(::grpc::ClientContext* context, const ::dsp::v1alpha2::RequestRequest& request, ::dsp::v1alpha2::RequestResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::RequestResponse>> AsyncRequest(::grpc::ClientContext* context, const ::dsp::v1alpha2::RequestRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::RequestResponse>>(AsyncRequestRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::RequestResponse>> PrepareAsyncRequest(::grpc::ClientContext* context, const ::dsp::v1alpha2::RequestRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::RequestResponse>>(PrepareAsyncRequestRaw(context, request, cq));
-    }
-    ::grpc::Status Offer(::grpc::ClientContext* context, const ::dsp::v1alpha2::OfferRequest& request, ::dsp::v1alpha2::OfferResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::OfferResponse>> AsyncOffer(::grpc::ClientContext* context, const ::dsp::v1alpha2::OfferRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::OfferResponse>>(AsyncOfferRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::OfferResponse>> PrepareAsyncOffer(::grpc::ClientContext* context, const ::dsp::v1alpha2::OfferRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::OfferResponse>>(PrepareAsyncOfferRaw(context, request, cq));
-    }
-    ::grpc::Status Accept(::grpc::ClientContext* context, const ::dsp::v1alpha2::AcceptRequest& request, ::dsp::v1alpha2::AcceptResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::AcceptResponse>> AsyncAccept(::grpc::ClientContext* context, const ::dsp::v1alpha2::AcceptRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::AcceptResponse>>(AsyncAcceptRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::AcceptResponse>> PrepareAsyncAccept(::grpc::ClientContext* context, const ::dsp::v1alpha2::AcceptRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::AcceptResponse>>(PrepareAsyncAcceptRaw(context, request, cq));
-    }
-    ::grpc::Status Agree(::grpc::ClientContext* context, const ::dsp::v1alpha2::AgreeRequest& request, ::dsp::v1alpha2::AgreeResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::AgreeResponse>> AsyncAgree(::grpc::ClientContext* context, const ::dsp::v1alpha2::AgreeRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::AgreeResponse>>(AsyncAgreeRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::AgreeResponse>> PrepareAsyncAgree(::grpc::ClientContext* context, const ::dsp::v1alpha2::AgreeRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::AgreeResponse>>(PrepareAsyncAgreeRaw(context, request, cq));
-    }
-    ::grpc::Status Verify(::grpc::ClientContext* context, const ::dsp::v1alpha2::VerifyRequest& request, ::dsp::v1alpha2::VerifyResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::VerifyResponse>> AsyncVerify(::grpc::ClientContext* context, const ::dsp::v1alpha2::VerifyRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::VerifyResponse>>(AsyncVerifyRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::VerifyResponse>> PrepareAsyncVerify(::grpc::ClientContext* context, const ::dsp::v1alpha2::VerifyRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::VerifyResponse>>(PrepareAsyncVerifyRaw(context, request, cq));
-    }
-    ::grpc::Status Finalize(::grpc::ClientContext* context, const ::dsp::v1alpha2::FinalizeRequest& request, ::dsp::v1alpha2::FinalizeResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::FinalizeResponse>> AsyncFinalize(::grpc::ClientContext* context, const ::dsp::v1alpha2::FinalizeRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::FinalizeResponse>>(AsyncFinalizeRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::FinalizeResponse>> PrepareAsyncFinalize(::grpc::ClientContext* context, const ::dsp::v1alpha2::FinalizeRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::FinalizeResponse>>(PrepareAsyncFinalizeRaw(context, request, cq));
-    }
-    ::grpc::Status Terminate(::grpc::ClientContext* context, const ::dsp::v1alpha2::TerminateRequest& request, ::dsp::v1alpha2::TerminateResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::TerminateResponse>> AsyncTerminate(::grpc::ClientContext* context, const ::dsp::v1alpha2::TerminateRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::TerminateResponse>>(AsyncTerminateRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::TerminateResponse>> PrepareAsyncTerminate(::grpc::ClientContext* context, const ::dsp::v1alpha2::TerminateRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::TerminateResponse>>(PrepareAsyncTerminateRaw(context, request, cq));
-    }
-    class async final :
-      public StubInterface::async_interface {
-     public:
-      void Request(::grpc::ClientContext* context, const ::dsp::v1alpha2::RequestRequest* request, ::dsp::v1alpha2::RequestResponse* response, std::function<void(::grpc::Status)>) override;
-      void Request(::grpc::ClientContext* context, const ::dsp::v1alpha2::RequestRequest* request, ::dsp::v1alpha2::RequestResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void Offer(::grpc::ClientContext* context, const ::dsp::v1alpha2::OfferRequest* request, ::dsp::v1alpha2::OfferResponse* response, std::function<void(::grpc::Status)>) override;
-      void Offer(::grpc::ClientContext* context, const ::dsp::v1alpha2::OfferRequest* request, ::dsp::v1alpha2::OfferResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void Accept(::grpc::ClientContext* context, const ::dsp::v1alpha2::AcceptRequest* request, ::dsp::v1alpha2::AcceptResponse* response, std::function<void(::grpc::Status)>) override;
-      void Accept(::grpc::ClientContext* context, const ::dsp::v1alpha2::AcceptRequest* request, ::dsp::v1alpha2::AcceptResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void Agree(::grpc::ClientContext* context, const ::dsp::v1alpha2::AgreeRequest* request, ::dsp::v1alpha2::AgreeResponse* response, std::function<void(::grpc::Status)>) override;
-      void Agree(::grpc::ClientContext* context, const ::dsp::v1alpha2::AgreeRequest* request, ::dsp::v1alpha2::AgreeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void Verify(::grpc::ClientContext* context, const ::dsp::v1alpha2::VerifyRequest* request, ::dsp::v1alpha2::VerifyResponse* response, std::function<void(::grpc::Status)>) override;
-      void Verify(::grpc::ClientContext* context, const ::dsp::v1alpha2::VerifyRequest* request, ::dsp::v1alpha2::VerifyResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void Finalize(::grpc::ClientContext* context, const ::dsp::v1alpha2::FinalizeRequest* request, ::dsp::v1alpha2::FinalizeResponse* response, std::function<void(::grpc::Status)>) override;
-      void Finalize(::grpc::ClientContext* context, const ::dsp::v1alpha2::FinalizeRequest* request, ::dsp::v1alpha2::FinalizeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void Terminate(::grpc::ClientContext* context, const ::dsp::v1alpha2::TerminateRequest* request, ::dsp::v1alpha2::TerminateResponse* response, std::function<void(::grpc::Status)>) override;
-      void Terminate(::grpc::ClientContext* context, const ::dsp::v1alpha2::TerminateRequest* request, ::dsp::v1alpha2::TerminateResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-     private:
-      friend class Stub;
-      explicit async(Stub* stub): stub_(stub) { }
-      Stub* stub() { return stub_; }
-      Stub* stub_;
-    };
-    class async* async() override { return &async_stub_; }
-
-   private:
-    std::shared_ptr< ::grpc::ChannelInterface> channel_;
-    class async async_stub_{this};
-    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::RequestResponse>* AsyncRequestRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::RequestRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::RequestResponse>* PrepareAsyncRequestRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::RequestRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::OfferResponse>* AsyncOfferRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::OfferRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::OfferResponse>* PrepareAsyncOfferRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::OfferRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::AcceptResponse>* AsyncAcceptRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::AcceptRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::AcceptResponse>* PrepareAsyncAcceptRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::AcceptRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::AgreeResponse>* AsyncAgreeRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::AgreeRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::AgreeResponse>* PrepareAsyncAgreeRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::AgreeRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::VerifyResponse>* AsyncVerifyRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::VerifyRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::VerifyResponse>* PrepareAsyncVerifyRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::VerifyRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::FinalizeResponse>* AsyncFinalizeRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::FinalizeRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::FinalizeResponse>* PrepareAsyncFinalizeRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::FinalizeRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::TerminateResponse>* AsyncTerminateRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::TerminateRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::TerminateResponse>* PrepareAsyncTerminateRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::TerminateRequest& request, ::grpc::CompletionQueue* cq) override;
-    const ::grpc::internal::RpcMethod rpcmethod_Request_;
-    const ::grpc::internal::RpcMethod rpcmethod_Offer_;
-    const ::grpc::internal::RpcMethod rpcmethod_Accept_;
-    const ::grpc::internal::RpcMethod rpcmethod_Agree_;
-    const ::grpc::internal::RpcMethod rpcmethod_Verify_;
-    const ::grpc::internal::RpcMethod rpcmethod_Finalize_;
-    const ::grpc::internal::RpcMethod rpcmethod_Terminate_;
-  };
-  static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
-
-  class Service : public ::grpc::Service {
-   public:
-    Service();
-    virtual ~Service();
-    // Request sends a ContractRequestMessage.
-    virtual ::grpc::Status Request(::grpc::ServerContext* context, const ::dsp::v1alpha2::RequestRequest* request, ::dsp::v1alpha2::RequestResponse* response);
-    // Offer sends a ContractOfferMessage.
-    virtual ::grpc::Status Offer(::grpc::ServerContext* context, const ::dsp::v1alpha2::OfferRequest* request, ::dsp::v1alpha2::OfferResponse* response);
-    // Accept sends an accepted event message.
-    virtual ::grpc::Status Accept(::grpc::ServerContext* context, const ::dsp::v1alpha2::AcceptRequest* request, ::dsp::v1alpha2::AcceptResponse* response);
-    // Agree sends a ContractAcceptedMessage.
-    virtual ::grpc::Status Agree(::grpc::ServerContext* context, const ::dsp::v1alpha2::AgreeRequest* request, ::dsp::v1alpha2::AgreeResponse* response);
-    // Verify sends a ContractVerificationMessage.
-    virtual ::grpc::Status Verify(::grpc::ServerContext* context, const ::dsp::v1alpha2::VerifyRequest* request, ::dsp::v1alpha2::VerifyResponse* response);
-    // Finalize sends a finalization event.
-    virtual ::grpc::Status Finalize(::grpc::ServerContext* context, const ::dsp::v1alpha2::FinalizeRequest* request, ::dsp::v1alpha2::FinalizeResponse* response);
-    // Terminate sends a ContractTerminationMessage.
-    virtual ::grpc::Status Terminate(::grpc::ServerContext* context, const ::dsp::v1alpha2::TerminateRequest* request, ::dsp::v1alpha2::TerminateResponse* response);
-  };
   template <class BaseClass>
-  class WithAsyncMethod_Request : public BaseClass {
+  class WithStreamedUnaryMethod_ContractRequest : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithAsyncMethod_Request() {
-      ::grpc::Service::MarkMethodAsync(0);
-    }
-    ~WithAsyncMethod_Request() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Request(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::RequestRequest* /*request*/, ::dsp::v1alpha2::RequestResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestRequest(::grpc::ServerContext* context, ::dsp::v1alpha2::RequestRequest* request, ::grpc::ServerAsyncResponseWriter< ::dsp::v1alpha2::RequestResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithAsyncMethod_Offer : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithAsyncMethod_Offer() {
-      ::grpc::Service::MarkMethodAsync(1);
-    }
-    ~WithAsyncMethod_Offer() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Offer(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::OfferRequest* /*request*/, ::dsp::v1alpha2::OfferResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestOffer(::grpc::ServerContext* context, ::dsp::v1alpha2::OfferRequest* request, ::grpc::ServerAsyncResponseWriter< ::dsp::v1alpha2::OfferResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithAsyncMethod_Accept : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithAsyncMethod_Accept() {
-      ::grpc::Service::MarkMethodAsync(2);
-    }
-    ~WithAsyncMethod_Accept() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Accept(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::AcceptRequest* /*request*/, ::dsp::v1alpha2::AcceptResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestAccept(::grpc::ServerContext* context, ::dsp::v1alpha2::AcceptRequest* request, ::grpc::ServerAsyncResponseWriter< ::dsp::v1alpha2::AcceptResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithAsyncMethod_Agree : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithAsyncMethod_Agree() {
-      ::grpc::Service::MarkMethodAsync(3);
-    }
-    ~WithAsyncMethod_Agree() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Agree(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::AgreeRequest* /*request*/, ::dsp::v1alpha2::AgreeResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestAgree(::grpc::ServerContext* context, ::dsp::v1alpha2::AgreeRequest* request, ::grpc::ServerAsyncResponseWriter< ::dsp::v1alpha2::AgreeResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithAsyncMethod_Verify : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithAsyncMethod_Verify() {
-      ::grpc::Service::MarkMethodAsync(4);
-    }
-    ~WithAsyncMethod_Verify() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Verify(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::VerifyRequest* /*request*/, ::dsp::v1alpha2::VerifyResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestVerify(::grpc::ServerContext* context, ::dsp::v1alpha2::VerifyRequest* request, ::grpc::ServerAsyncResponseWriter< ::dsp::v1alpha2::VerifyResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithAsyncMethod_Finalize : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithAsyncMethod_Finalize() {
-      ::grpc::Service::MarkMethodAsync(5);
-    }
-    ~WithAsyncMethod_Finalize() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Finalize(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::FinalizeRequest* /*request*/, ::dsp::v1alpha2::FinalizeResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestFinalize(::grpc::ServerContext* context, ::dsp::v1alpha2::FinalizeRequest* request, ::grpc::ServerAsyncResponseWriter< ::dsp::v1alpha2::FinalizeResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithAsyncMethod_Terminate : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithAsyncMethod_Terminate() {
-      ::grpc::Service::MarkMethodAsync(6);
-    }
-    ~WithAsyncMethod_Terminate() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Terminate(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::TerminateRequest* /*request*/, ::dsp::v1alpha2::TerminateResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestTerminate(::grpc::ServerContext* context, ::dsp::v1alpha2::TerminateRequest* request, ::grpc::ServerAsyncResponseWriter< ::dsp::v1alpha2::TerminateResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  typedef WithAsyncMethod_Request<WithAsyncMethod_Offer<WithAsyncMethod_Accept<WithAsyncMethod_Agree<WithAsyncMethod_Verify<WithAsyncMethod_Finalize<WithAsyncMethod_Terminate<Service > > > > > > > AsyncService;
-  template <class BaseClass>
-  class WithCallbackMethod_Request : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_Request() {
-      ::grpc::Service::MarkMethodCallback(0,
-          new ::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::RequestRequest, ::dsp::v1alpha2::RequestResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::dsp::v1alpha2::RequestRequest* request, ::dsp::v1alpha2::RequestResponse* response) { return this->Request(context, request, response); }));}
-    void SetMessageAllocatorFor_Request(
-        ::grpc::MessageAllocator< ::dsp::v1alpha2::RequestRequest, ::dsp::v1alpha2::RequestResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::RequestRequest, ::dsp::v1alpha2::RequestResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_Request() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Request(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::RequestRequest* /*request*/, ::dsp::v1alpha2::RequestResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* Request(
-      ::grpc::CallbackServerContext* /*context*/, const ::dsp::v1alpha2::RequestRequest* /*request*/, ::dsp::v1alpha2::RequestResponse* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithCallbackMethod_Offer : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_Offer() {
-      ::grpc::Service::MarkMethodCallback(1,
-          new ::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::OfferRequest, ::dsp::v1alpha2::OfferResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::dsp::v1alpha2::OfferRequest* request, ::dsp::v1alpha2::OfferResponse* response) { return this->Offer(context, request, response); }));}
-    void SetMessageAllocatorFor_Offer(
-        ::grpc::MessageAllocator< ::dsp::v1alpha2::OfferRequest, ::dsp::v1alpha2::OfferResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::OfferRequest, ::dsp::v1alpha2::OfferResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_Offer() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Offer(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::OfferRequest* /*request*/, ::dsp::v1alpha2::OfferResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* Offer(
-      ::grpc::CallbackServerContext* /*context*/, const ::dsp::v1alpha2::OfferRequest* /*request*/, ::dsp::v1alpha2::OfferResponse* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithCallbackMethod_Accept : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_Accept() {
-      ::grpc::Service::MarkMethodCallback(2,
-          new ::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::AcceptRequest, ::dsp::v1alpha2::AcceptResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::dsp::v1alpha2::AcceptRequest* request, ::dsp::v1alpha2::AcceptResponse* response) { return this->Accept(context, request, response); }));}
-    void SetMessageAllocatorFor_Accept(
-        ::grpc::MessageAllocator< ::dsp::v1alpha2::AcceptRequest, ::dsp::v1alpha2::AcceptResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(2);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::AcceptRequest, ::dsp::v1alpha2::AcceptResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_Accept() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Accept(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::AcceptRequest* /*request*/, ::dsp::v1alpha2::AcceptResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* Accept(
-      ::grpc::CallbackServerContext* /*context*/, const ::dsp::v1alpha2::AcceptRequest* /*request*/, ::dsp::v1alpha2::AcceptResponse* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithCallbackMethod_Agree : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_Agree() {
-      ::grpc::Service::MarkMethodCallback(3,
-          new ::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::AgreeRequest, ::dsp::v1alpha2::AgreeResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::dsp::v1alpha2::AgreeRequest* request, ::dsp::v1alpha2::AgreeResponse* response) { return this->Agree(context, request, response); }));}
-    void SetMessageAllocatorFor_Agree(
-        ::grpc::MessageAllocator< ::dsp::v1alpha2::AgreeRequest, ::dsp::v1alpha2::AgreeResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(3);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::AgreeRequest, ::dsp::v1alpha2::AgreeResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_Agree() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Agree(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::AgreeRequest* /*request*/, ::dsp::v1alpha2::AgreeResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* Agree(
-      ::grpc::CallbackServerContext* /*context*/, const ::dsp::v1alpha2::AgreeRequest* /*request*/, ::dsp::v1alpha2::AgreeResponse* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithCallbackMethod_Verify : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_Verify() {
-      ::grpc::Service::MarkMethodCallback(4,
-          new ::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::VerifyRequest, ::dsp::v1alpha2::VerifyResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::dsp::v1alpha2::VerifyRequest* request, ::dsp::v1alpha2::VerifyResponse* response) { return this->Verify(context, request, response); }));}
-    void SetMessageAllocatorFor_Verify(
-        ::grpc::MessageAllocator< ::dsp::v1alpha2::VerifyRequest, ::dsp::v1alpha2::VerifyResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(4);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::VerifyRequest, ::dsp::v1alpha2::VerifyResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_Verify() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Verify(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::VerifyRequest* /*request*/, ::dsp::v1alpha2::VerifyResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* Verify(
-      ::grpc::CallbackServerContext* /*context*/, const ::dsp::v1alpha2::VerifyRequest* /*request*/, ::dsp::v1alpha2::VerifyResponse* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithCallbackMethod_Finalize : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_Finalize() {
-      ::grpc::Service::MarkMethodCallback(5,
-          new ::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::FinalizeRequest, ::dsp::v1alpha2::FinalizeResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::dsp::v1alpha2::FinalizeRequest* request, ::dsp::v1alpha2::FinalizeResponse* response) { return this->Finalize(context, request, response); }));}
-    void SetMessageAllocatorFor_Finalize(
-        ::grpc::MessageAllocator< ::dsp::v1alpha2::FinalizeRequest, ::dsp::v1alpha2::FinalizeResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(5);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::FinalizeRequest, ::dsp::v1alpha2::FinalizeResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_Finalize() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Finalize(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::FinalizeRequest* /*request*/, ::dsp::v1alpha2::FinalizeResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* Finalize(
-      ::grpc::CallbackServerContext* /*context*/, const ::dsp::v1alpha2::FinalizeRequest* /*request*/, ::dsp::v1alpha2::FinalizeResponse* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithCallbackMethod_Terminate : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_Terminate() {
-      ::grpc::Service::MarkMethodCallback(6,
-          new ::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::TerminateRequest, ::dsp::v1alpha2::TerminateResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::dsp::v1alpha2::TerminateRequest* request, ::dsp::v1alpha2::TerminateResponse* response) { return this->Terminate(context, request, response); }));}
-    void SetMessageAllocatorFor_Terminate(
-        ::grpc::MessageAllocator< ::dsp::v1alpha2::TerminateRequest, ::dsp::v1alpha2::TerminateResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(6);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::TerminateRequest, ::dsp::v1alpha2::TerminateResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_Terminate() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Terminate(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::TerminateRequest* /*request*/, ::dsp::v1alpha2::TerminateResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* Terminate(
-      ::grpc::CallbackServerContext* /*context*/, const ::dsp::v1alpha2::TerminateRequest* /*request*/, ::dsp::v1alpha2::TerminateResponse* /*response*/)  { return nullptr; }
-  };
-  typedef WithCallbackMethod_Request<WithCallbackMethod_Offer<WithCallbackMethod_Accept<WithCallbackMethod_Agree<WithCallbackMethod_Verify<WithCallbackMethod_Finalize<WithCallbackMethod_Terminate<Service > > > > > > > CallbackService;
-  typedef CallbackService ExperimentalCallbackService;
-  template <class BaseClass>
-  class WithGenericMethod_Request : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_Request() {
-      ::grpc::Service::MarkMethodGeneric(0);
-    }
-    ~WithGenericMethod_Request() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Request(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::RequestRequest* /*request*/, ::dsp::v1alpha2::RequestResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
-  class WithGenericMethod_Offer : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_Offer() {
-      ::grpc::Service::MarkMethodGeneric(1);
-    }
-    ~WithGenericMethod_Offer() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Offer(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::OfferRequest* /*request*/, ::dsp::v1alpha2::OfferResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
-  class WithGenericMethod_Accept : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_Accept() {
-      ::grpc::Service::MarkMethodGeneric(2);
-    }
-    ~WithGenericMethod_Accept() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Accept(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::AcceptRequest* /*request*/, ::dsp::v1alpha2::AcceptResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
-  class WithGenericMethod_Agree : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_Agree() {
-      ::grpc::Service::MarkMethodGeneric(3);
-    }
-    ~WithGenericMethod_Agree() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Agree(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::AgreeRequest* /*request*/, ::dsp::v1alpha2::AgreeResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
-  class WithGenericMethod_Verify : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_Verify() {
-      ::grpc::Service::MarkMethodGeneric(4);
-    }
-    ~WithGenericMethod_Verify() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Verify(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::VerifyRequest* /*request*/, ::dsp::v1alpha2::VerifyResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
-  class WithGenericMethod_Finalize : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_Finalize() {
-      ::grpc::Service::MarkMethodGeneric(5);
-    }
-    ~WithGenericMethod_Finalize() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Finalize(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::FinalizeRequest* /*request*/, ::dsp::v1alpha2::FinalizeResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
-  class WithGenericMethod_Terminate : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_Terminate() {
-      ::grpc::Service::MarkMethodGeneric(6);
-    }
-    ~WithGenericMethod_Terminate() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Terminate(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::TerminateRequest* /*request*/, ::dsp::v1alpha2::TerminateResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
-  class WithRawMethod_Request : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_Request() {
-      ::grpc::Service::MarkMethodRaw(0);
-    }
-    ~WithRawMethod_Request() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Request(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::RequestRequest* /*request*/, ::dsp::v1alpha2::RequestResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestRequest(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithRawMethod_Offer : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_Offer() {
-      ::grpc::Service::MarkMethodRaw(1);
-    }
-    ~WithRawMethod_Offer() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Offer(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::OfferRequest* /*request*/, ::dsp::v1alpha2::OfferResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestOffer(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithRawMethod_Accept : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_Accept() {
-      ::grpc::Service::MarkMethodRaw(2);
-    }
-    ~WithRawMethod_Accept() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Accept(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::AcceptRequest* /*request*/, ::dsp::v1alpha2::AcceptResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestAccept(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithRawMethod_Agree : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_Agree() {
-      ::grpc::Service::MarkMethodRaw(3);
-    }
-    ~WithRawMethod_Agree() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Agree(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::AgreeRequest* /*request*/, ::dsp::v1alpha2::AgreeResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestAgree(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithRawMethod_Verify : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_Verify() {
-      ::grpc::Service::MarkMethodRaw(4);
-    }
-    ~WithRawMethod_Verify() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Verify(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::VerifyRequest* /*request*/, ::dsp::v1alpha2::VerifyResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestVerify(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithRawMethod_Finalize : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_Finalize() {
-      ::grpc::Service::MarkMethodRaw(5);
-    }
-    ~WithRawMethod_Finalize() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Finalize(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::FinalizeRequest* /*request*/, ::dsp::v1alpha2::FinalizeResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestFinalize(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithRawMethod_Terminate : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_Terminate() {
-      ::grpc::Service::MarkMethodRaw(6);
-    }
-    ~WithRawMethod_Terminate() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Terminate(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::TerminateRequest* /*request*/, ::dsp::v1alpha2::TerminateResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestTerminate(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithRawCallbackMethod_Request : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_Request() {
-      ::grpc::Service::MarkMethodRawCallback(0,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Request(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_Request() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Request(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::RequestRequest* /*request*/, ::dsp::v1alpha2::RequestResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* Request(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithRawCallbackMethod_Offer : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_Offer() {
-      ::grpc::Service::MarkMethodRawCallback(1,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Offer(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_Offer() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Offer(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::OfferRequest* /*request*/, ::dsp::v1alpha2::OfferResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* Offer(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithRawCallbackMethod_Accept : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_Accept() {
-      ::grpc::Service::MarkMethodRawCallback(2,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Accept(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_Accept() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Accept(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::AcceptRequest* /*request*/, ::dsp::v1alpha2::AcceptResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* Accept(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithRawCallbackMethod_Agree : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_Agree() {
-      ::grpc::Service::MarkMethodRawCallback(3,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Agree(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_Agree() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Agree(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::AgreeRequest* /*request*/, ::dsp::v1alpha2::AgreeResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* Agree(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithRawCallbackMethod_Verify : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_Verify() {
-      ::grpc::Service::MarkMethodRawCallback(4,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Verify(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_Verify() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Verify(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::VerifyRequest* /*request*/, ::dsp::v1alpha2::VerifyResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* Verify(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithRawCallbackMethod_Finalize : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_Finalize() {
-      ::grpc::Service::MarkMethodRawCallback(5,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Finalize(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_Finalize() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Finalize(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::FinalizeRequest* /*request*/, ::dsp::v1alpha2::FinalizeResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* Finalize(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithRawCallbackMethod_Terminate : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_Terminate() {
-      ::grpc::Service::MarkMethodRawCallback(6,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Terminate(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_Terminate() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status Terminate(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::TerminateRequest* /*request*/, ::dsp::v1alpha2::TerminateResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* Terminate(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithStreamedUnaryMethod_Request : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithStreamedUnaryMethod_Request() {
-      ::grpc::Service::MarkMethodStreamed(0,
-        new ::grpc::internal::StreamedUnaryHandler<
-          ::dsp::v1alpha2::RequestRequest, ::dsp::v1alpha2::RequestResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
-                     ::dsp::v1alpha2::RequestRequest, ::dsp::v1alpha2::RequestResponse>* streamer) {
-                       return this->StreamedRequest(context,
-                         streamer);
-                  }));
-    }
-    ~WithStreamedUnaryMethod_Request() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable regular version of this method
-    ::grpc::Status Request(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::RequestRequest* /*request*/, ::dsp::v1alpha2::RequestResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedRequest(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::dsp::v1alpha2::RequestRequest,::dsp::v1alpha2::RequestResponse>* server_unary_streamer) = 0;
-  };
-  template <class BaseClass>
-  class WithStreamedUnaryMethod_Offer : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithStreamedUnaryMethod_Offer() {
-      ::grpc::Service::MarkMethodStreamed(1,
-        new ::grpc::internal::StreamedUnaryHandler<
-          ::dsp::v1alpha2::OfferRequest, ::dsp::v1alpha2::OfferResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
-                     ::dsp::v1alpha2::OfferRequest, ::dsp::v1alpha2::OfferResponse>* streamer) {
-                       return this->StreamedOffer(context,
-                         streamer);
-                  }));
-    }
-    ~WithStreamedUnaryMethod_Offer() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable regular version of this method
-    ::grpc::Status Offer(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::OfferRequest* /*request*/, ::dsp::v1alpha2::OfferResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedOffer(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::dsp::v1alpha2::OfferRequest,::dsp::v1alpha2::OfferResponse>* server_unary_streamer) = 0;
-  };
-  template <class BaseClass>
-  class WithStreamedUnaryMethod_Accept : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithStreamedUnaryMethod_Accept() {
-      ::grpc::Service::MarkMethodStreamed(2,
-        new ::grpc::internal::StreamedUnaryHandler<
-          ::dsp::v1alpha2::AcceptRequest, ::dsp::v1alpha2::AcceptResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
-                     ::dsp::v1alpha2::AcceptRequest, ::dsp::v1alpha2::AcceptResponse>* streamer) {
-                       return this->StreamedAccept(context,
-                         streamer);
-                  }));
-    }
-    ~WithStreamedUnaryMethod_Accept() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable regular version of this method
-    ::grpc::Status Accept(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::AcceptRequest* /*request*/, ::dsp::v1alpha2::AcceptResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedAccept(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::dsp::v1alpha2::AcceptRequest,::dsp::v1alpha2::AcceptResponse>* server_unary_streamer) = 0;
-  };
-  template <class BaseClass>
-  class WithStreamedUnaryMethod_Agree : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithStreamedUnaryMethod_Agree() {
-      ::grpc::Service::MarkMethodStreamed(3,
-        new ::grpc::internal::StreamedUnaryHandler<
-          ::dsp::v1alpha2::AgreeRequest, ::dsp::v1alpha2::AgreeResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
-                     ::dsp::v1alpha2::AgreeRequest, ::dsp::v1alpha2::AgreeResponse>* streamer) {
-                       return this->StreamedAgree(context,
-                         streamer);
-                  }));
-    }
-    ~WithStreamedUnaryMethod_Agree() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable regular version of this method
-    ::grpc::Status Agree(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::AgreeRequest* /*request*/, ::dsp::v1alpha2::AgreeResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedAgree(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::dsp::v1alpha2::AgreeRequest,::dsp::v1alpha2::AgreeResponse>* server_unary_streamer) = 0;
-  };
-  template <class BaseClass>
-  class WithStreamedUnaryMethod_Verify : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithStreamedUnaryMethod_Verify() {
+    WithStreamedUnaryMethod_ContractRequest() {
       ::grpc::Service::MarkMethodStreamed(4,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::dsp::v1alpha2::VerifyRequest, ::dsp::v1alpha2::VerifyResponse>(
+          ::dsp::v1alpha2::ContractRequestRequest, ::dsp::v1alpha2::ContractRequestResponse>(
             [this](::grpc::ServerContext* context,
                    ::grpc::ServerUnaryStreamer<
-                     ::dsp::v1alpha2::VerifyRequest, ::dsp::v1alpha2::VerifyResponse>* streamer) {
-                       return this->StreamedVerify(context,
+                     ::dsp::v1alpha2::ContractRequestRequest, ::dsp::v1alpha2::ContractRequestResponse>* streamer) {
+                       return this->StreamedContractRequest(context,
                          streamer);
                   }));
     }
-    ~WithStreamedUnaryMethod_Verify() override {
+    ~WithStreamedUnaryMethod_ContractRequest() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status Verify(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::VerifyRequest* /*request*/, ::dsp::v1alpha2::VerifyResponse* /*response*/) override {
+    ::grpc::Status ContractRequest(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractRequestRequest* /*request*/, ::dsp::v1alpha2::ContractRequestResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedVerify(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::dsp::v1alpha2::VerifyRequest,::dsp::v1alpha2::VerifyResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedContractRequest(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::dsp::v1alpha2::ContractRequestRequest,::dsp::v1alpha2::ContractRequestResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
-  class WithStreamedUnaryMethod_Finalize : public BaseClass {
+  class WithStreamedUnaryMethod_ContractOffer : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithStreamedUnaryMethod_Finalize() {
+    WithStreamedUnaryMethod_ContractOffer() {
       ::grpc::Service::MarkMethodStreamed(5,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::dsp::v1alpha2::FinalizeRequest, ::dsp::v1alpha2::FinalizeResponse>(
+          ::dsp::v1alpha2::ContractOfferRequest, ::dsp::v1alpha2::ContractOfferResponse>(
             [this](::grpc::ServerContext* context,
                    ::grpc::ServerUnaryStreamer<
-                     ::dsp::v1alpha2::FinalizeRequest, ::dsp::v1alpha2::FinalizeResponse>* streamer) {
-                       return this->StreamedFinalize(context,
+                     ::dsp::v1alpha2::ContractOfferRequest, ::dsp::v1alpha2::ContractOfferResponse>* streamer) {
+                       return this->StreamedContractOffer(context,
                          streamer);
                   }));
     }
-    ~WithStreamedUnaryMethod_Finalize() override {
+    ~WithStreamedUnaryMethod_ContractOffer() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status Finalize(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::FinalizeRequest* /*request*/, ::dsp::v1alpha2::FinalizeResponse* /*response*/) override {
+    ::grpc::Status ContractOffer(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractOfferRequest* /*request*/, ::dsp::v1alpha2::ContractOfferResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedFinalize(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::dsp::v1alpha2::FinalizeRequest,::dsp::v1alpha2::FinalizeResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedContractOffer(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::dsp::v1alpha2::ContractOfferRequest,::dsp::v1alpha2::ContractOfferResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
-  class WithStreamedUnaryMethod_Terminate : public BaseClass {
+  class WithStreamedUnaryMethod_ContractAccept : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithStreamedUnaryMethod_Terminate() {
+    WithStreamedUnaryMethod_ContractAccept() {
       ::grpc::Service::MarkMethodStreamed(6,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::dsp::v1alpha2::TerminateRequest, ::dsp::v1alpha2::TerminateResponse>(
+          ::dsp::v1alpha2::ContractAcceptRequest, ::dsp::v1alpha2::ContractAcceptResponse>(
             [this](::grpc::ServerContext* context,
                    ::grpc::ServerUnaryStreamer<
-                     ::dsp::v1alpha2::TerminateRequest, ::dsp::v1alpha2::TerminateResponse>* streamer) {
-                       return this->StreamedTerminate(context,
+                     ::dsp::v1alpha2::ContractAcceptRequest, ::dsp::v1alpha2::ContractAcceptResponse>* streamer) {
+                       return this->StreamedContractAccept(context,
                          streamer);
                   }));
     }
-    ~WithStreamedUnaryMethod_Terminate() override {
+    ~WithStreamedUnaryMethod_ContractAccept() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status Terminate(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::TerminateRequest* /*request*/, ::dsp::v1alpha2::TerminateResponse* /*response*/) override {
+    ::grpc::Status ContractAccept(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractAcceptRequest* /*request*/, ::dsp::v1alpha2::ContractAcceptResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedTerminate(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::dsp::v1alpha2::TerminateRequest,::dsp::v1alpha2::TerminateResponse>* server_unary_streamer) = 0;
-  };
-  typedef WithStreamedUnaryMethod_Request<WithStreamedUnaryMethod_Offer<WithStreamedUnaryMethod_Accept<WithStreamedUnaryMethod_Agree<WithStreamedUnaryMethod_Verify<WithStreamedUnaryMethod_Finalize<WithStreamedUnaryMethod_Terminate<Service > > > > > > > StreamedUnaryService;
-  typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_Request<WithStreamedUnaryMethod_Offer<WithStreamedUnaryMethod_Accept<WithStreamedUnaryMethod_Agree<WithStreamedUnaryMethod_Verify<WithStreamedUnaryMethod_Finalize<WithStreamedUnaryMethod_Terminate<Service > > > > > > > StreamedService;
-};
-
-// TransferControlService contains low level methods to send transfer negotiation operations.
-class TransferControlService final {
- public:
-  static constexpr char const* service_full_name() {
-    return "dsp.v1alpha2.TransferControlService";
-  }
-  class StubInterface {
-   public:
-    virtual ~StubInterface() {}
-    // Tells provider that we have finished our transfer.
-    virtual ::grpc::Status SignalTransferComplete(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest& request, ::dsp::v1alpha2::SignalTransferCompleteResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferCompleteResponse>> AsyncSignalTransferComplete(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferCompleteResponse>>(AsyncSignalTransferCompleteRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferCompleteResponse>> PrepareAsyncSignalTransferComplete(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferCompleteResponse>>(PrepareAsyncSignalTransferCompleteRaw(context, request, cq));
-    }
-    // Tells provider to cancel file transfer
-    virtual ::grpc::Status SignalTransferCancelled(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest& request, ::dsp::v1alpha2::SignalTransferCancelledResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferCancelledResponse>> AsyncSignalTransferCancelled(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferCancelledResponse>>(AsyncSignalTransferCancelledRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferCancelledResponse>> PrepareAsyncSignalTransferCancelled(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferCancelledResponse>>(PrepareAsyncSignalTransferCancelledRaw(context, request, cq));
-    }
-    // Tells provider to suspend file transfer
-    virtual ::grpc::Status SignalTransferSuspend(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest& request, ::dsp::v1alpha2::SignalTransferSuspendResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferSuspendResponse>> AsyncSignalTransferSuspend(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferSuspendResponse>>(AsyncSignalTransferSuspendRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferSuspendResponse>> PrepareAsyncSignalTransferSuspend(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferSuspendResponse>>(PrepareAsyncSignalTransferSuspendRaw(context, request, cq));
-    }
-    // Tells provider to resume file transfer
-    virtual ::grpc::Status SignalTransferResume(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest& request, ::dsp::v1alpha2::SignalTransferResumeResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferResumeResponse>> AsyncSignalTransferResume(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferResumeResponse>>(AsyncSignalTransferResumeRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferResumeResponse>> PrepareAsyncSignalTransferResume(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferResumeResponse>>(PrepareAsyncSignalTransferResumeRaw(context, request, cq));
-    }
-    class async_interface {
-     public:
-      virtual ~async_interface() {}
-      // Tells provider that we have finished our transfer.
-      virtual void SignalTransferComplete(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest* request, ::dsp::v1alpha2::SignalTransferCompleteResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void SignalTransferComplete(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest* request, ::dsp::v1alpha2::SignalTransferCompleteResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      // Tells provider to cancel file transfer
-      virtual void SignalTransferCancelled(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest* request, ::dsp::v1alpha2::SignalTransferCancelledResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void SignalTransferCancelled(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest* request, ::dsp::v1alpha2::SignalTransferCancelledResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      // Tells provider to suspend file transfer
-      virtual void SignalTransferSuspend(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest* request, ::dsp::v1alpha2::SignalTransferSuspendResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void SignalTransferSuspend(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest* request, ::dsp::v1alpha2::SignalTransferSuspendResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      // Tells provider to resume file transfer
-      virtual void SignalTransferResume(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest* request, ::dsp::v1alpha2::SignalTransferResumeResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void SignalTransferResume(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest* request, ::dsp::v1alpha2::SignalTransferResumeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-    };
-    typedef class async_interface experimental_async_interface;
-    virtual class async_interface* async() { return nullptr; }
-    class async_interface* experimental_async() { return async(); }
-   private:
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferCompleteResponse>* AsyncSignalTransferCompleteRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferCompleteResponse>* PrepareAsyncSignalTransferCompleteRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferCancelledResponse>* AsyncSignalTransferCancelledRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferCancelledResponse>* PrepareAsyncSignalTransferCancelledRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferSuspendResponse>* AsyncSignalTransferSuspendRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferSuspendResponse>* PrepareAsyncSignalTransferSuspendRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferResumeResponse>* AsyncSignalTransferResumeRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::dsp::v1alpha2::SignalTransferResumeResponse>* PrepareAsyncSignalTransferResumeRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest& request, ::grpc::CompletionQueue* cq) = 0;
-  };
-  class Stub final : public StubInterface {
-   public:
-    Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
-    ::grpc::Status SignalTransferComplete(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest& request, ::dsp::v1alpha2::SignalTransferCompleteResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferCompleteResponse>> AsyncSignalTransferComplete(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferCompleteResponse>>(AsyncSignalTransferCompleteRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferCompleteResponse>> PrepareAsyncSignalTransferComplete(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferCompleteResponse>>(PrepareAsyncSignalTransferCompleteRaw(context, request, cq));
-    }
-    ::grpc::Status SignalTransferCancelled(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest& request, ::dsp::v1alpha2::SignalTransferCancelledResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferCancelledResponse>> AsyncSignalTransferCancelled(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferCancelledResponse>>(AsyncSignalTransferCancelledRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferCancelledResponse>> PrepareAsyncSignalTransferCancelled(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferCancelledResponse>>(PrepareAsyncSignalTransferCancelledRaw(context, request, cq));
-    }
-    ::grpc::Status SignalTransferSuspend(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest& request, ::dsp::v1alpha2::SignalTransferSuspendResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferSuspendResponse>> AsyncSignalTransferSuspend(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferSuspendResponse>>(AsyncSignalTransferSuspendRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferSuspendResponse>> PrepareAsyncSignalTransferSuspend(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferSuspendResponse>>(PrepareAsyncSignalTransferSuspendRaw(context, request, cq));
-    }
-    ::grpc::Status SignalTransferResume(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest& request, ::dsp::v1alpha2::SignalTransferResumeResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferResumeResponse>> AsyncSignalTransferResume(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferResumeResponse>>(AsyncSignalTransferResumeRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferResumeResponse>> PrepareAsyncSignalTransferResume(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferResumeResponse>>(PrepareAsyncSignalTransferResumeRaw(context, request, cq));
-    }
-    class async final :
-      public StubInterface::async_interface {
-     public:
-      void SignalTransferComplete(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest* request, ::dsp::v1alpha2::SignalTransferCompleteResponse* response, std::function<void(::grpc::Status)>) override;
-      void SignalTransferComplete(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest* request, ::dsp::v1alpha2::SignalTransferCompleteResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void SignalTransferCancelled(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest* request, ::dsp::v1alpha2::SignalTransferCancelledResponse* response, std::function<void(::grpc::Status)>) override;
-      void SignalTransferCancelled(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest* request, ::dsp::v1alpha2::SignalTransferCancelledResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void SignalTransferSuspend(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest* request, ::dsp::v1alpha2::SignalTransferSuspendResponse* response, std::function<void(::grpc::Status)>) override;
-      void SignalTransferSuspend(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest* request, ::dsp::v1alpha2::SignalTransferSuspendResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void SignalTransferResume(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest* request, ::dsp::v1alpha2::SignalTransferResumeResponse* response, std::function<void(::grpc::Status)>) override;
-      void SignalTransferResume(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest* request, ::dsp::v1alpha2::SignalTransferResumeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-     private:
-      friend class Stub;
-      explicit async(Stub* stub): stub_(stub) { }
-      Stub* stub() { return stub_; }
-      Stub* stub_;
-    };
-    class async* async() override { return &async_stub_; }
-
-   private:
-    std::shared_ptr< ::grpc::ChannelInterface> channel_;
-    class async async_stub_{this};
-    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferCompleteResponse>* AsyncSignalTransferCompleteRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferCompleteResponse>* PrepareAsyncSignalTransferCompleteRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferCancelledResponse>* AsyncSignalTransferCancelledRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferCancelledResponse>* PrepareAsyncSignalTransferCancelledRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferSuspendResponse>* AsyncSignalTransferSuspendRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferSuspendResponse>* PrepareAsyncSignalTransferSuspendRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferResumeResponse>* AsyncSignalTransferResumeRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::dsp::v1alpha2::SignalTransferResumeResponse>* PrepareAsyncSignalTransferResumeRaw(::grpc::ClientContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest& request, ::grpc::CompletionQueue* cq) override;
-    const ::grpc::internal::RpcMethod rpcmethod_SignalTransferComplete_;
-    const ::grpc::internal::RpcMethod rpcmethod_SignalTransferCancelled_;
-    const ::grpc::internal::RpcMethod rpcmethod_SignalTransferSuspend_;
-    const ::grpc::internal::RpcMethod rpcmethod_SignalTransferResume_;
-  };
-  static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
-
-  class Service : public ::grpc::Service {
-   public:
-    Service();
-    virtual ~Service();
-    // Tells provider that we have finished our transfer.
-    virtual ::grpc::Status SignalTransferComplete(::grpc::ServerContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest* request, ::dsp::v1alpha2::SignalTransferCompleteResponse* response);
-    // Tells provider to cancel file transfer
-    virtual ::grpc::Status SignalTransferCancelled(::grpc::ServerContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest* request, ::dsp::v1alpha2::SignalTransferCancelledResponse* response);
-    // Tells provider to suspend file transfer
-    virtual ::grpc::Status SignalTransferSuspend(::grpc::ServerContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest* request, ::dsp::v1alpha2::SignalTransferSuspendResponse* response);
-    // Tells provider to resume file transfer
-    virtual ::grpc::Status SignalTransferResume(::grpc::ServerContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest* request, ::dsp::v1alpha2::SignalTransferResumeResponse* response);
+    virtual ::grpc::Status StreamedContractAccept(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::dsp::v1alpha2::ContractAcceptRequest,::dsp::v1alpha2::ContractAcceptResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
-  class WithAsyncMethod_SignalTransferComplete : public BaseClass {
+  class WithStreamedUnaryMethod_ContractAgree : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithAsyncMethod_SignalTransferComplete() {
-      ::grpc::Service::MarkMethodAsync(0);
+    WithStreamedUnaryMethod_ContractAgree() {
+      ::grpc::Service::MarkMethodStreamed(7,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::dsp::v1alpha2::ContractAgreeRequest, ::dsp::v1alpha2::ContractAgreeResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::dsp::v1alpha2::ContractAgreeRequest, ::dsp::v1alpha2::ContractAgreeResponse>* streamer) {
+                       return this->StreamedContractAgree(context,
+                         streamer);
+                  }));
     }
-    ~WithAsyncMethod_SignalTransferComplete() override {
+    ~WithStreamedUnaryMethod_ContractAgree() override {
       BaseClassMustBeDerivedFromService(this);
     }
-    // disable synchronous version of this method
-    ::grpc::Status SignalTransferComplete(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferCompleteRequest* /*request*/, ::dsp::v1alpha2::SignalTransferCompleteResponse* /*response*/) override {
+    // disable regular version of this method
+    ::grpc::Status ContractAgree(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractAgreeRequest* /*request*/, ::dsp::v1alpha2::ContractAgreeResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestSignalTransferComplete(::grpc::ServerContext* context, ::dsp::v1alpha2::SignalTransferCompleteRequest* request, ::grpc::ServerAsyncResponseWriter< ::dsp::v1alpha2::SignalTransferCompleteResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
-    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedContractAgree(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::dsp::v1alpha2::ContractAgreeRequest,::dsp::v1alpha2::ContractAgreeResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
-  class WithAsyncMethod_SignalTransferCancelled : public BaseClass {
+  class WithStreamedUnaryMethod_ContractVerify : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithAsyncMethod_SignalTransferCancelled() {
-      ::grpc::Service::MarkMethodAsync(1);
+    WithStreamedUnaryMethod_ContractVerify() {
+      ::grpc::Service::MarkMethodStreamed(8,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::dsp::v1alpha2::ContractVerifyRequest, ::dsp::v1alpha2::ContractVerifyResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::dsp::v1alpha2::ContractVerifyRequest, ::dsp::v1alpha2::ContractVerifyResponse>* streamer) {
+                       return this->StreamedContractVerify(context,
+                         streamer);
+                  }));
     }
-    ~WithAsyncMethod_SignalTransferCancelled() override {
+    ~WithStreamedUnaryMethod_ContractVerify() override {
       BaseClassMustBeDerivedFromService(this);
     }
-    // disable synchronous version of this method
-    ::grpc::Status SignalTransferCancelled(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferCancelledRequest* /*request*/, ::dsp::v1alpha2::SignalTransferCancelledResponse* /*response*/) override {
+    // disable regular version of this method
+    ::grpc::Status ContractVerify(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractVerifyRequest* /*request*/, ::dsp::v1alpha2::ContractVerifyResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestSignalTransferCancelled(::grpc::ServerContext* context, ::dsp::v1alpha2::SignalTransferCancelledRequest* request, ::grpc::ServerAsyncResponseWriter< ::dsp::v1alpha2::SignalTransferCancelledResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
-    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedContractVerify(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::dsp::v1alpha2::ContractVerifyRequest,::dsp::v1alpha2::ContractVerifyResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
-  class WithAsyncMethod_SignalTransferSuspend : public BaseClass {
+  class WithStreamedUnaryMethod_ContractFinalize : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithAsyncMethod_SignalTransferSuspend() {
-      ::grpc::Service::MarkMethodAsync(2);
+    WithStreamedUnaryMethod_ContractFinalize() {
+      ::grpc::Service::MarkMethodStreamed(9,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::dsp::v1alpha2::ContractFinalizeRequest, ::dsp::v1alpha2::ContractFinalizeResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::dsp::v1alpha2::ContractFinalizeRequest, ::dsp::v1alpha2::ContractFinalizeResponse>* streamer) {
+                       return this->StreamedContractFinalize(context,
+                         streamer);
+                  }));
     }
-    ~WithAsyncMethod_SignalTransferSuspend() override {
+    ~WithStreamedUnaryMethod_ContractFinalize() override {
       BaseClassMustBeDerivedFromService(this);
     }
-    // disable synchronous version of this method
-    ::grpc::Status SignalTransferSuspend(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferSuspendRequest* /*request*/, ::dsp::v1alpha2::SignalTransferSuspendResponse* /*response*/) override {
+    // disable regular version of this method
+    ::grpc::Status ContractFinalize(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractFinalizeRequest* /*request*/, ::dsp::v1alpha2::ContractFinalizeResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestSignalTransferSuspend(::grpc::ServerContext* context, ::dsp::v1alpha2::SignalTransferSuspendRequest* request, ::grpc::ServerAsyncResponseWriter< ::dsp::v1alpha2::SignalTransferSuspendResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
-    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedContractFinalize(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::dsp::v1alpha2::ContractFinalizeRequest,::dsp::v1alpha2::ContractFinalizeResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
-  class WithAsyncMethod_SignalTransferResume : public BaseClass {
+  class WithStreamedUnaryMethod_ContractTerminate : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithAsyncMethod_SignalTransferResume() {
-      ::grpc::Service::MarkMethodAsync(3);
+    WithStreamedUnaryMethod_ContractTerminate() {
+      ::grpc::Service::MarkMethodStreamed(10,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::dsp::v1alpha2::ContractTerminateRequest, ::dsp::v1alpha2::ContractTerminateResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::dsp::v1alpha2::ContractTerminateRequest, ::dsp::v1alpha2::ContractTerminateResponse>* streamer) {
+                       return this->StreamedContractTerminate(context,
+                         streamer);
+                  }));
     }
-    ~WithAsyncMethod_SignalTransferResume() override {
+    ~WithStreamedUnaryMethod_ContractTerminate() override {
       BaseClassMustBeDerivedFromService(this);
     }
-    // disable synchronous version of this method
-    ::grpc::Status SignalTransferResume(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferResumeRequest* /*request*/, ::dsp::v1alpha2::SignalTransferResumeResponse* /*response*/) override {
+    // disable regular version of this method
+    ::grpc::Status ContractTerminate(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::ContractTerminateRequest* /*request*/, ::dsp::v1alpha2::ContractTerminateResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestSignalTransferResume(::grpc::ServerContext* context, ::dsp::v1alpha2::SignalTransferResumeRequest* request, ::grpc::ServerAsyncResponseWriter< ::dsp::v1alpha2::SignalTransferResumeResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  typedef WithAsyncMethod_SignalTransferComplete<WithAsyncMethod_SignalTransferCancelled<WithAsyncMethod_SignalTransferSuspend<WithAsyncMethod_SignalTransferResume<Service > > > > AsyncService;
-  template <class BaseClass>
-  class WithCallbackMethod_SignalTransferComplete : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_SignalTransferComplete() {
-      ::grpc::Service::MarkMethodCallback(0,
-          new ::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::SignalTransferCompleteRequest, ::dsp::v1alpha2::SignalTransferCompleteResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::dsp::v1alpha2::SignalTransferCompleteRequest* request, ::dsp::v1alpha2::SignalTransferCompleteResponse* response) { return this->SignalTransferComplete(context, request, response); }));}
-    void SetMessageAllocatorFor_SignalTransferComplete(
-        ::grpc::MessageAllocator< ::dsp::v1alpha2::SignalTransferCompleteRequest, ::dsp::v1alpha2::SignalTransferCompleteResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::SignalTransferCompleteRequest, ::dsp::v1alpha2::SignalTransferCompleteResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_SignalTransferComplete() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status SignalTransferComplete(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferCompleteRequest* /*request*/, ::dsp::v1alpha2::SignalTransferCompleteResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* SignalTransferComplete(
-      ::grpc::CallbackServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferCompleteRequest* /*request*/, ::dsp::v1alpha2::SignalTransferCompleteResponse* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithCallbackMethod_SignalTransferCancelled : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_SignalTransferCancelled() {
-      ::grpc::Service::MarkMethodCallback(1,
-          new ::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::SignalTransferCancelledRequest, ::dsp::v1alpha2::SignalTransferCancelledResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::dsp::v1alpha2::SignalTransferCancelledRequest* request, ::dsp::v1alpha2::SignalTransferCancelledResponse* response) { return this->SignalTransferCancelled(context, request, response); }));}
-    void SetMessageAllocatorFor_SignalTransferCancelled(
-        ::grpc::MessageAllocator< ::dsp::v1alpha2::SignalTransferCancelledRequest, ::dsp::v1alpha2::SignalTransferCancelledResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::SignalTransferCancelledRequest, ::dsp::v1alpha2::SignalTransferCancelledResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_SignalTransferCancelled() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status SignalTransferCancelled(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferCancelledRequest* /*request*/, ::dsp::v1alpha2::SignalTransferCancelledResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* SignalTransferCancelled(
-      ::grpc::CallbackServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferCancelledRequest* /*request*/, ::dsp::v1alpha2::SignalTransferCancelledResponse* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithCallbackMethod_SignalTransferSuspend : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_SignalTransferSuspend() {
-      ::grpc::Service::MarkMethodCallback(2,
-          new ::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::SignalTransferSuspendRequest, ::dsp::v1alpha2::SignalTransferSuspendResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::dsp::v1alpha2::SignalTransferSuspendRequest* request, ::dsp::v1alpha2::SignalTransferSuspendResponse* response) { return this->SignalTransferSuspend(context, request, response); }));}
-    void SetMessageAllocatorFor_SignalTransferSuspend(
-        ::grpc::MessageAllocator< ::dsp::v1alpha2::SignalTransferSuspendRequest, ::dsp::v1alpha2::SignalTransferSuspendResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(2);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::SignalTransferSuspendRequest, ::dsp::v1alpha2::SignalTransferSuspendResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_SignalTransferSuspend() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status SignalTransferSuspend(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferSuspendRequest* /*request*/, ::dsp::v1alpha2::SignalTransferSuspendResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* SignalTransferSuspend(
-      ::grpc::CallbackServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferSuspendRequest* /*request*/, ::dsp::v1alpha2::SignalTransferSuspendResponse* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithCallbackMethod_SignalTransferResume : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_SignalTransferResume() {
-      ::grpc::Service::MarkMethodCallback(3,
-          new ::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::SignalTransferResumeRequest, ::dsp::v1alpha2::SignalTransferResumeResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::dsp::v1alpha2::SignalTransferResumeRequest* request, ::dsp::v1alpha2::SignalTransferResumeResponse* response) { return this->SignalTransferResume(context, request, response); }));}
-    void SetMessageAllocatorFor_SignalTransferResume(
-        ::grpc::MessageAllocator< ::dsp::v1alpha2::SignalTransferResumeRequest, ::dsp::v1alpha2::SignalTransferResumeResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(3);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::dsp::v1alpha2::SignalTransferResumeRequest, ::dsp::v1alpha2::SignalTransferResumeResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_SignalTransferResume() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status SignalTransferResume(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferResumeRequest* /*request*/, ::dsp::v1alpha2::SignalTransferResumeResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* SignalTransferResume(
-      ::grpc::CallbackServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferResumeRequest* /*request*/, ::dsp::v1alpha2::SignalTransferResumeResponse* /*response*/)  { return nullptr; }
-  };
-  typedef WithCallbackMethod_SignalTransferComplete<WithCallbackMethod_SignalTransferCancelled<WithCallbackMethod_SignalTransferSuspend<WithCallbackMethod_SignalTransferResume<Service > > > > CallbackService;
-  typedef CallbackService ExperimentalCallbackService;
-  template <class BaseClass>
-  class WithGenericMethod_SignalTransferComplete : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_SignalTransferComplete() {
-      ::grpc::Service::MarkMethodGeneric(0);
-    }
-    ~WithGenericMethod_SignalTransferComplete() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status SignalTransferComplete(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferCompleteRequest* /*request*/, ::dsp::v1alpha2::SignalTransferCompleteResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
-  class WithGenericMethod_SignalTransferCancelled : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_SignalTransferCancelled() {
-      ::grpc::Service::MarkMethodGeneric(1);
-    }
-    ~WithGenericMethod_SignalTransferCancelled() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status SignalTransferCancelled(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferCancelledRequest* /*request*/, ::dsp::v1alpha2::SignalTransferCancelledResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
-  class WithGenericMethod_SignalTransferSuspend : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_SignalTransferSuspend() {
-      ::grpc::Service::MarkMethodGeneric(2);
-    }
-    ~WithGenericMethod_SignalTransferSuspend() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status SignalTransferSuspend(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferSuspendRequest* /*request*/, ::dsp::v1alpha2::SignalTransferSuspendResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
-  class WithGenericMethod_SignalTransferResume : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_SignalTransferResume() {
-      ::grpc::Service::MarkMethodGeneric(3);
-    }
-    ~WithGenericMethod_SignalTransferResume() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status SignalTransferResume(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferResumeRequest* /*request*/, ::dsp::v1alpha2::SignalTransferResumeResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
-  class WithRawMethod_SignalTransferComplete : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_SignalTransferComplete() {
-      ::grpc::Service::MarkMethodRaw(0);
-    }
-    ~WithRawMethod_SignalTransferComplete() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status SignalTransferComplete(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferCompleteRequest* /*request*/, ::dsp::v1alpha2::SignalTransferCompleteResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestSignalTransferComplete(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithRawMethod_SignalTransferCancelled : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_SignalTransferCancelled() {
-      ::grpc::Service::MarkMethodRaw(1);
-    }
-    ~WithRawMethod_SignalTransferCancelled() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status SignalTransferCancelled(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferCancelledRequest* /*request*/, ::dsp::v1alpha2::SignalTransferCancelledResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestSignalTransferCancelled(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithRawMethod_SignalTransferSuspend : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_SignalTransferSuspend() {
-      ::grpc::Service::MarkMethodRaw(2);
-    }
-    ~WithRawMethod_SignalTransferSuspend() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status SignalTransferSuspend(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferSuspendRequest* /*request*/, ::dsp::v1alpha2::SignalTransferSuspendResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestSignalTransferSuspend(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithRawMethod_SignalTransferResume : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_SignalTransferResume() {
-      ::grpc::Service::MarkMethodRaw(3);
-    }
-    ~WithRawMethod_SignalTransferResume() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status SignalTransferResume(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferResumeRequest* /*request*/, ::dsp::v1alpha2::SignalTransferResumeResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestSignalTransferResume(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithRawCallbackMethod_SignalTransferComplete : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_SignalTransferComplete() {
-      ::grpc::Service::MarkMethodRawCallback(0,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->SignalTransferComplete(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_SignalTransferComplete() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status SignalTransferComplete(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferCompleteRequest* /*request*/, ::dsp::v1alpha2::SignalTransferCompleteResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* SignalTransferComplete(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithRawCallbackMethod_SignalTransferCancelled : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_SignalTransferCancelled() {
-      ::grpc::Service::MarkMethodRawCallback(1,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->SignalTransferCancelled(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_SignalTransferCancelled() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status SignalTransferCancelled(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferCancelledRequest* /*request*/, ::dsp::v1alpha2::SignalTransferCancelledResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* SignalTransferCancelled(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithRawCallbackMethod_SignalTransferSuspend : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_SignalTransferSuspend() {
-      ::grpc::Service::MarkMethodRawCallback(2,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->SignalTransferSuspend(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_SignalTransferSuspend() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status SignalTransferSuspend(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferSuspendRequest* /*request*/, ::dsp::v1alpha2::SignalTransferSuspendResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* SignalTransferSuspend(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithRawCallbackMethod_SignalTransferResume : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_SignalTransferResume() {
-      ::grpc::Service::MarkMethodRawCallback(3,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->SignalTransferResume(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_SignalTransferResume() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status SignalTransferResume(::grpc::ServerContext* /*context*/, const ::dsp::v1alpha2::SignalTransferResumeRequest* /*request*/, ::dsp::v1alpha2::SignalTransferResumeResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* SignalTransferResume(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedContractTerminate(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::dsp::v1alpha2::ContractTerminateRequest,::dsp::v1alpha2::ContractTerminateResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_SignalTransferComplete : public BaseClass {
@@ -2541,7 +2388,7 @@ class TransferControlService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_SignalTransferComplete() {
-      ::grpc::Service::MarkMethodStreamed(0,
+      ::grpc::Service::MarkMethodStreamed(11,
         new ::grpc::internal::StreamedUnaryHandler<
           ::dsp::v1alpha2::SignalTransferCompleteRequest, ::dsp::v1alpha2::SignalTransferCompleteResponse>(
             [this](::grpc::ServerContext* context,
@@ -2568,7 +2415,7 @@ class TransferControlService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_SignalTransferCancelled() {
-      ::grpc::Service::MarkMethodStreamed(1,
+      ::grpc::Service::MarkMethodStreamed(12,
         new ::grpc::internal::StreamedUnaryHandler<
           ::dsp::v1alpha2::SignalTransferCancelledRequest, ::dsp::v1alpha2::SignalTransferCancelledResponse>(
             [this](::grpc::ServerContext* context,
@@ -2595,7 +2442,7 @@ class TransferControlService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_SignalTransferSuspend() {
-      ::grpc::Service::MarkMethodStreamed(2,
+      ::grpc::Service::MarkMethodStreamed(13,
         new ::grpc::internal::StreamedUnaryHandler<
           ::dsp::v1alpha2::SignalTransferSuspendRequest, ::dsp::v1alpha2::SignalTransferSuspendResponse>(
             [this](::grpc::ServerContext* context,
@@ -2622,7 +2469,7 @@ class TransferControlService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_SignalTransferResume() {
-      ::grpc::Service::MarkMethodStreamed(3,
+      ::grpc::Service::MarkMethodStreamed(14,
         new ::grpc::internal::StreamedUnaryHandler<
           ::dsp::v1alpha2::SignalTransferResumeRequest, ::dsp::v1alpha2::SignalTransferResumeResponse>(
             [this](::grpc::ServerContext* context,
@@ -2643,9 +2490,9 @@ class TransferControlService final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedSignalTransferResume(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::dsp::v1alpha2::SignalTransferResumeRequest,::dsp::v1alpha2::SignalTransferResumeResponse>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_SignalTransferComplete<WithStreamedUnaryMethod_SignalTransferCancelled<WithStreamedUnaryMethod_SignalTransferSuspend<WithStreamedUnaryMethod_SignalTransferResume<Service > > > > StreamedUnaryService;
+  typedef WithStreamedUnaryMethod_GetProviderDatasetDownloadInformation<WithStreamedUnaryMethod_VerifyConnection<WithStreamedUnaryMethod_GetProviderCatalogue<WithStreamedUnaryMethod_GetProviderDataset<WithStreamedUnaryMethod_ContractRequest<WithStreamedUnaryMethod_ContractOffer<WithStreamedUnaryMethod_ContractAccept<WithStreamedUnaryMethod_ContractAgree<WithStreamedUnaryMethod_ContractVerify<WithStreamedUnaryMethod_ContractFinalize<WithStreamedUnaryMethod_ContractTerminate<WithStreamedUnaryMethod_SignalTransferComplete<WithStreamedUnaryMethod_SignalTransferCancelled<WithStreamedUnaryMethod_SignalTransferSuspend<WithStreamedUnaryMethod_SignalTransferResume<Service > > > > > > > > > > > > > > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_SignalTransferComplete<WithStreamedUnaryMethod_SignalTransferCancelled<WithStreamedUnaryMethod_SignalTransferSuspend<WithStreamedUnaryMethod_SignalTransferResume<Service > > > > StreamedService;
+  typedef WithStreamedUnaryMethod_GetProviderDatasetDownloadInformation<WithStreamedUnaryMethod_VerifyConnection<WithStreamedUnaryMethod_GetProviderCatalogue<WithStreamedUnaryMethod_GetProviderDataset<WithStreamedUnaryMethod_ContractRequest<WithStreamedUnaryMethod_ContractOffer<WithStreamedUnaryMethod_ContractAccept<WithStreamedUnaryMethod_ContractAgree<WithStreamedUnaryMethod_ContractVerify<WithStreamedUnaryMethod_ContractFinalize<WithStreamedUnaryMethod_ContractTerminate<WithStreamedUnaryMethod_SignalTransferComplete<WithStreamedUnaryMethod_SignalTransferCancelled<WithStreamedUnaryMethod_SignalTransferSuspend<WithStreamedUnaryMethod_SignalTransferResume<Service > > > > > > > > > > > > > > > StreamedService;
 };
 
 }  // namespace v1alpha2

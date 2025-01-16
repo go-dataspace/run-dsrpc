@@ -29,6 +29,58 @@ class ControlServiceClient extends $grpc.Client {
       '/dsp.v1alpha2.ControlService/VerifyConnection',
       ($1.VerifyConnectionRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.VerifyConnectionResponse.fromBuffer(value));
+  static final _$getProviderCatalogue = $grpc.ClientMethod<$1.GetProviderCatalogueRequest, $1.GetProviderCatalogueResponse>(
+      '/dsp.v1alpha2.ControlService/GetProviderCatalogue',
+      ($1.GetProviderCatalogueRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.GetProviderCatalogueResponse.fromBuffer(value));
+  static final _$getProviderDataset = $grpc.ClientMethod<$1.GetProviderDatasetRequest, $1.GetProviderDatasetResponse>(
+      '/dsp.v1alpha2.ControlService/GetProviderDataset',
+      ($1.GetProviderDatasetRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.GetProviderDatasetResponse.fromBuffer(value));
+  static final _$contractRequest = $grpc.ClientMethod<$1.ContractRequestRequest, $1.ContractRequestResponse>(
+      '/dsp.v1alpha2.ControlService/ContractRequest',
+      ($1.ContractRequestRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ContractRequestResponse.fromBuffer(value));
+  static final _$contractOffer = $grpc.ClientMethod<$1.ContractOfferRequest, $1.ContractOfferResponse>(
+      '/dsp.v1alpha2.ControlService/ContractOffer',
+      ($1.ContractOfferRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ContractOfferResponse.fromBuffer(value));
+  static final _$contractAccept = $grpc.ClientMethod<$1.ContractAcceptRequest, $1.ContractAcceptResponse>(
+      '/dsp.v1alpha2.ControlService/ContractAccept',
+      ($1.ContractAcceptRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ContractAcceptResponse.fromBuffer(value));
+  static final _$contractAgree = $grpc.ClientMethod<$1.ContractAgreeRequest, $1.ContractAgreeResponse>(
+      '/dsp.v1alpha2.ControlService/ContractAgree',
+      ($1.ContractAgreeRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ContractAgreeResponse.fromBuffer(value));
+  static final _$contractVerify = $grpc.ClientMethod<$1.ContractVerifyRequest, $1.ContractVerifyResponse>(
+      '/dsp.v1alpha2.ControlService/ContractVerify',
+      ($1.ContractVerifyRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ContractVerifyResponse.fromBuffer(value));
+  static final _$contractFinalize = $grpc.ClientMethod<$1.ContractFinalizeRequest, $1.ContractFinalizeResponse>(
+      '/dsp.v1alpha2.ControlService/ContractFinalize',
+      ($1.ContractFinalizeRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ContractFinalizeResponse.fromBuffer(value));
+  static final _$contractTerminate = $grpc.ClientMethod<$1.ContractTerminateRequest, $1.ContractTerminateResponse>(
+      '/dsp.v1alpha2.ControlService/ContractTerminate',
+      ($1.ContractTerminateRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ContractTerminateResponse.fromBuffer(value));
+  static final _$signalTransferComplete = $grpc.ClientMethod<$1.SignalTransferCompleteRequest, $1.SignalTransferCompleteResponse>(
+      '/dsp.v1alpha2.ControlService/SignalTransferComplete',
+      ($1.SignalTransferCompleteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.SignalTransferCompleteResponse.fromBuffer(value));
+  static final _$signalTransferCancelled = $grpc.ClientMethod<$1.SignalTransferCancelledRequest, $1.SignalTransferCancelledResponse>(
+      '/dsp.v1alpha2.ControlService/SignalTransferCancelled',
+      ($1.SignalTransferCancelledRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.SignalTransferCancelledResponse.fromBuffer(value));
+  static final _$signalTransferSuspend = $grpc.ClientMethod<$1.SignalTransferSuspendRequest, $1.SignalTransferSuspendResponse>(
+      '/dsp.v1alpha2.ControlService/SignalTransferSuspend',
+      ($1.SignalTransferSuspendRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.SignalTransferSuspendResponse.fromBuffer(value));
+  static final _$signalTransferResume = $grpc.ClientMethod<$1.SignalTransferResumeRequest, $1.SignalTransferResumeResponse>(
+      '/dsp.v1alpha2.ControlService/SignalTransferResume',
+      ($1.SignalTransferResumeRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.SignalTransferResumeResponse.fromBuffer(value));
 
   ControlServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -42,6 +94,58 @@ class ControlServiceClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$1.VerifyConnectionResponse> verifyConnection($1.VerifyConnectionRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$verifyConnection, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.GetProviderCatalogueResponse> getProviderCatalogue($1.GetProviderCatalogueRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getProviderCatalogue, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.GetProviderDatasetResponse> getProviderDataset($1.GetProviderDatasetRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getProviderDataset, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.ContractRequestResponse> contractRequest($1.ContractRequestRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$contractRequest, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.ContractOfferResponse> contractOffer($1.ContractOfferRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$contractOffer, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.ContractAcceptResponse> contractAccept($1.ContractAcceptRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$contractAccept, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.ContractAgreeResponse> contractAgree($1.ContractAgreeRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$contractAgree, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.ContractVerifyResponse> contractVerify($1.ContractVerifyRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$contractVerify, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.ContractFinalizeResponse> contractFinalize($1.ContractFinalizeRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$contractFinalize, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.ContractTerminateResponse> contractTerminate($1.ContractTerminateRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$contractTerminate, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.SignalTransferCompleteResponse> signalTransferComplete($1.SignalTransferCompleteRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$signalTransferComplete, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.SignalTransferCancelledResponse> signalTransferCancelled($1.SignalTransferCancelledRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$signalTransferCancelled, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.SignalTransferSuspendResponse> signalTransferSuspend($1.SignalTransferSuspendRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$signalTransferSuspend, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.SignalTransferResumeResponse> signalTransferResume($1.SignalTransferResumeRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$signalTransferResume, request, options: options);
   }
 }
 
@@ -64,50 +168,6 @@ abstract class ControlServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $1.VerifyConnectionRequest.fromBuffer(value),
         ($1.VerifyConnectionResponse value) => value.writeToBuffer()));
-  }
-
-  $async.Future<$1.GetProviderDatasetDownloadInformationResponse> getProviderDatasetDownloadInformation_Pre($grpc.ServiceCall call, $async.Future<$1.GetProviderDatasetDownloadInformationRequest> request) async {
-    return getProviderDatasetDownloadInformation(call, await request);
-  }
-
-  $async.Future<$1.VerifyConnectionResponse> verifyConnection_Pre($grpc.ServiceCall call, $async.Future<$1.VerifyConnectionRequest> request) async {
-    return verifyConnection(call, await request);
-  }
-
-  $async.Future<$1.GetProviderDatasetDownloadInformationResponse> getProviderDatasetDownloadInformation($grpc.ServiceCall call, $1.GetProviderDatasetDownloadInformationRequest request);
-  $async.Future<$1.VerifyConnectionResponse> verifyConnection($grpc.ServiceCall call, $1.VerifyConnectionRequest request);
-}
-@$pb.GrpcServiceName('dsp.v1alpha2.CatalogueControlService')
-class CatalogueControlServiceClient extends $grpc.Client {
-  static final _$getProviderCatalogue = $grpc.ClientMethod<$1.GetProviderCatalogueRequest, $1.GetProviderCatalogueResponse>(
-      '/dsp.v1alpha2.CatalogueControlService/GetProviderCatalogue',
-      ($1.GetProviderCatalogueRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.GetProviderCatalogueResponse.fromBuffer(value));
-  static final _$getProviderDataset = $grpc.ClientMethod<$1.GetProviderDatasetRequest, $1.GetProviderDatasetResponse>(
-      '/dsp.v1alpha2.CatalogueControlService/GetProviderDataset',
-      ($1.GetProviderDatasetRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.GetProviderDatasetResponse.fromBuffer(value));
-
-  CatalogueControlServiceClient($grpc.ClientChannel channel,
-      {$grpc.CallOptions? options,
-      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
-      : super(channel, options: options,
-        interceptors: interceptors);
-
-  $grpc.ResponseFuture<$1.GetProviderCatalogueResponse> getProviderCatalogue($1.GetProviderCatalogueRequest request, {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$getProviderCatalogue, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$1.GetProviderDatasetResponse> getProviderDataset($1.GetProviderDatasetRequest request, {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$getProviderDataset, request, options: options);
-  }
-}
-
-@$pb.GrpcServiceName('dsp.v1alpha2.CatalogueControlService')
-abstract class CatalogueControlServiceBase extends $grpc.Service {
-  $core.String get $name => 'dsp.v1alpha2.CatalogueControlService';
-
-  CatalogueControlServiceBase() {
     $addMethod($grpc.ServiceMethod<$1.GetProviderCatalogueRequest, $1.GetProviderCatalogueResponse>(
         'GetProviderCatalogue',
         getProviderCatalogue_Pre,
@@ -122,224 +182,55 @@ abstract class CatalogueControlServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $1.GetProviderDatasetRequest.fromBuffer(value),
         ($1.GetProviderDatasetResponse value) => value.writeToBuffer()));
-  }
-
-  $async.Future<$1.GetProviderCatalogueResponse> getProviderCatalogue_Pre($grpc.ServiceCall call, $async.Future<$1.GetProviderCatalogueRequest> request) async {
-    return getProviderCatalogue(call, await request);
-  }
-
-  $async.Future<$1.GetProviderDatasetResponse> getProviderDataset_Pre($grpc.ServiceCall call, $async.Future<$1.GetProviderDatasetRequest> request) async {
-    return getProviderDataset(call, await request);
-  }
-
-  $async.Future<$1.GetProviderCatalogueResponse> getProviderCatalogue($grpc.ServiceCall call, $1.GetProviderCatalogueRequest request);
-  $async.Future<$1.GetProviderDatasetResponse> getProviderDataset($grpc.ServiceCall call, $1.GetProviderDatasetRequest request);
-}
-@$pb.GrpcServiceName('dsp.v1alpha2.ContractControlService')
-class ContractControlServiceClient extends $grpc.Client {
-  static final _$request = $grpc.ClientMethod<$1.RequestRequest, $1.RequestResponse>(
-      '/dsp.v1alpha2.ContractControlService/Request',
-      ($1.RequestRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.RequestResponse.fromBuffer(value));
-  static final _$offer = $grpc.ClientMethod<$1.OfferRequest, $1.OfferResponse>(
-      '/dsp.v1alpha2.ContractControlService/Offer',
-      ($1.OfferRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.OfferResponse.fromBuffer(value));
-  static final _$accept = $grpc.ClientMethod<$1.AcceptRequest, $1.AcceptResponse>(
-      '/dsp.v1alpha2.ContractControlService/Accept',
-      ($1.AcceptRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.AcceptResponse.fromBuffer(value));
-  static final _$agree = $grpc.ClientMethod<$1.AgreeRequest, $1.AgreeResponse>(
-      '/dsp.v1alpha2.ContractControlService/Agree',
-      ($1.AgreeRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.AgreeResponse.fromBuffer(value));
-  static final _$verify = $grpc.ClientMethod<$1.VerifyRequest, $1.VerifyResponse>(
-      '/dsp.v1alpha2.ContractControlService/Verify',
-      ($1.VerifyRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.VerifyResponse.fromBuffer(value));
-  static final _$finalize = $grpc.ClientMethod<$1.FinalizeRequest, $1.FinalizeResponse>(
-      '/dsp.v1alpha2.ContractControlService/Finalize',
-      ($1.FinalizeRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.FinalizeResponse.fromBuffer(value));
-  static final _$terminate = $grpc.ClientMethod<$1.TerminateRequest, $1.TerminateResponse>(
-      '/dsp.v1alpha2.ContractControlService/Terminate',
-      ($1.TerminateRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.TerminateResponse.fromBuffer(value));
-
-  ContractControlServiceClient($grpc.ClientChannel channel,
-      {$grpc.CallOptions? options,
-      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
-      : super(channel, options: options,
-        interceptors: interceptors);
-
-  $grpc.ResponseFuture<$1.RequestResponse> request($1.RequestRequest request, {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$request, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$1.OfferResponse> offer($1.OfferRequest request, {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$offer, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$1.AcceptResponse> accept($1.AcceptRequest request, {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$accept, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$1.AgreeResponse> agree($1.AgreeRequest request, {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$agree, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$1.VerifyResponse> verify($1.VerifyRequest request, {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$verify, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$1.FinalizeResponse> finalize($1.FinalizeRequest request, {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$finalize, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$1.TerminateResponse> terminate($1.TerminateRequest request, {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$terminate, request, options: options);
-  }
-}
-
-@$pb.GrpcServiceName('dsp.v1alpha2.ContractControlService')
-abstract class ContractControlServiceBase extends $grpc.Service {
-  $core.String get $name => 'dsp.v1alpha2.ContractControlService';
-
-  ContractControlServiceBase() {
-    $addMethod($grpc.ServiceMethod<$1.RequestRequest, $1.RequestResponse>(
-        'Request',
-        request_Pre,
+    $addMethod($grpc.ServiceMethod<$1.ContractRequestRequest, $1.ContractRequestResponse>(
+        'ContractRequest',
+        contractRequest_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.RequestRequest.fromBuffer(value),
-        ($1.RequestResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.OfferRequest, $1.OfferResponse>(
-        'Offer',
-        offer_Pre,
+        ($core.List<$core.int> value) => $1.ContractRequestRequest.fromBuffer(value),
+        ($1.ContractRequestResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.ContractOfferRequest, $1.ContractOfferResponse>(
+        'ContractOffer',
+        contractOffer_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.OfferRequest.fromBuffer(value),
-        ($1.OfferResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.AcceptRequest, $1.AcceptResponse>(
-        'Accept',
-        accept_Pre,
+        ($core.List<$core.int> value) => $1.ContractOfferRequest.fromBuffer(value),
+        ($1.ContractOfferResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.ContractAcceptRequest, $1.ContractAcceptResponse>(
+        'ContractAccept',
+        contractAccept_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.AcceptRequest.fromBuffer(value),
-        ($1.AcceptResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.AgreeRequest, $1.AgreeResponse>(
-        'Agree',
-        agree_Pre,
+        ($core.List<$core.int> value) => $1.ContractAcceptRequest.fromBuffer(value),
+        ($1.ContractAcceptResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.ContractAgreeRequest, $1.ContractAgreeResponse>(
+        'ContractAgree',
+        contractAgree_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.AgreeRequest.fromBuffer(value),
-        ($1.AgreeResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.VerifyRequest, $1.VerifyResponse>(
-        'Verify',
-        verify_Pre,
+        ($core.List<$core.int> value) => $1.ContractAgreeRequest.fromBuffer(value),
+        ($1.ContractAgreeResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.ContractVerifyRequest, $1.ContractVerifyResponse>(
+        'ContractVerify',
+        contractVerify_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.VerifyRequest.fromBuffer(value),
-        ($1.VerifyResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.FinalizeRequest, $1.FinalizeResponse>(
-        'Finalize',
-        finalize_Pre,
+        ($core.List<$core.int> value) => $1.ContractVerifyRequest.fromBuffer(value),
+        ($1.ContractVerifyResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.ContractFinalizeRequest, $1.ContractFinalizeResponse>(
+        'ContractFinalize',
+        contractFinalize_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.FinalizeRequest.fromBuffer(value),
-        ($1.FinalizeResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.TerminateRequest, $1.TerminateResponse>(
-        'Terminate',
-        terminate_Pre,
+        ($core.List<$core.int> value) => $1.ContractFinalizeRequest.fromBuffer(value),
+        ($1.ContractFinalizeResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.ContractTerminateRequest, $1.ContractTerminateResponse>(
+        'ContractTerminate',
+        contractTerminate_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.TerminateRequest.fromBuffer(value),
-        ($1.TerminateResponse value) => value.writeToBuffer()));
-  }
-
-  $async.Future<$1.RequestResponse> request_Pre($grpc.ServiceCall call, $async.Future<$1.RequestRequest> request) async {
-    return request(call, await request);
-  }
-
-  $async.Future<$1.OfferResponse> offer_Pre($grpc.ServiceCall call, $async.Future<$1.OfferRequest> request) async {
-    return offer(call, await request);
-  }
-
-  $async.Future<$1.AcceptResponse> accept_Pre($grpc.ServiceCall call, $async.Future<$1.AcceptRequest> request) async {
-    return accept(call, await request);
-  }
-
-  $async.Future<$1.AgreeResponse> agree_Pre($grpc.ServiceCall call, $async.Future<$1.AgreeRequest> request) async {
-    return agree(call, await request);
-  }
-
-  $async.Future<$1.VerifyResponse> verify_Pre($grpc.ServiceCall call, $async.Future<$1.VerifyRequest> request) async {
-    return verify(call, await request);
-  }
-
-  $async.Future<$1.FinalizeResponse> finalize_Pre($grpc.ServiceCall call, $async.Future<$1.FinalizeRequest> request) async {
-    return finalize(call, await request);
-  }
-
-  $async.Future<$1.TerminateResponse> terminate_Pre($grpc.ServiceCall call, $async.Future<$1.TerminateRequest> request) async {
-    return terminate(call, await request);
-  }
-
-  $async.Future<$1.RequestResponse> request($grpc.ServiceCall call, $1.RequestRequest request);
-  $async.Future<$1.OfferResponse> offer($grpc.ServiceCall call, $1.OfferRequest request);
-  $async.Future<$1.AcceptResponse> accept($grpc.ServiceCall call, $1.AcceptRequest request);
-  $async.Future<$1.AgreeResponse> agree($grpc.ServiceCall call, $1.AgreeRequest request);
-  $async.Future<$1.VerifyResponse> verify($grpc.ServiceCall call, $1.VerifyRequest request);
-  $async.Future<$1.FinalizeResponse> finalize($grpc.ServiceCall call, $1.FinalizeRequest request);
-  $async.Future<$1.TerminateResponse> terminate($grpc.ServiceCall call, $1.TerminateRequest request);
-}
-@$pb.GrpcServiceName('dsp.v1alpha2.TransferControlService')
-class TransferControlServiceClient extends $grpc.Client {
-  static final _$signalTransferComplete = $grpc.ClientMethod<$1.SignalTransferCompleteRequest, $1.SignalTransferCompleteResponse>(
-      '/dsp.v1alpha2.TransferControlService/SignalTransferComplete',
-      ($1.SignalTransferCompleteRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.SignalTransferCompleteResponse.fromBuffer(value));
-  static final _$signalTransferCancelled = $grpc.ClientMethod<$1.SignalTransferCancelledRequest, $1.SignalTransferCancelledResponse>(
-      '/dsp.v1alpha2.TransferControlService/SignalTransferCancelled',
-      ($1.SignalTransferCancelledRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.SignalTransferCancelledResponse.fromBuffer(value));
-  static final _$signalTransferSuspend = $grpc.ClientMethod<$1.SignalTransferSuspendRequest, $1.SignalTransferSuspendResponse>(
-      '/dsp.v1alpha2.TransferControlService/SignalTransferSuspend',
-      ($1.SignalTransferSuspendRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.SignalTransferSuspendResponse.fromBuffer(value));
-  static final _$signalTransferResume = $grpc.ClientMethod<$1.SignalTransferResumeRequest, $1.SignalTransferResumeResponse>(
-      '/dsp.v1alpha2.TransferControlService/SignalTransferResume',
-      ($1.SignalTransferResumeRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.SignalTransferResumeResponse.fromBuffer(value));
-
-  TransferControlServiceClient($grpc.ClientChannel channel,
-      {$grpc.CallOptions? options,
-      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
-      : super(channel, options: options,
-        interceptors: interceptors);
-
-  $grpc.ResponseFuture<$1.SignalTransferCompleteResponse> signalTransferComplete($1.SignalTransferCompleteRequest request, {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$signalTransferComplete, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$1.SignalTransferCancelledResponse> signalTransferCancelled($1.SignalTransferCancelledRequest request, {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$signalTransferCancelled, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$1.SignalTransferSuspendResponse> signalTransferSuspend($1.SignalTransferSuspendRequest request, {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$signalTransferSuspend, request, options: options);
-  }
-
-  $grpc.ResponseFuture<$1.SignalTransferResumeResponse> signalTransferResume($1.SignalTransferResumeRequest request, {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$signalTransferResume, request, options: options);
-  }
-}
-
-@$pb.GrpcServiceName('dsp.v1alpha2.TransferControlService')
-abstract class TransferControlServiceBase extends $grpc.Service {
-  $core.String get $name => 'dsp.v1alpha2.TransferControlService';
-
-  TransferControlServiceBase() {
+        ($core.List<$core.int> value) => $1.ContractTerminateRequest.fromBuffer(value),
+        ($1.ContractTerminateResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$1.SignalTransferCompleteRequest, $1.SignalTransferCompleteResponse>(
         'SignalTransferComplete',
         signalTransferComplete_Pre,
@@ -370,6 +261,50 @@ abstract class TransferControlServiceBase extends $grpc.Service {
         ($1.SignalTransferResumeResponse value) => value.writeToBuffer()));
   }
 
+  $async.Future<$1.GetProviderDatasetDownloadInformationResponse> getProviderDatasetDownloadInformation_Pre($grpc.ServiceCall call, $async.Future<$1.GetProviderDatasetDownloadInformationRequest> request) async {
+    return getProviderDatasetDownloadInformation(call, await request);
+  }
+
+  $async.Future<$1.VerifyConnectionResponse> verifyConnection_Pre($grpc.ServiceCall call, $async.Future<$1.VerifyConnectionRequest> request) async {
+    return verifyConnection(call, await request);
+  }
+
+  $async.Future<$1.GetProviderCatalogueResponse> getProviderCatalogue_Pre($grpc.ServiceCall call, $async.Future<$1.GetProviderCatalogueRequest> request) async {
+    return getProviderCatalogue(call, await request);
+  }
+
+  $async.Future<$1.GetProviderDatasetResponse> getProviderDataset_Pre($grpc.ServiceCall call, $async.Future<$1.GetProviderDatasetRequest> request) async {
+    return getProviderDataset(call, await request);
+  }
+
+  $async.Future<$1.ContractRequestResponse> contractRequest_Pre($grpc.ServiceCall call, $async.Future<$1.ContractRequestRequest> request) async {
+    return contractRequest(call, await request);
+  }
+
+  $async.Future<$1.ContractOfferResponse> contractOffer_Pre($grpc.ServiceCall call, $async.Future<$1.ContractOfferRequest> request) async {
+    return contractOffer(call, await request);
+  }
+
+  $async.Future<$1.ContractAcceptResponse> contractAccept_Pre($grpc.ServiceCall call, $async.Future<$1.ContractAcceptRequest> request) async {
+    return contractAccept(call, await request);
+  }
+
+  $async.Future<$1.ContractAgreeResponse> contractAgree_Pre($grpc.ServiceCall call, $async.Future<$1.ContractAgreeRequest> request) async {
+    return contractAgree(call, await request);
+  }
+
+  $async.Future<$1.ContractVerifyResponse> contractVerify_Pre($grpc.ServiceCall call, $async.Future<$1.ContractVerifyRequest> request) async {
+    return contractVerify(call, await request);
+  }
+
+  $async.Future<$1.ContractFinalizeResponse> contractFinalize_Pre($grpc.ServiceCall call, $async.Future<$1.ContractFinalizeRequest> request) async {
+    return contractFinalize(call, await request);
+  }
+
+  $async.Future<$1.ContractTerminateResponse> contractTerminate_Pre($grpc.ServiceCall call, $async.Future<$1.ContractTerminateRequest> request) async {
+    return contractTerminate(call, await request);
+  }
+
   $async.Future<$1.SignalTransferCompleteResponse> signalTransferComplete_Pre($grpc.ServiceCall call, $async.Future<$1.SignalTransferCompleteRequest> request) async {
     return signalTransferComplete(call, await request);
   }
@@ -386,6 +321,17 @@ abstract class TransferControlServiceBase extends $grpc.Service {
     return signalTransferResume(call, await request);
   }
 
+  $async.Future<$1.GetProviderDatasetDownloadInformationResponse> getProviderDatasetDownloadInformation($grpc.ServiceCall call, $1.GetProviderDatasetDownloadInformationRequest request);
+  $async.Future<$1.VerifyConnectionResponse> verifyConnection($grpc.ServiceCall call, $1.VerifyConnectionRequest request);
+  $async.Future<$1.GetProviderCatalogueResponse> getProviderCatalogue($grpc.ServiceCall call, $1.GetProviderCatalogueRequest request);
+  $async.Future<$1.GetProviderDatasetResponse> getProviderDataset($grpc.ServiceCall call, $1.GetProviderDatasetRequest request);
+  $async.Future<$1.ContractRequestResponse> contractRequest($grpc.ServiceCall call, $1.ContractRequestRequest request);
+  $async.Future<$1.ContractOfferResponse> contractOffer($grpc.ServiceCall call, $1.ContractOfferRequest request);
+  $async.Future<$1.ContractAcceptResponse> contractAccept($grpc.ServiceCall call, $1.ContractAcceptRequest request);
+  $async.Future<$1.ContractAgreeResponse> contractAgree($grpc.ServiceCall call, $1.ContractAgreeRequest request);
+  $async.Future<$1.ContractVerifyResponse> contractVerify($grpc.ServiceCall call, $1.ContractVerifyRequest request);
+  $async.Future<$1.ContractFinalizeResponse> contractFinalize($grpc.ServiceCall call, $1.ContractFinalizeRequest request);
+  $async.Future<$1.ContractTerminateResponse> contractTerminate($grpc.ServiceCall call, $1.ContractTerminateRequest request);
   $async.Future<$1.SignalTransferCompleteResponse> signalTransferComplete($grpc.ServiceCall call, $1.SignalTransferCompleteRequest request);
   $async.Future<$1.SignalTransferCancelledResponse> signalTransferCancelled($grpc.ServiceCall call, $1.SignalTransferCancelledRequest request);
   $async.Future<$1.SignalTransferSuspendResponse> signalTransferSuspend($grpc.ServiceCall call, $1.SignalTransferSuspendRequest request);

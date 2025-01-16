@@ -36,66 +36,24 @@ module Dsp
         rpc :GetProviderDatasetDownloadInformation, ::Dsp::V1alpha2::GetProviderDatasetDownloadInformationRequest, ::Dsp::V1alpha2::GetProviderDatasetDownloadInformationResponse
         # VerifyConnection takes a token and verifies it's the same token it passed to the contract service.
         rpc :VerifyConnection, ::Dsp::V1alpha2::VerifyConnectionRequest, ::Dsp::V1alpha2::VerifyConnectionResponse
-      end
-
-      Stub = Service.rpc_stub_class
-    end
-    module CatalogueControlService
-      # CatalogueControlService contains methods to interact with dataspace catalogues.
-      class Service
-
-        include ::GRPC::GenericService
-
-        self.marshal_class_method = :encode
-        self.unmarshal_class_method = :decode
-        self.service_name = 'dsp.v1alpha2.CatalogueControlService'
-
         # Gets the catalogue based on the query parameters and the authorization header.
         rpc :GetProviderCatalogue, ::Dsp::V1alpha2::GetProviderCatalogueRequest, ::Dsp::V1alpha2::GetProviderCatalogueResponse
         # Gets information about a single dataset.
         rpc :GetProviderDataset, ::Dsp::V1alpha2::GetProviderDatasetRequest, ::Dsp::V1alpha2::GetProviderDatasetResponse
-      end
-
-      Stub = Service.rpc_stub_class
-    end
-    module ContractControlService
-      # ContractControlService contains low level methods to send contract negotiation operations.
-      class Service
-
-        include ::GRPC::GenericService
-
-        self.marshal_class_method = :encode
-        self.unmarshal_class_method = :decode
-        self.service_name = 'dsp.v1alpha2.ContractControlService'
-
-        # Request sends a ContractRequestMessage.
-        rpc :Request, ::Dsp::V1alpha2::RequestRequest, ::Dsp::V1alpha2::RequestResponse
-        # Offer sends a ContractOfferMessage.
-        rpc :Offer, ::Dsp::V1alpha2::OfferRequest, ::Dsp::V1alpha2::OfferResponse
-        # Accept sends an accepted event message.
-        rpc :Accept, ::Dsp::V1alpha2::AcceptRequest, ::Dsp::V1alpha2::AcceptResponse
-        # Agree sends a ContractAcceptedMessage.
-        rpc :Agree, ::Dsp::V1alpha2::AgreeRequest, ::Dsp::V1alpha2::AgreeResponse
-        # Verify sends a ContractVerificationMessage.
-        rpc :Verify, ::Dsp::V1alpha2::VerifyRequest, ::Dsp::V1alpha2::VerifyResponse
-        # Finalize sends a finalization event.
-        rpc :Finalize, ::Dsp::V1alpha2::FinalizeRequest, ::Dsp::V1alpha2::FinalizeResponse
-        # Terminate sends a ContractTerminationMessage.
-        rpc :Terminate, ::Dsp::V1alpha2::TerminateRequest, ::Dsp::V1alpha2::TerminateResponse
-      end
-
-      Stub = Service.rpc_stub_class
-    end
-    module TransferControlService
-      # TransferControlService contains low level methods to send transfer negotiation operations.
-      class Service
-
-        include ::GRPC::GenericService
-
-        self.marshal_class_method = :encode
-        self.unmarshal_class_method = :decode
-        self.service_name = 'dsp.v1alpha2.TransferControlService'
-
+        # ContractRequest sends a ContractRequestMessage.
+        rpc :ContractRequest, ::Dsp::V1alpha2::ContractRequestRequest, ::Dsp::V1alpha2::ContractRequestResponse
+        # ContractOffer sends a ContractOfferMessage.
+        rpc :ContractOffer, ::Dsp::V1alpha2::ContractOfferRequest, ::Dsp::V1alpha2::ContractOfferResponse
+        # ContractAccept sends an accepted event message.
+        rpc :ContractAccept, ::Dsp::V1alpha2::ContractAcceptRequest, ::Dsp::V1alpha2::ContractAcceptResponse
+        # ContractAgree sends a ContractAcceptedMessage.
+        rpc :ContractAgree, ::Dsp::V1alpha2::ContractAgreeRequest, ::Dsp::V1alpha2::ContractAgreeResponse
+        # ContractVerify sends a ContractVerificationMessage.
+        rpc :ContractVerify, ::Dsp::V1alpha2::ContractVerifyRequest, ::Dsp::V1alpha2::ContractVerifyResponse
+        # ContractFinalize sends a finalization event.
+        rpc :ContractFinalize, ::Dsp::V1alpha2::ContractFinalizeRequest, ::Dsp::V1alpha2::ContractFinalizeResponse
+        # ContractTerminate sends a ContractTerminationMessage.
+        rpc :ContractTerminate, ::Dsp::V1alpha2::ContractTerminateRequest, ::Dsp::V1alpha2::ContractTerminateResponse
         # Tells provider that we have finished our transfer.
         rpc :SignalTransferComplete, ::Dsp::V1alpha2::SignalTransferCompleteRequest, ::Dsp::V1alpha2::SignalTransferCompleteResponse
         # Tells provider to cancel file transfer

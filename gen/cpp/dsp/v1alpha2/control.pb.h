@@ -56,24 +56,48 @@ extern const ::google::protobuf::internal::DescriptorTable
     descriptor_table_dsp_2fv1alpha2_2fcontrol_2eproto;
 namespace dsp {
 namespace v1alpha2 {
-class AcceptRequest;
-struct AcceptRequestDefaultTypeInternal;
-extern AcceptRequestDefaultTypeInternal _AcceptRequest_default_instance_;
-class AcceptResponse;
-struct AcceptResponseDefaultTypeInternal;
-extern AcceptResponseDefaultTypeInternal _AcceptResponse_default_instance_;
-class AgreeRequest;
-struct AgreeRequestDefaultTypeInternal;
-extern AgreeRequestDefaultTypeInternal _AgreeRequest_default_instance_;
-class AgreeResponse;
-struct AgreeResponseDefaultTypeInternal;
-extern AgreeResponseDefaultTypeInternal _AgreeResponse_default_instance_;
-class FinalizeRequest;
-struct FinalizeRequestDefaultTypeInternal;
-extern FinalizeRequestDefaultTypeInternal _FinalizeRequest_default_instance_;
-class FinalizeResponse;
-struct FinalizeResponseDefaultTypeInternal;
-extern FinalizeResponseDefaultTypeInternal _FinalizeResponse_default_instance_;
+class ContractAcceptRequest;
+struct ContractAcceptRequestDefaultTypeInternal;
+extern ContractAcceptRequestDefaultTypeInternal _ContractAcceptRequest_default_instance_;
+class ContractAcceptResponse;
+struct ContractAcceptResponseDefaultTypeInternal;
+extern ContractAcceptResponseDefaultTypeInternal _ContractAcceptResponse_default_instance_;
+class ContractAgreeRequest;
+struct ContractAgreeRequestDefaultTypeInternal;
+extern ContractAgreeRequestDefaultTypeInternal _ContractAgreeRequest_default_instance_;
+class ContractAgreeResponse;
+struct ContractAgreeResponseDefaultTypeInternal;
+extern ContractAgreeResponseDefaultTypeInternal _ContractAgreeResponse_default_instance_;
+class ContractFinalizeRequest;
+struct ContractFinalizeRequestDefaultTypeInternal;
+extern ContractFinalizeRequestDefaultTypeInternal _ContractFinalizeRequest_default_instance_;
+class ContractFinalizeResponse;
+struct ContractFinalizeResponseDefaultTypeInternal;
+extern ContractFinalizeResponseDefaultTypeInternal _ContractFinalizeResponse_default_instance_;
+class ContractOfferRequest;
+struct ContractOfferRequestDefaultTypeInternal;
+extern ContractOfferRequestDefaultTypeInternal _ContractOfferRequest_default_instance_;
+class ContractOfferResponse;
+struct ContractOfferResponseDefaultTypeInternal;
+extern ContractOfferResponseDefaultTypeInternal _ContractOfferResponse_default_instance_;
+class ContractRequestRequest;
+struct ContractRequestRequestDefaultTypeInternal;
+extern ContractRequestRequestDefaultTypeInternal _ContractRequestRequest_default_instance_;
+class ContractRequestResponse;
+struct ContractRequestResponseDefaultTypeInternal;
+extern ContractRequestResponseDefaultTypeInternal _ContractRequestResponse_default_instance_;
+class ContractTerminateRequest;
+struct ContractTerminateRequestDefaultTypeInternal;
+extern ContractTerminateRequestDefaultTypeInternal _ContractTerminateRequest_default_instance_;
+class ContractTerminateResponse;
+struct ContractTerminateResponseDefaultTypeInternal;
+extern ContractTerminateResponseDefaultTypeInternal _ContractTerminateResponse_default_instance_;
+class ContractVerifyRequest;
+struct ContractVerifyRequestDefaultTypeInternal;
+extern ContractVerifyRequestDefaultTypeInternal _ContractVerifyRequest_default_instance_;
+class ContractVerifyResponse;
+struct ContractVerifyResponseDefaultTypeInternal;
+extern ContractVerifyResponseDefaultTypeInternal _ContractVerifyResponse_default_instance_;
 class GetProviderCatalogueRequest;
 struct GetProviderCatalogueRequestDefaultTypeInternal;
 extern GetProviderCatalogueRequestDefaultTypeInternal _GetProviderCatalogueRequest_default_instance_;
@@ -95,18 +119,6 @@ extern GetProviderDatasetRequestDefaultTypeInternal _GetProviderDatasetRequest_d
 class GetProviderDatasetResponse;
 struct GetProviderDatasetResponseDefaultTypeInternal;
 extern GetProviderDatasetResponseDefaultTypeInternal _GetProviderDatasetResponse_default_instance_;
-class OfferRequest;
-struct OfferRequestDefaultTypeInternal;
-extern OfferRequestDefaultTypeInternal _OfferRequest_default_instance_;
-class OfferResponse;
-struct OfferResponseDefaultTypeInternal;
-extern OfferResponseDefaultTypeInternal _OfferResponse_default_instance_;
-class RequestRequest;
-struct RequestRequestDefaultTypeInternal;
-extern RequestRequestDefaultTypeInternal _RequestRequest_default_instance_;
-class RequestResponse;
-struct RequestResponseDefaultTypeInternal;
-extern RequestResponseDefaultTypeInternal _RequestResponse_default_instance_;
 class SignalTransferCancelledRequest;
 struct SignalTransferCancelledRequestDefaultTypeInternal;
 extern SignalTransferCancelledRequestDefaultTypeInternal _SignalTransferCancelledRequest_default_instance_;
@@ -131,24 +143,12 @@ extern SignalTransferSuspendRequestDefaultTypeInternal _SignalTransferSuspendReq
 class SignalTransferSuspendResponse;
 struct SignalTransferSuspendResponseDefaultTypeInternal;
 extern SignalTransferSuspendResponseDefaultTypeInternal _SignalTransferSuspendResponse_default_instance_;
-class TerminateRequest;
-struct TerminateRequestDefaultTypeInternal;
-extern TerminateRequestDefaultTypeInternal _TerminateRequest_default_instance_;
-class TerminateResponse;
-struct TerminateResponseDefaultTypeInternal;
-extern TerminateResponseDefaultTypeInternal _TerminateResponse_default_instance_;
 class VerifyConnectionRequest;
 struct VerifyConnectionRequestDefaultTypeInternal;
 extern VerifyConnectionRequestDefaultTypeInternal _VerifyConnectionRequest_default_instance_;
 class VerifyConnectionResponse;
 struct VerifyConnectionResponseDefaultTypeInternal;
 extern VerifyConnectionResponseDefaultTypeInternal _VerifyConnectionResponse_default_instance_;
-class VerifyRequest;
-struct VerifyRequestDefaultTypeInternal;
-extern VerifyRequestDefaultTypeInternal _VerifyRequest_default_instance_;
-class VerifyResponse;
-struct VerifyResponseDefaultTypeInternal;
-extern VerifyResponseDefaultTypeInternal _VerifyResponse_default_instance_;
 }  // namespace v1alpha2
 }  // namespace dsp
 namespace google {
@@ -162,325 +162,6 @@ namespace v1alpha2 {
 // ===================================================================
 
 
-// -------------------------------------------------------------------
-
-class VerifyResponse final : public ::google::protobuf::internal::ZeroFieldsBase
-/* @@protoc_insertion_point(class_definition:dsp.v1alpha2.VerifyResponse) */ {
- public:
-  inline VerifyResponse() : VerifyResponse(nullptr) {}
-  template <typename = void>
-  explicit PROTOBUF_CONSTEXPR VerifyResponse(
-      ::google::protobuf::internal::ConstantInitialized);
-
-  inline VerifyResponse(const VerifyResponse& from) : VerifyResponse(nullptr, from) {}
-  inline VerifyResponse(VerifyResponse&& from) noexcept
-      : VerifyResponse(nullptr, std::move(from)) {}
-  inline VerifyResponse& operator=(const VerifyResponse& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline VerifyResponse& operator=(VerifyResponse&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetArena() == from.GetArena()
-#ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetArena() != nullptr
-#endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::google::protobuf::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::google::protobuf::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const VerifyResponse& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const VerifyResponse* internal_default_instance() {
-    return reinterpret_cast<const VerifyResponse*>(
-        &_VerifyResponse_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages = 18;
-  friend void swap(VerifyResponse& a, VerifyResponse& b) { a.Swap(&b); }
-  inline void Swap(VerifyResponse* other) {
-    if (other == this) return;
-#ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() != nullptr && GetArena() == other->GetArena()) {
-#else   // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() == other->GetArena()) {
-#endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::google::protobuf::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(VerifyResponse* other) {
-    if (other == this) return;
-    ABSL_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  VerifyResponse* New(::google::protobuf::Arena* arena = nullptr) const final {
-    return ::google::protobuf::internal::ZeroFieldsBase::DefaultConstruct<VerifyResponse>(arena);
-  }
-  using ::google::protobuf::internal::ZeroFieldsBase::CopyFrom;
-  inline void CopyFrom(const VerifyResponse& from) {
-    ::google::protobuf::internal::ZeroFieldsBase::CopyImpl(*this, from);
-  }
-  using ::google::protobuf::internal::ZeroFieldsBase::MergeFrom;
-  void MergeFrom(const VerifyResponse& from) {
-    ::google::protobuf::internal::ZeroFieldsBase::MergeImpl(*this, from);
-  }
-
-  public:
-  bool IsInitialized() const {
-    return true;
-  }
- private:
-  friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() { return "dsp.v1alpha2.VerifyResponse"; }
-
- protected:
-  explicit VerifyResponse(::google::protobuf::Arena* arena);
-  VerifyResponse(::google::protobuf::Arena* arena, const VerifyResponse& from);
-  VerifyResponse(::google::protobuf::Arena* arena, VerifyResponse&& from) noexcept
-      : VerifyResponse(arena) {
-    *this = ::std::move(from);
-  }
-  const ::google::protobuf::internal::ZeroFieldsBase::ClassData* GetClassData() const final;
-
- public:
-  ::google::protobuf::Metadata GetMetadata() const;
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-  // @@protoc_insertion_point(class_scope:dsp.v1alpha2.VerifyResponse)
- private:
-  class _Internal;
-  friend class ::google::protobuf::internal::TcParser;
-  static const ::google::protobuf::internal::TcParseTable<
-      0, 0, 0,
-      0, 2>
-      _table_;
-
-  static constexpr const void* _raw_default_instance_ =
-      &_VerifyResponse_default_instance_;
-
-  friend class ::google::protobuf::MessageLite;
-  friend class ::google::protobuf::Arena;
-  template <typename T>
-  friend class ::google::protobuf::Arena::InternalHelper;
-  using InternalArenaConstructable_ = void;
-  using DestructorSkippable_ = void;
-  struct Impl_ {
-    inline explicit constexpr Impl_(
-        ::google::protobuf::internal::ConstantInitialized) noexcept;
-    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                          ::google::protobuf::Arena* arena);
-    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                          ::google::protobuf::Arena* arena, const Impl_& from,
-                          const VerifyResponse& from_msg);
-    PROTOBUF_TSAN_DECLARE_MEMBER
-  };
-  friend struct ::TableStruct_dsp_2fv1alpha2_2fcontrol_2eproto;
-};
-// -------------------------------------------------------------------
-
-class VerifyRequest final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:dsp.v1alpha2.VerifyRequest) */ {
- public:
-  inline VerifyRequest() : VerifyRequest(nullptr) {}
-  ~VerifyRequest() override;
-  template <typename = void>
-  explicit PROTOBUF_CONSTEXPR VerifyRequest(
-      ::google::protobuf::internal::ConstantInitialized);
-
-  inline VerifyRequest(const VerifyRequest& from) : VerifyRequest(nullptr, from) {}
-  inline VerifyRequest(VerifyRequest&& from) noexcept
-      : VerifyRequest(nullptr, std::move(from)) {}
-  inline VerifyRequest& operator=(const VerifyRequest& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline VerifyRequest& operator=(VerifyRequest&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetArena() == from.GetArena()
-#ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetArena() != nullptr
-#endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::google::protobuf::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::google::protobuf::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const VerifyRequest& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const VerifyRequest* internal_default_instance() {
-    return reinterpret_cast<const VerifyRequest*>(
-        &_VerifyRequest_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages = 17;
-  friend void swap(VerifyRequest& a, VerifyRequest& b) { a.Swap(&b); }
-  inline void Swap(VerifyRequest* other) {
-    if (other == this) return;
-#ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() != nullptr && GetArena() == other->GetArena()) {
-#else   // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() == other->GetArena()) {
-#endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::google::protobuf::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(VerifyRequest* other) {
-    if (other == this) return;
-    ABSL_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  VerifyRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
-    return ::google::protobuf::Message::DefaultConstruct<VerifyRequest>(arena);
-  }
-  using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const VerifyRequest& from);
-  using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const VerifyRequest& from) { VerifyRequest::MergeImpl(*this, from); }
-
-  private:
-  static void MergeImpl(
-      ::google::protobuf::MessageLite& to_msg,
-      const ::google::protobuf::MessageLite& from_msg);
-
-  public:
-  bool IsInitialized() const {
-    return true;
-  }
-  ABSL_ATTRIBUTE_REINITIALIZES void Clear() final;
-  ::size_t ByteSizeLong() const final;
-  ::uint8_t* _InternalSerialize(
-      ::uint8_t* target,
-      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::google::protobuf::Arena* arena);
-  void SharedDtor();
-  void InternalSwap(VerifyRequest* other);
- private:
-  friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() { return "dsp.v1alpha2.VerifyRequest"; }
-
- protected:
-  explicit VerifyRequest(::google::protobuf::Arena* arena);
-  VerifyRequest(::google::protobuf::Arena* arena, const VerifyRequest& from);
-  VerifyRequest(::google::protobuf::Arena* arena, VerifyRequest&& from) noexcept
-      : VerifyRequest(arena) {
-    *this = ::std::move(from);
-  }
-  const ::google::protobuf::Message::ClassData* GetClassData() const final;
-
- public:
-  ::google::protobuf::Metadata GetMetadata() const;
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-  enum : int {
-    kPidFieldNumber = 1,
-  };
-  // string pid = 1 [json_name = "pid"];
-  void clear_pid() ;
-  const std::string& pid() const;
-  template <typename Arg_ = const std::string&, typename... Args_>
-  void set_pid(Arg_&& arg, Args_... args);
-  std::string* mutable_pid();
-  PROTOBUF_NODISCARD std::string* release_pid();
-  void set_allocated_pid(std::string* value);
-
-  private:
-  const std::string& _internal_pid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_pid(
-      const std::string& value);
-  std::string* _internal_mutable_pid();
-
-  public:
-  // @@protoc_insertion_point(class_scope:dsp.v1alpha2.VerifyRequest)
- private:
-  class _Internal;
-  friend class ::google::protobuf::internal::TcParser;
-  static const ::google::protobuf::internal::TcParseTable<
-      0, 1, 0,
-      38, 2>
-      _table_;
-
-  static constexpr const void* _raw_default_instance_ =
-      &_VerifyRequest_default_instance_;
-
-  friend class ::google::protobuf::MessageLite;
-  friend class ::google::protobuf::Arena;
-  template <typename T>
-  friend class ::google::protobuf::Arena::InternalHelper;
-  using InternalArenaConstructable_ = void;
-  using DestructorSkippable_ = void;
-  struct Impl_ {
-    inline explicit constexpr Impl_(
-        ::google::protobuf::internal::ConstantInitialized) noexcept;
-    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                          ::google::protobuf::Arena* arena);
-    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                          ::google::protobuf::Arena* arena, const Impl_& from,
-                          const VerifyRequest& from_msg);
-    ::google::protobuf::internal::ArenaStringPtr pid_;
-    mutable ::google::protobuf::internal::CachedSize _cached_size_;
-    PROTOBUF_TSAN_DECLARE_MEMBER
-  };
-  union { Impl_ _impl_; };
-  friend struct ::TableStruct_dsp_2fv1alpha2_2fcontrol_2eproto;
-};
 // -------------------------------------------------------------------
 
 class VerifyConnectionResponse final : public ::google::protobuf::internal::ZeroFieldsBase
@@ -794,373 +475,6 @@ class VerifyConnectionRequest final : public ::google::protobuf::Message
                           ::google::protobuf::Arena* arena, const Impl_& from,
                           const VerifyConnectionRequest& from_msg);
     ::google::protobuf::internal::ArenaStringPtr verification_token_;
-    mutable ::google::protobuf::internal::CachedSize _cached_size_;
-    PROTOBUF_TSAN_DECLARE_MEMBER
-  };
-  union { Impl_ _impl_; };
-  friend struct ::TableStruct_dsp_2fv1alpha2_2fcontrol_2eproto;
-};
-// -------------------------------------------------------------------
-
-class TerminateResponse final : public ::google::protobuf::internal::ZeroFieldsBase
-/* @@protoc_insertion_point(class_definition:dsp.v1alpha2.TerminateResponse) */ {
- public:
-  inline TerminateResponse() : TerminateResponse(nullptr) {}
-  template <typename = void>
-  explicit PROTOBUF_CONSTEXPR TerminateResponse(
-      ::google::protobuf::internal::ConstantInitialized);
-
-  inline TerminateResponse(const TerminateResponse& from) : TerminateResponse(nullptr, from) {}
-  inline TerminateResponse(TerminateResponse&& from) noexcept
-      : TerminateResponse(nullptr, std::move(from)) {}
-  inline TerminateResponse& operator=(const TerminateResponse& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline TerminateResponse& operator=(TerminateResponse&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetArena() == from.GetArena()
-#ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetArena() != nullptr
-#endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::google::protobuf::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::google::protobuf::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const TerminateResponse& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const TerminateResponse* internal_default_instance() {
-    return reinterpret_cast<const TerminateResponse*>(
-        &_TerminateResponse_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages = 22;
-  friend void swap(TerminateResponse& a, TerminateResponse& b) { a.Swap(&b); }
-  inline void Swap(TerminateResponse* other) {
-    if (other == this) return;
-#ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() != nullptr && GetArena() == other->GetArena()) {
-#else   // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() == other->GetArena()) {
-#endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::google::protobuf::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(TerminateResponse* other) {
-    if (other == this) return;
-    ABSL_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  TerminateResponse* New(::google::protobuf::Arena* arena = nullptr) const final {
-    return ::google::protobuf::internal::ZeroFieldsBase::DefaultConstruct<TerminateResponse>(arena);
-  }
-  using ::google::protobuf::internal::ZeroFieldsBase::CopyFrom;
-  inline void CopyFrom(const TerminateResponse& from) {
-    ::google::protobuf::internal::ZeroFieldsBase::CopyImpl(*this, from);
-  }
-  using ::google::protobuf::internal::ZeroFieldsBase::MergeFrom;
-  void MergeFrom(const TerminateResponse& from) {
-    ::google::protobuf::internal::ZeroFieldsBase::MergeImpl(*this, from);
-  }
-
-  public:
-  bool IsInitialized() const {
-    return true;
-  }
- private:
-  friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() { return "dsp.v1alpha2.TerminateResponse"; }
-
- protected:
-  explicit TerminateResponse(::google::protobuf::Arena* arena);
-  TerminateResponse(::google::protobuf::Arena* arena, const TerminateResponse& from);
-  TerminateResponse(::google::protobuf::Arena* arena, TerminateResponse&& from) noexcept
-      : TerminateResponse(arena) {
-    *this = ::std::move(from);
-  }
-  const ::google::protobuf::internal::ZeroFieldsBase::ClassData* GetClassData() const final;
-
- public:
-  ::google::protobuf::Metadata GetMetadata() const;
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-  // @@protoc_insertion_point(class_scope:dsp.v1alpha2.TerminateResponse)
- private:
-  class _Internal;
-  friend class ::google::protobuf::internal::TcParser;
-  static const ::google::protobuf::internal::TcParseTable<
-      0, 0, 0,
-      0, 2>
-      _table_;
-
-  static constexpr const void* _raw_default_instance_ =
-      &_TerminateResponse_default_instance_;
-
-  friend class ::google::protobuf::MessageLite;
-  friend class ::google::protobuf::Arena;
-  template <typename T>
-  friend class ::google::protobuf::Arena::InternalHelper;
-  using InternalArenaConstructable_ = void;
-  using DestructorSkippable_ = void;
-  struct Impl_ {
-    inline explicit constexpr Impl_(
-        ::google::protobuf::internal::ConstantInitialized) noexcept;
-    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                          ::google::protobuf::Arena* arena);
-    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                          ::google::protobuf::Arena* arena, const Impl_& from,
-                          const TerminateResponse& from_msg);
-    PROTOBUF_TSAN_DECLARE_MEMBER
-  };
-  friend struct ::TableStruct_dsp_2fv1alpha2_2fcontrol_2eproto;
-};
-// -------------------------------------------------------------------
-
-class TerminateRequest final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:dsp.v1alpha2.TerminateRequest) */ {
- public:
-  inline TerminateRequest() : TerminateRequest(nullptr) {}
-  ~TerminateRequest() override;
-  template <typename = void>
-  explicit PROTOBUF_CONSTEXPR TerminateRequest(
-      ::google::protobuf::internal::ConstantInitialized);
-
-  inline TerminateRequest(const TerminateRequest& from) : TerminateRequest(nullptr, from) {}
-  inline TerminateRequest(TerminateRequest&& from) noexcept
-      : TerminateRequest(nullptr, std::move(from)) {}
-  inline TerminateRequest& operator=(const TerminateRequest& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline TerminateRequest& operator=(TerminateRequest&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetArena() == from.GetArena()
-#ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetArena() != nullptr
-#endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::google::protobuf::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::google::protobuf::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const TerminateRequest& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const TerminateRequest* internal_default_instance() {
-    return reinterpret_cast<const TerminateRequest*>(
-        &_TerminateRequest_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages = 21;
-  friend void swap(TerminateRequest& a, TerminateRequest& b) { a.Swap(&b); }
-  inline void Swap(TerminateRequest* other) {
-    if (other == this) return;
-#ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() != nullptr && GetArena() == other->GetArena()) {
-#else   // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() == other->GetArena()) {
-#endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::google::protobuf::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(TerminateRequest* other) {
-    if (other == this) return;
-    ABSL_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  TerminateRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
-    return ::google::protobuf::Message::DefaultConstruct<TerminateRequest>(arena);
-  }
-  using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const TerminateRequest& from);
-  using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const TerminateRequest& from) { TerminateRequest::MergeImpl(*this, from); }
-
-  private:
-  static void MergeImpl(
-      ::google::protobuf::MessageLite& to_msg,
-      const ::google::protobuf::MessageLite& from_msg);
-
-  public:
-  bool IsInitialized() const {
-    return true;
-  }
-  ABSL_ATTRIBUTE_REINITIALIZES void Clear() final;
-  ::size_t ByteSizeLong() const final;
-  ::uint8_t* _InternalSerialize(
-      ::uint8_t* target,
-      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::google::protobuf::Arena* arena);
-  void SharedDtor();
-  void InternalSwap(TerminateRequest* other);
- private:
-  friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() { return "dsp.v1alpha2.TerminateRequest"; }
-
- protected:
-  explicit TerminateRequest(::google::protobuf::Arena* arena);
-  TerminateRequest(::google::protobuf::Arena* arena, const TerminateRequest& from);
-  TerminateRequest(::google::protobuf::Arena* arena, TerminateRequest&& from) noexcept
-      : TerminateRequest(arena) {
-    *this = ::std::move(from);
-  }
-  const ::google::protobuf::Message::ClassData* GetClassData() const final;
-
- public:
-  ::google::protobuf::Metadata GetMetadata() const;
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-  enum : int {
-    kReasonFieldNumber = 3,
-    kPidFieldNumber = 1,
-    kCodeFieldNumber = 2,
-  };
-  // repeated string reason = 3 [json_name = "reason"];
-  int reason_size() const;
-  private:
-  int _internal_reason_size() const;
-
-  public:
-  void clear_reason() ;
-  const std::string& reason(int index) const;
-  std::string* mutable_reason(int index);
-  void set_reason(int index, const std::string& value);
-  void set_reason(int index, std::string&& value);
-  void set_reason(int index, const char* value);
-  void set_reason(int index, const char* value, std::size_t size);
-  void set_reason(int index, absl::string_view value);
-  std::string* add_reason();
-  void add_reason(const std::string& value);
-  void add_reason(std::string&& value);
-  void add_reason(const char* value);
-  void add_reason(const char* value, std::size_t size);
-  void add_reason(absl::string_view value);
-  const ::google::protobuf::RepeatedPtrField<std::string>& reason() const;
-  ::google::protobuf::RepeatedPtrField<std::string>* mutable_reason();
-
-  private:
-  const ::google::protobuf::RepeatedPtrField<std::string>& _internal_reason() const;
-  ::google::protobuf::RepeatedPtrField<std::string>* _internal_mutable_reason();
-
-  public:
-  // string pid = 1 [json_name = "pid"];
-  void clear_pid() ;
-  const std::string& pid() const;
-  template <typename Arg_ = const std::string&, typename... Args_>
-  void set_pid(Arg_&& arg, Args_... args);
-  std::string* mutable_pid();
-  PROTOBUF_NODISCARD std::string* release_pid();
-  void set_allocated_pid(std::string* value);
-
-  private:
-  const std::string& _internal_pid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_pid(
-      const std::string& value);
-  std::string* _internal_mutable_pid();
-
-  public:
-  // string code = 2 [json_name = "code"];
-  void clear_code() ;
-  const std::string& code() const;
-  template <typename Arg_ = const std::string&, typename... Args_>
-  void set_code(Arg_&& arg, Args_... args);
-  std::string* mutable_code();
-  PROTOBUF_NODISCARD std::string* release_code();
-  void set_allocated_code(std::string* value);
-
-  private:
-  const std::string& _internal_code() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_code(
-      const std::string& value);
-  std::string* _internal_mutable_code();
-
-  public:
-  // @@protoc_insertion_point(class_scope:dsp.v1alpha2.TerminateRequest)
- private:
-  class _Internal;
-  friend class ::google::protobuf::internal::TcParser;
-  static const ::google::protobuf::internal::TcParseTable<
-      2, 3, 0,
-      51, 2>
-      _table_;
-
-  static constexpr const void* _raw_default_instance_ =
-      &_TerminateRequest_default_instance_;
-
-  friend class ::google::protobuf::MessageLite;
-  friend class ::google::protobuf::Arena;
-  template <typename T>
-  friend class ::google::protobuf::Arena::InternalHelper;
-  using InternalArenaConstructable_ = void;
-  using DestructorSkippable_ = void;
-  struct Impl_ {
-    inline explicit constexpr Impl_(
-        ::google::protobuf::internal::ConstantInitialized) noexcept;
-    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                          ::google::protobuf::Arena* arena);
-    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                          ::google::protobuf::Arena* arena, const Impl_& from,
-                          const TerminateRequest& from_msg);
-    ::google::protobuf::RepeatedPtrField<std::string> reason_;
-    ::google::protobuf::internal::ArenaStringPtr pid_;
-    ::google::protobuf::internal::ArenaStringPtr code_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -2445,722 +1759,6 @@ class SignalTransferCancelledRequest final : public ::google::protobuf::Message
 };
 // -------------------------------------------------------------------
 
-class RequestResponse final : public ::google::protobuf::internal::ZeroFieldsBase
-/* @@protoc_insertion_point(class_definition:dsp.v1alpha2.RequestResponse) */ {
- public:
-  inline RequestResponse() : RequestResponse(nullptr) {}
-  template <typename = void>
-  explicit PROTOBUF_CONSTEXPR RequestResponse(
-      ::google::protobuf::internal::ConstantInitialized);
-
-  inline RequestResponse(const RequestResponse& from) : RequestResponse(nullptr, from) {}
-  inline RequestResponse(RequestResponse&& from) noexcept
-      : RequestResponse(nullptr, std::move(from)) {}
-  inline RequestResponse& operator=(const RequestResponse& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline RequestResponse& operator=(RequestResponse&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetArena() == from.GetArena()
-#ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetArena() != nullptr
-#endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::google::protobuf::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::google::protobuf::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const RequestResponse& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const RequestResponse* internal_default_instance() {
-    return reinterpret_cast<const RequestResponse*>(
-        &_RequestResponse_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages = 10;
-  friend void swap(RequestResponse& a, RequestResponse& b) { a.Swap(&b); }
-  inline void Swap(RequestResponse* other) {
-    if (other == this) return;
-#ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() != nullptr && GetArena() == other->GetArena()) {
-#else   // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() == other->GetArena()) {
-#endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::google::protobuf::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(RequestResponse* other) {
-    if (other == this) return;
-    ABSL_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  RequestResponse* New(::google::protobuf::Arena* arena = nullptr) const final {
-    return ::google::protobuf::internal::ZeroFieldsBase::DefaultConstruct<RequestResponse>(arena);
-  }
-  using ::google::protobuf::internal::ZeroFieldsBase::CopyFrom;
-  inline void CopyFrom(const RequestResponse& from) {
-    ::google::protobuf::internal::ZeroFieldsBase::CopyImpl(*this, from);
-  }
-  using ::google::protobuf::internal::ZeroFieldsBase::MergeFrom;
-  void MergeFrom(const RequestResponse& from) {
-    ::google::protobuf::internal::ZeroFieldsBase::MergeImpl(*this, from);
-  }
-
-  public:
-  bool IsInitialized() const {
-    return true;
-  }
- private:
-  friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() { return "dsp.v1alpha2.RequestResponse"; }
-
- protected:
-  explicit RequestResponse(::google::protobuf::Arena* arena);
-  RequestResponse(::google::protobuf::Arena* arena, const RequestResponse& from);
-  RequestResponse(::google::protobuf::Arena* arena, RequestResponse&& from) noexcept
-      : RequestResponse(arena) {
-    *this = ::std::move(from);
-  }
-  const ::google::protobuf::internal::ZeroFieldsBase::ClassData* GetClassData() const final;
-
- public:
-  ::google::protobuf::Metadata GetMetadata() const;
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-  // @@protoc_insertion_point(class_scope:dsp.v1alpha2.RequestResponse)
- private:
-  class _Internal;
-  friend class ::google::protobuf::internal::TcParser;
-  static const ::google::protobuf::internal::TcParseTable<
-      0, 0, 0,
-      0, 2>
-      _table_;
-
-  static constexpr const void* _raw_default_instance_ =
-      &_RequestResponse_default_instance_;
-
-  friend class ::google::protobuf::MessageLite;
-  friend class ::google::protobuf::Arena;
-  template <typename T>
-  friend class ::google::protobuf::Arena::InternalHelper;
-  using InternalArenaConstructable_ = void;
-  using DestructorSkippable_ = void;
-  struct Impl_ {
-    inline explicit constexpr Impl_(
-        ::google::protobuf::internal::ConstantInitialized) noexcept;
-    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                          ::google::protobuf::Arena* arena);
-    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                          ::google::protobuf::Arena* arena, const Impl_& from,
-                          const RequestResponse& from_msg);
-    PROTOBUF_TSAN_DECLARE_MEMBER
-  };
-  friend struct ::TableStruct_dsp_2fv1alpha2_2fcontrol_2eproto;
-};
-// -------------------------------------------------------------------
-
-class RequestRequest final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:dsp.v1alpha2.RequestRequest) */ {
- public:
-  inline RequestRequest() : RequestRequest(nullptr) {}
-  ~RequestRequest() override;
-  template <typename = void>
-  explicit PROTOBUF_CONSTEXPR RequestRequest(
-      ::google::protobuf::internal::ConstantInitialized);
-
-  inline RequestRequest(const RequestRequest& from) : RequestRequest(nullptr, from) {}
-  inline RequestRequest(RequestRequest&& from) noexcept
-      : RequestRequest(nullptr, std::move(from)) {}
-  inline RequestRequest& operator=(const RequestRequest& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline RequestRequest& operator=(RequestRequest&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetArena() == from.GetArena()
-#ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetArena() != nullptr
-#endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::google::protobuf::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::google::protobuf::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const RequestRequest& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const RequestRequest* internal_default_instance() {
-    return reinterpret_cast<const RequestRequest*>(
-        &_RequestRequest_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages = 9;
-  friend void swap(RequestRequest& a, RequestRequest& b) { a.Swap(&b); }
-  inline void Swap(RequestRequest* other) {
-    if (other == this) return;
-#ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() != nullptr && GetArena() == other->GetArena()) {
-#else   // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() == other->GetArena()) {
-#endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::google::protobuf::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(RequestRequest* other) {
-    if (other == this) return;
-    ABSL_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  RequestRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
-    return ::google::protobuf::Message::DefaultConstruct<RequestRequest>(arena);
-  }
-  using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const RequestRequest& from);
-  using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const RequestRequest& from) { RequestRequest::MergeImpl(*this, from); }
-
-  private:
-  static void MergeImpl(
-      ::google::protobuf::MessageLite& to_msg,
-      const ::google::protobuf::MessageLite& from_msg);
-
-  public:
-  bool IsInitialized() const {
-    return true;
-  }
-  ABSL_ATTRIBUTE_REINITIALIZES void Clear() final;
-  ::size_t ByteSizeLong() const final;
-  ::uint8_t* _InternalSerialize(
-      ::uint8_t* target,
-      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::google::protobuf::Arena* arena);
-  void SharedDtor();
-  void InternalSwap(RequestRequest* other);
- private:
-  friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() { return "dsp.v1alpha2.RequestRequest"; }
-
- protected:
-  explicit RequestRequest(::google::protobuf::Arena* arena);
-  RequestRequest(::google::protobuf::Arena* arena, const RequestRequest& from);
-  RequestRequest(::google::protobuf::Arena* arena, RequestRequest&& from) noexcept
-      : RequestRequest(arena) {
-    *this = ::std::move(from);
-  }
-  const ::google::protobuf::Message::ClassData* GetClassData() const final;
-
- public:
-  ::google::protobuf::Metadata GetMetadata() const;
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-  enum : int {
-    kOfferFieldNumber = 1,
-    kPidFieldNumber = 2,
-    kParticipantAddressFieldNumber = 3,
-  };
-  // string offer = 1 [json_name = "offer"];
-  void clear_offer() ;
-  const std::string& offer() const;
-  template <typename Arg_ = const std::string&, typename... Args_>
-  void set_offer(Arg_&& arg, Args_... args);
-  std::string* mutable_offer();
-  PROTOBUF_NODISCARD std::string* release_offer();
-  void set_allocated_offer(std::string* value);
-
-  private:
-  const std::string& _internal_offer() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_offer(
-      const std::string& value);
-  std::string* _internal_mutable_offer();
-
-  public:
-  // optional string pid = 2 [json_name = "pid"];
-  bool has_pid() const;
-  void clear_pid() ;
-  const std::string& pid() const;
-  template <typename Arg_ = const std::string&, typename... Args_>
-  void set_pid(Arg_&& arg, Args_... args);
-  std::string* mutable_pid();
-  PROTOBUF_NODISCARD std::string* release_pid();
-  void set_allocated_pid(std::string* value);
-
-  private:
-  const std::string& _internal_pid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_pid(
-      const std::string& value);
-  std::string* _internal_mutable_pid();
-
-  public:
-  // optional string participant_address = 3 [json_name = "participantAddress"];
-  bool has_participant_address() const;
-  void clear_participant_address() ;
-  const std::string& participant_address() const;
-  template <typename Arg_ = const std::string&, typename... Args_>
-  void set_participant_address(Arg_&& arg, Args_... args);
-  std::string* mutable_participant_address();
-  PROTOBUF_NODISCARD std::string* release_participant_address();
-  void set_allocated_participant_address(std::string* value);
-
-  private:
-  const std::string& _internal_participant_address() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_participant_address(
-      const std::string& value);
-  std::string* _internal_mutable_participant_address();
-
-  public:
-  // @@protoc_insertion_point(class_scope:dsp.v1alpha2.RequestRequest)
- private:
-  class _Internal;
-  friend class ::google::protobuf::internal::TcParser;
-  static const ::google::protobuf::internal::TcParseTable<
-      2, 3, 0,
-      63, 2>
-      _table_;
-
-  static constexpr const void* _raw_default_instance_ =
-      &_RequestRequest_default_instance_;
-
-  friend class ::google::protobuf::MessageLite;
-  friend class ::google::protobuf::Arena;
-  template <typename T>
-  friend class ::google::protobuf::Arena::InternalHelper;
-  using InternalArenaConstructable_ = void;
-  using DestructorSkippable_ = void;
-  struct Impl_ {
-    inline explicit constexpr Impl_(
-        ::google::protobuf::internal::ConstantInitialized) noexcept;
-    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                          ::google::protobuf::Arena* arena);
-    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                          ::google::protobuf::Arena* arena, const Impl_& from,
-                          const RequestRequest& from_msg);
-    ::google::protobuf::internal::HasBits<1> _has_bits_;
-    mutable ::google::protobuf::internal::CachedSize _cached_size_;
-    ::google::protobuf::internal::ArenaStringPtr offer_;
-    ::google::protobuf::internal::ArenaStringPtr pid_;
-    ::google::protobuf::internal::ArenaStringPtr participant_address_;
-    PROTOBUF_TSAN_DECLARE_MEMBER
-  };
-  union { Impl_ _impl_; };
-  friend struct ::TableStruct_dsp_2fv1alpha2_2fcontrol_2eproto;
-};
-// -------------------------------------------------------------------
-
-class OfferResponse final : public ::google::protobuf::internal::ZeroFieldsBase
-/* @@protoc_insertion_point(class_definition:dsp.v1alpha2.OfferResponse) */ {
- public:
-  inline OfferResponse() : OfferResponse(nullptr) {}
-  template <typename = void>
-  explicit PROTOBUF_CONSTEXPR OfferResponse(
-      ::google::protobuf::internal::ConstantInitialized);
-
-  inline OfferResponse(const OfferResponse& from) : OfferResponse(nullptr, from) {}
-  inline OfferResponse(OfferResponse&& from) noexcept
-      : OfferResponse(nullptr, std::move(from)) {}
-  inline OfferResponse& operator=(const OfferResponse& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline OfferResponse& operator=(OfferResponse&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetArena() == from.GetArena()
-#ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetArena() != nullptr
-#endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::google::protobuf::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::google::protobuf::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const OfferResponse& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const OfferResponse* internal_default_instance() {
-    return reinterpret_cast<const OfferResponse*>(
-        &_OfferResponse_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages = 12;
-  friend void swap(OfferResponse& a, OfferResponse& b) { a.Swap(&b); }
-  inline void Swap(OfferResponse* other) {
-    if (other == this) return;
-#ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() != nullptr && GetArena() == other->GetArena()) {
-#else   // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() == other->GetArena()) {
-#endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::google::protobuf::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(OfferResponse* other) {
-    if (other == this) return;
-    ABSL_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  OfferResponse* New(::google::protobuf::Arena* arena = nullptr) const final {
-    return ::google::protobuf::internal::ZeroFieldsBase::DefaultConstruct<OfferResponse>(arena);
-  }
-  using ::google::protobuf::internal::ZeroFieldsBase::CopyFrom;
-  inline void CopyFrom(const OfferResponse& from) {
-    ::google::protobuf::internal::ZeroFieldsBase::CopyImpl(*this, from);
-  }
-  using ::google::protobuf::internal::ZeroFieldsBase::MergeFrom;
-  void MergeFrom(const OfferResponse& from) {
-    ::google::protobuf::internal::ZeroFieldsBase::MergeImpl(*this, from);
-  }
-
-  public:
-  bool IsInitialized() const {
-    return true;
-  }
- private:
-  friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() { return "dsp.v1alpha2.OfferResponse"; }
-
- protected:
-  explicit OfferResponse(::google::protobuf::Arena* arena);
-  OfferResponse(::google::protobuf::Arena* arena, const OfferResponse& from);
-  OfferResponse(::google::protobuf::Arena* arena, OfferResponse&& from) noexcept
-      : OfferResponse(arena) {
-    *this = ::std::move(from);
-  }
-  const ::google::protobuf::internal::ZeroFieldsBase::ClassData* GetClassData() const final;
-
- public:
-  ::google::protobuf::Metadata GetMetadata() const;
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-  // @@protoc_insertion_point(class_scope:dsp.v1alpha2.OfferResponse)
- private:
-  class _Internal;
-  friend class ::google::protobuf::internal::TcParser;
-  static const ::google::protobuf::internal::TcParseTable<
-      0, 0, 0,
-      0, 2>
-      _table_;
-
-  static constexpr const void* _raw_default_instance_ =
-      &_OfferResponse_default_instance_;
-
-  friend class ::google::protobuf::MessageLite;
-  friend class ::google::protobuf::Arena;
-  template <typename T>
-  friend class ::google::protobuf::Arena::InternalHelper;
-  using InternalArenaConstructable_ = void;
-  using DestructorSkippable_ = void;
-  struct Impl_ {
-    inline explicit constexpr Impl_(
-        ::google::protobuf::internal::ConstantInitialized) noexcept;
-    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                          ::google::protobuf::Arena* arena);
-    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                          ::google::protobuf::Arena* arena, const Impl_& from,
-                          const OfferResponse& from_msg);
-    PROTOBUF_TSAN_DECLARE_MEMBER
-  };
-  friend struct ::TableStruct_dsp_2fv1alpha2_2fcontrol_2eproto;
-};
-// -------------------------------------------------------------------
-
-class OfferRequest final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:dsp.v1alpha2.OfferRequest) */ {
- public:
-  inline OfferRequest() : OfferRequest(nullptr) {}
-  ~OfferRequest() override;
-  template <typename = void>
-  explicit PROTOBUF_CONSTEXPR OfferRequest(
-      ::google::protobuf::internal::ConstantInitialized);
-
-  inline OfferRequest(const OfferRequest& from) : OfferRequest(nullptr, from) {}
-  inline OfferRequest(OfferRequest&& from) noexcept
-      : OfferRequest(nullptr, std::move(from)) {}
-  inline OfferRequest& operator=(const OfferRequest& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline OfferRequest& operator=(OfferRequest&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetArena() == from.GetArena()
-#ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetArena() != nullptr
-#endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::google::protobuf::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::google::protobuf::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const OfferRequest& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const OfferRequest* internal_default_instance() {
-    return reinterpret_cast<const OfferRequest*>(
-        &_OfferRequest_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages = 11;
-  friend void swap(OfferRequest& a, OfferRequest& b) { a.Swap(&b); }
-  inline void Swap(OfferRequest* other) {
-    if (other == this) return;
-#ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() != nullptr && GetArena() == other->GetArena()) {
-#else   // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() == other->GetArena()) {
-#endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::google::protobuf::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(OfferRequest* other) {
-    if (other == this) return;
-    ABSL_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  OfferRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
-    return ::google::protobuf::Message::DefaultConstruct<OfferRequest>(arena);
-  }
-  using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const OfferRequest& from);
-  using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const OfferRequest& from) { OfferRequest::MergeImpl(*this, from); }
-
-  private:
-  static void MergeImpl(
-      ::google::protobuf::MessageLite& to_msg,
-      const ::google::protobuf::MessageLite& from_msg);
-
-  public:
-  bool IsInitialized() const {
-    return true;
-  }
-  ABSL_ATTRIBUTE_REINITIALIZES void Clear() final;
-  ::size_t ByteSizeLong() const final;
-  ::uint8_t* _InternalSerialize(
-      ::uint8_t* target,
-      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::google::protobuf::Arena* arena);
-  void SharedDtor();
-  void InternalSwap(OfferRequest* other);
- private:
-  friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() { return "dsp.v1alpha2.OfferRequest"; }
-
- protected:
-  explicit OfferRequest(::google::protobuf::Arena* arena);
-  OfferRequest(::google::protobuf::Arena* arena, const OfferRequest& from);
-  OfferRequest(::google::protobuf::Arena* arena, OfferRequest&& from) noexcept
-      : OfferRequest(arena) {
-    *this = ::std::move(from);
-  }
-  const ::google::protobuf::Message::ClassData* GetClassData() const final;
-
- public:
-  ::google::protobuf::Metadata GetMetadata() const;
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-  enum : int {
-    kOfferFieldNumber = 1,
-    kPidFieldNumber = 2,
-    kParticipantAddressFieldNumber = 3,
-  };
-  // string offer = 1 [json_name = "offer"];
-  void clear_offer() ;
-  const std::string& offer() const;
-  template <typename Arg_ = const std::string&, typename... Args_>
-  void set_offer(Arg_&& arg, Args_... args);
-  std::string* mutable_offer();
-  PROTOBUF_NODISCARD std::string* release_offer();
-  void set_allocated_offer(std::string* value);
-
-  private:
-  const std::string& _internal_offer() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_offer(
-      const std::string& value);
-  std::string* _internal_mutable_offer();
-
-  public:
-  // optional string pid = 2 [json_name = "pid"];
-  bool has_pid() const;
-  void clear_pid() ;
-  const std::string& pid() const;
-  template <typename Arg_ = const std::string&, typename... Args_>
-  void set_pid(Arg_&& arg, Args_... args);
-  std::string* mutable_pid();
-  PROTOBUF_NODISCARD std::string* release_pid();
-  void set_allocated_pid(std::string* value);
-
-  private:
-  const std::string& _internal_pid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_pid(
-      const std::string& value);
-  std::string* _internal_mutable_pid();
-
-  public:
-  // optional string participant_address = 3 [json_name = "participantAddress"];
-  bool has_participant_address() const;
-  void clear_participant_address() ;
-  const std::string& participant_address() const;
-  template <typename Arg_ = const std::string&, typename... Args_>
-  void set_participant_address(Arg_&& arg, Args_... args);
-  std::string* mutable_participant_address();
-  PROTOBUF_NODISCARD std::string* release_participant_address();
-  void set_allocated_participant_address(std::string* value);
-
-  private:
-  const std::string& _internal_participant_address() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_participant_address(
-      const std::string& value);
-  std::string* _internal_mutable_participant_address();
-
-  public:
-  // @@protoc_insertion_point(class_scope:dsp.v1alpha2.OfferRequest)
- private:
-  class _Internal;
-  friend class ::google::protobuf::internal::TcParser;
-  static const ::google::protobuf::internal::TcParseTable<
-      2, 3, 0,
-      61, 2>
-      _table_;
-
-  static constexpr const void* _raw_default_instance_ =
-      &_OfferRequest_default_instance_;
-
-  friend class ::google::protobuf::MessageLite;
-  friend class ::google::protobuf::Arena;
-  template <typename T>
-  friend class ::google::protobuf::Arena::InternalHelper;
-  using InternalArenaConstructable_ = void;
-  using DestructorSkippable_ = void;
-  struct Impl_ {
-    inline explicit constexpr Impl_(
-        ::google::protobuf::internal::ConstantInitialized) noexcept;
-    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                          ::google::protobuf::Arena* arena);
-    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                          ::google::protobuf::Arena* arena, const Impl_& from,
-                          const OfferRequest& from_msg);
-    ::google::protobuf::internal::HasBits<1> _has_bits_;
-    mutable ::google::protobuf::internal::CachedSize _cached_size_;
-    ::google::protobuf::internal::ArenaStringPtr offer_;
-    ::google::protobuf::internal::ArenaStringPtr pid_;
-    ::google::protobuf::internal::ArenaStringPtr participant_address_;
-    PROTOBUF_TSAN_DECLARE_MEMBER
-  };
-  union { Impl_ _impl_; };
-  friend struct ::TableStruct_dsp_2fv1alpha2_2fcontrol_2eproto;
-};
-// -------------------------------------------------------------------
-
 class GetProviderDatasetRequest final : public ::google::protobuf::Message
 /* @@protoc_insertion_point(class_definition:dsp.v1alpha2.GetProviderDatasetRequest) */ {
  public:
@@ -3575,22 +2173,22 @@ const ::google::protobuf::Message::ClassData* GetClassData() const final;
 };
 // -------------------------------------------------------------------
 
-class FinalizeResponse final : public ::google::protobuf::internal::ZeroFieldsBase
-/* @@protoc_insertion_point(class_definition:dsp.v1alpha2.FinalizeResponse) */ {
+class ContractVerifyResponse final : public ::google::protobuf::internal::ZeroFieldsBase
+/* @@protoc_insertion_point(class_definition:dsp.v1alpha2.ContractVerifyResponse) */ {
  public:
-  inline FinalizeResponse() : FinalizeResponse(nullptr) {}
+  inline ContractVerifyResponse() : ContractVerifyResponse(nullptr) {}
   template <typename = void>
-  explicit PROTOBUF_CONSTEXPR FinalizeResponse(
+  explicit PROTOBUF_CONSTEXPR ContractVerifyResponse(
       ::google::protobuf::internal::ConstantInitialized);
 
-  inline FinalizeResponse(const FinalizeResponse& from) : FinalizeResponse(nullptr, from) {}
-  inline FinalizeResponse(FinalizeResponse&& from) noexcept
-      : FinalizeResponse(nullptr, std::move(from)) {}
-  inline FinalizeResponse& operator=(const FinalizeResponse& from) {
+  inline ContractVerifyResponse(const ContractVerifyResponse& from) : ContractVerifyResponse(nullptr, from) {}
+  inline ContractVerifyResponse(ContractVerifyResponse&& from) noexcept
+      : ContractVerifyResponse(nullptr, std::move(from)) {}
+  inline ContractVerifyResponse& operator=(const ContractVerifyResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline FinalizeResponse& operator=(FinalizeResponse&& from) noexcept {
+  inline ContractVerifyResponse& operator=(ContractVerifyResponse&& from) noexcept {
     if (this == &from) return *this;
     if (GetArena() == from.GetArena()
 #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -3622,16 +2220,16 @@ class FinalizeResponse final : public ::google::protobuf::internal::ZeroFieldsBa
   static const ::google::protobuf::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const FinalizeResponse& default_instance() {
+  static const ContractVerifyResponse& default_instance() {
     return *internal_default_instance();
   }
-  static inline const FinalizeResponse* internal_default_instance() {
-    return reinterpret_cast<const FinalizeResponse*>(
-        &_FinalizeResponse_default_instance_);
+  static inline const ContractVerifyResponse* internal_default_instance() {
+    return reinterpret_cast<const ContractVerifyResponse*>(
+        &_ContractVerifyResponse_default_instance_);
   }
-  static constexpr int kIndexInFileMessages = 20;
-  friend void swap(FinalizeResponse& a, FinalizeResponse& b) { a.Swap(&b); }
-  inline void Swap(FinalizeResponse* other) {
+  static constexpr int kIndexInFileMessages = 18;
+  friend void swap(ContractVerifyResponse& a, ContractVerifyResponse& b) { a.Swap(&b); }
+  inline void Swap(ContractVerifyResponse* other) {
     if (other == this) return;
 #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetArena() != nullptr && GetArena() == other->GetArena()) {
@@ -3643,7 +2241,7 @@ class FinalizeResponse final : public ::google::protobuf::internal::ZeroFieldsBa
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(FinalizeResponse* other) {
+  void UnsafeArenaSwap(ContractVerifyResponse* other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -3651,15 +2249,15 @@ class FinalizeResponse final : public ::google::protobuf::internal::ZeroFieldsBa
 
   // implements Message ----------------------------------------------
 
-  FinalizeResponse* New(::google::protobuf::Arena* arena = nullptr) const final {
-    return ::google::protobuf::internal::ZeroFieldsBase::DefaultConstruct<FinalizeResponse>(arena);
+  ContractVerifyResponse* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return ::google::protobuf::internal::ZeroFieldsBase::DefaultConstruct<ContractVerifyResponse>(arena);
   }
   using ::google::protobuf::internal::ZeroFieldsBase::CopyFrom;
-  inline void CopyFrom(const FinalizeResponse& from) {
+  inline void CopyFrom(const ContractVerifyResponse& from) {
     ::google::protobuf::internal::ZeroFieldsBase::CopyImpl(*this, from);
   }
   using ::google::protobuf::internal::ZeroFieldsBase::MergeFrom;
-  void MergeFrom(const FinalizeResponse& from) {
+  void MergeFrom(const ContractVerifyResponse& from) {
     ::google::protobuf::internal::ZeroFieldsBase::MergeImpl(*this, from);
   }
 
@@ -3669,13 +2267,13 @@ class FinalizeResponse final : public ::google::protobuf::internal::ZeroFieldsBa
   }
  private:
   friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() { return "dsp.v1alpha2.FinalizeResponse"; }
+  static ::absl::string_view FullMessageName() { return "dsp.v1alpha2.ContractVerifyResponse"; }
 
  protected:
-  explicit FinalizeResponse(::google::protobuf::Arena* arena);
-  FinalizeResponse(::google::protobuf::Arena* arena, const FinalizeResponse& from);
-  FinalizeResponse(::google::protobuf::Arena* arena, FinalizeResponse&& from) noexcept
-      : FinalizeResponse(arena) {
+  explicit ContractVerifyResponse(::google::protobuf::Arena* arena);
+  ContractVerifyResponse(::google::protobuf::Arena* arena, const ContractVerifyResponse& from);
+  ContractVerifyResponse(::google::protobuf::Arena* arena, ContractVerifyResponse&& from) noexcept
+      : ContractVerifyResponse(arena) {
     *this = ::std::move(from);
   }
   const ::google::protobuf::internal::ZeroFieldsBase::ClassData* GetClassData() const final;
@@ -3685,7 +2283,7 @@ class FinalizeResponse final : public ::google::protobuf::internal::ZeroFieldsBa
   // nested types ----------------------------------------------------
 
   // accessors -------------------------------------------------------
-  // @@protoc_insertion_point(class_scope:dsp.v1alpha2.FinalizeResponse)
+  // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractVerifyResponse)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
@@ -3695,7 +2293,7 @@ class FinalizeResponse final : public ::google::protobuf::internal::ZeroFieldsBa
       _table_;
 
   static constexpr const void* _raw_default_instance_ =
-      &_FinalizeResponse_default_instance_;
+      &_ContractVerifyResponse_default_instance_;
 
   friend class ::google::protobuf::MessageLite;
   friend class ::google::protobuf::Arena;
@@ -3710,30 +2308,30 @@ class FinalizeResponse final : public ::google::protobuf::internal::ZeroFieldsBa
                           ::google::protobuf::Arena* arena);
     inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                           ::google::protobuf::Arena* arena, const Impl_& from,
-                          const FinalizeResponse& from_msg);
+                          const ContractVerifyResponse& from_msg);
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   friend struct ::TableStruct_dsp_2fv1alpha2_2fcontrol_2eproto;
 };
 // -------------------------------------------------------------------
 
-class FinalizeRequest final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:dsp.v1alpha2.FinalizeRequest) */ {
+class ContractVerifyRequest final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:dsp.v1alpha2.ContractVerifyRequest) */ {
  public:
-  inline FinalizeRequest() : FinalizeRequest(nullptr) {}
-  ~FinalizeRequest() override;
+  inline ContractVerifyRequest() : ContractVerifyRequest(nullptr) {}
+  ~ContractVerifyRequest() override;
   template <typename = void>
-  explicit PROTOBUF_CONSTEXPR FinalizeRequest(
+  explicit PROTOBUF_CONSTEXPR ContractVerifyRequest(
       ::google::protobuf::internal::ConstantInitialized);
 
-  inline FinalizeRequest(const FinalizeRequest& from) : FinalizeRequest(nullptr, from) {}
-  inline FinalizeRequest(FinalizeRequest&& from) noexcept
-      : FinalizeRequest(nullptr, std::move(from)) {}
-  inline FinalizeRequest& operator=(const FinalizeRequest& from) {
+  inline ContractVerifyRequest(const ContractVerifyRequest& from) : ContractVerifyRequest(nullptr, from) {}
+  inline ContractVerifyRequest(ContractVerifyRequest&& from) noexcept
+      : ContractVerifyRequest(nullptr, std::move(from)) {}
+  inline ContractVerifyRequest& operator=(const ContractVerifyRequest& from) {
     CopyFrom(from);
     return *this;
   }
-  inline FinalizeRequest& operator=(FinalizeRequest&& from) noexcept {
+  inline ContractVerifyRequest& operator=(ContractVerifyRequest&& from) noexcept {
     if (this == &from) return *this;
     if (GetArena() == from.GetArena()
 #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -3765,16 +2363,16 @@ class FinalizeRequest final : public ::google::protobuf::Message
   static const ::google::protobuf::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const FinalizeRequest& default_instance() {
+  static const ContractVerifyRequest& default_instance() {
     return *internal_default_instance();
   }
-  static inline const FinalizeRequest* internal_default_instance() {
-    return reinterpret_cast<const FinalizeRequest*>(
-        &_FinalizeRequest_default_instance_);
+  static inline const ContractVerifyRequest* internal_default_instance() {
+    return reinterpret_cast<const ContractVerifyRequest*>(
+        &_ContractVerifyRequest_default_instance_);
   }
-  static constexpr int kIndexInFileMessages = 19;
-  friend void swap(FinalizeRequest& a, FinalizeRequest& b) { a.Swap(&b); }
-  inline void Swap(FinalizeRequest* other) {
+  static constexpr int kIndexInFileMessages = 17;
+  friend void swap(ContractVerifyRequest& a, ContractVerifyRequest& b) { a.Swap(&b); }
+  inline void Swap(ContractVerifyRequest* other) {
     if (other == this) return;
 #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetArena() != nullptr && GetArena() == other->GetArena()) {
@@ -3786,7 +2384,7 @@ class FinalizeRequest final : public ::google::protobuf::Message
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(FinalizeRequest* other) {
+  void UnsafeArenaSwap(ContractVerifyRequest* other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -3794,13 +2392,13 @@ class FinalizeRequest final : public ::google::protobuf::Message
 
   // implements Message ----------------------------------------------
 
-  FinalizeRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
-    return ::google::protobuf::Message::DefaultConstruct<FinalizeRequest>(arena);
+  ContractVerifyRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return ::google::protobuf::Message::DefaultConstruct<ContractVerifyRequest>(arena);
   }
   using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const FinalizeRequest& from);
+  void CopyFrom(const ContractVerifyRequest& from);
   using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const FinalizeRequest& from) { FinalizeRequest::MergeImpl(*this, from); }
+  void MergeFrom(const ContractVerifyRequest& from) { ContractVerifyRequest::MergeImpl(*this, from); }
 
   private:
   static void MergeImpl(
@@ -3821,16 +2419,16 @@ class FinalizeRequest final : public ::google::protobuf::Message
   private:
   void SharedCtor(::google::protobuf::Arena* arena);
   void SharedDtor();
-  void InternalSwap(FinalizeRequest* other);
+  void InternalSwap(ContractVerifyRequest* other);
  private:
   friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() { return "dsp.v1alpha2.FinalizeRequest"; }
+  static ::absl::string_view FullMessageName() { return "dsp.v1alpha2.ContractVerifyRequest"; }
 
  protected:
-  explicit FinalizeRequest(::google::protobuf::Arena* arena);
-  FinalizeRequest(::google::protobuf::Arena* arena, const FinalizeRequest& from);
-  FinalizeRequest(::google::protobuf::Arena* arena, FinalizeRequest&& from) noexcept
-      : FinalizeRequest(arena) {
+  explicit ContractVerifyRequest(::google::protobuf::Arena* arena);
+  ContractVerifyRequest(::google::protobuf::Arena* arena, const ContractVerifyRequest& from);
+  ContractVerifyRequest(::google::protobuf::Arena* arena, ContractVerifyRequest&& from) noexcept
+      : ContractVerifyRequest(arena) {
     *this = ::std::move(from);
   }
   const ::google::protobuf::Message::ClassData* GetClassData() const final;
@@ -3859,17 +2457,17 @@ class FinalizeRequest final : public ::google::protobuf::Message
   std::string* _internal_mutable_pid();
 
   public:
-  // @@protoc_insertion_point(class_scope:dsp.v1alpha2.FinalizeRequest)
+  // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractVerifyRequest)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
       0, 1, 0,
-      40, 2>
+      46, 2>
       _table_;
 
   static constexpr const void* _raw_default_instance_ =
-      &_FinalizeRequest_default_instance_;
+      &_ContractVerifyRequest_default_instance_;
 
   friend class ::google::protobuf::MessageLite;
   friend class ::google::protobuf::Arena;
@@ -3884,7 +2482,7 @@ class FinalizeRequest final : public ::google::protobuf::Message
                           ::google::protobuf::Arena* arena);
     inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                           ::google::protobuf::Arena* arena, const Impl_& from,
-                          const FinalizeRequest& from_msg);
+                          const ContractVerifyRequest& from_msg);
     ::google::protobuf::internal::ArenaStringPtr pid_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
@@ -3894,22 +2492,22 @@ class FinalizeRequest final : public ::google::protobuf::Message
 };
 // -------------------------------------------------------------------
 
-class AgreeResponse final : public ::google::protobuf::internal::ZeroFieldsBase
-/* @@protoc_insertion_point(class_definition:dsp.v1alpha2.AgreeResponse) */ {
+class ContractTerminateResponse final : public ::google::protobuf::internal::ZeroFieldsBase
+/* @@protoc_insertion_point(class_definition:dsp.v1alpha2.ContractTerminateResponse) */ {
  public:
-  inline AgreeResponse() : AgreeResponse(nullptr) {}
+  inline ContractTerminateResponse() : ContractTerminateResponse(nullptr) {}
   template <typename = void>
-  explicit PROTOBUF_CONSTEXPR AgreeResponse(
+  explicit PROTOBUF_CONSTEXPR ContractTerminateResponse(
       ::google::protobuf::internal::ConstantInitialized);
 
-  inline AgreeResponse(const AgreeResponse& from) : AgreeResponse(nullptr, from) {}
-  inline AgreeResponse(AgreeResponse&& from) noexcept
-      : AgreeResponse(nullptr, std::move(from)) {}
-  inline AgreeResponse& operator=(const AgreeResponse& from) {
+  inline ContractTerminateResponse(const ContractTerminateResponse& from) : ContractTerminateResponse(nullptr, from) {}
+  inline ContractTerminateResponse(ContractTerminateResponse&& from) noexcept
+      : ContractTerminateResponse(nullptr, std::move(from)) {}
+  inline ContractTerminateResponse& operator=(const ContractTerminateResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline AgreeResponse& operator=(AgreeResponse&& from) noexcept {
+  inline ContractTerminateResponse& operator=(ContractTerminateResponse&& from) noexcept {
     if (this == &from) return *this;
     if (GetArena() == from.GetArena()
 #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -3941,16 +2539,16 @@ class AgreeResponse final : public ::google::protobuf::internal::ZeroFieldsBase
   static const ::google::protobuf::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const AgreeResponse& default_instance() {
+  static const ContractTerminateResponse& default_instance() {
     return *internal_default_instance();
   }
-  static inline const AgreeResponse* internal_default_instance() {
-    return reinterpret_cast<const AgreeResponse*>(
-        &_AgreeResponse_default_instance_);
+  static inline const ContractTerminateResponse* internal_default_instance() {
+    return reinterpret_cast<const ContractTerminateResponse*>(
+        &_ContractTerminateResponse_default_instance_);
   }
-  static constexpr int kIndexInFileMessages = 16;
-  friend void swap(AgreeResponse& a, AgreeResponse& b) { a.Swap(&b); }
-  inline void Swap(AgreeResponse* other) {
+  static constexpr int kIndexInFileMessages = 22;
+  friend void swap(ContractTerminateResponse& a, ContractTerminateResponse& b) { a.Swap(&b); }
+  inline void Swap(ContractTerminateResponse* other) {
     if (other == this) return;
 #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetArena() != nullptr && GetArena() == other->GetArena()) {
@@ -3962,7 +2560,7 @@ class AgreeResponse final : public ::google::protobuf::internal::ZeroFieldsBase
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(AgreeResponse* other) {
+  void UnsafeArenaSwap(ContractTerminateResponse* other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -3970,15 +2568,15 @@ class AgreeResponse final : public ::google::protobuf::internal::ZeroFieldsBase
 
   // implements Message ----------------------------------------------
 
-  AgreeResponse* New(::google::protobuf::Arena* arena = nullptr) const final {
-    return ::google::protobuf::internal::ZeroFieldsBase::DefaultConstruct<AgreeResponse>(arena);
+  ContractTerminateResponse* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return ::google::protobuf::internal::ZeroFieldsBase::DefaultConstruct<ContractTerminateResponse>(arena);
   }
   using ::google::protobuf::internal::ZeroFieldsBase::CopyFrom;
-  inline void CopyFrom(const AgreeResponse& from) {
+  inline void CopyFrom(const ContractTerminateResponse& from) {
     ::google::protobuf::internal::ZeroFieldsBase::CopyImpl(*this, from);
   }
   using ::google::protobuf::internal::ZeroFieldsBase::MergeFrom;
-  void MergeFrom(const AgreeResponse& from) {
+  void MergeFrom(const ContractTerminateResponse& from) {
     ::google::protobuf::internal::ZeroFieldsBase::MergeImpl(*this, from);
   }
 
@@ -3988,13 +2586,13 @@ class AgreeResponse final : public ::google::protobuf::internal::ZeroFieldsBase
   }
  private:
   friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() { return "dsp.v1alpha2.AgreeResponse"; }
+  static ::absl::string_view FullMessageName() { return "dsp.v1alpha2.ContractTerminateResponse"; }
 
  protected:
-  explicit AgreeResponse(::google::protobuf::Arena* arena);
-  AgreeResponse(::google::protobuf::Arena* arena, const AgreeResponse& from);
-  AgreeResponse(::google::protobuf::Arena* arena, AgreeResponse&& from) noexcept
-      : AgreeResponse(arena) {
+  explicit ContractTerminateResponse(::google::protobuf::Arena* arena);
+  ContractTerminateResponse(::google::protobuf::Arena* arena, const ContractTerminateResponse& from);
+  ContractTerminateResponse(::google::protobuf::Arena* arena, ContractTerminateResponse&& from) noexcept
+      : ContractTerminateResponse(arena) {
     *this = ::std::move(from);
   }
   const ::google::protobuf::internal::ZeroFieldsBase::ClassData* GetClassData() const final;
@@ -4004,7 +2602,7 @@ class AgreeResponse final : public ::google::protobuf::internal::ZeroFieldsBase
   // nested types ----------------------------------------------------
 
   // accessors -------------------------------------------------------
-  // @@protoc_insertion_point(class_scope:dsp.v1alpha2.AgreeResponse)
+  // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractTerminateResponse)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
@@ -4014,7 +2612,7 @@ class AgreeResponse final : public ::google::protobuf::internal::ZeroFieldsBase
       _table_;
 
   static constexpr const void* _raw_default_instance_ =
-      &_AgreeResponse_default_instance_;
+      &_ContractTerminateResponse_default_instance_;
 
   friend class ::google::protobuf::MessageLite;
   friend class ::google::protobuf::Arena;
@@ -4029,30 +2627,30 @@ class AgreeResponse final : public ::google::protobuf::internal::ZeroFieldsBase
                           ::google::protobuf::Arena* arena);
     inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                           ::google::protobuf::Arena* arena, const Impl_& from,
-                          const AgreeResponse& from_msg);
+                          const ContractTerminateResponse& from_msg);
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   friend struct ::TableStruct_dsp_2fv1alpha2_2fcontrol_2eproto;
 };
 // -------------------------------------------------------------------
 
-class AgreeRequest final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:dsp.v1alpha2.AgreeRequest) */ {
+class ContractTerminateRequest final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:dsp.v1alpha2.ContractTerminateRequest) */ {
  public:
-  inline AgreeRequest() : AgreeRequest(nullptr) {}
-  ~AgreeRequest() override;
+  inline ContractTerminateRequest() : ContractTerminateRequest(nullptr) {}
+  ~ContractTerminateRequest() override;
   template <typename = void>
-  explicit PROTOBUF_CONSTEXPR AgreeRequest(
+  explicit PROTOBUF_CONSTEXPR ContractTerminateRequest(
       ::google::protobuf::internal::ConstantInitialized);
 
-  inline AgreeRequest(const AgreeRequest& from) : AgreeRequest(nullptr, from) {}
-  inline AgreeRequest(AgreeRequest&& from) noexcept
-      : AgreeRequest(nullptr, std::move(from)) {}
-  inline AgreeRequest& operator=(const AgreeRequest& from) {
+  inline ContractTerminateRequest(const ContractTerminateRequest& from) : ContractTerminateRequest(nullptr, from) {}
+  inline ContractTerminateRequest(ContractTerminateRequest&& from) noexcept
+      : ContractTerminateRequest(nullptr, std::move(from)) {}
+  inline ContractTerminateRequest& operator=(const ContractTerminateRequest& from) {
     CopyFrom(from);
     return *this;
   }
-  inline AgreeRequest& operator=(AgreeRequest&& from) noexcept {
+  inline ContractTerminateRequest& operator=(ContractTerminateRequest&& from) noexcept {
     if (this == &from) return *this;
     if (GetArena() == from.GetArena()
 #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -4084,16 +2682,16 @@ class AgreeRequest final : public ::google::protobuf::Message
   static const ::google::protobuf::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const AgreeRequest& default_instance() {
+  static const ContractTerminateRequest& default_instance() {
     return *internal_default_instance();
   }
-  static inline const AgreeRequest* internal_default_instance() {
-    return reinterpret_cast<const AgreeRequest*>(
-        &_AgreeRequest_default_instance_);
+  static inline const ContractTerminateRequest* internal_default_instance() {
+    return reinterpret_cast<const ContractTerminateRequest*>(
+        &_ContractTerminateRequest_default_instance_);
   }
-  static constexpr int kIndexInFileMessages = 15;
-  friend void swap(AgreeRequest& a, AgreeRequest& b) { a.Swap(&b); }
-  inline void Swap(AgreeRequest* other) {
+  static constexpr int kIndexInFileMessages = 21;
+  friend void swap(ContractTerminateRequest& a, ContractTerminateRequest& b) { a.Swap(&b); }
+  inline void Swap(ContractTerminateRequest* other) {
     if (other == this) return;
 #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetArena() != nullptr && GetArena() == other->GetArena()) {
@@ -4105,7 +2703,7 @@ class AgreeRequest final : public ::google::protobuf::Message
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(AgreeRequest* other) {
+  void UnsafeArenaSwap(ContractTerminateRequest* other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -4113,13 +2711,13 @@ class AgreeRequest final : public ::google::protobuf::Message
 
   // implements Message ----------------------------------------------
 
-  AgreeRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
-    return ::google::protobuf::Message::DefaultConstruct<AgreeRequest>(arena);
+  ContractTerminateRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return ::google::protobuf::Message::DefaultConstruct<ContractTerminateRequest>(arena);
   }
   using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const AgreeRequest& from);
+  void CopyFrom(const ContractTerminateRequest& from);
   using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const AgreeRequest& from) { AgreeRequest::MergeImpl(*this, from); }
+  void MergeFrom(const ContractTerminateRequest& from) { ContractTerminateRequest::MergeImpl(*this, from); }
 
   private:
   static void MergeImpl(
@@ -4140,16 +2738,1418 @@ class AgreeRequest final : public ::google::protobuf::Message
   private:
   void SharedCtor(::google::protobuf::Arena* arena);
   void SharedDtor();
-  void InternalSwap(AgreeRequest* other);
+  void InternalSwap(ContractTerminateRequest* other);
  private:
   friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() { return "dsp.v1alpha2.AgreeRequest"; }
+  static ::absl::string_view FullMessageName() { return "dsp.v1alpha2.ContractTerminateRequest"; }
 
  protected:
-  explicit AgreeRequest(::google::protobuf::Arena* arena);
-  AgreeRequest(::google::protobuf::Arena* arena, const AgreeRequest& from);
-  AgreeRequest(::google::protobuf::Arena* arena, AgreeRequest&& from) noexcept
-      : AgreeRequest(arena) {
+  explicit ContractTerminateRequest(::google::protobuf::Arena* arena);
+  ContractTerminateRequest(::google::protobuf::Arena* arena, const ContractTerminateRequest& from);
+  ContractTerminateRequest(::google::protobuf::Arena* arena, ContractTerminateRequest&& from) noexcept
+      : ContractTerminateRequest(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::Message::ClassData* GetClassData() const final;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kReasonFieldNumber = 3,
+    kPidFieldNumber = 1,
+    kCodeFieldNumber = 2,
+  };
+  // repeated string reason = 3 [json_name = "reason"];
+  int reason_size() const;
+  private:
+  int _internal_reason_size() const;
+
+  public:
+  void clear_reason() ;
+  const std::string& reason(int index) const;
+  std::string* mutable_reason(int index);
+  void set_reason(int index, const std::string& value);
+  void set_reason(int index, std::string&& value);
+  void set_reason(int index, const char* value);
+  void set_reason(int index, const char* value, std::size_t size);
+  void set_reason(int index, absl::string_view value);
+  std::string* add_reason();
+  void add_reason(const std::string& value);
+  void add_reason(std::string&& value);
+  void add_reason(const char* value);
+  void add_reason(const char* value, std::size_t size);
+  void add_reason(absl::string_view value);
+  const ::google::protobuf::RepeatedPtrField<std::string>& reason() const;
+  ::google::protobuf::RepeatedPtrField<std::string>* mutable_reason();
+
+  private:
+  const ::google::protobuf::RepeatedPtrField<std::string>& _internal_reason() const;
+  ::google::protobuf::RepeatedPtrField<std::string>* _internal_mutable_reason();
+
+  public:
+  // string pid = 1 [json_name = "pid"];
+  void clear_pid() ;
+  const std::string& pid() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_pid(Arg_&& arg, Args_... args);
+  std::string* mutable_pid();
+  PROTOBUF_NODISCARD std::string* release_pid();
+  void set_allocated_pid(std::string* value);
+
+  private:
+  const std::string& _internal_pid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_pid(
+      const std::string& value);
+  std::string* _internal_mutable_pid();
+
+  public:
+  // string code = 2 [json_name = "code"];
+  void clear_code() ;
+  const std::string& code() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_code(Arg_&& arg, Args_... args);
+  std::string* mutable_code();
+  PROTOBUF_NODISCARD std::string* release_code();
+  void set_allocated_code(std::string* value);
+
+  private:
+  const std::string& _internal_code() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_code(
+      const std::string& value);
+  std::string* _internal_mutable_code();
+
+  public:
+  // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractTerminateRequest)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      2, 3, 0,
+      59, 2>
+      _table_;
+
+  static constexpr const void* _raw_default_instance_ =
+      &_ContractTerminateRequest_default_instance_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const ContractTerminateRequest& from_msg);
+    ::google::protobuf::RepeatedPtrField<std::string> reason_;
+    ::google::protobuf::internal::ArenaStringPtr pid_;
+    ::google::protobuf::internal::ArenaStringPtr code_;
+    mutable ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_dsp_2fv1alpha2_2fcontrol_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ContractRequestResponse final : public ::google::protobuf::internal::ZeroFieldsBase
+/* @@protoc_insertion_point(class_definition:dsp.v1alpha2.ContractRequestResponse) */ {
+ public:
+  inline ContractRequestResponse() : ContractRequestResponse(nullptr) {}
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR ContractRequestResponse(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline ContractRequestResponse(const ContractRequestResponse& from) : ContractRequestResponse(nullptr, from) {}
+  inline ContractRequestResponse(ContractRequestResponse&& from) noexcept
+      : ContractRequestResponse(nullptr, std::move(from)) {}
+  inline ContractRequestResponse& operator=(const ContractRequestResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ContractRequestResponse& operator=(ContractRequestResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetArena() == from.GetArena()
+#ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetArena() != nullptr
+#endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ContractRequestResponse& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ContractRequestResponse* internal_default_instance() {
+    return reinterpret_cast<const ContractRequestResponse*>(
+        &_ContractRequestResponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 10;
+  friend void swap(ContractRequestResponse& a, ContractRequestResponse& b) { a.Swap(&b); }
+  inline void Swap(ContractRequestResponse* other) {
+    if (other == this) return;
+#ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() != nullptr && GetArena() == other->GetArena()) {
+#else   // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() == other->GetArena()) {
+#endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ContractRequestResponse* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ContractRequestResponse* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return ::google::protobuf::internal::ZeroFieldsBase::DefaultConstruct<ContractRequestResponse>(arena);
+  }
+  using ::google::protobuf::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const ContractRequestResponse& from) {
+    ::google::protobuf::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::google::protobuf::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const ContractRequestResponse& from) {
+    ::google::protobuf::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+ private:
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() { return "dsp.v1alpha2.ContractRequestResponse"; }
+
+ protected:
+  explicit ContractRequestResponse(::google::protobuf::Arena* arena);
+  ContractRequestResponse(::google::protobuf::Arena* arena, const ContractRequestResponse& from);
+  ContractRequestResponse(::google::protobuf::Arena* arena, ContractRequestResponse&& from) noexcept
+      : ContractRequestResponse(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ZeroFieldsBase::ClassData* GetClassData() const final;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractRequestResponse)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      0, 0, 0,
+      0, 2>
+      _table_;
+
+  static constexpr const void* _raw_default_instance_ =
+      &_ContractRequestResponse_default_instance_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const ContractRequestResponse& from_msg);
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  friend struct ::TableStruct_dsp_2fv1alpha2_2fcontrol_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ContractRequestRequest final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:dsp.v1alpha2.ContractRequestRequest) */ {
+ public:
+  inline ContractRequestRequest() : ContractRequestRequest(nullptr) {}
+  ~ContractRequestRequest() override;
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR ContractRequestRequest(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline ContractRequestRequest(const ContractRequestRequest& from) : ContractRequestRequest(nullptr, from) {}
+  inline ContractRequestRequest(ContractRequestRequest&& from) noexcept
+      : ContractRequestRequest(nullptr, std::move(from)) {}
+  inline ContractRequestRequest& operator=(const ContractRequestRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ContractRequestRequest& operator=(ContractRequestRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetArena() == from.GetArena()
+#ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetArena() != nullptr
+#endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ContractRequestRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ContractRequestRequest* internal_default_instance() {
+    return reinterpret_cast<const ContractRequestRequest*>(
+        &_ContractRequestRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 9;
+  friend void swap(ContractRequestRequest& a, ContractRequestRequest& b) { a.Swap(&b); }
+  inline void Swap(ContractRequestRequest* other) {
+    if (other == this) return;
+#ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() != nullptr && GetArena() == other->GetArena()) {
+#else   // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() == other->GetArena()) {
+#endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ContractRequestRequest* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ContractRequestRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return ::google::protobuf::Message::DefaultConstruct<ContractRequestRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const ContractRequestRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const ContractRequestRequest& from) { ContractRequestRequest::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() final;
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  void SharedDtor();
+  void InternalSwap(ContractRequestRequest* other);
+ private:
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() { return "dsp.v1alpha2.ContractRequestRequest"; }
+
+ protected:
+  explicit ContractRequestRequest(::google::protobuf::Arena* arena);
+  ContractRequestRequest(::google::protobuf::Arena* arena, const ContractRequestRequest& from);
+  ContractRequestRequest(::google::protobuf::Arena* arena, ContractRequestRequest&& from) noexcept
+      : ContractRequestRequest(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::Message::ClassData* GetClassData() const final;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kOfferFieldNumber = 1,
+    kPidFieldNumber = 2,
+    kParticipantAddressFieldNumber = 3,
+  };
+  // string offer = 1 [json_name = "offer"];
+  void clear_offer() ;
+  const std::string& offer() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_offer(Arg_&& arg, Args_... args);
+  std::string* mutable_offer();
+  PROTOBUF_NODISCARD std::string* release_offer();
+  void set_allocated_offer(std::string* value);
+
+  private:
+  const std::string& _internal_offer() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_offer(
+      const std::string& value);
+  std::string* _internal_mutable_offer();
+
+  public:
+  // optional string pid = 2 [json_name = "pid"];
+  bool has_pid() const;
+  void clear_pid() ;
+  const std::string& pid() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_pid(Arg_&& arg, Args_... args);
+  std::string* mutable_pid();
+  PROTOBUF_NODISCARD std::string* release_pid();
+  void set_allocated_pid(std::string* value);
+
+  private:
+  const std::string& _internal_pid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_pid(
+      const std::string& value);
+  std::string* _internal_mutable_pid();
+
+  public:
+  // optional string participant_address = 3 [json_name = "participantAddress"];
+  bool has_participant_address() const;
+  void clear_participant_address() ;
+  const std::string& participant_address() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_participant_address(Arg_&& arg, Args_... args);
+  std::string* mutable_participant_address();
+  PROTOBUF_NODISCARD std::string* release_participant_address();
+  void set_allocated_participant_address(std::string* value);
+
+  private:
+  const std::string& _internal_participant_address() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_participant_address(
+      const std::string& value);
+  std::string* _internal_mutable_participant_address();
+
+  public:
+  // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractRequestRequest)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      2, 3, 0,
+      71, 2>
+      _table_;
+
+  static constexpr const void* _raw_default_instance_ =
+      &_ContractRequestRequest_default_instance_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const ContractRequestRequest& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    mutable ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr offer_;
+    ::google::protobuf::internal::ArenaStringPtr pid_;
+    ::google::protobuf::internal::ArenaStringPtr participant_address_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_dsp_2fv1alpha2_2fcontrol_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ContractOfferResponse final : public ::google::protobuf::internal::ZeroFieldsBase
+/* @@protoc_insertion_point(class_definition:dsp.v1alpha2.ContractOfferResponse) */ {
+ public:
+  inline ContractOfferResponse() : ContractOfferResponse(nullptr) {}
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR ContractOfferResponse(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline ContractOfferResponse(const ContractOfferResponse& from) : ContractOfferResponse(nullptr, from) {}
+  inline ContractOfferResponse(ContractOfferResponse&& from) noexcept
+      : ContractOfferResponse(nullptr, std::move(from)) {}
+  inline ContractOfferResponse& operator=(const ContractOfferResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ContractOfferResponse& operator=(ContractOfferResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetArena() == from.GetArena()
+#ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetArena() != nullptr
+#endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ContractOfferResponse& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ContractOfferResponse* internal_default_instance() {
+    return reinterpret_cast<const ContractOfferResponse*>(
+        &_ContractOfferResponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 12;
+  friend void swap(ContractOfferResponse& a, ContractOfferResponse& b) { a.Swap(&b); }
+  inline void Swap(ContractOfferResponse* other) {
+    if (other == this) return;
+#ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() != nullptr && GetArena() == other->GetArena()) {
+#else   // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() == other->GetArena()) {
+#endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ContractOfferResponse* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ContractOfferResponse* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return ::google::protobuf::internal::ZeroFieldsBase::DefaultConstruct<ContractOfferResponse>(arena);
+  }
+  using ::google::protobuf::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const ContractOfferResponse& from) {
+    ::google::protobuf::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::google::protobuf::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const ContractOfferResponse& from) {
+    ::google::protobuf::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+ private:
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() { return "dsp.v1alpha2.ContractOfferResponse"; }
+
+ protected:
+  explicit ContractOfferResponse(::google::protobuf::Arena* arena);
+  ContractOfferResponse(::google::protobuf::Arena* arena, const ContractOfferResponse& from);
+  ContractOfferResponse(::google::protobuf::Arena* arena, ContractOfferResponse&& from) noexcept
+      : ContractOfferResponse(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ZeroFieldsBase::ClassData* GetClassData() const final;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractOfferResponse)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      0, 0, 0,
+      0, 2>
+      _table_;
+
+  static constexpr const void* _raw_default_instance_ =
+      &_ContractOfferResponse_default_instance_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const ContractOfferResponse& from_msg);
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  friend struct ::TableStruct_dsp_2fv1alpha2_2fcontrol_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ContractOfferRequest final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:dsp.v1alpha2.ContractOfferRequest) */ {
+ public:
+  inline ContractOfferRequest() : ContractOfferRequest(nullptr) {}
+  ~ContractOfferRequest() override;
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR ContractOfferRequest(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline ContractOfferRequest(const ContractOfferRequest& from) : ContractOfferRequest(nullptr, from) {}
+  inline ContractOfferRequest(ContractOfferRequest&& from) noexcept
+      : ContractOfferRequest(nullptr, std::move(from)) {}
+  inline ContractOfferRequest& operator=(const ContractOfferRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ContractOfferRequest& operator=(ContractOfferRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetArena() == from.GetArena()
+#ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetArena() != nullptr
+#endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ContractOfferRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ContractOfferRequest* internal_default_instance() {
+    return reinterpret_cast<const ContractOfferRequest*>(
+        &_ContractOfferRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 11;
+  friend void swap(ContractOfferRequest& a, ContractOfferRequest& b) { a.Swap(&b); }
+  inline void Swap(ContractOfferRequest* other) {
+    if (other == this) return;
+#ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() != nullptr && GetArena() == other->GetArena()) {
+#else   // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() == other->GetArena()) {
+#endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ContractOfferRequest* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ContractOfferRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return ::google::protobuf::Message::DefaultConstruct<ContractOfferRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const ContractOfferRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const ContractOfferRequest& from) { ContractOfferRequest::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() final;
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  void SharedDtor();
+  void InternalSwap(ContractOfferRequest* other);
+ private:
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() { return "dsp.v1alpha2.ContractOfferRequest"; }
+
+ protected:
+  explicit ContractOfferRequest(::google::protobuf::Arena* arena);
+  ContractOfferRequest(::google::protobuf::Arena* arena, const ContractOfferRequest& from);
+  ContractOfferRequest(::google::protobuf::Arena* arena, ContractOfferRequest&& from) noexcept
+      : ContractOfferRequest(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::Message::ClassData* GetClassData() const final;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kOfferFieldNumber = 1,
+    kPidFieldNumber = 2,
+    kParticipantAddressFieldNumber = 3,
+  };
+  // string offer = 1 [json_name = "offer"];
+  void clear_offer() ;
+  const std::string& offer() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_offer(Arg_&& arg, Args_... args);
+  std::string* mutable_offer();
+  PROTOBUF_NODISCARD std::string* release_offer();
+  void set_allocated_offer(std::string* value);
+
+  private:
+  const std::string& _internal_offer() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_offer(
+      const std::string& value);
+  std::string* _internal_mutable_offer();
+
+  public:
+  // optional string pid = 2 [json_name = "pid"];
+  bool has_pid() const;
+  void clear_pid() ;
+  const std::string& pid() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_pid(Arg_&& arg, Args_... args);
+  std::string* mutable_pid();
+  PROTOBUF_NODISCARD std::string* release_pid();
+  void set_allocated_pid(std::string* value);
+
+  private:
+  const std::string& _internal_pid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_pid(
+      const std::string& value);
+  std::string* _internal_mutable_pid();
+
+  public:
+  // optional string participant_address = 3 [json_name = "participantAddress"];
+  bool has_participant_address() const;
+  void clear_participant_address() ;
+  const std::string& participant_address() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_participant_address(Arg_&& arg, Args_... args);
+  std::string* mutable_participant_address();
+  PROTOBUF_NODISCARD std::string* release_participant_address();
+  void set_allocated_participant_address(std::string* value);
+
+  private:
+  const std::string& _internal_participant_address() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_participant_address(
+      const std::string& value);
+  std::string* _internal_mutable_participant_address();
+
+  public:
+  // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractOfferRequest)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      2, 3, 0,
+      69, 2>
+      _table_;
+
+  static constexpr const void* _raw_default_instance_ =
+      &_ContractOfferRequest_default_instance_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const ContractOfferRequest& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    mutable ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr offer_;
+    ::google::protobuf::internal::ArenaStringPtr pid_;
+    ::google::protobuf::internal::ArenaStringPtr participant_address_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_dsp_2fv1alpha2_2fcontrol_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ContractFinalizeResponse final : public ::google::protobuf::internal::ZeroFieldsBase
+/* @@protoc_insertion_point(class_definition:dsp.v1alpha2.ContractFinalizeResponse) */ {
+ public:
+  inline ContractFinalizeResponse() : ContractFinalizeResponse(nullptr) {}
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR ContractFinalizeResponse(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline ContractFinalizeResponse(const ContractFinalizeResponse& from) : ContractFinalizeResponse(nullptr, from) {}
+  inline ContractFinalizeResponse(ContractFinalizeResponse&& from) noexcept
+      : ContractFinalizeResponse(nullptr, std::move(from)) {}
+  inline ContractFinalizeResponse& operator=(const ContractFinalizeResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ContractFinalizeResponse& operator=(ContractFinalizeResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetArena() == from.GetArena()
+#ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetArena() != nullptr
+#endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ContractFinalizeResponse& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ContractFinalizeResponse* internal_default_instance() {
+    return reinterpret_cast<const ContractFinalizeResponse*>(
+        &_ContractFinalizeResponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 20;
+  friend void swap(ContractFinalizeResponse& a, ContractFinalizeResponse& b) { a.Swap(&b); }
+  inline void Swap(ContractFinalizeResponse* other) {
+    if (other == this) return;
+#ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() != nullptr && GetArena() == other->GetArena()) {
+#else   // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() == other->GetArena()) {
+#endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ContractFinalizeResponse* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ContractFinalizeResponse* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return ::google::protobuf::internal::ZeroFieldsBase::DefaultConstruct<ContractFinalizeResponse>(arena);
+  }
+  using ::google::protobuf::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const ContractFinalizeResponse& from) {
+    ::google::protobuf::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::google::protobuf::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const ContractFinalizeResponse& from) {
+    ::google::protobuf::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+ private:
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() { return "dsp.v1alpha2.ContractFinalizeResponse"; }
+
+ protected:
+  explicit ContractFinalizeResponse(::google::protobuf::Arena* arena);
+  ContractFinalizeResponse(::google::protobuf::Arena* arena, const ContractFinalizeResponse& from);
+  ContractFinalizeResponse(::google::protobuf::Arena* arena, ContractFinalizeResponse&& from) noexcept
+      : ContractFinalizeResponse(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ZeroFieldsBase::ClassData* GetClassData() const final;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractFinalizeResponse)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      0, 0, 0,
+      0, 2>
+      _table_;
+
+  static constexpr const void* _raw_default_instance_ =
+      &_ContractFinalizeResponse_default_instance_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const ContractFinalizeResponse& from_msg);
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  friend struct ::TableStruct_dsp_2fv1alpha2_2fcontrol_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ContractFinalizeRequest final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:dsp.v1alpha2.ContractFinalizeRequest) */ {
+ public:
+  inline ContractFinalizeRequest() : ContractFinalizeRequest(nullptr) {}
+  ~ContractFinalizeRequest() override;
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR ContractFinalizeRequest(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline ContractFinalizeRequest(const ContractFinalizeRequest& from) : ContractFinalizeRequest(nullptr, from) {}
+  inline ContractFinalizeRequest(ContractFinalizeRequest&& from) noexcept
+      : ContractFinalizeRequest(nullptr, std::move(from)) {}
+  inline ContractFinalizeRequest& operator=(const ContractFinalizeRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ContractFinalizeRequest& operator=(ContractFinalizeRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetArena() == from.GetArena()
+#ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetArena() != nullptr
+#endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ContractFinalizeRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ContractFinalizeRequest* internal_default_instance() {
+    return reinterpret_cast<const ContractFinalizeRequest*>(
+        &_ContractFinalizeRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 19;
+  friend void swap(ContractFinalizeRequest& a, ContractFinalizeRequest& b) { a.Swap(&b); }
+  inline void Swap(ContractFinalizeRequest* other) {
+    if (other == this) return;
+#ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() != nullptr && GetArena() == other->GetArena()) {
+#else   // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() == other->GetArena()) {
+#endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ContractFinalizeRequest* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ContractFinalizeRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return ::google::protobuf::Message::DefaultConstruct<ContractFinalizeRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const ContractFinalizeRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const ContractFinalizeRequest& from) { ContractFinalizeRequest::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() final;
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  void SharedDtor();
+  void InternalSwap(ContractFinalizeRequest* other);
+ private:
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() { return "dsp.v1alpha2.ContractFinalizeRequest"; }
+
+ protected:
+  explicit ContractFinalizeRequest(::google::protobuf::Arena* arena);
+  ContractFinalizeRequest(::google::protobuf::Arena* arena, const ContractFinalizeRequest& from);
+  ContractFinalizeRequest(::google::protobuf::Arena* arena, ContractFinalizeRequest&& from) noexcept
+      : ContractFinalizeRequest(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::Message::ClassData* GetClassData() const final;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kPidFieldNumber = 1,
+  };
+  // string pid = 1 [json_name = "pid"];
+  void clear_pid() ;
+  const std::string& pid() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_pid(Arg_&& arg, Args_... args);
+  std::string* mutable_pid();
+  PROTOBUF_NODISCARD std::string* release_pid();
+  void set_allocated_pid(std::string* value);
+
+  private:
+  const std::string& _internal_pid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_pid(
+      const std::string& value);
+  std::string* _internal_mutable_pid();
+
+  public:
+  // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractFinalizeRequest)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      0, 1, 0,
+      48, 2>
+      _table_;
+
+  static constexpr const void* _raw_default_instance_ =
+      &_ContractFinalizeRequest_default_instance_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const ContractFinalizeRequest& from_msg);
+    ::google::protobuf::internal::ArenaStringPtr pid_;
+    mutable ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_dsp_2fv1alpha2_2fcontrol_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ContractAgreeResponse final : public ::google::protobuf::internal::ZeroFieldsBase
+/* @@protoc_insertion_point(class_definition:dsp.v1alpha2.ContractAgreeResponse) */ {
+ public:
+  inline ContractAgreeResponse() : ContractAgreeResponse(nullptr) {}
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR ContractAgreeResponse(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline ContractAgreeResponse(const ContractAgreeResponse& from) : ContractAgreeResponse(nullptr, from) {}
+  inline ContractAgreeResponse(ContractAgreeResponse&& from) noexcept
+      : ContractAgreeResponse(nullptr, std::move(from)) {}
+  inline ContractAgreeResponse& operator=(const ContractAgreeResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ContractAgreeResponse& operator=(ContractAgreeResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetArena() == from.GetArena()
+#ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetArena() != nullptr
+#endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ContractAgreeResponse& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ContractAgreeResponse* internal_default_instance() {
+    return reinterpret_cast<const ContractAgreeResponse*>(
+        &_ContractAgreeResponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 16;
+  friend void swap(ContractAgreeResponse& a, ContractAgreeResponse& b) { a.Swap(&b); }
+  inline void Swap(ContractAgreeResponse* other) {
+    if (other == this) return;
+#ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() != nullptr && GetArena() == other->GetArena()) {
+#else   // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() == other->GetArena()) {
+#endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ContractAgreeResponse* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ContractAgreeResponse* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return ::google::protobuf::internal::ZeroFieldsBase::DefaultConstruct<ContractAgreeResponse>(arena);
+  }
+  using ::google::protobuf::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const ContractAgreeResponse& from) {
+    ::google::protobuf::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::google::protobuf::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const ContractAgreeResponse& from) {
+    ::google::protobuf::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+ private:
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() { return "dsp.v1alpha2.ContractAgreeResponse"; }
+
+ protected:
+  explicit ContractAgreeResponse(::google::protobuf::Arena* arena);
+  ContractAgreeResponse(::google::protobuf::Arena* arena, const ContractAgreeResponse& from);
+  ContractAgreeResponse(::google::protobuf::Arena* arena, ContractAgreeResponse&& from) noexcept
+      : ContractAgreeResponse(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ZeroFieldsBase::ClassData* GetClassData() const final;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractAgreeResponse)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      0, 0, 0,
+      0, 2>
+      _table_;
+
+  static constexpr const void* _raw_default_instance_ =
+      &_ContractAgreeResponse_default_instance_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const ContractAgreeResponse& from_msg);
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  friend struct ::TableStruct_dsp_2fv1alpha2_2fcontrol_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ContractAgreeRequest final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:dsp.v1alpha2.ContractAgreeRequest) */ {
+ public:
+  inline ContractAgreeRequest() : ContractAgreeRequest(nullptr) {}
+  ~ContractAgreeRequest() override;
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR ContractAgreeRequest(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline ContractAgreeRequest(const ContractAgreeRequest& from) : ContractAgreeRequest(nullptr, from) {}
+  inline ContractAgreeRequest(ContractAgreeRequest&& from) noexcept
+      : ContractAgreeRequest(nullptr, std::move(from)) {}
+  inline ContractAgreeRequest& operator=(const ContractAgreeRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ContractAgreeRequest& operator=(ContractAgreeRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetArena() == from.GetArena()
+#ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetArena() != nullptr
+#endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ContractAgreeRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ContractAgreeRequest* internal_default_instance() {
+    return reinterpret_cast<const ContractAgreeRequest*>(
+        &_ContractAgreeRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 15;
+  friend void swap(ContractAgreeRequest& a, ContractAgreeRequest& b) { a.Swap(&b); }
+  inline void Swap(ContractAgreeRequest* other) {
+    if (other == this) return;
+#ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() != nullptr && GetArena() == other->GetArena()) {
+#else   // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() == other->GetArena()) {
+#endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ContractAgreeRequest* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ContractAgreeRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return ::google::protobuf::Message::DefaultConstruct<ContractAgreeRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const ContractAgreeRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const ContractAgreeRequest& from) { ContractAgreeRequest::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() final;
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  void SharedDtor();
+  void InternalSwap(ContractAgreeRequest* other);
+ private:
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() { return "dsp.v1alpha2.ContractAgreeRequest"; }
+
+ protected:
+  explicit ContractAgreeRequest(::google::protobuf::Arena* arena);
+  ContractAgreeRequest(::google::protobuf::Arena* arena, const ContractAgreeRequest& from);
+  ContractAgreeRequest(::google::protobuf::Arena* arena, ContractAgreeRequest&& from) noexcept
+      : ContractAgreeRequest(arena) {
     *this = ::std::move(from);
   }
   const ::google::protobuf::Message::ClassData* GetClassData() const final;
@@ -4195,17 +4195,17 @@ class AgreeRequest final : public ::google::protobuf::Message
   std::string* _internal_mutable_pid();
 
   public:
-  // @@protoc_insertion_point(class_scope:dsp.v1alpha2.AgreeRequest)
+  // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractAgreeRequest)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
       1, 2, 0,
-      46, 2>
+      54, 2>
       _table_;
 
   static constexpr const void* _raw_default_instance_ =
-      &_AgreeRequest_default_instance_;
+      &_ContractAgreeRequest_default_instance_;
 
   friend class ::google::protobuf::MessageLite;
   friend class ::google::protobuf::Arena;
@@ -4220,7 +4220,7 @@ class AgreeRequest final : public ::google::protobuf::Message
                           ::google::protobuf::Arena* arena);
     inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                           ::google::protobuf::Arena* arena, const Impl_& from,
-                          const AgreeRequest& from_msg);
+                          const ContractAgreeRequest& from_msg);
     ::google::protobuf::internal::ArenaStringPtr agreement_;
     ::google::protobuf::internal::ArenaStringPtr pid_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
@@ -4231,22 +4231,22 @@ class AgreeRequest final : public ::google::protobuf::Message
 };
 // -------------------------------------------------------------------
 
-class AcceptResponse final : public ::google::protobuf::internal::ZeroFieldsBase
-/* @@protoc_insertion_point(class_definition:dsp.v1alpha2.AcceptResponse) */ {
+class ContractAcceptResponse final : public ::google::protobuf::internal::ZeroFieldsBase
+/* @@protoc_insertion_point(class_definition:dsp.v1alpha2.ContractAcceptResponse) */ {
  public:
-  inline AcceptResponse() : AcceptResponse(nullptr) {}
+  inline ContractAcceptResponse() : ContractAcceptResponse(nullptr) {}
   template <typename = void>
-  explicit PROTOBUF_CONSTEXPR AcceptResponse(
+  explicit PROTOBUF_CONSTEXPR ContractAcceptResponse(
       ::google::protobuf::internal::ConstantInitialized);
 
-  inline AcceptResponse(const AcceptResponse& from) : AcceptResponse(nullptr, from) {}
-  inline AcceptResponse(AcceptResponse&& from) noexcept
-      : AcceptResponse(nullptr, std::move(from)) {}
-  inline AcceptResponse& operator=(const AcceptResponse& from) {
+  inline ContractAcceptResponse(const ContractAcceptResponse& from) : ContractAcceptResponse(nullptr, from) {}
+  inline ContractAcceptResponse(ContractAcceptResponse&& from) noexcept
+      : ContractAcceptResponse(nullptr, std::move(from)) {}
+  inline ContractAcceptResponse& operator=(const ContractAcceptResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline AcceptResponse& operator=(AcceptResponse&& from) noexcept {
+  inline ContractAcceptResponse& operator=(ContractAcceptResponse&& from) noexcept {
     if (this == &from) return *this;
     if (GetArena() == from.GetArena()
 #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -4278,16 +4278,16 @@ class AcceptResponse final : public ::google::protobuf::internal::ZeroFieldsBase
   static const ::google::protobuf::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const AcceptResponse& default_instance() {
+  static const ContractAcceptResponse& default_instance() {
     return *internal_default_instance();
   }
-  static inline const AcceptResponse* internal_default_instance() {
-    return reinterpret_cast<const AcceptResponse*>(
-        &_AcceptResponse_default_instance_);
+  static inline const ContractAcceptResponse* internal_default_instance() {
+    return reinterpret_cast<const ContractAcceptResponse*>(
+        &_ContractAcceptResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages = 14;
-  friend void swap(AcceptResponse& a, AcceptResponse& b) { a.Swap(&b); }
-  inline void Swap(AcceptResponse* other) {
+  friend void swap(ContractAcceptResponse& a, ContractAcceptResponse& b) { a.Swap(&b); }
+  inline void Swap(ContractAcceptResponse* other) {
     if (other == this) return;
 #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetArena() != nullptr && GetArena() == other->GetArena()) {
@@ -4299,7 +4299,7 @@ class AcceptResponse final : public ::google::protobuf::internal::ZeroFieldsBase
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(AcceptResponse* other) {
+  void UnsafeArenaSwap(ContractAcceptResponse* other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -4307,15 +4307,15 @@ class AcceptResponse final : public ::google::protobuf::internal::ZeroFieldsBase
 
   // implements Message ----------------------------------------------
 
-  AcceptResponse* New(::google::protobuf::Arena* arena = nullptr) const final {
-    return ::google::protobuf::internal::ZeroFieldsBase::DefaultConstruct<AcceptResponse>(arena);
+  ContractAcceptResponse* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return ::google::protobuf::internal::ZeroFieldsBase::DefaultConstruct<ContractAcceptResponse>(arena);
   }
   using ::google::protobuf::internal::ZeroFieldsBase::CopyFrom;
-  inline void CopyFrom(const AcceptResponse& from) {
+  inline void CopyFrom(const ContractAcceptResponse& from) {
     ::google::protobuf::internal::ZeroFieldsBase::CopyImpl(*this, from);
   }
   using ::google::protobuf::internal::ZeroFieldsBase::MergeFrom;
-  void MergeFrom(const AcceptResponse& from) {
+  void MergeFrom(const ContractAcceptResponse& from) {
     ::google::protobuf::internal::ZeroFieldsBase::MergeImpl(*this, from);
   }
 
@@ -4325,13 +4325,13 @@ class AcceptResponse final : public ::google::protobuf::internal::ZeroFieldsBase
   }
  private:
   friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() { return "dsp.v1alpha2.AcceptResponse"; }
+  static ::absl::string_view FullMessageName() { return "dsp.v1alpha2.ContractAcceptResponse"; }
 
  protected:
-  explicit AcceptResponse(::google::protobuf::Arena* arena);
-  AcceptResponse(::google::protobuf::Arena* arena, const AcceptResponse& from);
-  AcceptResponse(::google::protobuf::Arena* arena, AcceptResponse&& from) noexcept
-      : AcceptResponse(arena) {
+  explicit ContractAcceptResponse(::google::protobuf::Arena* arena);
+  ContractAcceptResponse(::google::protobuf::Arena* arena, const ContractAcceptResponse& from);
+  ContractAcceptResponse(::google::protobuf::Arena* arena, ContractAcceptResponse&& from) noexcept
+      : ContractAcceptResponse(arena) {
     *this = ::std::move(from);
   }
   const ::google::protobuf::internal::ZeroFieldsBase::ClassData* GetClassData() const final;
@@ -4341,7 +4341,7 @@ class AcceptResponse final : public ::google::protobuf::internal::ZeroFieldsBase
   // nested types ----------------------------------------------------
 
   // accessors -------------------------------------------------------
-  // @@protoc_insertion_point(class_scope:dsp.v1alpha2.AcceptResponse)
+  // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractAcceptResponse)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
@@ -4351,7 +4351,7 @@ class AcceptResponse final : public ::google::protobuf::internal::ZeroFieldsBase
       _table_;
 
   static constexpr const void* _raw_default_instance_ =
-      &_AcceptResponse_default_instance_;
+      &_ContractAcceptResponse_default_instance_;
 
   friend class ::google::protobuf::MessageLite;
   friend class ::google::protobuf::Arena;
@@ -4366,30 +4366,30 @@ class AcceptResponse final : public ::google::protobuf::internal::ZeroFieldsBase
                           ::google::protobuf::Arena* arena);
     inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                           ::google::protobuf::Arena* arena, const Impl_& from,
-                          const AcceptResponse& from_msg);
+                          const ContractAcceptResponse& from_msg);
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   friend struct ::TableStruct_dsp_2fv1alpha2_2fcontrol_2eproto;
 };
 // -------------------------------------------------------------------
 
-class AcceptRequest final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:dsp.v1alpha2.AcceptRequest) */ {
+class ContractAcceptRequest final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:dsp.v1alpha2.ContractAcceptRequest) */ {
  public:
-  inline AcceptRequest() : AcceptRequest(nullptr) {}
-  ~AcceptRequest() override;
+  inline ContractAcceptRequest() : ContractAcceptRequest(nullptr) {}
+  ~ContractAcceptRequest() override;
   template <typename = void>
-  explicit PROTOBUF_CONSTEXPR AcceptRequest(
+  explicit PROTOBUF_CONSTEXPR ContractAcceptRequest(
       ::google::protobuf::internal::ConstantInitialized);
 
-  inline AcceptRequest(const AcceptRequest& from) : AcceptRequest(nullptr, from) {}
-  inline AcceptRequest(AcceptRequest&& from) noexcept
-      : AcceptRequest(nullptr, std::move(from)) {}
-  inline AcceptRequest& operator=(const AcceptRequest& from) {
+  inline ContractAcceptRequest(const ContractAcceptRequest& from) : ContractAcceptRequest(nullptr, from) {}
+  inline ContractAcceptRequest(ContractAcceptRequest&& from) noexcept
+      : ContractAcceptRequest(nullptr, std::move(from)) {}
+  inline ContractAcceptRequest& operator=(const ContractAcceptRequest& from) {
     CopyFrom(from);
     return *this;
   }
-  inline AcceptRequest& operator=(AcceptRequest&& from) noexcept {
+  inline ContractAcceptRequest& operator=(ContractAcceptRequest&& from) noexcept {
     if (this == &from) return *this;
     if (GetArena() == from.GetArena()
 #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -4421,16 +4421,16 @@ class AcceptRequest final : public ::google::protobuf::Message
   static const ::google::protobuf::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const AcceptRequest& default_instance() {
+  static const ContractAcceptRequest& default_instance() {
     return *internal_default_instance();
   }
-  static inline const AcceptRequest* internal_default_instance() {
-    return reinterpret_cast<const AcceptRequest*>(
-        &_AcceptRequest_default_instance_);
+  static inline const ContractAcceptRequest* internal_default_instance() {
+    return reinterpret_cast<const ContractAcceptRequest*>(
+        &_ContractAcceptRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages = 13;
-  friend void swap(AcceptRequest& a, AcceptRequest& b) { a.Swap(&b); }
-  inline void Swap(AcceptRequest* other) {
+  friend void swap(ContractAcceptRequest& a, ContractAcceptRequest& b) { a.Swap(&b); }
+  inline void Swap(ContractAcceptRequest* other) {
     if (other == this) return;
 #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetArena() != nullptr && GetArena() == other->GetArena()) {
@@ -4442,7 +4442,7 @@ class AcceptRequest final : public ::google::protobuf::Message
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(AcceptRequest* other) {
+  void UnsafeArenaSwap(ContractAcceptRequest* other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -4450,13 +4450,13 @@ class AcceptRequest final : public ::google::protobuf::Message
 
   // implements Message ----------------------------------------------
 
-  AcceptRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
-    return ::google::protobuf::Message::DefaultConstruct<AcceptRequest>(arena);
+  ContractAcceptRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return ::google::protobuf::Message::DefaultConstruct<ContractAcceptRequest>(arena);
   }
   using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const AcceptRequest& from);
+  void CopyFrom(const ContractAcceptRequest& from);
   using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const AcceptRequest& from) { AcceptRequest::MergeImpl(*this, from); }
+  void MergeFrom(const ContractAcceptRequest& from) { ContractAcceptRequest::MergeImpl(*this, from); }
 
   private:
   static void MergeImpl(
@@ -4477,16 +4477,16 @@ class AcceptRequest final : public ::google::protobuf::Message
   private:
   void SharedCtor(::google::protobuf::Arena* arena);
   void SharedDtor();
-  void InternalSwap(AcceptRequest* other);
+  void InternalSwap(ContractAcceptRequest* other);
  private:
   friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() { return "dsp.v1alpha2.AcceptRequest"; }
+  static ::absl::string_view FullMessageName() { return "dsp.v1alpha2.ContractAcceptRequest"; }
 
  protected:
-  explicit AcceptRequest(::google::protobuf::Arena* arena);
-  AcceptRequest(::google::protobuf::Arena* arena, const AcceptRequest& from);
-  AcceptRequest(::google::protobuf::Arena* arena, AcceptRequest&& from) noexcept
-      : AcceptRequest(arena) {
+  explicit ContractAcceptRequest(::google::protobuf::Arena* arena);
+  ContractAcceptRequest(::google::protobuf::Arena* arena, const ContractAcceptRequest& from);
+  ContractAcceptRequest(::google::protobuf::Arena* arena, ContractAcceptRequest&& from) noexcept
+      : ContractAcceptRequest(arena) {
     *this = ::std::move(from);
   }
   const ::google::protobuf::Message::ClassData* GetClassData() const final;
@@ -4515,17 +4515,17 @@ class AcceptRequest final : public ::google::protobuf::Message
   std::string* _internal_mutable_pid();
 
   public:
-  // @@protoc_insertion_point(class_scope:dsp.v1alpha2.AcceptRequest)
+  // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractAcceptRequest)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
       0, 1, 0,
-      38, 2>
+      46, 2>
       _table_;
 
   static constexpr const void* _raw_default_instance_ =
-      &_AcceptRequest_default_instance_;
+      &_ContractAcceptRequest_default_instance_;
 
   friend class ::google::protobuf::MessageLite;
   friend class ::google::protobuf::Arena;
@@ -4540,7 +4540,7 @@ class AcceptRequest final : public ::google::protobuf::Message
                           ::google::protobuf::Arena* arena);
     inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                           ::google::protobuf::Arena* arena, const Impl_& from,
-                          const AcceptRequest& from_msg);
+                          const ContractAcceptRequest& from_msg);
     ::google::protobuf::internal::ArenaStringPtr pid_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
@@ -6017,48 +6017,48 @@ inline void GetProviderDatasetDownloadInformationResponse::set_allocated_transfe
 
 // -------------------------------------------------------------------
 
-// RequestRequest
+// ContractRequestRequest
 
 // string offer = 1 [json_name = "offer"];
-inline void RequestRequest::clear_offer() {
+inline void ContractRequestRequest::clear_offer() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.offer_.ClearToEmpty();
 }
-inline const std::string& RequestRequest::offer() const
+inline const std::string& ContractRequestRequest::offer() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.RequestRequest.offer)
+  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractRequestRequest.offer)
   return _internal_offer();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void RequestRequest::set_offer(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void ContractRequestRequest::set_offer(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.offer_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.RequestRequest.offer)
+  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractRequestRequest.offer)
 }
-inline std::string* RequestRequest::mutable_offer() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* ContractRequestRequest::mutable_offer() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_offer();
-  // @@protoc_insertion_point(field_mutable:dsp.v1alpha2.RequestRequest.offer)
+  // @@protoc_insertion_point(field_mutable:dsp.v1alpha2.ContractRequestRequest.offer)
   return _s;
 }
-inline const std::string& RequestRequest::_internal_offer() const {
+inline const std::string& ContractRequestRequest::_internal_offer() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.offer_.Get();
 }
-inline void RequestRequest::_internal_set_offer(const std::string& value) {
+inline void ContractRequestRequest::_internal_set_offer(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.offer_.Set(value, GetArena());
 }
-inline std::string* RequestRequest::_internal_mutable_offer() {
+inline std::string* ContractRequestRequest::_internal_mutable_offer() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.offer_.Mutable( GetArena());
 }
-inline std::string* RequestRequest::release_offer() {
+inline std::string* ContractRequestRequest::release_offer() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:dsp.v1alpha2.RequestRequest.offer)
+  // @@protoc_insertion_point(field_release:dsp.v1alpha2.ContractRequestRequest.offer)
   return _impl_.offer_.Release();
 }
-inline void RequestRequest::set_allocated_offer(std::string* value) {
+inline void ContractRequestRequest::set_allocated_offer(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.offer_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6066,54 +6066,54 @@ inline void RequestRequest::set_allocated_offer(std::string* value) {
           _impl_.offer_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.RequestRequest.offer)
+  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractRequestRequest.offer)
 }
 
 // optional string pid = 2 [json_name = "pid"];
-inline bool RequestRequest::has_pid() const {
+inline bool ContractRequestRequest::has_pid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline void RequestRequest::clear_pid() {
+inline void ContractRequestRequest::clear_pid() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.pid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& RequestRequest::pid() const
+inline const std::string& ContractRequestRequest::pid() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.RequestRequest.pid)
+  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractRequestRequest.pid)
   return _internal_pid();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void RequestRequest::set_pid(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void ContractRequestRequest::set_pid(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.pid_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.RequestRequest.pid)
+  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractRequestRequest.pid)
 }
-inline std::string* RequestRequest::mutable_pid() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* ContractRequestRequest::mutable_pid() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_pid();
-  // @@protoc_insertion_point(field_mutable:dsp.v1alpha2.RequestRequest.pid)
+  // @@protoc_insertion_point(field_mutable:dsp.v1alpha2.ContractRequestRequest.pid)
   return _s;
 }
-inline const std::string& RequestRequest::_internal_pid() const {
+inline const std::string& ContractRequestRequest::_internal_pid() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.pid_.Get();
 }
-inline void RequestRequest::_internal_set_pid(const std::string& value) {
+inline void ContractRequestRequest::_internal_set_pid(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.pid_.Set(value, GetArena());
 }
-inline std::string* RequestRequest::_internal_mutable_pid() {
+inline std::string* ContractRequestRequest::_internal_mutable_pid() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.pid_.Mutable( GetArena());
 }
-inline std::string* RequestRequest::release_pid() {
+inline std::string* ContractRequestRequest::release_pid() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:dsp.v1alpha2.RequestRequest.pid)
+  // @@protoc_insertion_point(field_release:dsp.v1alpha2.ContractRequestRequest.pid)
   if ((_impl_._has_bits_[0] & 0x00000001u) == 0) {
     return nullptr;
   }
@@ -6124,7 +6124,7 @@ inline std::string* RequestRequest::release_pid() {
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return released;
 }
-inline void RequestRequest::set_allocated_pid(std::string* value) {
+inline void ContractRequestRequest::set_allocated_pid(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
@@ -6137,54 +6137,54 @@ inline void RequestRequest::set_allocated_pid(std::string* value) {
           _impl_.pid_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.RequestRequest.pid)
+  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractRequestRequest.pid)
 }
 
 // optional string participant_address = 3 [json_name = "participantAddress"];
-inline bool RequestRequest::has_participant_address() const {
+inline bool ContractRequestRequest::has_participant_address() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline void RequestRequest::clear_participant_address() {
+inline void ContractRequestRequest::clear_participant_address() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.participant_address_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& RequestRequest::participant_address() const
+inline const std::string& ContractRequestRequest::participant_address() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.RequestRequest.participant_address)
+  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractRequestRequest.participant_address)
   return _internal_participant_address();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void RequestRequest::set_participant_address(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void ContractRequestRequest::set_participant_address(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.participant_address_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.RequestRequest.participant_address)
+  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractRequestRequest.participant_address)
 }
-inline std::string* RequestRequest::mutable_participant_address() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* ContractRequestRequest::mutable_participant_address() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_participant_address();
-  // @@protoc_insertion_point(field_mutable:dsp.v1alpha2.RequestRequest.participant_address)
+  // @@protoc_insertion_point(field_mutable:dsp.v1alpha2.ContractRequestRequest.participant_address)
   return _s;
 }
-inline const std::string& RequestRequest::_internal_participant_address() const {
+inline const std::string& ContractRequestRequest::_internal_participant_address() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.participant_address_.Get();
 }
-inline void RequestRequest::_internal_set_participant_address(const std::string& value) {
+inline void ContractRequestRequest::_internal_set_participant_address(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.participant_address_.Set(value, GetArena());
 }
-inline std::string* RequestRequest::_internal_mutable_participant_address() {
+inline std::string* ContractRequestRequest::_internal_mutable_participant_address() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.participant_address_.Mutable( GetArena());
 }
-inline std::string* RequestRequest::release_participant_address() {
+inline std::string* ContractRequestRequest::release_participant_address() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:dsp.v1alpha2.RequestRequest.participant_address)
+  // @@protoc_insertion_point(field_release:dsp.v1alpha2.ContractRequestRequest.participant_address)
   if ((_impl_._has_bits_[0] & 0x00000002u) == 0) {
     return nullptr;
   }
@@ -6195,7 +6195,7 @@ inline std::string* RequestRequest::release_participant_address() {
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return released;
 }
-inline void RequestRequest::set_allocated_participant_address(std::string* value) {
+inline void ContractRequestRequest::set_allocated_participant_address(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
@@ -6208,57 +6208,57 @@ inline void RequestRequest::set_allocated_participant_address(std::string* value
           _impl_.participant_address_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.RequestRequest.participant_address)
+  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractRequestRequest.participant_address)
 }
 
 // -------------------------------------------------------------------
 
-// RequestResponse
+// ContractRequestResponse
 
 // -------------------------------------------------------------------
 
-// OfferRequest
+// ContractOfferRequest
 
 // string offer = 1 [json_name = "offer"];
-inline void OfferRequest::clear_offer() {
+inline void ContractOfferRequest::clear_offer() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.offer_.ClearToEmpty();
 }
-inline const std::string& OfferRequest::offer() const
+inline const std::string& ContractOfferRequest::offer() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.OfferRequest.offer)
+  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractOfferRequest.offer)
   return _internal_offer();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void OfferRequest::set_offer(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void ContractOfferRequest::set_offer(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.offer_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.OfferRequest.offer)
+  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractOfferRequest.offer)
 }
-inline std::string* OfferRequest::mutable_offer() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* ContractOfferRequest::mutable_offer() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_offer();
-  // @@protoc_insertion_point(field_mutable:dsp.v1alpha2.OfferRequest.offer)
+  // @@protoc_insertion_point(field_mutable:dsp.v1alpha2.ContractOfferRequest.offer)
   return _s;
 }
-inline const std::string& OfferRequest::_internal_offer() const {
+inline const std::string& ContractOfferRequest::_internal_offer() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.offer_.Get();
 }
-inline void OfferRequest::_internal_set_offer(const std::string& value) {
+inline void ContractOfferRequest::_internal_set_offer(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.offer_.Set(value, GetArena());
 }
-inline std::string* OfferRequest::_internal_mutable_offer() {
+inline std::string* ContractOfferRequest::_internal_mutable_offer() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.offer_.Mutable( GetArena());
 }
-inline std::string* OfferRequest::release_offer() {
+inline std::string* ContractOfferRequest::release_offer() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:dsp.v1alpha2.OfferRequest.offer)
+  // @@protoc_insertion_point(field_release:dsp.v1alpha2.ContractOfferRequest.offer)
   return _impl_.offer_.Release();
 }
-inline void OfferRequest::set_allocated_offer(std::string* value) {
+inline void ContractOfferRequest::set_allocated_offer(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.offer_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6266,54 +6266,54 @@ inline void OfferRequest::set_allocated_offer(std::string* value) {
           _impl_.offer_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.OfferRequest.offer)
+  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractOfferRequest.offer)
 }
 
 // optional string pid = 2 [json_name = "pid"];
-inline bool OfferRequest::has_pid() const {
+inline bool ContractOfferRequest::has_pid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline void OfferRequest::clear_pid() {
+inline void ContractOfferRequest::clear_pid() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.pid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& OfferRequest::pid() const
+inline const std::string& ContractOfferRequest::pid() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.OfferRequest.pid)
+  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractOfferRequest.pid)
   return _internal_pid();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void OfferRequest::set_pid(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void ContractOfferRequest::set_pid(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.pid_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.OfferRequest.pid)
+  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractOfferRequest.pid)
 }
-inline std::string* OfferRequest::mutable_pid() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* ContractOfferRequest::mutable_pid() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_pid();
-  // @@protoc_insertion_point(field_mutable:dsp.v1alpha2.OfferRequest.pid)
+  // @@protoc_insertion_point(field_mutable:dsp.v1alpha2.ContractOfferRequest.pid)
   return _s;
 }
-inline const std::string& OfferRequest::_internal_pid() const {
+inline const std::string& ContractOfferRequest::_internal_pid() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.pid_.Get();
 }
-inline void OfferRequest::_internal_set_pid(const std::string& value) {
+inline void ContractOfferRequest::_internal_set_pid(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.pid_.Set(value, GetArena());
 }
-inline std::string* OfferRequest::_internal_mutable_pid() {
+inline std::string* ContractOfferRequest::_internal_mutable_pid() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.pid_.Mutable( GetArena());
 }
-inline std::string* OfferRequest::release_pid() {
+inline std::string* ContractOfferRequest::release_pid() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:dsp.v1alpha2.OfferRequest.pid)
+  // @@protoc_insertion_point(field_release:dsp.v1alpha2.ContractOfferRequest.pid)
   if ((_impl_._has_bits_[0] & 0x00000001u) == 0) {
     return nullptr;
   }
@@ -6324,7 +6324,7 @@ inline std::string* OfferRequest::release_pid() {
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return released;
 }
-inline void OfferRequest::set_allocated_pid(std::string* value) {
+inline void ContractOfferRequest::set_allocated_pid(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
@@ -6337,54 +6337,54 @@ inline void OfferRequest::set_allocated_pid(std::string* value) {
           _impl_.pid_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.OfferRequest.pid)
+  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractOfferRequest.pid)
 }
 
 // optional string participant_address = 3 [json_name = "participantAddress"];
-inline bool OfferRequest::has_participant_address() const {
+inline bool ContractOfferRequest::has_participant_address() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline void OfferRequest::clear_participant_address() {
+inline void ContractOfferRequest::clear_participant_address() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.participant_address_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& OfferRequest::participant_address() const
+inline const std::string& ContractOfferRequest::participant_address() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.OfferRequest.participant_address)
+  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractOfferRequest.participant_address)
   return _internal_participant_address();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void OfferRequest::set_participant_address(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void ContractOfferRequest::set_participant_address(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.participant_address_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.OfferRequest.participant_address)
+  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractOfferRequest.participant_address)
 }
-inline std::string* OfferRequest::mutable_participant_address() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* ContractOfferRequest::mutable_participant_address() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_participant_address();
-  // @@protoc_insertion_point(field_mutable:dsp.v1alpha2.OfferRequest.participant_address)
+  // @@protoc_insertion_point(field_mutable:dsp.v1alpha2.ContractOfferRequest.participant_address)
   return _s;
 }
-inline const std::string& OfferRequest::_internal_participant_address() const {
+inline const std::string& ContractOfferRequest::_internal_participant_address() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.participant_address_.Get();
 }
-inline void OfferRequest::_internal_set_participant_address(const std::string& value) {
+inline void ContractOfferRequest::_internal_set_participant_address(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.participant_address_.Set(value, GetArena());
 }
-inline std::string* OfferRequest::_internal_mutable_participant_address() {
+inline std::string* ContractOfferRequest::_internal_mutable_participant_address() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.participant_address_.Mutable( GetArena());
 }
-inline std::string* OfferRequest::release_participant_address() {
+inline std::string* ContractOfferRequest::release_participant_address() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:dsp.v1alpha2.OfferRequest.participant_address)
+  // @@protoc_insertion_point(field_release:dsp.v1alpha2.ContractOfferRequest.participant_address)
   if ((_impl_._has_bits_[0] & 0x00000002u) == 0) {
     return nullptr;
   }
@@ -6395,7 +6395,7 @@ inline std::string* OfferRequest::release_participant_address() {
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return released;
 }
-inline void OfferRequest::set_allocated_participant_address(std::string* value) {
+inline void ContractOfferRequest::set_allocated_participant_address(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
@@ -6408,57 +6408,57 @@ inline void OfferRequest::set_allocated_participant_address(std::string* value) 
           _impl_.participant_address_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.OfferRequest.participant_address)
+  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractOfferRequest.participant_address)
 }
 
 // -------------------------------------------------------------------
 
-// OfferResponse
+// ContractOfferResponse
 
 // -------------------------------------------------------------------
 
-// AcceptRequest
+// ContractAcceptRequest
 
 // string pid = 1 [json_name = "pid"];
-inline void AcceptRequest::clear_pid() {
+inline void ContractAcceptRequest::clear_pid() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.pid_.ClearToEmpty();
 }
-inline const std::string& AcceptRequest::pid() const
+inline const std::string& ContractAcceptRequest::pid() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.AcceptRequest.pid)
+  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractAcceptRequest.pid)
   return _internal_pid();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void AcceptRequest::set_pid(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void ContractAcceptRequest::set_pid(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.pid_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.AcceptRequest.pid)
+  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractAcceptRequest.pid)
 }
-inline std::string* AcceptRequest::mutable_pid() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* ContractAcceptRequest::mutable_pid() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_pid();
-  // @@protoc_insertion_point(field_mutable:dsp.v1alpha2.AcceptRequest.pid)
+  // @@protoc_insertion_point(field_mutable:dsp.v1alpha2.ContractAcceptRequest.pid)
   return _s;
 }
-inline const std::string& AcceptRequest::_internal_pid() const {
+inline const std::string& ContractAcceptRequest::_internal_pid() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.pid_.Get();
 }
-inline void AcceptRequest::_internal_set_pid(const std::string& value) {
+inline void ContractAcceptRequest::_internal_set_pid(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.pid_.Set(value, GetArena());
 }
-inline std::string* AcceptRequest::_internal_mutable_pid() {
+inline std::string* ContractAcceptRequest::_internal_mutable_pid() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.pid_.Mutable( GetArena());
 }
-inline std::string* AcceptRequest::release_pid() {
+inline std::string* ContractAcceptRequest::release_pid() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:dsp.v1alpha2.AcceptRequest.pid)
+  // @@protoc_insertion_point(field_release:dsp.v1alpha2.ContractAcceptRequest.pid)
   return _impl_.pid_.Release();
 }
-inline void AcceptRequest::set_allocated_pid(std::string* value) {
+inline void ContractAcceptRequest::set_allocated_pid(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.pid_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6466,57 +6466,57 @@ inline void AcceptRequest::set_allocated_pid(std::string* value) {
           _impl_.pid_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.AcceptRequest.pid)
+  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractAcceptRequest.pid)
 }
 
 // -------------------------------------------------------------------
 
-// AcceptResponse
+// ContractAcceptResponse
 
 // -------------------------------------------------------------------
 
-// AgreeRequest
+// ContractAgreeRequest
 
 // string agreement = 1 [json_name = "agreement"];
-inline void AgreeRequest::clear_agreement() {
+inline void ContractAgreeRequest::clear_agreement() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.agreement_.ClearToEmpty();
 }
-inline const std::string& AgreeRequest::agreement() const
+inline const std::string& ContractAgreeRequest::agreement() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.AgreeRequest.agreement)
+  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractAgreeRequest.agreement)
   return _internal_agreement();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void AgreeRequest::set_agreement(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void ContractAgreeRequest::set_agreement(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.agreement_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.AgreeRequest.agreement)
+  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractAgreeRequest.agreement)
 }
-inline std::string* AgreeRequest::mutable_agreement() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* ContractAgreeRequest::mutable_agreement() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_agreement();
-  // @@protoc_insertion_point(field_mutable:dsp.v1alpha2.AgreeRequest.agreement)
+  // @@protoc_insertion_point(field_mutable:dsp.v1alpha2.ContractAgreeRequest.agreement)
   return _s;
 }
-inline const std::string& AgreeRequest::_internal_agreement() const {
+inline const std::string& ContractAgreeRequest::_internal_agreement() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.agreement_.Get();
 }
-inline void AgreeRequest::_internal_set_agreement(const std::string& value) {
+inline void ContractAgreeRequest::_internal_set_agreement(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.agreement_.Set(value, GetArena());
 }
-inline std::string* AgreeRequest::_internal_mutable_agreement() {
+inline std::string* ContractAgreeRequest::_internal_mutable_agreement() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.agreement_.Mutable( GetArena());
 }
-inline std::string* AgreeRequest::release_agreement() {
+inline std::string* ContractAgreeRequest::release_agreement() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:dsp.v1alpha2.AgreeRequest.agreement)
+  // @@protoc_insertion_point(field_release:dsp.v1alpha2.ContractAgreeRequest.agreement)
   return _impl_.agreement_.Release();
 }
-inline void AgreeRequest::set_allocated_agreement(std::string* value) {
+inline void ContractAgreeRequest::set_allocated_agreement(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.agreement_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6524,49 +6524,49 @@ inline void AgreeRequest::set_allocated_agreement(std::string* value) {
           _impl_.agreement_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.AgreeRequest.agreement)
+  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractAgreeRequest.agreement)
 }
 
 // string pid = 2 [json_name = "pid"];
-inline void AgreeRequest::clear_pid() {
+inline void ContractAgreeRequest::clear_pid() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.pid_.ClearToEmpty();
 }
-inline const std::string& AgreeRequest::pid() const
+inline const std::string& ContractAgreeRequest::pid() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.AgreeRequest.pid)
+  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractAgreeRequest.pid)
   return _internal_pid();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void AgreeRequest::set_pid(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void ContractAgreeRequest::set_pid(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.pid_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.AgreeRequest.pid)
+  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractAgreeRequest.pid)
 }
-inline std::string* AgreeRequest::mutable_pid() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* ContractAgreeRequest::mutable_pid() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_pid();
-  // @@protoc_insertion_point(field_mutable:dsp.v1alpha2.AgreeRequest.pid)
+  // @@protoc_insertion_point(field_mutable:dsp.v1alpha2.ContractAgreeRequest.pid)
   return _s;
 }
-inline const std::string& AgreeRequest::_internal_pid() const {
+inline const std::string& ContractAgreeRequest::_internal_pid() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.pid_.Get();
 }
-inline void AgreeRequest::_internal_set_pid(const std::string& value) {
+inline void ContractAgreeRequest::_internal_set_pid(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.pid_.Set(value, GetArena());
 }
-inline std::string* AgreeRequest::_internal_mutable_pid() {
+inline std::string* ContractAgreeRequest::_internal_mutable_pid() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.pid_.Mutable( GetArena());
 }
-inline std::string* AgreeRequest::release_pid() {
+inline std::string* ContractAgreeRequest::release_pid() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:dsp.v1alpha2.AgreeRequest.pid)
+  // @@protoc_insertion_point(field_release:dsp.v1alpha2.ContractAgreeRequest.pid)
   return _impl_.pid_.Release();
 }
-inline void AgreeRequest::set_allocated_pid(std::string* value) {
+inline void ContractAgreeRequest::set_allocated_pid(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.pid_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6574,57 +6574,57 @@ inline void AgreeRequest::set_allocated_pid(std::string* value) {
           _impl_.pid_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.AgreeRequest.pid)
+  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractAgreeRequest.pid)
 }
 
 // -------------------------------------------------------------------
 
-// AgreeResponse
+// ContractAgreeResponse
 
 // -------------------------------------------------------------------
 
-// VerifyRequest
+// ContractVerifyRequest
 
 // string pid = 1 [json_name = "pid"];
-inline void VerifyRequest::clear_pid() {
+inline void ContractVerifyRequest::clear_pid() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.pid_.ClearToEmpty();
 }
-inline const std::string& VerifyRequest::pid() const
+inline const std::string& ContractVerifyRequest::pid() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.VerifyRequest.pid)
+  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractVerifyRequest.pid)
   return _internal_pid();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void VerifyRequest::set_pid(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void ContractVerifyRequest::set_pid(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.pid_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.VerifyRequest.pid)
+  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractVerifyRequest.pid)
 }
-inline std::string* VerifyRequest::mutable_pid() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* ContractVerifyRequest::mutable_pid() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_pid();
-  // @@protoc_insertion_point(field_mutable:dsp.v1alpha2.VerifyRequest.pid)
+  // @@protoc_insertion_point(field_mutable:dsp.v1alpha2.ContractVerifyRequest.pid)
   return _s;
 }
-inline const std::string& VerifyRequest::_internal_pid() const {
+inline const std::string& ContractVerifyRequest::_internal_pid() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.pid_.Get();
 }
-inline void VerifyRequest::_internal_set_pid(const std::string& value) {
+inline void ContractVerifyRequest::_internal_set_pid(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.pid_.Set(value, GetArena());
 }
-inline std::string* VerifyRequest::_internal_mutable_pid() {
+inline std::string* ContractVerifyRequest::_internal_mutable_pid() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.pid_.Mutable( GetArena());
 }
-inline std::string* VerifyRequest::release_pid() {
+inline std::string* ContractVerifyRequest::release_pid() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:dsp.v1alpha2.VerifyRequest.pid)
+  // @@protoc_insertion_point(field_release:dsp.v1alpha2.ContractVerifyRequest.pid)
   return _impl_.pid_.Release();
 }
-inline void VerifyRequest::set_allocated_pid(std::string* value) {
+inline void ContractVerifyRequest::set_allocated_pid(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.pid_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6632,57 +6632,57 @@ inline void VerifyRequest::set_allocated_pid(std::string* value) {
           _impl_.pid_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.VerifyRequest.pid)
+  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractVerifyRequest.pid)
 }
 
 // -------------------------------------------------------------------
 
-// VerifyResponse
+// ContractVerifyResponse
 
 // -------------------------------------------------------------------
 
-// FinalizeRequest
+// ContractFinalizeRequest
 
 // string pid = 1 [json_name = "pid"];
-inline void FinalizeRequest::clear_pid() {
+inline void ContractFinalizeRequest::clear_pid() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.pid_.ClearToEmpty();
 }
-inline const std::string& FinalizeRequest::pid() const
+inline const std::string& ContractFinalizeRequest::pid() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.FinalizeRequest.pid)
+  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractFinalizeRequest.pid)
   return _internal_pid();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void FinalizeRequest::set_pid(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void ContractFinalizeRequest::set_pid(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.pid_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.FinalizeRequest.pid)
+  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractFinalizeRequest.pid)
 }
-inline std::string* FinalizeRequest::mutable_pid() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* ContractFinalizeRequest::mutable_pid() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_pid();
-  // @@protoc_insertion_point(field_mutable:dsp.v1alpha2.FinalizeRequest.pid)
+  // @@protoc_insertion_point(field_mutable:dsp.v1alpha2.ContractFinalizeRequest.pid)
   return _s;
 }
-inline const std::string& FinalizeRequest::_internal_pid() const {
+inline const std::string& ContractFinalizeRequest::_internal_pid() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.pid_.Get();
 }
-inline void FinalizeRequest::_internal_set_pid(const std::string& value) {
+inline void ContractFinalizeRequest::_internal_set_pid(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.pid_.Set(value, GetArena());
 }
-inline std::string* FinalizeRequest::_internal_mutable_pid() {
+inline std::string* ContractFinalizeRequest::_internal_mutable_pid() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.pid_.Mutable( GetArena());
 }
-inline std::string* FinalizeRequest::release_pid() {
+inline std::string* ContractFinalizeRequest::release_pid() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:dsp.v1alpha2.FinalizeRequest.pid)
+  // @@protoc_insertion_point(field_release:dsp.v1alpha2.ContractFinalizeRequest.pid)
   return _impl_.pid_.Release();
 }
-inline void FinalizeRequest::set_allocated_pid(std::string* value) {
+inline void ContractFinalizeRequest::set_allocated_pid(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.pid_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6690,57 +6690,57 @@ inline void FinalizeRequest::set_allocated_pid(std::string* value) {
           _impl_.pid_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.FinalizeRequest.pid)
+  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractFinalizeRequest.pid)
 }
 
 // -------------------------------------------------------------------
 
-// FinalizeResponse
+// ContractFinalizeResponse
 
 // -------------------------------------------------------------------
 
-// TerminateRequest
+// ContractTerminateRequest
 
 // string pid = 1 [json_name = "pid"];
-inline void TerminateRequest::clear_pid() {
+inline void ContractTerminateRequest::clear_pid() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.pid_.ClearToEmpty();
 }
-inline const std::string& TerminateRequest::pid() const
+inline const std::string& ContractTerminateRequest::pid() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.TerminateRequest.pid)
+  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractTerminateRequest.pid)
   return _internal_pid();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void TerminateRequest::set_pid(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void ContractTerminateRequest::set_pid(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.pid_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.TerminateRequest.pid)
+  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractTerminateRequest.pid)
 }
-inline std::string* TerminateRequest::mutable_pid() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* ContractTerminateRequest::mutable_pid() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_pid();
-  // @@protoc_insertion_point(field_mutable:dsp.v1alpha2.TerminateRequest.pid)
+  // @@protoc_insertion_point(field_mutable:dsp.v1alpha2.ContractTerminateRequest.pid)
   return _s;
 }
-inline const std::string& TerminateRequest::_internal_pid() const {
+inline const std::string& ContractTerminateRequest::_internal_pid() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.pid_.Get();
 }
-inline void TerminateRequest::_internal_set_pid(const std::string& value) {
+inline void ContractTerminateRequest::_internal_set_pid(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.pid_.Set(value, GetArena());
 }
-inline std::string* TerminateRequest::_internal_mutable_pid() {
+inline std::string* ContractTerminateRequest::_internal_mutable_pid() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.pid_.Mutable( GetArena());
 }
-inline std::string* TerminateRequest::release_pid() {
+inline std::string* ContractTerminateRequest::release_pid() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:dsp.v1alpha2.TerminateRequest.pid)
+  // @@protoc_insertion_point(field_release:dsp.v1alpha2.ContractTerminateRequest.pid)
   return _impl_.pid_.Release();
 }
-inline void TerminateRequest::set_allocated_pid(std::string* value) {
+inline void ContractTerminateRequest::set_allocated_pid(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.pid_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6748,49 +6748,49 @@ inline void TerminateRequest::set_allocated_pid(std::string* value) {
           _impl_.pid_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.TerminateRequest.pid)
+  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractTerminateRequest.pid)
 }
 
 // string code = 2 [json_name = "code"];
-inline void TerminateRequest::clear_code() {
+inline void ContractTerminateRequest::clear_code() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.code_.ClearToEmpty();
 }
-inline const std::string& TerminateRequest::code() const
+inline const std::string& ContractTerminateRequest::code() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.TerminateRequest.code)
+  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractTerminateRequest.code)
   return _internal_code();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void TerminateRequest::set_code(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void ContractTerminateRequest::set_code(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.code_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.TerminateRequest.code)
+  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractTerminateRequest.code)
 }
-inline std::string* TerminateRequest::mutable_code() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* ContractTerminateRequest::mutable_code() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_code();
-  // @@protoc_insertion_point(field_mutable:dsp.v1alpha2.TerminateRequest.code)
+  // @@protoc_insertion_point(field_mutable:dsp.v1alpha2.ContractTerminateRequest.code)
   return _s;
 }
-inline const std::string& TerminateRequest::_internal_code() const {
+inline const std::string& ContractTerminateRequest::_internal_code() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.code_.Get();
 }
-inline void TerminateRequest::_internal_set_code(const std::string& value) {
+inline void ContractTerminateRequest::_internal_set_code(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.code_.Set(value, GetArena());
 }
-inline std::string* TerminateRequest::_internal_mutable_code() {
+inline std::string* ContractTerminateRequest::_internal_mutable_code() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.code_.Mutable( GetArena());
 }
-inline std::string* TerminateRequest::release_code() {
+inline std::string* ContractTerminateRequest::release_code() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:dsp.v1alpha2.TerminateRequest.code)
+  // @@protoc_insertion_point(field_release:dsp.v1alpha2.ContractTerminateRequest.code)
   return _impl_.code_.Release();
 }
-inline void TerminateRequest::set_allocated_code(std::string* value) {
+inline void ContractTerminateRequest::set_allocated_code(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.code_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6798,114 +6798,114 @@ inline void TerminateRequest::set_allocated_code(std::string* value) {
           _impl_.code_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.TerminateRequest.code)
+  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractTerminateRequest.code)
 }
 
 // repeated string reason = 3 [json_name = "reason"];
-inline int TerminateRequest::_internal_reason_size() const {
+inline int ContractTerminateRequest::_internal_reason_size() const {
   return _internal_reason().size();
 }
-inline int TerminateRequest::reason_size() const {
+inline int ContractTerminateRequest::reason_size() const {
   return _internal_reason_size();
 }
-inline void TerminateRequest::clear_reason() {
+inline void ContractTerminateRequest::clear_reason() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.reason_.Clear();
 }
-inline std::string* TerminateRequest::add_reason()
+inline std::string* ContractTerminateRequest::add_reason()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   std::string* _s = _internal_mutable_reason()->Add();
-  // @@protoc_insertion_point(field_add_mutable:dsp.v1alpha2.TerminateRequest.reason)
+  // @@protoc_insertion_point(field_add_mutable:dsp.v1alpha2.ContractTerminateRequest.reason)
   return _s;
 }
-inline const std::string& TerminateRequest::reason(int index) const
+inline const std::string& ContractTerminateRequest::reason(int index) const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.TerminateRequest.reason)
+  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractTerminateRequest.reason)
   return _internal_reason().Get(index);
 }
-inline std::string* TerminateRequest::mutable_reason(int index)
+inline std::string* ContractTerminateRequest::mutable_reason(int index)
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_mutable:dsp.v1alpha2.TerminateRequest.reason)
+  // @@protoc_insertion_point(field_mutable:dsp.v1alpha2.ContractTerminateRequest.reason)
   return _internal_mutable_reason()->Mutable(index);
 }
-inline void TerminateRequest::set_reason(int index, const std::string& value) {
+inline void ContractTerminateRequest::set_reason(int index, const std::string& value) {
   _internal_mutable_reason()->Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.TerminateRequest.reason)
+  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractTerminateRequest.reason)
 }
-inline void TerminateRequest::set_reason(int index, std::string&& value) {
+inline void ContractTerminateRequest::set_reason(int index, std::string&& value) {
   _internal_mutable_reason()->Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.TerminateRequest.reason)
+  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractTerminateRequest.reason)
 }
-inline void TerminateRequest::set_reason(int index, const char* value) {
+inline void ContractTerminateRequest::set_reason(int index, const char* value) {
   ABSL_DCHECK(value != nullptr);
   _internal_mutable_reason()->Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:dsp.v1alpha2.TerminateRequest.reason)
+  // @@protoc_insertion_point(field_set_char:dsp.v1alpha2.ContractTerminateRequest.reason)
 }
-inline void TerminateRequest::set_reason(int index, const char* value,
+inline void ContractTerminateRequest::set_reason(int index, const char* value,
                               std::size_t size) {
   _internal_mutable_reason()->Mutable(index)->assign(
       reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:dsp.v1alpha2.TerminateRequest.reason)
+  // @@protoc_insertion_point(field_set_pointer:dsp.v1alpha2.ContractTerminateRequest.reason)
 }
-inline void TerminateRequest::set_reason(int index, absl::string_view value) {
+inline void ContractTerminateRequest::set_reason(int index, absl::string_view value) {
   _internal_mutable_reason()->Mutable(index)->assign(
       value.data(), value.size());
-  // @@protoc_insertion_point(field_set_string_piece:dsp.v1alpha2.TerminateRequest.reason)
+  // @@protoc_insertion_point(field_set_string_piece:dsp.v1alpha2.ContractTerminateRequest.reason)
 }
-inline void TerminateRequest::add_reason(const std::string& value) {
+inline void ContractTerminateRequest::add_reason(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _internal_mutable_reason()->Add()->assign(value);
-  // @@protoc_insertion_point(field_add:dsp.v1alpha2.TerminateRequest.reason)
+  // @@protoc_insertion_point(field_add:dsp.v1alpha2.ContractTerminateRequest.reason)
 }
-inline void TerminateRequest::add_reason(std::string&& value) {
+inline void ContractTerminateRequest::add_reason(std::string&& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _internal_mutable_reason()->Add(std::move(value));
-  // @@protoc_insertion_point(field_add:dsp.v1alpha2.TerminateRequest.reason)
+  // @@protoc_insertion_point(field_add:dsp.v1alpha2.ContractTerminateRequest.reason)
 }
-inline void TerminateRequest::add_reason(const char* value) {
+inline void ContractTerminateRequest::add_reason(const char* value) {
   ABSL_DCHECK(value != nullptr);
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _internal_mutable_reason()->Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:dsp.v1alpha2.TerminateRequest.reason)
+  // @@protoc_insertion_point(field_add_char:dsp.v1alpha2.ContractTerminateRequest.reason)
 }
-inline void TerminateRequest::add_reason(const char* value, std::size_t size) {
+inline void ContractTerminateRequest::add_reason(const char* value, std::size_t size) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _internal_mutable_reason()->Add()->assign(
       reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:dsp.v1alpha2.TerminateRequest.reason)
+  // @@protoc_insertion_point(field_add_pointer:dsp.v1alpha2.ContractTerminateRequest.reason)
 }
-inline void TerminateRequest::add_reason(absl::string_view value) {
+inline void ContractTerminateRequest::add_reason(absl::string_view value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _internal_mutable_reason()->Add()->assign(value.data(),
                                                      value.size());
-  // @@protoc_insertion_point(field_add_string_piece:dsp.v1alpha2.TerminateRequest.reason)
+  // @@protoc_insertion_point(field_add_string_piece:dsp.v1alpha2.ContractTerminateRequest.reason)
 }
 inline const ::google::protobuf::RepeatedPtrField<std::string>&
-TerminateRequest::reason() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_list:dsp.v1alpha2.TerminateRequest.reason)
+ContractTerminateRequest::reason() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_list:dsp.v1alpha2.ContractTerminateRequest.reason)
   return _internal_reason();
 }
 inline ::google::protobuf::RepeatedPtrField<std::string>*
-TerminateRequest::mutable_reason() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_mutable_list:dsp.v1alpha2.TerminateRequest.reason)
+ContractTerminateRequest::mutable_reason() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_mutable_list:dsp.v1alpha2.ContractTerminateRequest.reason)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _internal_mutable_reason();
 }
 inline const ::google::protobuf::RepeatedPtrField<std::string>&
-TerminateRequest::_internal_reason() const {
+ContractTerminateRequest::_internal_reason() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.reason_;
 }
 inline ::google::protobuf::RepeatedPtrField<std::string>*
-TerminateRequest::_internal_mutable_reason() {
+ContractTerminateRequest::_internal_mutable_reason() {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return &_impl_.reason_;
 }
 
 // -------------------------------------------------------------------
 
-// TerminateResponse
+// ContractTerminateResponse
 
 // -------------------------------------------------------------------
 

@@ -17,7 +17,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { AcceptRequest, AcceptResponse, AgreeRequest, AgreeResponse, FinalizeRequest, FinalizeResponse, GetProviderCatalogueRequest, GetProviderCatalogueResponse, GetProviderDatasetDownloadInformationRequest, GetProviderDatasetDownloadInformationResponse, GetProviderDatasetRequest, GetProviderDatasetResponse, OfferRequest, OfferResponse, RequestRequest, RequestResponse, SignalTransferCancelledRequest, SignalTransferCancelledResponse, SignalTransferCompleteRequest, SignalTransferCompleteResponse, SignalTransferResumeRequest, SignalTransferResumeResponse, SignalTransferSuspendRequest, SignalTransferSuspendResponse, TerminateRequest, TerminateResponse, VerifyConnectionRequest, VerifyConnectionResponse, VerifyRequest, VerifyResponse } from "./control_pb.js";
+import { ContractAcceptRequest, ContractAcceptResponse, ContractAgreeRequest, ContractAgreeResponse, ContractFinalizeRequest, ContractFinalizeResponse, ContractOfferRequest, ContractOfferResponse, ContractRequestRequest, ContractRequestResponse, ContractTerminateRequest, ContractTerminateResponse, ContractVerifyRequest, ContractVerifyResponse, GetProviderCatalogueRequest, GetProviderCatalogueResponse, GetProviderDatasetDownloadInformationRequest, GetProviderDatasetDownloadInformationResponse, GetProviderDatasetRequest, GetProviderDatasetResponse, SignalTransferCancelledRequest, SignalTransferCancelledResponse, SignalTransferCompleteRequest, SignalTransferCompleteResponse, SignalTransferResumeRequest, SignalTransferResumeResponse, SignalTransferSuspendRequest, SignalTransferSuspendResponse, VerifyConnectionRequest, VerifyConnectionResponse } from "./control_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -51,21 +51,10 @@ export const ControlService = {
       O: VerifyConnectionResponse,
       kind: MethodKind.Unary,
     },
-  }
-};
-
-/**
- * CatalogueControlService contains methods to interact with dataspace catalogues.
- *
- * @generated from service dsp.v1alpha2.CatalogueControlService
- */
-export const CatalogueControlService = {
-  typeName: "dsp.v1alpha2.CatalogueControlService",
-  methods: {
     /**
      * Gets the catalogue based on the query parameters and the authorization header.
      *
-     * @generated from rpc dsp.v1alpha2.CatalogueControlService.GetProviderCatalogue
+     * @generated from rpc dsp.v1alpha2.ControlService.GetProviderCatalogue
      */
     getProviderCatalogue: {
       name: "GetProviderCatalogue",
@@ -76,7 +65,7 @@ export const CatalogueControlService = {
     /**
      * Gets information about a single dataset.
      *
-     * @generated from rpc dsp.v1alpha2.CatalogueControlService.GetProviderDataset
+     * @generated from rpc dsp.v1alpha2.ControlService.GetProviderDataset
      */
     getProviderDataset: {
       name: "GetProviderDataset",
@@ -84,109 +73,87 @@ export const CatalogueControlService = {
       O: GetProviderDatasetResponse,
       kind: MethodKind.Unary,
     },
-  }
-};
-
-/**
- * ContractControlService contains low level methods to send contract negotiation operations.
- *
- * @generated from service dsp.v1alpha2.ContractControlService
- */
-export const ContractControlService = {
-  typeName: "dsp.v1alpha2.ContractControlService",
-  methods: {
     /**
-     * Request sends a ContractRequestMessage.
+     * ContractRequest sends a ContractRequestMessage.
      *
-     * @generated from rpc dsp.v1alpha2.ContractControlService.Request
+     * @generated from rpc dsp.v1alpha2.ControlService.ContractRequest
      */
-    request: {
-      name: "Request",
-      I: RequestRequest,
-      O: RequestResponse,
+    contractRequest: {
+      name: "ContractRequest",
+      I: ContractRequestRequest,
+      O: ContractRequestResponse,
       kind: MethodKind.Unary,
     },
     /**
-     * Offer sends a ContractOfferMessage.
+     * ContractOffer sends a ContractOfferMessage.
      *
-     * @generated from rpc dsp.v1alpha2.ContractControlService.Offer
+     * @generated from rpc dsp.v1alpha2.ControlService.ContractOffer
      */
-    offer: {
-      name: "Offer",
-      I: OfferRequest,
-      O: OfferResponse,
+    contractOffer: {
+      name: "ContractOffer",
+      I: ContractOfferRequest,
+      O: ContractOfferResponse,
       kind: MethodKind.Unary,
     },
     /**
-     * Accept sends an accepted event message.
+     * ContractAccept sends an accepted event message.
      *
-     * @generated from rpc dsp.v1alpha2.ContractControlService.Accept
+     * @generated from rpc dsp.v1alpha2.ControlService.ContractAccept
      */
-    accept: {
-      name: "Accept",
-      I: AcceptRequest,
-      O: AcceptResponse,
+    contractAccept: {
+      name: "ContractAccept",
+      I: ContractAcceptRequest,
+      O: ContractAcceptResponse,
       kind: MethodKind.Unary,
     },
     /**
-     * Agree sends a ContractAcceptedMessage.
+     * ContractAgree sends a ContractAcceptedMessage.
      *
-     * @generated from rpc dsp.v1alpha2.ContractControlService.Agree
+     * @generated from rpc dsp.v1alpha2.ControlService.ContractAgree
      */
-    agree: {
-      name: "Agree",
-      I: AgreeRequest,
-      O: AgreeResponse,
+    contractAgree: {
+      name: "ContractAgree",
+      I: ContractAgreeRequest,
+      O: ContractAgreeResponse,
       kind: MethodKind.Unary,
     },
     /**
-     * Verify sends a ContractVerificationMessage.
+     * ContractVerify sends a ContractVerificationMessage.
      *
-     * @generated from rpc dsp.v1alpha2.ContractControlService.Verify
+     * @generated from rpc dsp.v1alpha2.ControlService.ContractVerify
      */
-    verify: {
-      name: "Verify",
-      I: VerifyRequest,
-      O: VerifyResponse,
+    contractVerify: {
+      name: "ContractVerify",
+      I: ContractVerifyRequest,
+      O: ContractVerifyResponse,
       kind: MethodKind.Unary,
     },
     /**
-     * Finalize sends a finalization event.
+     * ContractFinalize sends a finalization event.
      *
-     * @generated from rpc dsp.v1alpha2.ContractControlService.Finalize
+     * @generated from rpc dsp.v1alpha2.ControlService.ContractFinalize
      */
-    finalize: {
-      name: "Finalize",
-      I: FinalizeRequest,
-      O: FinalizeResponse,
+    contractFinalize: {
+      name: "ContractFinalize",
+      I: ContractFinalizeRequest,
+      O: ContractFinalizeResponse,
       kind: MethodKind.Unary,
     },
     /**
-     * Terminate sends a ContractTerminationMessage.
+     * ContractTerminate sends a ContractTerminationMessage.
      *
-     * @generated from rpc dsp.v1alpha2.ContractControlService.Terminate
+     * @generated from rpc dsp.v1alpha2.ControlService.ContractTerminate
      */
-    terminate: {
-      name: "Terminate",
-      I: TerminateRequest,
-      O: TerminateResponse,
+    contractTerminate: {
+      name: "ContractTerminate",
+      I: ContractTerminateRequest,
+      O: ContractTerminateResponse,
       kind: MethodKind.Unary,
     },
-  }
-};
-
-/**
- * TransferControlService contains low level methods to send transfer negotiation operations.
- *
- * @generated from service dsp.v1alpha2.TransferControlService
- */
-export const TransferControlService = {
-  typeName: "dsp.v1alpha2.TransferControlService",
-  methods: {
     /**
      * Tells provider that we have finished our transfer.
      *
-     * @generated from rpc dsp.v1alpha2.TransferControlService.SignalTransferComplete
+     * @generated from rpc dsp.v1alpha2.ControlService.SignalTransferComplete
      */
     signalTransferComplete: {
       name: "SignalTransferComplete",
@@ -197,7 +164,7 @@ export const TransferControlService = {
     /**
      * Tells provider to cancel file transfer
      *
-     * @generated from rpc dsp.v1alpha2.TransferControlService.SignalTransferCancelled
+     * @generated from rpc dsp.v1alpha2.ControlService.SignalTransferCancelled
      */
     signalTransferCancelled: {
       name: "SignalTransferCancelled",
@@ -208,7 +175,7 @@ export const TransferControlService = {
     /**
      * Tells provider to suspend file transfer
      *
-     * @generated from rpc dsp.v1alpha2.TransferControlService.SignalTransferSuspend
+     * @generated from rpc dsp.v1alpha2.ControlService.SignalTransferSuspend
      */
     signalTransferSuspend: {
       name: "SignalTransferSuspend",
@@ -219,7 +186,7 @@ export const TransferControlService = {
     /**
      * Tells provider to resume file transfer
      *
-     * @generated from rpc dsp.v1alpha2.TransferControlService.SignalTransferResume
+     * @generated from rpc dsp.v1alpha2.ControlService.SignalTransferResume
      */
     signalTransferResume: {
       name: "SignalTransferResume",

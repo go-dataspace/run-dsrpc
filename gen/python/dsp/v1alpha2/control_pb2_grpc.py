@@ -26,6 +26,71 @@ class ControlServiceStub(object):
                 request_serializer=dsp_dot_v1alpha2_dot_control__pb2.VerifyConnectionRequest.SerializeToString,
                 response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.VerifyConnectionResponse.FromString,
                 _registered_method=True)
+        self.GetProviderCatalogue = channel.unary_unary(
+                '/dsp.v1alpha2.ControlService/GetProviderCatalogue',
+                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.GetProviderCatalogueRequest.SerializeToString,
+                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.GetProviderCatalogueResponse.FromString,
+                _registered_method=True)
+        self.GetProviderDataset = channel.unary_unary(
+                '/dsp.v1alpha2.ControlService/GetProviderDataset',
+                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.GetProviderDatasetRequest.SerializeToString,
+                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.GetProviderDatasetResponse.FromString,
+                _registered_method=True)
+        self.ContractRequest = channel.unary_unary(
+                '/dsp.v1alpha2.ControlService/ContractRequest',
+                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.ContractRequestRequest.SerializeToString,
+                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.ContractRequestResponse.FromString,
+                _registered_method=True)
+        self.ContractOffer = channel.unary_unary(
+                '/dsp.v1alpha2.ControlService/ContractOffer',
+                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.ContractOfferRequest.SerializeToString,
+                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.ContractOfferResponse.FromString,
+                _registered_method=True)
+        self.ContractAccept = channel.unary_unary(
+                '/dsp.v1alpha2.ControlService/ContractAccept',
+                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.ContractAcceptRequest.SerializeToString,
+                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.ContractAcceptResponse.FromString,
+                _registered_method=True)
+        self.ContractAgree = channel.unary_unary(
+                '/dsp.v1alpha2.ControlService/ContractAgree',
+                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.ContractAgreeRequest.SerializeToString,
+                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.ContractAgreeResponse.FromString,
+                _registered_method=True)
+        self.ContractVerify = channel.unary_unary(
+                '/dsp.v1alpha2.ControlService/ContractVerify',
+                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.ContractVerifyRequest.SerializeToString,
+                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.ContractVerifyResponse.FromString,
+                _registered_method=True)
+        self.ContractFinalize = channel.unary_unary(
+                '/dsp.v1alpha2.ControlService/ContractFinalize',
+                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.ContractFinalizeRequest.SerializeToString,
+                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.ContractFinalizeResponse.FromString,
+                _registered_method=True)
+        self.ContractTerminate = channel.unary_unary(
+                '/dsp.v1alpha2.ControlService/ContractTerminate',
+                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.ContractTerminateRequest.SerializeToString,
+                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.ContractTerminateResponse.FromString,
+                _registered_method=True)
+        self.SignalTransferComplete = channel.unary_unary(
+                '/dsp.v1alpha2.ControlService/SignalTransferComplete',
+                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCompleteRequest.SerializeToString,
+                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCompleteResponse.FromString,
+                _registered_method=True)
+        self.SignalTransferCancelled = channel.unary_unary(
+                '/dsp.v1alpha2.ControlService/SignalTransferCancelled',
+                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCancelledRequest.SerializeToString,
+                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCancelledResponse.FromString,
+                _registered_method=True)
+        self.SignalTransferSuspend = channel.unary_unary(
+                '/dsp.v1alpha2.ControlService/SignalTransferSuspend',
+                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferSuspendRequest.SerializeToString,
+                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferSuspendResponse.FromString,
+                _registered_method=True)
+        self.SignalTransferResume = channel.unary_unary(
+                '/dsp.v1alpha2.ControlService/SignalTransferResume',
+                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferResumeRequest.SerializeToString,
+                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferResumeResponse.FromString,
+                _registered_method=True)
 
 
 class ControlServiceServicer(object):
@@ -47,6 +112,97 @@ class ControlServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def GetProviderCatalogue(self, request, context):
+        """Gets the catalogue based on the query parameters and the authorization header.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetProviderDataset(self, request, context):
+        """Gets information about a single dataset.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def ContractRequest(self, request, context):
+        """ContractRequest sends a ContractRequestMessage.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def ContractOffer(self, request, context):
+        """ContractOffer sends a ContractOfferMessage.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def ContractAccept(self, request, context):
+        """ContractAccept sends an accepted event message.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def ContractAgree(self, request, context):
+        """ContractAgree sends a ContractAcceptedMessage.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def ContractVerify(self, request, context):
+        """ContractVerify sends a ContractVerificationMessage.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def ContractFinalize(self, request, context):
+        """ContractFinalize sends a finalization event.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def ContractTerminate(self, request, context):
+        """ContractTerminate sends a ContractTerminationMessage.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def SignalTransferComplete(self, request, context):
+        """Tells provider that we have finished our transfer.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def SignalTransferCancelled(self, request, context):
+        """Tells provider to cancel file transfer
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def SignalTransferSuspend(self, request, context):
+        """Tells provider to suspend file transfer
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def SignalTransferResume(self, request, context):
+        """Tells provider to resume file transfer
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_ControlServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -59,6 +215,71 @@ def add_ControlServiceServicer_to_server(servicer, server):
                     servicer.VerifyConnection,
                     request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.VerifyConnectionRequest.FromString,
                     response_serializer=dsp_dot_v1alpha2_dot_control__pb2.VerifyConnectionResponse.SerializeToString,
+            ),
+            'GetProviderCatalogue': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetProviderCatalogue,
+                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.GetProviderCatalogueRequest.FromString,
+                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.GetProviderCatalogueResponse.SerializeToString,
+            ),
+            'GetProviderDataset': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetProviderDataset,
+                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.GetProviderDatasetRequest.FromString,
+                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.GetProviderDatasetResponse.SerializeToString,
+            ),
+            'ContractRequest': grpc.unary_unary_rpc_method_handler(
+                    servicer.ContractRequest,
+                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.ContractRequestRequest.FromString,
+                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.ContractRequestResponse.SerializeToString,
+            ),
+            'ContractOffer': grpc.unary_unary_rpc_method_handler(
+                    servicer.ContractOffer,
+                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.ContractOfferRequest.FromString,
+                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.ContractOfferResponse.SerializeToString,
+            ),
+            'ContractAccept': grpc.unary_unary_rpc_method_handler(
+                    servicer.ContractAccept,
+                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.ContractAcceptRequest.FromString,
+                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.ContractAcceptResponse.SerializeToString,
+            ),
+            'ContractAgree': grpc.unary_unary_rpc_method_handler(
+                    servicer.ContractAgree,
+                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.ContractAgreeRequest.FromString,
+                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.ContractAgreeResponse.SerializeToString,
+            ),
+            'ContractVerify': grpc.unary_unary_rpc_method_handler(
+                    servicer.ContractVerify,
+                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.ContractVerifyRequest.FromString,
+                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.ContractVerifyResponse.SerializeToString,
+            ),
+            'ContractFinalize': grpc.unary_unary_rpc_method_handler(
+                    servicer.ContractFinalize,
+                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.ContractFinalizeRequest.FromString,
+                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.ContractFinalizeResponse.SerializeToString,
+            ),
+            'ContractTerminate': grpc.unary_unary_rpc_method_handler(
+                    servicer.ContractTerminate,
+                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.ContractTerminateRequest.FromString,
+                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.ContractTerminateResponse.SerializeToString,
+            ),
+            'SignalTransferComplete': grpc.unary_unary_rpc_method_handler(
+                    servicer.SignalTransferComplete,
+                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCompleteRequest.FromString,
+                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCompleteResponse.SerializeToString,
+            ),
+            'SignalTransferCancelled': grpc.unary_unary_rpc_method_handler(
+                    servicer.SignalTransferCancelled,
+                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCancelledRequest.FromString,
+                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCancelledResponse.SerializeToString,
+            ),
+            'SignalTransferSuspend': grpc.unary_unary_rpc_method_handler(
+                    servicer.SignalTransferSuspend,
+                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferSuspendRequest.FromString,
+                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferSuspendResponse.SerializeToString,
+            ),
+            'SignalTransferResume': grpc.unary_unary_rpc_method_handler(
+                    servicer.SignalTransferResume,
+                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferResumeRequest.FromString,
+                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferResumeResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -127,72 +348,6 @@ class ControlService(object):
             metadata,
             _registered_method=True)
 
-
-class CatalogueControlServiceStub(object):
-    """CatalogueControlService contains methods to interact with dataspace catalogues.
-    """
-
-    def __init__(self, channel):
-        """Constructor.
-
-        Args:
-            channel: A grpc.Channel.
-        """
-        self.GetProviderCatalogue = channel.unary_unary(
-                '/dsp.v1alpha2.CatalogueControlService/GetProviderCatalogue',
-                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.GetProviderCatalogueRequest.SerializeToString,
-                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.GetProviderCatalogueResponse.FromString,
-                _registered_method=True)
-        self.GetProviderDataset = channel.unary_unary(
-                '/dsp.v1alpha2.CatalogueControlService/GetProviderDataset',
-                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.GetProviderDatasetRequest.SerializeToString,
-                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.GetProviderDatasetResponse.FromString,
-                _registered_method=True)
-
-
-class CatalogueControlServiceServicer(object):
-    """CatalogueControlService contains methods to interact with dataspace catalogues.
-    """
-
-    def GetProviderCatalogue(self, request, context):
-        """Gets the catalogue based on the query parameters and the authorization header.
-        """
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def GetProviderDataset(self, request, context):
-        """Gets information about a single dataset.
-        """
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-
-def add_CatalogueControlServiceServicer_to_server(servicer, server):
-    rpc_method_handlers = {
-            'GetProviderCatalogue': grpc.unary_unary_rpc_method_handler(
-                    servicer.GetProviderCatalogue,
-                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.GetProviderCatalogueRequest.FromString,
-                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.GetProviderCatalogueResponse.SerializeToString,
-            ),
-            'GetProviderDataset': grpc.unary_unary_rpc_method_handler(
-                    servicer.GetProviderDataset,
-                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.GetProviderDatasetRequest.FromString,
-                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.GetProviderDatasetResponse.SerializeToString,
-            ),
-    }
-    generic_handler = grpc.method_handlers_generic_handler(
-            'dsp.v1alpha2.CatalogueControlService', rpc_method_handlers)
-    server.add_generic_rpc_handlers((generic_handler,))
-    server.add_registered_method_handlers('dsp.v1alpha2.CatalogueControlService', rpc_method_handlers)
-
-
- # This class is part of an EXPERIMENTAL API.
-class CatalogueControlService(object):
-    """CatalogueControlService contains methods to interact with dataspace catalogues.
-    """
-
     @staticmethod
     def GetProviderCatalogue(request,
             target,
@@ -207,7 +362,7 @@ class CatalogueControlService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/dsp.v1alpha2.CatalogueControlService/GetProviderCatalogue',
+            '/dsp.v1alpha2.ControlService/GetProviderCatalogue',
             dsp_dot_v1alpha2_dot_control__pb2.GetProviderCatalogueRequest.SerializeToString,
             dsp_dot_v1alpha2_dot_control__pb2.GetProviderCatalogueResponse.FromString,
             options,
@@ -234,7 +389,7 @@ class CatalogueControlService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/dsp.v1alpha2.CatalogueControlService/GetProviderDataset',
+            '/dsp.v1alpha2.ControlService/GetProviderDataset',
             dsp_dot_v1alpha2_dot_control__pb2.GetProviderDatasetRequest.SerializeToString,
             dsp_dot_v1alpha2_dot_control__pb2.GetProviderDatasetResponse.FromString,
             options,
@@ -247,159 +402,8 @@ class CatalogueControlService(object):
             metadata,
             _registered_method=True)
 
-
-class ContractControlServiceStub(object):
-    """ContractControlService contains low level methods to send contract negotiation operations.
-    """
-
-    def __init__(self, channel):
-        """Constructor.
-
-        Args:
-            channel: A grpc.Channel.
-        """
-        self.Request = channel.unary_unary(
-                '/dsp.v1alpha2.ContractControlService/Request',
-                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.RequestRequest.SerializeToString,
-                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.RequestResponse.FromString,
-                _registered_method=True)
-        self.Offer = channel.unary_unary(
-                '/dsp.v1alpha2.ContractControlService/Offer',
-                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.OfferRequest.SerializeToString,
-                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.OfferResponse.FromString,
-                _registered_method=True)
-        self.Accept = channel.unary_unary(
-                '/dsp.v1alpha2.ContractControlService/Accept',
-                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.AcceptRequest.SerializeToString,
-                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.AcceptResponse.FromString,
-                _registered_method=True)
-        self.Agree = channel.unary_unary(
-                '/dsp.v1alpha2.ContractControlService/Agree',
-                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.AgreeRequest.SerializeToString,
-                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.AgreeResponse.FromString,
-                _registered_method=True)
-        self.Verify = channel.unary_unary(
-                '/dsp.v1alpha2.ContractControlService/Verify',
-                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.VerifyRequest.SerializeToString,
-                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.VerifyResponse.FromString,
-                _registered_method=True)
-        self.Finalize = channel.unary_unary(
-                '/dsp.v1alpha2.ContractControlService/Finalize',
-                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.FinalizeRequest.SerializeToString,
-                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.FinalizeResponse.FromString,
-                _registered_method=True)
-        self.Terminate = channel.unary_unary(
-                '/dsp.v1alpha2.ContractControlService/Terminate',
-                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.TerminateRequest.SerializeToString,
-                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.TerminateResponse.FromString,
-                _registered_method=True)
-
-
-class ContractControlServiceServicer(object):
-    """ContractControlService contains low level methods to send contract negotiation operations.
-    """
-
-    def Request(self, request, context):
-        """Request sends a ContractRequestMessage.
-        """
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def Offer(self, request, context):
-        """Offer sends a ContractOfferMessage.
-        """
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def Accept(self, request, context):
-        """Accept sends an accepted event message.
-        """
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def Agree(self, request, context):
-        """Agree sends a ContractAcceptedMessage.
-        """
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def Verify(self, request, context):
-        """Verify sends a ContractVerificationMessage.
-        """
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def Finalize(self, request, context):
-        """Finalize sends a finalization event.
-        """
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def Terminate(self, request, context):
-        """Terminate sends a ContractTerminationMessage.
-        """
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-
-def add_ContractControlServiceServicer_to_server(servicer, server):
-    rpc_method_handlers = {
-            'Request': grpc.unary_unary_rpc_method_handler(
-                    servicer.Request,
-                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.RequestRequest.FromString,
-                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.RequestResponse.SerializeToString,
-            ),
-            'Offer': grpc.unary_unary_rpc_method_handler(
-                    servicer.Offer,
-                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.OfferRequest.FromString,
-                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.OfferResponse.SerializeToString,
-            ),
-            'Accept': grpc.unary_unary_rpc_method_handler(
-                    servicer.Accept,
-                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.AcceptRequest.FromString,
-                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.AcceptResponse.SerializeToString,
-            ),
-            'Agree': grpc.unary_unary_rpc_method_handler(
-                    servicer.Agree,
-                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.AgreeRequest.FromString,
-                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.AgreeResponse.SerializeToString,
-            ),
-            'Verify': grpc.unary_unary_rpc_method_handler(
-                    servicer.Verify,
-                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.VerifyRequest.FromString,
-                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.VerifyResponse.SerializeToString,
-            ),
-            'Finalize': grpc.unary_unary_rpc_method_handler(
-                    servicer.Finalize,
-                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.FinalizeRequest.FromString,
-                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.FinalizeResponse.SerializeToString,
-            ),
-            'Terminate': grpc.unary_unary_rpc_method_handler(
-                    servicer.Terminate,
-                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.TerminateRequest.FromString,
-                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.TerminateResponse.SerializeToString,
-            ),
-    }
-    generic_handler = grpc.method_handlers_generic_handler(
-            'dsp.v1alpha2.ContractControlService', rpc_method_handlers)
-    server.add_generic_rpc_handlers((generic_handler,))
-    server.add_registered_method_handlers('dsp.v1alpha2.ContractControlService', rpc_method_handlers)
-
-
- # This class is part of an EXPERIMENTAL API.
-class ContractControlService(object):
-    """ContractControlService contains low level methods to send contract negotiation operations.
-    """
-
     @staticmethod
-    def Request(request,
+    def ContractRequest(request,
             target,
             options=(),
             channel_credentials=None,
@@ -412,9 +416,9 @@ class ContractControlService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/dsp.v1alpha2.ContractControlService/Request',
-            dsp_dot_v1alpha2_dot_control__pb2.RequestRequest.SerializeToString,
-            dsp_dot_v1alpha2_dot_control__pb2.RequestResponse.FromString,
+            '/dsp.v1alpha2.ControlService/ContractRequest',
+            dsp_dot_v1alpha2_dot_control__pb2.ContractRequestRequest.SerializeToString,
+            dsp_dot_v1alpha2_dot_control__pb2.ContractRequestResponse.FromString,
             options,
             channel_credentials,
             insecure,
@@ -426,7 +430,7 @@ class ContractControlService(object):
             _registered_method=True)
 
     @staticmethod
-    def Offer(request,
+    def ContractOffer(request,
             target,
             options=(),
             channel_credentials=None,
@@ -439,9 +443,9 @@ class ContractControlService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/dsp.v1alpha2.ContractControlService/Offer',
-            dsp_dot_v1alpha2_dot_control__pb2.OfferRequest.SerializeToString,
-            dsp_dot_v1alpha2_dot_control__pb2.OfferResponse.FromString,
+            '/dsp.v1alpha2.ControlService/ContractOffer',
+            dsp_dot_v1alpha2_dot_control__pb2.ContractOfferRequest.SerializeToString,
+            dsp_dot_v1alpha2_dot_control__pb2.ContractOfferResponse.FromString,
             options,
             channel_credentials,
             insecure,
@@ -453,7 +457,7 @@ class ContractControlService(object):
             _registered_method=True)
 
     @staticmethod
-    def Accept(request,
+    def ContractAccept(request,
             target,
             options=(),
             channel_credentials=None,
@@ -466,9 +470,9 @@ class ContractControlService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/dsp.v1alpha2.ContractControlService/Accept',
-            dsp_dot_v1alpha2_dot_control__pb2.AcceptRequest.SerializeToString,
-            dsp_dot_v1alpha2_dot_control__pb2.AcceptResponse.FromString,
+            '/dsp.v1alpha2.ControlService/ContractAccept',
+            dsp_dot_v1alpha2_dot_control__pb2.ContractAcceptRequest.SerializeToString,
+            dsp_dot_v1alpha2_dot_control__pb2.ContractAcceptResponse.FromString,
             options,
             channel_credentials,
             insecure,
@@ -480,7 +484,7 @@ class ContractControlService(object):
             _registered_method=True)
 
     @staticmethod
-    def Agree(request,
+    def ContractAgree(request,
             target,
             options=(),
             channel_credentials=None,
@@ -493,9 +497,9 @@ class ContractControlService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/dsp.v1alpha2.ContractControlService/Agree',
-            dsp_dot_v1alpha2_dot_control__pb2.AgreeRequest.SerializeToString,
-            dsp_dot_v1alpha2_dot_control__pb2.AgreeResponse.FromString,
+            '/dsp.v1alpha2.ControlService/ContractAgree',
+            dsp_dot_v1alpha2_dot_control__pb2.ContractAgreeRequest.SerializeToString,
+            dsp_dot_v1alpha2_dot_control__pb2.ContractAgreeResponse.FromString,
             options,
             channel_credentials,
             insecure,
@@ -507,7 +511,7 @@ class ContractControlService(object):
             _registered_method=True)
 
     @staticmethod
-    def Verify(request,
+    def ContractVerify(request,
             target,
             options=(),
             channel_credentials=None,
@@ -520,9 +524,9 @@ class ContractControlService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/dsp.v1alpha2.ContractControlService/Verify',
-            dsp_dot_v1alpha2_dot_control__pb2.VerifyRequest.SerializeToString,
-            dsp_dot_v1alpha2_dot_control__pb2.VerifyResponse.FromString,
+            '/dsp.v1alpha2.ControlService/ContractVerify',
+            dsp_dot_v1alpha2_dot_control__pb2.ContractVerifyRequest.SerializeToString,
+            dsp_dot_v1alpha2_dot_control__pb2.ContractVerifyResponse.FromString,
             options,
             channel_credentials,
             insecure,
@@ -534,7 +538,7 @@ class ContractControlService(object):
             _registered_method=True)
 
     @staticmethod
-    def Finalize(request,
+    def ContractFinalize(request,
             target,
             options=(),
             channel_credentials=None,
@@ -547,9 +551,9 @@ class ContractControlService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/dsp.v1alpha2.ContractControlService/Finalize',
-            dsp_dot_v1alpha2_dot_control__pb2.FinalizeRequest.SerializeToString,
-            dsp_dot_v1alpha2_dot_control__pb2.FinalizeResponse.FromString,
+            '/dsp.v1alpha2.ControlService/ContractFinalize',
+            dsp_dot_v1alpha2_dot_control__pb2.ContractFinalizeRequest.SerializeToString,
+            dsp_dot_v1alpha2_dot_control__pb2.ContractFinalizeResponse.FromString,
             options,
             channel_credentials,
             insecure,
@@ -561,7 +565,7 @@ class ContractControlService(object):
             _registered_method=True)
 
     @staticmethod
-    def Terminate(request,
+    def ContractTerminate(request,
             target,
             options=(),
             channel_credentials=None,
@@ -574,9 +578,9 @@ class ContractControlService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/dsp.v1alpha2.ContractControlService/Terminate',
-            dsp_dot_v1alpha2_dot_control__pb2.TerminateRequest.SerializeToString,
-            dsp_dot_v1alpha2_dot_control__pb2.TerminateResponse.FromString,
+            '/dsp.v1alpha2.ControlService/ContractTerminate',
+            dsp_dot_v1alpha2_dot_control__pb2.ContractTerminateRequest.SerializeToString,
+            dsp_dot_v1alpha2_dot_control__pb2.ContractTerminateResponse.FromString,
             options,
             channel_credentials,
             insecure,
@@ -586,106 +590,6 @@ class ContractControlService(object):
             timeout,
             metadata,
             _registered_method=True)
-
-
-class TransferControlServiceStub(object):
-    """TransferControlService contains low level methods to send transfer negotiation operations.
-    """
-
-    def __init__(self, channel):
-        """Constructor.
-
-        Args:
-            channel: A grpc.Channel.
-        """
-        self.SignalTransferComplete = channel.unary_unary(
-                '/dsp.v1alpha2.TransferControlService/SignalTransferComplete',
-                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCompleteRequest.SerializeToString,
-                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCompleteResponse.FromString,
-                _registered_method=True)
-        self.SignalTransferCancelled = channel.unary_unary(
-                '/dsp.v1alpha2.TransferControlService/SignalTransferCancelled',
-                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCancelledRequest.SerializeToString,
-                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCancelledResponse.FromString,
-                _registered_method=True)
-        self.SignalTransferSuspend = channel.unary_unary(
-                '/dsp.v1alpha2.TransferControlService/SignalTransferSuspend',
-                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferSuspendRequest.SerializeToString,
-                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferSuspendResponse.FromString,
-                _registered_method=True)
-        self.SignalTransferResume = channel.unary_unary(
-                '/dsp.v1alpha2.TransferControlService/SignalTransferResume',
-                request_serializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferResumeRequest.SerializeToString,
-                response_deserializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferResumeResponse.FromString,
-                _registered_method=True)
-
-
-class TransferControlServiceServicer(object):
-    """TransferControlService contains low level methods to send transfer negotiation operations.
-    """
-
-    def SignalTransferComplete(self, request, context):
-        """Tells provider that we have finished our transfer.
-        """
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def SignalTransferCancelled(self, request, context):
-        """Tells provider to cancel file transfer
-        """
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def SignalTransferSuspend(self, request, context):
-        """Tells provider to suspend file transfer
-        """
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def SignalTransferResume(self, request, context):
-        """Tells provider to resume file transfer
-        """
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-
-def add_TransferControlServiceServicer_to_server(servicer, server):
-    rpc_method_handlers = {
-            'SignalTransferComplete': grpc.unary_unary_rpc_method_handler(
-                    servicer.SignalTransferComplete,
-                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCompleteRequest.FromString,
-                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCompleteResponse.SerializeToString,
-            ),
-            'SignalTransferCancelled': grpc.unary_unary_rpc_method_handler(
-                    servicer.SignalTransferCancelled,
-                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCancelledRequest.FromString,
-                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCancelledResponse.SerializeToString,
-            ),
-            'SignalTransferSuspend': grpc.unary_unary_rpc_method_handler(
-                    servicer.SignalTransferSuspend,
-                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferSuspendRequest.FromString,
-                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferSuspendResponse.SerializeToString,
-            ),
-            'SignalTransferResume': grpc.unary_unary_rpc_method_handler(
-                    servicer.SignalTransferResume,
-                    request_deserializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferResumeRequest.FromString,
-                    response_serializer=dsp_dot_v1alpha2_dot_control__pb2.SignalTransferResumeResponse.SerializeToString,
-            ),
-    }
-    generic_handler = grpc.method_handlers_generic_handler(
-            'dsp.v1alpha2.TransferControlService', rpc_method_handlers)
-    server.add_generic_rpc_handlers((generic_handler,))
-    server.add_registered_method_handlers('dsp.v1alpha2.TransferControlService', rpc_method_handlers)
-
-
- # This class is part of an EXPERIMENTAL API.
-class TransferControlService(object):
-    """TransferControlService contains low level methods to send transfer negotiation operations.
-    """
 
     @staticmethod
     def SignalTransferComplete(request,
@@ -701,7 +605,7 @@ class TransferControlService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/dsp.v1alpha2.TransferControlService/SignalTransferComplete',
+            '/dsp.v1alpha2.ControlService/SignalTransferComplete',
             dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCompleteRequest.SerializeToString,
             dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCompleteResponse.FromString,
             options,
@@ -728,7 +632,7 @@ class TransferControlService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/dsp.v1alpha2.TransferControlService/SignalTransferCancelled',
+            '/dsp.v1alpha2.ControlService/SignalTransferCancelled',
             dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCancelledRequest.SerializeToString,
             dsp_dot_v1alpha2_dot_control__pb2.SignalTransferCancelledResponse.FromString,
             options,
@@ -755,7 +659,7 @@ class TransferControlService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/dsp.v1alpha2.TransferControlService/SignalTransferSuspend',
+            '/dsp.v1alpha2.ControlService/SignalTransferSuspend',
             dsp_dot_v1alpha2_dot_control__pb2.SignalTransferSuspendRequest.SerializeToString,
             dsp_dot_v1alpha2_dot_control__pb2.SignalTransferSuspendResponse.FromString,
             options,
@@ -782,7 +686,7 @@ class TransferControlService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/dsp.v1alpha2.TransferControlService/SignalTransferResume',
+            '/dsp.v1alpha2.ControlService/SignalTransferResume',
             dsp_dot_v1alpha2_dot_control__pb2.SignalTransferResumeRequest.SerializeToString,
             dsp_dot_v1alpha2_dot_control__pb2.SignalTransferResumeResponse.FromString,
             options,

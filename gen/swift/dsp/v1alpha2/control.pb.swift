@@ -167,9 +167,9 @@ struct Dsp_V1alpha2_GetProviderDatasetDownloadInformationResponse {
   fileprivate var _publishInfo: Dsp_V1alpha2_PublishInfo? = nil
 }
 
-/// RequestRequest contains the offer, and a pid if this is needs to send a request for an already
+/// ContractRequestRequest contains the offer, and a pid if this is needs to send a request for an already
 /// existing offer, or a participant_address if this is a request for a new offer.
-struct Dsp_V1alpha2_RequestRequest {
+struct Dsp_V1alpha2_ContractRequestRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -202,7 +202,7 @@ struct Dsp_V1alpha2_RequestRequest {
   fileprivate var _participantAddress: String? = nil
 }
 
-struct Dsp_V1alpha2_RequestResponse {
+struct Dsp_V1alpha2_ContractRequestResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -212,9 +212,9 @@ struct Dsp_V1alpha2_RequestResponse {
   init() {}
 }
 
-/// OfferRequest contains the offer, and a pid if this is needs to send an offer for an already
+/// ContractOfferRequest contains the offer, and a pid if this is needs to send an offer for an already
 /// existing offer, or a participant_address if this is a a new offer.
-struct Dsp_V1alpha2_OfferRequest {
+struct Dsp_V1alpha2_ContractOfferRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -247,7 +247,7 @@ struct Dsp_V1alpha2_OfferRequest {
   fileprivate var _participantAddress: String? = nil
 }
 
-struct Dsp_V1alpha2_OfferResponse {
+struct Dsp_V1alpha2_ContractOfferResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -257,8 +257,8 @@ struct Dsp_V1alpha2_OfferResponse {
   init() {}
 }
 
-/// AcceptRequest contains the pid of the contract negotiation to be accepted.
-struct Dsp_V1alpha2_AcceptRequest {
+/// ContractAcceptRequest contains the pid of the contract negotiation to be accepted.
+struct Dsp_V1alpha2_ContractAcceptRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -270,7 +270,7 @@ struct Dsp_V1alpha2_AcceptRequest {
   init() {}
 }
 
-struct Dsp_V1alpha2_AcceptResponse {
+struct Dsp_V1alpha2_ContractAcceptResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -280,8 +280,8 @@ struct Dsp_V1alpha2_AcceptResponse {
   init() {}
 }
 
-/// AgreeRequest contains the agreement and pid of the contract negotiation to agree to.
-struct Dsp_V1alpha2_AgreeRequest {
+/// ContractAgreeRequest contains the agreement and pid of the contract negotiation to agree to.
+struct Dsp_V1alpha2_ContractAgreeRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -295,7 +295,7 @@ struct Dsp_V1alpha2_AgreeRequest {
   init() {}
 }
 
-struct Dsp_V1alpha2_AgreeResponse {
+struct Dsp_V1alpha2_ContractAgreeResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -305,31 +305,8 @@ struct Dsp_V1alpha2_AgreeResponse {
   init() {}
 }
 
-/// VerifyRequest contains the pid of the contract negotiation to verify.
-struct Dsp_V1alpha2_VerifyRequest {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  var pid: String = String()
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
-}
-
-struct Dsp_V1alpha2_VerifyResponse {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
-}
-
-/// FinalizeRequest contains the pid of the contract negotiation to finalize.
-struct Dsp_V1alpha2_FinalizeRequest {
+/// ContractVerifyRequest contains the pid of the contract negotiation to verify.
+struct Dsp_V1alpha2_ContractVerifyRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -341,7 +318,7 @@ struct Dsp_V1alpha2_FinalizeRequest {
   init() {}
 }
 
-struct Dsp_V1alpha2_FinalizeResponse {
+struct Dsp_V1alpha2_ContractVerifyResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -351,8 +328,31 @@ struct Dsp_V1alpha2_FinalizeResponse {
   init() {}
 }
 
-/// TerminateRequest contains the pid, code, and reason of the contract negotiation to terminate.
-struct Dsp_V1alpha2_TerminateRequest {
+/// ContractFinalizeRequest contains the pid of the contract negotiation to finalize.
+struct Dsp_V1alpha2_ContractFinalizeRequest {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var pid: String = String()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+struct Dsp_V1alpha2_ContractFinalizeResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// ContractTerminateRequest contains the pid, code, and reason of the contract negotiation to terminate.
+struct Dsp_V1alpha2_ContractTerminateRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -368,7 +368,7 @@ struct Dsp_V1alpha2_TerminateRequest {
   init() {}
 }
 
-struct Dsp_V1alpha2_TerminateResponse {
+struct Dsp_V1alpha2_ContractTerminateResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -485,20 +485,20 @@ extension Dsp_V1alpha2_GetProviderDatasetRequest: @unchecked Sendable {}
 extension Dsp_V1alpha2_GetProviderDatasetResponse: @unchecked Sendable {}
 extension Dsp_V1alpha2_GetProviderDatasetDownloadInformationRequest: @unchecked Sendable {}
 extension Dsp_V1alpha2_GetProviderDatasetDownloadInformationResponse: @unchecked Sendable {}
-extension Dsp_V1alpha2_RequestRequest: @unchecked Sendable {}
-extension Dsp_V1alpha2_RequestResponse: @unchecked Sendable {}
-extension Dsp_V1alpha2_OfferRequest: @unchecked Sendable {}
-extension Dsp_V1alpha2_OfferResponse: @unchecked Sendable {}
-extension Dsp_V1alpha2_AcceptRequest: @unchecked Sendable {}
-extension Dsp_V1alpha2_AcceptResponse: @unchecked Sendable {}
-extension Dsp_V1alpha2_AgreeRequest: @unchecked Sendable {}
-extension Dsp_V1alpha2_AgreeResponse: @unchecked Sendable {}
-extension Dsp_V1alpha2_VerifyRequest: @unchecked Sendable {}
-extension Dsp_V1alpha2_VerifyResponse: @unchecked Sendable {}
-extension Dsp_V1alpha2_FinalizeRequest: @unchecked Sendable {}
-extension Dsp_V1alpha2_FinalizeResponse: @unchecked Sendable {}
-extension Dsp_V1alpha2_TerminateRequest: @unchecked Sendable {}
-extension Dsp_V1alpha2_TerminateResponse: @unchecked Sendable {}
+extension Dsp_V1alpha2_ContractRequestRequest: @unchecked Sendable {}
+extension Dsp_V1alpha2_ContractRequestResponse: @unchecked Sendable {}
+extension Dsp_V1alpha2_ContractOfferRequest: @unchecked Sendable {}
+extension Dsp_V1alpha2_ContractOfferResponse: @unchecked Sendable {}
+extension Dsp_V1alpha2_ContractAcceptRequest: @unchecked Sendable {}
+extension Dsp_V1alpha2_ContractAcceptResponse: @unchecked Sendable {}
+extension Dsp_V1alpha2_ContractAgreeRequest: @unchecked Sendable {}
+extension Dsp_V1alpha2_ContractAgreeResponse: @unchecked Sendable {}
+extension Dsp_V1alpha2_ContractVerifyRequest: @unchecked Sendable {}
+extension Dsp_V1alpha2_ContractVerifyResponse: @unchecked Sendable {}
+extension Dsp_V1alpha2_ContractFinalizeRequest: @unchecked Sendable {}
+extension Dsp_V1alpha2_ContractFinalizeResponse: @unchecked Sendable {}
+extension Dsp_V1alpha2_ContractTerminateRequest: @unchecked Sendable {}
+extension Dsp_V1alpha2_ContractTerminateResponse: @unchecked Sendable {}
 extension Dsp_V1alpha2_SignalTransferCompleteRequest: @unchecked Sendable {}
 extension Dsp_V1alpha2_SignalTransferCompleteResponse: @unchecked Sendable {}
 extension Dsp_V1alpha2_SignalTransferCancelledRequest: @unchecked Sendable {}
@@ -794,8 +794,8 @@ extension Dsp_V1alpha2_GetProviderDatasetDownloadInformationResponse: SwiftProto
   }
 }
 
-extension Dsp_V1alpha2_RequestRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".RequestRequest"
+extension Dsp_V1alpha2_ContractRequestRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ContractRequestRequest"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "offer"),
     2: .same(proto: "pid"),
@@ -833,7 +833,7 @@ extension Dsp_V1alpha2_RequestRequest: SwiftProtobuf.Message, SwiftProtobuf._Mes
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Dsp_V1alpha2_RequestRequest, rhs: Dsp_V1alpha2_RequestRequest) -> Bool {
+  static func ==(lhs: Dsp_V1alpha2_ContractRequestRequest, rhs: Dsp_V1alpha2_ContractRequestRequest) -> Bool {
     if lhs.offer != rhs.offer {return false}
     if lhs._pid != rhs._pid {return false}
     if lhs._participantAddress != rhs._participantAddress {return false}
@@ -842,8 +842,8 @@ extension Dsp_V1alpha2_RequestRequest: SwiftProtobuf.Message, SwiftProtobuf._Mes
   }
 }
 
-extension Dsp_V1alpha2_RequestResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".RequestResponse"
+extension Dsp_V1alpha2_ContractRequestResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ContractRequestResponse"
   static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -855,14 +855,14 @@ extension Dsp_V1alpha2_RequestResponse: SwiftProtobuf.Message, SwiftProtobuf._Me
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Dsp_V1alpha2_RequestResponse, rhs: Dsp_V1alpha2_RequestResponse) -> Bool {
+  static func ==(lhs: Dsp_V1alpha2_ContractRequestResponse, rhs: Dsp_V1alpha2_ContractRequestResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
-extension Dsp_V1alpha2_OfferRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".OfferRequest"
+extension Dsp_V1alpha2_ContractOfferRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ContractOfferRequest"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "offer"),
     2: .same(proto: "pid"),
@@ -900,7 +900,7 @@ extension Dsp_V1alpha2_OfferRequest: SwiftProtobuf.Message, SwiftProtobuf._Messa
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Dsp_V1alpha2_OfferRequest, rhs: Dsp_V1alpha2_OfferRequest) -> Bool {
+  static func ==(lhs: Dsp_V1alpha2_ContractOfferRequest, rhs: Dsp_V1alpha2_ContractOfferRequest) -> Bool {
     if lhs.offer != rhs.offer {return false}
     if lhs._pid != rhs._pid {return false}
     if lhs._participantAddress != rhs._participantAddress {return false}
@@ -909,8 +909,8 @@ extension Dsp_V1alpha2_OfferRequest: SwiftProtobuf.Message, SwiftProtobuf._Messa
   }
 }
 
-extension Dsp_V1alpha2_OfferResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".OfferResponse"
+extension Dsp_V1alpha2_ContractOfferResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ContractOfferResponse"
   static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -922,14 +922,14 @@ extension Dsp_V1alpha2_OfferResponse: SwiftProtobuf.Message, SwiftProtobuf._Mess
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Dsp_V1alpha2_OfferResponse, rhs: Dsp_V1alpha2_OfferResponse) -> Bool {
+  static func ==(lhs: Dsp_V1alpha2_ContractOfferResponse, rhs: Dsp_V1alpha2_ContractOfferResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
-extension Dsp_V1alpha2_AcceptRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".AcceptRequest"
+extension Dsp_V1alpha2_ContractAcceptRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ContractAcceptRequest"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "pid"),
   ]
@@ -953,15 +953,15 @@ extension Dsp_V1alpha2_AcceptRequest: SwiftProtobuf.Message, SwiftProtobuf._Mess
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Dsp_V1alpha2_AcceptRequest, rhs: Dsp_V1alpha2_AcceptRequest) -> Bool {
+  static func ==(lhs: Dsp_V1alpha2_ContractAcceptRequest, rhs: Dsp_V1alpha2_ContractAcceptRequest) -> Bool {
     if lhs.pid != rhs.pid {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
-extension Dsp_V1alpha2_AcceptResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".AcceptResponse"
+extension Dsp_V1alpha2_ContractAcceptResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ContractAcceptResponse"
   static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -973,14 +973,14 @@ extension Dsp_V1alpha2_AcceptResponse: SwiftProtobuf.Message, SwiftProtobuf._Mes
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Dsp_V1alpha2_AcceptResponse, rhs: Dsp_V1alpha2_AcceptResponse) -> Bool {
+  static func ==(lhs: Dsp_V1alpha2_ContractAcceptResponse, rhs: Dsp_V1alpha2_ContractAcceptResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
-extension Dsp_V1alpha2_AgreeRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".AgreeRequest"
+extension Dsp_V1alpha2_ContractAgreeRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ContractAgreeRequest"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "agreement"),
     2: .same(proto: "pid"),
@@ -1009,7 +1009,7 @@ extension Dsp_V1alpha2_AgreeRequest: SwiftProtobuf.Message, SwiftProtobuf._Messa
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Dsp_V1alpha2_AgreeRequest, rhs: Dsp_V1alpha2_AgreeRequest) -> Bool {
+  static func ==(lhs: Dsp_V1alpha2_ContractAgreeRequest, rhs: Dsp_V1alpha2_ContractAgreeRequest) -> Bool {
     if lhs.agreement != rhs.agreement {return false}
     if lhs.pid != rhs.pid {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -1017,8 +1017,8 @@ extension Dsp_V1alpha2_AgreeRequest: SwiftProtobuf.Message, SwiftProtobuf._Messa
   }
 }
 
-extension Dsp_V1alpha2_AgreeResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".AgreeResponse"
+extension Dsp_V1alpha2_ContractAgreeResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ContractAgreeResponse"
   static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -1030,14 +1030,14 @@ extension Dsp_V1alpha2_AgreeResponse: SwiftProtobuf.Message, SwiftProtobuf._Mess
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Dsp_V1alpha2_AgreeResponse, rhs: Dsp_V1alpha2_AgreeResponse) -> Bool {
+  static func ==(lhs: Dsp_V1alpha2_ContractAgreeResponse, rhs: Dsp_V1alpha2_ContractAgreeResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
-extension Dsp_V1alpha2_VerifyRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".VerifyRequest"
+extension Dsp_V1alpha2_ContractVerifyRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ContractVerifyRequest"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "pid"),
   ]
@@ -1061,15 +1061,15 @@ extension Dsp_V1alpha2_VerifyRequest: SwiftProtobuf.Message, SwiftProtobuf._Mess
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Dsp_V1alpha2_VerifyRequest, rhs: Dsp_V1alpha2_VerifyRequest) -> Bool {
+  static func ==(lhs: Dsp_V1alpha2_ContractVerifyRequest, rhs: Dsp_V1alpha2_ContractVerifyRequest) -> Bool {
     if lhs.pid != rhs.pid {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
-extension Dsp_V1alpha2_VerifyResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".VerifyResponse"
+extension Dsp_V1alpha2_ContractVerifyResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ContractVerifyResponse"
   static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -1081,14 +1081,14 @@ extension Dsp_V1alpha2_VerifyResponse: SwiftProtobuf.Message, SwiftProtobuf._Mes
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Dsp_V1alpha2_VerifyResponse, rhs: Dsp_V1alpha2_VerifyResponse) -> Bool {
+  static func ==(lhs: Dsp_V1alpha2_ContractVerifyResponse, rhs: Dsp_V1alpha2_ContractVerifyResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
-extension Dsp_V1alpha2_FinalizeRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".FinalizeRequest"
+extension Dsp_V1alpha2_ContractFinalizeRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ContractFinalizeRequest"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "pid"),
   ]
@@ -1112,15 +1112,15 @@ extension Dsp_V1alpha2_FinalizeRequest: SwiftProtobuf.Message, SwiftProtobuf._Me
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Dsp_V1alpha2_FinalizeRequest, rhs: Dsp_V1alpha2_FinalizeRequest) -> Bool {
+  static func ==(lhs: Dsp_V1alpha2_ContractFinalizeRequest, rhs: Dsp_V1alpha2_ContractFinalizeRequest) -> Bool {
     if lhs.pid != rhs.pid {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
-extension Dsp_V1alpha2_FinalizeResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".FinalizeResponse"
+extension Dsp_V1alpha2_ContractFinalizeResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ContractFinalizeResponse"
   static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -1132,14 +1132,14 @@ extension Dsp_V1alpha2_FinalizeResponse: SwiftProtobuf.Message, SwiftProtobuf._M
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Dsp_V1alpha2_FinalizeResponse, rhs: Dsp_V1alpha2_FinalizeResponse) -> Bool {
+  static func ==(lhs: Dsp_V1alpha2_ContractFinalizeResponse, rhs: Dsp_V1alpha2_ContractFinalizeResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
-extension Dsp_V1alpha2_TerminateRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".TerminateRequest"
+extension Dsp_V1alpha2_ContractTerminateRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ContractTerminateRequest"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "pid"),
     2: .same(proto: "code"),
@@ -1173,7 +1173,7 @@ extension Dsp_V1alpha2_TerminateRequest: SwiftProtobuf.Message, SwiftProtobuf._M
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Dsp_V1alpha2_TerminateRequest, rhs: Dsp_V1alpha2_TerminateRequest) -> Bool {
+  static func ==(lhs: Dsp_V1alpha2_ContractTerminateRequest, rhs: Dsp_V1alpha2_ContractTerminateRequest) -> Bool {
     if lhs.pid != rhs.pid {return false}
     if lhs.code != rhs.code {return false}
     if lhs.reason != rhs.reason {return false}
@@ -1182,8 +1182,8 @@ extension Dsp_V1alpha2_TerminateRequest: SwiftProtobuf.Message, SwiftProtobuf._M
   }
 }
 
-extension Dsp_V1alpha2_TerminateResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".TerminateResponse"
+extension Dsp_V1alpha2_ContractTerminateResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ContractTerminateResponse"
   static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -1195,7 +1195,7 @@ extension Dsp_V1alpha2_TerminateResponse: SwiftProtobuf.Message, SwiftProtobuf._
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Dsp_V1alpha2_TerminateResponse, rhs: Dsp_V1alpha2_TerminateResponse) -> Bool {
+  static func ==(lhs: Dsp_V1alpha2_ContractTerminateResponse, rhs: Dsp_V1alpha2_ContractTerminateResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

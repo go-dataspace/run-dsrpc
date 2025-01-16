@@ -253,12 +253,12 @@ export declare class GetProviderDatasetDownloadInformationResponse extends Messa
 }
 
 /**
- * RequestRequest contains the offer, and a pid if this is needs to send a request for an already
+ * ContractRequestRequest contains the offer, and a pid if this is needs to send a request for an already
  * existing offer, or a participant_address if this is a request for a new offer.
  *
- * @generated from message dsp.v1alpha2.RequestRequest
+ * @generated from message dsp.v1alpha2.ContractRequestRequest
  */
-export declare class RequestRequest extends Message<RequestRequest> {
+export declare class ContractRequestRequest extends Message<ContractRequestRequest> {
   /**
    * @generated from field: string offer = 1;
    */
@@ -274,47 +274,47 @@ export declare class RequestRequest extends Message<RequestRequest> {
    */
   participantAddress?: string;
 
-  constructor(data?: PartialMessage<RequestRequest>);
+  constructor(data?: PartialMessage<ContractRequestRequest>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "dsp.v1alpha2.RequestRequest";
+  static readonly typeName = "dsp.v1alpha2.ContractRequestRequest";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): RequestRequest;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ContractRequestRequest;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): RequestRequest;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ContractRequestRequest;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): RequestRequest;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ContractRequestRequest;
 
-  static equals(a: RequestRequest | PlainMessage<RequestRequest> | undefined, b: RequestRequest | PlainMessage<RequestRequest> | undefined): boolean;
+  static equals(a: ContractRequestRequest | PlainMessage<ContractRequestRequest> | undefined, b: ContractRequestRequest | PlainMessage<ContractRequestRequest> | undefined): boolean;
 }
 
 /**
- * @generated from message dsp.v1alpha2.RequestResponse
+ * @generated from message dsp.v1alpha2.ContractRequestResponse
  */
-export declare class RequestResponse extends Message<RequestResponse> {
-  constructor(data?: PartialMessage<RequestResponse>);
+export declare class ContractRequestResponse extends Message<ContractRequestResponse> {
+  constructor(data?: PartialMessage<ContractRequestResponse>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "dsp.v1alpha2.RequestResponse";
+  static readonly typeName = "dsp.v1alpha2.ContractRequestResponse";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): RequestResponse;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ContractRequestResponse;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): RequestResponse;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ContractRequestResponse;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): RequestResponse;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ContractRequestResponse;
 
-  static equals(a: RequestResponse | PlainMessage<RequestResponse> | undefined, b: RequestResponse | PlainMessage<RequestResponse> | undefined): boolean;
+  static equals(a: ContractRequestResponse | PlainMessage<ContractRequestResponse> | undefined, b: ContractRequestResponse | PlainMessage<ContractRequestResponse> | undefined): boolean;
 }
 
 /**
- * OfferRequest contains the offer, and a pid if this is needs to send an offer for an already
+ * ContractOfferRequest contains the offer, and a pid if this is needs to send an offer for an already
  * existing offer, or a participant_address if this is a a new offer.
  *
- * @generated from message dsp.v1alpha2.OfferRequest
+ * @generated from message dsp.v1alpha2.ContractOfferRequest
  */
-export declare class OfferRequest extends Message<OfferRequest> {
+export declare class ContractOfferRequest extends Message<ContractOfferRequest> {
   /**
    * @generated from field: string offer = 1;
    */
@@ -330,91 +330,91 @@ export declare class OfferRequest extends Message<OfferRequest> {
    */
   participantAddress?: string;
 
-  constructor(data?: PartialMessage<OfferRequest>);
+  constructor(data?: PartialMessage<ContractOfferRequest>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "dsp.v1alpha2.OfferRequest";
+  static readonly typeName = "dsp.v1alpha2.ContractOfferRequest";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): OfferRequest;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ContractOfferRequest;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): OfferRequest;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ContractOfferRequest;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): OfferRequest;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ContractOfferRequest;
 
-  static equals(a: OfferRequest | PlainMessage<OfferRequest> | undefined, b: OfferRequest | PlainMessage<OfferRequest> | undefined): boolean;
+  static equals(a: ContractOfferRequest | PlainMessage<ContractOfferRequest> | undefined, b: ContractOfferRequest | PlainMessage<ContractOfferRequest> | undefined): boolean;
 }
 
 /**
- * @generated from message dsp.v1alpha2.OfferResponse
+ * @generated from message dsp.v1alpha2.ContractOfferResponse
  */
-export declare class OfferResponse extends Message<OfferResponse> {
-  constructor(data?: PartialMessage<OfferResponse>);
+export declare class ContractOfferResponse extends Message<ContractOfferResponse> {
+  constructor(data?: PartialMessage<ContractOfferResponse>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "dsp.v1alpha2.OfferResponse";
+  static readonly typeName = "dsp.v1alpha2.ContractOfferResponse";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): OfferResponse;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ContractOfferResponse;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): OfferResponse;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ContractOfferResponse;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): OfferResponse;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ContractOfferResponse;
 
-  static equals(a: OfferResponse | PlainMessage<OfferResponse> | undefined, b: OfferResponse | PlainMessage<OfferResponse> | undefined): boolean;
+  static equals(a: ContractOfferResponse | PlainMessage<ContractOfferResponse> | undefined, b: ContractOfferResponse | PlainMessage<ContractOfferResponse> | undefined): boolean;
 }
 
 /**
- * AcceptRequest contains the pid of the contract negotiation to be accepted.
+ * ContractAcceptRequest contains the pid of the contract negotiation to be accepted.
  *
- * @generated from message dsp.v1alpha2.AcceptRequest
+ * @generated from message dsp.v1alpha2.ContractAcceptRequest
  */
-export declare class AcceptRequest extends Message<AcceptRequest> {
+export declare class ContractAcceptRequest extends Message<ContractAcceptRequest> {
   /**
    * @generated from field: string pid = 1;
    */
   pid: string;
 
-  constructor(data?: PartialMessage<AcceptRequest>);
+  constructor(data?: PartialMessage<ContractAcceptRequest>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "dsp.v1alpha2.AcceptRequest";
+  static readonly typeName = "dsp.v1alpha2.ContractAcceptRequest";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AcceptRequest;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ContractAcceptRequest;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): AcceptRequest;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ContractAcceptRequest;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): AcceptRequest;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ContractAcceptRequest;
 
-  static equals(a: AcceptRequest | PlainMessage<AcceptRequest> | undefined, b: AcceptRequest | PlainMessage<AcceptRequest> | undefined): boolean;
+  static equals(a: ContractAcceptRequest | PlainMessage<ContractAcceptRequest> | undefined, b: ContractAcceptRequest | PlainMessage<ContractAcceptRequest> | undefined): boolean;
 }
 
 /**
- * @generated from message dsp.v1alpha2.AcceptResponse
+ * @generated from message dsp.v1alpha2.ContractAcceptResponse
  */
-export declare class AcceptResponse extends Message<AcceptResponse> {
-  constructor(data?: PartialMessage<AcceptResponse>);
+export declare class ContractAcceptResponse extends Message<ContractAcceptResponse> {
+  constructor(data?: PartialMessage<ContractAcceptResponse>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "dsp.v1alpha2.AcceptResponse";
+  static readonly typeName = "dsp.v1alpha2.ContractAcceptResponse";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AcceptResponse;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ContractAcceptResponse;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): AcceptResponse;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ContractAcceptResponse;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): AcceptResponse;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ContractAcceptResponse;
 
-  static equals(a: AcceptResponse | PlainMessage<AcceptResponse> | undefined, b: AcceptResponse | PlainMessage<AcceptResponse> | undefined): boolean;
+  static equals(a: ContractAcceptResponse | PlainMessage<ContractAcceptResponse> | undefined, b: ContractAcceptResponse | PlainMessage<ContractAcceptResponse> | undefined): boolean;
 }
 
 /**
- * AgreeRequest contains the agreement and pid of the contract negotiation to agree to.
+ * ContractAgreeRequest contains the agreement and pid of the contract negotiation to agree to.
  *
- * @generated from message dsp.v1alpha2.AgreeRequest
+ * @generated from message dsp.v1alpha2.ContractAgreeRequest
  */
-export declare class AgreeRequest extends Message<AgreeRequest> {
+export declare class ContractAgreeRequest extends Message<ContractAgreeRequest> {
   /**
    * @generated from field: string agreement = 1;
    */
@@ -425,136 +425,136 @@ export declare class AgreeRequest extends Message<AgreeRequest> {
    */
   pid: string;
 
-  constructor(data?: PartialMessage<AgreeRequest>);
+  constructor(data?: PartialMessage<ContractAgreeRequest>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "dsp.v1alpha2.AgreeRequest";
+  static readonly typeName = "dsp.v1alpha2.ContractAgreeRequest";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AgreeRequest;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ContractAgreeRequest;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): AgreeRequest;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ContractAgreeRequest;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): AgreeRequest;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ContractAgreeRequest;
 
-  static equals(a: AgreeRequest | PlainMessage<AgreeRequest> | undefined, b: AgreeRequest | PlainMessage<AgreeRequest> | undefined): boolean;
+  static equals(a: ContractAgreeRequest | PlainMessage<ContractAgreeRequest> | undefined, b: ContractAgreeRequest | PlainMessage<ContractAgreeRequest> | undefined): boolean;
 }
 
 /**
- * @generated from message dsp.v1alpha2.AgreeResponse
+ * @generated from message dsp.v1alpha2.ContractAgreeResponse
  */
-export declare class AgreeResponse extends Message<AgreeResponse> {
-  constructor(data?: PartialMessage<AgreeResponse>);
+export declare class ContractAgreeResponse extends Message<ContractAgreeResponse> {
+  constructor(data?: PartialMessage<ContractAgreeResponse>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "dsp.v1alpha2.AgreeResponse";
+  static readonly typeName = "dsp.v1alpha2.ContractAgreeResponse";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AgreeResponse;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ContractAgreeResponse;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): AgreeResponse;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ContractAgreeResponse;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): AgreeResponse;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ContractAgreeResponse;
 
-  static equals(a: AgreeResponse | PlainMessage<AgreeResponse> | undefined, b: AgreeResponse | PlainMessage<AgreeResponse> | undefined): boolean;
+  static equals(a: ContractAgreeResponse | PlainMessage<ContractAgreeResponse> | undefined, b: ContractAgreeResponse | PlainMessage<ContractAgreeResponse> | undefined): boolean;
 }
 
 /**
- * VerifyRequest contains the pid of the contract negotiation to verify.
+ * ContractVerifyRequest contains the pid of the contract negotiation to verify.
  *
- * @generated from message dsp.v1alpha2.VerifyRequest
+ * @generated from message dsp.v1alpha2.ContractVerifyRequest
  */
-export declare class VerifyRequest extends Message<VerifyRequest> {
+export declare class ContractVerifyRequest extends Message<ContractVerifyRequest> {
   /**
    * @generated from field: string pid = 1;
    */
   pid: string;
 
-  constructor(data?: PartialMessage<VerifyRequest>);
+  constructor(data?: PartialMessage<ContractVerifyRequest>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "dsp.v1alpha2.VerifyRequest";
+  static readonly typeName = "dsp.v1alpha2.ContractVerifyRequest";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): VerifyRequest;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ContractVerifyRequest;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): VerifyRequest;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ContractVerifyRequest;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): VerifyRequest;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ContractVerifyRequest;
 
-  static equals(a: VerifyRequest | PlainMessage<VerifyRequest> | undefined, b: VerifyRequest | PlainMessage<VerifyRequest> | undefined): boolean;
+  static equals(a: ContractVerifyRequest | PlainMessage<ContractVerifyRequest> | undefined, b: ContractVerifyRequest | PlainMessage<ContractVerifyRequest> | undefined): boolean;
 }
 
 /**
- * @generated from message dsp.v1alpha2.VerifyResponse
+ * @generated from message dsp.v1alpha2.ContractVerifyResponse
  */
-export declare class VerifyResponse extends Message<VerifyResponse> {
-  constructor(data?: PartialMessage<VerifyResponse>);
+export declare class ContractVerifyResponse extends Message<ContractVerifyResponse> {
+  constructor(data?: PartialMessage<ContractVerifyResponse>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "dsp.v1alpha2.VerifyResponse";
+  static readonly typeName = "dsp.v1alpha2.ContractVerifyResponse";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): VerifyResponse;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ContractVerifyResponse;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): VerifyResponse;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ContractVerifyResponse;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): VerifyResponse;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ContractVerifyResponse;
 
-  static equals(a: VerifyResponse | PlainMessage<VerifyResponse> | undefined, b: VerifyResponse | PlainMessage<VerifyResponse> | undefined): boolean;
+  static equals(a: ContractVerifyResponse | PlainMessage<ContractVerifyResponse> | undefined, b: ContractVerifyResponse | PlainMessage<ContractVerifyResponse> | undefined): boolean;
 }
 
 /**
- * FinalizeRequest contains the pid of the contract negotiation to finalize.
+ * ContractFinalizeRequest contains the pid of the contract negotiation to finalize.
  *
- * @generated from message dsp.v1alpha2.FinalizeRequest
+ * @generated from message dsp.v1alpha2.ContractFinalizeRequest
  */
-export declare class FinalizeRequest extends Message<FinalizeRequest> {
+export declare class ContractFinalizeRequest extends Message<ContractFinalizeRequest> {
   /**
    * @generated from field: string pid = 1;
    */
   pid: string;
 
-  constructor(data?: PartialMessage<FinalizeRequest>);
+  constructor(data?: PartialMessage<ContractFinalizeRequest>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "dsp.v1alpha2.FinalizeRequest";
+  static readonly typeName = "dsp.v1alpha2.ContractFinalizeRequest";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): FinalizeRequest;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ContractFinalizeRequest;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): FinalizeRequest;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ContractFinalizeRequest;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): FinalizeRequest;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ContractFinalizeRequest;
 
-  static equals(a: FinalizeRequest | PlainMessage<FinalizeRequest> | undefined, b: FinalizeRequest | PlainMessage<FinalizeRequest> | undefined): boolean;
+  static equals(a: ContractFinalizeRequest | PlainMessage<ContractFinalizeRequest> | undefined, b: ContractFinalizeRequest | PlainMessage<ContractFinalizeRequest> | undefined): boolean;
 }
 
 /**
- * @generated from message dsp.v1alpha2.FinalizeResponse
+ * @generated from message dsp.v1alpha2.ContractFinalizeResponse
  */
-export declare class FinalizeResponse extends Message<FinalizeResponse> {
-  constructor(data?: PartialMessage<FinalizeResponse>);
+export declare class ContractFinalizeResponse extends Message<ContractFinalizeResponse> {
+  constructor(data?: PartialMessage<ContractFinalizeResponse>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "dsp.v1alpha2.FinalizeResponse";
+  static readonly typeName = "dsp.v1alpha2.ContractFinalizeResponse";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): FinalizeResponse;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ContractFinalizeResponse;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): FinalizeResponse;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ContractFinalizeResponse;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): FinalizeResponse;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ContractFinalizeResponse;
 
-  static equals(a: FinalizeResponse | PlainMessage<FinalizeResponse> | undefined, b: FinalizeResponse | PlainMessage<FinalizeResponse> | undefined): boolean;
+  static equals(a: ContractFinalizeResponse | PlainMessage<ContractFinalizeResponse> | undefined, b: ContractFinalizeResponse | PlainMessage<ContractFinalizeResponse> | undefined): boolean;
 }
 
 /**
- * TerminateRequest contains the pid, code, and reason of the contract negotiation to terminate.
+ * ContractTerminateRequest contains the pid, code, and reason of the contract negotiation to terminate.
  *
- * @generated from message dsp.v1alpha2.TerminateRequest
+ * @generated from message dsp.v1alpha2.ContractTerminateRequest
  */
-export declare class TerminateRequest extends Message<TerminateRequest> {
+export declare class ContractTerminateRequest extends Message<ContractTerminateRequest> {
   /**
    * @generated from field: string pid = 1;
    */
@@ -570,38 +570,38 @@ export declare class TerminateRequest extends Message<TerminateRequest> {
    */
   reason: string[];
 
-  constructor(data?: PartialMessage<TerminateRequest>);
+  constructor(data?: PartialMessage<ContractTerminateRequest>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "dsp.v1alpha2.TerminateRequest";
+  static readonly typeName = "dsp.v1alpha2.ContractTerminateRequest";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): TerminateRequest;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ContractTerminateRequest;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): TerminateRequest;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ContractTerminateRequest;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): TerminateRequest;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ContractTerminateRequest;
 
-  static equals(a: TerminateRequest | PlainMessage<TerminateRequest> | undefined, b: TerminateRequest | PlainMessage<TerminateRequest> | undefined): boolean;
+  static equals(a: ContractTerminateRequest | PlainMessage<ContractTerminateRequest> | undefined, b: ContractTerminateRequest | PlainMessage<ContractTerminateRequest> | undefined): boolean;
 }
 
 /**
- * @generated from message dsp.v1alpha2.TerminateResponse
+ * @generated from message dsp.v1alpha2.ContractTerminateResponse
  */
-export declare class TerminateResponse extends Message<TerminateResponse> {
-  constructor(data?: PartialMessage<TerminateResponse>);
+export declare class ContractTerminateResponse extends Message<ContractTerminateResponse> {
+  constructor(data?: PartialMessage<ContractTerminateResponse>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "dsp.v1alpha2.TerminateResponse";
+  static readonly typeName = "dsp.v1alpha2.ContractTerminateResponse";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): TerminateResponse;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ContractTerminateResponse;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): TerminateResponse;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ContractTerminateResponse;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): TerminateResponse;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ContractTerminateResponse;
 
-  static equals(a: TerminateResponse | PlainMessage<TerminateResponse> | undefined, b: TerminateResponse | PlainMessage<TerminateResponse> | undefined): boolean;
+  static equals(a: ContractTerminateResponse | PlainMessage<ContractTerminateResponse> | undefined, b: ContractTerminateResponse | PlainMessage<ContractTerminateResponse> | undefined): boolean;
 }
 
 /**
