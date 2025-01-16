@@ -63,4 +63,199 @@ class ControlServiceClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * Gets the catalogue based on the query parameters and the authorization header.
+     * @param \Dsp\V1alpha2\GetProviderCatalogueRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetProviderCatalogue(\Dsp\V1alpha2\GetProviderCatalogueRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/dsp.v1alpha2.ControlService/GetProviderCatalogue',
+        $argument,
+        ['\Dsp\V1alpha2\GetProviderCatalogueResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Gets information about a single dataset.
+     * @param \Dsp\V1alpha2\GetProviderDatasetRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetProviderDataset(\Dsp\V1alpha2\GetProviderDatasetRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/dsp.v1alpha2.ControlService/GetProviderDataset',
+        $argument,
+        ['\Dsp\V1alpha2\GetProviderDatasetResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * ContractRequest sends a ContractRequestMessage.
+     * @param \Dsp\V1alpha2\ContractRequestRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function ContractRequest(\Dsp\V1alpha2\ContractRequestRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/dsp.v1alpha2.ControlService/ContractRequest',
+        $argument,
+        ['\Dsp\V1alpha2\ContractRequestResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * ContractOffer sends a ContractOfferMessage.
+     * @param \Dsp\V1alpha2\ContractOfferRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function ContractOffer(\Dsp\V1alpha2\ContractOfferRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/dsp.v1alpha2.ControlService/ContractOffer',
+        $argument,
+        ['\Dsp\V1alpha2\ContractOfferResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * ContractAccept sends an accepted event message.
+     * @param \Dsp\V1alpha2\ContractAcceptRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function ContractAccept(\Dsp\V1alpha2\ContractAcceptRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/dsp.v1alpha2.ControlService/ContractAccept',
+        $argument,
+        ['\Dsp\V1alpha2\ContractAcceptResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * ContractAgree sends a ContractAcceptedMessage.
+     * @param \Dsp\V1alpha2\ContractAgreeRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function ContractAgree(\Dsp\V1alpha2\ContractAgreeRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/dsp.v1alpha2.ControlService/ContractAgree',
+        $argument,
+        ['\Dsp\V1alpha2\ContractAgreeResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * ContractVerify sends a ContractVerificationMessage.
+     * @param \Dsp\V1alpha2\ContractVerifyRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function ContractVerify(\Dsp\V1alpha2\ContractVerifyRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/dsp.v1alpha2.ControlService/ContractVerify',
+        $argument,
+        ['\Dsp\V1alpha2\ContractVerifyResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * ContractFinalize sends a finalization event.
+     * @param \Dsp\V1alpha2\ContractFinalizeRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function ContractFinalize(\Dsp\V1alpha2\ContractFinalizeRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/dsp.v1alpha2.ControlService/ContractFinalize',
+        $argument,
+        ['\Dsp\V1alpha2\ContractFinalizeResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * ContractTerminate sends a ContractTerminationMessage.
+     * @param \Dsp\V1alpha2\ContractTerminateRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function ContractTerminate(\Dsp\V1alpha2\ContractTerminateRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/dsp.v1alpha2.ControlService/ContractTerminate',
+        $argument,
+        ['\Dsp\V1alpha2\ContractTerminateResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Tells provider that we have finished our transfer.
+     * @param \Dsp\V1alpha2\SignalTransferCompleteRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function SignalTransferComplete(\Dsp\V1alpha2\SignalTransferCompleteRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/dsp.v1alpha2.ControlService/SignalTransferComplete',
+        $argument,
+        ['\Dsp\V1alpha2\SignalTransferCompleteResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Tells provider to cancel file transfer
+     * @param \Dsp\V1alpha2\SignalTransferCancelledRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function SignalTransferCancelled(\Dsp\V1alpha2\SignalTransferCancelledRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/dsp.v1alpha2.ControlService/SignalTransferCancelled',
+        $argument,
+        ['\Dsp\V1alpha2\SignalTransferCancelledResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Tells provider to suspend file transfer
+     * @param \Dsp\V1alpha2\SignalTransferSuspendRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function SignalTransferSuspend(\Dsp\V1alpha2\SignalTransferSuspendRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/dsp.v1alpha2.ControlService/SignalTransferSuspend',
+        $argument,
+        ['\Dsp\V1alpha2\SignalTransferSuspendResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Tells provider to resume file transfer
+     * @param \Dsp\V1alpha2\SignalTransferResumeRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function SignalTransferResume(\Dsp\V1alpha2\SignalTransferResumeRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/dsp.v1alpha2.ControlService/SignalTransferResume',
+        $argument,
+        ['\Dsp\V1alpha2\SignalTransferResumeResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }

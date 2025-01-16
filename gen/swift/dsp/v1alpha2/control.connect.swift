@@ -18,6 +18,58 @@ internal protocol Dsp_V1alpha2_ControlServiceClientInterface: Sendable {
     /// VerifyConnection takes a token and verifies it's the same token it passed to the contract service.
     @available(iOS 13, *)
     func `verifyConnection`(request: Dsp_V1alpha2_VerifyConnectionRequest, headers: Connect.Headers) async -> ResponseMessage<Dsp_V1alpha2_VerifyConnectionResponse>
+
+    /// Gets the catalogue based on the query parameters and the authorization header.
+    @available(iOS 13, *)
+    func `getProviderCatalogue`(request: Dsp_V1alpha2_GetProviderCatalogueRequest, headers: Connect.Headers) async -> ResponseMessage<Dsp_V1alpha2_GetProviderCatalogueResponse>
+
+    /// Gets information about a single dataset.
+    @available(iOS 13, *)
+    func `getProviderDataset`(request: Dsp_V1alpha2_GetProviderDatasetRequest, headers: Connect.Headers) async -> ResponseMessage<Dsp_V1alpha2_GetProviderDatasetResponse>
+
+    /// ContractRequest sends a ContractRequestMessage.
+    @available(iOS 13, *)
+    func `contractRequest`(request: Dsp_V1alpha2_ContractRequestRequest, headers: Connect.Headers) async -> ResponseMessage<Dsp_V1alpha2_ContractRequestResponse>
+
+    /// ContractOffer sends a ContractOfferMessage.
+    @available(iOS 13, *)
+    func `contractOffer`(request: Dsp_V1alpha2_ContractOfferRequest, headers: Connect.Headers) async -> ResponseMessage<Dsp_V1alpha2_ContractOfferResponse>
+
+    /// ContractAccept sends an accepted event message.
+    @available(iOS 13, *)
+    func `contractAccept`(request: Dsp_V1alpha2_ContractAcceptRequest, headers: Connect.Headers) async -> ResponseMessage<Dsp_V1alpha2_ContractAcceptResponse>
+
+    /// ContractAgree sends a ContractAcceptedMessage.
+    @available(iOS 13, *)
+    func `contractAgree`(request: Dsp_V1alpha2_ContractAgreeRequest, headers: Connect.Headers) async -> ResponseMessage<Dsp_V1alpha2_ContractAgreeResponse>
+
+    /// ContractVerify sends a ContractVerificationMessage.
+    @available(iOS 13, *)
+    func `contractVerify`(request: Dsp_V1alpha2_ContractVerifyRequest, headers: Connect.Headers) async -> ResponseMessage<Dsp_V1alpha2_ContractVerifyResponse>
+
+    /// ContractFinalize sends a finalization event.
+    @available(iOS 13, *)
+    func `contractFinalize`(request: Dsp_V1alpha2_ContractFinalizeRequest, headers: Connect.Headers) async -> ResponseMessage<Dsp_V1alpha2_ContractFinalizeResponse>
+
+    /// ContractTerminate sends a ContractTerminationMessage.
+    @available(iOS 13, *)
+    func `contractTerminate`(request: Dsp_V1alpha2_ContractTerminateRequest, headers: Connect.Headers) async -> ResponseMessage<Dsp_V1alpha2_ContractTerminateResponse>
+
+    /// Tells provider that we have finished our transfer.
+    @available(iOS 13, *)
+    func `signalTransferComplete`(request: Dsp_V1alpha2_SignalTransferCompleteRequest, headers: Connect.Headers) async -> ResponseMessage<Dsp_V1alpha2_SignalTransferCompleteResponse>
+
+    /// Tells provider to cancel file transfer
+    @available(iOS 13, *)
+    func `signalTransferCancelled`(request: Dsp_V1alpha2_SignalTransferCancelledRequest, headers: Connect.Headers) async -> ResponseMessage<Dsp_V1alpha2_SignalTransferCancelledResponse>
+
+    /// Tells provider to suspend file transfer
+    @available(iOS 13, *)
+    func `signalTransferSuspend`(request: Dsp_V1alpha2_SignalTransferSuspendRequest, headers: Connect.Headers) async -> ResponseMessage<Dsp_V1alpha2_SignalTransferSuspendResponse>
+
+    /// Tells provider to resume file transfer
+    @available(iOS 13, *)
+    func `signalTransferResume`(request: Dsp_V1alpha2_SignalTransferResumeRequest, headers: Connect.Headers) async -> ResponseMessage<Dsp_V1alpha2_SignalTransferResumeResponse>
 }
 
 /// Concrete implementation of `Dsp_V1alpha2_ControlServiceClientInterface`.
@@ -38,194 +90,88 @@ internal final class Dsp_V1alpha2_ControlServiceClient: Dsp_V1alpha2_ControlServ
         return await self.client.unary(path: "/dsp.v1alpha2.ControlService/VerifyConnection", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
-    internal enum Metadata {
-        internal enum Methods {
-            internal static let getProviderDatasetDownloadInformation = Connect.MethodSpec(name: "GetProviderDatasetDownloadInformation", service: "dsp.v1alpha2.ControlService", type: .unary)
-            internal static let verifyConnection = Connect.MethodSpec(name: "VerifyConnection", service: "dsp.v1alpha2.ControlService", type: .unary)
-        }
-    }
-}
-
-/// CatalogueControlService contains methods to interact with dataspace catalogues.
-internal protocol Dsp_V1alpha2_CatalogueControlServiceClientInterface: Sendable {
-
-    /// Gets the catalogue based on the query parameters and the authorization header.
-    @available(iOS 13, *)
-    func `getProviderCatalogue`(request: Dsp_V1alpha2_GetProviderCatalogueRequest, headers: Connect.Headers) async -> ResponseMessage<Dsp_V1alpha2_GetProviderCatalogueResponse>
-
-    /// Gets information about a single dataset.
-    @available(iOS 13, *)
-    func `getProviderDataset`(request: Dsp_V1alpha2_GetProviderDatasetRequest, headers: Connect.Headers) async -> ResponseMessage<Dsp_V1alpha2_GetProviderDatasetResponse>
-}
-
-/// Concrete implementation of `Dsp_V1alpha2_CatalogueControlServiceClientInterface`.
-internal final class Dsp_V1alpha2_CatalogueControlServiceClient: Dsp_V1alpha2_CatalogueControlServiceClientInterface, Sendable {
-    private let client: Connect.ProtocolClientInterface
-
-    internal init(client: Connect.ProtocolClientInterface) {
-        self.client = client
-    }
-
     @available(iOS 13, *)
     internal func `getProviderCatalogue`(request: Dsp_V1alpha2_GetProviderCatalogueRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Dsp_V1alpha2_GetProviderCatalogueResponse> {
-        return await self.client.unary(path: "/dsp.v1alpha2.CatalogueControlService/GetProviderCatalogue", idempotencyLevel: .unknown, request: request, headers: headers)
+        return await self.client.unary(path: "/dsp.v1alpha2.ControlService/GetProviderCatalogue", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
     @available(iOS 13, *)
     internal func `getProviderDataset`(request: Dsp_V1alpha2_GetProviderDatasetRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Dsp_V1alpha2_GetProviderDatasetResponse> {
-        return await self.client.unary(path: "/dsp.v1alpha2.CatalogueControlService/GetProviderDataset", idempotencyLevel: .unknown, request: request, headers: headers)
-    }
-
-    internal enum Metadata {
-        internal enum Methods {
-            internal static let getProviderCatalogue = Connect.MethodSpec(name: "GetProviderCatalogue", service: "dsp.v1alpha2.CatalogueControlService", type: .unary)
-            internal static let getProviderDataset = Connect.MethodSpec(name: "GetProviderDataset", service: "dsp.v1alpha2.CatalogueControlService", type: .unary)
-        }
-    }
-}
-
-/// ContractControlService contains low level methods to send contract negotiation operations.
-internal protocol Dsp_V1alpha2_ContractControlServiceClientInterface: Sendable {
-
-    /// Request sends a ContractRequestMessage.
-    @available(iOS 13, *)
-    func `request`(request: Dsp_V1alpha2_RequestRequest, headers: Connect.Headers) async -> ResponseMessage<Dsp_V1alpha2_RequestResponse>
-
-    /// Offer sends a ContractOfferMessage.
-    @available(iOS 13, *)
-    func `offer`(request: Dsp_V1alpha2_OfferRequest, headers: Connect.Headers) async -> ResponseMessage<Dsp_V1alpha2_OfferResponse>
-
-    /// Accept sends an accepted event message.
-    @available(iOS 13, *)
-    func `accept`(request: Dsp_V1alpha2_AcceptRequest, headers: Connect.Headers) async -> ResponseMessage<Dsp_V1alpha2_AcceptResponse>
-
-    /// Agree sends a ContractAcceptedMessage.
-    @available(iOS 13, *)
-    func `agree`(request: Dsp_V1alpha2_AgreeRequest, headers: Connect.Headers) async -> ResponseMessage<Dsp_V1alpha2_AgreeResponse>
-
-    /// Verify sends a ContractVerificationMessage.
-    @available(iOS 13, *)
-    func `verify`(request: Dsp_V1alpha2_VerifyRequest, headers: Connect.Headers) async -> ResponseMessage<Dsp_V1alpha2_VerifyResponse>
-
-    /// Finalize sends a finalization event.
-    @available(iOS 13, *)
-    func `finalize`(request: Dsp_V1alpha2_FinalizeRequest, headers: Connect.Headers) async -> ResponseMessage<Dsp_V1alpha2_FinalizeResponse>
-
-    /// Terminate sends a ContractTerminationMessage.
-    @available(iOS 13, *)
-    func `terminate`(request: Dsp_V1alpha2_TerminateRequest, headers: Connect.Headers) async -> ResponseMessage<Dsp_V1alpha2_TerminateResponse>
-}
-
-/// Concrete implementation of `Dsp_V1alpha2_ContractControlServiceClientInterface`.
-internal final class Dsp_V1alpha2_ContractControlServiceClient: Dsp_V1alpha2_ContractControlServiceClientInterface, Sendable {
-    private let client: Connect.ProtocolClientInterface
-
-    internal init(client: Connect.ProtocolClientInterface) {
-        self.client = client
+        return await self.client.unary(path: "/dsp.v1alpha2.ControlService/GetProviderDataset", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
     @available(iOS 13, *)
-    internal func `request`(request: Dsp_V1alpha2_RequestRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Dsp_V1alpha2_RequestResponse> {
-        return await self.client.unary(path: "/dsp.v1alpha2.ContractControlService/Request", idempotencyLevel: .unknown, request: request, headers: headers)
+    internal func `contractRequest`(request: Dsp_V1alpha2_ContractRequestRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Dsp_V1alpha2_ContractRequestResponse> {
+        return await self.client.unary(path: "/dsp.v1alpha2.ControlService/ContractRequest", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
     @available(iOS 13, *)
-    internal func `offer`(request: Dsp_V1alpha2_OfferRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Dsp_V1alpha2_OfferResponse> {
-        return await self.client.unary(path: "/dsp.v1alpha2.ContractControlService/Offer", idempotencyLevel: .unknown, request: request, headers: headers)
+    internal func `contractOffer`(request: Dsp_V1alpha2_ContractOfferRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Dsp_V1alpha2_ContractOfferResponse> {
+        return await self.client.unary(path: "/dsp.v1alpha2.ControlService/ContractOffer", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
     @available(iOS 13, *)
-    internal func `accept`(request: Dsp_V1alpha2_AcceptRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Dsp_V1alpha2_AcceptResponse> {
-        return await self.client.unary(path: "/dsp.v1alpha2.ContractControlService/Accept", idempotencyLevel: .unknown, request: request, headers: headers)
+    internal func `contractAccept`(request: Dsp_V1alpha2_ContractAcceptRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Dsp_V1alpha2_ContractAcceptResponse> {
+        return await self.client.unary(path: "/dsp.v1alpha2.ControlService/ContractAccept", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
     @available(iOS 13, *)
-    internal func `agree`(request: Dsp_V1alpha2_AgreeRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Dsp_V1alpha2_AgreeResponse> {
-        return await self.client.unary(path: "/dsp.v1alpha2.ContractControlService/Agree", idempotencyLevel: .unknown, request: request, headers: headers)
+    internal func `contractAgree`(request: Dsp_V1alpha2_ContractAgreeRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Dsp_V1alpha2_ContractAgreeResponse> {
+        return await self.client.unary(path: "/dsp.v1alpha2.ControlService/ContractAgree", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
     @available(iOS 13, *)
-    internal func `verify`(request: Dsp_V1alpha2_VerifyRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Dsp_V1alpha2_VerifyResponse> {
-        return await self.client.unary(path: "/dsp.v1alpha2.ContractControlService/Verify", idempotencyLevel: .unknown, request: request, headers: headers)
+    internal func `contractVerify`(request: Dsp_V1alpha2_ContractVerifyRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Dsp_V1alpha2_ContractVerifyResponse> {
+        return await self.client.unary(path: "/dsp.v1alpha2.ControlService/ContractVerify", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
     @available(iOS 13, *)
-    internal func `finalize`(request: Dsp_V1alpha2_FinalizeRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Dsp_V1alpha2_FinalizeResponse> {
-        return await self.client.unary(path: "/dsp.v1alpha2.ContractControlService/Finalize", idempotencyLevel: .unknown, request: request, headers: headers)
+    internal func `contractFinalize`(request: Dsp_V1alpha2_ContractFinalizeRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Dsp_V1alpha2_ContractFinalizeResponse> {
+        return await self.client.unary(path: "/dsp.v1alpha2.ControlService/ContractFinalize", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
     @available(iOS 13, *)
-    internal func `terminate`(request: Dsp_V1alpha2_TerminateRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Dsp_V1alpha2_TerminateResponse> {
-        return await self.client.unary(path: "/dsp.v1alpha2.ContractControlService/Terminate", idempotencyLevel: .unknown, request: request, headers: headers)
-    }
-
-    internal enum Metadata {
-        internal enum Methods {
-            internal static let request = Connect.MethodSpec(name: "Request", service: "dsp.v1alpha2.ContractControlService", type: .unary)
-            internal static let offer = Connect.MethodSpec(name: "Offer", service: "dsp.v1alpha2.ContractControlService", type: .unary)
-            internal static let accept = Connect.MethodSpec(name: "Accept", service: "dsp.v1alpha2.ContractControlService", type: .unary)
-            internal static let agree = Connect.MethodSpec(name: "Agree", service: "dsp.v1alpha2.ContractControlService", type: .unary)
-            internal static let verify = Connect.MethodSpec(name: "Verify", service: "dsp.v1alpha2.ContractControlService", type: .unary)
-            internal static let finalize = Connect.MethodSpec(name: "Finalize", service: "dsp.v1alpha2.ContractControlService", type: .unary)
-            internal static let terminate = Connect.MethodSpec(name: "Terminate", service: "dsp.v1alpha2.ContractControlService", type: .unary)
-        }
-    }
-}
-
-/// TransferControlService contains low level methods to send transfer negotiation operations.
-internal protocol Dsp_V1alpha2_TransferControlServiceClientInterface: Sendable {
-
-    /// Tells provider that we have finished our transfer.
-    @available(iOS 13, *)
-    func `signalTransferComplete`(request: Dsp_V1alpha2_SignalTransferCompleteRequest, headers: Connect.Headers) async -> ResponseMessage<Dsp_V1alpha2_SignalTransferCompleteResponse>
-
-    /// Tells provider to cancel file transfer
-    @available(iOS 13, *)
-    func `signalTransferCancelled`(request: Dsp_V1alpha2_SignalTransferCancelledRequest, headers: Connect.Headers) async -> ResponseMessage<Dsp_V1alpha2_SignalTransferCancelledResponse>
-
-    /// Tells provider to suspend file transfer
-    @available(iOS 13, *)
-    func `signalTransferSuspend`(request: Dsp_V1alpha2_SignalTransferSuspendRequest, headers: Connect.Headers) async -> ResponseMessage<Dsp_V1alpha2_SignalTransferSuspendResponse>
-
-    /// Tells provider to resume file transfer
-    @available(iOS 13, *)
-    func `signalTransferResume`(request: Dsp_V1alpha2_SignalTransferResumeRequest, headers: Connect.Headers) async -> ResponseMessage<Dsp_V1alpha2_SignalTransferResumeResponse>
-}
-
-/// Concrete implementation of `Dsp_V1alpha2_TransferControlServiceClientInterface`.
-internal final class Dsp_V1alpha2_TransferControlServiceClient: Dsp_V1alpha2_TransferControlServiceClientInterface, Sendable {
-    private let client: Connect.ProtocolClientInterface
-
-    internal init(client: Connect.ProtocolClientInterface) {
-        self.client = client
+    internal func `contractTerminate`(request: Dsp_V1alpha2_ContractTerminateRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Dsp_V1alpha2_ContractTerminateResponse> {
+        return await self.client.unary(path: "/dsp.v1alpha2.ControlService/ContractTerminate", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
     @available(iOS 13, *)
     internal func `signalTransferComplete`(request: Dsp_V1alpha2_SignalTransferCompleteRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Dsp_V1alpha2_SignalTransferCompleteResponse> {
-        return await self.client.unary(path: "/dsp.v1alpha2.TransferControlService/SignalTransferComplete", idempotencyLevel: .unknown, request: request, headers: headers)
+        return await self.client.unary(path: "/dsp.v1alpha2.ControlService/SignalTransferComplete", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
     @available(iOS 13, *)
     internal func `signalTransferCancelled`(request: Dsp_V1alpha2_SignalTransferCancelledRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Dsp_V1alpha2_SignalTransferCancelledResponse> {
-        return await self.client.unary(path: "/dsp.v1alpha2.TransferControlService/SignalTransferCancelled", idempotencyLevel: .unknown, request: request, headers: headers)
+        return await self.client.unary(path: "/dsp.v1alpha2.ControlService/SignalTransferCancelled", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
     @available(iOS 13, *)
     internal func `signalTransferSuspend`(request: Dsp_V1alpha2_SignalTransferSuspendRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Dsp_V1alpha2_SignalTransferSuspendResponse> {
-        return await self.client.unary(path: "/dsp.v1alpha2.TransferControlService/SignalTransferSuspend", idempotencyLevel: .unknown, request: request, headers: headers)
+        return await self.client.unary(path: "/dsp.v1alpha2.ControlService/SignalTransferSuspend", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
     @available(iOS 13, *)
     internal func `signalTransferResume`(request: Dsp_V1alpha2_SignalTransferResumeRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Dsp_V1alpha2_SignalTransferResumeResponse> {
-        return await self.client.unary(path: "/dsp.v1alpha2.TransferControlService/SignalTransferResume", idempotencyLevel: .unknown, request: request, headers: headers)
+        return await self.client.unary(path: "/dsp.v1alpha2.ControlService/SignalTransferResume", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
     internal enum Metadata {
         internal enum Methods {
-            internal static let signalTransferComplete = Connect.MethodSpec(name: "SignalTransferComplete", service: "dsp.v1alpha2.TransferControlService", type: .unary)
-            internal static let signalTransferCancelled = Connect.MethodSpec(name: "SignalTransferCancelled", service: "dsp.v1alpha2.TransferControlService", type: .unary)
-            internal static let signalTransferSuspend = Connect.MethodSpec(name: "SignalTransferSuspend", service: "dsp.v1alpha2.TransferControlService", type: .unary)
-            internal static let signalTransferResume = Connect.MethodSpec(name: "SignalTransferResume", service: "dsp.v1alpha2.TransferControlService", type: .unary)
+            internal static let getProviderDatasetDownloadInformation = Connect.MethodSpec(name: "GetProviderDatasetDownloadInformation", service: "dsp.v1alpha2.ControlService", type: .unary)
+            internal static let verifyConnection = Connect.MethodSpec(name: "VerifyConnection", service: "dsp.v1alpha2.ControlService", type: .unary)
+            internal static let getProviderCatalogue = Connect.MethodSpec(name: "GetProviderCatalogue", service: "dsp.v1alpha2.ControlService", type: .unary)
+            internal static let getProviderDataset = Connect.MethodSpec(name: "GetProviderDataset", service: "dsp.v1alpha2.ControlService", type: .unary)
+            internal static let contractRequest = Connect.MethodSpec(name: "ContractRequest", service: "dsp.v1alpha2.ControlService", type: .unary)
+            internal static let contractOffer = Connect.MethodSpec(name: "ContractOffer", service: "dsp.v1alpha2.ControlService", type: .unary)
+            internal static let contractAccept = Connect.MethodSpec(name: "ContractAccept", service: "dsp.v1alpha2.ControlService", type: .unary)
+            internal static let contractAgree = Connect.MethodSpec(name: "ContractAgree", service: "dsp.v1alpha2.ControlService", type: .unary)
+            internal static let contractVerify = Connect.MethodSpec(name: "ContractVerify", service: "dsp.v1alpha2.ControlService", type: .unary)
+            internal static let contractFinalize = Connect.MethodSpec(name: "ContractFinalize", service: "dsp.v1alpha2.ControlService", type: .unary)
+            internal static let contractTerminate = Connect.MethodSpec(name: "ContractTerminate", service: "dsp.v1alpha2.ControlService", type: .unary)
+            internal static let signalTransferComplete = Connect.MethodSpec(name: "SignalTransferComplete", service: "dsp.v1alpha2.ControlService", type: .unary)
+            internal static let signalTransferCancelled = Connect.MethodSpec(name: "SignalTransferCancelled", service: "dsp.v1alpha2.ControlService", type: .unary)
+            internal static let signalTransferSuspend = Connect.MethodSpec(name: "SignalTransferSuspend", service: "dsp.v1alpha2.ControlService", type: .unary)
+            internal static let signalTransferResume = Connect.MethodSpec(name: "SignalTransferResume", service: "dsp.v1alpha2.ControlService", type: .unary)
         }
     }
 }

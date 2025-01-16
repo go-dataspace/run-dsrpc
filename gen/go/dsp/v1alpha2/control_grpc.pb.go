@@ -35,6 +35,19 @@ const _ = grpc.SupportPackageIsVersion9
 const (
 	ControlService_GetProviderDatasetDownloadInformation_FullMethodName = "/dsp.v1alpha2.ControlService/GetProviderDatasetDownloadInformation"
 	ControlService_VerifyConnection_FullMethodName                      = "/dsp.v1alpha2.ControlService/VerifyConnection"
+	ControlService_GetProviderCatalogue_FullMethodName                  = "/dsp.v1alpha2.ControlService/GetProviderCatalogue"
+	ControlService_GetProviderDataset_FullMethodName                    = "/dsp.v1alpha2.ControlService/GetProviderDataset"
+	ControlService_ContractRequest_FullMethodName                       = "/dsp.v1alpha2.ControlService/ContractRequest"
+	ControlService_ContractOffer_FullMethodName                         = "/dsp.v1alpha2.ControlService/ContractOffer"
+	ControlService_ContractAccept_FullMethodName                        = "/dsp.v1alpha2.ControlService/ContractAccept"
+	ControlService_ContractAgree_FullMethodName                         = "/dsp.v1alpha2.ControlService/ContractAgree"
+	ControlService_ContractVerify_FullMethodName                        = "/dsp.v1alpha2.ControlService/ContractVerify"
+	ControlService_ContractFinalize_FullMethodName                      = "/dsp.v1alpha2.ControlService/ContractFinalize"
+	ControlService_ContractTerminate_FullMethodName                     = "/dsp.v1alpha2.ControlService/ContractTerminate"
+	ControlService_SignalTransferComplete_FullMethodName                = "/dsp.v1alpha2.ControlService/SignalTransferComplete"
+	ControlService_SignalTransferCancelled_FullMethodName               = "/dsp.v1alpha2.ControlService/SignalTransferCancelled"
+	ControlService_SignalTransferSuspend_FullMethodName                 = "/dsp.v1alpha2.ControlService/SignalTransferSuspend"
+	ControlService_SignalTransferResume_FullMethodName                  = "/dsp.v1alpha2.ControlService/SignalTransferResume"
 )
 
 // ControlServiceClient is the client API for ControlService service.
@@ -48,6 +61,32 @@ type ControlServiceClient interface {
 	GetProviderDatasetDownloadInformation(ctx context.Context, in *GetProviderDatasetDownloadInformationRequest, opts ...grpc.CallOption) (*GetProviderDatasetDownloadInformationResponse, error)
 	// VerifyConnection takes a token and verifies it's the same token it passed to the contract service.
 	VerifyConnection(ctx context.Context, in *VerifyConnectionRequest, opts ...grpc.CallOption) (*VerifyConnectionResponse, error)
+	// Gets the catalogue based on the query parameters and the authorization header.
+	GetProviderCatalogue(ctx context.Context, in *GetProviderCatalogueRequest, opts ...grpc.CallOption) (*GetProviderCatalogueResponse, error)
+	// Gets information about a single dataset.
+	GetProviderDataset(ctx context.Context, in *GetProviderDatasetRequest, opts ...grpc.CallOption) (*GetProviderDatasetResponse, error)
+	// ContractRequest sends a ContractRequestMessage.
+	ContractRequest(ctx context.Context, in *ContractRequestRequest, opts ...grpc.CallOption) (*ContractRequestResponse, error)
+	// ContractOffer sends a ContractOfferMessage.
+	ContractOffer(ctx context.Context, in *ContractOfferRequest, opts ...grpc.CallOption) (*ContractOfferResponse, error)
+	// ContractAccept sends an accepted event message.
+	ContractAccept(ctx context.Context, in *ContractAcceptRequest, opts ...grpc.CallOption) (*ContractAcceptResponse, error)
+	// ContractAgree sends a ContractAcceptedMessage.
+	ContractAgree(ctx context.Context, in *ContractAgreeRequest, opts ...grpc.CallOption) (*ContractAgreeResponse, error)
+	// ContractVerify sends a ContractVerificationMessage.
+	ContractVerify(ctx context.Context, in *ContractVerifyRequest, opts ...grpc.CallOption) (*ContractVerifyResponse, error)
+	// ContractFinalize sends a finalization event.
+	ContractFinalize(ctx context.Context, in *ContractFinalizeRequest, opts ...grpc.CallOption) (*ContractFinalizeResponse, error)
+	// ContractTerminate sends a ContractTerminationMessage.
+	ContractTerminate(ctx context.Context, in *ContractTerminateRequest, opts ...grpc.CallOption) (*ContractTerminateResponse, error)
+	// Tells provider that we have finished our transfer.
+	SignalTransferComplete(ctx context.Context, in *SignalTransferCompleteRequest, opts ...grpc.CallOption) (*SignalTransferCompleteResponse, error)
+	// Tells provider to cancel file transfer
+	SignalTransferCancelled(ctx context.Context, in *SignalTransferCancelledRequest, opts ...grpc.CallOption) (*SignalTransferCancelledResponse, error)
+	// Tells provider to suspend file transfer
+	SignalTransferSuspend(ctx context.Context, in *SignalTransferSuspendRequest, opts ...grpc.CallOption) (*SignalTransferSuspendResponse, error)
+	// Tells provider to resume file transfer
+	SignalTransferResume(ctx context.Context, in *SignalTransferResumeRequest, opts ...grpc.CallOption) (*SignalTransferResumeResponse, error)
 }
 
 type controlServiceClient struct {
@@ -78,6 +117,136 @@ func (c *controlServiceClient) VerifyConnection(ctx context.Context, in *VerifyC
 	return out, nil
 }
 
+func (c *controlServiceClient) GetProviderCatalogue(ctx context.Context, in *GetProviderCatalogueRequest, opts ...grpc.CallOption) (*GetProviderCatalogueResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(GetProviderCatalogueResponse)
+	err := c.cc.Invoke(ctx, ControlService_GetProviderCatalogue_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *controlServiceClient) GetProviderDataset(ctx context.Context, in *GetProviderDatasetRequest, opts ...grpc.CallOption) (*GetProviderDatasetResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(GetProviderDatasetResponse)
+	err := c.cc.Invoke(ctx, ControlService_GetProviderDataset_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *controlServiceClient) ContractRequest(ctx context.Context, in *ContractRequestRequest, opts ...grpc.CallOption) (*ContractRequestResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(ContractRequestResponse)
+	err := c.cc.Invoke(ctx, ControlService_ContractRequest_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *controlServiceClient) ContractOffer(ctx context.Context, in *ContractOfferRequest, opts ...grpc.CallOption) (*ContractOfferResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(ContractOfferResponse)
+	err := c.cc.Invoke(ctx, ControlService_ContractOffer_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *controlServiceClient) ContractAccept(ctx context.Context, in *ContractAcceptRequest, opts ...grpc.CallOption) (*ContractAcceptResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(ContractAcceptResponse)
+	err := c.cc.Invoke(ctx, ControlService_ContractAccept_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *controlServiceClient) ContractAgree(ctx context.Context, in *ContractAgreeRequest, opts ...grpc.CallOption) (*ContractAgreeResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(ContractAgreeResponse)
+	err := c.cc.Invoke(ctx, ControlService_ContractAgree_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *controlServiceClient) ContractVerify(ctx context.Context, in *ContractVerifyRequest, opts ...grpc.CallOption) (*ContractVerifyResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(ContractVerifyResponse)
+	err := c.cc.Invoke(ctx, ControlService_ContractVerify_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *controlServiceClient) ContractFinalize(ctx context.Context, in *ContractFinalizeRequest, opts ...grpc.CallOption) (*ContractFinalizeResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(ContractFinalizeResponse)
+	err := c.cc.Invoke(ctx, ControlService_ContractFinalize_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *controlServiceClient) ContractTerminate(ctx context.Context, in *ContractTerminateRequest, opts ...grpc.CallOption) (*ContractTerminateResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(ContractTerminateResponse)
+	err := c.cc.Invoke(ctx, ControlService_ContractTerminate_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *controlServiceClient) SignalTransferComplete(ctx context.Context, in *SignalTransferCompleteRequest, opts ...grpc.CallOption) (*SignalTransferCompleteResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(SignalTransferCompleteResponse)
+	err := c.cc.Invoke(ctx, ControlService_SignalTransferComplete_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *controlServiceClient) SignalTransferCancelled(ctx context.Context, in *SignalTransferCancelledRequest, opts ...grpc.CallOption) (*SignalTransferCancelledResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(SignalTransferCancelledResponse)
+	err := c.cc.Invoke(ctx, ControlService_SignalTransferCancelled_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *controlServiceClient) SignalTransferSuspend(ctx context.Context, in *SignalTransferSuspendRequest, opts ...grpc.CallOption) (*SignalTransferSuspendResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(SignalTransferSuspendResponse)
+	err := c.cc.Invoke(ctx, ControlService_SignalTransferSuspend_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *controlServiceClient) SignalTransferResume(ctx context.Context, in *SignalTransferResumeRequest, opts ...grpc.CallOption) (*SignalTransferResumeResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(SignalTransferResumeResponse)
+	err := c.cc.Invoke(ctx, ControlService_SignalTransferResume_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // ControlServiceServer is the server API for ControlService service.
 // All implementations must embed UnimplementedControlServiceServer
 // for forward compatibility.
@@ -89,6 +258,32 @@ type ControlServiceServer interface {
 	GetProviderDatasetDownloadInformation(context.Context, *GetProviderDatasetDownloadInformationRequest) (*GetProviderDatasetDownloadInformationResponse, error)
 	// VerifyConnection takes a token and verifies it's the same token it passed to the contract service.
 	VerifyConnection(context.Context, *VerifyConnectionRequest) (*VerifyConnectionResponse, error)
+	// Gets the catalogue based on the query parameters and the authorization header.
+	GetProviderCatalogue(context.Context, *GetProviderCatalogueRequest) (*GetProviderCatalogueResponse, error)
+	// Gets information about a single dataset.
+	GetProviderDataset(context.Context, *GetProviderDatasetRequest) (*GetProviderDatasetResponse, error)
+	// ContractRequest sends a ContractRequestMessage.
+	ContractRequest(context.Context, *ContractRequestRequest) (*ContractRequestResponse, error)
+	// ContractOffer sends a ContractOfferMessage.
+	ContractOffer(context.Context, *ContractOfferRequest) (*ContractOfferResponse, error)
+	// ContractAccept sends an accepted event message.
+	ContractAccept(context.Context, *ContractAcceptRequest) (*ContractAcceptResponse, error)
+	// ContractAgree sends a ContractAcceptedMessage.
+	ContractAgree(context.Context, *ContractAgreeRequest) (*ContractAgreeResponse, error)
+	// ContractVerify sends a ContractVerificationMessage.
+	ContractVerify(context.Context, *ContractVerifyRequest) (*ContractVerifyResponse, error)
+	// ContractFinalize sends a finalization event.
+	ContractFinalize(context.Context, *ContractFinalizeRequest) (*ContractFinalizeResponse, error)
+	// ContractTerminate sends a ContractTerminationMessage.
+	ContractTerminate(context.Context, *ContractTerminateRequest) (*ContractTerminateResponse, error)
+	// Tells provider that we have finished our transfer.
+	SignalTransferComplete(context.Context, *SignalTransferCompleteRequest) (*SignalTransferCompleteResponse, error)
+	// Tells provider to cancel file transfer
+	SignalTransferCancelled(context.Context, *SignalTransferCancelledRequest) (*SignalTransferCancelledResponse, error)
+	// Tells provider to suspend file transfer
+	SignalTransferSuspend(context.Context, *SignalTransferSuspendRequest) (*SignalTransferSuspendResponse, error)
+	// Tells provider to resume file transfer
+	SignalTransferResume(context.Context, *SignalTransferResumeRequest) (*SignalTransferResumeResponse, error)
 	mustEmbedUnimplementedControlServiceServer()
 }
 
@@ -104,6 +299,45 @@ func (UnimplementedControlServiceServer) GetProviderDatasetDownloadInformation(c
 }
 func (UnimplementedControlServiceServer) VerifyConnection(context.Context, *VerifyConnectionRequest) (*VerifyConnectionResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method VerifyConnection not implemented")
+}
+func (UnimplementedControlServiceServer) GetProviderCatalogue(context.Context, *GetProviderCatalogueRequest) (*GetProviderCatalogueResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetProviderCatalogue not implemented")
+}
+func (UnimplementedControlServiceServer) GetProviderDataset(context.Context, *GetProviderDatasetRequest) (*GetProviderDatasetResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetProviderDataset not implemented")
+}
+func (UnimplementedControlServiceServer) ContractRequest(context.Context, *ContractRequestRequest) (*ContractRequestResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ContractRequest not implemented")
+}
+func (UnimplementedControlServiceServer) ContractOffer(context.Context, *ContractOfferRequest) (*ContractOfferResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ContractOffer not implemented")
+}
+func (UnimplementedControlServiceServer) ContractAccept(context.Context, *ContractAcceptRequest) (*ContractAcceptResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ContractAccept not implemented")
+}
+func (UnimplementedControlServiceServer) ContractAgree(context.Context, *ContractAgreeRequest) (*ContractAgreeResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ContractAgree not implemented")
+}
+func (UnimplementedControlServiceServer) ContractVerify(context.Context, *ContractVerifyRequest) (*ContractVerifyResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ContractVerify not implemented")
+}
+func (UnimplementedControlServiceServer) ContractFinalize(context.Context, *ContractFinalizeRequest) (*ContractFinalizeResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ContractFinalize not implemented")
+}
+func (UnimplementedControlServiceServer) ContractTerminate(context.Context, *ContractTerminateRequest) (*ContractTerminateResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ContractTerminate not implemented")
+}
+func (UnimplementedControlServiceServer) SignalTransferComplete(context.Context, *SignalTransferCompleteRequest) (*SignalTransferCompleteResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SignalTransferComplete not implemented")
+}
+func (UnimplementedControlServiceServer) SignalTransferCancelled(context.Context, *SignalTransferCancelledRequest) (*SignalTransferCancelledResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SignalTransferCancelled not implemented")
+}
+func (UnimplementedControlServiceServer) SignalTransferSuspend(context.Context, *SignalTransferSuspendRequest) (*SignalTransferSuspendResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SignalTransferSuspend not implemented")
+}
+func (UnimplementedControlServiceServer) SignalTransferResume(context.Context, *SignalTransferResumeRequest) (*SignalTransferResumeResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SignalTransferResume not implemented")
 }
 func (UnimplementedControlServiceServer) mustEmbedUnimplementedControlServiceServer() {}
 func (UnimplementedControlServiceServer) testEmbeddedByValue()                        {}
@@ -162,6 +396,240 @@ func _ControlService_VerifyConnection_Handler(srv interface{}, ctx context.Conte
 	return interceptor(ctx, in, info, handler)
 }
 
+func _ControlService_GetProviderCatalogue_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetProviderCatalogueRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ControlServiceServer).GetProviderCatalogue(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ControlService_GetProviderCatalogue_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ControlServiceServer).GetProviderCatalogue(ctx, req.(*GetProviderCatalogueRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ControlService_GetProviderDataset_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetProviderDatasetRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ControlServiceServer).GetProviderDataset(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ControlService_GetProviderDataset_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ControlServiceServer).GetProviderDataset(ctx, req.(*GetProviderDatasetRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ControlService_ContractRequest_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ContractRequestRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ControlServiceServer).ContractRequest(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ControlService_ContractRequest_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ControlServiceServer).ContractRequest(ctx, req.(*ContractRequestRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ControlService_ContractOffer_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ContractOfferRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ControlServiceServer).ContractOffer(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ControlService_ContractOffer_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ControlServiceServer).ContractOffer(ctx, req.(*ContractOfferRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ControlService_ContractAccept_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ContractAcceptRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ControlServiceServer).ContractAccept(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ControlService_ContractAccept_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ControlServiceServer).ContractAccept(ctx, req.(*ContractAcceptRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ControlService_ContractAgree_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ContractAgreeRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ControlServiceServer).ContractAgree(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ControlService_ContractAgree_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ControlServiceServer).ContractAgree(ctx, req.(*ContractAgreeRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ControlService_ContractVerify_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ContractVerifyRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ControlServiceServer).ContractVerify(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ControlService_ContractVerify_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ControlServiceServer).ContractVerify(ctx, req.(*ContractVerifyRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ControlService_ContractFinalize_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ContractFinalizeRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ControlServiceServer).ContractFinalize(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ControlService_ContractFinalize_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ControlServiceServer).ContractFinalize(ctx, req.(*ContractFinalizeRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ControlService_ContractTerminate_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ContractTerminateRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ControlServiceServer).ContractTerminate(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ControlService_ContractTerminate_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ControlServiceServer).ContractTerminate(ctx, req.(*ContractTerminateRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ControlService_SignalTransferComplete_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SignalTransferCompleteRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ControlServiceServer).SignalTransferComplete(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ControlService_SignalTransferComplete_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ControlServiceServer).SignalTransferComplete(ctx, req.(*SignalTransferCompleteRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ControlService_SignalTransferCancelled_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SignalTransferCancelledRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ControlServiceServer).SignalTransferCancelled(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ControlService_SignalTransferCancelled_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ControlServiceServer).SignalTransferCancelled(ctx, req.(*SignalTransferCancelledRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ControlService_SignalTransferSuspend_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SignalTransferSuspendRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ControlServiceServer).SignalTransferSuspend(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ControlService_SignalTransferSuspend_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ControlServiceServer).SignalTransferSuspend(ctx, req.(*SignalTransferSuspendRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ControlService_SignalTransferResume_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SignalTransferResumeRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ControlServiceServer).SignalTransferResume(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ControlService_SignalTransferResume_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ControlServiceServer).SignalTransferResume(ctx, req.(*SignalTransferResumeRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // ControlService_ServiceDesc is the grpc.ServiceDesc for ControlService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -177,732 +645,57 @@ var ControlService_ServiceDesc = grpc.ServiceDesc{
 			MethodName: "VerifyConnection",
 			Handler:    _ControlService_VerifyConnection_Handler,
 		},
-	},
-	Streams:  []grpc.StreamDesc{},
-	Metadata: "dsp/v1alpha2/control.proto",
-}
-
-const (
-	CatalogueControlService_GetProviderCatalogue_FullMethodName = "/dsp.v1alpha2.CatalogueControlService/GetProviderCatalogue"
-	CatalogueControlService_GetProviderDataset_FullMethodName   = "/dsp.v1alpha2.CatalogueControlService/GetProviderDataset"
-)
-
-// CatalogueControlServiceClient is the client API for CatalogueControlService service.
-//
-// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
-//
-// CatalogueControlService contains methods to interact with dataspace catalogues.
-type CatalogueControlServiceClient interface {
-	// Gets the catalogue based on the query parameters and the authorization header.
-	GetProviderCatalogue(ctx context.Context, in *GetProviderCatalogueRequest, opts ...grpc.CallOption) (*GetProviderCatalogueResponse, error)
-	// Gets information about a single dataset.
-	GetProviderDataset(ctx context.Context, in *GetProviderDatasetRequest, opts ...grpc.CallOption) (*GetProviderDatasetResponse, error)
-}
-
-type catalogueControlServiceClient struct {
-	cc grpc.ClientConnInterface
-}
-
-func NewCatalogueControlServiceClient(cc grpc.ClientConnInterface) CatalogueControlServiceClient {
-	return &catalogueControlServiceClient{cc}
-}
-
-func (c *catalogueControlServiceClient) GetProviderCatalogue(ctx context.Context, in *GetProviderCatalogueRequest, opts ...grpc.CallOption) (*GetProviderCatalogueResponse, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(GetProviderCatalogueResponse)
-	err := c.cc.Invoke(ctx, CatalogueControlService_GetProviderCatalogue_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *catalogueControlServiceClient) GetProviderDataset(ctx context.Context, in *GetProviderDatasetRequest, opts ...grpc.CallOption) (*GetProviderDatasetResponse, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(GetProviderDatasetResponse)
-	err := c.cc.Invoke(ctx, CatalogueControlService_GetProviderDataset_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-// CatalogueControlServiceServer is the server API for CatalogueControlService service.
-// All implementations must embed UnimplementedCatalogueControlServiceServer
-// for forward compatibility.
-//
-// CatalogueControlService contains methods to interact with dataspace catalogues.
-type CatalogueControlServiceServer interface {
-	// Gets the catalogue based on the query parameters and the authorization header.
-	GetProviderCatalogue(context.Context, *GetProviderCatalogueRequest) (*GetProviderCatalogueResponse, error)
-	// Gets information about a single dataset.
-	GetProviderDataset(context.Context, *GetProviderDatasetRequest) (*GetProviderDatasetResponse, error)
-	mustEmbedUnimplementedCatalogueControlServiceServer()
-}
-
-// UnimplementedCatalogueControlServiceServer must be embedded to have
-// forward compatible implementations.
-//
-// NOTE: this should be embedded by value instead of pointer to avoid a nil
-// pointer dereference when methods are called.
-type UnimplementedCatalogueControlServiceServer struct{}
-
-func (UnimplementedCatalogueControlServiceServer) GetProviderCatalogue(context.Context, *GetProviderCatalogueRequest) (*GetProviderCatalogueResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetProviderCatalogue not implemented")
-}
-func (UnimplementedCatalogueControlServiceServer) GetProviderDataset(context.Context, *GetProviderDatasetRequest) (*GetProviderDatasetResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetProviderDataset not implemented")
-}
-func (UnimplementedCatalogueControlServiceServer) mustEmbedUnimplementedCatalogueControlServiceServer() {
-}
-func (UnimplementedCatalogueControlServiceServer) testEmbeddedByValue() {}
-
-// UnsafeCatalogueControlServiceServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to CatalogueControlServiceServer will
-// result in compilation errors.
-type UnsafeCatalogueControlServiceServer interface {
-	mustEmbedUnimplementedCatalogueControlServiceServer()
-}
-
-func RegisterCatalogueControlServiceServer(s grpc.ServiceRegistrar, srv CatalogueControlServiceServer) {
-	// If the following call pancis, it indicates UnimplementedCatalogueControlServiceServer was
-	// embedded by pointer and is nil.  This will cause panics if an
-	// unimplemented method is ever invoked, so we test this at initialization
-	// time to prevent it from happening at runtime later due to I/O.
-	if t, ok := srv.(interface{ testEmbeddedByValue() }); ok {
-		t.testEmbeddedByValue()
-	}
-	s.RegisterService(&CatalogueControlService_ServiceDesc, srv)
-}
-
-func _CatalogueControlService_GetProviderCatalogue_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetProviderCatalogueRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(CatalogueControlServiceServer).GetProviderCatalogue(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: CatalogueControlService_GetProviderCatalogue_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(CatalogueControlServiceServer).GetProviderCatalogue(ctx, req.(*GetProviderCatalogueRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _CatalogueControlService_GetProviderDataset_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetProviderDatasetRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(CatalogueControlServiceServer).GetProviderDataset(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: CatalogueControlService_GetProviderDataset_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(CatalogueControlServiceServer).GetProviderDataset(ctx, req.(*GetProviderDatasetRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-// CatalogueControlService_ServiceDesc is the grpc.ServiceDesc for CatalogueControlService service.
-// It's only intended for direct use with grpc.RegisterService,
-// and not to be introspected or modified (even as a copy)
-var CatalogueControlService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "dsp.v1alpha2.CatalogueControlService",
-	HandlerType: (*CatalogueControlServiceServer)(nil),
-	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "GetProviderCatalogue",
-			Handler:    _CatalogueControlService_GetProviderCatalogue_Handler,
+			Handler:    _ControlService_GetProviderCatalogue_Handler,
 		},
 		{
 			MethodName: "GetProviderDataset",
-			Handler:    _CatalogueControlService_GetProviderDataset_Handler,
-		},
-	},
-	Streams:  []grpc.StreamDesc{},
-	Metadata: "dsp/v1alpha2/control.proto",
-}
-
-const (
-	ContractControlService_Request_FullMethodName   = "/dsp.v1alpha2.ContractControlService/Request"
-	ContractControlService_Offer_FullMethodName     = "/dsp.v1alpha2.ContractControlService/Offer"
-	ContractControlService_Accept_FullMethodName    = "/dsp.v1alpha2.ContractControlService/Accept"
-	ContractControlService_Agree_FullMethodName     = "/dsp.v1alpha2.ContractControlService/Agree"
-	ContractControlService_Verify_FullMethodName    = "/dsp.v1alpha2.ContractControlService/Verify"
-	ContractControlService_Finalize_FullMethodName  = "/dsp.v1alpha2.ContractControlService/Finalize"
-	ContractControlService_Terminate_FullMethodName = "/dsp.v1alpha2.ContractControlService/Terminate"
-)
-
-// ContractControlServiceClient is the client API for ContractControlService service.
-//
-// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
-//
-// ContractControlService contains low level methods to send contract negotiation operations.
-type ContractControlServiceClient interface {
-	// Request sends a ContractRequestMessage.
-	Request(ctx context.Context, in *RequestRequest, opts ...grpc.CallOption) (*RequestResponse, error)
-	// Offer sends a ContractOfferMessage.
-	Offer(ctx context.Context, in *OfferRequest, opts ...grpc.CallOption) (*OfferResponse, error)
-	// Accept sends an accepted event message.
-	Accept(ctx context.Context, in *AcceptRequest, opts ...grpc.CallOption) (*AcceptResponse, error)
-	// Agree sends a ContractAcceptedMessage.
-	Agree(ctx context.Context, in *AgreeRequest, opts ...grpc.CallOption) (*AgreeResponse, error)
-	// Verify sends a ContractVerificationMessage.
-	Verify(ctx context.Context, in *VerifyRequest, opts ...grpc.CallOption) (*VerifyResponse, error)
-	// Finalize sends a finalization event.
-	Finalize(ctx context.Context, in *FinalizeRequest, opts ...grpc.CallOption) (*FinalizeResponse, error)
-	// Terminate sends a ContractTerminationMessage.
-	Terminate(ctx context.Context, in *TerminateRequest, opts ...grpc.CallOption) (*TerminateResponse, error)
-}
-
-type contractControlServiceClient struct {
-	cc grpc.ClientConnInterface
-}
-
-func NewContractControlServiceClient(cc grpc.ClientConnInterface) ContractControlServiceClient {
-	return &contractControlServiceClient{cc}
-}
-
-func (c *contractControlServiceClient) Request(ctx context.Context, in *RequestRequest, opts ...grpc.CallOption) (*RequestResponse, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(RequestResponse)
-	err := c.cc.Invoke(ctx, ContractControlService_Request_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *contractControlServiceClient) Offer(ctx context.Context, in *OfferRequest, opts ...grpc.CallOption) (*OfferResponse, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(OfferResponse)
-	err := c.cc.Invoke(ctx, ContractControlService_Offer_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *contractControlServiceClient) Accept(ctx context.Context, in *AcceptRequest, opts ...grpc.CallOption) (*AcceptResponse, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(AcceptResponse)
-	err := c.cc.Invoke(ctx, ContractControlService_Accept_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *contractControlServiceClient) Agree(ctx context.Context, in *AgreeRequest, opts ...grpc.CallOption) (*AgreeResponse, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(AgreeResponse)
-	err := c.cc.Invoke(ctx, ContractControlService_Agree_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *contractControlServiceClient) Verify(ctx context.Context, in *VerifyRequest, opts ...grpc.CallOption) (*VerifyResponse, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(VerifyResponse)
-	err := c.cc.Invoke(ctx, ContractControlService_Verify_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *contractControlServiceClient) Finalize(ctx context.Context, in *FinalizeRequest, opts ...grpc.CallOption) (*FinalizeResponse, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(FinalizeResponse)
-	err := c.cc.Invoke(ctx, ContractControlService_Finalize_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *contractControlServiceClient) Terminate(ctx context.Context, in *TerminateRequest, opts ...grpc.CallOption) (*TerminateResponse, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(TerminateResponse)
-	err := c.cc.Invoke(ctx, ContractControlService_Terminate_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-// ContractControlServiceServer is the server API for ContractControlService service.
-// All implementations must embed UnimplementedContractControlServiceServer
-// for forward compatibility.
-//
-// ContractControlService contains low level methods to send contract negotiation operations.
-type ContractControlServiceServer interface {
-	// Request sends a ContractRequestMessage.
-	Request(context.Context, *RequestRequest) (*RequestResponse, error)
-	// Offer sends a ContractOfferMessage.
-	Offer(context.Context, *OfferRequest) (*OfferResponse, error)
-	// Accept sends an accepted event message.
-	Accept(context.Context, *AcceptRequest) (*AcceptResponse, error)
-	// Agree sends a ContractAcceptedMessage.
-	Agree(context.Context, *AgreeRequest) (*AgreeResponse, error)
-	// Verify sends a ContractVerificationMessage.
-	Verify(context.Context, *VerifyRequest) (*VerifyResponse, error)
-	// Finalize sends a finalization event.
-	Finalize(context.Context, *FinalizeRequest) (*FinalizeResponse, error)
-	// Terminate sends a ContractTerminationMessage.
-	Terminate(context.Context, *TerminateRequest) (*TerminateResponse, error)
-	mustEmbedUnimplementedContractControlServiceServer()
-}
-
-// UnimplementedContractControlServiceServer must be embedded to have
-// forward compatible implementations.
-//
-// NOTE: this should be embedded by value instead of pointer to avoid a nil
-// pointer dereference when methods are called.
-type UnimplementedContractControlServiceServer struct{}
-
-func (UnimplementedContractControlServiceServer) Request(context.Context, *RequestRequest) (*RequestResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Request not implemented")
-}
-func (UnimplementedContractControlServiceServer) Offer(context.Context, *OfferRequest) (*OfferResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Offer not implemented")
-}
-func (UnimplementedContractControlServiceServer) Accept(context.Context, *AcceptRequest) (*AcceptResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Accept not implemented")
-}
-func (UnimplementedContractControlServiceServer) Agree(context.Context, *AgreeRequest) (*AgreeResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Agree not implemented")
-}
-func (UnimplementedContractControlServiceServer) Verify(context.Context, *VerifyRequest) (*VerifyResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Verify not implemented")
-}
-func (UnimplementedContractControlServiceServer) Finalize(context.Context, *FinalizeRequest) (*FinalizeResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Finalize not implemented")
-}
-func (UnimplementedContractControlServiceServer) Terminate(context.Context, *TerminateRequest) (*TerminateResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Terminate not implemented")
-}
-func (UnimplementedContractControlServiceServer) mustEmbedUnimplementedContractControlServiceServer() {
-}
-func (UnimplementedContractControlServiceServer) testEmbeddedByValue() {}
-
-// UnsafeContractControlServiceServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to ContractControlServiceServer will
-// result in compilation errors.
-type UnsafeContractControlServiceServer interface {
-	mustEmbedUnimplementedContractControlServiceServer()
-}
-
-func RegisterContractControlServiceServer(s grpc.ServiceRegistrar, srv ContractControlServiceServer) {
-	// If the following call pancis, it indicates UnimplementedContractControlServiceServer was
-	// embedded by pointer and is nil.  This will cause panics if an
-	// unimplemented method is ever invoked, so we test this at initialization
-	// time to prevent it from happening at runtime later due to I/O.
-	if t, ok := srv.(interface{ testEmbeddedByValue() }); ok {
-		t.testEmbeddedByValue()
-	}
-	s.RegisterService(&ContractControlService_ServiceDesc, srv)
-}
-
-func _ContractControlService_Request_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(RequestRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(ContractControlServiceServer).Request(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: ContractControlService_Request_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ContractControlServiceServer).Request(ctx, req.(*RequestRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _ContractControlService_Offer_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(OfferRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(ContractControlServiceServer).Offer(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: ContractControlService_Offer_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ContractControlServiceServer).Offer(ctx, req.(*OfferRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _ContractControlService_Accept_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(AcceptRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(ContractControlServiceServer).Accept(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: ContractControlService_Accept_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ContractControlServiceServer).Accept(ctx, req.(*AcceptRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _ContractControlService_Agree_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(AgreeRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(ContractControlServiceServer).Agree(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: ContractControlService_Agree_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ContractControlServiceServer).Agree(ctx, req.(*AgreeRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _ContractControlService_Verify_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(VerifyRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(ContractControlServiceServer).Verify(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: ContractControlService_Verify_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ContractControlServiceServer).Verify(ctx, req.(*VerifyRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _ContractControlService_Finalize_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(FinalizeRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(ContractControlServiceServer).Finalize(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: ContractControlService_Finalize_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ContractControlServiceServer).Finalize(ctx, req.(*FinalizeRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _ContractControlService_Terminate_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(TerminateRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(ContractControlServiceServer).Terminate(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: ContractControlService_Terminate_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ContractControlServiceServer).Terminate(ctx, req.(*TerminateRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-// ContractControlService_ServiceDesc is the grpc.ServiceDesc for ContractControlService service.
-// It's only intended for direct use with grpc.RegisterService,
-// and not to be introspected or modified (even as a copy)
-var ContractControlService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "dsp.v1alpha2.ContractControlService",
-	HandlerType: (*ContractControlServiceServer)(nil),
-	Methods: []grpc.MethodDesc{
-		{
-			MethodName: "Request",
-			Handler:    _ContractControlService_Request_Handler,
+			Handler:    _ControlService_GetProviderDataset_Handler,
 		},
 		{
-			MethodName: "Offer",
-			Handler:    _ContractControlService_Offer_Handler,
+			MethodName: "ContractRequest",
+			Handler:    _ControlService_ContractRequest_Handler,
 		},
 		{
-			MethodName: "Accept",
-			Handler:    _ContractControlService_Accept_Handler,
+			MethodName: "ContractOffer",
+			Handler:    _ControlService_ContractOffer_Handler,
 		},
 		{
-			MethodName: "Agree",
-			Handler:    _ContractControlService_Agree_Handler,
+			MethodName: "ContractAccept",
+			Handler:    _ControlService_ContractAccept_Handler,
 		},
 		{
-			MethodName: "Verify",
-			Handler:    _ContractControlService_Verify_Handler,
+			MethodName: "ContractAgree",
+			Handler:    _ControlService_ContractAgree_Handler,
 		},
 		{
-			MethodName: "Finalize",
-			Handler:    _ContractControlService_Finalize_Handler,
+			MethodName: "ContractVerify",
+			Handler:    _ControlService_ContractVerify_Handler,
 		},
 		{
-			MethodName: "Terminate",
-			Handler:    _ContractControlService_Terminate_Handler,
+			MethodName: "ContractFinalize",
+			Handler:    _ControlService_ContractFinalize_Handler,
 		},
-	},
-	Streams:  []grpc.StreamDesc{},
-	Metadata: "dsp/v1alpha2/control.proto",
-}
-
-const (
-	TransferControlService_SignalTransferComplete_FullMethodName  = "/dsp.v1alpha2.TransferControlService/SignalTransferComplete"
-	TransferControlService_SignalTransferCancelled_FullMethodName = "/dsp.v1alpha2.TransferControlService/SignalTransferCancelled"
-	TransferControlService_SignalTransferSuspend_FullMethodName   = "/dsp.v1alpha2.TransferControlService/SignalTransferSuspend"
-	TransferControlService_SignalTransferResume_FullMethodName    = "/dsp.v1alpha2.TransferControlService/SignalTransferResume"
-)
-
-// TransferControlServiceClient is the client API for TransferControlService service.
-//
-// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
-//
-// TransferControlService contains low level methods to send transfer negotiation operations.
-type TransferControlServiceClient interface {
-	// Tells provider that we have finished our transfer.
-	SignalTransferComplete(ctx context.Context, in *SignalTransferCompleteRequest, opts ...grpc.CallOption) (*SignalTransferCompleteResponse, error)
-	// Tells provider to cancel file transfer
-	SignalTransferCancelled(ctx context.Context, in *SignalTransferCancelledRequest, opts ...grpc.CallOption) (*SignalTransferCancelledResponse, error)
-	// Tells provider to suspend file transfer
-	SignalTransferSuspend(ctx context.Context, in *SignalTransferSuspendRequest, opts ...grpc.CallOption) (*SignalTransferSuspendResponse, error)
-	// Tells provider to resume file transfer
-	SignalTransferResume(ctx context.Context, in *SignalTransferResumeRequest, opts ...grpc.CallOption) (*SignalTransferResumeResponse, error)
-}
-
-type transferControlServiceClient struct {
-	cc grpc.ClientConnInterface
-}
-
-func NewTransferControlServiceClient(cc grpc.ClientConnInterface) TransferControlServiceClient {
-	return &transferControlServiceClient{cc}
-}
-
-func (c *transferControlServiceClient) SignalTransferComplete(ctx context.Context, in *SignalTransferCompleteRequest, opts ...grpc.CallOption) (*SignalTransferCompleteResponse, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(SignalTransferCompleteResponse)
-	err := c.cc.Invoke(ctx, TransferControlService_SignalTransferComplete_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *transferControlServiceClient) SignalTransferCancelled(ctx context.Context, in *SignalTransferCancelledRequest, opts ...grpc.CallOption) (*SignalTransferCancelledResponse, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(SignalTransferCancelledResponse)
-	err := c.cc.Invoke(ctx, TransferControlService_SignalTransferCancelled_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *transferControlServiceClient) SignalTransferSuspend(ctx context.Context, in *SignalTransferSuspendRequest, opts ...grpc.CallOption) (*SignalTransferSuspendResponse, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(SignalTransferSuspendResponse)
-	err := c.cc.Invoke(ctx, TransferControlService_SignalTransferSuspend_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *transferControlServiceClient) SignalTransferResume(ctx context.Context, in *SignalTransferResumeRequest, opts ...grpc.CallOption) (*SignalTransferResumeResponse, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(SignalTransferResumeResponse)
-	err := c.cc.Invoke(ctx, TransferControlService_SignalTransferResume_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-// TransferControlServiceServer is the server API for TransferControlService service.
-// All implementations must embed UnimplementedTransferControlServiceServer
-// for forward compatibility.
-//
-// TransferControlService contains low level methods to send transfer negotiation operations.
-type TransferControlServiceServer interface {
-	// Tells provider that we have finished our transfer.
-	SignalTransferComplete(context.Context, *SignalTransferCompleteRequest) (*SignalTransferCompleteResponse, error)
-	// Tells provider to cancel file transfer
-	SignalTransferCancelled(context.Context, *SignalTransferCancelledRequest) (*SignalTransferCancelledResponse, error)
-	// Tells provider to suspend file transfer
-	SignalTransferSuspend(context.Context, *SignalTransferSuspendRequest) (*SignalTransferSuspendResponse, error)
-	// Tells provider to resume file transfer
-	SignalTransferResume(context.Context, *SignalTransferResumeRequest) (*SignalTransferResumeResponse, error)
-	mustEmbedUnimplementedTransferControlServiceServer()
-}
-
-// UnimplementedTransferControlServiceServer must be embedded to have
-// forward compatible implementations.
-//
-// NOTE: this should be embedded by value instead of pointer to avoid a nil
-// pointer dereference when methods are called.
-type UnimplementedTransferControlServiceServer struct{}
-
-func (UnimplementedTransferControlServiceServer) SignalTransferComplete(context.Context, *SignalTransferCompleteRequest) (*SignalTransferCompleteResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method SignalTransferComplete not implemented")
-}
-func (UnimplementedTransferControlServiceServer) SignalTransferCancelled(context.Context, *SignalTransferCancelledRequest) (*SignalTransferCancelledResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method SignalTransferCancelled not implemented")
-}
-func (UnimplementedTransferControlServiceServer) SignalTransferSuspend(context.Context, *SignalTransferSuspendRequest) (*SignalTransferSuspendResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method SignalTransferSuspend not implemented")
-}
-func (UnimplementedTransferControlServiceServer) SignalTransferResume(context.Context, *SignalTransferResumeRequest) (*SignalTransferResumeResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method SignalTransferResume not implemented")
-}
-func (UnimplementedTransferControlServiceServer) mustEmbedUnimplementedTransferControlServiceServer() {
-}
-func (UnimplementedTransferControlServiceServer) testEmbeddedByValue() {}
-
-// UnsafeTransferControlServiceServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to TransferControlServiceServer will
-// result in compilation errors.
-type UnsafeTransferControlServiceServer interface {
-	mustEmbedUnimplementedTransferControlServiceServer()
-}
-
-func RegisterTransferControlServiceServer(s grpc.ServiceRegistrar, srv TransferControlServiceServer) {
-	// If the following call pancis, it indicates UnimplementedTransferControlServiceServer was
-	// embedded by pointer and is nil.  This will cause panics if an
-	// unimplemented method is ever invoked, so we test this at initialization
-	// time to prevent it from happening at runtime later due to I/O.
-	if t, ok := srv.(interface{ testEmbeddedByValue() }); ok {
-		t.testEmbeddedByValue()
-	}
-	s.RegisterService(&TransferControlService_ServiceDesc, srv)
-}
-
-func _TransferControlService_SignalTransferComplete_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(SignalTransferCompleteRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(TransferControlServiceServer).SignalTransferComplete(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: TransferControlService_SignalTransferComplete_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(TransferControlServiceServer).SignalTransferComplete(ctx, req.(*SignalTransferCompleteRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _TransferControlService_SignalTransferCancelled_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(SignalTransferCancelledRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(TransferControlServiceServer).SignalTransferCancelled(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: TransferControlService_SignalTransferCancelled_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(TransferControlServiceServer).SignalTransferCancelled(ctx, req.(*SignalTransferCancelledRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _TransferControlService_SignalTransferSuspend_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(SignalTransferSuspendRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(TransferControlServiceServer).SignalTransferSuspend(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: TransferControlService_SignalTransferSuspend_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(TransferControlServiceServer).SignalTransferSuspend(ctx, req.(*SignalTransferSuspendRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _TransferControlService_SignalTransferResume_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(SignalTransferResumeRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(TransferControlServiceServer).SignalTransferResume(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: TransferControlService_SignalTransferResume_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(TransferControlServiceServer).SignalTransferResume(ctx, req.(*SignalTransferResumeRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-// TransferControlService_ServiceDesc is the grpc.ServiceDesc for TransferControlService service.
-// It's only intended for direct use with grpc.RegisterService,
-// and not to be introspected or modified (even as a copy)
-var TransferControlService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "dsp.v1alpha2.TransferControlService",
-	HandlerType: (*TransferControlServiceServer)(nil),
-	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "ContractTerminate",
+			Handler:    _ControlService_ContractTerminate_Handler,
+		},
 		{
 			MethodName: "SignalTransferComplete",
-			Handler:    _TransferControlService_SignalTransferComplete_Handler,
+			Handler:    _ControlService_SignalTransferComplete_Handler,
 		},
 		{
 			MethodName: "SignalTransferCancelled",
-			Handler:    _TransferControlService_SignalTransferCancelled_Handler,
+			Handler:    _ControlService_SignalTransferCancelled_Handler,
 		},
 		{
 			MethodName: "SignalTransferSuspend",
-			Handler:    _TransferControlService_SignalTransferSuspend_Handler,
+			Handler:    _ControlService_SignalTransferSuspend_Handler,
 		},
 		{
 			MethodName: "SignalTransferResume",
-			Handler:    _TransferControlService_SignalTransferResume_Handler,
+			Handler:    _ControlService_SignalTransferResume_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

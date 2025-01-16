@@ -135,9 +135,9 @@ final $typed_data.Uint8List getProviderDatasetDownloadInformationResponseDescrip
     'lzaF9pbmZvGAEgASgLMhkuZHNwLnYxYWxwaGEyLlB1Ymxpc2hJbmZvUgtwdWJsaXNoSW5mbxIf'
     'Cgt0cmFuc2Zlcl9pZBgCIAEoCVIKdHJhbnNmZXJJZA==');
 
-@$core.Deprecated('Use requestRequestDescriptor instead')
-const RequestRequest$json = {
-  '1': 'RequestRequest',
+@$core.Deprecated('Use contractRequestRequestDescriptor instead')
+const ContractRequestRequest$json = {
+  '1': 'ContractRequestRequest',
   '2': [
     {'1': 'offer', '3': 1, '4': 1, '5': 9, '10': 'offer'},
     {'1': 'pid', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'pid', '17': true},
@@ -149,24 +149,24 @@ const RequestRequest$json = {
   ],
 };
 
-/// Descriptor for `RequestRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List requestRequestDescriptor = $convert.base64Decode(
-    'Cg5SZXF1ZXN0UmVxdWVzdBIUCgVvZmZlchgBIAEoCVIFb2ZmZXISFQoDcGlkGAIgASgJSABSA3'
-    'BpZIgBARI0ChNwYXJ0aWNpcGFudF9hZGRyZXNzGAMgASgJSAFSEnBhcnRpY2lwYW50QWRkcmVz'
-    'c4gBAUIGCgRfcGlkQhYKFF9wYXJ0aWNpcGFudF9hZGRyZXNz');
+/// Descriptor for `ContractRequestRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List contractRequestRequestDescriptor = $convert.base64Decode(
+    'ChZDb250cmFjdFJlcXVlc3RSZXF1ZXN0EhQKBW9mZmVyGAEgASgJUgVvZmZlchIVCgNwaWQYAi'
+    'ABKAlIAFIDcGlkiAEBEjQKE3BhcnRpY2lwYW50X2FkZHJlc3MYAyABKAlIAVIScGFydGljaXBh'
+    'bnRBZGRyZXNziAEBQgYKBF9waWRCFgoUX3BhcnRpY2lwYW50X2FkZHJlc3M=');
 
-@$core.Deprecated('Use requestResponseDescriptor instead')
-const RequestResponse$json = {
-  '1': 'RequestResponse',
+@$core.Deprecated('Use contractRequestResponseDescriptor instead')
+const ContractRequestResponse$json = {
+  '1': 'ContractRequestResponse',
 };
 
-/// Descriptor for `RequestResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List requestResponseDescriptor = $convert.base64Decode(
-    'Cg9SZXF1ZXN0UmVzcG9uc2U=');
+/// Descriptor for `ContractRequestResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List contractRequestResponseDescriptor = $convert.base64Decode(
+    'ChdDb250cmFjdFJlcXVlc3RSZXNwb25zZQ==');
 
-@$core.Deprecated('Use offerRequestDescriptor instead')
-const OfferRequest$json = {
-  '1': 'OfferRequest',
+@$core.Deprecated('Use contractOfferRequestDescriptor instead')
+const ContractOfferRequest$json = {
+  '1': 'ContractOfferRequest',
   '2': [
     {'1': 'offer', '3': 1, '4': 1, '5': 9, '10': 'offer'},
     {'1': 'pid', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'pid', '17': true},
@@ -178,110 +178,110 @@ const OfferRequest$json = {
   ],
 };
 
-/// Descriptor for `OfferRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List offerRequestDescriptor = $convert.base64Decode(
-    'CgxPZmZlclJlcXVlc3QSFAoFb2ZmZXIYASABKAlSBW9mZmVyEhUKA3BpZBgCIAEoCUgAUgNwaW'
-    'SIAQESNAoTcGFydGljaXBhbnRfYWRkcmVzcxgDIAEoCUgBUhJwYXJ0aWNpcGFudEFkZHJlc3OI'
-    'AQFCBgoEX3BpZEIWChRfcGFydGljaXBhbnRfYWRkcmVzcw==');
+/// Descriptor for `ContractOfferRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List contractOfferRequestDescriptor = $convert.base64Decode(
+    'ChRDb250cmFjdE9mZmVyUmVxdWVzdBIUCgVvZmZlchgBIAEoCVIFb2ZmZXISFQoDcGlkGAIgAS'
+    'gJSABSA3BpZIgBARI0ChNwYXJ0aWNpcGFudF9hZGRyZXNzGAMgASgJSAFSEnBhcnRpY2lwYW50'
+    'QWRkcmVzc4gBAUIGCgRfcGlkQhYKFF9wYXJ0aWNpcGFudF9hZGRyZXNz');
 
-@$core.Deprecated('Use offerResponseDescriptor instead')
-const OfferResponse$json = {
-  '1': 'OfferResponse',
+@$core.Deprecated('Use contractOfferResponseDescriptor instead')
+const ContractOfferResponse$json = {
+  '1': 'ContractOfferResponse',
 };
 
-/// Descriptor for `OfferResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List offerResponseDescriptor = $convert.base64Decode(
-    'Cg1PZmZlclJlc3BvbnNl');
+/// Descriptor for `ContractOfferResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List contractOfferResponseDescriptor = $convert.base64Decode(
+    'ChVDb250cmFjdE9mZmVyUmVzcG9uc2U=');
 
-@$core.Deprecated('Use acceptRequestDescriptor instead')
-const AcceptRequest$json = {
-  '1': 'AcceptRequest',
+@$core.Deprecated('Use contractAcceptRequestDescriptor instead')
+const ContractAcceptRequest$json = {
+  '1': 'ContractAcceptRequest',
   '2': [
     {'1': 'pid', '3': 1, '4': 1, '5': 9, '10': 'pid'},
   ],
 };
 
-/// Descriptor for `AcceptRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List acceptRequestDescriptor = $convert.base64Decode(
-    'Cg1BY2NlcHRSZXF1ZXN0EhAKA3BpZBgBIAEoCVIDcGlk');
+/// Descriptor for `ContractAcceptRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List contractAcceptRequestDescriptor = $convert.base64Decode(
+    'ChVDb250cmFjdEFjY2VwdFJlcXVlc3QSEAoDcGlkGAEgASgJUgNwaWQ=');
 
-@$core.Deprecated('Use acceptResponseDescriptor instead')
-const AcceptResponse$json = {
-  '1': 'AcceptResponse',
+@$core.Deprecated('Use contractAcceptResponseDescriptor instead')
+const ContractAcceptResponse$json = {
+  '1': 'ContractAcceptResponse',
 };
 
-/// Descriptor for `AcceptResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List acceptResponseDescriptor = $convert.base64Decode(
-    'Cg5BY2NlcHRSZXNwb25zZQ==');
+/// Descriptor for `ContractAcceptResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List contractAcceptResponseDescriptor = $convert.base64Decode(
+    'ChZDb250cmFjdEFjY2VwdFJlc3BvbnNl');
 
-@$core.Deprecated('Use agreeRequestDescriptor instead')
-const AgreeRequest$json = {
-  '1': 'AgreeRequest',
+@$core.Deprecated('Use contractAgreeRequestDescriptor instead')
+const ContractAgreeRequest$json = {
+  '1': 'ContractAgreeRequest',
   '2': [
     {'1': 'agreement', '3': 1, '4': 1, '5': 9, '10': 'agreement'},
     {'1': 'pid', '3': 2, '4': 1, '5': 9, '10': 'pid'},
   ],
 };
 
-/// Descriptor for `AgreeRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List agreeRequestDescriptor = $convert.base64Decode(
-    'CgxBZ3JlZVJlcXVlc3QSHAoJYWdyZWVtZW50GAEgASgJUglhZ3JlZW1lbnQSEAoDcGlkGAIgAS'
-    'gJUgNwaWQ=');
+/// Descriptor for `ContractAgreeRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List contractAgreeRequestDescriptor = $convert.base64Decode(
+    'ChRDb250cmFjdEFncmVlUmVxdWVzdBIcCglhZ3JlZW1lbnQYASABKAlSCWFncmVlbWVudBIQCg'
+    'NwaWQYAiABKAlSA3BpZA==');
 
-@$core.Deprecated('Use agreeResponseDescriptor instead')
-const AgreeResponse$json = {
-  '1': 'AgreeResponse',
+@$core.Deprecated('Use contractAgreeResponseDescriptor instead')
+const ContractAgreeResponse$json = {
+  '1': 'ContractAgreeResponse',
 };
 
-/// Descriptor for `AgreeResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List agreeResponseDescriptor = $convert.base64Decode(
-    'Cg1BZ3JlZVJlc3BvbnNl');
+/// Descriptor for `ContractAgreeResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List contractAgreeResponseDescriptor = $convert.base64Decode(
+    'ChVDb250cmFjdEFncmVlUmVzcG9uc2U=');
 
-@$core.Deprecated('Use verifyRequestDescriptor instead')
-const VerifyRequest$json = {
-  '1': 'VerifyRequest',
+@$core.Deprecated('Use contractVerifyRequestDescriptor instead')
+const ContractVerifyRequest$json = {
+  '1': 'ContractVerifyRequest',
   '2': [
     {'1': 'pid', '3': 1, '4': 1, '5': 9, '10': 'pid'},
   ],
 };
 
-/// Descriptor for `VerifyRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List verifyRequestDescriptor = $convert.base64Decode(
-    'Cg1WZXJpZnlSZXF1ZXN0EhAKA3BpZBgBIAEoCVIDcGlk');
+/// Descriptor for `ContractVerifyRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List contractVerifyRequestDescriptor = $convert.base64Decode(
+    'ChVDb250cmFjdFZlcmlmeVJlcXVlc3QSEAoDcGlkGAEgASgJUgNwaWQ=');
 
-@$core.Deprecated('Use verifyResponseDescriptor instead')
-const VerifyResponse$json = {
-  '1': 'VerifyResponse',
+@$core.Deprecated('Use contractVerifyResponseDescriptor instead')
+const ContractVerifyResponse$json = {
+  '1': 'ContractVerifyResponse',
 };
 
-/// Descriptor for `VerifyResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List verifyResponseDescriptor = $convert.base64Decode(
-    'Cg5WZXJpZnlSZXNwb25zZQ==');
+/// Descriptor for `ContractVerifyResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List contractVerifyResponseDescriptor = $convert.base64Decode(
+    'ChZDb250cmFjdFZlcmlmeVJlc3BvbnNl');
 
-@$core.Deprecated('Use finalizeRequestDescriptor instead')
-const FinalizeRequest$json = {
-  '1': 'FinalizeRequest',
+@$core.Deprecated('Use contractFinalizeRequestDescriptor instead')
+const ContractFinalizeRequest$json = {
+  '1': 'ContractFinalizeRequest',
   '2': [
     {'1': 'pid', '3': 1, '4': 1, '5': 9, '10': 'pid'},
   ],
 };
 
-/// Descriptor for `FinalizeRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List finalizeRequestDescriptor = $convert.base64Decode(
-    'Cg9GaW5hbGl6ZVJlcXVlc3QSEAoDcGlkGAEgASgJUgNwaWQ=');
+/// Descriptor for `ContractFinalizeRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List contractFinalizeRequestDescriptor = $convert.base64Decode(
+    'ChdDb250cmFjdEZpbmFsaXplUmVxdWVzdBIQCgNwaWQYASABKAlSA3BpZA==');
 
-@$core.Deprecated('Use finalizeResponseDescriptor instead')
-const FinalizeResponse$json = {
-  '1': 'FinalizeResponse',
+@$core.Deprecated('Use contractFinalizeResponseDescriptor instead')
+const ContractFinalizeResponse$json = {
+  '1': 'ContractFinalizeResponse',
 };
 
-/// Descriptor for `FinalizeResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List finalizeResponseDescriptor = $convert.base64Decode(
-    'ChBGaW5hbGl6ZVJlc3BvbnNl');
+/// Descriptor for `ContractFinalizeResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List contractFinalizeResponseDescriptor = $convert.base64Decode(
+    'ChhDb250cmFjdEZpbmFsaXplUmVzcG9uc2U=');
 
-@$core.Deprecated('Use terminateRequestDescriptor instead')
-const TerminateRequest$json = {
-  '1': 'TerminateRequest',
+@$core.Deprecated('Use contractTerminateRequestDescriptor instead')
+const ContractTerminateRequest$json = {
+  '1': 'ContractTerminateRequest',
   '2': [
     {'1': 'pid', '3': 1, '4': 1, '5': 9, '10': 'pid'},
     {'1': 'code', '3': 2, '4': 1, '5': 9, '10': 'code'},
@@ -289,19 +289,19 @@ const TerminateRequest$json = {
   ],
 };
 
-/// Descriptor for `TerminateRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List terminateRequestDescriptor = $convert.base64Decode(
-    'ChBUZXJtaW5hdGVSZXF1ZXN0EhAKA3BpZBgBIAEoCVIDcGlkEhIKBGNvZGUYAiABKAlSBGNvZG'
-    'USFgoGcmVhc29uGAMgAygJUgZyZWFzb24=');
+/// Descriptor for `ContractTerminateRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List contractTerminateRequestDescriptor = $convert.base64Decode(
+    'ChhDb250cmFjdFRlcm1pbmF0ZVJlcXVlc3QSEAoDcGlkGAEgASgJUgNwaWQSEgoEY29kZRgCIA'
+    'EoCVIEY29kZRIWCgZyZWFzb24YAyADKAlSBnJlYXNvbg==');
 
-@$core.Deprecated('Use terminateResponseDescriptor instead')
-const TerminateResponse$json = {
-  '1': 'TerminateResponse',
+@$core.Deprecated('Use contractTerminateResponseDescriptor instead')
+const ContractTerminateResponse$json = {
+  '1': 'ContractTerminateResponse',
 };
 
-/// Descriptor for `TerminateResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List terminateResponseDescriptor = $convert.base64Decode(
-    'ChFUZXJtaW5hdGVSZXNwb25zZQ==');
+/// Descriptor for `ContractTerminateResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List contractTerminateResponseDescriptor = $convert.base64Decode(
+    'ChlDb250cmFjdFRlcm1pbmF0ZVJlc3BvbnNl');
 
 @$core.Deprecated('Use signalTransferCompleteRequestDescriptor instead')
 const SignalTransferCompleteRequest$json = {

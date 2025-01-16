@@ -468,10 +468,10 @@ class GetProviderDatasetDownloadInformationResponse extends $pb.GeneratedMessage
   void clearTransferId() => clearField(2);
 }
 
-/// RequestRequest contains the offer, and a pid if this is needs to send a request for an already
+/// ContractRequestRequest contains the offer, and a pid if this is needs to send a request for an already
 /// existing offer, or a participant_address if this is a request for a new offer.
-class RequestRequest extends $pb.GeneratedMessage {
-  factory RequestRequest({
+class ContractRequestRequest extends $pb.GeneratedMessage {
+  factory ContractRequestRequest({
     $core.String? offer,
     $core.String? pid,
     $core.String? participantAddress,
@@ -488,11 +488,11 @@ class RequestRequest extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  RequestRequest._() : super();
-  factory RequestRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory RequestRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  ContractRequestRequest._() : super();
+  factory ContractRequestRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ContractRequestRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'RequestRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContractRequestRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'offer')
     ..aOS(2, _omitFieldNames ? '' : 'pid')
     ..aOS(3, _omitFieldNames ? '' : 'participantAddress')
@@ -503,22 +503,22 @@ class RequestRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  RequestRequest clone() => RequestRequest()..mergeFromMessage(this);
+  ContractRequestRequest clone() => ContractRequestRequest()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  RequestRequest copyWith(void Function(RequestRequest) updates) => super.copyWith((message) => updates(message as RequestRequest)) as RequestRequest;
+  ContractRequestRequest copyWith(void Function(ContractRequestRequest) updates) => super.copyWith((message) => updates(message as ContractRequestRequest)) as ContractRequestRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static RequestRequest create() => RequestRequest._();
-  RequestRequest createEmptyInstance() => create();
-  static $pb.PbList<RequestRequest> createRepeated() => $pb.PbList<RequestRequest>();
+  static ContractRequestRequest create() => ContractRequestRequest._();
+  ContractRequestRequest createEmptyInstance() => create();
+  static $pb.PbList<ContractRequestRequest> createRepeated() => $pb.PbList<ContractRequestRequest>();
   @$core.pragma('dart2js:noInline')
-  static RequestRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<RequestRequest>(create);
-  static RequestRequest? _defaultInstance;
+  static ContractRequestRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ContractRequestRequest>(create);
+  static ContractRequestRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get offer => $_getSZ(0);
@@ -548,13 +548,13 @@ class RequestRequest extends $pb.GeneratedMessage {
   void clearParticipantAddress() => clearField(3);
 }
 
-class RequestResponse extends $pb.GeneratedMessage {
-  factory RequestResponse() => create();
-  RequestResponse._() : super();
-  factory RequestResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory RequestResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+class ContractRequestResponse extends $pb.GeneratedMessage {
+  factory ContractRequestResponse() => create();
+  ContractRequestResponse._() : super();
+  factory ContractRequestResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ContractRequestResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'RequestResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContractRequestResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
@@ -562,28 +562,28 @@ class RequestResponse extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  RequestResponse clone() => RequestResponse()..mergeFromMessage(this);
+  ContractRequestResponse clone() => ContractRequestResponse()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  RequestResponse copyWith(void Function(RequestResponse) updates) => super.copyWith((message) => updates(message as RequestResponse)) as RequestResponse;
+  ContractRequestResponse copyWith(void Function(ContractRequestResponse) updates) => super.copyWith((message) => updates(message as ContractRequestResponse)) as ContractRequestResponse;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static RequestResponse create() => RequestResponse._();
-  RequestResponse createEmptyInstance() => create();
-  static $pb.PbList<RequestResponse> createRepeated() => $pb.PbList<RequestResponse>();
+  static ContractRequestResponse create() => ContractRequestResponse._();
+  ContractRequestResponse createEmptyInstance() => create();
+  static $pb.PbList<ContractRequestResponse> createRepeated() => $pb.PbList<ContractRequestResponse>();
   @$core.pragma('dart2js:noInline')
-  static RequestResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<RequestResponse>(create);
-  static RequestResponse? _defaultInstance;
+  static ContractRequestResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ContractRequestResponse>(create);
+  static ContractRequestResponse? _defaultInstance;
 }
 
-/// OfferRequest contains the offer, and a pid if this is needs to send an offer for an already
+/// ContractOfferRequest contains the offer, and a pid if this is needs to send an offer for an already
 /// existing offer, or a participant_address if this is a a new offer.
-class OfferRequest extends $pb.GeneratedMessage {
-  factory OfferRequest({
+class ContractOfferRequest extends $pb.GeneratedMessage {
+  factory ContractOfferRequest({
     $core.String? offer,
     $core.String? pid,
     $core.String? participantAddress,
@@ -600,11 +600,11 @@ class OfferRequest extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  OfferRequest._() : super();
-  factory OfferRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory OfferRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  ContractOfferRequest._() : super();
+  factory ContractOfferRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ContractOfferRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'OfferRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContractOfferRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'offer')
     ..aOS(2, _omitFieldNames ? '' : 'pid')
     ..aOS(3, _omitFieldNames ? '' : 'participantAddress')
@@ -615,22 +615,22 @@ class OfferRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  OfferRequest clone() => OfferRequest()..mergeFromMessage(this);
+  ContractOfferRequest clone() => ContractOfferRequest()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  OfferRequest copyWith(void Function(OfferRequest) updates) => super.copyWith((message) => updates(message as OfferRequest)) as OfferRequest;
+  ContractOfferRequest copyWith(void Function(ContractOfferRequest) updates) => super.copyWith((message) => updates(message as ContractOfferRequest)) as ContractOfferRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static OfferRequest create() => OfferRequest._();
-  OfferRequest createEmptyInstance() => create();
-  static $pb.PbList<OfferRequest> createRepeated() => $pb.PbList<OfferRequest>();
+  static ContractOfferRequest create() => ContractOfferRequest._();
+  ContractOfferRequest createEmptyInstance() => create();
+  static $pb.PbList<ContractOfferRequest> createRepeated() => $pb.PbList<ContractOfferRequest>();
   @$core.pragma('dart2js:noInline')
-  static OfferRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<OfferRequest>(create);
-  static OfferRequest? _defaultInstance;
+  static ContractOfferRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ContractOfferRequest>(create);
+  static ContractOfferRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get offer => $_getSZ(0);
@@ -660,13 +660,13 @@ class OfferRequest extends $pb.GeneratedMessage {
   void clearParticipantAddress() => clearField(3);
 }
 
-class OfferResponse extends $pb.GeneratedMessage {
-  factory OfferResponse() => create();
-  OfferResponse._() : super();
-  factory OfferResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory OfferResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+class ContractOfferResponse extends $pb.GeneratedMessage {
+  factory ContractOfferResponse() => create();
+  ContractOfferResponse._() : super();
+  factory ContractOfferResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ContractOfferResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'OfferResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContractOfferResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
@@ -674,27 +674,27 @@ class OfferResponse extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  OfferResponse clone() => OfferResponse()..mergeFromMessage(this);
+  ContractOfferResponse clone() => ContractOfferResponse()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  OfferResponse copyWith(void Function(OfferResponse) updates) => super.copyWith((message) => updates(message as OfferResponse)) as OfferResponse;
+  ContractOfferResponse copyWith(void Function(ContractOfferResponse) updates) => super.copyWith((message) => updates(message as ContractOfferResponse)) as ContractOfferResponse;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static OfferResponse create() => OfferResponse._();
-  OfferResponse createEmptyInstance() => create();
-  static $pb.PbList<OfferResponse> createRepeated() => $pb.PbList<OfferResponse>();
+  static ContractOfferResponse create() => ContractOfferResponse._();
+  ContractOfferResponse createEmptyInstance() => create();
+  static $pb.PbList<ContractOfferResponse> createRepeated() => $pb.PbList<ContractOfferResponse>();
   @$core.pragma('dart2js:noInline')
-  static OfferResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<OfferResponse>(create);
-  static OfferResponse? _defaultInstance;
+  static ContractOfferResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ContractOfferResponse>(create);
+  static ContractOfferResponse? _defaultInstance;
 }
 
-/// AcceptRequest contains the pid of the contract negotiation to be accepted.
-class AcceptRequest extends $pb.GeneratedMessage {
-  factory AcceptRequest({
+/// ContractAcceptRequest contains the pid of the contract negotiation to be accepted.
+class ContractAcceptRequest extends $pb.GeneratedMessage {
+  factory ContractAcceptRequest({
     $core.String? pid,
   }) {
     final $result = create();
@@ -703,11 +703,11 @@ class AcceptRequest extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  AcceptRequest._() : super();
-  factory AcceptRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory AcceptRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  ContractAcceptRequest._() : super();
+  factory ContractAcceptRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ContractAcceptRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AcceptRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContractAcceptRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'pid')
     ..hasRequiredFields = false
   ;
@@ -716,22 +716,22 @@ class AcceptRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  AcceptRequest clone() => AcceptRequest()..mergeFromMessage(this);
+  ContractAcceptRequest clone() => ContractAcceptRequest()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  AcceptRequest copyWith(void Function(AcceptRequest) updates) => super.copyWith((message) => updates(message as AcceptRequest)) as AcceptRequest;
+  ContractAcceptRequest copyWith(void Function(ContractAcceptRequest) updates) => super.copyWith((message) => updates(message as ContractAcceptRequest)) as ContractAcceptRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static AcceptRequest create() => AcceptRequest._();
-  AcceptRequest createEmptyInstance() => create();
-  static $pb.PbList<AcceptRequest> createRepeated() => $pb.PbList<AcceptRequest>();
+  static ContractAcceptRequest create() => ContractAcceptRequest._();
+  ContractAcceptRequest createEmptyInstance() => create();
+  static $pb.PbList<ContractAcceptRequest> createRepeated() => $pb.PbList<ContractAcceptRequest>();
   @$core.pragma('dart2js:noInline')
-  static AcceptRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AcceptRequest>(create);
-  static AcceptRequest? _defaultInstance;
+  static ContractAcceptRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ContractAcceptRequest>(create);
+  static ContractAcceptRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get pid => $_getSZ(0);
@@ -743,13 +743,13 @@ class AcceptRequest extends $pb.GeneratedMessage {
   void clearPid() => clearField(1);
 }
 
-class AcceptResponse extends $pb.GeneratedMessage {
-  factory AcceptResponse() => create();
-  AcceptResponse._() : super();
-  factory AcceptResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory AcceptResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+class ContractAcceptResponse extends $pb.GeneratedMessage {
+  factory ContractAcceptResponse() => create();
+  ContractAcceptResponse._() : super();
+  factory ContractAcceptResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ContractAcceptResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AcceptResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContractAcceptResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
@@ -757,27 +757,27 @@ class AcceptResponse extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  AcceptResponse clone() => AcceptResponse()..mergeFromMessage(this);
+  ContractAcceptResponse clone() => ContractAcceptResponse()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  AcceptResponse copyWith(void Function(AcceptResponse) updates) => super.copyWith((message) => updates(message as AcceptResponse)) as AcceptResponse;
+  ContractAcceptResponse copyWith(void Function(ContractAcceptResponse) updates) => super.copyWith((message) => updates(message as ContractAcceptResponse)) as ContractAcceptResponse;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static AcceptResponse create() => AcceptResponse._();
-  AcceptResponse createEmptyInstance() => create();
-  static $pb.PbList<AcceptResponse> createRepeated() => $pb.PbList<AcceptResponse>();
+  static ContractAcceptResponse create() => ContractAcceptResponse._();
+  ContractAcceptResponse createEmptyInstance() => create();
+  static $pb.PbList<ContractAcceptResponse> createRepeated() => $pb.PbList<ContractAcceptResponse>();
   @$core.pragma('dart2js:noInline')
-  static AcceptResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AcceptResponse>(create);
-  static AcceptResponse? _defaultInstance;
+  static ContractAcceptResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ContractAcceptResponse>(create);
+  static ContractAcceptResponse? _defaultInstance;
 }
 
-/// AgreeRequest contains the agreement and pid of the contract negotiation to agree to.
-class AgreeRequest extends $pb.GeneratedMessage {
-  factory AgreeRequest({
+/// ContractAgreeRequest contains the agreement and pid of the contract negotiation to agree to.
+class ContractAgreeRequest extends $pb.GeneratedMessage {
+  factory ContractAgreeRequest({
     $core.String? agreement,
     $core.String? pid,
   }) {
@@ -790,11 +790,11 @@ class AgreeRequest extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  AgreeRequest._() : super();
-  factory AgreeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory AgreeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  ContractAgreeRequest._() : super();
+  factory ContractAgreeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ContractAgreeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AgreeRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContractAgreeRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'agreement')
     ..aOS(2, _omitFieldNames ? '' : 'pid')
     ..hasRequiredFields = false
@@ -804,22 +804,22 @@ class AgreeRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  AgreeRequest clone() => AgreeRequest()..mergeFromMessage(this);
+  ContractAgreeRequest clone() => ContractAgreeRequest()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  AgreeRequest copyWith(void Function(AgreeRequest) updates) => super.copyWith((message) => updates(message as AgreeRequest)) as AgreeRequest;
+  ContractAgreeRequest copyWith(void Function(ContractAgreeRequest) updates) => super.copyWith((message) => updates(message as ContractAgreeRequest)) as ContractAgreeRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static AgreeRequest create() => AgreeRequest._();
-  AgreeRequest createEmptyInstance() => create();
-  static $pb.PbList<AgreeRequest> createRepeated() => $pb.PbList<AgreeRequest>();
+  static ContractAgreeRequest create() => ContractAgreeRequest._();
+  ContractAgreeRequest createEmptyInstance() => create();
+  static $pb.PbList<ContractAgreeRequest> createRepeated() => $pb.PbList<ContractAgreeRequest>();
   @$core.pragma('dart2js:noInline')
-  static AgreeRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AgreeRequest>(create);
-  static AgreeRequest? _defaultInstance;
+  static ContractAgreeRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ContractAgreeRequest>(create);
+  static ContractAgreeRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get agreement => $_getSZ(0);
@@ -840,13 +840,13 @@ class AgreeRequest extends $pb.GeneratedMessage {
   void clearPid() => clearField(2);
 }
 
-class AgreeResponse extends $pb.GeneratedMessage {
-  factory AgreeResponse() => create();
-  AgreeResponse._() : super();
-  factory AgreeResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory AgreeResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+class ContractAgreeResponse extends $pb.GeneratedMessage {
+  factory ContractAgreeResponse() => create();
+  ContractAgreeResponse._() : super();
+  factory ContractAgreeResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ContractAgreeResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AgreeResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContractAgreeResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
@@ -854,27 +854,27 @@ class AgreeResponse extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  AgreeResponse clone() => AgreeResponse()..mergeFromMessage(this);
+  ContractAgreeResponse clone() => ContractAgreeResponse()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  AgreeResponse copyWith(void Function(AgreeResponse) updates) => super.copyWith((message) => updates(message as AgreeResponse)) as AgreeResponse;
+  ContractAgreeResponse copyWith(void Function(ContractAgreeResponse) updates) => super.copyWith((message) => updates(message as ContractAgreeResponse)) as ContractAgreeResponse;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static AgreeResponse create() => AgreeResponse._();
-  AgreeResponse createEmptyInstance() => create();
-  static $pb.PbList<AgreeResponse> createRepeated() => $pb.PbList<AgreeResponse>();
+  static ContractAgreeResponse create() => ContractAgreeResponse._();
+  ContractAgreeResponse createEmptyInstance() => create();
+  static $pb.PbList<ContractAgreeResponse> createRepeated() => $pb.PbList<ContractAgreeResponse>();
   @$core.pragma('dart2js:noInline')
-  static AgreeResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AgreeResponse>(create);
-  static AgreeResponse? _defaultInstance;
+  static ContractAgreeResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ContractAgreeResponse>(create);
+  static ContractAgreeResponse? _defaultInstance;
 }
 
-/// VerifyRequest contains the pid of the contract negotiation to verify.
-class VerifyRequest extends $pb.GeneratedMessage {
-  factory VerifyRequest({
+/// ContractVerifyRequest contains the pid of the contract negotiation to verify.
+class ContractVerifyRequest extends $pb.GeneratedMessage {
+  factory ContractVerifyRequest({
     $core.String? pid,
   }) {
     final $result = create();
@@ -883,11 +883,11 @@ class VerifyRequest extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  VerifyRequest._() : super();
-  factory VerifyRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory VerifyRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  ContractVerifyRequest._() : super();
+  factory ContractVerifyRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ContractVerifyRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'VerifyRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContractVerifyRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'pid')
     ..hasRequiredFields = false
   ;
@@ -896,22 +896,22 @@ class VerifyRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  VerifyRequest clone() => VerifyRequest()..mergeFromMessage(this);
+  ContractVerifyRequest clone() => ContractVerifyRequest()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  VerifyRequest copyWith(void Function(VerifyRequest) updates) => super.copyWith((message) => updates(message as VerifyRequest)) as VerifyRequest;
+  ContractVerifyRequest copyWith(void Function(ContractVerifyRequest) updates) => super.copyWith((message) => updates(message as ContractVerifyRequest)) as ContractVerifyRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static VerifyRequest create() => VerifyRequest._();
-  VerifyRequest createEmptyInstance() => create();
-  static $pb.PbList<VerifyRequest> createRepeated() => $pb.PbList<VerifyRequest>();
+  static ContractVerifyRequest create() => ContractVerifyRequest._();
+  ContractVerifyRequest createEmptyInstance() => create();
+  static $pb.PbList<ContractVerifyRequest> createRepeated() => $pb.PbList<ContractVerifyRequest>();
   @$core.pragma('dart2js:noInline')
-  static VerifyRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<VerifyRequest>(create);
-  static VerifyRequest? _defaultInstance;
+  static ContractVerifyRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ContractVerifyRequest>(create);
+  static ContractVerifyRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get pid => $_getSZ(0);
@@ -923,13 +923,13 @@ class VerifyRequest extends $pb.GeneratedMessage {
   void clearPid() => clearField(1);
 }
 
-class VerifyResponse extends $pb.GeneratedMessage {
-  factory VerifyResponse() => create();
-  VerifyResponse._() : super();
-  factory VerifyResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory VerifyResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+class ContractVerifyResponse extends $pb.GeneratedMessage {
+  factory ContractVerifyResponse() => create();
+  ContractVerifyResponse._() : super();
+  factory ContractVerifyResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ContractVerifyResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'VerifyResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContractVerifyResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
@@ -937,27 +937,27 @@ class VerifyResponse extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  VerifyResponse clone() => VerifyResponse()..mergeFromMessage(this);
+  ContractVerifyResponse clone() => ContractVerifyResponse()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  VerifyResponse copyWith(void Function(VerifyResponse) updates) => super.copyWith((message) => updates(message as VerifyResponse)) as VerifyResponse;
+  ContractVerifyResponse copyWith(void Function(ContractVerifyResponse) updates) => super.copyWith((message) => updates(message as ContractVerifyResponse)) as ContractVerifyResponse;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static VerifyResponse create() => VerifyResponse._();
-  VerifyResponse createEmptyInstance() => create();
-  static $pb.PbList<VerifyResponse> createRepeated() => $pb.PbList<VerifyResponse>();
+  static ContractVerifyResponse create() => ContractVerifyResponse._();
+  ContractVerifyResponse createEmptyInstance() => create();
+  static $pb.PbList<ContractVerifyResponse> createRepeated() => $pb.PbList<ContractVerifyResponse>();
   @$core.pragma('dart2js:noInline')
-  static VerifyResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<VerifyResponse>(create);
-  static VerifyResponse? _defaultInstance;
+  static ContractVerifyResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ContractVerifyResponse>(create);
+  static ContractVerifyResponse? _defaultInstance;
 }
 
-/// FinalizeRequest contains the pid of the contract negotiation to finalize.
-class FinalizeRequest extends $pb.GeneratedMessage {
-  factory FinalizeRequest({
+/// ContractFinalizeRequest contains the pid of the contract negotiation to finalize.
+class ContractFinalizeRequest extends $pb.GeneratedMessage {
+  factory ContractFinalizeRequest({
     $core.String? pid,
   }) {
     final $result = create();
@@ -966,11 +966,11 @@ class FinalizeRequest extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  FinalizeRequest._() : super();
-  factory FinalizeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory FinalizeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  ContractFinalizeRequest._() : super();
+  factory ContractFinalizeRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ContractFinalizeRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FinalizeRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContractFinalizeRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'pid')
     ..hasRequiredFields = false
   ;
@@ -979,22 +979,22 @@ class FinalizeRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  FinalizeRequest clone() => FinalizeRequest()..mergeFromMessage(this);
+  ContractFinalizeRequest clone() => ContractFinalizeRequest()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  FinalizeRequest copyWith(void Function(FinalizeRequest) updates) => super.copyWith((message) => updates(message as FinalizeRequest)) as FinalizeRequest;
+  ContractFinalizeRequest copyWith(void Function(ContractFinalizeRequest) updates) => super.copyWith((message) => updates(message as ContractFinalizeRequest)) as ContractFinalizeRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static FinalizeRequest create() => FinalizeRequest._();
-  FinalizeRequest createEmptyInstance() => create();
-  static $pb.PbList<FinalizeRequest> createRepeated() => $pb.PbList<FinalizeRequest>();
+  static ContractFinalizeRequest create() => ContractFinalizeRequest._();
+  ContractFinalizeRequest createEmptyInstance() => create();
+  static $pb.PbList<ContractFinalizeRequest> createRepeated() => $pb.PbList<ContractFinalizeRequest>();
   @$core.pragma('dart2js:noInline')
-  static FinalizeRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FinalizeRequest>(create);
-  static FinalizeRequest? _defaultInstance;
+  static ContractFinalizeRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ContractFinalizeRequest>(create);
+  static ContractFinalizeRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get pid => $_getSZ(0);
@@ -1006,13 +1006,13 @@ class FinalizeRequest extends $pb.GeneratedMessage {
   void clearPid() => clearField(1);
 }
 
-class FinalizeResponse extends $pb.GeneratedMessage {
-  factory FinalizeResponse() => create();
-  FinalizeResponse._() : super();
-  factory FinalizeResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory FinalizeResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+class ContractFinalizeResponse extends $pb.GeneratedMessage {
+  factory ContractFinalizeResponse() => create();
+  ContractFinalizeResponse._() : super();
+  factory ContractFinalizeResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ContractFinalizeResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FinalizeResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContractFinalizeResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
@@ -1020,27 +1020,27 @@ class FinalizeResponse extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  FinalizeResponse clone() => FinalizeResponse()..mergeFromMessage(this);
+  ContractFinalizeResponse clone() => ContractFinalizeResponse()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  FinalizeResponse copyWith(void Function(FinalizeResponse) updates) => super.copyWith((message) => updates(message as FinalizeResponse)) as FinalizeResponse;
+  ContractFinalizeResponse copyWith(void Function(ContractFinalizeResponse) updates) => super.copyWith((message) => updates(message as ContractFinalizeResponse)) as ContractFinalizeResponse;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static FinalizeResponse create() => FinalizeResponse._();
-  FinalizeResponse createEmptyInstance() => create();
-  static $pb.PbList<FinalizeResponse> createRepeated() => $pb.PbList<FinalizeResponse>();
+  static ContractFinalizeResponse create() => ContractFinalizeResponse._();
+  ContractFinalizeResponse createEmptyInstance() => create();
+  static $pb.PbList<ContractFinalizeResponse> createRepeated() => $pb.PbList<ContractFinalizeResponse>();
   @$core.pragma('dart2js:noInline')
-  static FinalizeResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FinalizeResponse>(create);
-  static FinalizeResponse? _defaultInstance;
+  static ContractFinalizeResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ContractFinalizeResponse>(create);
+  static ContractFinalizeResponse? _defaultInstance;
 }
 
-/// TerminateRequest contains the pid, code, and reason of the contract negotiation to terminate.
-class TerminateRequest extends $pb.GeneratedMessage {
-  factory TerminateRequest({
+/// ContractTerminateRequest contains the pid, code, and reason of the contract negotiation to terminate.
+class ContractTerminateRequest extends $pb.GeneratedMessage {
+  factory ContractTerminateRequest({
     $core.String? pid,
     $core.String? code,
     $core.Iterable<$core.String>? reason,
@@ -1057,11 +1057,11 @@ class TerminateRequest extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  TerminateRequest._() : super();
-  factory TerminateRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory TerminateRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  ContractTerminateRequest._() : super();
+  factory ContractTerminateRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ContractTerminateRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TerminateRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContractTerminateRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'pid')
     ..aOS(2, _omitFieldNames ? '' : 'code')
     ..pPS(3, _omitFieldNames ? '' : 'reason')
@@ -1072,22 +1072,22 @@ class TerminateRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  TerminateRequest clone() => TerminateRequest()..mergeFromMessage(this);
+  ContractTerminateRequest clone() => ContractTerminateRequest()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  TerminateRequest copyWith(void Function(TerminateRequest) updates) => super.copyWith((message) => updates(message as TerminateRequest)) as TerminateRequest;
+  ContractTerminateRequest copyWith(void Function(ContractTerminateRequest) updates) => super.copyWith((message) => updates(message as ContractTerminateRequest)) as ContractTerminateRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static TerminateRequest create() => TerminateRequest._();
-  TerminateRequest createEmptyInstance() => create();
-  static $pb.PbList<TerminateRequest> createRepeated() => $pb.PbList<TerminateRequest>();
+  static ContractTerminateRequest create() => ContractTerminateRequest._();
+  ContractTerminateRequest createEmptyInstance() => create();
+  static $pb.PbList<ContractTerminateRequest> createRepeated() => $pb.PbList<ContractTerminateRequest>();
   @$core.pragma('dart2js:noInline')
-  static TerminateRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TerminateRequest>(create);
-  static TerminateRequest? _defaultInstance;
+  static ContractTerminateRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ContractTerminateRequest>(create);
+  static ContractTerminateRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get pid => $_getSZ(0);
@@ -1111,13 +1111,13 @@ class TerminateRequest extends $pb.GeneratedMessage {
   $core.List<$core.String> get reason => $_getList(2);
 }
 
-class TerminateResponse extends $pb.GeneratedMessage {
-  factory TerminateResponse() => create();
-  TerminateResponse._() : super();
-  factory TerminateResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory TerminateResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+class ContractTerminateResponse extends $pb.GeneratedMessage {
+  factory ContractTerminateResponse() => create();
+  ContractTerminateResponse._() : super();
+  factory ContractTerminateResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ContractTerminateResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TerminateResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContractTerminateResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
@@ -1125,22 +1125,22 @@ class TerminateResponse extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  TerminateResponse clone() => TerminateResponse()..mergeFromMessage(this);
+  ContractTerminateResponse clone() => ContractTerminateResponse()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  TerminateResponse copyWith(void Function(TerminateResponse) updates) => super.copyWith((message) => updates(message as TerminateResponse)) as TerminateResponse;
+  ContractTerminateResponse copyWith(void Function(ContractTerminateResponse) updates) => super.copyWith((message) => updates(message as ContractTerminateResponse)) as ContractTerminateResponse;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static TerminateResponse create() => TerminateResponse._();
-  TerminateResponse createEmptyInstance() => create();
-  static $pb.PbList<TerminateResponse> createRepeated() => $pb.PbList<TerminateResponse>();
+  static ContractTerminateResponse create() => ContractTerminateResponse._();
+  ContractTerminateResponse createEmptyInstance() => create();
+  static $pb.PbList<ContractTerminateResponse> createRepeated() => $pb.PbList<ContractTerminateResponse>();
   @$core.pragma('dart2js:noInline')
-  static TerminateResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TerminateResponse>(create);
-  static TerminateResponse? _defaultInstance;
+  static ContractTerminateResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ContractTerminateResponse>(create);
+  static ContractTerminateResponse? _defaultInstance;
 }
 
 /// SignalTransferCompleteRequest is for telling the provider that we are done

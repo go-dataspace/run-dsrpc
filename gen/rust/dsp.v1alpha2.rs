@@ -275,11 +275,11 @@ pub struct GetProviderDatasetDownloadInformationResponse {
     #[prost(string, tag="2")]
     pub transfer_id: ::prost::alloc::string::String,
 }
-/// RequestRequest contains the offer, and a pid if this is needs to send a request for an already
+/// ContractRequestRequest contains the offer, and a pid if this is needs to send a request for an already
 /// existing offer, or a participant_address if this is a request for a new offer.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct RequestRequest {
+pub struct ContractRequestRequest {
     #[prost(string, tag="1")]
     pub offer: ::prost::alloc::string::String,
     #[prost(string, optional, tag="2")]
@@ -289,13 +289,13 @@ pub struct RequestRequest {
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
-pub struct RequestResponse {
+pub struct ContractRequestResponse {
 }
-/// OfferRequest contains the offer, and a pid if this is needs to send an offer for an already
+/// ContractOfferRequest contains the offer, and a pid if this is needs to send an offer for an already
 /// existing offer, or a participant_address if this is a a new offer.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct OfferRequest {
+pub struct ContractOfferRequest {
     #[prost(string, tag="1")]
     pub offer: ::prost::alloc::string::String,
     #[prost(string, optional, tag="2")]
@@ -305,23 +305,23 @@ pub struct OfferRequest {
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
-pub struct OfferResponse {
+pub struct ContractOfferResponse {
 }
-/// AcceptRequest contains the pid of the contract negotiation to be accepted.
+/// ContractAcceptRequest contains the pid of the contract negotiation to be accepted.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct AcceptRequest {
+pub struct ContractAcceptRequest {
     #[prost(string, tag="1")]
     pub pid: ::prost::alloc::string::String,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
-pub struct AcceptResponse {
+pub struct ContractAcceptResponse {
 }
-/// AgreeRequest contains the agreement and pid of the contract negotiation to agree to.
+/// ContractAgreeRequest contains the agreement and pid of the contract negotiation to agree to.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct AgreeRequest {
+pub struct ContractAgreeRequest {
     #[prost(string, tag="1")]
     pub agreement: ::prost::alloc::string::String,
     #[prost(string, tag="2")]
@@ -329,34 +329,34 @@ pub struct AgreeRequest {
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
-pub struct AgreeResponse {
+pub struct ContractAgreeResponse {
 }
-/// VerifyRequest contains the pid of the contract negotiation to verify.
+/// ContractVerifyRequest contains the pid of the contract negotiation to verify.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct VerifyRequest {
+pub struct ContractVerifyRequest {
     #[prost(string, tag="1")]
     pub pid: ::prost::alloc::string::String,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
-pub struct VerifyResponse {
+pub struct ContractVerifyResponse {
 }
-/// FinalizeRequest contains the pid of the contract negotiation to finalize.
+/// ContractFinalizeRequest contains the pid of the contract negotiation to finalize.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct FinalizeRequest {
+pub struct ContractFinalizeRequest {
     #[prost(string, tag="1")]
     pub pid: ::prost::alloc::string::String,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
-pub struct FinalizeResponse {
+pub struct ContractFinalizeResponse {
 }
-/// TerminateRequest contains the pid, code, and reason of the contract negotiation to terminate.
+/// ContractTerminateRequest contains the pid, code, and reason of the contract negotiation to terminate.
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct TerminateRequest {
+pub struct ContractTerminateRequest {
     #[prost(string, tag="1")]
     pub pid: ::prost::alloc::string::String,
     #[prost(string, tag="2")]
@@ -366,7 +366,7 @@ pub struct TerminateRequest {
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
-pub struct TerminateResponse {
+pub struct ContractTerminateResponse {
 }
 /// SignalTransferCompleteRequest is for telling the provider that we are done
 /// receiving the dataset.

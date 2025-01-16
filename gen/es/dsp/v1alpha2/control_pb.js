@@ -120,13 +120,13 @@ export const GetProviderDatasetDownloadInformationResponse = /*@__PURE__*/ proto
 );
 
 /**
- * RequestRequest contains the offer, and a pid if this is needs to send a request for an already
+ * ContractRequestRequest contains the offer, and a pid if this is needs to send a request for an already
  * existing offer, or a participant_address if this is a request for a new offer.
  *
- * @generated from message dsp.v1alpha2.RequestRequest
+ * @generated from message dsp.v1alpha2.ContractRequestRequest
  */
-export const RequestRequest = /*@__PURE__*/ proto3.makeMessageType(
-  "dsp.v1alpha2.RequestRequest",
+export const ContractRequestRequest = /*@__PURE__*/ proto3.makeMessageType(
+  "dsp.v1alpha2.ContractRequestRequest",
   () => [
     { no: 1, name: "offer", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "pid", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
@@ -135,21 +135,21 @@ export const RequestRequest = /*@__PURE__*/ proto3.makeMessageType(
 );
 
 /**
- * @generated from message dsp.v1alpha2.RequestResponse
+ * @generated from message dsp.v1alpha2.ContractRequestResponse
  */
-export const RequestResponse = /*@__PURE__*/ proto3.makeMessageType(
-  "dsp.v1alpha2.RequestResponse",
+export const ContractRequestResponse = /*@__PURE__*/ proto3.makeMessageType(
+  "dsp.v1alpha2.ContractRequestResponse",
   [],
 );
 
 /**
- * OfferRequest contains the offer, and a pid if this is needs to send an offer for an already
+ * ContractOfferRequest contains the offer, and a pid if this is needs to send an offer for an already
  * existing offer, or a participant_address if this is a a new offer.
  *
- * @generated from message dsp.v1alpha2.OfferRequest
+ * @generated from message dsp.v1alpha2.ContractOfferRequest
  */
-export const OfferRequest = /*@__PURE__*/ proto3.makeMessageType(
-  "dsp.v1alpha2.OfferRequest",
+export const ContractOfferRequest = /*@__PURE__*/ proto3.makeMessageType(
+  "dsp.v1alpha2.ContractOfferRequest",
   () => [
     { no: 1, name: "offer", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "pid", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
@@ -158,40 +158,40 @@ export const OfferRequest = /*@__PURE__*/ proto3.makeMessageType(
 );
 
 /**
- * @generated from message dsp.v1alpha2.OfferResponse
+ * @generated from message dsp.v1alpha2.ContractOfferResponse
  */
-export const OfferResponse = /*@__PURE__*/ proto3.makeMessageType(
-  "dsp.v1alpha2.OfferResponse",
+export const ContractOfferResponse = /*@__PURE__*/ proto3.makeMessageType(
+  "dsp.v1alpha2.ContractOfferResponse",
   [],
 );
 
 /**
- * AcceptRequest contains the pid of the contract negotiation to be accepted.
+ * ContractAcceptRequest contains the pid of the contract negotiation to be accepted.
  *
- * @generated from message dsp.v1alpha2.AcceptRequest
+ * @generated from message dsp.v1alpha2.ContractAcceptRequest
  */
-export const AcceptRequest = /*@__PURE__*/ proto3.makeMessageType(
-  "dsp.v1alpha2.AcceptRequest",
+export const ContractAcceptRequest = /*@__PURE__*/ proto3.makeMessageType(
+  "dsp.v1alpha2.ContractAcceptRequest",
   () => [
     { no: 1, name: "pid", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
 );
 
 /**
- * @generated from message dsp.v1alpha2.AcceptResponse
+ * @generated from message dsp.v1alpha2.ContractAcceptResponse
  */
-export const AcceptResponse = /*@__PURE__*/ proto3.makeMessageType(
-  "dsp.v1alpha2.AcceptResponse",
+export const ContractAcceptResponse = /*@__PURE__*/ proto3.makeMessageType(
+  "dsp.v1alpha2.ContractAcceptResponse",
   [],
 );
 
 /**
- * AgreeRequest contains the agreement and pid of the contract negotiation to agree to.
+ * ContractAgreeRequest contains the agreement and pid of the contract negotiation to agree to.
  *
- * @generated from message dsp.v1alpha2.AgreeRequest
+ * @generated from message dsp.v1alpha2.ContractAgreeRequest
  */
-export const AgreeRequest = /*@__PURE__*/ proto3.makeMessageType(
-  "dsp.v1alpha2.AgreeRequest",
+export const ContractAgreeRequest = /*@__PURE__*/ proto3.makeMessageType(
+  "dsp.v1alpha2.ContractAgreeRequest",
   () => [
     { no: 1, name: "agreement", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "pid", kind: "scalar", T: 9 /* ScalarType.STRING */ },
@@ -199,60 +199,60 @@ export const AgreeRequest = /*@__PURE__*/ proto3.makeMessageType(
 );
 
 /**
- * @generated from message dsp.v1alpha2.AgreeResponse
+ * @generated from message dsp.v1alpha2.ContractAgreeResponse
  */
-export const AgreeResponse = /*@__PURE__*/ proto3.makeMessageType(
-  "dsp.v1alpha2.AgreeResponse",
+export const ContractAgreeResponse = /*@__PURE__*/ proto3.makeMessageType(
+  "dsp.v1alpha2.ContractAgreeResponse",
   [],
 );
 
 /**
- * VerifyRequest contains the pid of the contract negotiation to verify.
+ * ContractVerifyRequest contains the pid of the contract negotiation to verify.
  *
- * @generated from message dsp.v1alpha2.VerifyRequest
+ * @generated from message dsp.v1alpha2.ContractVerifyRequest
  */
-export const VerifyRequest = /*@__PURE__*/ proto3.makeMessageType(
-  "dsp.v1alpha2.VerifyRequest",
+export const ContractVerifyRequest = /*@__PURE__*/ proto3.makeMessageType(
+  "dsp.v1alpha2.ContractVerifyRequest",
   () => [
     { no: 1, name: "pid", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
 );
 
 /**
- * @generated from message dsp.v1alpha2.VerifyResponse
+ * @generated from message dsp.v1alpha2.ContractVerifyResponse
  */
-export const VerifyResponse = /*@__PURE__*/ proto3.makeMessageType(
-  "dsp.v1alpha2.VerifyResponse",
+export const ContractVerifyResponse = /*@__PURE__*/ proto3.makeMessageType(
+  "dsp.v1alpha2.ContractVerifyResponse",
   [],
 );
 
 /**
- * FinalizeRequest contains the pid of the contract negotiation to finalize.
+ * ContractFinalizeRequest contains the pid of the contract negotiation to finalize.
  *
- * @generated from message dsp.v1alpha2.FinalizeRequest
+ * @generated from message dsp.v1alpha2.ContractFinalizeRequest
  */
-export const FinalizeRequest = /*@__PURE__*/ proto3.makeMessageType(
-  "dsp.v1alpha2.FinalizeRequest",
+export const ContractFinalizeRequest = /*@__PURE__*/ proto3.makeMessageType(
+  "dsp.v1alpha2.ContractFinalizeRequest",
   () => [
     { no: 1, name: "pid", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
 );
 
 /**
- * @generated from message dsp.v1alpha2.FinalizeResponse
+ * @generated from message dsp.v1alpha2.ContractFinalizeResponse
  */
-export const FinalizeResponse = /*@__PURE__*/ proto3.makeMessageType(
-  "dsp.v1alpha2.FinalizeResponse",
+export const ContractFinalizeResponse = /*@__PURE__*/ proto3.makeMessageType(
+  "dsp.v1alpha2.ContractFinalizeResponse",
   [],
 );
 
 /**
- * TerminateRequest contains the pid, code, and reason of the contract negotiation to terminate.
+ * ContractTerminateRequest contains the pid, code, and reason of the contract negotiation to terminate.
  *
- * @generated from message dsp.v1alpha2.TerminateRequest
+ * @generated from message dsp.v1alpha2.ContractTerminateRequest
  */
-export const TerminateRequest = /*@__PURE__*/ proto3.makeMessageType(
-  "dsp.v1alpha2.TerminateRequest",
+export const ContractTerminateRequest = /*@__PURE__*/ proto3.makeMessageType(
+  "dsp.v1alpha2.ContractTerminateRequest",
   () => [
     { no: 1, name: "pid", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "code", kind: "scalar", T: 9 /* ScalarType.STRING */ },
@@ -261,10 +261,10 @@ export const TerminateRequest = /*@__PURE__*/ proto3.makeMessageType(
 );
 
 /**
- * @generated from message dsp.v1alpha2.TerminateResponse
+ * @generated from message dsp.v1alpha2.ContractTerminateResponse
  */
-export const TerminateResponse = /*@__PURE__*/ proto3.makeMessageType(
-  "dsp.v1alpha2.TerminateResponse",
+export const ContractTerminateResponse = /*@__PURE__*/ proto3.makeMessageType(
+  "dsp.v1alpha2.ContractTerminateResponse",
   [],
 );
 

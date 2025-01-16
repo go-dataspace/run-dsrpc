@@ -26,36 +26,27 @@ service ControlService {
 
   // VerifyConnection takes a token and verifies it's the same token it passed to the contract service.
   rpc VerifyConnection(VerifyConnectionRequest) returns (VerifyConnectionResponse) {}
-}
 
-// CatalogueControlService contains methods to interact with dataspace catalogues.
-service CatalogueControlService {
   // Gets the catalogue based on the query parameters and the authorization header.
   rpc GetProviderCatalogue(GetProviderCatalogueRequest) returns (GetProviderCatalogueResponse) {}
   // Gets information about a single dataset.
   rpc GetProviderDataset(GetProviderDatasetRequest) returns (GetProviderDatasetResponse) {}
-}
 
-// ContractControlService contains low level methods to send contract negotiation operations.
-service ContractControlService {
-  // Request sends a ContractRequestMessage.
-  rpc Request(RequestRequest) returns (RequestResponse) {}
-  // Offer sends a ContractOfferMessage.
-  rpc Offer(OfferRequest) returns (OfferResponse) {}
-  // Accept sends an accepted event message.
-  rpc Accept(AcceptRequest) returns (AcceptResponse) {}
-  // Agree sends a ContractAcceptedMessage.
-  rpc Agree(AgreeRequest) returns (AgreeResponse) {}
-  // Verify sends a ContractVerificationMessage.
-  rpc Verify(VerifyRequest) returns (VerifyResponse) {}
-  // Finalize sends a finalization event.
-  rpc Finalize(FinalizeRequest) returns (FinalizeResponse) {}
-  // Terminate sends a ContractTerminationMessage.
-  rpc Terminate(TerminateRequest) returns (TerminateResponse) {}
-}
+  // ContractRequest sends a ContractRequestMessage.
+  rpc ContractRequest(ContractRequestRequest) returns (ContractRequestResponse) {}
+  // ContractOffer sends a ContractOfferMessage.
+  rpc ContractOffer(ContractOfferRequest) returns (ContractOfferResponse) {}
+  // ContractAccept sends an accepted event message.
+  rpc ContractAccept(ContractAcceptRequest) returns (ContractAcceptResponse) {}
+  // ContractAgree sends a ContractAcceptedMessage.
+  rpc ContractAgree(ContractAgreeRequest) returns (ContractAgreeResponse) {}
+  // ContractVerify sends a ContractVerificationMessage.
+  rpc ContractVerify(ContractVerifyRequest) returns (ContractVerifyResponse) {}
+  // ContractFinalize sends a finalization event.
+  rpc ContractFinalize(ContractFinalizeRequest) returns (ContractFinalizeResponse) {}
+  // ContractTerminate sends a ContractTerminationMessage.
+  rpc ContractTerminate(ContractTerminateRequest) returns (ContractTerminateResponse) {}
 
-// TransferControlService contains low level methods to send transfer negotiation operations.
-service TransferControlService {
   // Tells provider that we have finished our transfer.
   rpc SignalTransferComplete(SignalTransferCompleteRequest) returns (SignalTransferCompleteResponse) {}
   // Tells provider to cancel file transfer
@@ -113,63 +104,63 @@ message GetProviderDatasetDownloadInformationResponse {
   string transfer_id = 2;
 }
 
-// RequestRequest contains the offer, and a pid if this is needs to send a request for an already
+// ContractRequestRequest contains the offer, and a pid if this is needs to send a request for an already
 // existing offer, or a participant_address if this is a request for a new offer.
-message RequestRequest {
+message ContractRequestRequest {
   string offer = 1;
   optional string pid = 2;
   optional string participant_address = 3;
 }
 
-message RequestResponse {}
+message ContractRequestResponse {}
 
-// OfferRequest contains the offer, and a pid if this is needs to send an offer for an already
+// ContractOfferRequest contains the offer, and a pid if this is needs to send an offer for an already
 // existing offer, or a participant_address if this is a a new offer.
-message OfferRequest {
+message ContractOfferRequest {
   string offer = 1;
   optional string pid = 2;
   optional string participant_address = 3;
 }
 
-message OfferResponse {}
+message ContractOfferResponse {}
 
-// AcceptRequest contains the pid of the contract negotiation to be accepted.
-message AcceptRequest {
+// ContractAcceptRequest contains the pid of the contract negotiation to be accepted.
+message ContractAcceptRequest {
   string pid = 1;
 }
 
-message AcceptResponse {}
+message ContractAcceptResponse {}
 
-// AgreeRequest contains the agreement and pid of the contract negotiation to agree to.
-message AgreeRequest {
+// ContractAgreeRequest contains the agreement and pid of the contract negotiation to agree to.
+message ContractAgreeRequest {
   string agreement = 1;
   string pid = 2;
 }
 
-message AgreeResponse {}
+message ContractAgreeResponse {}
 
-// VerifyRequest contains the pid of the contract negotiation to verify.
-message VerifyRequest {
+// ContractVerifyRequest contains the pid of the contract negotiation to verify.
+message ContractVerifyRequest {
   string pid = 1;
 }
 
-message VerifyResponse {}
+message ContractVerifyResponse {}
 
-// FinalizeRequest contains the pid of the contract negotiation to finalize.
-message FinalizeRequest {
+// ContractFinalizeRequest contains the pid of the contract negotiation to finalize.
+message ContractFinalizeRequest {
   string pid = 1;
 }
 
-message FinalizeResponse {}
+message ContractFinalizeResponse {}
 
-// TerminateRequest contains the pid, code, and reason of the contract negotiation to terminate.
-message TerminateRequest {
+// ContractTerminateRequest contains the pid, code, and reason of the contract negotiation to terminate.
+message ContractTerminateRequest {
   string pid = 1;
   string code = 2;
   repeated string reason = 3;
 }
 
-message TerminateResponse {}
+message ContractTerminateResponse {}
 
 // SignalTransferCompleteRequest is for telling the provider that we are done
 // receiving the dataset.
