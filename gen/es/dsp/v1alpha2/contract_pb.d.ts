@@ -231,11 +231,6 @@ export declare class ContractServiceAgreementReceivedRequest extends Message<Con
    */
   pid: string;
 
-  /**
-   * @generated from field: string agreement = 2;
-   */
-  agreement: string;
-
   constructor(data?: PartialMessage<ContractServiceAgreementReceivedRequest>);
 
   static readonly runtime: typeof proto3;

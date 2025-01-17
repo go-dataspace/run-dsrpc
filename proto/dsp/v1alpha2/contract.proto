@@ -74,7 +74,6 @@ message ContractServiceAcceptedReceivedResponse {}
 // ContractServiceAgreementReceivedRequest contains the pid RUN-DSP uses to refer to the negotiation that just got agreed to.
 message ContractServiceAgreementReceivedRequest {
   string pid = 1;
-  string agreement = 2;
 }
 
 message ContractServiceAgreementReceivedResponse {}
