@@ -20,10 +20,6 @@ class ContractServiceAgreementReceivedRequest extends \Google\Protobuf\Internal\
      * Generated from protobuf field <code>string pid = 1 [json_name = "pid"];</code>
      */
     protected $pid = '';
-    /**
-     * Generated from protobuf field <code>string agreement = 2 [json_name = "agreement"];</code>
-     */
-    protected $agreement = '';
 
     /**
      * Constructor.
@@ -32,7 +28,6 @@ class ContractServiceAgreementReceivedRequest extends \Google\Protobuf\Internal\
      *     Optional. Data for populating the Message object.
      *
      *     @type string $pid
-     *     @type string $agreement
      * }
      */
     public function __construct($data = NULL) {
@@ -58,28 +53,6 @@ class ContractServiceAgreementReceivedRequest extends \Google\Protobuf\Internal\
     {
         GPBUtil::checkString($var, True);
         $this->pid = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>string agreement = 2 [json_name = "agreement"];</code>
-     * @return string
-     */
-    public function getAgreement()
-    {
-        return $this->agreement;
-    }
-
-    /**
-     * Generated from protobuf field <code>string agreement = 2 [json_name = "agreement"];</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setAgreement($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->agreement = $var;
 
         return $this;
     }

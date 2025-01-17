@@ -117,51 +117,51 @@ public final class ContractProto {
       "\tR\005offer\"&\n$ContractServiceOfferReceived" +
       "Response\":\n&ContractServiceAcceptedRecei" +
       "vedRequest\022\020\n\003pid\030\001 \001(\tR\003pid\")\n\'Contract" +
-      "ServiceAcceptedReceivedResponse\"Y\n\'Contr" +
+      "ServiceAcceptedReceivedResponse\";\n\'Contr" +
       "actServiceAgreementReceivedRequest\022\020\n\003pi" +
-      "d\030\001 \001(\tR\003pid\022\034\n\tagreement\030\002 \001(\tR\tagreeme" +
-      "nt\"*\n(ContractServiceAgreementReceivedRe" +
-      "sponse\">\n*ContractServiceVerificationRec" +
-      "eivedRequest\022\020\n\003pid\030\001 \001(\tR\003pid\"-\n+Contra" +
-      "ctServiceVerificationReceivedResponse\">\n" +
-      "*ContractServiceFinalizationReceivedRequ" +
-      "est\022\020\n\003pid\030\001 \001(\tR\003pid\"-\n+ContractService" +
-      "FinalizationReceivedResponse\"i\n)Contract" +
-      "ServiceTerminationReceivedRequest\022\020\n\003pid" +
-      "\030\001 \001(\tR\003pid\022\022\n\004code\030\002 \001(\tR\004code\022\026\n\006reaso" +
-      "n\030\003 \003(\tR\006reason\",\n*ContractServiceTermin" +
-      "ationReceivedResponse2\261\010\n\017ContractServic" +
-      "e\022l\n\tConfigure\022-.dsp.v1alpha2.ContractSe" +
-      "rviceConfigureRequest\032..dsp.v1alpha2.Con" +
-      "tractServiceConfigureResponse\"\000\022~\n\017Reque" +
-      "stReceived\0223.dsp.v1alpha2.ContractServic" +
-      "eRequestReceivedRequest\0324.dsp.v1alpha2.C" +
-      "ontractServiceRequestReceivedResponse\"\000\022" +
-      "x\n\rOfferReceived\0221.dsp.v1alpha2.Contract" +
-      "ServiceOfferReceivedRequest\0322.dsp.v1alph" +
-      "a2.ContractServiceOfferReceivedResponse\"" +
-      "\000\022\201\001\n\020AcceptedReceived\0224.dsp.v1alpha2.Co" +
-      "ntractServiceAcceptedReceivedRequest\0325.d" +
-      "sp.v1alpha2.ContractServiceAcceptedRecei" +
-      "vedResponse\"\000\022\204\001\n\021AgreementReceived\0225.ds" +
-      "p.v1alpha2.ContractServiceAgreementRecei" +
-      "vedRequest\0326.dsp.v1alpha2.ContractServic" +
-      "eAgreementReceivedResponse\"\000\022\215\001\n\024Verific" +
-      "ationReceived\0228.dsp.v1alpha2.ContractSer" +
-      "viceVerificationReceivedRequest\0329.dsp.v1" +
-      "alpha2.ContractServiceVerificationReceiv" +
-      "edResponse\"\000\022\215\001\n\024FinalizationReceived\0228." +
-      "dsp.v1alpha2.ContractServiceFinalization" +
-      "ReceivedRequest\0329.dsp.v1alpha2.ContractS" +
-      "erviceFinalizationReceivedResponse\"\000\022\212\001\n" +
-      "\023TerminationReceived\0227.dsp.v1alpha2.Cont" +
-      "ractServiceTerminationReceivedRequest\0328." +
-      "dsp.v1alpha2.ContractServiceTerminationR" +
-      "eceivedResponse\"\000B\251\001\n\020com.dsp.v1alpha2B\r" +
-      "ContractProtoP\001Z5github.com/bufbuild/buf" +
-      "-tour/dsp/v1alpha2;dspv1alpha2\242\002\003DXX\252\002\014D" +
-      "sp.V1alpha2\312\002\014Dsp\\V1alpha2\342\002\030Dsp\\V1alpha" +
-      "2\\GPBMetadata\352\002\rDsp::V1alpha2b\006proto3"
+      "d\030\001 \001(\tR\003pid\"*\n(ContractServiceAgreement" +
+      "ReceivedResponse\">\n*ContractServiceVerif" +
+      "icationReceivedRequest\022\020\n\003pid\030\001 \001(\tR\003pid" +
+      "\"-\n+ContractServiceVerificationReceivedR" +
+      "esponse\">\n*ContractServiceFinalizationRe" +
+      "ceivedRequest\022\020\n\003pid\030\001 \001(\tR\003pid\"-\n+Contr" +
+      "actServiceFinalizationReceivedResponse\"i" +
+      "\n)ContractServiceTerminationReceivedRequ" +
+      "est\022\020\n\003pid\030\001 \001(\tR\003pid\022\022\n\004code\030\002 \001(\tR\004cod" +
+      "e\022\026\n\006reason\030\003 \003(\tR\006reason\",\n*ContractSer" +
+      "viceTerminationReceivedResponse2\261\010\n\017Cont" +
+      "ractService\022l\n\tConfigure\022-.dsp.v1alpha2." +
+      "ContractServiceConfigureRequest\032..dsp.v1" +
+      "alpha2.ContractServiceConfigureResponse\"" +
+      "\000\022~\n\017RequestReceived\0223.dsp.v1alpha2.Cont" +
+      "ractServiceRequestReceivedRequest\0324.dsp." +
+      "v1alpha2.ContractServiceRequestReceivedR" +
+      "esponse\"\000\022x\n\rOfferReceived\0221.dsp.v1alpha" +
+      "2.ContractServiceOfferReceivedRequest\0322." +
+      "dsp.v1alpha2.ContractServiceOfferReceive" +
+      "dResponse\"\000\022\201\001\n\020AcceptedReceived\0224.dsp.v" +
+      "1alpha2.ContractServiceAcceptedReceivedR" +
+      "equest\0325.dsp.v1alpha2.ContractServiceAcc" +
+      "eptedReceivedResponse\"\000\022\204\001\n\021AgreementRec" +
+      "eived\0225.dsp.v1alpha2.ContractServiceAgre" +
+      "ementReceivedRequest\0326.dsp.v1alpha2.Cont" +
+      "ractServiceAgreementReceivedResponse\"\000\022\215" +
+      "\001\n\024VerificationReceived\0228.dsp.v1alpha2.C" +
+      "ontractServiceVerificationReceivedReques" +
+      "t\0329.dsp.v1alpha2.ContractServiceVerifica" +
+      "tionReceivedResponse\"\000\022\215\001\n\024FinalizationR" +
+      "eceived\0228.dsp.v1alpha2.ContractServiceFi" +
+      "nalizationReceivedRequest\0329.dsp.v1alpha2" +
+      ".ContractServiceFinalizationReceivedResp" +
+      "onse\"\000\022\212\001\n\023TerminationReceived\0227.dsp.v1a" +
+      "lpha2.ContractServiceTerminationReceived" +
+      "Request\0328.dsp.v1alpha2.ContractServiceTe" +
+      "rminationReceivedResponse\"\000B\251\001\n\020com.dsp." +
+      "v1alpha2B\rContractProtoP\001Z5github.com/bu" +
+      "fbuild/buf-tour/dsp/v1alpha2;dspv1alpha2" +
+      "\242\002\003DXX\252\002\014Dsp.V1alpha2\312\002\014Dsp\\V1alpha2\342\002\030D" +
+      "sp\\V1alpha2\\GPBMetadata\352\002\rDsp::V1alpha2b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -220,7 +220,7 @@ public final class ContractProto {
     internal_static_dsp_v1alpha2_ContractServiceAgreementReceivedRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dsp_v1alpha2_ContractServiceAgreementReceivedRequest_descriptor,
-        new java.lang.String[] { "Pid", "Agreement", });
+        new java.lang.String[] { "Pid", });
     internal_static_dsp_v1alpha2_ContractServiceAgreementReceivedResponse_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_dsp_v1alpha2_ContractServiceAgreementReceivedResponse_fieldAccessorTable = new

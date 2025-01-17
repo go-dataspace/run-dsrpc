@@ -19,16 +19,4 @@ public interface ContractServiceAgreementReceivedRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPidBytes();
-
-  /**
-   * <code>string agreement = 2 [json_name = "agreement"];</code>
-   * @return The agreement.
-   */
-  java.lang.String getAgreement();
-  /**
-   * <code>string agreement = 2 [json_name = "agreement"];</code>
-   * @return The bytes for agreement.
-   */
-  com.google.protobuf.ByteString
-      getAgreementBytes();
 }

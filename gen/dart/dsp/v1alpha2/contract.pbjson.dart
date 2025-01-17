@@ -110,14 +110,13 @@ const ContractServiceAgreementReceivedRequest$json = {
   '1': 'ContractServiceAgreementReceivedRequest',
   '2': [
     {'1': 'pid', '3': 1, '4': 1, '5': 9, '10': 'pid'},
-    {'1': 'agreement', '3': 2, '4': 1, '5': 9, '10': 'agreement'},
   ],
 };
 
 /// Descriptor for `ContractServiceAgreementReceivedRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List contractServiceAgreementReceivedRequestDescriptor = $convert.base64Decode(
     'CidDb250cmFjdFNlcnZpY2VBZ3JlZW1lbnRSZWNlaXZlZFJlcXVlc3QSEAoDcGlkGAEgASgJUg'
-    'NwaWQSHAoJYWdyZWVtZW50GAIgASgJUglhZ3JlZW1lbnQ=');
+    'NwaWQ=');
 
 @$core.Deprecated('Use contractServiceAgreementReceivedResponseDescriptor instead')
 const ContractServiceAgreementReceivedResponse$json = {

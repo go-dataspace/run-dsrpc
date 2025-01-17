@@ -2398,7 +2398,6 @@ class ContractServiceAgreementReceivedRequest final : public ::google::protobuf:
   // accessors -------------------------------------------------------
   enum : int {
     kPidFieldNumber = 1,
-    kAgreementFieldNumber = 2,
   };
   // string pid = 1 [json_name = "pid"];
   void clear_pid() ;
@@ -2416,29 +2415,13 @@ class ContractServiceAgreementReceivedRequest final : public ::google::protobuf:
   std::string* _internal_mutable_pid();
 
   public:
-  // string agreement = 2 [json_name = "agreement"];
-  void clear_agreement() ;
-  const std::string& agreement() const;
-  template <typename Arg_ = const std::string&, typename... Args_>
-  void set_agreement(Arg_&& arg, Args_... args);
-  std::string* mutable_agreement();
-  PROTOBUF_NODISCARD std::string* release_agreement();
-  void set_allocated_agreement(std::string* value);
-
-  private:
-  const std::string& _internal_agreement() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_agreement(
-      const std::string& value);
-  std::string* _internal_mutable_agreement();
-
-  public:
   // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractServiceAgreementReceivedRequest)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      1, 2, 0,
-      73, 2>
+      0, 1, 0,
+      64, 2>
       _table_;
 
   static constexpr const void* _raw_default_instance_ =
@@ -2459,7 +2442,6 @@ class ContractServiceAgreementReceivedRequest final : public ::google::protobuf:
                           ::google::protobuf::Arena* arena, const Impl_& from,
                           const ContractServiceAgreementReceivedRequest& from_msg);
     ::google::protobuf::internal::ArenaStringPtr pid_;
-    ::google::protobuf::internal::ArenaStringPtr agreement_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -3232,56 +3214,6 @@ inline void ContractServiceAgreementReceivedRequest::set_allocated_pid(std::stri
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractServiceAgreementReceivedRequest.pid)
-}
-
-// string agreement = 2 [json_name = "agreement"];
-inline void ContractServiceAgreementReceivedRequest::clear_agreement() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.agreement_.ClearToEmpty();
-}
-inline const std::string& ContractServiceAgreementReceivedRequest::agreement() const
-    ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractServiceAgreementReceivedRequest.agreement)
-  return _internal_agreement();
-}
-template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void ContractServiceAgreementReceivedRequest::set_agreement(Arg_&& arg,
-                                                     Args_... args) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.agreement_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractServiceAgreementReceivedRequest.agreement)
-}
-inline std::string* ContractServiceAgreementReceivedRequest::mutable_agreement() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  std::string* _s = _internal_mutable_agreement();
-  // @@protoc_insertion_point(field_mutable:dsp.v1alpha2.ContractServiceAgreementReceivedRequest.agreement)
-  return _s;
-}
-inline const std::string& ContractServiceAgreementReceivedRequest::_internal_agreement() const {
-  ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.agreement_.Get();
-}
-inline void ContractServiceAgreementReceivedRequest::_internal_set_agreement(const std::string& value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.agreement_.Set(value, GetArena());
-}
-inline std::string* ContractServiceAgreementReceivedRequest::_internal_mutable_agreement() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  return _impl_.agreement_.Mutable( GetArena());
-}
-inline std::string* ContractServiceAgreementReceivedRequest::release_agreement() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:dsp.v1alpha2.ContractServiceAgreementReceivedRequest.agreement)
-  return _impl_.agreement_.Release();
-}
-inline void ContractServiceAgreementReceivedRequest::set_allocated_agreement(std::string* value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.agreement_.SetAllocated(value, GetArena());
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        if (_impl_.agreement_.IsDefault()) {
-          _impl_.agreement_.Set("", GetArena());
-        }
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractServiceAgreementReceivedRequest.agreement)
 }
 
 // -------------------------------------------------------------------

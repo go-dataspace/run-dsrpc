@@ -143,8 +143,6 @@ struct Dsp_V1alpha2_ContractServiceAgreementReceivedRequest {
 
   var pid: String = String()
 
-  var agreement: String = String()
-
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -483,7 +481,6 @@ extension Dsp_V1alpha2_ContractServiceAgreementReceivedRequest: SwiftProtobuf.Me
   static let protoMessageName: String = _protobuf_package + ".ContractServiceAgreementReceivedRequest"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "pid"),
-    2: .same(proto: "agreement"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -493,7 +490,6 @@ extension Dsp_V1alpha2_ContractServiceAgreementReceivedRequest: SwiftProtobuf.Me
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularStringField(value: &self.pid) }()
-      case 2: try { try decoder.decodeSingularStringField(value: &self.agreement) }()
       default: break
       }
     }
@@ -503,15 +499,11 @@ extension Dsp_V1alpha2_ContractServiceAgreementReceivedRequest: SwiftProtobuf.Me
     if !self.pid.isEmpty {
       try visitor.visitSingularStringField(value: self.pid, fieldNumber: 1)
     }
-    if !self.agreement.isEmpty {
-      try visitor.visitSingularStringField(value: self.agreement, fieldNumber: 2)
-    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Dsp_V1alpha2_ContractServiceAgreementReceivedRequest, rhs: Dsp_V1alpha2_ContractServiceAgreementReceivedRequest) -> Bool {
     if lhs.pid != rhs.pid {return false}
-    if lhs.agreement != rhs.agreement {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

@@ -254,9 +254,6 @@ inline constexpr ContractServiceAgreementReceivedRequest::Impl_::Impl_(
       : pid_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        agreement_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
         _cached_size_{0} {}
 
 template <typename>
@@ -394,7 +391,6 @@ const ::uint32_t
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractServiceAgreementReceivedRequest, _impl_.pid_),
-        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractServiceAgreementReceivedRequest, _impl_.agreement_),
         ~0u,  // no _has_bits_
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractServiceAgreementReceivedResponse, _internal_metadata_),
         ~0u,  // no _extensions_
@@ -469,13 +465,13 @@ static const ::_pbi::MigrationSchema
         {54, -1, -1, sizeof(::dsp::v1alpha2::ContractServiceAcceptedReceivedRequest)},
         {63, -1, -1, sizeof(::dsp::v1alpha2::ContractServiceAcceptedReceivedResponse)},
         {71, -1, -1, sizeof(::dsp::v1alpha2::ContractServiceAgreementReceivedRequest)},
-        {81, -1, -1, sizeof(::dsp::v1alpha2::ContractServiceAgreementReceivedResponse)},
-        {89, -1, -1, sizeof(::dsp::v1alpha2::ContractServiceVerificationReceivedRequest)},
-        {98, -1, -1, sizeof(::dsp::v1alpha2::ContractServiceVerificationReceivedResponse)},
-        {106, -1, -1, sizeof(::dsp::v1alpha2::ContractServiceFinalizationReceivedRequest)},
-        {115, -1, -1, sizeof(::dsp::v1alpha2::ContractServiceFinalizationReceivedResponse)},
-        {123, -1, -1, sizeof(::dsp::v1alpha2::ContractServiceTerminationReceivedRequest)},
-        {134, -1, -1, sizeof(::dsp::v1alpha2::ContractServiceTerminationReceivedResponse)},
+        {80, -1, -1, sizeof(::dsp::v1alpha2::ContractServiceAgreementReceivedResponse)},
+        {88, -1, -1, sizeof(::dsp::v1alpha2::ContractServiceVerificationReceivedRequest)},
+        {97, -1, -1, sizeof(::dsp::v1alpha2::ContractServiceVerificationReceivedResponse)},
+        {105, -1, -1, sizeof(::dsp::v1alpha2::ContractServiceFinalizationReceivedRequest)},
+        {114, -1, -1, sizeof(::dsp::v1alpha2::ContractServiceFinalizationReceivedResponse)},
+        {122, -1, -1, sizeof(::dsp::v1alpha2::ContractServiceTerminationReceivedRequest)},
+        {133, -1, -1, sizeof(::dsp::v1alpha2::ContractServiceTerminationReceivedResponse)},
 };
 static const ::_pb::Message* const file_default_instances[] = {
     &::dsp::v1alpha2::_ContractServiceConfigureRequest_default_instance_._instance,
@@ -510,57 +506,57 @@ const char descriptor_table_protodef_dsp_2fv1alpha2_2fcontract_2eproto[] ABSL_AT
     "\tR\005offer\"&\n$ContractServiceOfferReceived"
     "Response\":\n&ContractServiceAcceptedRecei"
     "vedRequest\022\020\n\003pid\030\001 \001(\tR\003pid\")\n\'Contract"
-    "ServiceAcceptedReceivedResponse\"Y\n\'Contr"
+    "ServiceAcceptedReceivedResponse\";\n\'Contr"
     "actServiceAgreementReceivedRequest\022\020\n\003pi"
-    "d\030\001 \001(\tR\003pid\022\034\n\tagreement\030\002 \001(\tR\tagreeme"
-    "nt\"*\n(ContractServiceAgreementReceivedRe"
-    "sponse\">\n*ContractServiceVerificationRec"
-    "eivedRequest\022\020\n\003pid\030\001 \001(\tR\003pid\"-\n+Contra"
-    "ctServiceVerificationReceivedResponse\">\n"
-    "*ContractServiceFinalizationReceivedRequ"
-    "est\022\020\n\003pid\030\001 \001(\tR\003pid\"-\n+ContractService"
-    "FinalizationReceivedResponse\"i\n)Contract"
-    "ServiceTerminationReceivedRequest\022\020\n\003pid"
-    "\030\001 \001(\tR\003pid\022\022\n\004code\030\002 \001(\tR\004code\022\026\n\006reaso"
-    "n\030\003 \003(\tR\006reason\",\n*ContractServiceTermin"
-    "ationReceivedResponse2\261\010\n\017ContractServic"
-    "e\022l\n\tConfigure\022-.dsp.v1alpha2.ContractSe"
-    "rviceConfigureRequest\032..dsp.v1alpha2.Con"
-    "tractServiceConfigureResponse\"\000\022~\n\017Reque"
-    "stReceived\0223.dsp.v1alpha2.ContractServic"
-    "eRequestReceivedRequest\0324.dsp.v1alpha2.C"
-    "ontractServiceRequestReceivedResponse\"\000\022"
-    "x\n\rOfferReceived\0221.dsp.v1alpha2.Contract"
-    "ServiceOfferReceivedRequest\0322.dsp.v1alph"
-    "a2.ContractServiceOfferReceivedResponse\""
-    "\000\022\201\001\n\020AcceptedReceived\0224.dsp.v1alpha2.Co"
-    "ntractServiceAcceptedReceivedRequest\0325.d"
-    "sp.v1alpha2.ContractServiceAcceptedRecei"
-    "vedResponse\"\000\022\204\001\n\021AgreementReceived\0225.ds"
-    "p.v1alpha2.ContractServiceAgreementRecei"
-    "vedRequest\0326.dsp.v1alpha2.ContractServic"
-    "eAgreementReceivedResponse\"\000\022\215\001\n\024Verific"
-    "ationReceived\0228.dsp.v1alpha2.ContractSer"
-    "viceVerificationReceivedRequest\0329.dsp.v1"
-    "alpha2.ContractServiceVerificationReceiv"
-    "edResponse\"\000\022\215\001\n\024FinalizationReceived\0228."
-    "dsp.v1alpha2.ContractServiceFinalization"
-    "ReceivedRequest\0329.dsp.v1alpha2.ContractS"
-    "erviceFinalizationReceivedResponse\"\000\022\212\001\n"
-    "\023TerminationReceived\0227.dsp.v1alpha2.Cont"
-    "ractServiceTerminationReceivedRequest\0328."
-    "dsp.v1alpha2.ContractServiceTerminationR"
-    "eceivedResponse\"\000B\251\001\n\020com.dsp.v1alpha2B\r"
-    "ContractProtoP\001Z5github.com/bufbuild/buf"
-    "-tour/dsp/v1alpha2;dspv1alpha2\242\002\003DXX\252\002\014D"
-    "sp.V1alpha2\312\002\014Dsp\\V1alpha2\342\002\030Dsp\\V1alpha"
-    "2\\GPBMetadata\352\002\rDsp::V1alpha2b\006proto3"
+    "d\030\001 \001(\tR\003pid\"*\n(ContractServiceAgreement"
+    "ReceivedResponse\">\n*ContractServiceVerif"
+    "icationReceivedRequest\022\020\n\003pid\030\001 \001(\tR\003pid"
+    "\"-\n+ContractServiceVerificationReceivedR"
+    "esponse\">\n*ContractServiceFinalizationRe"
+    "ceivedRequest\022\020\n\003pid\030\001 \001(\tR\003pid\"-\n+Contr"
+    "actServiceFinalizationReceivedResponse\"i"
+    "\n)ContractServiceTerminationReceivedRequ"
+    "est\022\020\n\003pid\030\001 \001(\tR\003pid\022\022\n\004code\030\002 \001(\tR\004cod"
+    "e\022\026\n\006reason\030\003 \003(\tR\006reason\",\n*ContractSer"
+    "viceTerminationReceivedResponse2\261\010\n\017Cont"
+    "ractService\022l\n\tConfigure\022-.dsp.v1alpha2."
+    "ContractServiceConfigureRequest\032..dsp.v1"
+    "alpha2.ContractServiceConfigureResponse\""
+    "\000\022~\n\017RequestReceived\0223.dsp.v1alpha2.Cont"
+    "ractServiceRequestReceivedRequest\0324.dsp."
+    "v1alpha2.ContractServiceRequestReceivedR"
+    "esponse\"\000\022x\n\rOfferReceived\0221.dsp.v1alpha"
+    "2.ContractServiceOfferReceivedRequest\0322."
+    "dsp.v1alpha2.ContractServiceOfferReceive"
+    "dResponse\"\000\022\201\001\n\020AcceptedReceived\0224.dsp.v"
+    "1alpha2.ContractServiceAcceptedReceivedR"
+    "equest\0325.dsp.v1alpha2.ContractServiceAcc"
+    "eptedReceivedResponse\"\000\022\204\001\n\021AgreementRec"
+    "eived\0225.dsp.v1alpha2.ContractServiceAgre"
+    "ementReceivedRequest\0326.dsp.v1alpha2.Cont"
+    "ractServiceAgreementReceivedResponse\"\000\022\215"
+    "\001\n\024VerificationReceived\0228.dsp.v1alpha2.C"
+    "ontractServiceVerificationReceivedReques"
+    "t\0329.dsp.v1alpha2.ContractServiceVerifica"
+    "tionReceivedResponse\"\000\022\215\001\n\024FinalizationR"
+    "eceived\0228.dsp.v1alpha2.ContractServiceFi"
+    "nalizationReceivedRequest\0329.dsp.v1alpha2"
+    ".ContractServiceFinalizationReceivedResp"
+    "onse\"\000\022\212\001\n\023TerminationReceived\0227.dsp.v1a"
+    "lpha2.ContractServiceTerminationReceived"
+    "Request\0328.dsp.v1alpha2.ContractServiceTe"
+    "rminationReceivedResponse\"\000B\251\001\n\020com.dsp."
+    "v1alpha2B\rContractProtoP\001Z5github.com/bu"
+    "fbuild/buf-tour/dsp/v1alpha2;dspv1alpha2"
+    "\242\002\003DXX\252\002\014Dsp.V1alpha2\312\002\014Dsp\\V1alpha2\342\002\030D"
+    "sp\\V1alpha2\\GPBMetadata\352\002\rDsp::V1alpha2b"
+    "\006proto3"
 };
 static ::absl::once_flag descriptor_table_dsp_2fv1alpha2_2fcontract_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_dsp_2fv1alpha2_2fcontract_2eproto = {
     false,
     false,
-    2317,
+    2287,
     descriptor_table_protodef_dsp_2fv1alpha2_2fcontract_2eproto,
     "dsp/v1alpha2/contract.proto",
     &descriptor_table_dsp_2fv1alpha2_2fcontract_2eproto_once,
@@ -1772,7 +1768,6 @@ inline PROTOBUF_NDEBUG_INLINE ContractServiceAgreementReceivedRequest::Impl_::Im
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from, const ::dsp::v1alpha2::ContractServiceAgreementReceivedRequest& from_msg)
       : pid_(arena, from.pid_),
-        agreement_(arena, from.agreement_),
         _cached_size_{0} {}
 
 ContractServiceAgreementReceivedRequest::ContractServiceAgreementReceivedRequest(
@@ -1791,7 +1786,6 @@ inline PROTOBUF_NDEBUG_INLINE ContractServiceAgreementReceivedRequest::Impl_::Im
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
       : pid_(arena),
-        agreement_(arena),
         _cached_size_{0} {}
 
 inline void ContractServiceAgreementReceivedRequest::SharedCtor(::_pb::Arena* arena) {
@@ -1805,7 +1799,6 @@ ContractServiceAgreementReceivedRequest::~ContractServiceAgreementReceivedReques
 inline void ContractServiceAgreementReceivedRequest::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
   _impl_.pid_.Destroy();
-  _impl_.agreement_.Destroy();
   _impl_.~Impl_();
 }
 
@@ -1830,15 +1823,15 @@ ContractServiceAgreementReceivedRequest::GetClassData() const {
   return _data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 0, 73, 2> ContractServiceAgreementReceivedRequest::_table_ = {
+const ::_pbi::TcParseTable<0, 1, 0, 64, 2> ContractServiceAgreementReceivedRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
-    2, 8,  // max_field_number, fast_idx_mask
+    1, 0,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
-    4294967292,  // skipmap
+    4294967294,  // skipmap
     offsetof(decltype(_table_), field_entries),
-    2,  // num_field_entries
+    1,  // num_field_entries
     0,  // num_aux_entries
     offsetof(decltype(_table_), field_names),  // no aux_entries
     &_ContractServiceAgreementReceivedRequest_default_instance_._instance,
@@ -1848,9 +1841,6 @@ const ::_pbi::TcParseTable<1, 2, 0, 73, 2> ContractServiceAgreementReceivedReque
     ::_pbi::TcParser::GetTable<::dsp::v1alpha2::ContractServiceAgreementReceivedRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // string agreement = 2 [json_name = "agreement"];
-    {::_pbi::TcParser::FastUS1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(ContractServiceAgreementReceivedRequest, _impl_.agreement_)}},
     // string pid = 1 [json_name = "pid"];
     {::_pbi::TcParser::FastUS1,
      {10, 63, 0, PROTOBUF_FIELD_OFFSET(ContractServiceAgreementReceivedRequest, _impl_.pid_)}},
@@ -1860,16 +1850,12 @@ const ::_pbi::TcParseTable<1, 2, 0, 73, 2> ContractServiceAgreementReceivedReque
     // string pid = 1 [json_name = "pid"];
     {PROTOBUF_FIELD_OFFSET(ContractServiceAgreementReceivedRequest, _impl_.pid_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string agreement = 2 [json_name = "agreement"];
-    {PROTOBUF_FIELD_OFFSET(ContractServiceAgreementReceivedRequest, _impl_.agreement_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
   // no aux_entries
   {{
-    "\64\3\11\0\0\0\0\0"
+    "\64\3\0\0\0\0\0\0"
     "dsp.v1alpha2.ContractServiceAgreementReceivedRequest"
     "pid"
-    "agreement"
   }},
 };
 
@@ -1881,7 +1867,6 @@ PROTOBUF_NOINLINE void ContractServiceAgreementReceivedRequest::Clear() {
   (void) cached_has_bits;
 
   _impl_.pid_.ClearToEmpty();
-  _impl_.agreement_.ClearToEmpty();
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -1898,14 +1883,6 @@ PROTOBUF_NOINLINE void ContractServiceAgreementReceivedRequest::Clear() {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
         _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "dsp.v1alpha2.ContractServiceAgreementReceivedRequest.pid");
     target = stream->WriteStringMaybeAliased(1, _s, target);
-  }
-
-  // string agreement = 2 [json_name = "agreement"];
-  if (!this->_internal_agreement().empty()) {
-    const std::string& _s = this->_internal_agreement();
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "dsp.v1alpha2.ContractServiceAgreementReceivedRequest.agreement");
-    target = stream->WriteStringMaybeAliased(2, _s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1925,17 +1902,10 @@ PROTOBUF_NOINLINE void ContractServiceAgreementReceivedRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::_pbi::Prefetch5LinesFrom7Lines(reinterpret_cast<const void*>(this));
   // string pid = 1 [json_name = "pid"];
   if (!this->_internal_pid().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                     this->_internal_pid());
-  }
-
-  // string agreement = 2 [json_name = "agreement"];
-  if (!this->_internal_agreement().empty()) {
-    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_agreement());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -1952,9 +1922,6 @@ void ContractServiceAgreementReceivedRequest::MergeImpl(::google::protobuf::Mess
 
   if (!from._internal_pid().empty()) {
     _this->_internal_set_pid(from._internal_pid());
-  }
-  if (!from._internal_agreement().empty()) {
-    _this->_internal_set_agreement(from._internal_agreement());
   }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -1973,7 +1940,6 @@ void ContractServiceAgreementReceivedRequest::InternalSwap(ContractServiceAgreem
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.pid_, &other->_impl_.pid_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.agreement_, &other->_impl_.agreement_, arena);
 }
 
 ::google::protobuf::Metadata ContractServiceAgreementReceivedRequest::GetMetadata() const {
