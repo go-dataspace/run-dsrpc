@@ -112,7 +112,6 @@ export const ContractServiceAgreementReceivedRequest = /*@__PURE__*/ proto3.make
   "dsp.v1alpha2.ContractServiceAgreementReceivedRequest",
   () => [
     { no: 1, name: "pid", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "agreement", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
 );
 

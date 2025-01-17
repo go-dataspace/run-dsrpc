@@ -47,23 +47,6 @@ public object ContractServiceAgreementReceivedRequestKt {
     public fun clearPid() {
       _builder.clearPid()
     }
-
-    /**
-     * `string agreement = 2 [json_name = "agreement"];`
-     */
-    public var agreement: kotlin.String
-      @JvmName("getAgreement")
-      get() = _builder.getAgreement()
-      @JvmName("setAgreement")
-      set(value) {
-        _builder.setAgreement(value)
-      }
-    /**
-     * `string agreement = 2 [json_name = "agreement"];`
-     */
-    public fun clearAgreement() {
-      _builder.clearAgreement()
-    }
   }
 }
 @kotlin.jvm.JvmSynthetic

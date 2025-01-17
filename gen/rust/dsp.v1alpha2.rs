@@ -59,8 +59,6 @@ pub struct ContractServiceAcceptedReceivedResponse {
 pub struct ContractServiceAgreementReceivedRequest {
     #[prost(string, tag="1")]
     pub pid: ::prost::alloc::string::String,
-    #[prost(string, tag="2")]
-    pub agreement: ::prost::alloc::string::String,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]

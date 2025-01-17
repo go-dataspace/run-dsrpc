@@ -392,14 +392,10 @@ class ContractServiceAcceptedReceivedResponse extends $pb.GeneratedMessage {
 class ContractServiceAgreementReceivedRequest extends $pb.GeneratedMessage {
   factory ContractServiceAgreementReceivedRequest({
     $core.String? pid,
-    $core.String? agreement,
   }) {
     final $result = create();
     if (pid != null) {
       $result.pid = pid;
-    }
-    if (agreement != null) {
-      $result.agreement = agreement;
     }
     return $result;
   }
@@ -409,7 +405,6 @@ class ContractServiceAgreementReceivedRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContractServiceAgreementReceivedRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'pid')
-    ..aOS(2, _omitFieldNames ? '' : 'agreement')
     ..hasRequiredFields = false
   ;
 
@@ -442,15 +437,6 @@ class ContractServiceAgreementReceivedRequest extends $pb.GeneratedMessage {
   $core.bool hasPid() => $_has(0);
   @$pb.TagNumber(1)
   void clearPid() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.String get agreement => $_getSZ(1);
-  @$pb.TagNumber(2)
-  set agreement($core.String v) { $_setString(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasAgreement() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearAgreement() => clearField(2);
 }
 
 class ContractServiceAgreementReceivedResponse extends $pb.GeneratedMessage {
