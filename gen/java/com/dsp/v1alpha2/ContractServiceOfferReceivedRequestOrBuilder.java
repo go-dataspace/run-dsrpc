@@ -31,4 +31,10 @@ public interface ContractServiceOfferReceivedRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getOfferBytes();
+
+  /**
+   * <code>bool notify_only = 3 [json_name = "notifyOnly"];</code>
+   * @return The notifyOnly.
+   */
+  boolean getNotifyOnly();
 }

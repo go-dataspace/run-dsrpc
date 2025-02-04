@@ -25,6 +25,10 @@ class ContractServiceRequestReceivedRequest extends \Google\Protobuf\Internal\Me
      * Generated from protobuf field <code>string offer = 2 [json_name = "offer"];</code>
      */
     protected $offer = '';
+    /**
+     * Generated from protobuf field <code>bool notify_only = 3 [json_name = "notifyOnly"];</code>
+     */
+    protected $notify_only = false;
 
     /**
      * Constructor.
@@ -34,6 +38,7 @@ class ContractServiceRequestReceivedRequest extends \Google\Protobuf\Internal\Me
      *
      *     @type string $pid
      *     @type string $offer
+     *     @type bool $notify_only
      * }
      */
     public function __construct($data = NULL) {
@@ -81,6 +86,28 @@ class ContractServiceRequestReceivedRequest extends \Google\Protobuf\Internal\Me
     {
         GPBUtil::checkString($var, True);
         $this->offer = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool notify_only = 3 [json_name = "notifyOnly"];</code>
+     * @return bool
+     */
+    public function getNotifyOnly()
+    {
+        return $this->notify_only;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool notify_only = 3 [json_name = "notifyOnly"];</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setNotifyOnly($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->notify_only = $var;
 
         return $this;
     }

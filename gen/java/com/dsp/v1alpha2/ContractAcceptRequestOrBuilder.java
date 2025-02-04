@@ -19,4 +19,16 @@ public interface ContractAcceptRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPidBytes();
+
+  /**
+   * <code>bool fast_forward = 2 [json_name = "fastForward"];</code>
+   * @return The fastForward.
+   */
+  boolean getFastForward();
+
+  /**
+   * <code>bool want_notifications = 3 [json_name = "wantNotifications"];</code>
+   * @return The wantNotifications.
+   */
+  boolean getWantNotifications();
 }

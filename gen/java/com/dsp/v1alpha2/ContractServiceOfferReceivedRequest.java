@@ -123,6 +123,17 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int NOTIFY_ONLY_FIELD_NUMBER = 3;
+  private boolean notifyOnly_ = false;
+  /**
+   * <code>bool notify_only = 3 [json_name = "notifyOnly"];</code>
+   * @return The notifyOnly.
+   */
+  @java.lang.Override
+  public boolean getNotifyOnly() {
+    return notifyOnly_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -143,6 +154,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(offer_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, offer_);
     }
+    if (notifyOnly_ != false) {
+      output.writeBool(3, notifyOnly_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -157,6 +171,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(offer_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, offer_);
+    }
+    if (notifyOnly_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(3, notifyOnly_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -177,6 +195,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getPid())) return false;
     if (!getOffer()
         .equals(other.getOffer())) return false;
+    if (getNotifyOnly()
+        != other.getNotifyOnly()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -192,6 +212,9 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getPid().hashCode();
     hash = (37 * hash) + OFFER_FIELD_NUMBER;
     hash = (53 * hash) + getOffer().hashCode();
+    hash = (37 * hash) + NOTIFY_ONLY_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getNotifyOnly());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -329,6 +352,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       pid_ = "";
       offer_ = "";
+      notifyOnly_ = false;
       return this;
     }
 
@@ -367,6 +391,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.offer_ = offer_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.notifyOnly_ = notifyOnly_;
       }
     }
 
@@ -424,6 +451,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
+      if (other.getNotifyOnly() != false) {
+        setNotifyOnly(other.getNotifyOnly());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -460,6 +490,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 24: {
+              notifyOnly_ = input.readBool();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -617,6 +652,38 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       offer_ = value;
       bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private boolean notifyOnly_ ;
+    /**
+     * <code>bool notify_only = 3 [json_name = "notifyOnly"];</code>
+     * @return The notifyOnly.
+     */
+    @java.lang.Override
+    public boolean getNotifyOnly() {
+      return notifyOnly_;
+    }
+    /**
+     * <code>bool notify_only = 3 [json_name = "notifyOnly"];</code>
+     * @param value The notifyOnly to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNotifyOnly(boolean value) {
+
+      notifyOnly_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool notify_only = 3 [json_name = "notifyOnly"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearNotifyOnly() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      notifyOnly_ = false;
       onChanged();
       return this;
     }

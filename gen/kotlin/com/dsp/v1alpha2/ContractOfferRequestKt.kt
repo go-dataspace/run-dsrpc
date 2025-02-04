@@ -96,6 +96,40 @@ public object ContractOfferRequestKt {
     public fun hasParticipantAddress(): kotlin.Boolean {
       return _builder.hasParticipantAddress()
     }
+
+    /**
+     * `bool fast_forward = 4 [json_name = "fastForward"];`
+     */
+    public var fastForward: kotlin.Boolean
+      @JvmName("getFastForward")
+      get() = _builder.getFastForward()
+      @JvmName("setFastForward")
+      set(value) {
+        _builder.setFastForward(value)
+      }
+    /**
+     * `bool fast_forward = 4 [json_name = "fastForward"];`
+     */
+    public fun clearFastForward() {
+      _builder.clearFastForward()
+    }
+
+    /**
+     * `bool want_notifications = 5 [json_name = "wantNotifications"];`
+     */
+    public var wantNotifications: kotlin.Boolean
+      @JvmName("getWantNotifications")
+      get() = _builder.getWantNotifications()
+      @JvmName("setWantNotifications")
+      set(value) {
+        _builder.setWantNotifications(value)
+      }
+    /**
+     * `bool want_notifications = 5 [json_name = "wantNotifications"];`
+     */
+    public fun clearWantNotifications() {
+      _builder.clearWantNotifications()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

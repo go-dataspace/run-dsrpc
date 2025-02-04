@@ -20,6 +20,18 @@ class ContractVerifyRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string pid = 1 [json_name = "pid"];</code>
      */
     protected $pid = '';
+    /**
+     * signals to RUN-DSP that it should fast forward the negotiation and not wait for any requests of the contract service.
+     *
+     * Generated from protobuf field <code>bool fast_forward = 2 [json_name = "fastForward"];</code>
+     */
+    protected $fast_forward = false;
+    /**
+     * signals to RUN-DSP that the contract service still wants notifications only useful if fast_forward is set.
+     *
+     * Generated from protobuf field <code>bool want_notifications = 3 [json_name = "wantNotifications"];</code>
+     */
+    protected $want_notifications = false;
 
     /**
      * Constructor.
@@ -28,6 +40,10 @@ class ContractVerifyRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $pid
+     *     @type bool $fast_forward
+     *           signals to RUN-DSP that it should fast forward the negotiation and not wait for any requests of the contract service.
+     *     @type bool $want_notifications
+     *           signals to RUN-DSP that the contract service still wants notifications only useful if fast_forward is set.
      * }
      */
     public function __construct($data = NULL) {
@@ -53,6 +69,58 @@ class ContractVerifyRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->pid = $var;
+
+        return $this;
+    }
+
+    /**
+     * signals to RUN-DSP that it should fast forward the negotiation and not wait for any requests of the contract service.
+     *
+     * Generated from protobuf field <code>bool fast_forward = 2 [json_name = "fastForward"];</code>
+     * @return bool
+     */
+    public function getFastForward()
+    {
+        return $this->fast_forward;
+    }
+
+    /**
+     * signals to RUN-DSP that it should fast forward the negotiation and not wait for any requests of the contract service.
+     *
+     * Generated from protobuf field <code>bool fast_forward = 2 [json_name = "fastForward"];</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setFastForward($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->fast_forward = $var;
+
+        return $this;
+    }
+
+    /**
+     * signals to RUN-DSP that the contract service still wants notifications only useful if fast_forward is set.
+     *
+     * Generated from protobuf field <code>bool want_notifications = 3 [json_name = "wantNotifications"];</code>
+     * @return bool
+     */
+    public function getWantNotifications()
+    {
+        return $this->want_notifications;
+    }
+
+    /**
+     * signals to RUN-DSP that the contract service still wants notifications only useful if fast_forward is set.
+     *
+     * Generated from protobuf field <code>bool want_notifications = 3 [json_name = "wantNotifications"];</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setWantNotifications($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->want_notifications = $var;
 
         return $this;
     }

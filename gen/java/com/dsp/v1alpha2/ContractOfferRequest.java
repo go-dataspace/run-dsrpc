@@ -181,6 +181,28 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int FAST_FORWARD_FIELD_NUMBER = 4;
+  private boolean fastForward_ = false;
+  /**
+   * <code>bool fast_forward = 4 [json_name = "fastForward"];</code>
+   * @return The fastForward.
+   */
+  @java.lang.Override
+  public boolean getFastForward() {
+    return fastForward_;
+  }
+
+  public static final int WANT_NOTIFICATIONS_FIELD_NUMBER = 5;
+  private boolean wantNotifications_ = false;
+  /**
+   * <code>bool want_notifications = 5 [json_name = "wantNotifications"];</code>
+   * @return The wantNotifications.
+   */
+  @java.lang.Override
+  public boolean getWantNotifications() {
+    return wantNotifications_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -204,6 +226,12 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, participantAddress_);
     }
+    if (fastForward_ != false) {
+      output.writeBool(4, fastForward_);
+    }
+    if (wantNotifications_ != false) {
+      output.writeBool(5, wantNotifications_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -221,6 +249,14 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, participantAddress_);
+    }
+    if (fastForward_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, fastForward_);
+    }
+    if (wantNotifications_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(5, wantNotifications_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -249,6 +285,10 @@ private static final long serialVersionUID = 0L;
       if (!getParticipantAddress()
           .equals(other.getParticipantAddress())) return false;
     }
+    if (getFastForward()
+        != other.getFastForward()) return false;
+    if (getWantNotifications()
+        != other.getWantNotifications()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -270,6 +310,12 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PARTICIPANT_ADDRESS_FIELD_NUMBER;
       hash = (53 * hash) + getParticipantAddress().hashCode();
     }
+    hash = (37 * hash) + FAST_FORWARD_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getFastForward());
+    hash = (37 * hash) + WANT_NOTIFICATIONS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getWantNotifications());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -409,6 +455,8 @@ private static final long serialVersionUID = 0L;
       offer_ = "";
       pid_ = "";
       participantAddress_ = "";
+      fastForward_ = false;
+      wantNotifications_ = false;
       return this;
     }
 
@@ -453,6 +501,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.participantAddress_ = participantAddress_;
         to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.fastForward_ = fastForward_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.wantNotifications_ = wantNotifications_;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -516,6 +570,12 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000004;
         onChanged();
       }
+      if (other.getFastForward() != false) {
+        setFastForward(other.getFastForward());
+      }
+      if (other.getWantNotifications() != false) {
+        setWantNotifications(other.getWantNotifications());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -557,6 +617,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 32: {
+              fastForward_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 40: {
+              wantNotifications_ = input.readBool();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -800,6 +870,70 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       participantAddress_ = value;
       bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private boolean fastForward_ ;
+    /**
+     * <code>bool fast_forward = 4 [json_name = "fastForward"];</code>
+     * @return The fastForward.
+     */
+    @java.lang.Override
+    public boolean getFastForward() {
+      return fastForward_;
+    }
+    /**
+     * <code>bool fast_forward = 4 [json_name = "fastForward"];</code>
+     * @param value The fastForward to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFastForward(boolean value) {
+
+      fastForward_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool fast_forward = 4 [json_name = "fastForward"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFastForward() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      fastForward_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean wantNotifications_ ;
+    /**
+     * <code>bool want_notifications = 5 [json_name = "wantNotifications"];</code>
+     * @return The wantNotifications.
+     */
+    @java.lang.Override
+    public boolean getWantNotifications() {
+      return wantNotifications_;
+    }
+    /**
+     * <code>bool want_notifications = 5 [json_name = "wantNotifications"];</code>
+     * @param value The wantNotifications to set.
+     * @return This builder for chaining.
+     */
+    public Builder setWantNotifications(boolean value) {
+
+      wantNotifications_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool want_notifications = 5 [json_name = "wantNotifications"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearWantNotifications() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      wantNotifications_ = false;
       onChanged();
       return this;
     }

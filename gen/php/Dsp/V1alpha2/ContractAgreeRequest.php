@@ -24,6 +24,14 @@ class ContractAgreeRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string pid = 2 [json_name = "pid"];</code>
      */
     protected $pid = '';
+    /**
+     * Generated from protobuf field <code>bool fast_forward = 3 [json_name = "fastForward"];</code>
+     */
+    protected $fast_forward = false;
+    /**
+     * Generated from protobuf field <code>bool want_notifications = 4 [json_name = "wantNotifications"];</code>
+     */
+    protected $want_notifications = false;
 
     /**
      * Constructor.
@@ -33,6 +41,8 @@ class ContractAgreeRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type string $agreement
      *     @type string $pid
+     *     @type bool $fast_forward
+     *     @type bool $want_notifications
      * }
      */
     public function __construct($data = NULL) {
@@ -80,6 +90,50 @@ class ContractAgreeRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->pid = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool fast_forward = 3 [json_name = "fastForward"];</code>
+     * @return bool
+     */
+    public function getFastForward()
+    {
+        return $this->fast_forward;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool fast_forward = 3 [json_name = "fastForward"];</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setFastForward($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->fast_forward = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool want_notifications = 4 [json_name = "wantNotifications"];</code>
+     * @return bool
+     */
+    public function getWantNotifications()
+    {
+        return $this->want_notifications;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool want_notifications = 4 [json_name = "wantNotifications"];</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setWantNotifications($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->want_notifications = $var;
 
         return $this;
     }

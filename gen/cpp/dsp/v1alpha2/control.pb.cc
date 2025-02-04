@@ -268,6 +268,8 @@ inline constexpr ContractVerifyRequest::Impl_::Impl_(
       : pid_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
+        fast_forward_{false},
+        want_notifications_{false},
         _cached_size_{0} {}
 
 template <typename>
@@ -344,7 +346,9 @@ inline constexpr ContractRequestRequest::Impl_::Impl_(
             ::_pbi::ConstantInitialized()),
         participant_address_(
             &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()) {}
+            ::_pbi::ConstantInitialized()),
+        fast_forward_{false},
+        want_notifications_{false} {}
 
 template <typename>
 PROTOBUF_CONSTEXPR ContractRequestRequest::ContractRequestRequest(::_pbi::ConstantInitialized)
@@ -383,7 +387,9 @@ inline constexpr ContractOfferRequest::Impl_::Impl_(
             ::_pbi::ConstantInitialized()),
         participant_address_(
             &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()) {}
+            ::_pbi::ConstantInitialized()),
+        fast_forward_{false},
+        want_notifications_{false} {}
 
 template <typename>
 PROTOBUF_CONSTEXPR ContractOfferRequest::ContractOfferRequest(::_pbi::ConstantInitialized)
@@ -416,6 +422,8 @@ inline constexpr ContractFinalizeRequest::Impl_::Impl_(
       : pid_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
+        fast_forward_{false},
+        want_notifications_{false},
         _cached_size_{0} {}
 
 template <typename>
@@ -452,6 +460,8 @@ inline constexpr ContractAgreeRequest::Impl_::Impl_(
         pid_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
+        fast_forward_{false},
+        want_notifications_{false},
         _cached_size_{0} {}
 
 template <typename>
@@ -485,6 +495,8 @@ inline constexpr ContractAcceptRequest::Impl_::Impl_(
       : pid_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
+        fast_forward_{false},
+        want_notifications_{false},
         _cached_size_{0} {}
 
 template <typename>
@@ -697,9 +709,13 @@ const ::uint32_t
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractRequestRequest, _impl_.offer_),
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractRequestRequest, _impl_.pid_),
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractRequestRequest, _impl_.participant_address_),
+        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractRequestRequest, _impl_.fast_forward_),
+        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractRequestRequest, _impl_.want_notifications_),
         ~0u,
         0,
         1,
+        ~0u,
+        ~0u,
         ~0u,  // no _has_bits_
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractRequestResponse, _internal_metadata_),
         ~0u,  // no _extensions_
@@ -719,9 +735,13 @@ const ::uint32_t
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractOfferRequest, _impl_.offer_),
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractOfferRequest, _impl_.pid_),
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractOfferRequest, _impl_.participant_address_),
+        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractOfferRequest, _impl_.fast_forward_),
+        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractOfferRequest, _impl_.want_notifications_),
         ~0u,
         0,
         1,
+        ~0u,
+        ~0u,
         ~0u,  // no _has_bits_
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractOfferResponse, _internal_metadata_),
         ~0u,  // no _extensions_
@@ -739,6 +759,8 @@ const ::uint32_t
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractAcceptRequest, _impl_.pid_),
+        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractAcceptRequest, _impl_.fast_forward_),
+        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractAcceptRequest, _impl_.want_notifications_),
         ~0u,  // no _has_bits_
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractAcceptResponse, _internal_metadata_),
         ~0u,  // no _extensions_
@@ -757,6 +779,8 @@ const ::uint32_t
         ~0u,  // no sizeof(Split)
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractAgreeRequest, _impl_.agreement_),
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractAgreeRequest, _impl_.pid_),
+        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractAgreeRequest, _impl_.fast_forward_),
+        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractAgreeRequest, _impl_.want_notifications_),
         ~0u,  // no _has_bits_
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractAgreeResponse, _internal_metadata_),
         ~0u,  // no _extensions_
@@ -774,6 +798,8 @@ const ::uint32_t
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractVerifyRequest, _impl_.pid_),
+        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractVerifyRequest, _impl_.fast_forward_),
+        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractVerifyRequest, _impl_.want_notifications_),
         ~0u,  // no _has_bits_
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractVerifyResponse, _internal_metadata_),
         ~0u,  // no _extensions_
@@ -791,6 +817,8 @@ const ::uint32_t
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractFinalizeRequest, _impl_.pid_),
+        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractFinalizeRequest, _impl_.fast_forward_),
+        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractFinalizeRequest, _impl_.want_notifications_),
         ~0u,  // no _has_bits_
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractFinalizeResponse, _internal_metadata_),
         ~0u,  // no _extensions_
@@ -899,28 +927,28 @@ static const ::_pbi::MigrationSchema
         {58, 68, -1, sizeof(::dsp::v1alpha2::GetProviderDatasetResponse)},
         {70, -1, -1, sizeof(::dsp::v1alpha2::GetProviderDatasetDownloadInformationRequest)},
         {80, 90, -1, sizeof(::dsp::v1alpha2::GetProviderDatasetDownloadInformationResponse)},
-        {92, 103, -1, sizeof(::dsp::v1alpha2::ContractRequestRequest)},
-        {106, -1, -1, sizeof(::dsp::v1alpha2::ContractRequestResponse)},
-        {114, 125, -1, sizeof(::dsp::v1alpha2::ContractOfferRequest)},
-        {128, -1, -1, sizeof(::dsp::v1alpha2::ContractOfferResponse)},
-        {136, -1, -1, sizeof(::dsp::v1alpha2::ContractAcceptRequest)},
-        {145, -1, -1, sizeof(::dsp::v1alpha2::ContractAcceptResponse)},
-        {153, -1, -1, sizeof(::dsp::v1alpha2::ContractAgreeRequest)},
-        {163, -1, -1, sizeof(::dsp::v1alpha2::ContractAgreeResponse)},
-        {171, -1, -1, sizeof(::dsp::v1alpha2::ContractVerifyRequest)},
-        {180, -1, -1, sizeof(::dsp::v1alpha2::ContractVerifyResponse)},
-        {188, -1, -1, sizeof(::dsp::v1alpha2::ContractFinalizeRequest)},
-        {197, -1, -1, sizeof(::dsp::v1alpha2::ContractFinalizeResponse)},
-        {205, -1, -1, sizeof(::dsp::v1alpha2::ContractTerminateRequest)},
-        {216, -1, -1, sizeof(::dsp::v1alpha2::ContractTerminateResponse)},
-        {224, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferCompleteRequest)},
-        {233, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferCompleteResponse)},
-        {241, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferCancelledRequest)},
-        {250, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferCancelledResponse)},
-        {258, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferSuspendRequest)},
-        {267, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferSuspendResponse)},
-        {275, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferResumeRequest)},
-        {284, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferResumeResponse)},
+        {92, 105, -1, sizeof(::dsp::v1alpha2::ContractRequestRequest)},
+        {110, -1, -1, sizeof(::dsp::v1alpha2::ContractRequestResponse)},
+        {118, 131, -1, sizeof(::dsp::v1alpha2::ContractOfferRequest)},
+        {136, -1, -1, sizeof(::dsp::v1alpha2::ContractOfferResponse)},
+        {144, -1, -1, sizeof(::dsp::v1alpha2::ContractAcceptRequest)},
+        {155, -1, -1, sizeof(::dsp::v1alpha2::ContractAcceptResponse)},
+        {163, -1, -1, sizeof(::dsp::v1alpha2::ContractAgreeRequest)},
+        {175, -1, -1, sizeof(::dsp::v1alpha2::ContractAgreeResponse)},
+        {183, -1, -1, sizeof(::dsp::v1alpha2::ContractVerifyRequest)},
+        {194, -1, -1, sizeof(::dsp::v1alpha2::ContractVerifyResponse)},
+        {202, -1, -1, sizeof(::dsp::v1alpha2::ContractFinalizeRequest)},
+        {213, -1, -1, sizeof(::dsp::v1alpha2::ContractFinalizeResponse)},
+        {221, -1, -1, sizeof(::dsp::v1alpha2::ContractTerminateRequest)},
+        {232, -1, -1, sizeof(::dsp::v1alpha2::ContractTerminateResponse)},
+        {240, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferCompleteRequest)},
+        {249, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferCompleteResponse)},
+        {257, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferCancelledRequest)},
+        {266, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferCancelledResponse)},
+        {274, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferSuspendRequest)},
+        {283, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferSuspendResponse)},
+        {291, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferResumeRequest)},
+        {300, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferResumeResponse)},
 };
 static const ::_pb::Message* const file_default_instances[] = {
     &::dsp::v1alpha2::_VerifyConnectionRequest_default_instance_._instance,
@@ -981,82 +1009,94 @@ const char descriptor_table_protodef_dsp_2fv1alpha2_2fcontrol_2eproto[] ABSL_ATT
     "tDownloadInformationResponse\022<\n\014publish_"
     "info\030\001 \001(\0132\031.dsp.v1alpha2.PublishInfoR\013p"
     "ublishInfo\022\037\n\013transfer_id\030\002 \001(\tR\ntransfe"
-    "rId\"\233\001\n\026ContractRequestRequest\022\024\n\005offer\030"
+    "rId\"\355\001\n\026ContractRequestRequest\022\024\n\005offer\030"
     "\001 \001(\tR\005offer\022\025\n\003pid\030\002 \001(\tH\000R\003pid\210\001\001\0224\n\023p"
     "articipant_address\030\003 \001(\tH\001R\022participantA"
-    "ddress\210\001\001B\006\n\004_pidB\026\n\024_participant_addres"
-    "s\"\031\n\027ContractRequestResponse\"\231\001\n\024Contrac"
-    "tOfferRequest\022\024\n\005offer\030\001 \001(\tR\005offer\022\025\n\003p"
-    "id\030\002 \001(\tH\000R\003pid\210\001\001\0224\n\023participant_addres"
-    "s\030\003 \001(\tH\001R\022participantAddress\210\001\001B\006\n\004_pid"
-    "B\026\n\024_participant_address\"\027\n\025ContractOffe"
-    "rResponse\")\n\025ContractAcceptRequest\022\020\n\003pi"
-    "d\030\001 \001(\tR\003pid\"\030\n\026ContractAcceptResponse\"F"
-    "\n\024ContractAgreeRequest\022\034\n\tagreement\030\001 \001("
-    "\tR\tagreement\022\020\n\003pid\030\002 \001(\tR\003pid\"\027\n\025Contra"
-    "ctAgreeResponse\")\n\025ContractVerifyRequest"
-    "\022\020\n\003pid\030\001 \001(\tR\003pid\"\030\n\026ContractVerifyResp"
-    "onse\"+\n\027ContractFinalizeRequest\022\020\n\003pid\030\001"
-    " \001(\tR\003pid\"\032\n\030ContractFinalizeResponse\"X\n"
-    "\030ContractTerminateRequest\022\020\n\003pid\030\001 \001(\tR\003"
-    "pid\022\022\n\004code\030\002 \001(\tR\004code\022\026\n\006reason\030\003 \003(\tR"
-    "\006reason\"\033\n\031ContractTerminateResponse\"@\n\035"
-    "SignalTransferCompleteRequest\022\037\n\013transfe"
-    "r_id\030\001 \001(\tR\ntransferId\" \n\036SignalTransfer"
-    "CompleteResponse\"A\n\036SignalTransferCancel"
-    "ledRequest\022\037\n\013transfer_id\030\001 \001(\tR\ntransfe"
-    "rId\"!\n\037SignalTransferCancelledResponse\"\?"
-    "\n\034SignalTransferSuspendRequest\022\037\n\013transf"
-    "er_id\030\001 \001(\tR\ntransferId\"\037\n\035SignalTransfe"
-    "rSuspendResponse\">\n\033SignalTransferResume"
-    "Request\022\037\n\013transfer_id\030\001 \001(\tR\ntransferId"
-    "\"\036\n\034SignalTransferResumeResponse2\361\014\n\016Con"
-    "trolService\022\242\001\n%GetProviderDatasetDownlo"
-    "adInformation\022:.dsp.v1alpha2.GetProvider"
-    "DatasetDownloadInformationRequest\032;.dsp."
-    "v1alpha2.GetProviderDatasetDownloadInfor"
-    "mationResponse\"\000\022c\n\020VerifyConnection\022%.d"
-    "sp.v1alpha2.VerifyConnectionRequest\032&.ds"
-    "p.v1alpha2.VerifyConnectionResponse\"\000\022o\n"
-    "\024GetProviderCatalogue\022).dsp.v1alpha2.Get"
-    "ProviderCatalogueRequest\032*.dsp.v1alpha2."
-    "GetProviderCatalogueResponse\"\000\022i\n\022GetPro"
-    "viderDataset\022\'.dsp.v1alpha2.GetProviderD"
-    "atasetRequest\032(.dsp.v1alpha2.GetProvider"
-    "DatasetResponse\"\000\022`\n\017ContractRequest\022$.d"
-    "sp.v1alpha2.ContractRequestRequest\032%.dsp"
-    ".v1alpha2.ContractRequestResponse\"\000\022Z\n\rC"
-    "ontractOffer\022\".dsp.v1alpha2.ContractOffe"
-    "rRequest\032#.dsp.v1alpha2.ContractOfferRes"
-    "ponse\"\000\022]\n\016ContractAccept\022#.dsp.v1alpha2"
-    ".ContractAcceptRequest\032$.dsp.v1alpha2.Co"
-    "ntractAcceptResponse\"\000\022Z\n\rContractAgree\022"
-    "\".dsp.v1alpha2.ContractAgreeRequest\032#.ds"
-    "p.v1alpha2.ContractAgreeResponse\"\000\022]\n\016Co"
-    "ntractVerify\022#.dsp.v1alpha2.ContractVeri"
-    "fyRequest\032$.dsp.v1alpha2.ContractVerifyR"
-    "esponse\"\000\022c\n\020ContractFinalize\022%.dsp.v1al"
-    "pha2.ContractFinalizeRequest\032&.dsp.v1alp"
-    "ha2.ContractFinalizeResponse\"\000\022f\n\021Contra"
-    "ctTerminate\022&.dsp.v1alpha2.ContractTermi"
-    "nateRequest\032\'.dsp.v1alpha2.ContractTermi"
-    "nateResponse\"\000\022u\n\026SignalTransferComplete"
-    "\022+.dsp.v1alpha2.SignalTransferCompleteRe"
-    "quest\032,.dsp.v1alpha2.SignalTransferCompl"
-    "eteResponse\"\000\022x\n\027SignalTransferCancelled"
-    "\022,.dsp.v1alpha2.SignalTransferCancelledR"
-    "equest\032-.dsp.v1alpha2.SignalTransferCanc"
-    "elledResponse\"\000\022r\n\025SignalTransferSuspend"
-    "\022*.dsp.v1alpha2.SignalTransferSuspendReq"
-    "uest\032+.dsp.v1alpha2.SignalTransferSuspen"
-    "dResponse\"\000\022o\n\024SignalTransferResume\022).ds"
-    "p.v1alpha2.SignalTransferResumeRequest\032*"
-    ".dsp.v1alpha2.SignalTransferResumeRespon"
-    "se\"\000B\250\001\n\020com.dsp.v1alpha2B\014ControlProtoP"
-    "\001Z5github.com/bufbuild/buf-tour/dsp/v1al"
-    "pha2;dspv1alpha2\242\002\003DXX\252\002\014Dsp.V1alpha2\312\002\014"
-    "Dsp\\V1alpha2\342\002\030Dsp\\V1alpha2\\GPBMetadata\352"
-    "\002\rDsp::V1alpha2b\006proto3"
+    "ddress\210\001\001\022!\n\014fast_forward\030\004 \001(\010R\013fastFor"
+    "ward\022-\n\022want_notifications\030\005 \001(\010R\021wantNo"
+    "tificationsB\006\n\004_pidB\026\n\024_participant_addr"
+    "ess\"\031\n\027ContractRequestResponse\"\353\001\n\024Contr"
+    "actOfferRequest\022\024\n\005offer\030\001 \001(\tR\005offer\022\025\n"
+    "\003pid\030\002 \001(\tH\000R\003pid\210\001\001\0224\n\023participant_addr"
+    "ess\030\003 \001(\tH\001R\022participantAddress\210\001\001\022!\n\014fa"
+    "st_forward\030\004 \001(\010R\013fastForward\022-\n\022want_no"
+    "tifications\030\005 \001(\010R\021wantNotificationsB\006\n\004"
+    "_pidB\026\n\024_participant_address\"\027\n\025Contract"
+    "OfferResponse\"{\n\025ContractAcceptRequest\022\020"
+    "\n\003pid\030\001 \001(\tR\003pid\022!\n\014fast_forward\030\002 \001(\010R\013"
+    "fastForward\022-\n\022want_notifications\030\003 \001(\010R"
+    "\021wantNotifications\"\030\n\026ContractAcceptResp"
+    "onse\"\230\001\n\024ContractAgreeRequest\022\034\n\tagreeme"
+    "nt\030\001 \001(\tR\tagreement\022\020\n\003pid\030\002 \001(\tR\003pid\022!\n"
+    "\014fast_forward\030\003 \001(\010R\013fastForward\022-\n\022want"
+    "_notifications\030\004 \001(\010R\021wantNotifications\""
+    "\027\n\025ContractAgreeResponse\"{\n\025ContractVeri"
+    "fyRequest\022\020\n\003pid\030\001 \001(\tR\003pid\022!\n\014fast_forw"
+    "ard\030\002 \001(\010R\013fastForward\022-\n\022want_notificat"
+    "ions\030\003 \001(\010R\021wantNotifications\"\030\n\026Contrac"
+    "tVerifyResponse\"}\n\027ContractFinalizeReque"
+    "st\022\020\n\003pid\030\001 \001(\tR\003pid\022!\n\014fast_forward\030\002 \001"
+    "(\010R\013fastForward\022-\n\022want_notifications\030\003 "
+    "\001(\010R\021wantNotifications\"\032\n\030ContractFinali"
+    "zeResponse\"X\n\030ContractTerminateRequest\022\020"
+    "\n\003pid\030\001 \001(\tR\003pid\022\022\n\004code\030\002 \001(\tR\004code\022\026\n\006"
+    "reason\030\003 \003(\tR\006reason\"\033\n\031ContractTerminat"
+    "eResponse\"@\n\035SignalTransferCompleteReque"
+    "st\022\037\n\013transfer_id\030\001 \001(\tR\ntransferId\" \n\036S"
+    "ignalTransferCompleteResponse\"A\n\036SignalT"
+    "ransferCancelledRequest\022\037\n\013transfer_id\030\001"
+    " \001(\tR\ntransferId\"!\n\037SignalTransferCancel"
+    "ledResponse\"\?\n\034SignalTransferSuspendRequ"
+    "est\022\037\n\013transfer_id\030\001 \001(\tR\ntransferId\"\037\n\035"
+    "SignalTransferSuspendResponse\">\n\033SignalT"
+    "ransferResumeRequest\022\037\n\013transfer_id\030\001 \001("
+    "\tR\ntransferId\"\036\n\034SignalTransferResumeRes"
+    "ponse2\361\014\n\016ControlService\022\242\001\n%GetProvider"
+    "DatasetDownloadInformation\022:.dsp.v1alpha"
+    "2.GetProviderDatasetDownloadInformationR"
+    "equest\032;.dsp.v1alpha2.GetProviderDataset"
+    "DownloadInformationResponse\"\000\022c\n\020VerifyC"
+    "onnection\022%.dsp.v1alpha2.VerifyConnectio"
+    "nRequest\032&.dsp.v1alpha2.VerifyConnection"
+    "Response\"\000\022o\n\024GetProviderCatalogue\022).dsp"
+    ".v1alpha2.GetProviderCatalogueRequest\032*."
+    "dsp.v1alpha2.GetProviderCatalogueRespons"
+    "e\"\000\022i\n\022GetProviderDataset\022\'.dsp.v1alpha2"
+    ".GetProviderDatasetRequest\032(.dsp.v1alpha"
+    "2.GetProviderDatasetResponse\"\000\022`\n\017Contra"
+    "ctRequest\022$.dsp.v1alpha2.ContractRequest"
+    "Request\032%.dsp.v1alpha2.ContractRequestRe"
+    "sponse\"\000\022Z\n\rContractOffer\022\".dsp.v1alpha2"
+    ".ContractOfferRequest\032#.dsp.v1alpha2.Con"
+    "tractOfferResponse\"\000\022]\n\016ContractAccept\022#"
+    ".dsp.v1alpha2.ContractAcceptRequest\032$.ds"
+    "p.v1alpha2.ContractAcceptResponse\"\000\022Z\n\rC"
+    "ontractAgree\022\".dsp.v1alpha2.ContractAgre"
+    "eRequest\032#.dsp.v1alpha2.ContractAgreeRes"
+    "ponse\"\000\022]\n\016ContractVerify\022#.dsp.v1alpha2"
+    ".ContractVerifyRequest\032$.dsp.v1alpha2.Co"
+    "ntractVerifyResponse\"\000\022c\n\020ContractFinali"
+    "ze\022%.dsp.v1alpha2.ContractFinalizeReques"
+    "t\032&.dsp.v1alpha2.ContractFinalizeRespons"
+    "e\"\000\022f\n\021ContractTerminate\022&.dsp.v1alpha2."
+    "ContractTerminateRequest\032\'.dsp.v1alpha2."
+    "ContractTerminateResponse\"\000\022u\n\026SignalTra"
+    "nsferComplete\022+.dsp.v1alpha2.SignalTrans"
+    "ferCompleteRequest\032,.dsp.v1alpha2.Signal"
+    "TransferCompleteResponse\"\000\022x\n\027SignalTran"
+    "sferCancelled\022,.dsp.v1alpha2.SignalTrans"
+    "ferCancelledRequest\032-.dsp.v1alpha2.Signa"
+    "lTransferCancelledResponse\"\000\022r\n\025SignalTr"
+    "ansferSuspend\022*.dsp.v1alpha2.SignalTrans"
+    "ferSuspendRequest\032+.dsp.v1alpha2.SignalT"
+    "ransferSuspendResponse\"\000\022o\n\024SignalTransf"
+    "erResume\022).dsp.v1alpha2.SignalTransferRe"
+    "sumeRequest\032*.dsp.v1alpha2.SignalTransfe"
+    "rResumeResponse\"\000B\250\001\n\020com.dsp.v1alpha2B\014"
+    "ControlProtoP\001Z5github.com/bufbuild/buf-"
+    "tour/dsp/v1alpha2;dspv1alpha2\242\002\003DXX\252\002\014Ds"
+    "p.V1alpha2\312\002\014Dsp\\V1alpha2\342\002\030Dsp\\V1alpha2"
+    "\\GPBMetadata\352\002\rDsp::V1alpha2b\006proto3"
 };
 static const ::_pbi::DescriptorTable* const descriptor_table_dsp_2fv1alpha2_2fcontrol_2eproto_deps[1] =
     {
@@ -1066,7 +1106,7 @@ static ::absl::once_flag descriptor_table_dsp_2fv1alpha2_2fcontrol_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_dsp_2fv1alpha2_2fcontrol_2eproto = {
     false,
     false,
-    3983,
+    4476,
     descriptor_table_protodef_dsp_2fv1alpha2_2fcontrol_2eproto,
     "dsp/v1alpha2/control.proto",
     &descriptor_table_dsp_2fv1alpha2_2fcontrol_2eproto_once,
@@ -2790,6 +2830,13 @@ ContractRequestRequest::ContractRequestRequest(
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  ::memcpy(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, fast_forward_),
+           reinterpret_cast<const char *>(&from._impl_) +
+               offsetof(Impl_, fast_forward_),
+           offsetof(Impl_, want_notifications_) -
+               offsetof(Impl_, fast_forward_) +
+               sizeof(Impl_::want_notifications_));
 
   // @@protoc_insertion_point(copy_constructor:dsp.v1alpha2.ContractRequestRequest)
 }
@@ -2803,6 +2850,12 @@ inline PROTOBUF_NDEBUG_INLINE ContractRequestRequest::Impl_::Impl_(
 
 inline void ContractRequestRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
+  ::memset(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, fast_forward_),
+           0,
+           offsetof(Impl_, want_notifications_) -
+               offsetof(Impl_, fast_forward_) +
+               sizeof(Impl_::want_notifications_));
 }
 ContractRequestRequest::~ContractRequestRequest() {
   // @@protoc_insertion_point(destructor:dsp.v1alpha2.ContractRequestRequest)
@@ -2838,15 +2891,15 @@ ContractRequestRequest::GetClassData() const {
   return _data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 3, 0, 71, 2> ContractRequestRequest::_table_ = {
+const ::_pbi::TcParseTable<3, 5, 0, 71, 2> ContractRequestRequest::_table_ = {
   {
     PROTOBUF_FIELD_OFFSET(ContractRequestRequest, _impl_._has_bits_),
     0, // no _extensions_
-    3, 24,  // max_field_number, fast_idx_mask
+    5, 56,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
-    4294967288,  // skipmap
+    4294967264,  // skipmap
     offsetof(decltype(_table_), field_entries),
-    3,  // num_field_entries
+    5,  // num_field_entries
     0,  // num_aux_entries
     offsetof(decltype(_table_), field_names),  // no aux_entries
     &_ContractRequestRequest_default_instance_._instance,
@@ -2866,6 +2919,14 @@ const ::_pbi::TcParseTable<2, 3, 0, 71, 2> ContractRequestRequest::_table_ = {
     // optional string participant_address = 3 [json_name = "participantAddress"];
     {::_pbi::TcParser::FastUS1,
      {26, 1, 0, PROTOBUF_FIELD_OFFSET(ContractRequestRequest, _impl_.participant_address_)}},
+    // bool fast_forward = 4 [json_name = "fastForward"];
+    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ContractRequestRequest, _impl_.fast_forward_), 63>(),
+     {32, 63, 0, PROTOBUF_FIELD_OFFSET(ContractRequestRequest, _impl_.fast_forward_)}},
+    // bool want_notifications = 5 [json_name = "wantNotifications"];
+    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ContractRequestRequest, _impl_.want_notifications_), 63>(),
+     {40, 63, 0, PROTOBUF_FIELD_OFFSET(ContractRequestRequest, _impl_.want_notifications_)}},
+    {::_pbi::TcParser::MiniParse, {}},
+    {::_pbi::TcParser::MiniParse, {}},
   }}, {{
     65535, 65535
   }}, {{
@@ -2878,6 +2939,12 @@ const ::_pbi::TcParseTable<2, 3, 0, 71, 2> ContractRequestRequest::_table_ = {
     // optional string participant_address = 3 [json_name = "participantAddress"];
     {PROTOBUF_FIELD_OFFSET(ContractRequestRequest, _impl_.participant_address_), _Internal::kHasBitsOffset + 1, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // bool fast_forward = 4 [json_name = "fastForward"];
+    {PROTOBUF_FIELD_OFFSET(ContractRequestRequest, _impl_.fast_forward_), -1, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
+    // bool want_notifications = 5 [json_name = "wantNotifications"];
+    {PROTOBUF_FIELD_OFFSET(ContractRequestRequest, _impl_.want_notifications_), -1, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
   }},
   // no aux_entries
   {{
@@ -2906,6 +2973,9 @@ PROTOBUF_NOINLINE void ContractRequestRequest::Clear() {
       _impl_.participant_address_.ClearNonDefaultToEmpty();
     }
   }
+  ::memset(&_impl_.fast_forward_, 0, static_cast<::size_t>(
+      reinterpret_cast<char*>(&_impl_.want_notifications_) -
+      reinterpret_cast<char*>(&_impl_.fast_forward_)) + sizeof(_impl_.want_notifications_));
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
@@ -2940,6 +3010,20 @@ PROTOBUF_NOINLINE void ContractRequestRequest::Clear() {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
         _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "dsp.v1alpha2.ContractRequestRequest.participant_address");
     target = stream->WriteStringMaybeAliased(3, _s, target);
+  }
+
+  // bool fast_forward = 4 [json_name = "fastForward"];
+  if (this->_internal_fast_forward() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(
+        4, this->_internal_fast_forward(), target);
+  }
+
+  // bool want_notifications = 5 [json_name = "wantNotifications"];
+  if (this->_internal_want_notifications() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(
+        5, this->_internal_want_notifications(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2981,6 +3065,16 @@ PROTOBUF_NOINLINE void ContractRequestRequest::Clear() {
     }
 
   }
+  // bool fast_forward = 4 [json_name = "fastForward"];
+  if (this->_internal_fast_forward() != 0) {
+    total_size += 2;
+  }
+
+  // bool want_notifications = 5 [json_name = "wantNotifications"];
+  if (this->_internal_want_notifications() != 0) {
+    total_size += 2;
+  }
+
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
@@ -3005,6 +3099,12 @@ void ContractRequestRequest::MergeImpl(::google::protobuf::MessageLite& to_msg, 
       _this->_internal_set_participant_address(from._internal_participant_address());
     }
   }
+  if (from._internal_fast_forward() != 0) {
+    _this->_impl_.fast_forward_ = from._impl_.fast_forward_;
+  }
+  if (from._internal_want_notifications() != 0) {
+    _this->_impl_.want_notifications_ = from._impl_.want_notifications_;
+  }
   _this->_impl_._has_bits_[0] |= cached_has_bits;
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -3026,6 +3126,12 @@ void ContractRequestRequest::InternalSwap(ContractRequestRequest* PROTOBUF_RESTR
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.offer_, &other->_impl_.offer_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.pid_, &other->_impl_.pid_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.participant_address_, &other->_impl_.participant_address_, arena);
+  ::google::protobuf::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ContractRequestRequest, _impl_.want_notifications_)
+      + sizeof(ContractRequestRequest::_impl_.want_notifications_)
+      - PROTOBUF_FIELD_OFFSET(ContractRequestRequest, _impl_.fast_forward_)>(
+          reinterpret_cast<char*>(&_impl_.fast_forward_),
+          reinterpret_cast<char*>(&other->_impl_.fast_forward_));
 }
 
 ::google::protobuf::Metadata ContractRequestRequest::GetMetadata() const {
@@ -3145,6 +3251,13 @@ ContractOfferRequest::ContractOfferRequest(
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  ::memcpy(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, fast_forward_),
+           reinterpret_cast<const char *>(&from._impl_) +
+               offsetof(Impl_, fast_forward_),
+           offsetof(Impl_, want_notifications_) -
+               offsetof(Impl_, fast_forward_) +
+               sizeof(Impl_::want_notifications_));
 
   // @@protoc_insertion_point(copy_constructor:dsp.v1alpha2.ContractOfferRequest)
 }
@@ -3158,6 +3271,12 @@ inline PROTOBUF_NDEBUG_INLINE ContractOfferRequest::Impl_::Impl_(
 
 inline void ContractOfferRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
+  ::memset(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, fast_forward_),
+           0,
+           offsetof(Impl_, want_notifications_) -
+               offsetof(Impl_, fast_forward_) +
+               sizeof(Impl_::want_notifications_));
 }
 ContractOfferRequest::~ContractOfferRequest() {
   // @@protoc_insertion_point(destructor:dsp.v1alpha2.ContractOfferRequest)
@@ -3193,15 +3312,15 @@ ContractOfferRequest::GetClassData() const {
   return _data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 3, 0, 69, 2> ContractOfferRequest::_table_ = {
+const ::_pbi::TcParseTable<3, 5, 0, 69, 2> ContractOfferRequest::_table_ = {
   {
     PROTOBUF_FIELD_OFFSET(ContractOfferRequest, _impl_._has_bits_),
     0, // no _extensions_
-    3, 24,  // max_field_number, fast_idx_mask
+    5, 56,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
-    4294967288,  // skipmap
+    4294967264,  // skipmap
     offsetof(decltype(_table_), field_entries),
-    3,  // num_field_entries
+    5,  // num_field_entries
     0,  // num_aux_entries
     offsetof(decltype(_table_), field_names),  // no aux_entries
     &_ContractOfferRequest_default_instance_._instance,
@@ -3221,6 +3340,14 @@ const ::_pbi::TcParseTable<2, 3, 0, 69, 2> ContractOfferRequest::_table_ = {
     // optional string participant_address = 3 [json_name = "participantAddress"];
     {::_pbi::TcParser::FastUS1,
      {26, 1, 0, PROTOBUF_FIELD_OFFSET(ContractOfferRequest, _impl_.participant_address_)}},
+    // bool fast_forward = 4 [json_name = "fastForward"];
+    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ContractOfferRequest, _impl_.fast_forward_), 63>(),
+     {32, 63, 0, PROTOBUF_FIELD_OFFSET(ContractOfferRequest, _impl_.fast_forward_)}},
+    // bool want_notifications = 5 [json_name = "wantNotifications"];
+    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ContractOfferRequest, _impl_.want_notifications_), 63>(),
+     {40, 63, 0, PROTOBUF_FIELD_OFFSET(ContractOfferRequest, _impl_.want_notifications_)}},
+    {::_pbi::TcParser::MiniParse, {}},
+    {::_pbi::TcParser::MiniParse, {}},
   }}, {{
     65535, 65535
   }}, {{
@@ -3233,6 +3360,12 @@ const ::_pbi::TcParseTable<2, 3, 0, 69, 2> ContractOfferRequest::_table_ = {
     // optional string participant_address = 3 [json_name = "participantAddress"];
     {PROTOBUF_FIELD_OFFSET(ContractOfferRequest, _impl_.participant_address_), _Internal::kHasBitsOffset + 1, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // bool fast_forward = 4 [json_name = "fastForward"];
+    {PROTOBUF_FIELD_OFFSET(ContractOfferRequest, _impl_.fast_forward_), -1, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
+    // bool want_notifications = 5 [json_name = "wantNotifications"];
+    {PROTOBUF_FIELD_OFFSET(ContractOfferRequest, _impl_.want_notifications_), -1, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
   }},
   // no aux_entries
   {{
@@ -3261,6 +3394,9 @@ PROTOBUF_NOINLINE void ContractOfferRequest::Clear() {
       _impl_.participant_address_.ClearNonDefaultToEmpty();
     }
   }
+  ::memset(&_impl_.fast_forward_, 0, static_cast<::size_t>(
+      reinterpret_cast<char*>(&_impl_.want_notifications_) -
+      reinterpret_cast<char*>(&_impl_.fast_forward_)) + sizeof(_impl_.want_notifications_));
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
@@ -3295,6 +3431,20 @@ PROTOBUF_NOINLINE void ContractOfferRequest::Clear() {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
         _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "dsp.v1alpha2.ContractOfferRequest.participant_address");
     target = stream->WriteStringMaybeAliased(3, _s, target);
+  }
+
+  // bool fast_forward = 4 [json_name = "fastForward"];
+  if (this->_internal_fast_forward() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(
+        4, this->_internal_fast_forward(), target);
+  }
+
+  // bool want_notifications = 5 [json_name = "wantNotifications"];
+  if (this->_internal_want_notifications() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(
+        5, this->_internal_want_notifications(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3336,6 +3486,16 @@ PROTOBUF_NOINLINE void ContractOfferRequest::Clear() {
     }
 
   }
+  // bool fast_forward = 4 [json_name = "fastForward"];
+  if (this->_internal_fast_forward() != 0) {
+    total_size += 2;
+  }
+
+  // bool want_notifications = 5 [json_name = "wantNotifications"];
+  if (this->_internal_want_notifications() != 0) {
+    total_size += 2;
+  }
+
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
@@ -3360,6 +3520,12 @@ void ContractOfferRequest::MergeImpl(::google::protobuf::MessageLite& to_msg, co
       _this->_internal_set_participant_address(from._internal_participant_address());
     }
   }
+  if (from._internal_fast_forward() != 0) {
+    _this->_impl_.fast_forward_ = from._impl_.fast_forward_;
+  }
+  if (from._internal_want_notifications() != 0) {
+    _this->_impl_.want_notifications_ = from._impl_.want_notifications_;
+  }
   _this->_impl_._has_bits_[0] |= cached_has_bits;
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -3381,6 +3547,12 @@ void ContractOfferRequest::InternalSwap(ContractOfferRequest* PROTOBUF_RESTRICT 
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.offer_, &other->_impl_.offer_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.pid_, &other->_impl_.pid_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.participant_address_, &other->_impl_.participant_address_, arena);
+  ::google::protobuf::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ContractOfferRequest, _impl_.want_notifications_)
+      + sizeof(ContractOfferRequest::_impl_.want_notifications_)
+      - PROTOBUF_FIELD_OFFSET(ContractOfferRequest, _impl_.fast_forward_)>(
+          reinterpret_cast<char*>(&_impl_.fast_forward_),
+          reinterpret_cast<char*>(&other->_impl_.fast_forward_));
 }
 
 ::google::protobuf::Metadata ContractOfferRequest::GetMetadata() const {
@@ -3493,6 +3665,13 @@ ContractAcceptRequest::ContractAcceptRequest(
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  ::memcpy(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, fast_forward_),
+           reinterpret_cast<const char *>(&from._impl_) +
+               offsetof(Impl_, fast_forward_),
+           offsetof(Impl_, want_notifications_) -
+               offsetof(Impl_, fast_forward_) +
+               sizeof(Impl_::want_notifications_));
 
   // @@protoc_insertion_point(copy_constructor:dsp.v1alpha2.ContractAcceptRequest)
 }
@@ -3504,6 +3683,12 @@ inline PROTOBUF_NDEBUG_INLINE ContractAcceptRequest::Impl_::Impl_(
 
 inline void ContractAcceptRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
+  ::memset(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, fast_forward_),
+           0,
+           offsetof(Impl_, want_notifications_) -
+               offsetof(Impl_, fast_forward_) +
+               sizeof(Impl_::want_notifications_));
 }
 ContractAcceptRequest::~ContractAcceptRequest() {
   // @@protoc_insertion_point(destructor:dsp.v1alpha2.ContractAcceptRequest)
@@ -3537,15 +3722,15 @@ ContractAcceptRequest::GetClassData() const {
   return _data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 0, 46, 2> ContractAcceptRequest::_table_ = {
+const ::_pbi::TcParseTable<2, 3, 0, 46, 2> ContractAcceptRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
-    1, 0,  // max_field_number, fast_idx_mask
+    3, 24,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
-    4294967294,  // skipmap
+    4294967288,  // skipmap
     offsetof(decltype(_table_), field_entries),
-    1,  // num_field_entries
+    3,  // num_field_entries
     0,  // num_aux_entries
     offsetof(decltype(_table_), field_names),  // no aux_entries
     &_ContractAcceptRequest_default_instance_._instance,
@@ -3555,15 +3740,28 @@ const ::_pbi::TcParseTable<0, 1, 0, 46, 2> ContractAcceptRequest::_table_ = {
     ::_pbi::TcParser::GetTable<::dsp::v1alpha2::ContractAcceptRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
+    {::_pbi::TcParser::MiniParse, {}},
     // string pid = 1 [json_name = "pid"];
     {::_pbi::TcParser::FastUS1,
      {10, 63, 0, PROTOBUF_FIELD_OFFSET(ContractAcceptRequest, _impl_.pid_)}},
+    // bool fast_forward = 2 [json_name = "fastForward"];
+    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ContractAcceptRequest, _impl_.fast_forward_), 63>(),
+     {16, 63, 0, PROTOBUF_FIELD_OFFSET(ContractAcceptRequest, _impl_.fast_forward_)}},
+    // bool want_notifications = 3 [json_name = "wantNotifications"];
+    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ContractAcceptRequest, _impl_.want_notifications_), 63>(),
+     {24, 63, 0, PROTOBUF_FIELD_OFFSET(ContractAcceptRequest, _impl_.want_notifications_)}},
   }}, {{
     65535, 65535
   }}, {{
     // string pid = 1 [json_name = "pid"];
     {PROTOBUF_FIELD_OFFSET(ContractAcceptRequest, _impl_.pid_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // bool fast_forward = 2 [json_name = "fastForward"];
+    {PROTOBUF_FIELD_OFFSET(ContractAcceptRequest, _impl_.fast_forward_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
+    // bool want_notifications = 3 [json_name = "wantNotifications"];
+    {PROTOBUF_FIELD_OFFSET(ContractAcceptRequest, _impl_.want_notifications_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
   }},
   // no aux_entries
   {{
@@ -3581,6 +3779,9 @@ PROTOBUF_NOINLINE void ContractAcceptRequest::Clear() {
   (void) cached_has_bits;
 
   _impl_.pid_.ClearToEmpty();
+  ::memset(&_impl_.fast_forward_, 0, static_cast<::size_t>(
+      reinterpret_cast<char*>(&_impl_.want_notifications_) -
+      reinterpret_cast<char*>(&_impl_.fast_forward_)) + sizeof(_impl_.want_notifications_));
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -3597,6 +3798,20 @@ PROTOBUF_NOINLINE void ContractAcceptRequest::Clear() {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
         _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "dsp.v1alpha2.ContractAcceptRequest.pid");
     target = stream->WriteStringMaybeAliased(1, _s, target);
+  }
+
+  // bool fast_forward = 2 [json_name = "fastForward"];
+  if (this->_internal_fast_forward() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(
+        2, this->_internal_fast_forward(), target);
+  }
+
+  // bool want_notifications = 3 [json_name = "wantNotifications"];
+  if (this->_internal_want_notifications() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(
+        3, this->_internal_want_notifications(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3616,10 +3831,21 @@ PROTOBUF_NOINLINE void ContractAcceptRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  ::_pbi::Prefetch5LinesFrom7Lines(reinterpret_cast<const void*>(this));
   // string pid = 1 [json_name = "pid"];
   if (!this->_internal_pid().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                     this->_internal_pid());
+  }
+
+  // bool fast_forward = 2 [json_name = "fastForward"];
+  if (this->_internal_fast_forward() != 0) {
+    total_size += 2;
+  }
+
+  // bool want_notifications = 3 [json_name = "wantNotifications"];
+  if (this->_internal_want_notifications() != 0) {
+    total_size += 2;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -3636,6 +3862,12 @@ void ContractAcceptRequest::MergeImpl(::google::protobuf::MessageLite& to_msg, c
 
   if (!from._internal_pid().empty()) {
     _this->_internal_set_pid(from._internal_pid());
+  }
+  if (from._internal_fast_forward() != 0) {
+    _this->_impl_.fast_forward_ = from._impl_.fast_forward_;
+  }
+  if (from._internal_want_notifications() != 0) {
+    _this->_impl_.want_notifications_ = from._impl_.want_notifications_;
   }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -3654,6 +3886,12 @@ void ContractAcceptRequest::InternalSwap(ContractAcceptRequest* PROTOBUF_RESTRIC
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.pid_, &other->_impl_.pid_, arena);
+  ::google::protobuf::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ContractAcceptRequest, _impl_.want_notifications_)
+      + sizeof(ContractAcceptRequest::_impl_.want_notifications_)
+      - PROTOBUF_FIELD_OFFSET(ContractAcceptRequest, _impl_.fast_forward_)>(
+          reinterpret_cast<char*>(&_impl_.fast_forward_),
+          reinterpret_cast<char*>(&other->_impl_.fast_forward_));
 }
 
 ::google::protobuf::Metadata ContractAcceptRequest::GetMetadata() const {
@@ -3767,6 +4005,13 @@ ContractAgreeRequest::ContractAgreeRequest(
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  ::memcpy(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, fast_forward_),
+           reinterpret_cast<const char *>(&from._impl_) +
+               offsetof(Impl_, fast_forward_),
+           offsetof(Impl_, want_notifications_) -
+               offsetof(Impl_, fast_forward_) +
+               sizeof(Impl_::want_notifications_));
 
   // @@protoc_insertion_point(copy_constructor:dsp.v1alpha2.ContractAgreeRequest)
 }
@@ -3779,6 +4024,12 @@ inline PROTOBUF_NDEBUG_INLINE ContractAgreeRequest::Impl_::Impl_(
 
 inline void ContractAgreeRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
+  ::memset(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, fast_forward_),
+           0,
+           offsetof(Impl_, want_notifications_) -
+               offsetof(Impl_, fast_forward_) +
+               sizeof(Impl_::want_notifications_));
 }
 ContractAgreeRequest::~ContractAgreeRequest() {
   // @@protoc_insertion_point(destructor:dsp.v1alpha2.ContractAgreeRequest)
@@ -3813,15 +4064,15 @@ ContractAgreeRequest::GetClassData() const {
   return _data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 0, 54, 2> ContractAgreeRequest::_table_ = {
+const ::_pbi::TcParseTable<2, 4, 0, 54, 2> ContractAgreeRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
-    2, 8,  // max_field_number, fast_idx_mask
+    4, 24,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
-    4294967292,  // skipmap
+    4294967280,  // skipmap
     offsetof(decltype(_table_), field_entries),
-    2,  // num_field_entries
+    4,  // num_field_entries
     0,  // num_aux_entries
     offsetof(decltype(_table_), field_names),  // no aux_entries
     &_ContractAgreeRequest_default_instance_._instance,
@@ -3831,12 +4082,18 @@ const ::_pbi::TcParseTable<1, 2, 0, 54, 2> ContractAgreeRequest::_table_ = {
     ::_pbi::TcParser::GetTable<::dsp::v1alpha2::ContractAgreeRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // string pid = 2 [json_name = "pid"];
-    {::_pbi::TcParser::FastUS1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(ContractAgreeRequest, _impl_.pid_)}},
+    // bool want_notifications = 4 [json_name = "wantNotifications"];
+    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ContractAgreeRequest, _impl_.want_notifications_), 63>(),
+     {32, 63, 0, PROTOBUF_FIELD_OFFSET(ContractAgreeRequest, _impl_.want_notifications_)}},
     // string agreement = 1 [json_name = "agreement"];
     {::_pbi::TcParser::FastUS1,
      {10, 63, 0, PROTOBUF_FIELD_OFFSET(ContractAgreeRequest, _impl_.agreement_)}},
+    // string pid = 2 [json_name = "pid"];
+    {::_pbi::TcParser::FastUS1,
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(ContractAgreeRequest, _impl_.pid_)}},
+    // bool fast_forward = 3 [json_name = "fastForward"];
+    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ContractAgreeRequest, _impl_.fast_forward_), 63>(),
+     {24, 63, 0, PROTOBUF_FIELD_OFFSET(ContractAgreeRequest, _impl_.fast_forward_)}},
   }}, {{
     65535, 65535
   }}, {{
@@ -3846,6 +4103,12 @@ const ::_pbi::TcParseTable<1, 2, 0, 54, 2> ContractAgreeRequest::_table_ = {
     // string pid = 2 [json_name = "pid"];
     {PROTOBUF_FIELD_OFFSET(ContractAgreeRequest, _impl_.pid_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // bool fast_forward = 3 [json_name = "fastForward"];
+    {PROTOBUF_FIELD_OFFSET(ContractAgreeRequest, _impl_.fast_forward_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
+    // bool want_notifications = 4 [json_name = "wantNotifications"];
+    {PROTOBUF_FIELD_OFFSET(ContractAgreeRequest, _impl_.want_notifications_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
   }},
   // no aux_entries
   {{
@@ -3865,6 +4128,9 @@ PROTOBUF_NOINLINE void ContractAgreeRequest::Clear() {
 
   _impl_.agreement_.ClearToEmpty();
   _impl_.pid_.ClearToEmpty();
+  ::memset(&_impl_.fast_forward_, 0, static_cast<::size_t>(
+      reinterpret_cast<char*>(&_impl_.want_notifications_) -
+      reinterpret_cast<char*>(&_impl_.fast_forward_)) + sizeof(_impl_.want_notifications_));
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -3889,6 +4155,20 @@ PROTOBUF_NOINLINE void ContractAgreeRequest::Clear() {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
         _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "dsp.v1alpha2.ContractAgreeRequest.pid");
     target = stream->WriteStringMaybeAliased(2, _s, target);
+  }
+
+  // bool fast_forward = 3 [json_name = "fastForward"];
+  if (this->_internal_fast_forward() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(
+        3, this->_internal_fast_forward(), target);
+  }
+
+  // bool want_notifications = 4 [json_name = "wantNotifications"];
+  if (this->_internal_want_notifications() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(
+        4, this->_internal_want_notifications(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3921,6 +4201,16 @@ PROTOBUF_NOINLINE void ContractAgreeRequest::Clear() {
                                     this->_internal_pid());
   }
 
+  // bool fast_forward = 3 [json_name = "fastForward"];
+  if (this->_internal_fast_forward() != 0) {
+    total_size += 2;
+  }
+
+  // bool want_notifications = 4 [json_name = "wantNotifications"];
+  if (this->_internal_want_notifications() != 0) {
+    total_size += 2;
+  }
+
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
@@ -3938,6 +4228,12 @@ void ContractAgreeRequest::MergeImpl(::google::protobuf::MessageLite& to_msg, co
   }
   if (!from._internal_pid().empty()) {
     _this->_internal_set_pid(from._internal_pid());
+  }
+  if (from._internal_fast_forward() != 0) {
+    _this->_impl_.fast_forward_ = from._impl_.fast_forward_;
+  }
+  if (from._internal_want_notifications() != 0) {
+    _this->_impl_.want_notifications_ = from._impl_.want_notifications_;
   }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -3957,6 +4253,12 @@ void ContractAgreeRequest::InternalSwap(ContractAgreeRequest* PROTOBUF_RESTRICT 
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.agreement_, &other->_impl_.agreement_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.pid_, &other->_impl_.pid_, arena);
+  ::google::protobuf::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ContractAgreeRequest, _impl_.want_notifications_)
+      + sizeof(ContractAgreeRequest::_impl_.want_notifications_)
+      - PROTOBUF_FIELD_OFFSET(ContractAgreeRequest, _impl_.fast_forward_)>(
+          reinterpret_cast<char*>(&_impl_.fast_forward_),
+          reinterpret_cast<char*>(&other->_impl_.fast_forward_));
 }
 
 ::google::protobuf::Metadata ContractAgreeRequest::GetMetadata() const {
@@ -4069,6 +4371,13 @@ ContractVerifyRequest::ContractVerifyRequest(
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  ::memcpy(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, fast_forward_),
+           reinterpret_cast<const char *>(&from._impl_) +
+               offsetof(Impl_, fast_forward_),
+           offsetof(Impl_, want_notifications_) -
+               offsetof(Impl_, fast_forward_) +
+               sizeof(Impl_::want_notifications_));
 
   // @@protoc_insertion_point(copy_constructor:dsp.v1alpha2.ContractVerifyRequest)
 }
@@ -4080,6 +4389,12 @@ inline PROTOBUF_NDEBUG_INLINE ContractVerifyRequest::Impl_::Impl_(
 
 inline void ContractVerifyRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
+  ::memset(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, fast_forward_),
+           0,
+           offsetof(Impl_, want_notifications_) -
+               offsetof(Impl_, fast_forward_) +
+               sizeof(Impl_::want_notifications_));
 }
 ContractVerifyRequest::~ContractVerifyRequest() {
   // @@protoc_insertion_point(destructor:dsp.v1alpha2.ContractVerifyRequest)
@@ -4113,15 +4428,15 @@ ContractVerifyRequest::GetClassData() const {
   return _data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 0, 46, 2> ContractVerifyRequest::_table_ = {
+const ::_pbi::TcParseTable<2, 3, 0, 46, 2> ContractVerifyRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
-    1, 0,  // max_field_number, fast_idx_mask
+    3, 24,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
-    4294967294,  // skipmap
+    4294967288,  // skipmap
     offsetof(decltype(_table_), field_entries),
-    1,  // num_field_entries
+    3,  // num_field_entries
     0,  // num_aux_entries
     offsetof(decltype(_table_), field_names),  // no aux_entries
     &_ContractVerifyRequest_default_instance_._instance,
@@ -4131,15 +4446,28 @@ const ::_pbi::TcParseTable<0, 1, 0, 46, 2> ContractVerifyRequest::_table_ = {
     ::_pbi::TcParser::GetTable<::dsp::v1alpha2::ContractVerifyRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
+    {::_pbi::TcParser::MiniParse, {}},
     // string pid = 1 [json_name = "pid"];
     {::_pbi::TcParser::FastUS1,
      {10, 63, 0, PROTOBUF_FIELD_OFFSET(ContractVerifyRequest, _impl_.pid_)}},
+    // bool fast_forward = 2 [json_name = "fastForward"];
+    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ContractVerifyRequest, _impl_.fast_forward_), 63>(),
+     {16, 63, 0, PROTOBUF_FIELD_OFFSET(ContractVerifyRequest, _impl_.fast_forward_)}},
+    // bool want_notifications = 3 [json_name = "wantNotifications"];
+    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ContractVerifyRequest, _impl_.want_notifications_), 63>(),
+     {24, 63, 0, PROTOBUF_FIELD_OFFSET(ContractVerifyRequest, _impl_.want_notifications_)}},
   }}, {{
     65535, 65535
   }}, {{
     // string pid = 1 [json_name = "pid"];
     {PROTOBUF_FIELD_OFFSET(ContractVerifyRequest, _impl_.pid_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // bool fast_forward = 2 [json_name = "fastForward"];
+    {PROTOBUF_FIELD_OFFSET(ContractVerifyRequest, _impl_.fast_forward_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
+    // bool want_notifications = 3 [json_name = "wantNotifications"];
+    {PROTOBUF_FIELD_OFFSET(ContractVerifyRequest, _impl_.want_notifications_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
   }},
   // no aux_entries
   {{
@@ -4157,6 +4485,9 @@ PROTOBUF_NOINLINE void ContractVerifyRequest::Clear() {
   (void) cached_has_bits;
 
   _impl_.pid_.ClearToEmpty();
+  ::memset(&_impl_.fast_forward_, 0, static_cast<::size_t>(
+      reinterpret_cast<char*>(&_impl_.want_notifications_) -
+      reinterpret_cast<char*>(&_impl_.fast_forward_)) + sizeof(_impl_.want_notifications_));
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -4173,6 +4504,20 @@ PROTOBUF_NOINLINE void ContractVerifyRequest::Clear() {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
         _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "dsp.v1alpha2.ContractVerifyRequest.pid");
     target = stream->WriteStringMaybeAliased(1, _s, target);
+  }
+
+  // bool fast_forward = 2 [json_name = "fastForward"];
+  if (this->_internal_fast_forward() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(
+        2, this->_internal_fast_forward(), target);
+  }
+
+  // bool want_notifications = 3 [json_name = "wantNotifications"];
+  if (this->_internal_want_notifications() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(
+        3, this->_internal_want_notifications(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4192,10 +4537,21 @@ PROTOBUF_NOINLINE void ContractVerifyRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  ::_pbi::Prefetch5LinesFrom7Lines(reinterpret_cast<const void*>(this));
   // string pid = 1 [json_name = "pid"];
   if (!this->_internal_pid().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                     this->_internal_pid());
+  }
+
+  // bool fast_forward = 2 [json_name = "fastForward"];
+  if (this->_internal_fast_forward() != 0) {
+    total_size += 2;
+  }
+
+  // bool want_notifications = 3 [json_name = "wantNotifications"];
+  if (this->_internal_want_notifications() != 0) {
+    total_size += 2;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -4212,6 +4568,12 @@ void ContractVerifyRequest::MergeImpl(::google::protobuf::MessageLite& to_msg, c
 
   if (!from._internal_pid().empty()) {
     _this->_internal_set_pid(from._internal_pid());
+  }
+  if (from._internal_fast_forward() != 0) {
+    _this->_impl_.fast_forward_ = from._impl_.fast_forward_;
+  }
+  if (from._internal_want_notifications() != 0) {
+    _this->_impl_.want_notifications_ = from._impl_.want_notifications_;
   }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -4230,6 +4592,12 @@ void ContractVerifyRequest::InternalSwap(ContractVerifyRequest* PROTOBUF_RESTRIC
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.pid_, &other->_impl_.pid_, arena);
+  ::google::protobuf::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ContractVerifyRequest, _impl_.want_notifications_)
+      + sizeof(ContractVerifyRequest::_impl_.want_notifications_)
+      - PROTOBUF_FIELD_OFFSET(ContractVerifyRequest, _impl_.fast_forward_)>(
+          reinterpret_cast<char*>(&_impl_.fast_forward_),
+          reinterpret_cast<char*>(&other->_impl_.fast_forward_));
 }
 
 ::google::protobuf::Metadata ContractVerifyRequest::GetMetadata() const {
@@ -4342,6 +4710,13 @@ ContractFinalizeRequest::ContractFinalizeRequest(
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  ::memcpy(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, fast_forward_),
+           reinterpret_cast<const char *>(&from._impl_) +
+               offsetof(Impl_, fast_forward_),
+           offsetof(Impl_, want_notifications_) -
+               offsetof(Impl_, fast_forward_) +
+               sizeof(Impl_::want_notifications_));
 
   // @@protoc_insertion_point(copy_constructor:dsp.v1alpha2.ContractFinalizeRequest)
 }
@@ -4353,6 +4728,12 @@ inline PROTOBUF_NDEBUG_INLINE ContractFinalizeRequest::Impl_::Impl_(
 
 inline void ContractFinalizeRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
+  ::memset(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, fast_forward_),
+           0,
+           offsetof(Impl_, want_notifications_) -
+               offsetof(Impl_, fast_forward_) +
+               sizeof(Impl_::want_notifications_));
 }
 ContractFinalizeRequest::~ContractFinalizeRequest() {
   // @@protoc_insertion_point(destructor:dsp.v1alpha2.ContractFinalizeRequest)
@@ -4386,15 +4767,15 @@ ContractFinalizeRequest::GetClassData() const {
   return _data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 0, 48, 2> ContractFinalizeRequest::_table_ = {
+const ::_pbi::TcParseTable<2, 3, 0, 48, 2> ContractFinalizeRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
-    1, 0,  // max_field_number, fast_idx_mask
+    3, 24,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
-    4294967294,  // skipmap
+    4294967288,  // skipmap
     offsetof(decltype(_table_), field_entries),
-    1,  // num_field_entries
+    3,  // num_field_entries
     0,  // num_aux_entries
     offsetof(decltype(_table_), field_names),  // no aux_entries
     &_ContractFinalizeRequest_default_instance_._instance,
@@ -4404,15 +4785,28 @@ const ::_pbi::TcParseTable<0, 1, 0, 48, 2> ContractFinalizeRequest::_table_ = {
     ::_pbi::TcParser::GetTable<::dsp::v1alpha2::ContractFinalizeRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
+    {::_pbi::TcParser::MiniParse, {}},
     // string pid = 1 [json_name = "pid"];
     {::_pbi::TcParser::FastUS1,
      {10, 63, 0, PROTOBUF_FIELD_OFFSET(ContractFinalizeRequest, _impl_.pid_)}},
+    // bool fast_forward = 2 [json_name = "fastForward"];
+    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ContractFinalizeRequest, _impl_.fast_forward_), 63>(),
+     {16, 63, 0, PROTOBUF_FIELD_OFFSET(ContractFinalizeRequest, _impl_.fast_forward_)}},
+    // bool want_notifications = 3 [json_name = "wantNotifications"];
+    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ContractFinalizeRequest, _impl_.want_notifications_), 63>(),
+     {24, 63, 0, PROTOBUF_FIELD_OFFSET(ContractFinalizeRequest, _impl_.want_notifications_)}},
   }}, {{
     65535, 65535
   }}, {{
     // string pid = 1 [json_name = "pid"];
     {PROTOBUF_FIELD_OFFSET(ContractFinalizeRequest, _impl_.pid_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // bool fast_forward = 2 [json_name = "fastForward"];
+    {PROTOBUF_FIELD_OFFSET(ContractFinalizeRequest, _impl_.fast_forward_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
+    // bool want_notifications = 3 [json_name = "wantNotifications"];
+    {PROTOBUF_FIELD_OFFSET(ContractFinalizeRequest, _impl_.want_notifications_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
   }},
   // no aux_entries
   {{
@@ -4430,6 +4824,9 @@ PROTOBUF_NOINLINE void ContractFinalizeRequest::Clear() {
   (void) cached_has_bits;
 
   _impl_.pid_.ClearToEmpty();
+  ::memset(&_impl_.fast_forward_, 0, static_cast<::size_t>(
+      reinterpret_cast<char*>(&_impl_.want_notifications_) -
+      reinterpret_cast<char*>(&_impl_.fast_forward_)) + sizeof(_impl_.want_notifications_));
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -4446,6 +4843,20 @@ PROTOBUF_NOINLINE void ContractFinalizeRequest::Clear() {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
         _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "dsp.v1alpha2.ContractFinalizeRequest.pid");
     target = stream->WriteStringMaybeAliased(1, _s, target);
+  }
+
+  // bool fast_forward = 2 [json_name = "fastForward"];
+  if (this->_internal_fast_forward() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(
+        2, this->_internal_fast_forward(), target);
+  }
+
+  // bool want_notifications = 3 [json_name = "wantNotifications"];
+  if (this->_internal_want_notifications() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(
+        3, this->_internal_want_notifications(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4465,10 +4876,21 @@ PROTOBUF_NOINLINE void ContractFinalizeRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  ::_pbi::Prefetch5LinesFrom7Lines(reinterpret_cast<const void*>(this));
   // string pid = 1 [json_name = "pid"];
   if (!this->_internal_pid().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                     this->_internal_pid());
+  }
+
+  // bool fast_forward = 2 [json_name = "fastForward"];
+  if (this->_internal_fast_forward() != 0) {
+    total_size += 2;
+  }
+
+  // bool want_notifications = 3 [json_name = "wantNotifications"];
+  if (this->_internal_want_notifications() != 0) {
+    total_size += 2;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -4485,6 +4907,12 @@ void ContractFinalizeRequest::MergeImpl(::google::protobuf::MessageLite& to_msg,
 
   if (!from._internal_pid().empty()) {
     _this->_internal_set_pid(from._internal_pid());
+  }
+  if (from._internal_fast_forward() != 0) {
+    _this->_impl_.fast_forward_ = from._impl_.fast_forward_;
+  }
+  if (from._internal_want_notifications() != 0) {
+    _this->_impl_.want_notifications_ = from._impl_.want_notifications_;
   }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -4503,6 +4931,12 @@ void ContractFinalizeRequest::InternalSwap(ContractFinalizeRequest* PROTOBUF_RES
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.pid_, &other->_impl_.pid_, arena);
+  ::google::protobuf::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ContractFinalizeRequest, _impl_.want_notifications_)
+      + sizeof(ContractFinalizeRequest::_impl_.want_notifications_)
+      - PROTOBUF_FIELD_OFFSET(ContractFinalizeRequest, _impl_.fast_forward_)>(
+          reinterpret_cast<char*>(&_impl_.fast_forward_),
+          reinterpret_cast<char*>(&other->_impl_.fast_forward_));
 }
 
 ::google::protobuf::Metadata ContractFinalizeRequest::GetMetadata() const {

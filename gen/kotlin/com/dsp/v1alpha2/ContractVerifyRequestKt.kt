@@ -47,6 +47,56 @@ public object ContractVerifyRequestKt {
     public fun clearPid() {
       _builder.clearPid()
     }
+
+    /**
+     * ```
+     * signals to RUN-DSP that it should fast forward the negotiation and not wait for any requests of the contract service.
+     * ```
+     *
+     * `bool fast_forward = 2 [json_name = "fastForward"];`
+     */
+    public var fastForward: kotlin.Boolean
+      @JvmName("getFastForward")
+      get() = _builder.getFastForward()
+      @JvmName("setFastForward")
+      set(value) {
+        _builder.setFastForward(value)
+      }
+    /**
+     * ```
+     * signals to RUN-DSP that it should fast forward the negotiation and not wait for any requests of the contract service.
+     * ```
+     *
+     * `bool fast_forward = 2 [json_name = "fastForward"];`
+     */
+    public fun clearFastForward() {
+      _builder.clearFastForward()
+    }
+
+    /**
+     * ```
+     * signals to RUN-DSP that the contract service still wants notifications only useful if fast_forward is set.
+     * ```
+     *
+     * `bool want_notifications = 3 [json_name = "wantNotifications"];`
+     */
+    public var wantNotifications: kotlin.Boolean
+      @JvmName("getWantNotifications")
+      get() = _builder.getWantNotifications()
+      @JvmName("setWantNotifications")
+      set(value) {
+        _builder.setWantNotifications(value)
+      }
+    /**
+     * ```
+     * signals to RUN-DSP that the contract service still wants notifications only useful if fast_forward is set.
+     * ```
+     *
+     * `bool want_notifications = 3 [json_name = "wantNotifications"];`
+     */
+    public fun clearWantNotifications() {
+      _builder.clearWantNotifications()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

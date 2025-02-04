@@ -19,4 +19,24 @@ public interface ContractVerifyRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPidBytes();
+
+  /**
+   * <pre>
+   * signals to RUN-DSP that it should fast forward the negotiation and not wait for any requests of the contract service.
+   * </pre>
+   *
+   * <code>bool fast_forward = 2 [json_name = "fastForward"];</code>
+   * @return The fastForward.
+   */
+  boolean getFastForward();
+
+  /**
+   * <pre>
+   * signals to RUN-DSP that the contract service still wants notifications only useful if fast_forward is set.
+   * </pre>
+   *
+   * <code>bool want_notifications = 3 [json_name = "wantNotifications"];</code>
+   * @return The wantNotifications.
+   */
+  boolean getWantNotifications();
 }

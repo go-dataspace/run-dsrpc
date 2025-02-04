@@ -20,6 +20,10 @@ class ContractServiceAcceptedReceivedRequest extends \Google\Protobuf\Internal\M
      * Generated from protobuf field <code>string pid = 1 [json_name = "pid"];</code>
      */
     protected $pid = '';
+    /**
+     * Generated from protobuf field <code>bool notify_only = 2 [json_name = "notifyOnly"];</code>
+     */
+    protected $notify_only = false;
 
     /**
      * Constructor.
@@ -28,6 +32,7 @@ class ContractServiceAcceptedReceivedRequest extends \Google\Protobuf\Internal\M
      *     Optional. Data for populating the Message object.
      *
      *     @type string $pid
+     *     @type bool $notify_only
      * }
      */
     public function __construct($data = NULL) {
@@ -53,6 +58,28 @@ class ContractServiceAcceptedReceivedRequest extends \Google\Protobuf\Internal\M
     {
         GPBUtil::checkString($var, True);
         $this->pid = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool notify_only = 2 [json_name = "notifyOnly"];</code>
+     * @return bool
+     */
+    public function getNotifyOnly()
+    {
+        return $this->notify_only;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool notify_only = 2 [json_name = "notifyOnly"];</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setNotifyOnly($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->notify_only = $var;
 
         return $this;
     }

@@ -29,6 +29,14 @@ class ContractRequestRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>optional string participant_address = 3 [json_name = "participantAddress"];</code>
      */
     protected $participant_address = null;
+    /**
+     * Generated from protobuf field <code>bool fast_forward = 4 [json_name = "fastForward"];</code>
+     */
+    protected $fast_forward = false;
+    /**
+     * Generated from protobuf field <code>bool want_notifications = 5 [json_name = "wantNotifications"];</code>
+     */
+    protected $want_notifications = false;
 
     /**
      * Constructor.
@@ -39,6 +47,8 @@ class ContractRequestRequest extends \Google\Protobuf\Internal\Message
      *     @type string $offer
      *     @type string $pid
      *     @type string $participant_address
+     *     @type bool $fast_forward
+     *     @type bool $want_notifications
      * }
      */
     public function __construct($data = NULL) {
@@ -128,6 +138,50 @@ class ContractRequestRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->participant_address = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool fast_forward = 4 [json_name = "fastForward"];</code>
+     * @return bool
+     */
+    public function getFastForward()
+    {
+        return $this->fast_forward;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool fast_forward = 4 [json_name = "fastForward"];</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setFastForward($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->fast_forward = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool want_notifications = 5 [json_name = "wantNotifications"];</code>
+     * @return bool
+     */
+    public function getWantNotifications()
+    {
+        return $this->want_notifications;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool want_notifications = 5 [json_name = "wantNotifications"];</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setWantNotifications($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->want_notifications = $var;
 
         return $this;
     }

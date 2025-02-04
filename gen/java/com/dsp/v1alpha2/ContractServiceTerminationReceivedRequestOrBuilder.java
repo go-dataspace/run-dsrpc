@@ -56,4 +56,10 @@ public interface ContractServiceTerminationReceivedRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getReasonBytes(int index);
+
+  /**
+   * <code>bool notify_only = 4 [json_name = "notifyOnly"];</code>
+   * @return The notifyOnly.
+   */
+  boolean getNotifyOnly();
 }

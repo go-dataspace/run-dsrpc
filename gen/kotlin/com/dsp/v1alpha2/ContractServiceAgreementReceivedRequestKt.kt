@@ -47,6 +47,40 @@ public object ContractServiceAgreementReceivedRequestKt {
     public fun clearPid() {
       _builder.clearPid()
     }
+
+    /**
+     * `string agreement = 2 [json_name = "agreement"];`
+     */
+    public var agreement: kotlin.String
+      @JvmName("getAgreement")
+      get() = _builder.getAgreement()
+      @JvmName("setAgreement")
+      set(value) {
+        _builder.setAgreement(value)
+      }
+    /**
+     * `string agreement = 2 [json_name = "agreement"];`
+     */
+    public fun clearAgreement() {
+      _builder.clearAgreement()
+    }
+
+    /**
+     * `bool notify_only = 3 [json_name = "notifyOnly"];`
+     */
+    public var notifyOnly: kotlin.Boolean
+      @JvmName("getNotifyOnly")
+      get() = _builder.getNotifyOnly()
+      @JvmName("setNotifyOnly")
+      set(value) {
+        _builder.setNotifyOnly(value)
+      }
+    /**
+     * `bool notify_only = 3 [json_name = "notifyOnly"];`
+     */
+    public fun clearNotifyOnly() {
+      _builder.clearNotifyOnly()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

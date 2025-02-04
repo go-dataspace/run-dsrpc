@@ -83,6 +83,36 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int FAST_FORWARD_FIELD_NUMBER = 2;
+  private boolean fastForward_ = false;
+  /**
+   * <pre>
+   * signals to RUN-DSP that it should fast forward the negotiation and not wait for any requests of the contract service.
+   * </pre>
+   *
+   * <code>bool fast_forward = 2 [json_name = "fastForward"];</code>
+   * @return The fastForward.
+   */
+  @java.lang.Override
+  public boolean getFastForward() {
+    return fastForward_;
+  }
+
+  public static final int WANT_NOTIFICATIONS_FIELD_NUMBER = 3;
+  private boolean wantNotifications_ = false;
+  /**
+   * <pre>
+   * signals to RUN-DSP that the contract service still wants notifications only useful if fast_forward is set.
+   * </pre>
+   *
+   * <code>bool want_notifications = 3 [json_name = "wantNotifications"];</code>
+   * @return The wantNotifications.
+   */
+  @java.lang.Override
+  public boolean getWantNotifications() {
+    return wantNotifications_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -100,6 +130,12 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pid_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pid_);
     }
+    if (fastForward_ != false) {
+      output.writeBool(2, fastForward_);
+    }
+    if (wantNotifications_ != false) {
+      output.writeBool(3, wantNotifications_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -111,6 +147,14 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pid_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, pid_);
+    }
+    if (fastForward_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(2, fastForward_);
+    }
+    if (wantNotifications_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(3, wantNotifications_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -129,6 +173,10 @@ private static final long serialVersionUID = 0L;
 
     if (!getPid()
         .equals(other.getPid())) return false;
+    if (getFastForward()
+        != other.getFastForward()) return false;
+    if (getWantNotifications()
+        != other.getWantNotifications()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -142,6 +190,12 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + PID_FIELD_NUMBER;
     hash = (53 * hash) + getPid().hashCode();
+    hash = (37 * hash) + FAST_FORWARD_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getFastForward());
+    hash = (37 * hash) + WANT_NOTIFICATIONS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getWantNotifications());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -278,6 +332,8 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       pid_ = "";
+      fastForward_ = false;
+      wantNotifications_ = false;
       return this;
     }
 
@@ -313,6 +369,12 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.pid_ = pid_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.fastForward_ = fastForward_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.wantNotifications_ = wantNotifications_;
       }
     }
 
@@ -365,6 +427,12 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
+      if (other.getFastForward() != false) {
+        setFastForward(other.getFastForward());
+      }
+      if (other.getWantNotifications() != false) {
+        setWantNotifications(other.getWantNotifications());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -396,6 +464,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 16: {
+              fastForward_ = input.readBool();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              wantNotifications_ = input.readBool();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -481,6 +559,94 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       pid_ = value;
       bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private boolean fastForward_ ;
+    /**
+     * <pre>
+     * signals to RUN-DSP that it should fast forward the negotiation and not wait for any requests of the contract service.
+     * </pre>
+     *
+     * <code>bool fast_forward = 2 [json_name = "fastForward"];</code>
+     * @return The fastForward.
+     */
+    @java.lang.Override
+    public boolean getFastForward() {
+      return fastForward_;
+    }
+    /**
+     * <pre>
+     * signals to RUN-DSP that it should fast forward the negotiation and not wait for any requests of the contract service.
+     * </pre>
+     *
+     * <code>bool fast_forward = 2 [json_name = "fastForward"];</code>
+     * @param value The fastForward to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFastForward(boolean value) {
+
+      fastForward_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * signals to RUN-DSP that it should fast forward the negotiation and not wait for any requests of the contract service.
+     * </pre>
+     *
+     * <code>bool fast_forward = 2 [json_name = "fastForward"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFastForward() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      fastForward_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean wantNotifications_ ;
+    /**
+     * <pre>
+     * signals to RUN-DSP that the contract service still wants notifications only useful if fast_forward is set.
+     * </pre>
+     *
+     * <code>bool want_notifications = 3 [json_name = "wantNotifications"];</code>
+     * @return The wantNotifications.
+     */
+    @java.lang.Override
+    public boolean getWantNotifications() {
+      return wantNotifications_;
+    }
+    /**
+     * <pre>
+     * signals to RUN-DSP that the contract service still wants notifications only useful if fast_forward is set.
+     * </pre>
+     *
+     * <code>bool want_notifications = 3 [json_name = "wantNotifications"];</code>
+     * @param value The wantNotifications to set.
+     * @return This builder for chaining.
+     */
+    public Builder setWantNotifications(boolean value) {
+
+      wantNotifications_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * signals to RUN-DSP that the contract service still wants notifications only useful if fast_forward is set.
+     * </pre>
+     *
+     * <code>bool want_notifications = 3 [json_name = "wantNotifications"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearWantNotifications() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      wantNotifications_ = false;
       onChanged();
       return this;
     }

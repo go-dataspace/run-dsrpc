@@ -194,6 +194,10 @@ struct Dsp_V1alpha2_ContractRequestRequest {
   /// Clears the value of `participantAddress`. Subsequent reads from it will return its default value.
   mutating func clearParticipantAddress() {self._participantAddress = nil}
 
+  var fastForward: Bool = false
+
+  var wantNotifications: Bool = false
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -239,6 +243,10 @@ struct Dsp_V1alpha2_ContractOfferRequest {
   /// Clears the value of `participantAddress`. Subsequent reads from it will return its default value.
   mutating func clearParticipantAddress() {self._participantAddress = nil}
 
+  var fastForward: Bool = false
+
+  var wantNotifications: Bool = false
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -265,6 +273,10 @@ struct Dsp_V1alpha2_ContractAcceptRequest {
 
   var pid: String = String()
 
+  var fastForward: Bool = false
+
+  var wantNotifications: Bool = false
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -290,6 +302,10 @@ struct Dsp_V1alpha2_ContractAgreeRequest {
 
   var pid: String = String()
 
+  var fastForward: Bool = false
+
+  var wantNotifications: Bool = false
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -313,6 +329,12 @@ struct Dsp_V1alpha2_ContractVerifyRequest {
 
   var pid: String = String()
 
+  /// signals to RUN-DSP that it should fast forward the negotiation and not wait for any requests of the contract service.
+  var fastForward: Bool = false
+
+  /// signals to RUN-DSP that the contract service still wants notifications only useful if fast_forward is set.
+  var wantNotifications: Bool = false
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -335,6 +357,10 @@ struct Dsp_V1alpha2_ContractFinalizeRequest {
   // methods supported on all messages.
 
   var pid: String = String()
+
+  var fastForward: Bool = false
+
+  var wantNotifications: Bool = false
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -800,6 +826,8 @@ extension Dsp_V1alpha2_ContractRequestRequest: SwiftProtobuf.Message, SwiftProto
     1: .same(proto: "offer"),
     2: .same(proto: "pid"),
     3: .standard(proto: "participant_address"),
+    4: .standard(proto: "fast_forward"),
+    5: .standard(proto: "want_notifications"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -811,6 +839,8 @@ extension Dsp_V1alpha2_ContractRequestRequest: SwiftProtobuf.Message, SwiftProto
       case 1: try { try decoder.decodeSingularStringField(value: &self.offer) }()
       case 2: try { try decoder.decodeSingularStringField(value: &self._pid) }()
       case 3: try { try decoder.decodeSingularStringField(value: &self._participantAddress) }()
+      case 4: try { try decoder.decodeSingularBoolField(value: &self.fastForward) }()
+      case 5: try { try decoder.decodeSingularBoolField(value: &self.wantNotifications) }()
       default: break
       }
     }
@@ -830,6 +860,12 @@ extension Dsp_V1alpha2_ContractRequestRequest: SwiftProtobuf.Message, SwiftProto
     try { if let v = self._participantAddress {
       try visitor.visitSingularStringField(value: v, fieldNumber: 3)
     } }()
+    if self.fastForward != false {
+      try visitor.visitSingularBoolField(value: self.fastForward, fieldNumber: 4)
+    }
+    if self.wantNotifications != false {
+      try visitor.visitSingularBoolField(value: self.wantNotifications, fieldNumber: 5)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -837,6 +873,8 @@ extension Dsp_V1alpha2_ContractRequestRequest: SwiftProtobuf.Message, SwiftProto
     if lhs.offer != rhs.offer {return false}
     if lhs._pid != rhs._pid {return false}
     if lhs._participantAddress != rhs._participantAddress {return false}
+    if lhs.fastForward != rhs.fastForward {return false}
+    if lhs.wantNotifications != rhs.wantNotifications {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -867,6 +905,8 @@ extension Dsp_V1alpha2_ContractOfferRequest: SwiftProtobuf.Message, SwiftProtobu
     1: .same(proto: "offer"),
     2: .same(proto: "pid"),
     3: .standard(proto: "participant_address"),
+    4: .standard(proto: "fast_forward"),
+    5: .standard(proto: "want_notifications"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -878,6 +918,8 @@ extension Dsp_V1alpha2_ContractOfferRequest: SwiftProtobuf.Message, SwiftProtobu
       case 1: try { try decoder.decodeSingularStringField(value: &self.offer) }()
       case 2: try { try decoder.decodeSingularStringField(value: &self._pid) }()
       case 3: try { try decoder.decodeSingularStringField(value: &self._participantAddress) }()
+      case 4: try { try decoder.decodeSingularBoolField(value: &self.fastForward) }()
+      case 5: try { try decoder.decodeSingularBoolField(value: &self.wantNotifications) }()
       default: break
       }
     }
@@ -897,6 +939,12 @@ extension Dsp_V1alpha2_ContractOfferRequest: SwiftProtobuf.Message, SwiftProtobu
     try { if let v = self._participantAddress {
       try visitor.visitSingularStringField(value: v, fieldNumber: 3)
     } }()
+    if self.fastForward != false {
+      try visitor.visitSingularBoolField(value: self.fastForward, fieldNumber: 4)
+    }
+    if self.wantNotifications != false {
+      try visitor.visitSingularBoolField(value: self.wantNotifications, fieldNumber: 5)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -904,6 +952,8 @@ extension Dsp_V1alpha2_ContractOfferRequest: SwiftProtobuf.Message, SwiftProtobu
     if lhs.offer != rhs.offer {return false}
     if lhs._pid != rhs._pid {return false}
     if lhs._participantAddress != rhs._participantAddress {return false}
+    if lhs.fastForward != rhs.fastForward {return false}
+    if lhs.wantNotifications != rhs.wantNotifications {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -932,6 +982,8 @@ extension Dsp_V1alpha2_ContractAcceptRequest: SwiftProtobuf.Message, SwiftProtob
   static let protoMessageName: String = _protobuf_package + ".ContractAcceptRequest"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "pid"),
+    2: .standard(proto: "fast_forward"),
+    3: .standard(proto: "want_notifications"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -941,6 +993,8 @@ extension Dsp_V1alpha2_ContractAcceptRequest: SwiftProtobuf.Message, SwiftProtob
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularStringField(value: &self.pid) }()
+      case 2: try { try decoder.decodeSingularBoolField(value: &self.fastForward) }()
+      case 3: try { try decoder.decodeSingularBoolField(value: &self.wantNotifications) }()
       default: break
       }
     }
@@ -950,11 +1004,19 @@ extension Dsp_V1alpha2_ContractAcceptRequest: SwiftProtobuf.Message, SwiftProtob
     if !self.pid.isEmpty {
       try visitor.visitSingularStringField(value: self.pid, fieldNumber: 1)
     }
+    if self.fastForward != false {
+      try visitor.visitSingularBoolField(value: self.fastForward, fieldNumber: 2)
+    }
+    if self.wantNotifications != false {
+      try visitor.visitSingularBoolField(value: self.wantNotifications, fieldNumber: 3)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Dsp_V1alpha2_ContractAcceptRequest, rhs: Dsp_V1alpha2_ContractAcceptRequest) -> Bool {
     if lhs.pid != rhs.pid {return false}
+    if lhs.fastForward != rhs.fastForward {return false}
+    if lhs.wantNotifications != rhs.wantNotifications {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -984,6 +1046,8 @@ extension Dsp_V1alpha2_ContractAgreeRequest: SwiftProtobuf.Message, SwiftProtobu
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "agreement"),
     2: .same(proto: "pid"),
+    3: .standard(proto: "fast_forward"),
+    4: .standard(proto: "want_notifications"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -994,6 +1058,8 @@ extension Dsp_V1alpha2_ContractAgreeRequest: SwiftProtobuf.Message, SwiftProtobu
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularStringField(value: &self.agreement) }()
       case 2: try { try decoder.decodeSingularStringField(value: &self.pid) }()
+      case 3: try { try decoder.decodeSingularBoolField(value: &self.fastForward) }()
+      case 4: try { try decoder.decodeSingularBoolField(value: &self.wantNotifications) }()
       default: break
       }
     }
@@ -1006,12 +1072,20 @@ extension Dsp_V1alpha2_ContractAgreeRequest: SwiftProtobuf.Message, SwiftProtobu
     if !self.pid.isEmpty {
       try visitor.visitSingularStringField(value: self.pid, fieldNumber: 2)
     }
+    if self.fastForward != false {
+      try visitor.visitSingularBoolField(value: self.fastForward, fieldNumber: 3)
+    }
+    if self.wantNotifications != false {
+      try visitor.visitSingularBoolField(value: self.wantNotifications, fieldNumber: 4)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Dsp_V1alpha2_ContractAgreeRequest, rhs: Dsp_V1alpha2_ContractAgreeRequest) -> Bool {
     if lhs.agreement != rhs.agreement {return false}
     if lhs.pid != rhs.pid {return false}
+    if lhs.fastForward != rhs.fastForward {return false}
+    if lhs.wantNotifications != rhs.wantNotifications {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -1040,6 +1114,8 @@ extension Dsp_V1alpha2_ContractVerifyRequest: SwiftProtobuf.Message, SwiftProtob
   static let protoMessageName: String = _protobuf_package + ".ContractVerifyRequest"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "pid"),
+    2: .standard(proto: "fast_forward"),
+    3: .standard(proto: "want_notifications"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -1049,6 +1125,8 @@ extension Dsp_V1alpha2_ContractVerifyRequest: SwiftProtobuf.Message, SwiftProtob
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularStringField(value: &self.pid) }()
+      case 2: try { try decoder.decodeSingularBoolField(value: &self.fastForward) }()
+      case 3: try { try decoder.decodeSingularBoolField(value: &self.wantNotifications) }()
       default: break
       }
     }
@@ -1058,11 +1136,19 @@ extension Dsp_V1alpha2_ContractVerifyRequest: SwiftProtobuf.Message, SwiftProtob
     if !self.pid.isEmpty {
       try visitor.visitSingularStringField(value: self.pid, fieldNumber: 1)
     }
+    if self.fastForward != false {
+      try visitor.visitSingularBoolField(value: self.fastForward, fieldNumber: 2)
+    }
+    if self.wantNotifications != false {
+      try visitor.visitSingularBoolField(value: self.wantNotifications, fieldNumber: 3)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Dsp_V1alpha2_ContractVerifyRequest, rhs: Dsp_V1alpha2_ContractVerifyRequest) -> Bool {
     if lhs.pid != rhs.pid {return false}
+    if lhs.fastForward != rhs.fastForward {return false}
+    if lhs.wantNotifications != rhs.wantNotifications {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -1091,6 +1177,8 @@ extension Dsp_V1alpha2_ContractFinalizeRequest: SwiftProtobuf.Message, SwiftProt
   static let protoMessageName: String = _protobuf_package + ".ContractFinalizeRequest"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "pid"),
+    2: .standard(proto: "fast_forward"),
+    3: .standard(proto: "want_notifications"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -1100,6 +1188,8 @@ extension Dsp_V1alpha2_ContractFinalizeRequest: SwiftProtobuf.Message, SwiftProt
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularStringField(value: &self.pid) }()
+      case 2: try { try decoder.decodeSingularBoolField(value: &self.fastForward) }()
+      case 3: try { try decoder.decodeSingularBoolField(value: &self.wantNotifications) }()
       default: break
       }
     }
@@ -1109,11 +1199,19 @@ extension Dsp_V1alpha2_ContractFinalizeRequest: SwiftProtobuf.Message, SwiftProt
     if !self.pid.isEmpty {
       try visitor.visitSingularStringField(value: self.pid, fieldNumber: 1)
     }
+    if self.fastForward != false {
+      try visitor.visitSingularBoolField(value: self.fastForward, fieldNumber: 2)
+    }
+    if self.wantNotifications != false {
+      try visitor.visitSingularBoolField(value: self.wantNotifications, fieldNumber: 3)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Dsp_V1alpha2_ContractFinalizeRequest, rhs: Dsp_V1alpha2_ContractFinalizeRequest) -> Bool {
     if lhs.pid != rhs.pid {return false}
+    if lhs.fastForward != rhs.fastForward {return false}
+    if lhs.wantNotifications != rhs.wantNotifications {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

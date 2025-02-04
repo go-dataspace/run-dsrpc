@@ -24,6 +24,8 @@ pub struct ContractServiceRequestReceivedRequest {
     pub pid: ::prost::alloc::string::String,
     #[prost(string, tag="2")]
     pub offer: ::prost::alloc::string::String,
+    #[prost(bool, tag="3")]
+    pub notify_only: bool,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -37,6 +39,8 @@ pub struct ContractServiceOfferReceivedRequest {
     pub pid: ::prost::alloc::string::String,
     #[prost(string, tag="2")]
     pub offer: ::prost::alloc::string::String,
+    #[prost(bool, tag="3")]
+    pub notify_only: bool,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -48,6 +52,8 @@ pub struct ContractServiceOfferReceivedResponse {
 pub struct ContractServiceAcceptedReceivedRequest {
     #[prost(string, tag="1")]
     pub pid: ::prost::alloc::string::String,
+    #[prost(bool, tag="2")]
+    pub notify_only: bool,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -59,6 +65,10 @@ pub struct ContractServiceAcceptedReceivedResponse {
 pub struct ContractServiceAgreementReceivedRequest {
     #[prost(string, tag="1")]
     pub pid: ::prost::alloc::string::String,
+    #[prost(string, tag="2")]
+    pub agreement: ::prost::alloc::string::String,
+    #[prost(bool, tag="3")]
+    pub notify_only: bool,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -70,6 +80,8 @@ pub struct ContractServiceAgreementReceivedResponse {
 pub struct ContractServiceVerificationReceivedRequest {
     #[prost(string, tag="1")]
     pub pid: ::prost::alloc::string::String,
+    #[prost(bool, tag="2")]
+    pub notify_only: bool,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -81,6 +93,8 @@ pub struct ContractServiceVerificationReceivedResponse {
 pub struct ContractServiceFinalizationReceivedRequest {
     #[prost(string, tag="1")]
     pub pid: ::prost::alloc::string::String,
+    #[prost(bool, tag="2")]
+    pub notify_only: bool,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -97,6 +111,8 @@ pub struct ContractServiceTerminationReceivedRequest {
     pub code: ::prost::alloc::string::String,
     #[prost(string, repeated, tag="3")]
     pub reason: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
+    #[prost(bool, tag="4")]
+    pub notify_only: bool,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -284,6 +300,10 @@ pub struct ContractRequestRequest {
     pub pid: ::core::option::Option<::prost::alloc::string::String>,
     #[prost(string, optional, tag="3")]
     pub participant_address: ::core::option::Option<::prost::alloc::string::String>,
+    #[prost(bool, tag="4")]
+    pub fast_forward: bool,
+    #[prost(bool, tag="5")]
+    pub want_notifications: bool,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -300,6 +320,10 @@ pub struct ContractOfferRequest {
     pub pid: ::core::option::Option<::prost::alloc::string::String>,
     #[prost(string, optional, tag="3")]
     pub participant_address: ::core::option::Option<::prost::alloc::string::String>,
+    #[prost(bool, tag="4")]
+    pub fast_forward: bool,
+    #[prost(bool, tag="5")]
+    pub want_notifications: bool,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -311,6 +335,10 @@ pub struct ContractOfferResponse {
 pub struct ContractAcceptRequest {
     #[prost(string, tag="1")]
     pub pid: ::prost::alloc::string::String,
+    #[prost(bool, tag="2")]
+    pub fast_forward: bool,
+    #[prost(bool, tag="3")]
+    pub want_notifications: bool,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -324,6 +352,10 @@ pub struct ContractAgreeRequest {
     pub agreement: ::prost::alloc::string::String,
     #[prost(string, tag="2")]
     pub pid: ::prost::alloc::string::String,
+    #[prost(bool, tag="3")]
+    pub fast_forward: bool,
+    #[prost(bool, tag="4")]
+    pub want_notifications: bool,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -335,6 +367,12 @@ pub struct ContractAgreeResponse {
 pub struct ContractVerifyRequest {
     #[prost(string, tag="1")]
     pub pid: ::prost::alloc::string::String,
+    /// signals to RUN-DSP that it should fast forward the negotiation and not wait for any requests of the contract service.
+    #[prost(bool, tag="2")]
+    pub fast_forward: bool,
+    /// signals to RUN-DSP that the contract service still wants notifications only useful if fast_forward is set.
+    #[prost(bool, tag="3")]
+    pub want_notifications: bool,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -346,6 +384,10 @@ pub struct ContractVerifyResponse {
 pub struct ContractFinalizeRequest {
     #[prost(string, tag="1")]
     pub pid: ::prost::alloc::string::String,
+    #[prost(bool, tag="2")]
+    pub fast_forward: bool,
+    #[prost(bool, tag="3")]
+    pub want_notifications: bool,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]

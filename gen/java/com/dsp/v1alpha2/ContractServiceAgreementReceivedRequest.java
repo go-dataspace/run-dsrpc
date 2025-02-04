@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
   }
   private ContractServiceAgreementReceivedRequest() {
     pid_ = "";
+    agreement_ = "";
   }
 
   @java.lang.Override
@@ -83,6 +84,56 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int AGREEMENT_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object agreement_ = "";
+  /**
+   * <code>string agreement = 2 [json_name = "agreement"];</code>
+   * @return The agreement.
+   */
+  @java.lang.Override
+  public java.lang.String getAgreement() {
+    java.lang.Object ref = agreement_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      agreement_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string agreement = 2 [json_name = "agreement"];</code>
+   * @return The bytes for agreement.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getAgreementBytes() {
+    java.lang.Object ref = agreement_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      agreement_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int NOTIFY_ONLY_FIELD_NUMBER = 3;
+  private boolean notifyOnly_ = false;
+  /**
+   * <code>bool notify_only = 3 [json_name = "notifyOnly"];</code>
+   * @return The notifyOnly.
+   */
+  @java.lang.Override
+  public boolean getNotifyOnly() {
+    return notifyOnly_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -100,6 +151,12 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pid_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pid_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agreement_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, agreement_);
+    }
+    if (notifyOnly_ != false) {
+      output.writeBool(3, notifyOnly_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -111,6 +168,13 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pid_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, pid_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agreement_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, agreement_);
+    }
+    if (notifyOnly_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(3, notifyOnly_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -129,6 +193,10 @@ private static final long serialVersionUID = 0L;
 
     if (!getPid()
         .equals(other.getPid())) return false;
+    if (!getAgreement()
+        .equals(other.getAgreement())) return false;
+    if (getNotifyOnly()
+        != other.getNotifyOnly()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -142,6 +210,11 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + PID_FIELD_NUMBER;
     hash = (53 * hash) + getPid().hashCode();
+    hash = (37 * hash) + AGREEMENT_FIELD_NUMBER;
+    hash = (53 * hash) + getAgreement().hashCode();
+    hash = (37 * hash) + NOTIFY_ONLY_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getNotifyOnly());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -278,6 +351,8 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       pid_ = "";
+      agreement_ = "";
+      notifyOnly_ = false;
       return this;
     }
 
@@ -313,6 +388,12 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.pid_ = pid_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.agreement_ = agreement_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.notifyOnly_ = notifyOnly_;
       }
     }
 
@@ -365,6 +446,14 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
+      if (!other.getAgreement().isEmpty()) {
+        agreement_ = other.agreement_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      if (other.getNotifyOnly() != false) {
+        setNotifyOnly(other.getNotifyOnly());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -396,6 +485,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              agreement_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              notifyOnly_ = input.readBool();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -481,6 +580,110 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       pid_ = value;
       bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object agreement_ = "";
+    /**
+     * <code>string agreement = 2 [json_name = "agreement"];</code>
+     * @return The agreement.
+     */
+    public java.lang.String getAgreement() {
+      java.lang.Object ref = agreement_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        agreement_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string agreement = 2 [json_name = "agreement"];</code>
+     * @return The bytes for agreement.
+     */
+    public com.google.protobuf.ByteString
+        getAgreementBytes() {
+      java.lang.Object ref = agreement_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        agreement_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string agreement = 2 [json_name = "agreement"];</code>
+     * @param value The agreement to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAgreement(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      agreement_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string agreement = 2 [json_name = "agreement"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAgreement() {
+      agreement_ = getDefaultInstance().getAgreement();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string agreement = 2 [json_name = "agreement"];</code>
+     * @param value The bytes for agreement to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAgreementBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      agreement_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private boolean notifyOnly_ ;
+    /**
+     * <code>bool notify_only = 3 [json_name = "notifyOnly"];</code>
+     * @return The notifyOnly.
+     */
+    @java.lang.Override
+    public boolean getNotifyOnly() {
+      return notifyOnly_;
+    }
+    /**
+     * <code>bool notify_only = 3 [json_name = "notifyOnly"];</code>
+     * @param value The notifyOnly to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNotifyOnly(boolean value) {
+
+      notifyOnly_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool notify_only = 3 [json_name = "notifyOnly"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearNotifyOnly() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      notifyOnly_ = false;
       onChanged();
       return this;
     }

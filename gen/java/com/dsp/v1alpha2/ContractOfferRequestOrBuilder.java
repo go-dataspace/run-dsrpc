@@ -53,4 +53,16 @@ public interface ContractOfferRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getParticipantAddressBytes();
+
+  /**
+   * <code>bool fast_forward = 4 [json_name = "fastForward"];</code>
+   * @return The fastForward.
+   */
+  boolean getFastForward();
+
+  /**
+   * <code>bool want_notifications = 5 [json_name = "wantNotifications"];</code>
+   * @return The wantNotifications.
+   */
+  boolean getWantNotifications();
 }
