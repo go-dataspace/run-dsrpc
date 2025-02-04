@@ -52,6 +52,7 @@ message ContractServiceConfigureResponse {}
 message ContractServiceRequestReceivedRequest {
   string pid = 1;
   string offer = 2;
+  bool notify_only = 3;
 }
 
 message ContractServiceRequestReceivedResponse {}
@@ -60,6 +61,7 @@ message ContractServiceRequestReceivedResponse {}
 message ContractServiceOfferReceivedRequest {
   string pid = 1;
   string offer = 2;
+  bool notify_only = 3;
 }
 
 message ContractServiceOfferReceivedResponse {}
@@ -67,6 +69,7 @@ message ContractServiceOfferReceivedResponse {}
 // ContractServiceAcceptedReceivedRequest contains the pid RUN-DSP uses to refer to the negotiation that just got accepted.
 message ContractServiceAcceptedReceivedRequest {
   string pid = 1;
+  bool notify_only = 2;
 }
 
 message ContractServiceAcceptedReceivedResponse {}
@@ -74,6 +77,8 @@ message ContractServiceAcceptedReceivedResponse {}
 // ContractServiceAgreementReceivedRequest contains the pid RUN-DSP uses to refer to the negotiation that just got agreed to.
 message ContractServiceAgreementReceivedRequest {
   string pid = 1;
+  string agreement = 2;
+  bool notify_only = 3;
 }
 
 message ContractServiceAgreementReceivedResponse {}
@@ -81,6 +86,7 @@ message ContractServiceAgreementReceivedResponse {}
 // ContractServiceVerificationReceivedRequest contains the pid RUN-DSP uses to refer to the negotiation that just verified to.
 message ContractServiceVerificationReceivedRequest {
   string pid = 1;
+  bool notify_only = 2;
 }
 
 message ContractServiceVerificationReceivedResponse {}
@@ -88,6 +94,7 @@ message ContractServiceVerificationReceivedResponse {}
 // ContractServiceFinalizationReceivedRequest contains the pid RUN-DSP uses to refer to the negotiation that just got finalized.
 message ContractServiceFinalizationReceivedRequest {
   string pid = 1;
+  bool notify_only = 2;
 }
 
 message ContractServiceFinalizationReceivedResponse {}
@@ -98,6 +105,7 @@ message ContractServiceTerminationReceivedRequest {
   string pid = 1;
   string code = 2;
   repeated string reason = 3;
+  bool notify_only = 4;
 }
 
 message ContractServiceTerminationReceivedResponse {}
