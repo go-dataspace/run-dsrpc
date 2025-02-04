@@ -192,17 +192,6 @@ private static final long serialVersionUID = 0L;
     return autoAccept_;
   }
 
-  public static final int WANT_NOTIFICATIONS_FIELD_NUMBER = 5;
-  private boolean wantNotifications_ = false;
-  /**
-   * <code>bool want_notifications = 5 [json_name = "wantNotifications"];</code>
-   * @return The wantNotifications.
-   */
-  @java.lang.Override
-  public boolean getWantNotifications() {
-    return wantNotifications_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -229,9 +218,6 @@ private static final long serialVersionUID = 0L;
     if (autoAccept_ != false) {
       output.writeBool(4, autoAccept_);
     }
-    if (wantNotifications_ != false) {
-      output.writeBool(5, wantNotifications_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -253,10 +239,6 @@ private static final long serialVersionUID = 0L;
     if (autoAccept_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(4, autoAccept_);
-    }
-    if (wantNotifications_ != false) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(5, wantNotifications_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -287,8 +269,6 @@ private static final long serialVersionUID = 0L;
     }
     if (getAutoAccept()
         != other.getAutoAccept()) return false;
-    if (getWantNotifications()
-        != other.getWantNotifications()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -313,9 +293,6 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + AUTO_ACCEPT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getAutoAccept());
-    hash = (37 * hash) + WANT_NOTIFICATIONS_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getWantNotifications());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -456,7 +433,6 @@ private static final long serialVersionUID = 0L;
       pid_ = "";
       participantAddress_ = "";
       autoAccept_ = false;
-      wantNotifications_ = false;
       return this;
     }
 
@@ -504,9 +480,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.autoAccept_ = autoAccept_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.wantNotifications_ = wantNotifications_;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -573,9 +546,6 @@ private static final long serialVersionUID = 0L;
       if (other.getAutoAccept() != false) {
         setAutoAccept(other.getAutoAccept());
       }
-      if (other.getWantNotifications() != false) {
-        setWantNotifications(other.getWantNotifications());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -622,11 +592,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 32
-            case 40: {
-              wantNotifications_ = input.readBool();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -902,38 +867,6 @@ private static final long serialVersionUID = 0L;
     public Builder clearAutoAccept() {
       bitField0_ = (bitField0_ & ~0x00000008);
       autoAccept_ = false;
-      onChanged();
-      return this;
-    }
-
-    private boolean wantNotifications_ ;
-    /**
-     * <code>bool want_notifications = 5 [json_name = "wantNotifications"];</code>
-     * @return The wantNotifications.
-     */
-    @java.lang.Override
-    public boolean getWantNotifications() {
-      return wantNotifications_;
-    }
-    /**
-     * <code>bool want_notifications = 5 [json_name = "wantNotifications"];</code>
-     * @param value The wantNotifications to set.
-     * @return This builder for chaining.
-     */
-    public Builder setWantNotifications(boolean value) {
-
-      wantNotifications_ = value;
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>bool want_notifications = 5 [json_name = "wantNotifications"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearWantNotifications() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      wantNotifications_ = false;
       onChanged();
       return this;
     }

@@ -111,7 +111,6 @@ message ContractRequestRequest {
   optional string pid = 2;
   optional string participant_address = 3;
   bool auto_accept = 4;
-  bool want_notifications = 5;
 }
 
 message ContractRequestResponse {}
@@ -123,7 +122,6 @@ message ContractOfferRequest {
   optional string pid = 2;
   optional string participant_address = 3;
   bool auto_accept = 4;
-  bool want_notifications = 5;
 }
 
 message ContractOfferResponse {}
@@ -132,7 +130,6 @@ message ContractOfferResponse {}
 message ContractAcceptRequest {
   string pid = 1;
   bool auto_accept = 2;
-  bool want_notifications = 3;
 }
 
 message ContractAcceptResponse {}
@@ -142,7 +139,6 @@ message ContractAgreeRequest {
   string agreement = 1;
   string pid = 2;
   bool auto_accept = 3;
-  bool want_notifications = 4;
 }
 
 message ContractAgreeResponse {}
@@ -150,8 +146,7 @@ message ContractAgreeResponse {}
 // ContractVerifyRequest contains the pid of the contract negotiation to verify.
 message ContractVerifyRequest {
   string pid = 1;
-  bool auto_accept = 2; // signals to RUN-DSP that it should fast forward the negotiation and not wait for any requests of the contract service.
-  bool want_notifications = 3; // signals to RUN-DSP that the contract service still wants notifications only useful if auto_accept is set.
+  bool auto_accept = 2; // signals to RUN-DSP that it should auto accept the negotiation and not wait for any requests of the contract service.
 }
 
 message ContractVerifyResponse {}
@@ -160,7 +155,6 @@ message ContractVerifyResponse {}
 message ContractFinalizeRequest {
   string pid = 1;
   bool auto_accept = 2;
-  bool want_notifications = 3;
 }
 
 message ContractFinalizeResponse {}

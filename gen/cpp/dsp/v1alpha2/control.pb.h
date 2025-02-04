@@ -2441,7 +2441,6 @@ class ContractVerifyRequest final : public ::google::protobuf::Message
   enum : int {
     kPidFieldNumber = 1,
     kAutoAcceptFieldNumber = 2,
-    kWantNotificationsFieldNumber = 3,
   };
   // string pid = 1 [json_name = "pid"];
   void clear_pid() ;
@@ -2469,22 +2468,12 @@ class ContractVerifyRequest final : public ::google::protobuf::Message
   void _internal_set_auto_accept(bool value);
 
   public:
-  // bool want_notifications = 3 [json_name = "wantNotifications"];
-  void clear_want_notifications() ;
-  bool want_notifications() const;
-  void set_want_notifications(bool value);
-
-  private:
-  bool _internal_want_notifications() const;
-  void _internal_set_want_notifications(bool value);
-
-  public:
   // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractVerifyRequest)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      2, 3, 0,
+      1, 2, 0,
       46, 2>
       _table_;
 
@@ -2507,7 +2496,6 @@ class ContractVerifyRequest final : public ::google::protobuf::Message
                           const ContractVerifyRequest& from_msg);
     ::google::protobuf::internal::ArenaStringPtr pid_;
     bool auto_accept_;
-    bool want_notifications_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -3153,7 +3141,6 @@ class ContractRequestRequest final : public ::google::protobuf::Message
     kPidFieldNumber = 2,
     kParticipantAddressFieldNumber = 3,
     kAutoAcceptFieldNumber = 4,
-    kWantNotificationsFieldNumber = 5,
   };
   // string offer = 1 [json_name = "offer"];
   void clear_offer() ;
@@ -3215,22 +3202,12 @@ class ContractRequestRequest final : public ::google::protobuf::Message
   void _internal_set_auto_accept(bool value);
 
   public:
-  // bool want_notifications = 5 [json_name = "wantNotifications"];
-  void clear_want_notifications() ;
-  bool want_notifications() const;
-  void set_want_notifications(bool value);
-
-  private:
-  bool _internal_want_notifications() const;
-  void _internal_set_want_notifications(bool value);
-
-  public:
   // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractRequestRequest)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      3, 5, 0,
+      2, 4, 0,
       71, 2>
       _table_;
 
@@ -3257,7 +3234,6 @@ class ContractRequestRequest final : public ::google::protobuf::Message
     ::google::protobuf::internal::ArenaStringPtr pid_;
     ::google::protobuf::internal::ArenaStringPtr participant_address_;
     bool auto_accept_;
-    bool want_notifications_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -3535,7 +3511,6 @@ class ContractOfferRequest final : public ::google::protobuf::Message
     kPidFieldNumber = 2,
     kParticipantAddressFieldNumber = 3,
     kAutoAcceptFieldNumber = 4,
-    kWantNotificationsFieldNumber = 5,
   };
   // string offer = 1 [json_name = "offer"];
   void clear_offer() ;
@@ -3597,22 +3572,12 @@ class ContractOfferRequest final : public ::google::protobuf::Message
   void _internal_set_auto_accept(bool value);
 
   public:
-  // bool want_notifications = 5 [json_name = "wantNotifications"];
-  void clear_want_notifications() ;
-  bool want_notifications() const;
-  void set_want_notifications(bool value);
-
-  private:
-  bool _internal_want_notifications() const;
-  void _internal_set_want_notifications(bool value);
-
-  public:
   // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractOfferRequest)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      3, 5, 0,
+      2, 4, 0,
       69, 2>
       _table_;
 
@@ -3639,7 +3604,6 @@ class ContractOfferRequest final : public ::google::protobuf::Message
     ::google::protobuf::internal::ArenaStringPtr pid_;
     ::google::protobuf::internal::ArenaStringPtr participant_address_;
     bool auto_accept_;
-    bool want_notifications_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -3915,7 +3879,6 @@ class ContractFinalizeRequest final : public ::google::protobuf::Message
   enum : int {
     kPidFieldNumber = 1,
     kAutoAcceptFieldNumber = 2,
-    kWantNotificationsFieldNumber = 3,
   };
   // string pid = 1 [json_name = "pid"];
   void clear_pid() ;
@@ -3943,22 +3906,12 @@ class ContractFinalizeRequest final : public ::google::protobuf::Message
   void _internal_set_auto_accept(bool value);
 
   public:
-  // bool want_notifications = 3 [json_name = "wantNotifications"];
-  void clear_want_notifications() ;
-  bool want_notifications() const;
-  void set_want_notifications(bool value);
-
-  private:
-  bool _internal_want_notifications() const;
-  void _internal_set_want_notifications(bool value);
-
-  public:
   // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractFinalizeRequest)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      2, 3, 0,
+      1, 2, 0,
       48, 2>
       _table_;
 
@@ -3981,7 +3934,6 @@ class ContractFinalizeRequest final : public ::google::protobuf::Message
                           const ContractFinalizeRequest& from_msg);
     ::google::protobuf::internal::ArenaStringPtr pid_;
     bool auto_accept_;
-    bool want_notifications_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -4259,7 +4211,6 @@ class ContractAgreeRequest final : public ::google::protobuf::Message
     kAgreementFieldNumber = 1,
     kPidFieldNumber = 2,
     kAutoAcceptFieldNumber = 3,
-    kWantNotificationsFieldNumber = 4,
   };
   // string agreement = 1 [json_name = "agreement"];
   void clear_agreement() ;
@@ -4303,22 +4254,12 @@ class ContractAgreeRequest final : public ::google::protobuf::Message
   void _internal_set_auto_accept(bool value);
 
   public:
-  // bool want_notifications = 4 [json_name = "wantNotifications"];
-  void clear_want_notifications() ;
-  bool want_notifications() const;
-  void set_want_notifications(bool value);
-
-  private:
-  bool _internal_want_notifications() const;
-  void _internal_set_want_notifications(bool value);
-
-  public:
   // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractAgreeRequest)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      2, 4, 0,
+      2, 3, 0,
       54, 2>
       _table_;
 
@@ -4342,7 +4283,6 @@ class ContractAgreeRequest final : public ::google::protobuf::Message
     ::google::protobuf::internal::ArenaStringPtr agreement_;
     ::google::protobuf::internal::ArenaStringPtr pid_;
     bool auto_accept_;
-    bool want_notifications_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -4619,7 +4559,6 @@ class ContractAcceptRequest final : public ::google::protobuf::Message
   enum : int {
     kPidFieldNumber = 1,
     kAutoAcceptFieldNumber = 2,
-    kWantNotificationsFieldNumber = 3,
   };
   // string pid = 1 [json_name = "pid"];
   void clear_pid() ;
@@ -4647,22 +4586,12 @@ class ContractAcceptRequest final : public ::google::protobuf::Message
   void _internal_set_auto_accept(bool value);
 
   public:
-  // bool want_notifications = 3 [json_name = "wantNotifications"];
-  void clear_want_notifications() ;
-  bool want_notifications() const;
-  void set_want_notifications(bool value);
-
-  private:
-  bool _internal_want_notifications() const;
-  void _internal_set_want_notifications(bool value);
-
-  public:
   // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractAcceptRequest)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      2, 3, 0,
+      1, 2, 0,
       46, 2>
       _table_;
 
@@ -4685,7 +4614,6 @@ class ContractAcceptRequest final : public ::google::protobuf::Message
                           const ContractAcceptRequest& from_msg);
     ::google::protobuf::internal::ArenaStringPtr pid_;
     bool auto_accept_;
-    bool want_notifications_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -6377,28 +6305,6 @@ inline void ContractRequestRequest::_internal_set_auto_accept(bool value) {
   _impl_.auto_accept_ = value;
 }
 
-// bool want_notifications = 5 [json_name = "wantNotifications"];
-inline void ContractRequestRequest::clear_want_notifications() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.want_notifications_ = false;
-}
-inline bool ContractRequestRequest::want_notifications() const {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractRequestRequest.want_notifications)
-  return _internal_want_notifications();
-}
-inline void ContractRequestRequest::set_want_notifications(bool value) {
-  _internal_set_want_notifications(value);
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractRequestRequest.want_notifications)
-}
-inline bool ContractRequestRequest::_internal_want_notifications() const {
-  ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.want_notifications_;
-}
-inline void ContractRequestRequest::_internal_set_want_notifications(bool value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.want_notifications_ = value;
-}
-
 // -------------------------------------------------------------------
 
 // ContractRequestResponse
@@ -6621,28 +6527,6 @@ inline void ContractOfferRequest::_internal_set_auto_accept(bool value) {
   _impl_.auto_accept_ = value;
 }
 
-// bool want_notifications = 5 [json_name = "wantNotifications"];
-inline void ContractOfferRequest::clear_want_notifications() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.want_notifications_ = false;
-}
-inline bool ContractOfferRequest::want_notifications() const {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractOfferRequest.want_notifications)
-  return _internal_want_notifications();
-}
-inline void ContractOfferRequest::set_want_notifications(bool value) {
-  _internal_set_want_notifications(value);
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractOfferRequest.want_notifications)
-}
-inline bool ContractOfferRequest::_internal_want_notifications() const {
-  ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.want_notifications_;
-}
-inline void ContractOfferRequest::_internal_set_want_notifications(bool value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.want_notifications_ = value;
-}
-
 // -------------------------------------------------------------------
 
 // ContractOfferResponse
@@ -6721,28 +6605,6 @@ inline bool ContractAcceptRequest::_internal_auto_accept() const {
 inline void ContractAcceptRequest::_internal_set_auto_accept(bool value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.auto_accept_ = value;
-}
-
-// bool want_notifications = 3 [json_name = "wantNotifications"];
-inline void ContractAcceptRequest::clear_want_notifications() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.want_notifications_ = false;
-}
-inline bool ContractAcceptRequest::want_notifications() const {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractAcceptRequest.want_notifications)
-  return _internal_want_notifications();
-}
-inline void ContractAcceptRequest::set_want_notifications(bool value) {
-  _internal_set_want_notifications(value);
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractAcceptRequest.want_notifications)
-}
-inline bool ContractAcceptRequest::_internal_want_notifications() const {
-  ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.want_notifications_;
-}
-inline void ContractAcceptRequest::_internal_set_want_notifications(bool value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.want_notifications_ = value;
 }
 
 // -------------------------------------------------------------------
@@ -6875,28 +6737,6 @@ inline void ContractAgreeRequest::_internal_set_auto_accept(bool value) {
   _impl_.auto_accept_ = value;
 }
 
-// bool want_notifications = 4 [json_name = "wantNotifications"];
-inline void ContractAgreeRequest::clear_want_notifications() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.want_notifications_ = false;
-}
-inline bool ContractAgreeRequest::want_notifications() const {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractAgreeRequest.want_notifications)
-  return _internal_want_notifications();
-}
-inline void ContractAgreeRequest::set_want_notifications(bool value) {
-  _internal_set_want_notifications(value);
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractAgreeRequest.want_notifications)
-}
-inline bool ContractAgreeRequest::_internal_want_notifications() const {
-  ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.want_notifications_;
-}
-inline void ContractAgreeRequest::_internal_set_want_notifications(bool value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.want_notifications_ = value;
-}
-
 // -------------------------------------------------------------------
 
 // ContractAgreeResponse
@@ -6977,28 +6817,6 @@ inline void ContractVerifyRequest::_internal_set_auto_accept(bool value) {
   _impl_.auto_accept_ = value;
 }
 
-// bool want_notifications = 3 [json_name = "wantNotifications"];
-inline void ContractVerifyRequest::clear_want_notifications() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.want_notifications_ = false;
-}
-inline bool ContractVerifyRequest::want_notifications() const {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractVerifyRequest.want_notifications)
-  return _internal_want_notifications();
-}
-inline void ContractVerifyRequest::set_want_notifications(bool value) {
-  _internal_set_want_notifications(value);
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractVerifyRequest.want_notifications)
-}
-inline bool ContractVerifyRequest::_internal_want_notifications() const {
-  ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.want_notifications_;
-}
-inline void ContractVerifyRequest::_internal_set_want_notifications(bool value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.want_notifications_ = value;
-}
-
 // -------------------------------------------------------------------
 
 // ContractVerifyResponse
@@ -7077,28 +6895,6 @@ inline bool ContractFinalizeRequest::_internal_auto_accept() const {
 inline void ContractFinalizeRequest::_internal_set_auto_accept(bool value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.auto_accept_ = value;
-}
-
-// bool want_notifications = 3 [json_name = "wantNotifications"];
-inline void ContractFinalizeRequest::clear_want_notifications() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.want_notifications_ = false;
-}
-inline bool ContractFinalizeRequest::want_notifications() const {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractFinalizeRequest.want_notifications)
-  return _internal_want_notifications();
-}
-inline void ContractFinalizeRequest::set_want_notifications(bool value) {
-  _internal_set_want_notifications(value);
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractFinalizeRequest.want_notifications)
-}
-inline bool ContractFinalizeRequest::_internal_want_notifications() const {
-  ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.want_notifications_;
-}
-inline void ContractFinalizeRequest::_internal_set_want_notifications(bool value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.want_notifications_ = value;
 }
 
 // -------------------------------------------------------------------

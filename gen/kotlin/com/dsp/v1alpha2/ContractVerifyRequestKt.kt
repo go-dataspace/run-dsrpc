@@ -50,7 +50,7 @@ public object ContractVerifyRequestKt {
 
     /**
      * ```
-     * signals to RUN-DSP that it should fast forward the negotiation and not wait for any requests of the contract service.
+     * signals to RUN-DSP that it should auto accept the negotiation and not wait for any requests of the contract service.
      * ```
      *
      * `bool auto_accept = 2 [json_name = "autoAccept"];`
@@ -64,38 +64,13 @@ public object ContractVerifyRequestKt {
       }
     /**
      * ```
-     * signals to RUN-DSP that it should fast forward the negotiation and not wait for any requests of the contract service.
+     * signals to RUN-DSP that it should auto accept the negotiation and not wait for any requests of the contract service.
      * ```
      *
      * `bool auto_accept = 2 [json_name = "autoAccept"];`
      */
     public fun clearAutoAccept() {
       _builder.clearAutoAccept()
-    }
-
-    /**
-     * ```
-     * signals to RUN-DSP that the contract service still wants notifications only useful if auto_accept is set.
-     * ```
-     *
-     * `bool want_notifications = 3 [json_name = "wantNotifications"];`
-     */
-    public var wantNotifications: kotlin.Boolean
-      @JvmName("getWantNotifications")
-      get() = _builder.getWantNotifications()
-      @JvmName("setWantNotifications")
-      set(value) {
-        _builder.setWantNotifications(value)
-      }
-    /**
-     * ```
-     * signals to RUN-DSP that the contract service still wants notifications only useful if auto_accept is set.
-     * ```
-     *
-     * `bool want_notifications = 3 [json_name = "wantNotifications"];`
-     */
-    public fun clearWantNotifications() {
-      _builder.clearWantNotifications()
     }
   }
 }

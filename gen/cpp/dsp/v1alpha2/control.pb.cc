@@ -269,7 +269,6 @@ inline constexpr ContractVerifyRequest::Impl_::Impl_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         auto_accept_{false},
-        want_notifications_{false},
         _cached_size_{0} {}
 
 template <typename>
@@ -347,8 +346,7 @@ inline constexpr ContractRequestRequest::Impl_::Impl_(
         participant_address_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        auto_accept_{false},
-        want_notifications_{false} {}
+        auto_accept_{false} {}
 
 template <typename>
 PROTOBUF_CONSTEXPR ContractRequestRequest::ContractRequestRequest(::_pbi::ConstantInitialized)
@@ -388,8 +386,7 @@ inline constexpr ContractOfferRequest::Impl_::Impl_(
         participant_address_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        auto_accept_{false},
-        want_notifications_{false} {}
+        auto_accept_{false} {}
 
 template <typename>
 PROTOBUF_CONSTEXPR ContractOfferRequest::ContractOfferRequest(::_pbi::ConstantInitialized)
@@ -423,7 +420,6 @@ inline constexpr ContractFinalizeRequest::Impl_::Impl_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         auto_accept_{false},
-        want_notifications_{false},
         _cached_size_{0} {}
 
 template <typename>
@@ -461,7 +457,6 @@ inline constexpr ContractAgreeRequest::Impl_::Impl_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         auto_accept_{false},
-        want_notifications_{false},
         _cached_size_{0} {}
 
 template <typename>
@@ -496,7 +491,6 @@ inline constexpr ContractAcceptRequest::Impl_::Impl_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         auto_accept_{false},
-        want_notifications_{false},
         _cached_size_{0} {}
 
 template <typename>
@@ -710,11 +704,9 @@ const ::uint32_t
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractRequestRequest, _impl_.pid_),
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractRequestRequest, _impl_.participant_address_),
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractRequestRequest, _impl_.auto_accept_),
-        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractRequestRequest, _impl_.want_notifications_),
         ~0u,
         0,
         1,
-        ~0u,
         ~0u,
         ~0u,  // no _has_bits_
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractRequestResponse, _internal_metadata_),
@@ -736,11 +728,9 @@ const ::uint32_t
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractOfferRequest, _impl_.pid_),
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractOfferRequest, _impl_.participant_address_),
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractOfferRequest, _impl_.auto_accept_),
-        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractOfferRequest, _impl_.want_notifications_),
         ~0u,
         0,
         1,
-        ~0u,
         ~0u,
         ~0u,  // no _has_bits_
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractOfferResponse, _internal_metadata_),
@@ -760,7 +750,6 @@ const ::uint32_t
         ~0u,  // no sizeof(Split)
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractAcceptRequest, _impl_.pid_),
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractAcceptRequest, _impl_.auto_accept_),
-        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractAcceptRequest, _impl_.want_notifications_),
         ~0u,  // no _has_bits_
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractAcceptResponse, _internal_metadata_),
         ~0u,  // no _extensions_
@@ -780,7 +769,6 @@ const ::uint32_t
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractAgreeRequest, _impl_.agreement_),
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractAgreeRequest, _impl_.pid_),
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractAgreeRequest, _impl_.auto_accept_),
-        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractAgreeRequest, _impl_.want_notifications_),
         ~0u,  // no _has_bits_
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractAgreeResponse, _internal_metadata_),
         ~0u,  // no _extensions_
@@ -799,7 +787,6 @@ const ::uint32_t
         ~0u,  // no sizeof(Split)
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractVerifyRequest, _impl_.pid_),
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractVerifyRequest, _impl_.auto_accept_),
-        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractVerifyRequest, _impl_.want_notifications_),
         ~0u,  // no _has_bits_
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractVerifyResponse, _internal_metadata_),
         ~0u,  // no _extensions_
@@ -818,7 +805,6 @@ const ::uint32_t
         ~0u,  // no sizeof(Split)
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractFinalizeRequest, _impl_.pid_),
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractFinalizeRequest, _impl_.auto_accept_),
-        PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractFinalizeRequest, _impl_.want_notifications_),
         ~0u,  // no _has_bits_
         PROTOBUF_FIELD_OFFSET(::dsp::v1alpha2::ContractFinalizeResponse, _internal_metadata_),
         ~0u,  // no _extensions_
@@ -927,28 +913,28 @@ static const ::_pbi::MigrationSchema
         {58, 68, -1, sizeof(::dsp::v1alpha2::GetProviderDatasetResponse)},
         {70, -1, -1, sizeof(::dsp::v1alpha2::GetProviderDatasetDownloadInformationRequest)},
         {80, 90, -1, sizeof(::dsp::v1alpha2::GetProviderDatasetDownloadInformationResponse)},
-        {92, 105, -1, sizeof(::dsp::v1alpha2::ContractRequestRequest)},
-        {110, -1, -1, sizeof(::dsp::v1alpha2::ContractRequestResponse)},
-        {118, 131, -1, sizeof(::dsp::v1alpha2::ContractOfferRequest)},
-        {136, -1, -1, sizeof(::dsp::v1alpha2::ContractOfferResponse)},
-        {144, -1, -1, sizeof(::dsp::v1alpha2::ContractAcceptRequest)},
-        {155, -1, -1, sizeof(::dsp::v1alpha2::ContractAcceptResponse)},
-        {163, -1, -1, sizeof(::dsp::v1alpha2::ContractAgreeRequest)},
-        {175, -1, -1, sizeof(::dsp::v1alpha2::ContractAgreeResponse)},
-        {183, -1, -1, sizeof(::dsp::v1alpha2::ContractVerifyRequest)},
-        {194, -1, -1, sizeof(::dsp::v1alpha2::ContractVerifyResponse)},
-        {202, -1, -1, sizeof(::dsp::v1alpha2::ContractFinalizeRequest)},
-        {213, -1, -1, sizeof(::dsp::v1alpha2::ContractFinalizeResponse)},
-        {221, -1, -1, sizeof(::dsp::v1alpha2::ContractTerminateRequest)},
-        {232, -1, -1, sizeof(::dsp::v1alpha2::ContractTerminateResponse)},
-        {240, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferCompleteRequest)},
-        {249, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferCompleteResponse)},
-        {257, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferCancelledRequest)},
-        {266, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferCancelledResponse)},
-        {274, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferSuspendRequest)},
-        {283, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferSuspendResponse)},
-        {291, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferResumeRequest)},
-        {300, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferResumeResponse)},
+        {92, 104, -1, sizeof(::dsp::v1alpha2::ContractRequestRequest)},
+        {108, -1, -1, sizeof(::dsp::v1alpha2::ContractRequestResponse)},
+        {116, 128, -1, sizeof(::dsp::v1alpha2::ContractOfferRequest)},
+        {132, -1, -1, sizeof(::dsp::v1alpha2::ContractOfferResponse)},
+        {140, -1, -1, sizeof(::dsp::v1alpha2::ContractAcceptRequest)},
+        {150, -1, -1, sizeof(::dsp::v1alpha2::ContractAcceptResponse)},
+        {158, -1, -1, sizeof(::dsp::v1alpha2::ContractAgreeRequest)},
+        {169, -1, -1, sizeof(::dsp::v1alpha2::ContractAgreeResponse)},
+        {177, -1, -1, sizeof(::dsp::v1alpha2::ContractVerifyRequest)},
+        {187, -1, -1, sizeof(::dsp::v1alpha2::ContractVerifyResponse)},
+        {195, -1, -1, sizeof(::dsp::v1alpha2::ContractFinalizeRequest)},
+        {205, -1, -1, sizeof(::dsp::v1alpha2::ContractFinalizeResponse)},
+        {213, -1, -1, sizeof(::dsp::v1alpha2::ContractTerminateRequest)},
+        {224, -1, -1, sizeof(::dsp::v1alpha2::ContractTerminateResponse)},
+        {232, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferCompleteRequest)},
+        {241, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferCompleteResponse)},
+        {249, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferCancelledRequest)},
+        {258, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferCancelledResponse)},
+        {266, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferSuspendRequest)},
+        {275, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferSuspendResponse)},
+        {283, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferResumeRequest)},
+        {292, -1, -1, sizeof(::dsp::v1alpha2::SignalTransferResumeResponse)},
 };
 static const ::_pb::Message* const file_default_instances[] = {
     &::dsp::v1alpha2::_VerifyConnectionRequest_default_instance_._instance,
@@ -1009,94 +995,87 @@ const char descriptor_table_protodef_dsp_2fv1alpha2_2fcontrol_2eproto[] ABSL_ATT
     "tDownloadInformationResponse\022<\n\014publish_"
     "info\030\001 \001(\0132\031.dsp.v1alpha2.PublishInfoR\013p"
     "ublishInfo\022\037\n\013transfer_id\030\002 \001(\tR\ntransfe"
-    "rId\"\353\001\n\026ContractRequestRequest\022\024\n\005offer\030"
+    "rId\"\274\001\n\026ContractRequestRequest\022\024\n\005offer\030"
     "\001 \001(\tR\005offer\022\025\n\003pid\030\002 \001(\tH\000R\003pid\210\001\001\0224\n\023p"
     "articipant_address\030\003 \001(\tH\001R\022participantA"
     "ddress\210\001\001\022\037\n\013auto_accept\030\004 \001(\010R\nautoAcce"
-    "pt\022-\n\022want_notifications\030\005 \001(\010R\021wantNoti"
-    "ficationsB\006\n\004_pidB\026\n\024_participant_addres"
-    "s\"\031\n\027ContractRequestResponse\"\351\001\n\024Contrac"
-    "tOfferRequest\022\024\n\005offer\030\001 \001(\tR\005offer\022\025\n\003p"
-    "id\030\002 \001(\tH\000R\003pid\210\001\001\0224\n\023participant_addres"
-    "s\030\003 \001(\tH\001R\022participantAddress\210\001\001\022\037\n\013auto"
-    "_accept\030\004 \001(\010R\nautoAccept\022-\n\022want_notifi"
-    "cations\030\005 \001(\010R\021wantNotificationsB\006\n\004_pid"
-    "B\026\n\024_participant_address\"\027\n\025ContractOffe"
-    "rResponse\"y\n\025ContractAcceptRequest\022\020\n\003pi"
-    "d\030\001 \001(\tR\003pid\022\037\n\013auto_accept\030\002 \001(\010R\nautoA"
-    "ccept\022-\n\022want_notifications\030\003 \001(\010R\021wantN"
-    "otifications\"\030\n\026ContractAcceptResponse\"\226"
-    "\001\n\024ContractAgreeRequest\022\034\n\tagreement\030\001 \001"
-    "(\tR\tagreement\022\020\n\003pid\030\002 \001(\tR\003pid\022\037\n\013auto_"
-    "accept\030\003 \001(\010R\nautoAccept\022-\n\022want_notific"
-    "ations\030\004 \001(\010R\021wantNotifications\"\027\n\025Contr"
-    "actAgreeResponse\"y\n\025ContractVerifyReques"
-    "t\022\020\n\003pid\030\001 \001(\tR\003pid\022\037\n\013auto_accept\030\002 \001(\010"
-    "R\nautoAccept\022-\n\022want_notifications\030\003 \001(\010"
-    "R\021wantNotifications\"\030\n\026ContractVerifyRes"
-    "ponse\"{\n\027ContractFinalizeRequest\022\020\n\003pid\030"
-    "\001 \001(\tR\003pid\022\037\n\013auto_accept\030\002 \001(\010R\nautoAcc"
-    "ept\022-\n\022want_notifications\030\003 \001(\010R\021wantNot"
-    "ifications\"\032\n\030ContractFinalizeResponse\"X"
-    "\n\030ContractTerminateRequest\022\020\n\003pid\030\001 \001(\tR"
-    "\003pid\022\022\n\004code\030\002 \001(\tR\004code\022\026\n\006reason\030\003 \003(\t"
-    "R\006reason\"\033\n\031ContractTerminateResponse\"@\n"
-    "\035SignalTransferCompleteRequest\022\037\n\013transf"
-    "er_id\030\001 \001(\tR\ntransferId\" \n\036SignalTransfe"
-    "rCompleteResponse\"A\n\036SignalTransferCance"
-    "lledRequest\022\037\n\013transfer_id\030\001 \001(\tR\ntransf"
-    "erId\"!\n\037SignalTransferCancelledResponse\""
-    "\?\n\034SignalTransferSuspendRequest\022\037\n\013trans"
-    "fer_id\030\001 \001(\tR\ntransferId\"\037\n\035SignalTransf"
-    "erSuspendResponse\">\n\033SignalTransferResum"
-    "eRequest\022\037\n\013transfer_id\030\001 \001(\tR\ntransferI"
-    "d\"\036\n\034SignalTransferResumeResponse2\361\014\n\016Co"
-    "ntrolService\022\242\001\n%GetProviderDatasetDownl"
-    "oadInformation\022:.dsp.v1alpha2.GetProvide"
-    "rDatasetDownloadInformationRequest\032;.dsp"
-    ".v1alpha2.GetProviderDatasetDownloadInfo"
-    "rmationResponse\"\000\022c\n\020VerifyConnection\022%."
-    "dsp.v1alpha2.VerifyConnectionRequest\032&.d"
-    "sp.v1alpha2.VerifyConnectionResponse\"\000\022o"
-    "\n\024GetProviderCatalogue\022).dsp.v1alpha2.Ge"
-    "tProviderCatalogueRequest\032*.dsp.v1alpha2"
-    ".GetProviderCatalogueResponse\"\000\022i\n\022GetPr"
-    "oviderDataset\022\'.dsp.v1alpha2.GetProvider"
-    "DatasetRequest\032(.dsp.v1alpha2.GetProvide"
-    "rDatasetResponse\"\000\022`\n\017ContractRequest\022$."
-    "dsp.v1alpha2.ContractRequestRequest\032%.ds"
-    "p.v1alpha2.ContractRequestResponse\"\000\022Z\n\r"
-    "ContractOffer\022\".dsp.v1alpha2.ContractOff"
-    "erRequest\032#.dsp.v1alpha2.ContractOfferRe"
-    "sponse\"\000\022]\n\016ContractAccept\022#.dsp.v1alpha"
-    "2.ContractAcceptRequest\032$.dsp.v1alpha2.C"
-    "ontractAcceptResponse\"\000\022Z\n\rContractAgree"
-    "\022\".dsp.v1alpha2.ContractAgreeRequest\032#.d"
-    "sp.v1alpha2.ContractAgreeResponse\"\000\022]\n\016C"
-    "ontractVerify\022#.dsp.v1alpha2.ContractVer"
-    "ifyRequest\032$.dsp.v1alpha2.ContractVerify"
-    "Response\"\000\022c\n\020ContractFinalize\022%.dsp.v1a"
-    "lpha2.ContractFinalizeRequest\032&.dsp.v1al"
-    "pha2.ContractFinalizeResponse\"\000\022f\n\021Contr"
-    "actTerminate\022&.dsp.v1alpha2.ContractTerm"
-    "inateRequest\032\'.dsp.v1alpha2.ContractTerm"
-    "inateResponse\"\000\022u\n\026SignalTransferComplet"
-    "e\022+.dsp.v1alpha2.SignalTransferCompleteR"
-    "equest\032,.dsp.v1alpha2.SignalTransferComp"
-    "leteResponse\"\000\022x\n\027SignalTransferCancelle"
-    "d\022,.dsp.v1alpha2.SignalTransferCancelled"
-    "Request\032-.dsp.v1alpha2.SignalTransferCan"
-    "celledResponse\"\000\022r\n\025SignalTransferSuspen"
-    "d\022*.dsp.v1alpha2.SignalTransferSuspendRe"
-    "quest\032+.dsp.v1alpha2.SignalTransferSuspe"
-    "ndResponse\"\000\022o\n\024SignalTransferResume\022).d"
-    "sp.v1alpha2.SignalTransferResumeRequest\032"
-    "*.dsp.v1alpha2.SignalTransferResumeRespo"
-    "nse\"\000B\250\001\n\020com.dsp.v1alpha2B\014ControlProto"
-    "P\001Z5github.com/bufbuild/buf-tour/dsp/v1a"
-    "lpha2;dspv1alpha2\242\002\003DXX\252\002\014Dsp.V1alpha2\312\002"
-    "\014Dsp\\V1alpha2\342\002\030Dsp\\V1alpha2\\GPBMetadata"
-    "\352\002\rDsp::V1alpha2b\006proto3"
+    "ptB\006\n\004_pidB\026\n\024_participant_address\"\031\n\027Co"
+    "ntractRequestResponse\"\272\001\n\024ContractOfferR"
+    "equest\022\024\n\005offer\030\001 \001(\tR\005offer\022\025\n\003pid\030\002 \001("
+    "\tH\000R\003pid\210\001\001\0224\n\023participant_address\030\003 \001(\t"
+    "H\001R\022participantAddress\210\001\001\022\037\n\013auto_accept"
+    "\030\004 \001(\010R\nautoAcceptB\006\n\004_pidB\026\n\024_participa"
+    "nt_address\"\027\n\025ContractOfferResponse\"J\n\025C"
+    "ontractAcceptRequest\022\020\n\003pid\030\001 \001(\tR\003pid\022\037"
+    "\n\013auto_accept\030\002 \001(\010R\nautoAccept\"\030\n\026Contr"
+    "actAcceptResponse\"g\n\024ContractAgreeReques"
+    "t\022\034\n\tagreement\030\001 \001(\tR\tagreement\022\020\n\003pid\030\002"
+    " \001(\tR\003pid\022\037\n\013auto_accept\030\003 \001(\010R\nautoAcce"
+    "pt\"\027\n\025ContractAgreeResponse\"J\n\025ContractV"
+    "erifyRequest\022\020\n\003pid\030\001 \001(\tR\003pid\022\037\n\013auto_a"
+    "ccept\030\002 \001(\010R\nautoAccept\"\030\n\026ContractVerif"
+    "yResponse\"L\n\027ContractFinalizeRequest\022\020\n\003"
+    "pid\030\001 \001(\tR\003pid\022\037\n\013auto_accept\030\002 \001(\010R\naut"
+    "oAccept\"\032\n\030ContractFinalizeResponse\"X\n\030C"
+    "ontractTerminateRequest\022\020\n\003pid\030\001 \001(\tR\003pi"
+    "d\022\022\n\004code\030\002 \001(\tR\004code\022\026\n\006reason\030\003 \003(\tR\006r"
+    "eason\"\033\n\031ContractTerminateResponse\"@\n\035Si"
+    "gnalTransferCompleteRequest\022\037\n\013transfer_"
+    "id\030\001 \001(\tR\ntransferId\" \n\036SignalTransferCo"
+    "mpleteResponse\"A\n\036SignalTransferCancelle"
+    "dRequest\022\037\n\013transfer_id\030\001 \001(\tR\ntransferI"
+    "d\"!\n\037SignalTransferCancelledResponse\"\?\n\034"
+    "SignalTransferSuspendRequest\022\037\n\013transfer"
+    "_id\030\001 \001(\tR\ntransferId\"\037\n\035SignalTransferS"
+    "uspendResponse\">\n\033SignalTransferResumeRe"
+    "quest\022\037\n\013transfer_id\030\001 \001(\tR\ntransferId\"\036"
+    "\n\034SignalTransferResumeResponse2\361\014\n\016Contr"
+    "olService\022\242\001\n%GetProviderDatasetDownload"
+    "Information\022:.dsp.v1alpha2.GetProviderDa"
+    "tasetDownloadInformationRequest\032;.dsp.v1"
+    "alpha2.GetProviderDatasetDownloadInforma"
+    "tionResponse\"\000\022c\n\020VerifyConnection\022%.dsp"
+    ".v1alpha2.VerifyConnectionRequest\032&.dsp."
+    "v1alpha2.VerifyConnectionResponse\"\000\022o\n\024G"
+    "etProviderCatalogue\022).dsp.v1alpha2.GetPr"
+    "oviderCatalogueRequest\032*.dsp.v1alpha2.Ge"
+    "tProviderCatalogueResponse\"\000\022i\n\022GetProvi"
+    "derDataset\022\'.dsp.v1alpha2.GetProviderDat"
+    "asetRequest\032(.dsp.v1alpha2.GetProviderDa"
+    "tasetResponse\"\000\022`\n\017ContractRequest\022$.dsp"
+    ".v1alpha2.ContractRequestRequest\032%.dsp.v"
+    "1alpha2.ContractRequestResponse\"\000\022Z\n\rCon"
+    "tractOffer\022\".dsp.v1alpha2.ContractOfferR"
+    "equest\032#.dsp.v1alpha2.ContractOfferRespo"
+    "nse\"\000\022]\n\016ContractAccept\022#.dsp.v1alpha2.C"
+    "ontractAcceptRequest\032$.dsp.v1alpha2.Cont"
+    "ractAcceptResponse\"\000\022Z\n\rContractAgree\022\"."
+    "dsp.v1alpha2.ContractAgreeRequest\032#.dsp."
+    "v1alpha2.ContractAgreeResponse\"\000\022]\n\016Cont"
+    "ractVerify\022#.dsp.v1alpha2.ContractVerify"
+    "Request\032$.dsp.v1alpha2.ContractVerifyRes"
+    "ponse\"\000\022c\n\020ContractFinalize\022%.dsp.v1alph"
+    "a2.ContractFinalizeRequest\032&.dsp.v1alpha"
+    "2.ContractFinalizeResponse\"\000\022f\n\021Contract"
+    "Terminate\022&.dsp.v1alpha2.ContractTermina"
+    "teRequest\032\'.dsp.v1alpha2.ContractTermina"
+    "teResponse\"\000\022u\n\026SignalTransferComplete\022+"
+    ".dsp.v1alpha2.SignalTransferCompleteRequ"
+    "est\032,.dsp.v1alpha2.SignalTransferComplet"
+    "eResponse\"\000\022x\n\027SignalTransferCancelled\022,"
+    ".dsp.v1alpha2.SignalTransferCancelledReq"
+    "uest\032-.dsp.v1alpha2.SignalTransferCancel"
+    "ledResponse\"\000\022r\n\025SignalTransferSuspend\022*"
+    ".dsp.v1alpha2.SignalTransferSuspendReque"
+    "st\032+.dsp.v1alpha2.SignalTransferSuspendR"
+    "esponse\"\000\022o\n\024SignalTransferResume\022).dsp."
+    "v1alpha2.SignalTransferResumeRequest\032*.d"
+    "sp.v1alpha2.SignalTransferResumeResponse"
+    "\"\000B\250\001\n\020com.dsp.v1alpha2B\014ControlProtoP\001Z"
+    "5github.com/bufbuild/buf-tour/dsp/v1alph"
+    "a2;dspv1alpha2\242\002\003DXX\252\002\014Dsp.V1alpha2\312\002\014Ds"
+    "p\\V1alpha2\342\002\030Dsp\\V1alpha2\\GPBMetadata\352\002\r"
+    "Dsp::V1alpha2b\006proto3"
 };
 static const ::_pbi::DescriptorTable* const descriptor_table_dsp_2fv1alpha2_2fcontrol_2eproto_deps[1] =
     {
@@ -1106,7 +1085,7 @@ static ::absl::once_flag descriptor_table_dsp_2fv1alpha2_2fcontrol_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_dsp_2fv1alpha2_2fcontrol_2eproto = {
     false,
     false,
-    4464,
+    4181,
     descriptor_table_protodef_dsp_2fv1alpha2_2fcontrol_2eproto,
     "dsp/v1alpha2/control.proto",
     &descriptor_table_dsp_2fv1alpha2_2fcontrol_2eproto_once,
@@ -2830,13 +2809,7 @@ ContractRequestRequest::ContractRequestRequest(
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
-  ::memcpy(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, auto_accept_),
-           reinterpret_cast<const char *>(&from._impl_) +
-               offsetof(Impl_, auto_accept_),
-           offsetof(Impl_, want_notifications_) -
-               offsetof(Impl_, auto_accept_) +
-               sizeof(Impl_::want_notifications_));
+  _impl_.auto_accept_ = from._impl_.auto_accept_;
 
   // @@protoc_insertion_point(copy_constructor:dsp.v1alpha2.ContractRequestRequest)
 }
@@ -2850,12 +2823,7 @@ inline PROTOBUF_NDEBUG_INLINE ContractRequestRequest::Impl_::Impl_(
 
 inline void ContractRequestRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
-  ::memset(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, auto_accept_),
-           0,
-           offsetof(Impl_, want_notifications_) -
-               offsetof(Impl_, auto_accept_) +
-               sizeof(Impl_::want_notifications_));
+  _impl_.auto_accept_ = {};
 }
 ContractRequestRequest::~ContractRequestRequest() {
   // @@protoc_insertion_point(destructor:dsp.v1alpha2.ContractRequestRequest)
@@ -2891,15 +2859,15 @@ ContractRequestRequest::GetClassData() const {
   return _data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<3, 5, 0, 71, 2> ContractRequestRequest::_table_ = {
+const ::_pbi::TcParseTable<2, 4, 0, 71, 2> ContractRequestRequest::_table_ = {
   {
     PROTOBUF_FIELD_OFFSET(ContractRequestRequest, _impl_._has_bits_),
     0, // no _extensions_
-    5, 56,  // max_field_number, fast_idx_mask
+    4, 24,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
-    4294967264,  // skipmap
+    4294967280,  // skipmap
     offsetof(decltype(_table_), field_entries),
-    5,  // num_field_entries
+    4,  // num_field_entries
     0,  // num_aux_entries
     offsetof(decltype(_table_), field_names),  // no aux_entries
     &_ContractRequestRequest_default_instance_._instance,
@@ -2909,7 +2877,9 @@ const ::_pbi::TcParseTable<3, 5, 0, 71, 2> ContractRequestRequest::_table_ = {
     ::_pbi::TcParser::GetTable<::dsp::v1alpha2::ContractRequestRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    {::_pbi::TcParser::MiniParse, {}},
+    // bool auto_accept = 4 [json_name = "autoAccept"];
+    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ContractRequestRequest, _impl_.auto_accept_), 63>(),
+     {32, 63, 0, PROTOBUF_FIELD_OFFSET(ContractRequestRequest, _impl_.auto_accept_)}},
     // string offer = 1 [json_name = "offer"];
     {::_pbi::TcParser::FastUS1,
      {10, 63, 0, PROTOBUF_FIELD_OFFSET(ContractRequestRequest, _impl_.offer_)}},
@@ -2919,14 +2889,6 @@ const ::_pbi::TcParseTable<3, 5, 0, 71, 2> ContractRequestRequest::_table_ = {
     // optional string participant_address = 3 [json_name = "participantAddress"];
     {::_pbi::TcParser::FastUS1,
      {26, 1, 0, PROTOBUF_FIELD_OFFSET(ContractRequestRequest, _impl_.participant_address_)}},
-    // bool auto_accept = 4 [json_name = "autoAccept"];
-    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ContractRequestRequest, _impl_.auto_accept_), 63>(),
-     {32, 63, 0, PROTOBUF_FIELD_OFFSET(ContractRequestRequest, _impl_.auto_accept_)}},
-    // bool want_notifications = 5 [json_name = "wantNotifications"];
-    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ContractRequestRequest, _impl_.want_notifications_), 63>(),
-     {40, 63, 0, PROTOBUF_FIELD_OFFSET(ContractRequestRequest, _impl_.want_notifications_)}},
-    {::_pbi::TcParser::MiniParse, {}},
-    {::_pbi::TcParser::MiniParse, {}},
   }}, {{
     65535, 65535
   }}, {{
@@ -2941,9 +2903,6 @@ const ::_pbi::TcParseTable<3, 5, 0, 71, 2> ContractRequestRequest::_table_ = {
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // bool auto_accept = 4 [json_name = "autoAccept"];
     {PROTOBUF_FIELD_OFFSET(ContractRequestRequest, _impl_.auto_accept_), -1, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
-    // bool want_notifications = 5 [json_name = "wantNotifications"];
-    {PROTOBUF_FIELD_OFFSET(ContractRequestRequest, _impl_.want_notifications_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kBool)},
   }},
   // no aux_entries
@@ -2973,9 +2932,7 @@ PROTOBUF_NOINLINE void ContractRequestRequest::Clear() {
       _impl_.participant_address_.ClearNonDefaultToEmpty();
     }
   }
-  ::memset(&_impl_.auto_accept_, 0, static_cast<::size_t>(
-      reinterpret_cast<char*>(&_impl_.want_notifications_) -
-      reinterpret_cast<char*>(&_impl_.auto_accept_)) + sizeof(_impl_.want_notifications_));
+  _impl_.auto_accept_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
@@ -3017,13 +2974,6 @@ PROTOBUF_NOINLINE void ContractRequestRequest::Clear() {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(
         4, this->_internal_auto_accept(), target);
-  }
-
-  // bool want_notifications = 5 [json_name = "wantNotifications"];
-  if (this->_internal_want_notifications() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(
-        5, this->_internal_want_notifications(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3070,11 +3020,6 @@ PROTOBUF_NOINLINE void ContractRequestRequest::Clear() {
     total_size += 2;
   }
 
-  // bool want_notifications = 5 [json_name = "wantNotifications"];
-  if (this->_internal_want_notifications() != 0) {
-    total_size += 2;
-  }
-
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
@@ -3102,9 +3047,6 @@ void ContractRequestRequest::MergeImpl(::google::protobuf::MessageLite& to_msg, 
   if (from._internal_auto_accept() != 0) {
     _this->_impl_.auto_accept_ = from._impl_.auto_accept_;
   }
-  if (from._internal_want_notifications() != 0) {
-    _this->_impl_.want_notifications_ = from._impl_.want_notifications_;
-  }
   _this->_impl_._has_bits_[0] |= cached_has_bits;
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -3126,12 +3068,7 @@ void ContractRequestRequest::InternalSwap(ContractRequestRequest* PROTOBUF_RESTR
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.offer_, &other->_impl_.offer_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.pid_, &other->_impl_.pid_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.participant_address_, &other->_impl_.participant_address_, arena);
-  ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ContractRequestRequest, _impl_.want_notifications_)
-      + sizeof(ContractRequestRequest::_impl_.want_notifications_)
-      - PROTOBUF_FIELD_OFFSET(ContractRequestRequest, _impl_.auto_accept_)>(
-          reinterpret_cast<char*>(&_impl_.auto_accept_),
-          reinterpret_cast<char*>(&other->_impl_.auto_accept_));
+        swap(_impl_.auto_accept_, other->_impl_.auto_accept_);
 }
 
 ::google::protobuf::Metadata ContractRequestRequest::GetMetadata() const {
@@ -3251,13 +3188,7 @@ ContractOfferRequest::ContractOfferRequest(
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
-  ::memcpy(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, auto_accept_),
-           reinterpret_cast<const char *>(&from._impl_) +
-               offsetof(Impl_, auto_accept_),
-           offsetof(Impl_, want_notifications_) -
-               offsetof(Impl_, auto_accept_) +
-               sizeof(Impl_::want_notifications_));
+  _impl_.auto_accept_ = from._impl_.auto_accept_;
 
   // @@protoc_insertion_point(copy_constructor:dsp.v1alpha2.ContractOfferRequest)
 }
@@ -3271,12 +3202,7 @@ inline PROTOBUF_NDEBUG_INLINE ContractOfferRequest::Impl_::Impl_(
 
 inline void ContractOfferRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
-  ::memset(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, auto_accept_),
-           0,
-           offsetof(Impl_, want_notifications_) -
-               offsetof(Impl_, auto_accept_) +
-               sizeof(Impl_::want_notifications_));
+  _impl_.auto_accept_ = {};
 }
 ContractOfferRequest::~ContractOfferRequest() {
   // @@protoc_insertion_point(destructor:dsp.v1alpha2.ContractOfferRequest)
@@ -3312,15 +3238,15 @@ ContractOfferRequest::GetClassData() const {
   return _data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<3, 5, 0, 69, 2> ContractOfferRequest::_table_ = {
+const ::_pbi::TcParseTable<2, 4, 0, 69, 2> ContractOfferRequest::_table_ = {
   {
     PROTOBUF_FIELD_OFFSET(ContractOfferRequest, _impl_._has_bits_),
     0, // no _extensions_
-    5, 56,  // max_field_number, fast_idx_mask
+    4, 24,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
-    4294967264,  // skipmap
+    4294967280,  // skipmap
     offsetof(decltype(_table_), field_entries),
-    5,  // num_field_entries
+    4,  // num_field_entries
     0,  // num_aux_entries
     offsetof(decltype(_table_), field_names),  // no aux_entries
     &_ContractOfferRequest_default_instance_._instance,
@@ -3330,7 +3256,9 @@ const ::_pbi::TcParseTable<3, 5, 0, 69, 2> ContractOfferRequest::_table_ = {
     ::_pbi::TcParser::GetTable<::dsp::v1alpha2::ContractOfferRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    {::_pbi::TcParser::MiniParse, {}},
+    // bool auto_accept = 4 [json_name = "autoAccept"];
+    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ContractOfferRequest, _impl_.auto_accept_), 63>(),
+     {32, 63, 0, PROTOBUF_FIELD_OFFSET(ContractOfferRequest, _impl_.auto_accept_)}},
     // string offer = 1 [json_name = "offer"];
     {::_pbi::TcParser::FastUS1,
      {10, 63, 0, PROTOBUF_FIELD_OFFSET(ContractOfferRequest, _impl_.offer_)}},
@@ -3340,14 +3268,6 @@ const ::_pbi::TcParseTable<3, 5, 0, 69, 2> ContractOfferRequest::_table_ = {
     // optional string participant_address = 3 [json_name = "participantAddress"];
     {::_pbi::TcParser::FastUS1,
      {26, 1, 0, PROTOBUF_FIELD_OFFSET(ContractOfferRequest, _impl_.participant_address_)}},
-    // bool auto_accept = 4 [json_name = "autoAccept"];
-    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ContractOfferRequest, _impl_.auto_accept_), 63>(),
-     {32, 63, 0, PROTOBUF_FIELD_OFFSET(ContractOfferRequest, _impl_.auto_accept_)}},
-    // bool want_notifications = 5 [json_name = "wantNotifications"];
-    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ContractOfferRequest, _impl_.want_notifications_), 63>(),
-     {40, 63, 0, PROTOBUF_FIELD_OFFSET(ContractOfferRequest, _impl_.want_notifications_)}},
-    {::_pbi::TcParser::MiniParse, {}},
-    {::_pbi::TcParser::MiniParse, {}},
   }}, {{
     65535, 65535
   }}, {{
@@ -3362,9 +3282,6 @@ const ::_pbi::TcParseTable<3, 5, 0, 69, 2> ContractOfferRequest::_table_ = {
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // bool auto_accept = 4 [json_name = "autoAccept"];
     {PROTOBUF_FIELD_OFFSET(ContractOfferRequest, _impl_.auto_accept_), -1, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
-    // bool want_notifications = 5 [json_name = "wantNotifications"];
-    {PROTOBUF_FIELD_OFFSET(ContractOfferRequest, _impl_.want_notifications_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kBool)},
   }},
   // no aux_entries
@@ -3394,9 +3311,7 @@ PROTOBUF_NOINLINE void ContractOfferRequest::Clear() {
       _impl_.participant_address_.ClearNonDefaultToEmpty();
     }
   }
-  ::memset(&_impl_.auto_accept_, 0, static_cast<::size_t>(
-      reinterpret_cast<char*>(&_impl_.want_notifications_) -
-      reinterpret_cast<char*>(&_impl_.auto_accept_)) + sizeof(_impl_.want_notifications_));
+  _impl_.auto_accept_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
@@ -3438,13 +3353,6 @@ PROTOBUF_NOINLINE void ContractOfferRequest::Clear() {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(
         4, this->_internal_auto_accept(), target);
-  }
-
-  // bool want_notifications = 5 [json_name = "wantNotifications"];
-  if (this->_internal_want_notifications() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(
-        5, this->_internal_want_notifications(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3491,11 +3399,6 @@ PROTOBUF_NOINLINE void ContractOfferRequest::Clear() {
     total_size += 2;
   }
 
-  // bool want_notifications = 5 [json_name = "wantNotifications"];
-  if (this->_internal_want_notifications() != 0) {
-    total_size += 2;
-  }
-
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
@@ -3523,9 +3426,6 @@ void ContractOfferRequest::MergeImpl(::google::protobuf::MessageLite& to_msg, co
   if (from._internal_auto_accept() != 0) {
     _this->_impl_.auto_accept_ = from._impl_.auto_accept_;
   }
-  if (from._internal_want_notifications() != 0) {
-    _this->_impl_.want_notifications_ = from._impl_.want_notifications_;
-  }
   _this->_impl_._has_bits_[0] |= cached_has_bits;
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -3547,12 +3447,7 @@ void ContractOfferRequest::InternalSwap(ContractOfferRequest* PROTOBUF_RESTRICT 
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.offer_, &other->_impl_.offer_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.pid_, &other->_impl_.pid_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.participant_address_, &other->_impl_.participant_address_, arena);
-  ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ContractOfferRequest, _impl_.want_notifications_)
-      + sizeof(ContractOfferRequest::_impl_.want_notifications_)
-      - PROTOBUF_FIELD_OFFSET(ContractOfferRequest, _impl_.auto_accept_)>(
-          reinterpret_cast<char*>(&_impl_.auto_accept_),
-          reinterpret_cast<char*>(&other->_impl_.auto_accept_));
+        swap(_impl_.auto_accept_, other->_impl_.auto_accept_);
 }
 
 ::google::protobuf::Metadata ContractOfferRequest::GetMetadata() const {
@@ -3665,13 +3560,7 @@ ContractAcceptRequest::ContractAcceptRequest(
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
-  ::memcpy(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, auto_accept_),
-           reinterpret_cast<const char *>(&from._impl_) +
-               offsetof(Impl_, auto_accept_),
-           offsetof(Impl_, want_notifications_) -
-               offsetof(Impl_, auto_accept_) +
-               sizeof(Impl_::want_notifications_));
+  _impl_.auto_accept_ = from._impl_.auto_accept_;
 
   // @@protoc_insertion_point(copy_constructor:dsp.v1alpha2.ContractAcceptRequest)
 }
@@ -3683,12 +3572,7 @@ inline PROTOBUF_NDEBUG_INLINE ContractAcceptRequest::Impl_::Impl_(
 
 inline void ContractAcceptRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
-  ::memset(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, auto_accept_),
-           0,
-           offsetof(Impl_, want_notifications_) -
-               offsetof(Impl_, auto_accept_) +
-               sizeof(Impl_::want_notifications_));
+  _impl_.auto_accept_ = {};
 }
 ContractAcceptRequest::~ContractAcceptRequest() {
   // @@protoc_insertion_point(destructor:dsp.v1alpha2.ContractAcceptRequest)
@@ -3722,15 +3606,15 @@ ContractAcceptRequest::GetClassData() const {
   return _data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 3, 0, 46, 2> ContractAcceptRequest::_table_ = {
+const ::_pbi::TcParseTable<1, 2, 0, 46, 2> ContractAcceptRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
-    3, 24,  // max_field_number, fast_idx_mask
+    2, 8,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
-    4294967288,  // skipmap
+    4294967292,  // skipmap
     offsetof(decltype(_table_), field_entries),
-    3,  // num_field_entries
+    2,  // num_field_entries
     0,  // num_aux_entries
     offsetof(decltype(_table_), field_names),  // no aux_entries
     &_ContractAcceptRequest_default_instance_._instance,
@@ -3740,16 +3624,12 @@ const ::_pbi::TcParseTable<2, 3, 0, 46, 2> ContractAcceptRequest::_table_ = {
     ::_pbi::TcParser::GetTable<::dsp::v1alpha2::ContractAcceptRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    {::_pbi::TcParser::MiniParse, {}},
-    // string pid = 1 [json_name = "pid"];
-    {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(ContractAcceptRequest, _impl_.pid_)}},
     // bool auto_accept = 2 [json_name = "autoAccept"];
     {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ContractAcceptRequest, _impl_.auto_accept_), 63>(),
      {16, 63, 0, PROTOBUF_FIELD_OFFSET(ContractAcceptRequest, _impl_.auto_accept_)}},
-    // bool want_notifications = 3 [json_name = "wantNotifications"];
-    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ContractAcceptRequest, _impl_.want_notifications_), 63>(),
-     {24, 63, 0, PROTOBUF_FIELD_OFFSET(ContractAcceptRequest, _impl_.want_notifications_)}},
+    // string pid = 1 [json_name = "pid"];
+    {::_pbi::TcParser::FastUS1,
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(ContractAcceptRequest, _impl_.pid_)}},
   }}, {{
     65535, 65535
   }}, {{
@@ -3758,9 +3638,6 @@ const ::_pbi::TcParseTable<2, 3, 0, 46, 2> ContractAcceptRequest::_table_ = {
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // bool auto_accept = 2 [json_name = "autoAccept"];
     {PROTOBUF_FIELD_OFFSET(ContractAcceptRequest, _impl_.auto_accept_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
-    // bool want_notifications = 3 [json_name = "wantNotifications"];
-    {PROTOBUF_FIELD_OFFSET(ContractAcceptRequest, _impl_.want_notifications_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kBool)},
   }},
   // no aux_entries
@@ -3779,9 +3656,7 @@ PROTOBUF_NOINLINE void ContractAcceptRequest::Clear() {
   (void) cached_has_bits;
 
   _impl_.pid_.ClearToEmpty();
-  ::memset(&_impl_.auto_accept_, 0, static_cast<::size_t>(
-      reinterpret_cast<char*>(&_impl_.want_notifications_) -
-      reinterpret_cast<char*>(&_impl_.auto_accept_)) + sizeof(_impl_.want_notifications_));
+  _impl_.auto_accept_ = false;
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -3805,13 +3680,6 @@ PROTOBUF_NOINLINE void ContractAcceptRequest::Clear() {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(
         2, this->_internal_auto_accept(), target);
-  }
-
-  // bool want_notifications = 3 [json_name = "wantNotifications"];
-  if (this->_internal_want_notifications() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(
-        3, this->_internal_want_notifications(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3843,11 +3711,6 @@ PROTOBUF_NOINLINE void ContractAcceptRequest::Clear() {
     total_size += 2;
   }
 
-  // bool want_notifications = 3 [json_name = "wantNotifications"];
-  if (this->_internal_want_notifications() != 0) {
-    total_size += 2;
-  }
-
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
@@ -3866,9 +3729,6 @@ void ContractAcceptRequest::MergeImpl(::google::protobuf::MessageLite& to_msg, c
   if (from._internal_auto_accept() != 0) {
     _this->_impl_.auto_accept_ = from._impl_.auto_accept_;
   }
-  if (from._internal_want_notifications() != 0) {
-    _this->_impl_.want_notifications_ = from._impl_.want_notifications_;
-  }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
@@ -3886,12 +3746,7 @@ void ContractAcceptRequest::InternalSwap(ContractAcceptRequest* PROTOBUF_RESTRIC
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.pid_, &other->_impl_.pid_, arena);
-  ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ContractAcceptRequest, _impl_.want_notifications_)
-      + sizeof(ContractAcceptRequest::_impl_.want_notifications_)
-      - PROTOBUF_FIELD_OFFSET(ContractAcceptRequest, _impl_.auto_accept_)>(
-          reinterpret_cast<char*>(&_impl_.auto_accept_),
-          reinterpret_cast<char*>(&other->_impl_.auto_accept_));
+        swap(_impl_.auto_accept_, other->_impl_.auto_accept_);
 }
 
 ::google::protobuf::Metadata ContractAcceptRequest::GetMetadata() const {
@@ -4005,13 +3860,7 @@ ContractAgreeRequest::ContractAgreeRequest(
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
-  ::memcpy(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, auto_accept_),
-           reinterpret_cast<const char *>(&from._impl_) +
-               offsetof(Impl_, auto_accept_),
-           offsetof(Impl_, want_notifications_) -
-               offsetof(Impl_, auto_accept_) +
-               sizeof(Impl_::want_notifications_));
+  _impl_.auto_accept_ = from._impl_.auto_accept_;
 
   // @@protoc_insertion_point(copy_constructor:dsp.v1alpha2.ContractAgreeRequest)
 }
@@ -4024,12 +3873,7 @@ inline PROTOBUF_NDEBUG_INLINE ContractAgreeRequest::Impl_::Impl_(
 
 inline void ContractAgreeRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
-  ::memset(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, auto_accept_),
-           0,
-           offsetof(Impl_, want_notifications_) -
-               offsetof(Impl_, auto_accept_) +
-               sizeof(Impl_::want_notifications_));
+  _impl_.auto_accept_ = {};
 }
 ContractAgreeRequest::~ContractAgreeRequest() {
   // @@protoc_insertion_point(destructor:dsp.v1alpha2.ContractAgreeRequest)
@@ -4064,15 +3908,15 @@ ContractAgreeRequest::GetClassData() const {
   return _data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 4, 0, 54, 2> ContractAgreeRequest::_table_ = {
+const ::_pbi::TcParseTable<2, 3, 0, 54, 2> ContractAgreeRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
-    4, 24,  // max_field_number, fast_idx_mask
+    3, 24,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
-    4294967280,  // skipmap
+    4294967288,  // skipmap
     offsetof(decltype(_table_), field_entries),
-    4,  // num_field_entries
+    3,  // num_field_entries
     0,  // num_aux_entries
     offsetof(decltype(_table_), field_names),  // no aux_entries
     &_ContractAgreeRequest_default_instance_._instance,
@@ -4082,9 +3926,7 @@ const ::_pbi::TcParseTable<2, 4, 0, 54, 2> ContractAgreeRequest::_table_ = {
     ::_pbi::TcParser::GetTable<::dsp::v1alpha2::ContractAgreeRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // bool want_notifications = 4 [json_name = "wantNotifications"];
-    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ContractAgreeRequest, _impl_.want_notifications_), 63>(),
-     {32, 63, 0, PROTOBUF_FIELD_OFFSET(ContractAgreeRequest, _impl_.want_notifications_)}},
+    {::_pbi::TcParser::MiniParse, {}},
     // string agreement = 1 [json_name = "agreement"];
     {::_pbi::TcParser::FastUS1,
      {10, 63, 0, PROTOBUF_FIELD_OFFSET(ContractAgreeRequest, _impl_.agreement_)}},
@@ -4106,9 +3948,6 @@ const ::_pbi::TcParseTable<2, 4, 0, 54, 2> ContractAgreeRequest::_table_ = {
     // bool auto_accept = 3 [json_name = "autoAccept"];
     {PROTOBUF_FIELD_OFFSET(ContractAgreeRequest, _impl_.auto_accept_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kBool)},
-    // bool want_notifications = 4 [json_name = "wantNotifications"];
-    {PROTOBUF_FIELD_OFFSET(ContractAgreeRequest, _impl_.want_notifications_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
   }},
   // no aux_entries
   {{
@@ -4128,9 +3967,7 @@ PROTOBUF_NOINLINE void ContractAgreeRequest::Clear() {
 
   _impl_.agreement_.ClearToEmpty();
   _impl_.pid_.ClearToEmpty();
-  ::memset(&_impl_.auto_accept_, 0, static_cast<::size_t>(
-      reinterpret_cast<char*>(&_impl_.want_notifications_) -
-      reinterpret_cast<char*>(&_impl_.auto_accept_)) + sizeof(_impl_.want_notifications_));
+  _impl_.auto_accept_ = false;
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -4162,13 +3999,6 @@ PROTOBUF_NOINLINE void ContractAgreeRequest::Clear() {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(
         3, this->_internal_auto_accept(), target);
-  }
-
-  // bool want_notifications = 4 [json_name = "wantNotifications"];
-  if (this->_internal_want_notifications() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(
-        4, this->_internal_want_notifications(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4206,11 +4036,6 @@ PROTOBUF_NOINLINE void ContractAgreeRequest::Clear() {
     total_size += 2;
   }
 
-  // bool want_notifications = 4 [json_name = "wantNotifications"];
-  if (this->_internal_want_notifications() != 0) {
-    total_size += 2;
-  }
-
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
@@ -4232,9 +4057,6 @@ void ContractAgreeRequest::MergeImpl(::google::protobuf::MessageLite& to_msg, co
   if (from._internal_auto_accept() != 0) {
     _this->_impl_.auto_accept_ = from._impl_.auto_accept_;
   }
-  if (from._internal_want_notifications() != 0) {
-    _this->_impl_.want_notifications_ = from._impl_.want_notifications_;
-  }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
@@ -4253,12 +4075,7 @@ void ContractAgreeRequest::InternalSwap(ContractAgreeRequest* PROTOBUF_RESTRICT 
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.agreement_, &other->_impl_.agreement_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.pid_, &other->_impl_.pid_, arena);
-  ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ContractAgreeRequest, _impl_.want_notifications_)
-      + sizeof(ContractAgreeRequest::_impl_.want_notifications_)
-      - PROTOBUF_FIELD_OFFSET(ContractAgreeRequest, _impl_.auto_accept_)>(
-          reinterpret_cast<char*>(&_impl_.auto_accept_),
-          reinterpret_cast<char*>(&other->_impl_.auto_accept_));
+        swap(_impl_.auto_accept_, other->_impl_.auto_accept_);
 }
 
 ::google::protobuf::Metadata ContractAgreeRequest::GetMetadata() const {
@@ -4371,13 +4188,7 @@ ContractVerifyRequest::ContractVerifyRequest(
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
-  ::memcpy(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, auto_accept_),
-           reinterpret_cast<const char *>(&from._impl_) +
-               offsetof(Impl_, auto_accept_),
-           offsetof(Impl_, want_notifications_) -
-               offsetof(Impl_, auto_accept_) +
-               sizeof(Impl_::want_notifications_));
+  _impl_.auto_accept_ = from._impl_.auto_accept_;
 
   // @@protoc_insertion_point(copy_constructor:dsp.v1alpha2.ContractVerifyRequest)
 }
@@ -4389,12 +4200,7 @@ inline PROTOBUF_NDEBUG_INLINE ContractVerifyRequest::Impl_::Impl_(
 
 inline void ContractVerifyRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
-  ::memset(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, auto_accept_),
-           0,
-           offsetof(Impl_, want_notifications_) -
-               offsetof(Impl_, auto_accept_) +
-               sizeof(Impl_::want_notifications_));
+  _impl_.auto_accept_ = {};
 }
 ContractVerifyRequest::~ContractVerifyRequest() {
   // @@protoc_insertion_point(destructor:dsp.v1alpha2.ContractVerifyRequest)
@@ -4428,15 +4234,15 @@ ContractVerifyRequest::GetClassData() const {
   return _data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 3, 0, 46, 2> ContractVerifyRequest::_table_ = {
+const ::_pbi::TcParseTable<1, 2, 0, 46, 2> ContractVerifyRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
-    3, 24,  // max_field_number, fast_idx_mask
+    2, 8,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
-    4294967288,  // skipmap
+    4294967292,  // skipmap
     offsetof(decltype(_table_), field_entries),
-    3,  // num_field_entries
+    2,  // num_field_entries
     0,  // num_aux_entries
     offsetof(decltype(_table_), field_names),  // no aux_entries
     &_ContractVerifyRequest_default_instance_._instance,
@@ -4446,16 +4252,12 @@ const ::_pbi::TcParseTable<2, 3, 0, 46, 2> ContractVerifyRequest::_table_ = {
     ::_pbi::TcParser::GetTable<::dsp::v1alpha2::ContractVerifyRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    {::_pbi::TcParser::MiniParse, {}},
-    // string pid = 1 [json_name = "pid"];
-    {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(ContractVerifyRequest, _impl_.pid_)}},
     // bool auto_accept = 2 [json_name = "autoAccept"];
     {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ContractVerifyRequest, _impl_.auto_accept_), 63>(),
      {16, 63, 0, PROTOBUF_FIELD_OFFSET(ContractVerifyRequest, _impl_.auto_accept_)}},
-    // bool want_notifications = 3 [json_name = "wantNotifications"];
-    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ContractVerifyRequest, _impl_.want_notifications_), 63>(),
-     {24, 63, 0, PROTOBUF_FIELD_OFFSET(ContractVerifyRequest, _impl_.want_notifications_)}},
+    // string pid = 1 [json_name = "pid"];
+    {::_pbi::TcParser::FastUS1,
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(ContractVerifyRequest, _impl_.pid_)}},
   }}, {{
     65535, 65535
   }}, {{
@@ -4464,9 +4266,6 @@ const ::_pbi::TcParseTable<2, 3, 0, 46, 2> ContractVerifyRequest::_table_ = {
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // bool auto_accept = 2 [json_name = "autoAccept"];
     {PROTOBUF_FIELD_OFFSET(ContractVerifyRequest, _impl_.auto_accept_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
-    // bool want_notifications = 3 [json_name = "wantNotifications"];
-    {PROTOBUF_FIELD_OFFSET(ContractVerifyRequest, _impl_.want_notifications_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kBool)},
   }},
   // no aux_entries
@@ -4485,9 +4284,7 @@ PROTOBUF_NOINLINE void ContractVerifyRequest::Clear() {
   (void) cached_has_bits;
 
   _impl_.pid_.ClearToEmpty();
-  ::memset(&_impl_.auto_accept_, 0, static_cast<::size_t>(
-      reinterpret_cast<char*>(&_impl_.want_notifications_) -
-      reinterpret_cast<char*>(&_impl_.auto_accept_)) + sizeof(_impl_.want_notifications_));
+  _impl_.auto_accept_ = false;
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -4511,13 +4308,6 @@ PROTOBUF_NOINLINE void ContractVerifyRequest::Clear() {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(
         2, this->_internal_auto_accept(), target);
-  }
-
-  // bool want_notifications = 3 [json_name = "wantNotifications"];
-  if (this->_internal_want_notifications() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(
-        3, this->_internal_want_notifications(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4549,11 +4339,6 @@ PROTOBUF_NOINLINE void ContractVerifyRequest::Clear() {
     total_size += 2;
   }
 
-  // bool want_notifications = 3 [json_name = "wantNotifications"];
-  if (this->_internal_want_notifications() != 0) {
-    total_size += 2;
-  }
-
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
@@ -4572,9 +4357,6 @@ void ContractVerifyRequest::MergeImpl(::google::protobuf::MessageLite& to_msg, c
   if (from._internal_auto_accept() != 0) {
     _this->_impl_.auto_accept_ = from._impl_.auto_accept_;
   }
-  if (from._internal_want_notifications() != 0) {
-    _this->_impl_.want_notifications_ = from._impl_.want_notifications_;
-  }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
@@ -4592,12 +4374,7 @@ void ContractVerifyRequest::InternalSwap(ContractVerifyRequest* PROTOBUF_RESTRIC
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.pid_, &other->_impl_.pid_, arena);
-  ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ContractVerifyRequest, _impl_.want_notifications_)
-      + sizeof(ContractVerifyRequest::_impl_.want_notifications_)
-      - PROTOBUF_FIELD_OFFSET(ContractVerifyRequest, _impl_.auto_accept_)>(
-          reinterpret_cast<char*>(&_impl_.auto_accept_),
-          reinterpret_cast<char*>(&other->_impl_.auto_accept_));
+        swap(_impl_.auto_accept_, other->_impl_.auto_accept_);
 }
 
 ::google::protobuf::Metadata ContractVerifyRequest::GetMetadata() const {
@@ -4710,13 +4487,7 @@ ContractFinalizeRequest::ContractFinalizeRequest(
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
-  ::memcpy(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, auto_accept_),
-           reinterpret_cast<const char *>(&from._impl_) +
-               offsetof(Impl_, auto_accept_),
-           offsetof(Impl_, want_notifications_) -
-               offsetof(Impl_, auto_accept_) +
-               sizeof(Impl_::want_notifications_));
+  _impl_.auto_accept_ = from._impl_.auto_accept_;
 
   // @@protoc_insertion_point(copy_constructor:dsp.v1alpha2.ContractFinalizeRequest)
 }
@@ -4728,12 +4499,7 @@ inline PROTOBUF_NDEBUG_INLINE ContractFinalizeRequest::Impl_::Impl_(
 
 inline void ContractFinalizeRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
-  ::memset(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, auto_accept_),
-           0,
-           offsetof(Impl_, want_notifications_) -
-               offsetof(Impl_, auto_accept_) +
-               sizeof(Impl_::want_notifications_));
+  _impl_.auto_accept_ = {};
 }
 ContractFinalizeRequest::~ContractFinalizeRequest() {
   // @@protoc_insertion_point(destructor:dsp.v1alpha2.ContractFinalizeRequest)
@@ -4767,15 +4533,15 @@ ContractFinalizeRequest::GetClassData() const {
   return _data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 3, 0, 48, 2> ContractFinalizeRequest::_table_ = {
+const ::_pbi::TcParseTable<1, 2, 0, 48, 2> ContractFinalizeRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
-    3, 24,  // max_field_number, fast_idx_mask
+    2, 8,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
-    4294967288,  // skipmap
+    4294967292,  // skipmap
     offsetof(decltype(_table_), field_entries),
-    3,  // num_field_entries
+    2,  // num_field_entries
     0,  // num_aux_entries
     offsetof(decltype(_table_), field_names),  // no aux_entries
     &_ContractFinalizeRequest_default_instance_._instance,
@@ -4785,16 +4551,12 @@ const ::_pbi::TcParseTable<2, 3, 0, 48, 2> ContractFinalizeRequest::_table_ = {
     ::_pbi::TcParser::GetTable<::dsp::v1alpha2::ContractFinalizeRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    {::_pbi::TcParser::MiniParse, {}},
-    // string pid = 1 [json_name = "pid"];
-    {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(ContractFinalizeRequest, _impl_.pid_)}},
     // bool auto_accept = 2 [json_name = "autoAccept"];
     {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ContractFinalizeRequest, _impl_.auto_accept_), 63>(),
      {16, 63, 0, PROTOBUF_FIELD_OFFSET(ContractFinalizeRequest, _impl_.auto_accept_)}},
-    // bool want_notifications = 3 [json_name = "wantNotifications"];
-    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ContractFinalizeRequest, _impl_.want_notifications_), 63>(),
-     {24, 63, 0, PROTOBUF_FIELD_OFFSET(ContractFinalizeRequest, _impl_.want_notifications_)}},
+    // string pid = 1 [json_name = "pid"];
+    {::_pbi::TcParser::FastUS1,
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(ContractFinalizeRequest, _impl_.pid_)}},
   }}, {{
     65535, 65535
   }}, {{
@@ -4803,9 +4565,6 @@ const ::_pbi::TcParseTable<2, 3, 0, 48, 2> ContractFinalizeRequest::_table_ = {
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // bool auto_accept = 2 [json_name = "autoAccept"];
     {PROTOBUF_FIELD_OFFSET(ContractFinalizeRequest, _impl_.auto_accept_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
-    // bool want_notifications = 3 [json_name = "wantNotifications"];
-    {PROTOBUF_FIELD_OFFSET(ContractFinalizeRequest, _impl_.want_notifications_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kBool)},
   }},
   // no aux_entries
@@ -4824,9 +4583,7 @@ PROTOBUF_NOINLINE void ContractFinalizeRequest::Clear() {
   (void) cached_has_bits;
 
   _impl_.pid_.ClearToEmpty();
-  ::memset(&_impl_.auto_accept_, 0, static_cast<::size_t>(
-      reinterpret_cast<char*>(&_impl_.want_notifications_) -
-      reinterpret_cast<char*>(&_impl_.auto_accept_)) + sizeof(_impl_.want_notifications_));
+  _impl_.auto_accept_ = false;
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -4850,13 +4607,6 @@ PROTOBUF_NOINLINE void ContractFinalizeRequest::Clear() {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(
         2, this->_internal_auto_accept(), target);
-  }
-
-  // bool want_notifications = 3 [json_name = "wantNotifications"];
-  if (this->_internal_want_notifications() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(
-        3, this->_internal_want_notifications(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4888,11 +4638,6 @@ PROTOBUF_NOINLINE void ContractFinalizeRequest::Clear() {
     total_size += 2;
   }
 
-  // bool want_notifications = 3 [json_name = "wantNotifications"];
-  if (this->_internal_want_notifications() != 0) {
-    total_size += 2;
-  }
-
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
@@ -4911,9 +4656,6 @@ void ContractFinalizeRequest::MergeImpl(::google::protobuf::MessageLite& to_msg,
   if (from._internal_auto_accept() != 0) {
     _this->_impl_.auto_accept_ = from._impl_.auto_accept_;
   }
-  if (from._internal_want_notifications() != 0) {
-    _this->_impl_.want_notifications_ = from._impl_.want_notifications_;
-  }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
@@ -4931,12 +4673,7 @@ void ContractFinalizeRequest::InternalSwap(ContractFinalizeRequest* PROTOBUF_RES
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.pid_, &other->_impl_.pid_, arena);
-  ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ContractFinalizeRequest, _impl_.want_notifications_)
-      + sizeof(ContractFinalizeRequest::_impl_.want_notifications_)
-      - PROTOBUF_FIELD_OFFSET(ContractFinalizeRequest, _impl_.auto_accept_)>(
-          reinterpret_cast<char*>(&_impl_.auto_accept_),
-          reinterpret_cast<char*>(&other->_impl_.auto_accept_));
+        swap(_impl_.auto_accept_, other->_impl_.auto_accept_);
 }
 
 ::google::protobuf::Metadata ContractFinalizeRequest::GetMetadata() const {

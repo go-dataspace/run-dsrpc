@@ -21,17 +21,11 @@ class ContractVerifyRequest extends \Google\Protobuf\Internal\Message
      */
     protected $pid = '';
     /**
-     * signals to RUN-DSP that it should fast forward the negotiation and not wait for any requests of the contract service.
+     * signals to RUN-DSP that it should auto accept the negotiation and not wait for any requests of the contract service.
      *
      * Generated from protobuf field <code>bool auto_accept = 2 [json_name = "autoAccept"];</code>
      */
     protected $auto_accept = false;
-    /**
-     * signals to RUN-DSP that the contract service still wants notifications only useful if auto_accept is set.
-     *
-     * Generated from protobuf field <code>bool want_notifications = 3 [json_name = "wantNotifications"];</code>
-     */
-    protected $want_notifications = false;
 
     /**
      * Constructor.
@@ -41,9 +35,7 @@ class ContractVerifyRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type string $pid
      *     @type bool $auto_accept
-     *           signals to RUN-DSP that it should fast forward the negotiation and not wait for any requests of the contract service.
-     *     @type bool $want_notifications
-     *           signals to RUN-DSP that the contract service still wants notifications only useful if auto_accept is set.
+     *           signals to RUN-DSP that it should auto accept the negotiation and not wait for any requests of the contract service.
      * }
      */
     public function __construct($data = NULL) {
@@ -74,7 +66,7 @@ class ContractVerifyRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * signals to RUN-DSP that it should fast forward the negotiation and not wait for any requests of the contract service.
+     * signals to RUN-DSP that it should auto accept the negotiation and not wait for any requests of the contract service.
      *
      * Generated from protobuf field <code>bool auto_accept = 2 [json_name = "autoAccept"];</code>
      * @return bool
@@ -85,7 +77,7 @@ class ContractVerifyRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * signals to RUN-DSP that it should fast forward the negotiation and not wait for any requests of the contract service.
+     * signals to RUN-DSP that it should auto accept the negotiation and not wait for any requests of the contract service.
      *
      * Generated from protobuf field <code>bool auto_accept = 2 [json_name = "autoAccept"];</code>
      * @param bool $var
@@ -95,32 +87,6 @@ class ContractVerifyRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->auto_accept = $var;
-
-        return $this;
-    }
-
-    /**
-     * signals to RUN-DSP that the contract service still wants notifications only useful if auto_accept is set.
-     *
-     * Generated from protobuf field <code>bool want_notifications = 3 [json_name = "wantNotifications"];</code>
-     * @return bool
-     */
-    public function getWantNotifications()
-    {
-        return $this->want_notifications;
-    }
-
-    /**
-     * signals to RUN-DSP that the contract service still wants notifications only useful if auto_accept is set.
-     *
-     * Generated from protobuf field <code>bool want_notifications = 3 [json_name = "wantNotifications"];</code>
-     * @param bool $var
-     * @return $this
-     */
-    public function setWantNotifications($var)
-    {
-        GPBUtil::checkBool($var);
-        $this->want_notifications = $var;
 
         return $this;
     }

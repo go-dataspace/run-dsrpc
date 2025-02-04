@@ -286,8 +286,6 @@ pub struct ContractRequestRequest {
     pub participant_address: ::core::option::Option<::prost::alloc::string::String>,
     #[prost(bool, tag="4")]
     pub auto_accept: bool,
-    #[prost(bool, tag="5")]
-    pub want_notifications: bool,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -306,8 +304,6 @@ pub struct ContractOfferRequest {
     pub participant_address: ::core::option::Option<::prost::alloc::string::String>,
     #[prost(bool, tag="4")]
     pub auto_accept: bool,
-    #[prost(bool, tag="5")]
-    pub want_notifications: bool,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -321,8 +317,6 @@ pub struct ContractAcceptRequest {
     pub pid: ::prost::alloc::string::String,
     #[prost(bool, tag="2")]
     pub auto_accept: bool,
-    #[prost(bool, tag="3")]
-    pub want_notifications: bool,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -338,8 +332,6 @@ pub struct ContractAgreeRequest {
     pub pid: ::prost::alloc::string::String,
     #[prost(bool, tag="3")]
     pub auto_accept: bool,
-    #[prost(bool, tag="4")]
-    pub want_notifications: bool,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -351,12 +343,9 @@ pub struct ContractAgreeResponse {
 pub struct ContractVerifyRequest {
     #[prost(string, tag="1")]
     pub pid: ::prost::alloc::string::String,
-    /// signals to RUN-DSP that it should fast forward the negotiation and not wait for any requests of the contract service.
+    /// signals to RUN-DSP that it should auto accept the negotiation and not wait for any requests of the contract service.
     #[prost(bool, tag="2")]
     pub auto_accept: bool,
-    /// signals to RUN-DSP that the contract service still wants notifications only useful if auto_accept is set.
-    #[prost(bool, tag="3")]
-    pub want_notifications: bool,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -370,8 +359,6 @@ pub struct ContractFinalizeRequest {
     pub pid: ::prost::alloc::string::String,
     #[prost(bool, tag="2")]
     pub auto_accept: bool,
-    #[prost(bool, tag="3")]
-    pub want_notifications: bool,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]

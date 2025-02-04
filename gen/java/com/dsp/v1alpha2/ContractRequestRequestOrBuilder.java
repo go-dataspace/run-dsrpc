@@ -59,10 +59,4 @@ public interface ContractRequestRequestOrBuilder extends
    * @return The autoAccept.
    */
   boolean getAutoAccept();
-
-  /**
-   * <code>bool want_notifications = 5 [json_name = "wantNotifications"];</code>
-   * @return The wantNotifications.
-   */
-  boolean getWantNotifications();
 }

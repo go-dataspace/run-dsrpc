@@ -22,21 +22,11 @@ public interface ContractVerifyRequestOrBuilder extends
 
   /**
    * <pre>
-   * signals to RUN-DSP that it should fast forward the negotiation and not wait for any requests of the contract service.
+   * signals to RUN-DSP that it should auto accept the negotiation and not wait for any requests of the contract service.
    * </pre>
    *
    * <code>bool auto_accept = 2 [json_name = "autoAccept"];</code>
    * @return The autoAccept.
    */
   boolean getAutoAccept();
-
-  /**
-   * <pre>
-   * signals to RUN-DSP that the contract service still wants notifications only useful if auto_accept is set.
-   * </pre>
-   *
-   * <code>bool want_notifications = 3 [json_name = "wantNotifications"];</code>
-   * @return The wantNotifications.
-   */
-  boolean getWantNotifications();
 }

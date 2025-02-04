@@ -28,10 +28,6 @@ class ContractAgreeRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool auto_accept = 3 [json_name = "autoAccept"];</code>
      */
     protected $auto_accept = false;
-    /**
-     * Generated from protobuf field <code>bool want_notifications = 4 [json_name = "wantNotifications"];</code>
-     */
-    protected $want_notifications = false;
 
     /**
      * Constructor.
@@ -42,7 +38,6 @@ class ContractAgreeRequest extends \Google\Protobuf\Internal\Message
      *     @type string $agreement
      *     @type string $pid
      *     @type bool $auto_accept
-     *     @type bool $want_notifications
      * }
      */
     public function __construct($data = NULL) {
@@ -112,28 +107,6 @@ class ContractAgreeRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->auto_accept = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>bool want_notifications = 4 [json_name = "wantNotifications"];</code>
-     * @return bool
-     */
-    public function getWantNotifications()
-    {
-        return $this->want_notifications;
-    }
-
-    /**
-     * Generated from protobuf field <code>bool want_notifications = 4 [json_name = "wantNotifications"];</code>
-     * @param bool $var
-     * @return $this
-     */
-    public function setWantNotifications($var)
-    {
-        GPBUtil::checkBool($var);
-        $this->want_notifications = $var;
 
         return $this;
     }

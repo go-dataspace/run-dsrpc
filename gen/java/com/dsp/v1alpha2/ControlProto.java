@@ -203,94 +203,87 @@ public final class ControlProto {
       "tDownloadInformationResponse\022<\n\014publish_" +
       "info\030\001 \001(\0132\031.dsp.v1alpha2.PublishInfoR\013p" +
       "ublishInfo\022\037\n\013transfer_id\030\002 \001(\tR\ntransfe" +
-      "rId\"\353\001\n\026ContractRequestRequest\022\024\n\005offer\030" +
+      "rId\"\274\001\n\026ContractRequestRequest\022\024\n\005offer\030" +
       "\001 \001(\tR\005offer\022\025\n\003pid\030\002 \001(\tH\000R\003pid\210\001\001\0224\n\023p" +
       "articipant_address\030\003 \001(\tH\001R\022participantA" +
       "ddress\210\001\001\022\037\n\013auto_accept\030\004 \001(\010R\nautoAcce" +
-      "pt\022-\n\022want_notifications\030\005 \001(\010R\021wantNoti" +
-      "ficationsB\006\n\004_pidB\026\n\024_participant_addres" +
-      "s\"\031\n\027ContractRequestResponse\"\351\001\n\024Contrac" +
-      "tOfferRequest\022\024\n\005offer\030\001 \001(\tR\005offer\022\025\n\003p" +
-      "id\030\002 \001(\tH\000R\003pid\210\001\001\0224\n\023participant_addres" +
-      "s\030\003 \001(\tH\001R\022participantAddress\210\001\001\022\037\n\013auto" +
-      "_accept\030\004 \001(\010R\nautoAccept\022-\n\022want_notifi" +
-      "cations\030\005 \001(\010R\021wantNotificationsB\006\n\004_pid" +
-      "B\026\n\024_participant_address\"\027\n\025ContractOffe" +
-      "rResponse\"y\n\025ContractAcceptRequest\022\020\n\003pi" +
-      "d\030\001 \001(\tR\003pid\022\037\n\013auto_accept\030\002 \001(\010R\nautoA" +
-      "ccept\022-\n\022want_notifications\030\003 \001(\010R\021wantN" +
-      "otifications\"\030\n\026ContractAcceptResponse\"\226" +
-      "\001\n\024ContractAgreeRequest\022\034\n\tagreement\030\001 \001" +
-      "(\tR\tagreement\022\020\n\003pid\030\002 \001(\tR\003pid\022\037\n\013auto_" +
-      "accept\030\003 \001(\010R\nautoAccept\022-\n\022want_notific" +
-      "ations\030\004 \001(\010R\021wantNotifications\"\027\n\025Contr" +
-      "actAgreeResponse\"y\n\025ContractVerifyReques" +
-      "t\022\020\n\003pid\030\001 \001(\tR\003pid\022\037\n\013auto_accept\030\002 \001(\010" +
-      "R\nautoAccept\022-\n\022want_notifications\030\003 \001(\010" +
-      "R\021wantNotifications\"\030\n\026ContractVerifyRes" +
-      "ponse\"{\n\027ContractFinalizeRequest\022\020\n\003pid\030" +
-      "\001 \001(\tR\003pid\022\037\n\013auto_accept\030\002 \001(\010R\nautoAcc" +
-      "ept\022-\n\022want_notifications\030\003 \001(\010R\021wantNot" +
-      "ifications\"\032\n\030ContractFinalizeResponse\"X" +
-      "\n\030ContractTerminateRequest\022\020\n\003pid\030\001 \001(\tR" +
-      "\003pid\022\022\n\004code\030\002 \001(\tR\004code\022\026\n\006reason\030\003 \003(\t" +
-      "R\006reason\"\033\n\031ContractTerminateResponse\"@\n" +
-      "\035SignalTransferCompleteRequest\022\037\n\013transf" +
-      "er_id\030\001 \001(\tR\ntransferId\" \n\036SignalTransfe" +
-      "rCompleteResponse\"A\n\036SignalTransferCance" +
-      "lledRequest\022\037\n\013transfer_id\030\001 \001(\tR\ntransf" +
-      "erId\"!\n\037SignalTransferCancelledResponse\"" +
-      "?\n\034SignalTransferSuspendRequest\022\037\n\013trans" +
-      "fer_id\030\001 \001(\tR\ntransferId\"\037\n\035SignalTransf" +
-      "erSuspendResponse\">\n\033SignalTransferResum" +
-      "eRequest\022\037\n\013transfer_id\030\001 \001(\tR\ntransferI" +
-      "d\"\036\n\034SignalTransferResumeResponse2\361\014\n\016Co" +
-      "ntrolService\022\242\001\n%GetProviderDatasetDownl" +
-      "oadInformation\022:.dsp.v1alpha2.GetProvide" +
-      "rDatasetDownloadInformationRequest\032;.dsp" +
-      ".v1alpha2.GetProviderDatasetDownloadInfo" +
-      "rmationResponse\"\000\022c\n\020VerifyConnection\022%." +
-      "dsp.v1alpha2.VerifyConnectionRequest\032&.d" +
-      "sp.v1alpha2.VerifyConnectionResponse\"\000\022o" +
-      "\n\024GetProviderCatalogue\022).dsp.v1alpha2.Ge" +
-      "tProviderCatalogueRequest\032*.dsp.v1alpha2" +
-      ".GetProviderCatalogueResponse\"\000\022i\n\022GetPr" +
-      "oviderDataset\022\'.dsp.v1alpha2.GetProvider" +
-      "DatasetRequest\032(.dsp.v1alpha2.GetProvide" +
-      "rDatasetResponse\"\000\022`\n\017ContractRequest\022$." +
-      "dsp.v1alpha2.ContractRequestRequest\032%.ds" +
-      "p.v1alpha2.ContractRequestResponse\"\000\022Z\n\r" +
-      "ContractOffer\022\".dsp.v1alpha2.ContractOff" +
-      "erRequest\032#.dsp.v1alpha2.ContractOfferRe" +
-      "sponse\"\000\022]\n\016ContractAccept\022#.dsp.v1alpha" +
-      "2.ContractAcceptRequest\032$.dsp.v1alpha2.C" +
-      "ontractAcceptResponse\"\000\022Z\n\rContractAgree" +
-      "\022\".dsp.v1alpha2.ContractAgreeRequest\032#.d" +
-      "sp.v1alpha2.ContractAgreeResponse\"\000\022]\n\016C" +
-      "ontractVerify\022#.dsp.v1alpha2.ContractVer" +
-      "ifyRequest\032$.dsp.v1alpha2.ContractVerify" +
-      "Response\"\000\022c\n\020ContractFinalize\022%.dsp.v1a" +
-      "lpha2.ContractFinalizeRequest\032&.dsp.v1al" +
-      "pha2.ContractFinalizeResponse\"\000\022f\n\021Contr" +
-      "actTerminate\022&.dsp.v1alpha2.ContractTerm" +
-      "inateRequest\032\'.dsp.v1alpha2.ContractTerm" +
-      "inateResponse\"\000\022u\n\026SignalTransferComplet" +
-      "e\022+.dsp.v1alpha2.SignalTransferCompleteR" +
-      "equest\032,.dsp.v1alpha2.SignalTransferComp" +
-      "leteResponse\"\000\022x\n\027SignalTransferCancelle" +
-      "d\022,.dsp.v1alpha2.SignalTransferCancelled" +
-      "Request\032-.dsp.v1alpha2.SignalTransferCan" +
-      "celledResponse\"\000\022r\n\025SignalTransferSuspen" +
-      "d\022*.dsp.v1alpha2.SignalTransferSuspendRe" +
-      "quest\032+.dsp.v1alpha2.SignalTransferSuspe" +
-      "ndResponse\"\000\022o\n\024SignalTransferResume\022).d" +
-      "sp.v1alpha2.SignalTransferResumeRequest\032" +
-      "*.dsp.v1alpha2.SignalTransferResumeRespo" +
-      "nse\"\000B\250\001\n\020com.dsp.v1alpha2B\014ControlProto" +
-      "P\001Z5github.com/bufbuild/buf-tour/dsp/v1a" +
-      "lpha2;dspv1alpha2\242\002\003DXX\252\002\014Dsp.V1alpha2\312\002" +
-      "\014Dsp\\V1alpha2\342\002\030Dsp\\V1alpha2\\GPBMetadata" +
-      "\352\002\rDsp::V1alpha2b\006proto3"
+      "ptB\006\n\004_pidB\026\n\024_participant_address\"\031\n\027Co" +
+      "ntractRequestResponse\"\272\001\n\024ContractOfferR" +
+      "equest\022\024\n\005offer\030\001 \001(\tR\005offer\022\025\n\003pid\030\002 \001(" +
+      "\tH\000R\003pid\210\001\001\0224\n\023participant_address\030\003 \001(\t" +
+      "H\001R\022participantAddress\210\001\001\022\037\n\013auto_accept" +
+      "\030\004 \001(\010R\nautoAcceptB\006\n\004_pidB\026\n\024_participa" +
+      "nt_address\"\027\n\025ContractOfferResponse\"J\n\025C" +
+      "ontractAcceptRequest\022\020\n\003pid\030\001 \001(\tR\003pid\022\037" +
+      "\n\013auto_accept\030\002 \001(\010R\nautoAccept\"\030\n\026Contr" +
+      "actAcceptResponse\"g\n\024ContractAgreeReques" +
+      "t\022\034\n\tagreement\030\001 \001(\tR\tagreement\022\020\n\003pid\030\002" +
+      " \001(\tR\003pid\022\037\n\013auto_accept\030\003 \001(\010R\nautoAcce" +
+      "pt\"\027\n\025ContractAgreeResponse\"J\n\025ContractV" +
+      "erifyRequest\022\020\n\003pid\030\001 \001(\tR\003pid\022\037\n\013auto_a" +
+      "ccept\030\002 \001(\010R\nautoAccept\"\030\n\026ContractVerif" +
+      "yResponse\"L\n\027ContractFinalizeRequest\022\020\n\003" +
+      "pid\030\001 \001(\tR\003pid\022\037\n\013auto_accept\030\002 \001(\010R\naut" +
+      "oAccept\"\032\n\030ContractFinalizeResponse\"X\n\030C" +
+      "ontractTerminateRequest\022\020\n\003pid\030\001 \001(\tR\003pi" +
+      "d\022\022\n\004code\030\002 \001(\tR\004code\022\026\n\006reason\030\003 \003(\tR\006r" +
+      "eason\"\033\n\031ContractTerminateResponse\"@\n\035Si" +
+      "gnalTransferCompleteRequest\022\037\n\013transfer_" +
+      "id\030\001 \001(\tR\ntransferId\" \n\036SignalTransferCo" +
+      "mpleteResponse\"A\n\036SignalTransferCancelle" +
+      "dRequest\022\037\n\013transfer_id\030\001 \001(\tR\ntransferI" +
+      "d\"!\n\037SignalTransferCancelledResponse\"?\n\034" +
+      "SignalTransferSuspendRequest\022\037\n\013transfer" +
+      "_id\030\001 \001(\tR\ntransferId\"\037\n\035SignalTransferS" +
+      "uspendResponse\">\n\033SignalTransferResumeRe" +
+      "quest\022\037\n\013transfer_id\030\001 \001(\tR\ntransferId\"\036" +
+      "\n\034SignalTransferResumeResponse2\361\014\n\016Contr" +
+      "olService\022\242\001\n%GetProviderDatasetDownload" +
+      "Information\022:.dsp.v1alpha2.GetProviderDa" +
+      "tasetDownloadInformationRequest\032;.dsp.v1" +
+      "alpha2.GetProviderDatasetDownloadInforma" +
+      "tionResponse\"\000\022c\n\020VerifyConnection\022%.dsp" +
+      ".v1alpha2.VerifyConnectionRequest\032&.dsp." +
+      "v1alpha2.VerifyConnectionResponse\"\000\022o\n\024G" +
+      "etProviderCatalogue\022).dsp.v1alpha2.GetPr" +
+      "oviderCatalogueRequest\032*.dsp.v1alpha2.Ge" +
+      "tProviderCatalogueResponse\"\000\022i\n\022GetProvi" +
+      "derDataset\022\'.dsp.v1alpha2.GetProviderDat" +
+      "asetRequest\032(.dsp.v1alpha2.GetProviderDa" +
+      "tasetResponse\"\000\022`\n\017ContractRequest\022$.dsp" +
+      ".v1alpha2.ContractRequestRequest\032%.dsp.v" +
+      "1alpha2.ContractRequestResponse\"\000\022Z\n\rCon" +
+      "tractOffer\022\".dsp.v1alpha2.ContractOfferR" +
+      "equest\032#.dsp.v1alpha2.ContractOfferRespo" +
+      "nse\"\000\022]\n\016ContractAccept\022#.dsp.v1alpha2.C" +
+      "ontractAcceptRequest\032$.dsp.v1alpha2.Cont" +
+      "ractAcceptResponse\"\000\022Z\n\rContractAgree\022\"." +
+      "dsp.v1alpha2.ContractAgreeRequest\032#.dsp." +
+      "v1alpha2.ContractAgreeResponse\"\000\022]\n\016Cont" +
+      "ractVerify\022#.dsp.v1alpha2.ContractVerify" +
+      "Request\032$.dsp.v1alpha2.ContractVerifyRes" +
+      "ponse\"\000\022c\n\020ContractFinalize\022%.dsp.v1alph" +
+      "a2.ContractFinalizeRequest\032&.dsp.v1alpha" +
+      "2.ContractFinalizeResponse\"\000\022f\n\021Contract" +
+      "Terminate\022&.dsp.v1alpha2.ContractTermina" +
+      "teRequest\032\'.dsp.v1alpha2.ContractTermina" +
+      "teResponse\"\000\022u\n\026SignalTransferComplete\022+" +
+      ".dsp.v1alpha2.SignalTransferCompleteRequ" +
+      "est\032,.dsp.v1alpha2.SignalTransferComplet" +
+      "eResponse\"\000\022x\n\027SignalTransferCancelled\022," +
+      ".dsp.v1alpha2.SignalTransferCancelledReq" +
+      "uest\032-.dsp.v1alpha2.SignalTransferCancel" +
+      "ledResponse\"\000\022r\n\025SignalTransferSuspend\022*" +
+      ".dsp.v1alpha2.SignalTransferSuspendReque" +
+      "st\032+.dsp.v1alpha2.SignalTransferSuspendR" +
+      "esponse\"\000\022o\n\024SignalTransferResume\022).dsp." +
+      "v1alpha2.SignalTransferResumeRequest\032*.d" +
+      "sp.v1alpha2.SignalTransferResumeResponse" +
+      "\"\000B\250\001\n\020com.dsp.v1alpha2B\014ControlProtoP\001Z" +
+      "5github.com/bufbuild/buf-tour/dsp/v1alph" +
+      "a2;dspv1alpha2\242\002\003DXX\252\002\014Dsp.V1alpha2\312\002\014Ds" +
+      "p\\V1alpha2\342\002\030Dsp\\V1alpha2\\GPBMetadata\352\002\r" +
+      "Dsp::V1alpha2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -356,7 +349,7 @@ public final class ControlProto {
     internal_static_dsp_v1alpha2_ContractRequestRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dsp_v1alpha2_ContractRequestRequest_descriptor,
-        new java.lang.String[] { "Offer", "Pid", "ParticipantAddress", "AutoAccept", "WantNotifications", });
+        new java.lang.String[] { "Offer", "Pid", "ParticipantAddress", "AutoAccept", });
     internal_static_dsp_v1alpha2_ContractRequestResponse_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_dsp_v1alpha2_ContractRequestResponse_fieldAccessorTable = new
@@ -368,7 +361,7 @@ public final class ControlProto {
     internal_static_dsp_v1alpha2_ContractOfferRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dsp_v1alpha2_ContractOfferRequest_descriptor,
-        new java.lang.String[] { "Offer", "Pid", "ParticipantAddress", "AutoAccept", "WantNotifications", });
+        new java.lang.String[] { "Offer", "Pid", "ParticipantAddress", "AutoAccept", });
     internal_static_dsp_v1alpha2_ContractOfferResponse_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_dsp_v1alpha2_ContractOfferResponse_fieldAccessorTable = new
@@ -380,7 +373,7 @@ public final class ControlProto {
     internal_static_dsp_v1alpha2_ContractAcceptRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dsp_v1alpha2_ContractAcceptRequest_descriptor,
-        new java.lang.String[] { "Pid", "AutoAccept", "WantNotifications", });
+        new java.lang.String[] { "Pid", "AutoAccept", });
     internal_static_dsp_v1alpha2_ContractAcceptResponse_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_dsp_v1alpha2_ContractAcceptResponse_fieldAccessorTable = new
@@ -392,7 +385,7 @@ public final class ControlProto {
     internal_static_dsp_v1alpha2_ContractAgreeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dsp_v1alpha2_ContractAgreeRequest_descriptor,
-        new java.lang.String[] { "Agreement", "Pid", "AutoAccept", "WantNotifications", });
+        new java.lang.String[] { "Agreement", "Pid", "AutoAccept", });
     internal_static_dsp_v1alpha2_ContractAgreeResponse_descriptor =
       getDescriptor().getMessageTypes().get(15);
     internal_static_dsp_v1alpha2_ContractAgreeResponse_fieldAccessorTable = new
@@ -404,7 +397,7 @@ public final class ControlProto {
     internal_static_dsp_v1alpha2_ContractVerifyRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dsp_v1alpha2_ContractVerifyRequest_descriptor,
-        new java.lang.String[] { "Pid", "AutoAccept", "WantNotifications", });
+        new java.lang.String[] { "Pid", "AutoAccept", });
     internal_static_dsp_v1alpha2_ContractVerifyResponse_descriptor =
       getDescriptor().getMessageTypes().get(17);
     internal_static_dsp_v1alpha2_ContractVerifyResponse_fieldAccessorTable = new
@@ -416,7 +409,7 @@ public final class ControlProto {
     internal_static_dsp_v1alpha2_ContractFinalizeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dsp_v1alpha2_ContractFinalizeRequest_descriptor,
-        new java.lang.String[] { "Pid", "AutoAccept", "WantNotifications", });
+        new java.lang.String[] { "Pid", "AutoAccept", });
     internal_static_dsp_v1alpha2_ContractFinalizeResponse_descriptor =
       getDescriptor().getMessageTypes().get(19);
     internal_static_dsp_v1alpha2_ContractFinalizeResponse_fieldAccessorTable = new

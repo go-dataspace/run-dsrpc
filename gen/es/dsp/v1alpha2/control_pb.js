@@ -132,7 +132,6 @@ export const ContractRequestRequest = /*@__PURE__*/ proto3.makeMessageType(
     { no: 2, name: "pid", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
     { no: 3, name: "participant_address", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
     { no: 4, name: "auto_accept", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
-    { no: 5, name: "want_notifications", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
   ],
 );
 
@@ -157,7 +156,6 @@ export const ContractOfferRequest = /*@__PURE__*/ proto3.makeMessageType(
     { no: 2, name: "pid", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
     { no: 3, name: "participant_address", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
     { no: 4, name: "auto_accept", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
-    { no: 5, name: "want_notifications", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
   ],
 );
 
@@ -179,7 +177,6 @@ export const ContractAcceptRequest = /*@__PURE__*/ proto3.makeMessageType(
   () => [
     { no: 1, name: "pid", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "auto_accept", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
-    { no: 3, name: "want_notifications", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
   ],
 );
 
@@ -202,7 +199,6 @@ export const ContractAgreeRequest = /*@__PURE__*/ proto3.makeMessageType(
     { no: 1, name: "agreement", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "pid", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "auto_accept", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
-    { no: 4, name: "want_notifications", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
   ],
 );
 
@@ -224,7 +220,6 @@ export const ContractVerifyRequest = /*@__PURE__*/ proto3.makeMessageType(
   () => [
     { no: 1, name: "pid", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "auto_accept", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
-    { no: 3, name: "want_notifications", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
   ],
 );
 
@@ -246,7 +241,6 @@ export const ContractFinalizeRequest = /*@__PURE__*/ proto3.makeMessageType(
   () => [
     { no: 1, name: "pid", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "auto_accept", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
-    { no: 3, name: "want_notifications", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
   ],
 );
 

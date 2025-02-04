@@ -64,23 +64,6 @@ public object ContractAcceptRequestKt {
     public fun clearAutoAccept() {
       _builder.clearAutoAccept()
     }
-
-    /**
-     * `bool want_notifications = 3 [json_name = "wantNotifications"];`
-     */
-    public var wantNotifications: kotlin.Boolean
-      @JvmName("getWantNotifications")
-      get() = _builder.getWantNotifications()
-      @JvmName("setWantNotifications")
-      set(value) {
-        _builder.setWantNotifications(value)
-      }
-    /**
-     * `bool want_notifications = 3 [json_name = "wantNotifications"];`
-     */
-    public fun clearWantNotifications() {
-      _builder.clearWantNotifications()
-    }
   }
 }
 @kotlin.jvm.JvmSynthetic

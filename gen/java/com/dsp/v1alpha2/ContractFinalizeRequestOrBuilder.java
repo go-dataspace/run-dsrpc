@@ -25,10 +25,4 @@ public interface ContractFinalizeRequestOrBuilder extends
    * @return The autoAccept.
    */
   boolean getAutoAccept();
-
-  /**
-   * <code>bool want_notifications = 3 [json_name = "wantNotifications"];</code>
-   * @return The wantNotifications.
-   */
-  boolean getWantNotifications();
 }

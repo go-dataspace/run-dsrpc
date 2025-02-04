@@ -279,11 +279,6 @@ export declare class ContractRequestRequest extends Message<ContractRequestReque
    */
   autoAccept: boolean;
 
-  /**
-   * @generated from field: bool want_notifications = 5;
-   */
-  wantNotifications: boolean;
-
   constructor(data?: PartialMessage<ContractRequestRequest>);
 
   static readonly runtime: typeof proto3;
@@ -345,11 +340,6 @@ export declare class ContractOfferRequest extends Message<ContractOfferRequest> 
    */
   autoAccept: boolean;
 
-  /**
-   * @generated from field: bool want_notifications = 5;
-   */
-  wantNotifications: boolean;
-
   constructor(data?: PartialMessage<ContractOfferRequest>);
 
   static readonly runtime: typeof proto3;
@@ -399,11 +389,6 @@ export declare class ContractAcceptRequest extends Message<ContractAcceptRequest
    * @generated from field: bool auto_accept = 2;
    */
   autoAccept: boolean;
-
-  /**
-   * @generated from field: bool want_notifications = 3;
-   */
-  wantNotifications: boolean;
 
   constructor(data?: PartialMessage<ContractAcceptRequest>);
 
@@ -460,11 +445,6 @@ export declare class ContractAgreeRequest extends Message<ContractAgreeRequest> 
    */
   autoAccept: boolean;
 
-  /**
-   * @generated from field: bool want_notifications = 4;
-   */
-  wantNotifications: boolean;
-
   constructor(data?: PartialMessage<ContractAgreeRequest>);
 
   static readonly runtime: typeof proto3;
@@ -511,18 +491,11 @@ export declare class ContractVerifyRequest extends Message<ContractVerifyRequest
   pid: string;
 
   /**
-   * signals to RUN-DSP that it should fast forward the negotiation and not wait for any requests of the contract service.
+   * signals to RUN-DSP that it should auto accept the negotiation and not wait for any requests of the contract service.
    *
    * @generated from field: bool auto_accept = 2;
    */
   autoAccept: boolean;
-
-  /**
-   * signals to RUN-DSP that the contract service still wants notifications only useful if auto_accept is set.
-   *
-   * @generated from field: bool want_notifications = 3;
-   */
-  wantNotifications: boolean;
 
   constructor(data?: PartialMessage<ContractVerifyRequest>);
 
@@ -573,11 +546,6 @@ export declare class ContractFinalizeRequest extends Message<ContractFinalizeReq
    * @generated from field: bool auto_accept = 2;
    */
   autoAccept: boolean;
-
-  /**
-   * @generated from field: bool want_notifications = 3;
-   */
-  wantNotifications: boolean;
 
   constructor(data?: PartialMessage<ContractFinalizeRequest>);
 
