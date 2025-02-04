@@ -21,9 +21,9 @@ class ContractAcceptRequest extends \Google\Protobuf\Internal\Message
      */
     protected $pid = '';
     /**
-     * Generated from protobuf field <code>bool fast_forward = 2 [json_name = "fastForward"];</code>
+     * Generated from protobuf field <code>bool auto_accept = 2 [json_name = "autoAccept"];</code>
      */
-    protected $fast_forward = false;
+    protected $auto_accept = false;
     /**
      * Generated from protobuf field <code>bool want_notifications = 3 [json_name = "wantNotifications"];</code>
      */
@@ -36,7 +36,7 @@ class ContractAcceptRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $pid
-     *     @type bool $fast_forward
+     *     @type bool $auto_accept
      *     @type bool $want_notifications
      * }
      */
@@ -68,23 +68,23 @@ class ContractAcceptRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bool fast_forward = 2 [json_name = "fastForward"];</code>
+     * Generated from protobuf field <code>bool auto_accept = 2 [json_name = "autoAccept"];</code>
      * @return bool
      */
-    public function getFastForward()
+    public function getAutoAccept()
     {
-        return $this->fast_forward;
+        return $this->auto_accept;
     }
 
     /**
-     * Generated from protobuf field <code>bool fast_forward = 2 [json_name = "fastForward"];</code>
+     * Generated from protobuf field <code>bool auto_accept = 2 [json_name = "autoAccept"];</code>
      * @param bool $var
      * @return $this
      */
-    public function setFastForward($var)
+    public function setAutoAccept($var)
     {
         GPBUtil::checkBool($var);
-        $this->fast_forward = $var;
+        $this->auto_accept = $var;
 
         return $this;
     }

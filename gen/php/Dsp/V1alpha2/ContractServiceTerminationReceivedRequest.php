@@ -29,10 +29,6 @@ class ContractServiceTerminationReceivedRequest extends \Google\Protobuf\Interna
      * Generated from protobuf field <code>repeated string reason = 3 [json_name = "reason"];</code>
      */
     private $reason;
-    /**
-     * Generated from protobuf field <code>bool notify_only = 4 [json_name = "notifyOnly"];</code>
-     */
-    protected $notify_only = false;
 
     /**
      * Constructor.
@@ -43,7 +39,6 @@ class ContractServiceTerminationReceivedRequest extends \Google\Protobuf\Interna
      *     @type string $pid
      *     @type string $code
      *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $reason
-     *     @type bool $notify_only
      * }
      */
     public function __construct($data = NULL) {
@@ -113,28 +108,6 @@ class ContractServiceTerminationReceivedRequest extends \Google\Protobuf\Interna
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->reason = $arr;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>bool notify_only = 4 [json_name = "notifyOnly"];</code>
-     * @return bool
-     */
-    public function getNotifyOnly()
-    {
-        return $this->notify_only;
-    }
-
-    /**
-     * Generated from protobuf field <code>bool notify_only = 4 [json_name = "notifyOnly"];</code>
-     * @param bool $var
-     * @return $this
-     */
-    public function setNotifyOnly($var)
-    {
-        GPBUtil::checkBool($var);
-        $this->notify_only = $var;
 
         return $this;
     }

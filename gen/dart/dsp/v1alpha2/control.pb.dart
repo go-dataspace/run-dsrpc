@@ -475,7 +475,7 @@ class ContractRequestRequest extends $pb.GeneratedMessage {
     $core.String? offer,
     $core.String? pid,
     $core.String? participantAddress,
-    $core.bool? fastForward,
+    $core.bool? autoAccept,
     $core.bool? wantNotifications,
   }) {
     final $result = create();
@@ -488,8 +488,8 @@ class ContractRequestRequest extends $pb.GeneratedMessage {
     if (participantAddress != null) {
       $result.participantAddress = participantAddress;
     }
-    if (fastForward != null) {
-      $result.fastForward = fastForward;
+    if (autoAccept != null) {
+      $result.autoAccept = autoAccept;
     }
     if (wantNotifications != null) {
       $result.wantNotifications = wantNotifications;
@@ -504,7 +504,7 @@ class ContractRequestRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'offer')
     ..aOS(2, _omitFieldNames ? '' : 'pid')
     ..aOS(3, _omitFieldNames ? '' : 'participantAddress')
-    ..aOB(4, _omitFieldNames ? '' : 'fastForward')
+    ..aOB(4, _omitFieldNames ? '' : 'autoAccept')
     ..aOB(5, _omitFieldNames ? '' : 'wantNotifications')
     ..hasRequiredFields = false
   ;
@@ -558,13 +558,13 @@ class ContractRequestRequest extends $pb.GeneratedMessage {
   void clearParticipantAddress() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.bool get fastForward => $_getBF(3);
+  $core.bool get autoAccept => $_getBF(3);
   @$pb.TagNumber(4)
-  set fastForward($core.bool v) { $_setBool(3, v); }
+  set autoAccept($core.bool v) { $_setBool(3, v); }
   @$pb.TagNumber(4)
-  $core.bool hasFastForward() => $_has(3);
+  $core.bool hasAutoAccept() => $_has(3);
   @$pb.TagNumber(4)
-  void clearFastForward() => clearField(4);
+  void clearAutoAccept() => clearField(4);
 
   @$pb.TagNumber(5)
   $core.bool get wantNotifications => $_getBF(4);
@@ -615,7 +615,7 @@ class ContractOfferRequest extends $pb.GeneratedMessage {
     $core.String? offer,
     $core.String? pid,
     $core.String? participantAddress,
-    $core.bool? fastForward,
+    $core.bool? autoAccept,
     $core.bool? wantNotifications,
   }) {
     final $result = create();
@@ -628,8 +628,8 @@ class ContractOfferRequest extends $pb.GeneratedMessage {
     if (participantAddress != null) {
       $result.participantAddress = participantAddress;
     }
-    if (fastForward != null) {
-      $result.fastForward = fastForward;
+    if (autoAccept != null) {
+      $result.autoAccept = autoAccept;
     }
     if (wantNotifications != null) {
       $result.wantNotifications = wantNotifications;
@@ -644,7 +644,7 @@ class ContractOfferRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'offer')
     ..aOS(2, _omitFieldNames ? '' : 'pid')
     ..aOS(3, _omitFieldNames ? '' : 'participantAddress')
-    ..aOB(4, _omitFieldNames ? '' : 'fastForward')
+    ..aOB(4, _omitFieldNames ? '' : 'autoAccept')
     ..aOB(5, _omitFieldNames ? '' : 'wantNotifications')
     ..hasRequiredFields = false
   ;
@@ -698,13 +698,13 @@ class ContractOfferRequest extends $pb.GeneratedMessage {
   void clearParticipantAddress() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.bool get fastForward => $_getBF(3);
+  $core.bool get autoAccept => $_getBF(3);
   @$pb.TagNumber(4)
-  set fastForward($core.bool v) { $_setBool(3, v); }
+  set autoAccept($core.bool v) { $_setBool(3, v); }
   @$pb.TagNumber(4)
-  $core.bool hasFastForward() => $_has(3);
+  $core.bool hasAutoAccept() => $_has(3);
   @$pb.TagNumber(4)
-  void clearFastForward() => clearField(4);
+  void clearAutoAccept() => clearField(4);
 
   @$pb.TagNumber(5)
   $core.bool get wantNotifications => $_getBF(4);
@@ -752,15 +752,15 @@ class ContractOfferResponse extends $pb.GeneratedMessage {
 class ContractAcceptRequest extends $pb.GeneratedMessage {
   factory ContractAcceptRequest({
     $core.String? pid,
-    $core.bool? fastForward,
+    $core.bool? autoAccept,
     $core.bool? wantNotifications,
   }) {
     final $result = create();
     if (pid != null) {
       $result.pid = pid;
     }
-    if (fastForward != null) {
-      $result.fastForward = fastForward;
+    if (autoAccept != null) {
+      $result.autoAccept = autoAccept;
     }
     if (wantNotifications != null) {
       $result.wantNotifications = wantNotifications;
@@ -773,7 +773,7 @@ class ContractAcceptRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContractAcceptRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'pid')
-    ..aOB(2, _omitFieldNames ? '' : 'fastForward')
+    ..aOB(2, _omitFieldNames ? '' : 'autoAccept')
     ..aOB(3, _omitFieldNames ? '' : 'wantNotifications')
     ..hasRequiredFields = false
   ;
@@ -809,13 +809,13 @@ class ContractAcceptRequest extends $pb.GeneratedMessage {
   void clearPid() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.bool get fastForward => $_getBF(1);
+  $core.bool get autoAccept => $_getBF(1);
   @$pb.TagNumber(2)
-  set fastForward($core.bool v) { $_setBool(1, v); }
+  set autoAccept($core.bool v) { $_setBool(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasFastForward() => $_has(1);
+  $core.bool hasAutoAccept() => $_has(1);
   @$pb.TagNumber(2)
-  void clearFastForward() => clearField(2);
+  void clearAutoAccept() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.bool get wantNotifications => $_getBF(2);
@@ -864,7 +864,7 @@ class ContractAgreeRequest extends $pb.GeneratedMessage {
   factory ContractAgreeRequest({
     $core.String? agreement,
     $core.String? pid,
-    $core.bool? fastForward,
+    $core.bool? autoAccept,
     $core.bool? wantNotifications,
   }) {
     final $result = create();
@@ -874,8 +874,8 @@ class ContractAgreeRequest extends $pb.GeneratedMessage {
     if (pid != null) {
       $result.pid = pid;
     }
-    if (fastForward != null) {
-      $result.fastForward = fastForward;
+    if (autoAccept != null) {
+      $result.autoAccept = autoAccept;
     }
     if (wantNotifications != null) {
       $result.wantNotifications = wantNotifications;
@@ -889,7 +889,7 @@ class ContractAgreeRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContractAgreeRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'agreement')
     ..aOS(2, _omitFieldNames ? '' : 'pid')
-    ..aOB(3, _omitFieldNames ? '' : 'fastForward')
+    ..aOB(3, _omitFieldNames ? '' : 'autoAccept')
     ..aOB(4, _omitFieldNames ? '' : 'wantNotifications')
     ..hasRequiredFields = false
   ;
@@ -934,13 +934,13 @@ class ContractAgreeRequest extends $pb.GeneratedMessage {
   void clearPid() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.bool get fastForward => $_getBF(2);
+  $core.bool get autoAccept => $_getBF(2);
   @$pb.TagNumber(3)
-  set fastForward($core.bool v) { $_setBool(2, v); }
+  set autoAccept($core.bool v) { $_setBool(2, v); }
   @$pb.TagNumber(3)
-  $core.bool hasFastForward() => $_has(2);
+  $core.bool hasAutoAccept() => $_has(2);
   @$pb.TagNumber(3)
-  void clearFastForward() => clearField(3);
+  void clearAutoAccept() => clearField(3);
 
   @$pb.TagNumber(4)
   $core.bool get wantNotifications => $_getBF(3);
@@ -988,15 +988,15 @@ class ContractAgreeResponse extends $pb.GeneratedMessage {
 class ContractVerifyRequest extends $pb.GeneratedMessage {
   factory ContractVerifyRequest({
     $core.String? pid,
-    $core.bool? fastForward,
+    $core.bool? autoAccept,
     $core.bool? wantNotifications,
   }) {
     final $result = create();
     if (pid != null) {
       $result.pid = pid;
     }
-    if (fastForward != null) {
-      $result.fastForward = fastForward;
+    if (autoAccept != null) {
+      $result.autoAccept = autoAccept;
     }
     if (wantNotifications != null) {
       $result.wantNotifications = wantNotifications;
@@ -1009,7 +1009,7 @@ class ContractVerifyRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContractVerifyRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'pid')
-    ..aOB(2, _omitFieldNames ? '' : 'fastForward')
+    ..aOB(2, _omitFieldNames ? '' : 'autoAccept')
     ..aOB(3, _omitFieldNames ? '' : 'wantNotifications')
     ..hasRequiredFields = false
   ;
@@ -1045,13 +1045,13 @@ class ContractVerifyRequest extends $pb.GeneratedMessage {
   void clearPid() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.bool get fastForward => $_getBF(1);
+  $core.bool get autoAccept => $_getBF(1);
   @$pb.TagNumber(2)
-  set fastForward($core.bool v) { $_setBool(1, v); }
+  set autoAccept($core.bool v) { $_setBool(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasFastForward() => $_has(1);
+  $core.bool hasAutoAccept() => $_has(1);
   @$pb.TagNumber(2)
-  void clearFastForward() => clearField(2);
+  void clearAutoAccept() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.bool get wantNotifications => $_getBF(2);
@@ -1099,15 +1099,15 @@ class ContractVerifyResponse extends $pb.GeneratedMessage {
 class ContractFinalizeRequest extends $pb.GeneratedMessage {
   factory ContractFinalizeRequest({
     $core.String? pid,
-    $core.bool? fastForward,
+    $core.bool? autoAccept,
     $core.bool? wantNotifications,
   }) {
     final $result = create();
     if (pid != null) {
       $result.pid = pid;
     }
-    if (fastForward != null) {
-      $result.fastForward = fastForward;
+    if (autoAccept != null) {
+      $result.autoAccept = autoAccept;
     }
     if (wantNotifications != null) {
       $result.wantNotifications = wantNotifications;
@@ -1120,7 +1120,7 @@ class ContractFinalizeRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContractFinalizeRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'pid')
-    ..aOB(2, _omitFieldNames ? '' : 'fastForward')
+    ..aOB(2, _omitFieldNames ? '' : 'autoAccept')
     ..aOB(3, _omitFieldNames ? '' : 'wantNotifications')
     ..hasRequiredFields = false
   ;
@@ -1156,13 +1156,13 @@ class ContractFinalizeRequest extends $pb.GeneratedMessage {
   void clearPid() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.bool get fastForward => $_getBF(1);
+  $core.bool get autoAccept => $_getBF(1);
   @$pb.TagNumber(2)
-  set fastForward($core.bool v) { $_setBool(1, v); }
+  set autoAccept($core.bool v) { $_setBool(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasFastForward() => $_has(1);
+  $core.bool hasAutoAccept() => $_has(1);
   @$pb.TagNumber(2)
-  void clearFastForward() => clearField(2);
+  void clearAutoAccept() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.bool get wantNotifications => $_getBF(2);

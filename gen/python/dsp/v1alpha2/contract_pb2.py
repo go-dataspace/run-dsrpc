@@ -24,7 +24,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1b\x64sp/v1alpha2/contract.proto\x12\x0c\x64sp.v1alpha2\"}\n\x1f\x43ontractServiceConfigureRequest\x12+\n\x11\x63onnector_address\x18\x01 \x01(\tR\x10\x63onnectorAddress\x12-\n\x12verification_token\x18\x02 \x01(\tR\x11verificationToken\"\"\n ContractServiceConfigureResponse\"p\n%ContractServiceRequestReceivedRequest\x12\x10\n\x03pid\x18\x01 \x01(\tR\x03pid\x12\x14\n\x05offer\x18\x02 \x01(\tR\x05offer\x12\x1f\n\x0bnotify_only\x18\x03 \x01(\x08R\nnotifyOnly\"(\n&ContractServiceRequestReceivedResponse\"n\n#ContractServiceOfferReceivedRequest\x12\x10\n\x03pid\x18\x01 \x01(\tR\x03pid\x12\x14\n\x05offer\x18\x02 \x01(\tR\x05offer\x12\x1f\n\x0bnotify_only\x18\x03 \x01(\x08R\nnotifyOnly\"&\n$ContractServiceOfferReceivedResponse\"[\n&ContractServiceAcceptedReceivedRequest\x12\x10\n\x03pid\x18\x01 \x01(\tR\x03pid\x12\x1f\n\x0bnotify_only\x18\x02 \x01(\x08R\nnotifyOnly\")\n\'ContractServiceAcceptedReceivedResponse\"z\n\'ContractServiceAgreementReceivedRequest\x12\x10\n\x03pid\x18\x01 \x01(\tR\x03pid\x12\x1c\n\tagreement\x18\x02 \x01(\tR\tagreement\x12\x1f\n\x0bnotify_only\x18\x03 \x01(\x08R\nnotifyOnly\"*\n(ContractServiceAgreementReceivedResponse\"_\n*ContractServiceVerificationReceivedRequest\x12\x10\n\x03pid\x18\x01 \x01(\tR\x03pid\x12\x1f\n\x0bnotify_only\x18\x02 \x01(\x08R\nnotifyOnly\"-\n+ContractServiceVerificationReceivedResponse\"_\n*ContractServiceFinalizationReceivedRequest\x12\x10\n\x03pid\x18\x01 \x01(\tR\x03pid\x12\x1f\n\x0bnotify_only\x18\x02 \x01(\x08R\nnotifyOnly\"-\n+ContractServiceFinalizationReceivedResponse\"\x8a\x01\n)ContractServiceTerminationReceivedRequest\x12\x10\n\x03pid\x18\x01 \x01(\tR\x03pid\x12\x12\n\x04\x63ode\x18\x02 \x01(\tR\x04\x63ode\x12\x16\n\x06reason\x18\x03 \x03(\tR\x06reason\x12\x1f\n\x0bnotify_only\x18\x04 \x01(\x08R\nnotifyOnly\",\n*ContractServiceTerminationReceivedResponse2\xb1\x08\n\x0f\x43ontractService\x12l\n\tConfigure\x12-.dsp.v1alpha2.ContractServiceConfigureRequest\x1a..dsp.v1alpha2.ContractServiceConfigureResponse\"\x00\x12~\n\x0fRequestReceived\x12\x33.dsp.v1alpha2.ContractServiceRequestReceivedRequest\x1a\x34.dsp.v1alpha2.ContractServiceRequestReceivedResponse\"\x00\x12x\n\rOfferReceived\x12\x31.dsp.v1alpha2.ContractServiceOfferReceivedRequest\x1a\x32.dsp.v1alpha2.ContractServiceOfferReceivedResponse\"\x00\x12\x81\x01\n\x10\x41\x63\x63\x65ptedReceived\x12\x34.dsp.v1alpha2.ContractServiceAcceptedReceivedRequest\x1a\x35.dsp.v1alpha2.ContractServiceAcceptedReceivedResponse\"\x00\x12\x84\x01\n\x11\x41greementReceived\x12\x35.dsp.v1alpha2.ContractServiceAgreementReceivedRequest\x1a\x36.dsp.v1alpha2.ContractServiceAgreementReceivedResponse\"\x00\x12\x8d\x01\n\x14VerificationReceived\x12\x38.dsp.v1alpha2.ContractServiceVerificationReceivedRequest\x1a\x39.dsp.v1alpha2.ContractServiceVerificationReceivedResponse\"\x00\x12\x8d\x01\n\x14\x46inalizationReceived\x12\x38.dsp.v1alpha2.ContractServiceFinalizationReceivedRequest\x1a\x39.dsp.v1alpha2.ContractServiceFinalizationReceivedResponse\"\x00\x12\x8a\x01\n\x13TerminationReceived\x12\x37.dsp.v1alpha2.ContractServiceTerminationReceivedRequest\x1a\x38.dsp.v1alpha2.ContractServiceTerminationReceivedResponse\"\x00\x42\xa9\x01\n\x10\x63om.dsp.v1alpha2B\rContractProtoP\x01Z5github.com/bufbuild/buf-tour/dsp/v1alpha2;dspv1alpha2\xa2\x02\x03\x44XX\xaa\x02\x0c\x44sp.V1alpha2\xca\x02\x0c\x44sp\\V1alpha2\xe2\x02\x18\x44sp\\V1alpha2\\GPBMetadata\xea\x02\rDsp::V1alpha2b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1b\x64sp/v1alpha2/contract.proto\x12\x0c\x64sp.v1alpha2\"}\n\x1f\x43ontractServiceConfigureRequest\x12+\n\x11\x63onnector_address\x18\x01 \x01(\tR\x10\x63onnectorAddress\x12-\n\x12verification_token\x18\x02 \x01(\tR\x11verificationToken\"\"\n ContractServiceConfigureResponse\"O\n%ContractServiceRequestReceivedRequest\x12\x10\n\x03pid\x18\x01 \x01(\tR\x03pid\x12\x14\n\x05offer\x18\x02 \x01(\tR\x05offer\"(\n&ContractServiceRequestReceivedResponse\"M\n#ContractServiceOfferReceivedRequest\x12\x10\n\x03pid\x18\x01 \x01(\tR\x03pid\x12\x14\n\x05offer\x18\x02 \x01(\tR\x05offer\"&\n$ContractServiceOfferReceivedResponse\":\n&ContractServiceAcceptedReceivedRequest\x12\x10\n\x03pid\x18\x01 \x01(\tR\x03pid\")\n\'ContractServiceAcceptedReceivedResponse\"Y\n\'ContractServiceAgreementReceivedRequest\x12\x10\n\x03pid\x18\x01 \x01(\tR\x03pid\x12\x1c\n\tagreement\x18\x02 \x01(\tR\tagreement\"*\n(ContractServiceAgreementReceivedResponse\">\n*ContractServiceVerificationReceivedRequest\x12\x10\n\x03pid\x18\x01 \x01(\tR\x03pid\"-\n+ContractServiceVerificationReceivedResponse\">\n*ContractServiceFinalizationReceivedRequest\x12\x10\n\x03pid\x18\x01 \x01(\tR\x03pid\"-\n+ContractServiceFinalizationReceivedResponse\"i\n)ContractServiceTerminationReceivedRequest\x12\x10\n\x03pid\x18\x01 \x01(\tR\x03pid\x12\x12\n\x04\x63ode\x18\x02 \x01(\tR\x04\x63ode\x12\x16\n\x06reason\x18\x03 \x03(\tR\x06reason\",\n*ContractServiceTerminationReceivedResponse2\xb1\x08\n\x0f\x43ontractService\x12l\n\tConfigure\x12-.dsp.v1alpha2.ContractServiceConfigureRequest\x1a..dsp.v1alpha2.ContractServiceConfigureResponse\"\x00\x12~\n\x0fRequestReceived\x12\x33.dsp.v1alpha2.ContractServiceRequestReceivedRequest\x1a\x34.dsp.v1alpha2.ContractServiceRequestReceivedResponse\"\x00\x12x\n\rOfferReceived\x12\x31.dsp.v1alpha2.ContractServiceOfferReceivedRequest\x1a\x32.dsp.v1alpha2.ContractServiceOfferReceivedResponse\"\x00\x12\x81\x01\n\x10\x41\x63\x63\x65ptedReceived\x12\x34.dsp.v1alpha2.ContractServiceAcceptedReceivedRequest\x1a\x35.dsp.v1alpha2.ContractServiceAcceptedReceivedResponse\"\x00\x12\x84\x01\n\x11\x41greementReceived\x12\x35.dsp.v1alpha2.ContractServiceAgreementReceivedRequest\x1a\x36.dsp.v1alpha2.ContractServiceAgreementReceivedResponse\"\x00\x12\x8d\x01\n\x14VerificationReceived\x12\x38.dsp.v1alpha2.ContractServiceVerificationReceivedRequest\x1a\x39.dsp.v1alpha2.ContractServiceVerificationReceivedResponse\"\x00\x12\x8d\x01\n\x14\x46inalizationReceived\x12\x38.dsp.v1alpha2.ContractServiceFinalizationReceivedRequest\x1a\x39.dsp.v1alpha2.ContractServiceFinalizationReceivedResponse\"\x00\x12\x8a\x01\n\x13TerminationReceived\x12\x37.dsp.v1alpha2.ContractServiceTerminationReceivedRequest\x1a\x38.dsp.v1alpha2.ContractServiceTerminationReceivedResponse\"\x00\x42\xa9\x01\n\x10\x63om.dsp.v1alpha2B\rContractProtoP\x01Z5github.com/bufbuild/buf-tour/dsp/v1alpha2;dspv1alpha2\xa2\x02\x03\x44XX\xaa\x02\x0c\x44sp.V1alpha2\xca\x02\x0c\x44sp\\V1alpha2\xe2\x02\x18\x44sp\\V1alpha2\\GPBMetadata\xea\x02\rDsp::V1alpha2b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -37,33 +37,33 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_CONTRACTSERVICECONFIGURERESPONSE']._serialized_start=172
   _globals['_CONTRACTSERVICECONFIGURERESPONSE']._serialized_end=206
   _globals['_CONTRACTSERVICEREQUESTRECEIVEDREQUEST']._serialized_start=208
-  _globals['_CONTRACTSERVICEREQUESTRECEIVEDREQUEST']._serialized_end=320
-  _globals['_CONTRACTSERVICEREQUESTRECEIVEDRESPONSE']._serialized_start=322
-  _globals['_CONTRACTSERVICEREQUESTRECEIVEDRESPONSE']._serialized_end=362
-  _globals['_CONTRACTSERVICEOFFERRECEIVEDREQUEST']._serialized_start=364
-  _globals['_CONTRACTSERVICEOFFERRECEIVEDREQUEST']._serialized_end=474
-  _globals['_CONTRACTSERVICEOFFERRECEIVEDRESPONSE']._serialized_start=476
-  _globals['_CONTRACTSERVICEOFFERRECEIVEDRESPONSE']._serialized_end=514
-  _globals['_CONTRACTSERVICEACCEPTEDRECEIVEDREQUEST']._serialized_start=516
-  _globals['_CONTRACTSERVICEACCEPTEDRECEIVEDREQUEST']._serialized_end=607
-  _globals['_CONTRACTSERVICEACCEPTEDRECEIVEDRESPONSE']._serialized_start=609
-  _globals['_CONTRACTSERVICEACCEPTEDRECEIVEDRESPONSE']._serialized_end=650
-  _globals['_CONTRACTSERVICEAGREEMENTRECEIVEDREQUEST']._serialized_start=652
-  _globals['_CONTRACTSERVICEAGREEMENTRECEIVEDREQUEST']._serialized_end=774
-  _globals['_CONTRACTSERVICEAGREEMENTRECEIVEDRESPONSE']._serialized_start=776
-  _globals['_CONTRACTSERVICEAGREEMENTRECEIVEDRESPONSE']._serialized_end=818
-  _globals['_CONTRACTSERVICEVERIFICATIONRECEIVEDREQUEST']._serialized_start=820
-  _globals['_CONTRACTSERVICEVERIFICATIONRECEIVEDREQUEST']._serialized_end=915
-  _globals['_CONTRACTSERVICEVERIFICATIONRECEIVEDRESPONSE']._serialized_start=917
-  _globals['_CONTRACTSERVICEVERIFICATIONRECEIVEDRESPONSE']._serialized_end=962
-  _globals['_CONTRACTSERVICEFINALIZATIONRECEIVEDREQUEST']._serialized_start=964
-  _globals['_CONTRACTSERVICEFINALIZATIONRECEIVEDREQUEST']._serialized_end=1059
-  _globals['_CONTRACTSERVICEFINALIZATIONRECEIVEDRESPONSE']._serialized_start=1061
-  _globals['_CONTRACTSERVICEFINALIZATIONRECEIVEDRESPONSE']._serialized_end=1106
-  _globals['_CONTRACTSERVICETERMINATIONRECEIVEDREQUEST']._serialized_start=1109
-  _globals['_CONTRACTSERVICETERMINATIONRECEIVEDREQUEST']._serialized_end=1247
-  _globals['_CONTRACTSERVICETERMINATIONRECEIVEDRESPONSE']._serialized_start=1249
-  _globals['_CONTRACTSERVICETERMINATIONRECEIVEDRESPONSE']._serialized_end=1293
-  _globals['_CONTRACTSERVICE']._serialized_start=1296
-  _globals['_CONTRACTSERVICE']._serialized_end=2369
+  _globals['_CONTRACTSERVICEREQUESTRECEIVEDREQUEST']._serialized_end=287
+  _globals['_CONTRACTSERVICEREQUESTRECEIVEDRESPONSE']._serialized_start=289
+  _globals['_CONTRACTSERVICEREQUESTRECEIVEDRESPONSE']._serialized_end=329
+  _globals['_CONTRACTSERVICEOFFERRECEIVEDREQUEST']._serialized_start=331
+  _globals['_CONTRACTSERVICEOFFERRECEIVEDREQUEST']._serialized_end=408
+  _globals['_CONTRACTSERVICEOFFERRECEIVEDRESPONSE']._serialized_start=410
+  _globals['_CONTRACTSERVICEOFFERRECEIVEDRESPONSE']._serialized_end=448
+  _globals['_CONTRACTSERVICEACCEPTEDRECEIVEDREQUEST']._serialized_start=450
+  _globals['_CONTRACTSERVICEACCEPTEDRECEIVEDREQUEST']._serialized_end=508
+  _globals['_CONTRACTSERVICEACCEPTEDRECEIVEDRESPONSE']._serialized_start=510
+  _globals['_CONTRACTSERVICEACCEPTEDRECEIVEDRESPONSE']._serialized_end=551
+  _globals['_CONTRACTSERVICEAGREEMENTRECEIVEDREQUEST']._serialized_start=553
+  _globals['_CONTRACTSERVICEAGREEMENTRECEIVEDREQUEST']._serialized_end=642
+  _globals['_CONTRACTSERVICEAGREEMENTRECEIVEDRESPONSE']._serialized_start=644
+  _globals['_CONTRACTSERVICEAGREEMENTRECEIVEDRESPONSE']._serialized_end=686
+  _globals['_CONTRACTSERVICEVERIFICATIONRECEIVEDREQUEST']._serialized_start=688
+  _globals['_CONTRACTSERVICEVERIFICATIONRECEIVEDREQUEST']._serialized_end=750
+  _globals['_CONTRACTSERVICEVERIFICATIONRECEIVEDRESPONSE']._serialized_start=752
+  _globals['_CONTRACTSERVICEVERIFICATIONRECEIVEDRESPONSE']._serialized_end=797
+  _globals['_CONTRACTSERVICEFINALIZATIONRECEIVEDREQUEST']._serialized_start=799
+  _globals['_CONTRACTSERVICEFINALIZATIONRECEIVEDREQUEST']._serialized_end=861
+  _globals['_CONTRACTSERVICEFINALIZATIONRECEIVEDRESPONSE']._serialized_start=863
+  _globals['_CONTRACTSERVICEFINALIZATIONRECEIVEDRESPONSE']._serialized_end=908
+  _globals['_CONTRACTSERVICETERMINATIONRECEIVEDREQUEST']._serialized_start=910
+  _globals['_CONTRACTSERVICETERMINATIONRECEIVEDREQUEST']._serialized_end=1015
+  _globals['_CONTRACTSERVICETERMINATIONRECEIVEDRESPONSE']._serialized_start=1017
+  _globals['_CONTRACTSERVICETERMINATIONRECEIVEDRESPONSE']._serialized_end=1061
+  _globals['_CONTRACTSERVICE']._serialized_start=1064
+  _globals['_CONTRACTSERVICE']._serialized_end=2137
 # @@protoc_insertion_point(module_scope)

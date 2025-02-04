@@ -33,10 +33,10 @@ public interface ContractAgreeRequestOrBuilder extends
       getPidBytes();
 
   /**
-   * <code>bool fast_forward = 3 [json_name = "fastForward"];</code>
-   * @return The fastForward.
+   * <code>bool auto_accept = 3 [json_name = "autoAccept"];</code>
+   * @return The autoAccept.
    */
-  boolean getFastForward();
+  boolean getAutoAccept();
 
   /**
    * <code>bool want_notifications = 4 [json_name = "wantNotifications"];</code>

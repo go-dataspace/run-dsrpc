@@ -53,29 +53,29 @@ public object ContractVerifyRequestKt {
      * signals to RUN-DSP that it should fast forward the negotiation and not wait for any requests of the contract service.
      * ```
      *
-     * `bool fast_forward = 2 [json_name = "fastForward"];`
+     * `bool auto_accept = 2 [json_name = "autoAccept"];`
      */
-    public var fastForward: kotlin.Boolean
-      @JvmName("getFastForward")
-      get() = _builder.getFastForward()
-      @JvmName("setFastForward")
+    public var autoAccept: kotlin.Boolean
+      @JvmName("getAutoAccept")
+      get() = _builder.getAutoAccept()
+      @JvmName("setAutoAccept")
       set(value) {
-        _builder.setFastForward(value)
+        _builder.setAutoAccept(value)
       }
     /**
      * ```
      * signals to RUN-DSP that it should fast forward the negotiation and not wait for any requests of the contract service.
      * ```
      *
-     * `bool fast_forward = 2 [json_name = "fastForward"];`
+     * `bool auto_accept = 2 [json_name = "autoAccept"];`
      */
-    public fun clearFastForward() {
-      _builder.clearFastForward()
+    public fun clearAutoAccept() {
+      _builder.clearAutoAccept()
     }
 
     /**
      * ```
-     * signals to RUN-DSP that the contract service still wants notifications only useful if fast_forward is set.
+     * signals to RUN-DSP that the contract service still wants notifications only useful if auto_accept is set.
      * ```
      *
      * `bool want_notifications = 3 [json_name = "wantNotifications"];`
@@ -89,7 +89,7 @@ public object ContractVerifyRequestKt {
       }
     /**
      * ```
-     * signals to RUN-DSP that the contract service still wants notifications only useful if fast_forward is set.
+     * signals to RUN-DSP that the contract service still wants notifications only useful if auto_accept is set.
      * ```
      *
      * `bool want_notifications = 3 [json_name = "wantNotifications"];`

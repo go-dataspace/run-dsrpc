@@ -116,7 +116,6 @@ class ContractServiceRequestReceivedRequest extends $pb.GeneratedMessage {
   factory ContractServiceRequestReceivedRequest({
     $core.String? pid,
     $core.String? offer,
-    $core.bool? notifyOnly,
   }) {
     final $result = create();
     if (pid != null) {
@@ -124,9 +123,6 @@ class ContractServiceRequestReceivedRequest extends $pb.GeneratedMessage {
     }
     if (offer != null) {
       $result.offer = offer;
-    }
-    if (notifyOnly != null) {
-      $result.notifyOnly = notifyOnly;
     }
     return $result;
   }
@@ -137,7 +133,6 @@ class ContractServiceRequestReceivedRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContractServiceRequestReceivedRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'pid')
     ..aOS(2, _omitFieldNames ? '' : 'offer')
-    ..aOB(3, _omitFieldNames ? '' : 'notifyOnly')
     ..hasRequiredFields = false
   ;
 
@@ -179,15 +174,6 @@ class ContractServiceRequestReceivedRequest extends $pb.GeneratedMessage {
   $core.bool hasOffer() => $_has(1);
   @$pb.TagNumber(2)
   void clearOffer() => clearField(2);
-
-  @$pb.TagNumber(3)
-  $core.bool get notifyOnly => $_getBF(2);
-  @$pb.TagNumber(3)
-  set notifyOnly($core.bool v) { $_setBool(2, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasNotifyOnly() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearNotifyOnly() => clearField(3);
 }
 
 class ContractServiceRequestReceivedResponse extends $pb.GeneratedMessage {
@@ -227,7 +213,6 @@ class ContractServiceOfferReceivedRequest extends $pb.GeneratedMessage {
   factory ContractServiceOfferReceivedRequest({
     $core.String? pid,
     $core.String? offer,
-    $core.bool? notifyOnly,
   }) {
     final $result = create();
     if (pid != null) {
@@ -235,9 +220,6 @@ class ContractServiceOfferReceivedRequest extends $pb.GeneratedMessage {
     }
     if (offer != null) {
       $result.offer = offer;
-    }
-    if (notifyOnly != null) {
-      $result.notifyOnly = notifyOnly;
     }
     return $result;
   }
@@ -248,7 +230,6 @@ class ContractServiceOfferReceivedRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContractServiceOfferReceivedRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'pid')
     ..aOS(2, _omitFieldNames ? '' : 'offer')
-    ..aOB(3, _omitFieldNames ? '' : 'notifyOnly')
     ..hasRequiredFields = false
   ;
 
@@ -290,15 +271,6 @@ class ContractServiceOfferReceivedRequest extends $pb.GeneratedMessage {
   $core.bool hasOffer() => $_has(1);
   @$pb.TagNumber(2)
   void clearOffer() => clearField(2);
-
-  @$pb.TagNumber(3)
-  $core.bool get notifyOnly => $_getBF(2);
-  @$pb.TagNumber(3)
-  set notifyOnly($core.bool v) { $_setBool(2, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasNotifyOnly() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearNotifyOnly() => clearField(3);
 }
 
 class ContractServiceOfferReceivedResponse extends $pb.GeneratedMessage {
@@ -337,14 +309,10 @@ class ContractServiceOfferReceivedResponse extends $pb.GeneratedMessage {
 class ContractServiceAcceptedReceivedRequest extends $pb.GeneratedMessage {
   factory ContractServiceAcceptedReceivedRequest({
     $core.String? pid,
-    $core.bool? notifyOnly,
   }) {
     final $result = create();
     if (pid != null) {
       $result.pid = pid;
-    }
-    if (notifyOnly != null) {
-      $result.notifyOnly = notifyOnly;
     }
     return $result;
   }
@@ -354,7 +322,6 @@ class ContractServiceAcceptedReceivedRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContractServiceAcceptedReceivedRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'pid')
-    ..aOB(2, _omitFieldNames ? '' : 'notifyOnly')
     ..hasRequiredFields = false
   ;
 
@@ -387,15 +354,6 @@ class ContractServiceAcceptedReceivedRequest extends $pb.GeneratedMessage {
   $core.bool hasPid() => $_has(0);
   @$pb.TagNumber(1)
   void clearPid() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.bool get notifyOnly => $_getBF(1);
-  @$pb.TagNumber(2)
-  set notifyOnly($core.bool v) { $_setBool(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasNotifyOnly() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearNotifyOnly() => clearField(2);
 }
 
 class ContractServiceAcceptedReceivedResponse extends $pb.GeneratedMessage {
@@ -435,7 +393,6 @@ class ContractServiceAgreementReceivedRequest extends $pb.GeneratedMessage {
   factory ContractServiceAgreementReceivedRequest({
     $core.String? pid,
     $core.String? agreement,
-    $core.bool? notifyOnly,
   }) {
     final $result = create();
     if (pid != null) {
@@ -443,9 +400,6 @@ class ContractServiceAgreementReceivedRequest extends $pb.GeneratedMessage {
     }
     if (agreement != null) {
       $result.agreement = agreement;
-    }
-    if (notifyOnly != null) {
-      $result.notifyOnly = notifyOnly;
     }
     return $result;
   }
@@ -456,7 +410,6 @@ class ContractServiceAgreementReceivedRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContractServiceAgreementReceivedRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'pid')
     ..aOS(2, _omitFieldNames ? '' : 'agreement')
-    ..aOB(3, _omitFieldNames ? '' : 'notifyOnly')
     ..hasRequiredFields = false
   ;
 
@@ -498,15 +451,6 @@ class ContractServiceAgreementReceivedRequest extends $pb.GeneratedMessage {
   $core.bool hasAgreement() => $_has(1);
   @$pb.TagNumber(2)
   void clearAgreement() => clearField(2);
-
-  @$pb.TagNumber(3)
-  $core.bool get notifyOnly => $_getBF(2);
-  @$pb.TagNumber(3)
-  set notifyOnly($core.bool v) { $_setBool(2, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasNotifyOnly() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearNotifyOnly() => clearField(3);
 }
 
 class ContractServiceAgreementReceivedResponse extends $pb.GeneratedMessage {
@@ -545,14 +489,10 @@ class ContractServiceAgreementReceivedResponse extends $pb.GeneratedMessage {
 class ContractServiceVerificationReceivedRequest extends $pb.GeneratedMessage {
   factory ContractServiceVerificationReceivedRequest({
     $core.String? pid,
-    $core.bool? notifyOnly,
   }) {
     final $result = create();
     if (pid != null) {
       $result.pid = pid;
-    }
-    if (notifyOnly != null) {
-      $result.notifyOnly = notifyOnly;
     }
     return $result;
   }
@@ -562,7 +502,6 @@ class ContractServiceVerificationReceivedRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContractServiceVerificationReceivedRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'pid')
-    ..aOB(2, _omitFieldNames ? '' : 'notifyOnly')
     ..hasRequiredFields = false
   ;
 
@@ -595,15 +534,6 @@ class ContractServiceVerificationReceivedRequest extends $pb.GeneratedMessage {
   $core.bool hasPid() => $_has(0);
   @$pb.TagNumber(1)
   void clearPid() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.bool get notifyOnly => $_getBF(1);
-  @$pb.TagNumber(2)
-  set notifyOnly($core.bool v) { $_setBool(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasNotifyOnly() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearNotifyOnly() => clearField(2);
 }
 
 class ContractServiceVerificationReceivedResponse extends $pb.GeneratedMessage {
@@ -642,14 +572,10 @@ class ContractServiceVerificationReceivedResponse extends $pb.GeneratedMessage {
 class ContractServiceFinalizationReceivedRequest extends $pb.GeneratedMessage {
   factory ContractServiceFinalizationReceivedRequest({
     $core.String? pid,
-    $core.bool? notifyOnly,
   }) {
     final $result = create();
     if (pid != null) {
       $result.pid = pid;
-    }
-    if (notifyOnly != null) {
-      $result.notifyOnly = notifyOnly;
     }
     return $result;
   }
@@ -659,7 +585,6 @@ class ContractServiceFinalizationReceivedRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContractServiceFinalizationReceivedRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'pid')
-    ..aOB(2, _omitFieldNames ? '' : 'notifyOnly')
     ..hasRequiredFields = false
   ;
 
@@ -692,15 +617,6 @@ class ContractServiceFinalizationReceivedRequest extends $pb.GeneratedMessage {
   $core.bool hasPid() => $_has(0);
   @$pb.TagNumber(1)
   void clearPid() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.bool get notifyOnly => $_getBF(1);
-  @$pb.TagNumber(2)
-  set notifyOnly($core.bool v) { $_setBool(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasNotifyOnly() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearNotifyOnly() => clearField(2);
 }
 
 class ContractServiceFinalizationReceivedResponse extends $pb.GeneratedMessage {
@@ -742,7 +658,6 @@ class ContractServiceTerminationReceivedRequest extends $pb.GeneratedMessage {
     $core.String? pid,
     $core.String? code,
     $core.Iterable<$core.String>? reason,
-    $core.bool? notifyOnly,
   }) {
     final $result = create();
     if (pid != null) {
@@ -754,9 +669,6 @@ class ContractServiceTerminationReceivedRequest extends $pb.GeneratedMessage {
     if (reason != null) {
       $result.reason.addAll(reason);
     }
-    if (notifyOnly != null) {
-      $result.notifyOnly = notifyOnly;
-    }
     return $result;
   }
   ContractServiceTerminationReceivedRequest._() : super();
@@ -767,7 +679,6 @@ class ContractServiceTerminationReceivedRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'pid')
     ..aOS(2, _omitFieldNames ? '' : 'code')
     ..pPS(3, _omitFieldNames ? '' : 'reason')
-    ..aOB(4, _omitFieldNames ? '' : 'notifyOnly')
     ..hasRequiredFields = false
   ;
 
@@ -812,15 +723,6 @@ class ContractServiceTerminationReceivedRequest extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(3)
   $core.List<$core.String> get reason => $_getList(2);
-
-  @$pb.TagNumber(4)
-  $core.bool get notifyOnly => $_getBF(3);
-  @$pb.TagNumber(4)
-  set notifyOnly($core.bool v) { $_setBool(3, v); }
-  @$pb.TagNumber(4)
-  $core.bool hasNotifyOnly() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearNotifyOnly() => clearField(4);
 }
 
 class ContractServiceTerminationReceivedResponse extends $pb.GeneratedMessage {

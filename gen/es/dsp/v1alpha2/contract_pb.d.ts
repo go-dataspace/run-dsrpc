@@ -91,11 +91,6 @@ export declare class ContractServiceRequestReceivedRequest extends Message<Contr
    */
   offer: string;
 
-  /**
-   * @generated from field: bool notify_only = 3;
-   */
-  notifyOnly: boolean;
-
   constructor(data?: PartialMessage<ContractServiceRequestReceivedRequest>);
 
   static readonly runtime: typeof proto3;
@@ -146,11 +141,6 @@ export declare class ContractServiceOfferReceivedRequest extends Message<Contrac
    */
   offer: string;
 
-  /**
-   * @generated from field: bool notify_only = 3;
-   */
-  notifyOnly: boolean;
-
   constructor(data?: PartialMessage<ContractServiceOfferReceivedRequest>);
 
   static readonly runtime: typeof proto3;
@@ -195,11 +185,6 @@ export declare class ContractServiceAcceptedReceivedRequest extends Message<Cont
    * @generated from field: string pid = 1;
    */
   pid: string;
-
-  /**
-   * @generated from field: bool notify_only = 2;
-   */
-  notifyOnly: boolean;
 
   constructor(data?: PartialMessage<ContractServiceAcceptedReceivedRequest>);
 
@@ -251,11 +236,6 @@ export declare class ContractServiceAgreementReceivedRequest extends Message<Con
    */
   agreement: string;
 
-  /**
-   * @generated from field: bool notify_only = 3;
-   */
-  notifyOnly: boolean;
-
   constructor(data?: PartialMessage<ContractServiceAgreementReceivedRequest>);
 
   static readonly runtime: typeof proto3;
@@ -301,11 +281,6 @@ export declare class ContractServiceVerificationReceivedRequest extends Message<
    */
   pid: string;
 
-  /**
-   * @generated from field: bool notify_only = 2;
-   */
-  notifyOnly: boolean;
-
   constructor(data?: PartialMessage<ContractServiceVerificationReceivedRequest>);
 
   static readonly runtime: typeof proto3;
@@ -350,11 +325,6 @@ export declare class ContractServiceFinalizationReceivedRequest extends Message<
    * @generated from field: string pid = 1;
    */
   pid: string;
-
-  /**
-   * @generated from field: bool notify_only = 2;
-   */
-  notifyOnly: boolean;
 
   constructor(data?: PartialMessage<ContractServiceFinalizationReceivedRequest>);
 
@@ -411,11 +381,6 @@ export declare class ContractServiceTerminationReceivedRequest extends Message<C
    * @generated from field: repeated string reason = 3;
    */
   reason: string[];
-
-  /**
-   * @generated from field: bool notify_only = 4;
-   */
-  notifyOnly: boolean;
 
   constructor(data?: PartialMessage<ContractServiceTerminationReceivedRequest>);
 

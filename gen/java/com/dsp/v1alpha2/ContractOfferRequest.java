@@ -181,15 +181,15 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int FAST_FORWARD_FIELD_NUMBER = 4;
-  private boolean fastForward_ = false;
+  public static final int AUTO_ACCEPT_FIELD_NUMBER = 4;
+  private boolean autoAccept_ = false;
   /**
-   * <code>bool fast_forward = 4 [json_name = "fastForward"];</code>
-   * @return The fastForward.
+   * <code>bool auto_accept = 4 [json_name = "autoAccept"];</code>
+   * @return The autoAccept.
    */
   @java.lang.Override
-  public boolean getFastForward() {
-    return fastForward_;
+  public boolean getAutoAccept() {
+    return autoAccept_;
   }
 
   public static final int WANT_NOTIFICATIONS_FIELD_NUMBER = 5;
@@ -226,8 +226,8 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, participantAddress_);
     }
-    if (fastForward_ != false) {
-      output.writeBool(4, fastForward_);
+    if (autoAccept_ != false) {
+      output.writeBool(4, autoAccept_);
     }
     if (wantNotifications_ != false) {
       output.writeBool(5, wantNotifications_);
@@ -250,9 +250,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, participantAddress_);
     }
-    if (fastForward_ != false) {
+    if (autoAccept_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(4, fastForward_);
+        .computeBoolSize(4, autoAccept_);
     }
     if (wantNotifications_ != false) {
       size += com.google.protobuf.CodedOutputStream
@@ -285,8 +285,8 @@ private static final long serialVersionUID = 0L;
       if (!getParticipantAddress()
           .equals(other.getParticipantAddress())) return false;
     }
-    if (getFastForward()
-        != other.getFastForward()) return false;
+    if (getAutoAccept()
+        != other.getAutoAccept()) return false;
     if (getWantNotifications()
         != other.getWantNotifications()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -310,9 +310,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PARTICIPANT_ADDRESS_FIELD_NUMBER;
       hash = (53 * hash) + getParticipantAddress().hashCode();
     }
-    hash = (37 * hash) + FAST_FORWARD_FIELD_NUMBER;
+    hash = (37 * hash) + AUTO_ACCEPT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getFastForward());
+        getAutoAccept());
     hash = (37 * hash) + WANT_NOTIFICATIONS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getWantNotifications());
@@ -455,7 +455,7 @@ private static final long serialVersionUID = 0L;
       offer_ = "";
       pid_ = "";
       participantAddress_ = "";
-      fastForward_ = false;
+      autoAccept_ = false;
       wantNotifications_ = false;
       return this;
     }
@@ -503,7 +503,7 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.fastForward_ = fastForward_;
+        result.autoAccept_ = autoAccept_;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.wantNotifications_ = wantNotifications_;
@@ -570,8 +570,8 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000004;
         onChanged();
       }
-      if (other.getFastForward() != false) {
-        setFastForward(other.getFastForward());
+      if (other.getAutoAccept() != false) {
+        setAutoAccept(other.getAutoAccept());
       }
       if (other.getWantNotifications() != false) {
         setWantNotifications(other.getWantNotifications());
@@ -618,7 +618,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 26
             case 32: {
-              fastForward_ = input.readBool();
+              autoAccept_ = input.readBool();
               bitField0_ |= 0x00000008;
               break;
             } // case 32
@@ -874,34 +874,34 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private boolean fastForward_ ;
+    private boolean autoAccept_ ;
     /**
-     * <code>bool fast_forward = 4 [json_name = "fastForward"];</code>
-     * @return The fastForward.
+     * <code>bool auto_accept = 4 [json_name = "autoAccept"];</code>
+     * @return The autoAccept.
      */
     @java.lang.Override
-    public boolean getFastForward() {
-      return fastForward_;
+    public boolean getAutoAccept() {
+      return autoAccept_;
     }
     /**
-     * <code>bool fast_forward = 4 [json_name = "fastForward"];</code>
-     * @param value The fastForward to set.
+     * <code>bool auto_accept = 4 [json_name = "autoAccept"];</code>
+     * @param value The autoAccept to set.
      * @return This builder for chaining.
      */
-    public Builder setFastForward(boolean value) {
+    public Builder setAutoAccept(boolean value) {
 
-      fastForward_ = value;
+      autoAccept_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <code>bool fast_forward = 4 [json_name = "fastForward"];</code>
+     * <code>bool auto_accept = 4 [json_name = "autoAccept"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearFastForward() {
+    public Builder clearAutoAccept() {
       bitField0_ = (bitField0_ & ~0x00000008);
-      fastForward_ = false;
+      autoAccept_ = false;
       onChanged();
       return this;
     }

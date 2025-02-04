@@ -275,9 +275,9 @@ export declare class ContractRequestRequest extends Message<ContractRequestReque
   participantAddress?: string;
 
   /**
-   * @generated from field: bool fast_forward = 4;
+   * @generated from field: bool auto_accept = 4;
    */
-  fastForward: boolean;
+  autoAccept: boolean;
 
   /**
    * @generated from field: bool want_notifications = 5;
@@ -341,9 +341,9 @@ export declare class ContractOfferRequest extends Message<ContractOfferRequest> 
   participantAddress?: string;
 
   /**
-   * @generated from field: bool fast_forward = 4;
+   * @generated from field: bool auto_accept = 4;
    */
-  fastForward: boolean;
+  autoAccept: boolean;
 
   /**
    * @generated from field: bool want_notifications = 5;
@@ -396,9 +396,9 @@ export declare class ContractAcceptRequest extends Message<ContractAcceptRequest
   pid: string;
 
   /**
-   * @generated from field: bool fast_forward = 2;
+   * @generated from field: bool auto_accept = 2;
    */
-  fastForward: boolean;
+  autoAccept: boolean;
 
   /**
    * @generated from field: bool want_notifications = 3;
@@ -456,9 +456,9 @@ export declare class ContractAgreeRequest extends Message<ContractAgreeRequest> 
   pid: string;
 
   /**
-   * @generated from field: bool fast_forward = 3;
+   * @generated from field: bool auto_accept = 3;
    */
-  fastForward: boolean;
+  autoAccept: boolean;
 
   /**
    * @generated from field: bool want_notifications = 4;
@@ -513,12 +513,12 @@ export declare class ContractVerifyRequest extends Message<ContractVerifyRequest
   /**
    * signals to RUN-DSP that it should fast forward the negotiation and not wait for any requests of the contract service.
    *
-   * @generated from field: bool fast_forward = 2;
+   * @generated from field: bool auto_accept = 2;
    */
-  fastForward: boolean;
+  autoAccept: boolean;
 
   /**
-   * signals to RUN-DSP that the contract service still wants notifications only useful if fast_forward is set.
+   * signals to RUN-DSP that the contract service still wants notifications only useful if auto_accept is set.
    *
    * @generated from field: bool want_notifications = 3;
    */
@@ -570,9 +570,9 @@ export declare class ContractFinalizeRequest extends Message<ContractFinalizeReq
   pid: string;
 
   /**
-   * @generated from field: bool fast_forward = 2;
+   * @generated from field: bool auto_accept = 2;
    */
-  fastForward: boolean;
+  autoAccept: boolean;
 
   /**
    * @generated from field: bool want_notifications = 3;

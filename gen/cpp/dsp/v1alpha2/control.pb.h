@@ -2440,7 +2440,7 @@ class ContractVerifyRequest final : public ::google::protobuf::Message
   // accessors -------------------------------------------------------
   enum : int {
     kPidFieldNumber = 1,
-    kFastForwardFieldNumber = 2,
+    kAutoAcceptFieldNumber = 2,
     kWantNotificationsFieldNumber = 3,
   };
   // string pid = 1 [json_name = "pid"];
@@ -2459,14 +2459,14 @@ class ContractVerifyRequest final : public ::google::protobuf::Message
   std::string* _internal_mutable_pid();
 
   public:
-  // bool fast_forward = 2 [json_name = "fastForward"];
-  void clear_fast_forward() ;
-  bool fast_forward() const;
-  void set_fast_forward(bool value);
+  // bool auto_accept = 2 [json_name = "autoAccept"];
+  void clear_auto_accept() ;
+  bool auto_accept() const;
+  void set_auto_accept(bool value);
 
   private:
-  bool _internal_fast_forward() const;
-  void _internal_set_fast_forward(bool value);
+  bool _internal_auto_accept() const;
+  void _internal_set_auto_accept(bool value);
 
   public:
   // bool want_notifications = 3 [json_name = "wantNotifications"];
@@ -2506,7 +2506,7 @@ class ContractVerifyRequest final : public ::google::protobuf::Message
                           ::google::protobuf::Arena* arena, const Impl_& from,
                           const ContractVerifyRequest& from_msg);
     ::google::protobuf::internal::ArenaStringPtr pid_;
-    bool fast_forward_;
+    bool auto_accept_;
     bool want_notifications_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
@@ -3152,7 +3152,7 @@ class ContractRequestRequest final : public ::google::protobuf::Message
     kOfferFieldNumber = 1,
     kPidFieldNumber = 2,
     kParticipantAddressFieldNumber = 3,
-    kFastForwardFieldNumber = 4,
+    kAutoAcceptFieldNumber = 4,
     kWantNotificationsFieldNumber = 5,
   };
   // string offer = 1 [json_name = "offer"];
@@ -3205,14 +3205,14 @@ class ContractRequestRequest final : public ::google::protobuf::Message
   std::string* _internal_mutable_participant_address();
 
   public:
-  // bool fast_forward = 4 [json_name = "fastForward"];
-  void clear_fast_forward() ;
-  bool fast_forward() const;
-  void set_fast_forward(bool value);
+  // bool auto_accept = 4 [json_name = "autoAccept"];
+  void clear_auto_accept() ;
+  bool auto_accept() const;
+  void set_auto_accept(bool value);
 
   private:
-  bool _internal_fast_forward() const;
-  void _internal_set_fast_forward(bool value);
+  bool _internal_auto_accept() const;
+  void _internal_set_auto_accept(bool value);
 
   public:
   // bool want_notifications = 5 [json_name = "wantNotifications"];
@@ -3256,7 +3256,7 @@ class ContractRequestRequest final : public ::google::protobuf::Message
     ::google::protobuf::internal::ArenaStringPtr offer_;
     ::google::protobuf::internal::ArenaStringPtr pid_;
     ::google::protobuf::internal::ArenaStringPtr participant_address_;
-    bool fast_forward_;
+    bool auto_accept_;
     bool want_notifications_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -3534,7 +3534,7 @@ class ContractOfferRequest final : public ::google::protobuf::Message
     kOfferFieldNumber = 1,
     kPidFieldNumber = 2,
     kParticipantAddressFieldNumber = 3,
-    kFastForwardFieldNumber = 4,
+    kAutoAcceptFieldNumber = 4,
     kWantNotificationsFieldNumber = 5,
   };
   // string offer = 1 [json_name = "offer"];
@@ -3587,14 +3587,14 @@ class ContractOfferRequest final : public ::google::protobuf::Message
   std::string* _internal_mutable_participant_address();
 
   public:
-  // bool fast_forward = 4 [json_name = "fastForward"];
-  void clear_fast_forward() ;
-  bool fast_forward() const;
-  void set_fast_forward(bool value);
+  // bool auto_accept = 4 [json_name = "autoAccept"];
+  void clear_auto_accept() ;
+  bool auto_accept() const;
+  void set_auto_accept(bool value);
 
   private:
-  bool _internal_fast_forward() const;
-  void _internal_set_fast_forward(bool value);
+  bool _internal_auto_accept() const;
+  void _internal_set_auto_accept(bool value);
 
   public:
   // bool want_notifications = 5 [json_name = "wantNotifications"];
@@ -3638,7 +3638,7 @@ class ContractOfferRequest final : public ::google::protobuf::Message
     ::google::protobuf::internal::ArenaStringPtr offer_;
     ::google::protobuf::internal::ArenaStringPtr pid_;
     ::google::protobuf::internal::ArenaStringPtr participant_address_;
-    bool fast_forward_;
+    bool auto_accept_;
     bool want_notifications_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -3914,7 +3914,7 @@ class ContractFinalizeRequest final : public ::google::protobuf::Message
   // accessors -------------------------------------------------------
   enum : int {
     kPidFieldNumber = 1,
-    kFastForwardFieldNumber = 2,
+    kAutoAcceptFieldNumber = 2,
     kWantNotificationsFieldNumber = 3,
   };
   // string pid = 1 [json_name = "pid"];
@@ -3933,14 +3933,14 @@ class ContractFinalizeRequest final : public ::google::protobuf::Message
   std::string* _internal_mutable_pid();
 
   public:
-  // bool fast_forward = 2 [json_name = "fastForward"];
-  void clear_fast_forward() ;
-  bool fast_forward() const;
-  void set_fast_forward(bool value);
+  // bool auto_accept = 2 [json_name = "autoAccept"];
+  void clear_auto_accept() ;
+  bool auto_accept() const;
+  void set_auto_accept(bool value);
 
   private:
-  bool _internal_fast_forward() const;
-  void _internal_set_fast_forward(bool value);
+  bool _internal_auto_accept() const;
+  void _internal_set_auto_accept(bool value);
 
   public:
   // bool want_notifications = 3 [json_name = "wantNotifications"];
@@ -3980,7 +3980,7 @@ class ContractFinalizeRequest final : public ::google::protobuf::Message
                           ::google::protobuf::Arena* arena, const Impl_& from,
                           const ContractFinalizeRequest& from_msg);
     ::google::protobuf::internal::ArenaStringPtr pid_;
-    bool fast_forward_;
+    bool auto_accept_;
     bool want_notifications_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
@@ -4258,7 +4258,7 @@ class ContractAgreeRequest final : public ::google::protobuf::Message
   enum : int {
     kAgreementFieldNumber = 1,
     kPidFieldNumber = 2,
-    kFastForwardFieldNumber = 3,
+    kAutoAcceptFieldNumber = 3,
     kWantNotificationsFieldNumber = 4,
   };
   // string agreement = 1 [json_name = "agreement"];
@@ -4293,14 +4293,14 @@ class ContractAgreeRequest final : public ::google::protobuf::Message
   std::string* _internal_mutable_pid();
 
   public:
-  // bool fast_forward = 3 [json_name = "fastForward"];
-  void clear_fast_forward() ;
-  bool fast_forward() const;
-  void set_fast_forward(bool value);
+  // bool auto_accept = 3 [json_name = "autoAccept"];
+  void clear_auto_accept() ;
+  bool auto_accept() const;
+  void set_auto_accept(bool value);
 
   private:
-  bool _internal_fast_forward() const;
-  void _internal_set_fast_forward(bool value);
+  bool _internal_auto_accept() const;
+  void _internal_set_auto_accept(bool value);
 
   public:
   // bool want_notifications = 4 [json_name = "wantNotifications"];
@@ -4341,7 +4341,7 @@ class ContractAgreeRequest final : public ::google::protobuf::Message
                           const ContractAgreeRequest& from_msg);
     ::google::protobuf::internal::ArenaStringPtr agreement_;
     ::google::protobuf::internal::ArenaStringPtr pid_;
-    bool fast_forward_;
+    bool auto_accept_;
     bool want_notifications_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
@@ -4618,7 +4618,7 @@ class ContractAcceptRequest final : public ::google::protobuf::Message
   // accessors -------------------------------------------------------
   enum : int {
     kPidFieldNumber = 1,
-    kFastForwardFieldNumber = 2,
+    kAutoAcceptFieldNumber = 2,
     kWantNotificationsFieldNumber = 3,
   };
   // string pid = 1 [json_name = "pid"];
@@ -4637,14 +4637,14 @@ class ContractAcceptRequest final : public ::google::protobuf::Message
   std::string* _internal_mutable_pid();
 
   public:
-  // bool fast_forward = 2 [json_name = "fastForward"];
-  void clear_fast_forward() ;
-  bool fast_forward() const;
-  void set_fast_forward(bool value);
+  // bool auto_accept = 2 [json_name = "autoAccept"];
+  void clear_auto_accept() ;
+  bool auto_accept() const;
+  void set_auto_accept(bool value);
 
   private:
-  bool _internal_fast_forward() const;
-  void _internal_set_fast_forward(bool value);
+  bool _internal_auto_accept() const;
+  void _internal_set_auto_accept(bool value);
 
   public:
   // bool want_notifications = 3 [json_name = "wantNotifications"];
@@ -4684,7 +4684,7 @@ class ContractAcceptRequest final : public ::google::protobuf::Message
                           ::google::protobuf::Arena* arena, const Impl_& from,
                           const ContractAcceptRequest& from_msg);
     ::google::protobuf::internal::ArenaStringPtr pid_;
-    bool fast_forward_;
+    bool auto_accept_;
     bool want_notifications_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
@@ -6355,26 +6355,26 @@ inline void ContractRequestRequest::set_allocated_participant_address(std::strin
   // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractRequestRequest.participant_address)
 }
 
-// bool fast_forward = 4 [json_name = "fastForward"];
-inline void ContractRequestRequest::clear_fast_forward() {
+// bool auto_accept = 4 [json_name = "autoAccept"];
+inline void ContractRequestRequest::clear_auto_accept() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.fast_forward_ = false;
+  _impl_.auto_accept_ = false;
 }
-inline bool ContractRequestRequest::fast_forward() const {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractRequestRequest.fast_forward)
-  return _internal_fast_forward();
+inline bool ContractRequestRequest::auto_accept() const {
+  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractRequestRequest.auto_accept)
+  return _internal_auto_accept();
 }
-inline void ContractRequestRequest::set_fast_forward(bool value) {
-  _internal_set_fast_forward(value);
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractRequestRequest.fast_forward)
+inline void ContractRequestRequest::set_auto_accept(bool value) {
+  _internal_set_auto_accept(value);
+  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractRequestRequest.auto_accept)
 }
-inline bool ContractRequestRequest::_internal_fast_forward() const {
+inline bool ContractRequestRequest::_internal_auto_accept() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.fast_forward_;
+  return _impl_.auto_accept_;
 }
-inline void ContractRequestRequest::_internal_set_fast_forward(bool value) {
+inline void ContractRequestRequest::_internal_set_auto_accept(bool value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.fast_forward_ = value;
+  _impl_.auto_accept_ = value;
 }
 
 // bool want_notifications = 5 [json_name = "wantNotifications"];
@@ -6599,26 +6599,26 @@ inline void ContractOfferRequest::set_allocated_participant_address(std::string*
   // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractOfferRequest.participant_address)
 }
 
-// bool fast_forward = 4 [json_name = "fastForward"];
-inline void ContractOfferRequest::clear_fast_forward() {
+// bool auto_accept = 4 [json_name = "autoAccept"];
+inline void ContractOfferRequest::clear_auto_accept() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.fast_forward_ = false;
+  _impl_.auto_accept_ = false;
 }
-inline bool ContractOfferRequest::fast_forward() const {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractOfferRequest.fast_forward)
-  return _internal_fast_forward();
+inline bool ContractOfferRequest::auto_accept() const {
+  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractOfferRequest.auto_accept)
+  return _internal_auto_accept();
 }
-inline void ContractOfferRequest::set_fast_forward(bool value) {
-  _internal_set_fast_forward(value);
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractOfferRequest.fast_forward)
+inline void ContractOfferRequest::set_auto_accept(bool value) {
+  _internal_set_auto_accept(value);
+  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractOfferRequest.auto_accept)
 }
-inline bool ContractOfferRequest::_internal_fast_forward() const {
+inline bool ContractOfferRequest::_internal_auto_accept() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.fast_forward_;
+  return _impl_.auto_accept_;
 }
-inline void ContractOfferRequest::_internal_set_fast_forward(bool value) {
+inline void ContractOfferRequest::_internal_set_auto_accept(bool value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.fast_forward_ = value;
+  _impl_.auto_accept_ = value;
 }
 
 // bool want_notifications = 5 [json_name = "wantNotifications"];
@@ -6701,26 +6701,26 @@ inline void ContractAcceptRequest::set_allocated_pid(std::string* value) {
   // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractAcceptRequest.pid)
 }
 
-// bool fast_forward = 2 [json_name = "fastForward"];
-inline void ContractAcceptRequest::clear_fast_forward() {
+// bool auto_accept = 2 [json_name = "autoAccept"];
+inline void ContractAcceptRequest::clear_auto_accept() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.fast_forward_ = false;
+  _impl_.auto_accept_ = false;
 }
-inline bool ContractAcceptRequest::fast_forward() const {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractAcceptRequest.fast_forward)
-  return _internal_fast_forward();
+inline bool ContractAcceptRequest::auto_accept() const {
+  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractAcceptRequest.auto_accept)
+  return _internal_auto_accept();
 }
-inline void ContractAcceptRequest::set_fast_forward(bool value) {
-  _internal_set_fast_forward(value);
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractAcceptRequest.fast_forward)
+inline void ContractAcceptRequest::set_auto_accept(bool value) {
+  _internal_set_auto_accept(value);
+  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractAcceptRequest.auto_accept)
 }
-inline bool ContractAcceptRequest::_internal_fast_forward() const {
+inline bool ContractAcceptRequest::_internal_auto_accept() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.fast_forward_;
+  return _impl_.auto_accept_;
 }
-inline void ContractAcceptRequest::_internal_set_fast_forward(bool value) {
+inline void ContractAcceptRequest::_internal_set_auto_accept(bool value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.fast_forward_ = value;
+  _impl_.auto_accept_ = value;
 }
 
 // bool want_notifications = 3 [json_name = "wantNotifications"];
@@ -6853,26 +6853,26 @@ inline void ContractAgreeRequest::set_allocated_pid(std::string* value) {
   // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractAgreeRequest.pid)
 }
 
-// bool fast_forward = 3 [json_name = "fastForward"];
-inline void ContractAgreeRequest::clear_fast_forward() {
+// bool auto_accept = 3 [json_name = "autoAccept"];
+inline void ContractAgreeRequest::clear_auto_accept() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.fast_forward_ = false;
+  _impl_.auto_accept_ = false;
 }
-inline bool ContractAgreeRequest::fast_forward() const {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractAgreeRequest.fast_forward)
-  return _internal_fast_forward();
+inline bool ContractAgreeRequest::auto_accept() const {
+  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractAgreeRequest.auto_accept)
+  return _internal_auto_accept();
 }
-inline void ContractAgreeRequest::set_fast_forward(bool value) {
-  _internal_set_fast_forward(value);
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractAgreeRequest.fast_forward)
+inline void ContractAgreeRequest::set_auto_accept(bool value) {
+  _internal_set_auto_accept(value);
+  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractAgreeRequest.auto_accept)
 }
-inline bool ContractAgreeRequest::_internal_fast_forward() const {
+inline bool ContractAgreeRequest::_internal_auto_accept() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.fast_forward_;
+  return _impl_.auto_accept_;
 }
-inline void ContractAgreeRequest::_internal_set_fast_forward(bool value) {
+inline void ContractAgreeRequest::_internal_set_auto_accept(bool value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.fast_forward_ = value;
+  _impl_.auto_accept_ = value;
 }
 
 // bool want_notifications = 4 [json_name = "wantNotifications"];
@@ -6955,26 +6955,26 @@ inline void ContractVerifyRequest::set_allocated_pid(std::string* value) {
   // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractVerifyRequest.pid)
 }
 
-// bool fast_forward = 2 [json_name = "fastForward"];
-inline void ContractVerifyRequest::clear_fast_forward() {
+// bool auto_accept = 2 [json_name = "autoAccept"];
+inline void ContractVerifyRequest::clear_auto_accept() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.fast_forward_ = false;
+  _impl_.auto_accept_ = false;
 }
-inline bool ContractVerifyRequest::fast_forward() const {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractVerifyRequest.fast_forward)
-  return _internal_fast_forward();
+inline bool ContractVerifyRequest::auto_accept() const {
+  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractVerifyRequest.auto_accept)
+  return _internal_auto_accept();
 }
-inline void ContractVerifyRequest::set_fast_forward(bool value) {
-  _internal_set_fast_forward(value);
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractVerifyRequest.fast_forward)
+inline void ContractVerifyRequest::set_auto_accept(bool value) {
+  _internal_set_auto_accept(value);
+  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractVerifyRequest.auto_accept)
 }
-inline bool ContractVerifyRequest::_internal_fast_forward() const {
+inline bool ContractVerifyRequest::_internal_auto_accept() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.fast_forward_;
+  return _impl_.auto_accept_;
 }
-inline void ContractVerifyRequest::_internal_set_fast_forward(bool value) {
+inline void ContractVerifyRequest::_internal_set_auto_accept(bool value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.fast_forward_ = value;
+  _impl_.auto_accept_ = value;
 }
 
 // bool want_notifications = 3 [json_name = "wantNotifications"];
@@ -7057,26 +7057,26 @@ inline void ContractFinalizeRequest::set_allocated_pid(std::string* value) {
   // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractFinalizeRequest.pid)
 }
 
-// bool fast_forward = 2 [json_name = "fastForward"];
-inline void ContractFinalizeRequest::clear_fast_forward() {
+// bool auto_accept = 2 [json_name = "autoAccept"];
+inline void ContractFinalizeRequest::clear_auto_accept() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.fast_forward_ = false;
+  _impl_.auto_accept_ = false;
 }
-inline bool ContractFinalizeRequest::fast_forward() const {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractFinalizeRequest.fast_forward)
-  return _internal_fast_forward();
+inline bool ContractFinalizeRequest::auto_accept() const {
+  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractFinalizeRequest.auto_accept)
+  return _internal_auto_accept();
 }
-inline void ContractFinalizeRequest::set_fast_forward(bool value) {
-  _internal_set_fast_forward(value);
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractFinalizeRequest.fast_forward)
+inline void ContractFinalizeRequest::set_auto_accept(bool value) {
+  _internal_set_auto_accept(value);
+  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractFinalizeRequest.auto_accept)
 }
-inline bool ContractFinalizeRequest::_internal_fast_forward() const {
+inline bool ContractFinalizeRequest::_internal_auto_accept() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.fast_forward_;
+  return _impl_.auto_accept_;
 }
-inline void ContractFinalizeRequest::_internal_set_fast_forward(bool value) {
+inline void ContractFinalizeRequest::_internal_set_auto_accept(bool value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.fast_forward_ = value;
+  _impl_.auto_accept_ = value;
 }
 
 // bool want_notifications = 3 [json_name = "wantNotifications"];

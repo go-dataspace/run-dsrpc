@@ -65,23 +65,6 @@ public object ContractServiceRequestReceivedRequestKt {
     public fun clearOffer() {
       _builder.clearOffer()
     }
-
-    /**
-     * `bool notify_only = 3 [json_name = "notifyOnly"];`
-     */
-    public var notifyOnly: kotlin.Boolean
-      @JvmName("getNotifyOnly")
-      get() = _builder.getNotifyOnly()
-      @JvmName("setNotifyOnly")
-      set(value) {
-        _builder.setNotifyOnly(value)
-      }
-    /**
-     * `bool notify_only = 3 [json_name = "notifyOnly"];`
-     */
-    public fun clearNotifyOnly() {
-      _builder.clearNotifyOnly()
-    }
   }
 }
 @kotlin.jvm.JvmSynthetic

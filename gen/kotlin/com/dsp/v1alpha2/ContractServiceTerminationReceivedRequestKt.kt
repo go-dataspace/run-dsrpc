@@ -135,24 +135,7 @@ public object ContractServiceTerminationReceivedRequestKt {
     @kotlin.jvm.JvmName("clearReason")
     public fun com.google.protobuf.kotlin.DslList<kotlin.String, ReasonProxy>.clear() {
       _builder.clearReason()
-    }
-    /**
-     * `bool notify_only = 4 [json_name = "notifyOnly"];`
-     */
-    public var notifyOnly: kotlin.Boolean
-      @JvmName("getNotifyOnly")
-      get() = _builder.getNotifyOnly()
-      @JvmName("setNotifyOnly")
-      set(value) {
-        _builder.setNotifyOnly(value)
-      }
-    /**
-     * `bool notify_only = 4 [json_name = "notifyOnly"];`
-     */
-    public fun clearNotifyOnly() {
-      _builder.clearNotifyOnly()
-    }
-  }
+    }}
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun com.dsp.v1alpha2.ContractServiceTerminationReceivedRequest.copy(block: `com.dsp.v1alpha2`.ContractServiceTerminationReceivedRequestKt.Dsl.() -> kotlin.Unit): com.dsp.v1alpha2.ContractServiceTerminationReceivedRequest =

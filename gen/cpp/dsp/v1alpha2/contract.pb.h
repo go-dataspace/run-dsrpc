@@ -382,7 +382,6 @@ class ContractServiceVerificationReceivedRequest final : public ::google::protob
   // accessors -------------------------------------------------------
   enum : int {
     kPidFieldNumber = 1,
-    kNotifyOnlyFieldNumber = 2,
   };
   // string pid = 1 [json_name = "pid"];
   void clear_pid() ;
@@ -400,22 +399,12 @@ class ContractServiceVerificationReceivedRequest final : public ::google::protob
   std::string* _internal_mutable_pid();
 
   public:
-  // bool notify_only = 2 [json_name = "notifyOnly"];
-  void clear_notify_only() ;
-  bool notify_only() const;
-  void set_notify_only(bool value);
-
-  private:
-  bool _internal_notify_only() const;
-  void _internal_set_notify_only(bool value);
-
-  public:
   // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractServiceVerificationReceivedRequest)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      1, 2, 0,
+      0, 1, 0,
       67, 2>
       _table_;
 
@@ -437,7 +426,6 @@ class ContractServiceVerificationReceivedRequest final : public ::google::protob
                           ::google::protobuf::Arena* arena, const Impl_& from,
                           const ContractServiceVerificationReceivedRequest& from_msg);
     ::google::protobuf::internal::ArenaStringPtr pid_;
-    bool notify_only_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -715,7 +703,6 @@ class ContractServiceTerminationReceivedRequest final : public ::google::protobu
     kReasonFieldNumber = 3,
     kPidFieldNumber = 1,
     kCodeFieldNumber = 2,
-    kNotifyOnlyFieldNumber = 4,
   };
   // repeated string reason = 3 [json_name = "reason"];
   int reason_size() const;
@@ -777,22 +764,12 @@ class ContractServiceTerminationReceivedRequest final : public ::google::protobu
   std::string* _internal_mutable_code();
 
   public:
-  // bool notify_only = 4 [json_name = "notifyOnly"];
-  void clear_notify_only() ;
-  bool notify_only() const;
-  void set_notify_only(bool value);
-
-  private:
-  bool _internal_notify_only() const;
-  void _internal_set_notify_only(bool value);
-
-  public:
   // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractServiceTerminationReceivedRequest)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      2, 4, 0,
+      2, 3, 0,
       76, 2>
       _table_;
 
@@ -816,7 +793,6 @@ class ContractServiceTerminationReceivedRequest final : public ::google::protobu
     ::google::protobuf::RepeatedPtrField<std::string> reason_;
     ::google::protobuf::internal::ArenaStringPtr pid_;
     ::google::protobuf::internal::ArenaStringPtr code_;
-    bool notify_only_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -1093,7 +1069,6 @@ class ContractServiceRequestReceivedRequest final : public ::google::protobuf::M
   enum : int {
     kPidFieldNumber = 1,
     kOfferFieldNumber = 2,
-    kNotifyOnlyFieldNumber = 3,
   };
   // string pid = 1 [json_name = "pid"];
   void clear_pid() ;
@@ -1127,22 +1102,12 @@ class ContractServiceRequestReceivedRequest final : public ::google::protobuf::M
   std::string* _internal_mutable_offer();
 
   public:
-  // bool notify_only = 3 [json_name = "notifyOnly"];
-  void clear_notify_only() ;
-  bool notify_only() const;
-  void set_notify_only(bool value);
-
-  private:
-  bool _internal_notify_only() const;
-  void _internal_set_notify_only(bool value);
-
-  public:
   // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractServiceRequestReceivedRequest)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      2, 3, 0,
+      1, 2, 0,
       67, 2>
       _table_;
 
@@ -1165,7 +1130,6 @@ class ContractServiceRequestReceivedRequest final : public ::google::protobuf::M
                           const ContractServiceRequestReceivedRequest& from_msg);
     ::google::protobuf::internal::ArenaStringPtr pid_;
     ::google::protobuf::internal::ArenaStringPtr offer_;
-    bool notify_only_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -1442,7 +1406,6 @@ class ContractServiceOfferReceivedRequest final : public ::google::protobuf::Mes
   enum : int {
     kPidFieldNumber = 1,
     kOfferFieldNumber = 2,
-    kNotifyOnlyFieldNumber = 3,
   };
   // string pid = 1 [json_name = "pid"];
   void clear_pid() ;
@@ -1476,22 +1439,12 @@ class ContractServiceOfferReceivedRequest final : public ::google::protobuf::Mes
   std::string* _internal_mutable_offer();
 
   public:
-  // bool notify_only = 3 [json_name = "notifyOnly"];
-  void clear_notify_only() ;
-  bool notify_only() const;
-  void set_notify_only(bool value);
-
-  private:
-  bool _internal_notify_only() const;
-  void _internal_set_notify_only(bool value);
-
-  public:
   // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractServiceOfferReceivedRequest)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      2, 3, 0,
+      1, 2, 0,
       65, 2>
       _table_;
 
@@ -1514,7 +1467,6 @@ class ContractServiceOfferReceivedRequest final : public ::google::protobuf::Mes
                           const ContractServiceOfferReceivedRequest& from_msg);
     ::google::protobuf::internal::ArenaStringPtr pid_;
     ::google::protobuf::internal::ArenaStringPtr offer_;
-    bool notify_only_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -1790,7 +1742,6 @@ class ContractServiceFinalizationReceivedRequest final : public ::google::protob
   // accessors -------------------------------------------------------
   enum : int {
     kPidFieldNumber = 1,
-    kNotifyOnlyFieldNumber = 2,
   };
   // string pid = 1 [json_name = "pid"];
   void clear_pid() ;
@@ -1808,22 +1759,12 @@ class ContractServiceFinalizationReceivedRequest final : public ::google::protob
   std::string* _internal_mutable_pid();
 
   public:
-  // bool notify_only = 2 [json_name = "notifyOnly"];
-  void clear_notify_only() ;
-  bool notify_only() const;
-  void set_notify_only(bool value);
-
-  private:
-  bool _internal_notify_only() const;
-  void _internal_set_notify_only(bool value);
-
-  public:
   // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractServiceFinalizationReceivedRequest)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      1, 2, 0,
+      0, 1, 0,
       67, 2>
       _table_;
 
@@ -1845,7 +1786,6 @@ class ContractServiceFinalizationReceivedRequest final : public ::google::protob
                           ::google::protobuf::Arena* arena, const Impl_& from,
                           const ContractServiceFinalizationReceivedRequest& from_msg);
     ::google::protobuf::internal::ArenaStringPtr pid_;
-    bool notify_only_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -2459,7 +2399,6 @@ class ContractServiceAgreementReceivedRequest final : public ::google::protobuf:
   enum : int {
     kPidFieldNumber = 1,
     kAgreementFieldNumber = 2,
-    kNotifyOnlyFieldNumber = 3,
   };
   // string pid = 1 [json_name = "pid"];
   void clear_pid() ;
@@ -2493,22 +2432,12 @@ class ContractServiceAgreementReceivedRequest final : public ::google::protobuf:
   std::string* _internal_mutable_agreement();
 
   public:
-  // bool notify_only = 3 [json_name = "notifyOnly"];
-  void clear_notify_only() ;
-  bool notify_only() const;
-  void set_notify_only(bool value);
-
-  private:
-  bool _internal_notify_only() const;
-  void _internal_set_notify_only(bool value);
-
-  public:
   // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractServiceAgreementReceivedRequest)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      2, 3, 0,
+      1, 2, 0,
       73, 2>
       _table_;
 
@@ -2531,7 +2460,6 @@ class ContractServiceAgreementReceivedRequest final : public ::google::protobuf:
                           const ContractServiceAgreementReceivedRequest& from_msg);
     ::google::protobuf::internal::ArenaStringPtr pid_;
     ::google::protobuf::internal::ArenaStringPtr agreement_;
-    bool notify_only_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -2807,7 +2735,6 @@ class ContractServiceAcceptedReceivedRequest final : public ::google::protobuf::
   // accessors -------------------------------------------------------
   enum : int {
     kPidFieldNumber = 1,
-    kNotifyOnlyFieldNumber = 2,
   };
   // string pid = 1 [json_name = "pid"];
   void clear_pid() ;
@@ -2825,22 +2752,12 @@ class ContractServiceAcceptedReceivedRequest final : public ::google::protobuf::
   std::string* _internal_mutable_pid();
 
   public:
-  // bool notify_only = 2 [json_name = "notifyOnly"];
-  void clear_notify_only() ;
-  bool notify_only() const;
-  void set_notify_only(bool value);
-
-  private:
-  bool _internal_notify_only() const;
-  void _internal_set_notify_only(bool value);
-
-  public:
   // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractServiceAcceptedReceivedRequest)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      1, 2, 0,
+      0, 1, 0,
       63, 2>
       _table_;
 
@@ -2862,7 +2779,6 @@ class ContractServiceAcceptedReceivedRequest final : public ::google::protobuf::
                           ::google::protobuf::Arena* arena, const Impl_& from,
                           const ContractServiceAcceptedReceivedRequest& from_msg);
     ::google::protobuf::internal::ArenaStringPtr pid_;
-    bool notify_only_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -3094,28 +3010,6 @@ inline void ContractServiceRequestReceivedRequest::set_allocated_offer(std::stri
   // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractServiceRequestReceivedRequest.offer)
 }
 
-// bool notify_only = 3 [json_name = "notifyOnly"];
-inline void ContractServiceRequestReceivedRequest::clear_notify_only() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.notify_only_ = false;
-}
-inline bool ContractServiceRequestReceivedRequest::notify_only() const {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractServiceRequestReceivedRequest.notify_only)
-  return _internal_notify_only();
-}
-inline void ContractServiceRequestReceivedRequest::set_notify_only(bool value) {
-  _internal_set_notify_only(value);
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractServiceRequestReceivedRequest.notify_only)
-}
-inline bool ContractServiceRequestReceivedRequest::_internal_notify_only() const {
-  ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.notify_only_;
-}
-inline void ContractServiceRequestReceivedRequest::_internal_set_notify_only(bool value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.notify_only_ = value;
-}
-
 // -------------------------------------------------------------------
 
 // ContractServiceRequestReceivedResponse
@@ -3224,28 +3118,6 @@ inline void ContractServiceOfferReceivedRequest::set_allocated_offer(std::string
   // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractServiceOfferReceivedRequest.offer)
 }
 
-// bool notify_only = 3 [json_name = "notifyOnly"];
-inline void ContractServiceOfferReceivedRequest::clear_notify_only() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.notify_only_ = false;
-}
-inline bool ContractServiceOfferReceivedRequest::notify_only() const {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractServiceOfferReceivedRequest.notify_only)
-  return _internal_notify_only();
-}
-inline void ContractServiceOfferReceivedRequest::set_notify_only(bool value) {
-  _internal_set_notify_only(value);
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractServiceOfferReceivedRequest.notify_only)
-}
-inline bool ContractServiceOfferReceivedRequest::_internal_notify_only() const {
-  ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.notify_only_;
-}
-inline void ContractServiceOfferReceivedRequest::_internal_set_notify_only(bool value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.notify_only_ = value;
-}
-
 // -------------------------------------------------------------------
 
 // ContractServiceOfferReceivedResponse
@@ -3302,28 +3174,6 @@ inline void ContractServiceAcceptedReceivedRequest::set_allocated_pid(std::strin
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractServiceAcceptedReceivedRequest.pid)
-}
-
-// bool notify_only = 2 [json_name = "notifyOnly"];
-inline void ContractServiceAcceptedReceivedRequest::clear_notify_only() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.notify_only_ = false;
-}
-inline bool ContractServiceAcceptedReceivedRequest::notify_only() const {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractServiceAcceptedReceivedRequest.notify_only)
-  return _internal_notify_only();
-}
-inline void ContractServiceAcceptedReceivedRequest::set_notify_only(bool value) {
-  _internal_set_notify_only(value);
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractServiceAcceptedReceivedRequest.notify_only)
-}
-inline bool ContractServiceAcceptedReceivedRequest::_internal_notify_only() const {
-  ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.notify_only_;
-}
-inline void ContractServiceAcceptedReceivedRequest::_internal_set_notify_only(bool value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.notify_only_ = value;
 }
 
 // -------------------------------------------------------------------
@@ -3434,28 +3284,6 @@ inline void ContractServiceAgreementReceivedRequest::set_allocated_agreement(std
   // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractServiceAgreementReceivedRequest.agreement)
 }
 
-// bool notify_only = 3 [json_name = "notifyOnly"];
-inline void ContractServiceAgreementReceivedRequest::clear_notify_only() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.notify_only_ = false;
-}
-inline bool ContractServiceAgreementReceivedRequest::notify_only() const {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractServiceAgreementReceivedRequest.notify_only)
-  return _internal_notify_only();
-}
-inline void ContractServiceAgreementReceivedRequest::set_notify_only(bool value) {
-  _internal_set_notify_only(value);
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractServiceAgreementReceivedRequest.notify_only)
-}
-inline bool ContractServiceAgreementReceivedRequest::_internal_notify_only() const {
-  ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.notify_only_;
-}
-inline void ContractServiceAgreementReceivedRequest::_internal_set_notify_only(bool value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.notify_only_ = value;
-}
-
 // -------------------------------------------------------------------
 
 // ContractServiceAgreementReceivedResponse
@@ -3514,28 +3342,6 @@ inline void ContractServiceVerificationReceivedRequest::set_allocated_pid(std::s
   // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractServiceVerificationReceivedRequest.pid)
 }
 
-// bool notify_only = 2 [json_name = "notifyOnly"];
-inline void ContractServiceVerificationReceivedRequest::clear_notify_only() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.notify_only_ = false;
-}
-inline bool ContractServiceVerificationReceivedRequest::notify_only() const {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractServiceVerificationReceivedRequest.notify_only)
-  return _internal_notify_only();
-}
-inline void ContractServiceVerificationReceivedRequest::set_notify_only(bool value) {
-  _internal_set_notify_only(value);
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractServiceVerificationReceivedRequest.notify_only)
-}
-inline bool ContractServiceVerificationReceivedRequest::_internal_notify_only() const {
-  ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.notify_only_;
-}
-inline void ContractServiceVerificationReceivedRequest::_internal_set_notify_only(bool value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.notify_only_ = value;
-}
-
 // -------------------------------------------------------------------
 
 // ContractServiceVerificationReceivedResponse
@@ -3592,28 +3398,6 @@ inline void ContractServiceFinalizationReceivedRequest::set_allocated_pid(std::s
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractServiceFinalizationReceivedRequest.pid)
-}
-
-// bool notify_only = 2 [json_name = "notifyOnly"];
-inline void ContractServiceFinalizationReceivedRequest::clear_notify_only() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.notify_only_ = false;
-}
-inline bool ContractServiceFinalizationReceivedRequest::notify_only() const {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractServiceFinalizationReceivedRequest.notify_only)
-  return _internal_notify_only();
-}
-inline void ContractServiceFinalizationReceivedRequest::set_notify_only(bool value) {
-  _internal_set_notify_only(value);
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractServiceFinalizationReceivedRequest.notify_only)
-}
-inline bool ContractServiceFinalizationReceivedRequest::_internal_notify_only() const {
-  ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.notify_only_;
-}
-inline void ContractServiceFinalizationReceivedRequest::_internal_set_notify_only(bool value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.notify_only_ = value;
 }
 
 // -------------------------------------------------------------------
@@ -3824,28 +3608,6 @@ inline ::google::protobuf::RepeatedPtrField<std::string>*
 ContractServiceTerminationReceivedRequest::_internal_mutable_reason() {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return &_impl_.reason_;
-}
-
-// bool notify_only = 4 [json_name = "notifyOnly"];
-inline void ContractServiceTerminationReceivedRequest::clear_notify_only() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.notify_only_ = false;
-}
-inline bool ContractServiceTerminationReceivedRequest::notify_only() const {
-  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractServiceTerminationReceivedRequest.notify_only)
-  return _internal_notify_only();
-}
-inline void ContractServiceTerminationReceivedRequest::set_notify_only(bool value) {
-  _internal_set_notify_only(value);
-  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractServiceTerminationReceivedRequest.notify_only)
-}
-inline bool ContractServiceTerminationReceivedRequest::_internal_notify_only() const {
-  ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.notify_only_;
-}
-inline void ContractServiceTerminationReceivedRequest::_internal_set_notify_only(bool value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.notify_only_ = value;
 }
 
 // -------------------------------------------------------------------

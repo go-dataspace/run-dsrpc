@@ -19,10 +19,4 @@ public interface ContractServiceAcceptedReceivedRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPidBytes();
-
-  /**
-   * <code>bool notify_only = 2 [json_name = "notifyOnly"];</code>
-   * @return The notifyOnly.
-   */
-  boolean getNotifyOnly();
 }

@@ -72,8 +72,6 @@ struct Dsp_V1alpha2_ContractServiceRequestReceivedRequest {
 
   var offer: String = String()
 
-  var notifyOnly: Bool = false
-
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -99,8 +97,6 @@ struct Dsp_V1alpha2_ContractServiceOfferReceivedRequest {
 
   var offer: String = String()
 
-  var notifyOnly: Bool = false
-
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -123,8 +119,6 @@ struct Dsp_V1alpha2_ContractServiceAcceptedReceivedRequest {
   // methods supported on all messages.
 
   var pid: String = String()
-
-  var notifyOnly: Bool = false
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -151,8 +145,6 @@ struct Dsp_V1alpha2_ContractServiceAgreementReceivedRequest {
 
   var agreement: String = String()
 
-  var notifyOnly: Bool = false
-
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -176,8 +168,6 @@ struct Dsp_V1alpha2_ContractServiceVerificationReceivedRequest {
 
   var pid: String = String()
 
-  var notifyOnly: Bool = false
-
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -200,8 +190,6 @@ struct Dsp_V1alpha2_ContractServiceFinalizationReceivedRequest {
   // methods supported on all messages.
 
   var pid: String = String()
-
-  var notifyOnly: Bool = false
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -230,8 +218,6 @@ struct Dsp_V1alpha2_ContractServiceTerminationReceivedRequest {
   var code: String = String()
 
   var reason: [String] = []
-
-  var notifyOnly: Bool = false
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -333,7 +319,6 @@ extension Dsp_V1alpha2_ContractServiceRequestReceivedRequest: SwiftProtobuf.Mess
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "pid"),
     2: .same(proto: "offer"),
-    3: .standard(proto: "notify_only"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -344,7 +329,6 @@ extension Dsp_V1alpha2_ContractServiceRequestReceivedRequest: SwiftProtobuf.Mess
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularStringField(value: &self.pid) }()
       case 2: try { try decoder.decodeSingularStringField(value: &self.offer) }()
-      case 3: try { try decoder.decodeSingularBoolField(value: &self.notifyOnly) }()
       default: break
       }
     }
@@ -357,16 +341,12 @@ extension Dsp_V1alpha2_ContractServiceRequestReceivedRequest: SwiftProtobuf.Mess
     if !self.offer.isEmpty {
       try visitor.visitSingularStringField(value: self.offer, fieldNumber: 2)
     }
-    if self.notifyOnly != false {
-      try visitor.visitSingularBoolField(value: self.notifyOnly, fieldNumber: 3)
-    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Dsp_V1alpha2_ContractServiceRequestReceivedRequest, rhs: Dsp_V1alpha2_ContractServiceRequestReceivedRequest) -> Bool {
     if lhs.pid != rhs.pid {return false}
     if lhs.offer != rhs.offer {return false}
-    if lhs.notifyOnly != rhs.notifyOnly {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -396,7 +376,6 @@ extension Dsp_V1alpha2_ContractServiceOfferReceivedRequest: SwiftProtobuf.Messag
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "pid"),
     2: .same(proto: "offer"),
-    3: .standard(proto: "notify_only"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -407,7 +386,6 @@ extension Dsp_V1alpha2_ContractServiceOfferReceivedRequest: SwiftProtobuf.Messag
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularStringField(value: &self.pid) }()
       case 2: try { try decoder.decodeSingularStringField(value: &self.offer) }()
-      case 3: try { try decoder.decodeSingularBoolField(value: &self.notifyOnly) }()
       default: break
       }
     }
@@ -420,16 +398,12 @@ extension Dsp_V1alpha2_ContractServiceOfferReceivedRequest: SwiftProtobuf.Messag
     if !self.offer.isEmpty {
       try visitor.visitSingularStringField(value: self.offer, fieldNumber: 2)
     }
-    if self.notifyOnly != false {
-      try visitor.visitSingularBoolField(value: self.notifyOnly, fieldNumber: 3)
-    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Dsp_V1alpha2_ContractServiceOfferReceivedRequest, rhs: Dsp_V1alpha2_ContractServiceOfferReceivedRequest) -> Bool {
     if lhs.pid != rhs.pid {return false}
     if lhs.offer != rhs.offer {return false}
-    if lhs.notifyOnly != rhs.notifyOnly {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -458,7 +432,6 @@ extension Dsp_V1alpha2_ContractServiceAcceptedReceivedRequest: SwiftProtobuf.Mes
   static let protoMessageName: String = _protobuf_package + ".ContractServiceAcceptedReceivedRequest"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "pid"),
-    2: .standard(proto: "notify_only"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -468,7 +441,6 @@ extension Dsp_V1alpha2_ContractServiceAcceptedReceivedRequest: SwiftProtobuf.Mes
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularStringField(value: &self.pid) }()
-      case 2: try { try decoder.decodeSingularBoolField(value: &self.notifyOnly) }()
       default: break
       }
     }
@@ -478,15 +450,11 @@ extension Dsp_V1alpha2_ContractServiceAcceptedReceivedRequest: SwiftProtobuf.Mes
     if !self.pid.isEmpty {
       try visitor.visitSingularStringField(value: self.pid, fieldNumber: 1)
     }
-    if self.notifyOnly != false {
-      try visitor.visitSingularBoolField(value: self.notifyOnly, fieldNumber: 2)
-    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Dsp_V1alpha2_ContractServiceAcceptedReceivedRequest, rhs: Dsp_V1alpha2_ContractServiceAcceptedReceivedRequest) -> Bool {
     if lhs.pid != rhs.pid {return false}
-    if lhs.notifyOnly != rhs.notifyOnly {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -516,7 +484,6 @@ extension Dsp_V1alpha2_ContractServiceAgreementReceivedRequest: SwiftProtobuf.Me
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "pid"),
     2: .same(proto: "agreement"),
-    3: .standard(proto: "notify_only"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -527,7 +494,6 @@ extension Dsp_V1alpha2_ContractServiceAgreementReceivedRequest: SwiftProtobuf.Me
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularStringField(value: &self.pid) }()
       case 2: try { try decoder.decodeSingularStringField(value: &self.agreement) }()
-      case 3: try { try decoder.decodeSingularBoolField(value: &self.notifyOnly) }()
       default: break
       }
     }
@@ -540,16 +506,12 @@ extension Dsp_V1alpha2_ContractServiceAgreementReceivedRequest: SwiftProtobuf.Me
     if !self.agreement.isEmpty {
       try visitor.visitSingularStringField(value: self.agreement, fieldNumber: 2)
     }
-    if self.notifyOnly != false {
-      try visitor.visitSingularBoolField(value: self.notifyOnly, fieldNumber: 3)
-    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Dsp_V1alpha2_ContractServiceAgreementReceivedRequest, rhs: Dsp_V1alpha2_ContractServiceAgreementReceivedRequest) -> Bool {
     if lhs.pid != rhs.pid {return false}
     if lhs.agreement != rhs.agreement {return false}
-    if lhs.notifyOnly != rhs.notifyOnly {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -578,7 +540,6 @@ extension Dsp_V1alpha2_ContractServiceVerificationReceivedRequest: SwiftProtobuf
   static let protoMessageName: String = _protobuf_package + ".ContractServiceVerificationReceivedRequest"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "pid"),
-    2: .standard(proto: "notify_only"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -588,7 +549,6 @@ extension Dsp_V1alpha2_ContractServiceVerificationReceivedRequest: SwiftProtobuf
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularStringField(value: &self.pid) }()
-      case 2: try { try decoder.decodeSingularBoolField(value: &self.notifyOnly) }()
       default: break
       }
     }
@@ -598,15 +558,11 @@ extension Dsp_V1alpha2_ContractServiceVerificationReceivedRequest: SwiftProtobuf
     if !self.pid.isEmpty {
       try visitor.visitSingularStringField(value: self.pid, fieldNumber: 1)
     }
-    if self.notifyOnly != false {
-      try visitor.visitSingularBoolField(value: self.notifyOnly, fieldNumber: 2)
-    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Dsp_V1alpha2_ContractServiceVerificationReceivedRequest, rhs: Dsp_V1alpha2_ContractServiceVerificationReceivedRequest) -> Bool {
     if lhs.pid != rhs.pid {return false}
-    if lhs.notifyOnly != rhs.notifyOnly {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -635,7 +591,6 @@ extension Dsp_V1alpha2_ContractServiceFinalizationReceivedRequest: SwiftProtobuf
   static let protoMessageName: String = _protobuf_package + ".ContractServiceFinalizationReceivedRequest"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "pid"),
-    2: .standard(proto: "notify_only"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -645,7 +600,6 @@ extension Dsp_V1alpha2_ContractServiceFinalizationReceivedRequest: SwiftProtobuf
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularStringField(value: &self.pid) }()
-      case 2: try { try decoder.decodeSingularBoolField(value: &self.notifyOnly) }()
       default: break
       }
     }
@@ -655,15 +609,11 @@ extension Dsp_V1alpha2_ContractServiceFinalizationReceivedRequest: SwiftProtobuf
     if !self.pid.isEmpty {
       try visitor.visitSingularStringField(value: self.pid, fieldNumber: 1)
     }
-    if self.notifyOnly != false {
-      try visitor.visitSingularBoolField(value: self.notifyOnly, fieldNumber: 2)
-    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Dsp_V1alpha2_ContractServiceFinalizationReceivedRequest, rhs: Dsp_V1alpha2_ContractServiceFinalizationReceivedRequest) -> Bool {
     if lhs.pid != rhs.pid {return false}
-    if lhs.notifyOnly != rhs.notifyOnly {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -694,7 +644,6 @@ extension Dsp_V1alpha2_ContractServiceTerminationReceivedRequest: SwiftProtobuf.
     1: .same(proto: "pid"),
     2: .same(proto: "code"),
     3: .same(proto: "reason"),
-    4: .standard(proto: "notify_only"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -706,7 +655,6 @@ extension Dsp_V1alpha2_ContractServiceTerminationReceivedRequest: SwiftProtobuf.
       case 1: try { try decoder.decodeSingularStringField(value: &self.pid) }()
       case 2: try { try decoder.decodeSingularStringField(value: &self.code) }()
       case 3: try { try decoder.decodeRepeatedStringField(value: &self.reason) }()
-      case 4: try { try decoder.decodeSingularBoolField(value: &self.notifyOnly) }()
       default: break
       }
     }
@@ -722,9 +670,6 @@ extension Dsp_V1alpha2_ContractServiceTerminationReceivedRequest: SwiftProtobuf.
     if !self.reason.isEmpty {
       try visitor.visitRepeatedStringField(value: self.reason, fieldNumber: 3)
     }
-    if self.notifyOnly != false {
-      try visitor.visitSingularBoolField(value: self.notifyOnly, fieldNumber: 4)
-    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -732,7 +677,6 @@ extension Dsp_V1alpha2_ContractServiceTerminationReceivedRequest: SwiftProtobuf.
     if lhs.pid != rhs.pid {return false}
     if lhs.code != rhs.code {return false}
     if lhs.reason != rhs.reason {return false}
-    if lhs.notifyOnly != rhs.notifyOnly {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

@@ -109,65 +109,59 @@ public final class ContractProto {
       "\n\021connector_address\030\001 \001(\tR\020connectorAddr" +
       "ess\022-\n\022verification_token\030\002 \001(\tR\021verific" +
       "ationToken\"\"\n ContractServiceConfigureRe" +
-      "sponse\"p\n%ContractServiceRequestReceived" +
+      "sponse\"O\n%ContractServiceRequestReceived" +
       "Request\022\020\n\003pid\030\001 \001(\tR\003pid\022\024\n\005offer\030\002 \001(\t" +
-      "R\005offer\022\037\n\013notify_only\030\003 \001(\010R\nnotifyOnly" +
-      "\"(\n&ContractServiceRequestReceivedRespon" +
-      "se\"n\n#ContractServiceOfferReceivedReques" +
-      "t\022\020\n\003pid\030\001 \001(\tR\003pid\022\024\n\005offer\030\002 \001(\tR\005offe" +
-      "r\022\037\n\013notify_only\030\003 \001(\010R\nnotifyOnly\"&\n$Co" +
-      "ntractServiceOfferReceivedResponse\"[\n&Co" +
-      "ntractServiceAcceptedReceivedRequest\022\020\n\003" +
-      "pid\030\001 \001(\tR\003pid\022\037\n\013notify_only\030\002 \001(\010R\nnot" +
-      "ifyOnly\")\n\'ContractServiceAcceptedReceiv" +
-      "edResponse\"z\n\'ContractServiceAgreementRe" +
-      "ceivedRequest\022\020\n\003pid\030\001 \001(\tR\003pid\022\034\n\tagree" +
-      "ment\030\002 \001(\tR\tagreement\022\037\n\013notify_only\030\003 \001" +
-      "(\010R\nnotifyOnly\"*\n(ContractServiceAgreeme" +
-      "ntReceivedResponse\"_\n*ContractServiceVer" +
-      "ificationReceivedRequest\022\020\n\003pid\030\001 \001(\tR\003p" +
-      "id\022\037\n\013notify_only\030\002 \001(\010R\nnotifyOnly\"-\n+C" +
-      "ontractServiceVerificationReceivedRespon" +
-      "se\"_\n*ContractServiceFinalizationReceive" +
-      "dRequest\022\020\n\003pid\030\001 \001(\tR\003pid\022\037\n\013notify_onl" +
-      "y\030\002 \001(\010R\nnotifyOnly\"-\n+ContractServiceFi" +
-      "nalizationReceivedResponse\"\212\001\n)ContractS" +
-      "erviceTerminationReceivedRequest\022\020\n\003pid\030" +
-      "\001 \001(\tR\003pid\022\022\n\004code\030\002 \001(\tR\004code\022\026\n\006reason" +
-      "\030\003 \003(\tR\006reason\022\037\n\013notify_only\030\004 \001(\010R\nnot" +
-      "ifyOnly\",\n*ContractServiceTerminationRec" +
-      "eivedResponse2\261\010\n\017ContractService\022l\n\tCon" +
-      "figure\022-.dsp.v1alpha2.ContractServiceCon" +
-      "figureRequest\032..dsp.v1alpha2.ContractSer" +
-      "viceConfigureResponse\"\000\022~\n\017RequestReceiv" +
-      "ed\0223.dsp.v1alpha2.ContractServiceRequest" +
-      "ReceivedRequest\0324.dsp.v1alpha2.ContractS" +
-      "erviceRequestReceivedResponse\"\000\022x\n\rOffer" +
-      "Received\0221.dsp.v1alpha2.ContractServiceO" +
-      "fferReceivedRequest\0322.dsp.v1alpha2.Contr" +
-      "actServiceOfferReceivedResponse\"\000\022\201\001\n\020Ac" +
-      "ceptedReceived\0224.dsp.v1alpha2.ContractSe" +
-      "rviceAcceptedReceivedRequest\0325.dsp.v1alp" +
-      "ha2.ContractServiceAcceptedReceivedRespo" +
-      "nse\"\000\022\204\001\n\021AgreementReceived\0225.dsp.v1alph" +
-      "a2.ContractServiceAgreementReceivedReque" +
-      "st\0326.dsp.v1alpha2.ContractServiceAgreeme" +
-      "ntReceivedResponse\"\000\022\215\001\n\024VerificationRec" +
-      "eived\0228.dsp.v1alpha2.ContractServiceVeri" +
-      "ficationReceivedRequest\0329.dsp.v1alpha2.C" +
-      "ontractServiceVerificationReceivedRespon" +
-      "se\"\000\022\215\001\n\024FinalizationReceived\0228.dsp.v1al" +
-      "pha2.ContractServiceFinalizationReceived" +
-      "Request\0329.dsp.v1alpha2.ContractServiceFi" +
-      "nalizationReceivedResponse\"\000\022\212\001\n\023Termina" +
-      "tionReceived\0227.dsp.v1alpha2.ContractServ" +
-      "iceTerminationReceivedRequest\0328.dsp.v1al" +
-      "pha2.ContractServiceTerminationReceivedR" +
-      "esponse\"\000B\251\001\n\020com.dsp.v1alpha2B\rContract" +
-      "ProtoP\001Z5github.com/bufbuild/buf-tour/ds" +
-      "p/v1alpha2;dspv1alpha2\242\002\003DXX\252\002\014Dsp.V1alp" +
-      "ha2\312\002\014Dsp\\V1alpha2\342\002\030Dsp\\V1alpha2\\GPBMet" +
-      "adata\352\002\rDsp::V1alpha2b\006proto3"
+      "R\005offer\"(\n&ContractServiceRequestReceive" +
+      "dResponse\"M\n#ContractServiceOfferReceive" +
+      "dRequest\022\020\n\003pid\030\001 \001(\tR\003pid\022\024\n\005offer\030\002 \001(" +
+      "\tR\005offer\"&\n$ContractServiceOfferReceived" +
+      "Response\":\n&ContractServiceAcceptedRecei" +
+      "vedRequest\022\020\n\003pid\030\001 \001(\tR\003pid\")\n\'Contract" +
+      "ServiceAcceptedReceivedResponse\"Y\n\'Contr" +
+      "actServiceAgreementReceivedRequest\022\020\n\003pi" +
+      "d\030\001 \001(\tR\003pid\022\034\n\tagreement\030\002 \001(\tR\tagreeme" +
+      "nt\"*\n(ContractServiceAgreementReceivedRe" +
+      "sponse\">\n*ContractServiceVerificationRec" +
+      "eivedRequest\022\020\n\003pid\030\001 \001(\tR\003pid\"-\n+Contra" +
+      "ctServiceVerificationReceivedResponse\">\n" +
+      "*ContractServiceFinalizationReceivedRequ" +
+      "est\022\020\n\003pid\030\001 \001(\tR\003pid\"-\n+ContractService" +
+      "FinalizationReceivedResponse\"i\n)Contract" +
+      "ServiceTerminationReceivedRequest\022\020\n\003pid" +
+      "\030\001 \001(\tR\003pid\022\022\n\004code\030\002 \001(\tR\004code\022\026\n\006reaso" +
+      "n\030\003 \003(\tR\006reason\",\n*ContractServiceTermin" +
+      "ationReceivedResponse2\261\010\n\017ContractServic" +
+      "e\022l\n\tConfigure\022-.dsp.v1alpha2.ContractSe" +
+      "rviceConfigureRequest\032..dsp.v1alpha2.Con" +
+      "tractServiceConfigureResponse\"\000\022~\n\017Reque" +
+      "stReceived\0223.dsp.v1alpha2.ContractServic" +
+      "eRequestReceivedRequest\0324.dsp.v1alpha2.C" +
+      "ontractServiceRequestReceivedResponse\"\000\022" +
+      "x\n\rOfferReceived\0221.dsp.v1alpha2.Contract" +
+      "ServiceOfferReceivedRequest\0322.dsp.v1alph" +
+      "a2.ContractServiceOfferReceivedResponse\"" +
+      "\000\022\201\001\n\020AcceptedReceived\0224.dsp.v1alpha2.Co" +
+      "ntractServiceAcceptedReceivedRequest\0325.d" +
+      "sp.v1alpha2.ContractServiceAcceptedRecei" +
+      "vedResponse\"\000\022\204\001\n\021AgreementReceived\0225.ds" +
+      "p.v1alpha2.ContractServiceAgreementRecei" +
+      "vedRequest\0326.dsp.v1alpha2.ContractServic" +
+      "eAgreementReceivedResponse\"\000\022\215\001\n\024Verific" +
+      "ationReceived\0228.dsp.v1alpha2.ContractSer" +
+      "viceVerificationReceivedRequest\0329.dsp.v1" +
+      "alpha2.ContractServiceVerificationReceiv" +
+      "edResponse\"\000\022\215\001\n\024FinalizationReceived\0228." +
+      "dsp.v1alpha2.ContractServiceFinalization" +
+      "ReceivedRequest\0329.dsp.v1alpha2.ContractS" +
+      "erviceFinalizationReceivedResponse\"\000\022\212\001\n" +
+      "\023TerminationReceived\0227.dsp.v1alpha2.Cont" +
+      "ractServiceTerminationReceivedRequest\0328." +
+      "dsp.v1alpha2.ContractServiceTerminationR" +
+      "eceivedResponse\"\000B\251\001\n\020com.dsp.v1alpha2B\r" +
+      "ContractProtoP\001Z5github.com/bufbuild/buf" +
+      "-tour/dsp/v1alpha2;dspv1alpha2\242\002\003DXX\252\002\014D" +
+      "sp.V1alpha2\312\002\014Dsp\\V1alpha2\342\002\030Dsp\\V1alpha" +
+      "2\\GPBMetadata\352\002\rDsp::V1alpha2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -190,7 +184,7 @@ public final class ContractProto {
     internal_static_dsp_v1alpha2_ContractServiceRequestReceivedRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dsp_v1alpha2_ContractServiceRequestReceivedRequest_descriptor,
-        new java.lang.String[] { "Pid", "Offer", "NotifyOnly", });
+        new java.lang.String[] { "Pid", "Offer", });
     internal_static_dsp_v1alpha2_ContractServiceRequestReceivedResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_dsp_v1alpha2_ContractServiceRequestReceivedResponse_fieldAccessorTable = new
@@ -202,7 +196,7 @@ public final class ContractProto {
     internal_static_dsp_v1alpha2_ContractServiceOfferReceivedRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dsp_v1alpha2_ContractServiceOfferReceivedRequest_descriptor,
-        new java.lang.String[] { "Pid", "Offer", "NotifyOnly", });
+        new java.lang.String[] { "Pid", "Offer", });
     internal_static_dsp_v1alpha2_ContractServiceOfferReceivedResponse_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_dsp_v1alpha2_ContractServiceOfferReceivedResponse_fieldAccessorTable = new
@@ -214,7 +208,7 @@ public final class ContractProto {
     internal_static_dsp_v1alpha2_ContractServiceAcceptedReceivedRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dsp_v1alpha2_ContractServiceAcceptedReceivedRequest_descriptor,
-        new java.lang.String[] { "Pid", "NotifyOnly", });
+        new java.lang.String[] { "Pid", });
     internal_static_dsp_v1alpha2_ContractServiceAcceptedReceivedResponse_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_dsp_v1alpha2_ContractServiceAcceptedReceivedResponse_fieldAccessorTable = new
@@ -226,7 +220,7 @@ public final class ContractProto {
     internal_static_dsp_v1alpha2_ContractServiceAgreementReceivedRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dsp_v1alpha2_ContractServiceAgreementReceivedRequest_descriptor,
-        new java.lang.String[] { "Pid", "Agreement", "NotifyOnly", });
+        new java.lang.String[] { "Pid", "Agreement", });
     internal_static_dsp_v1alpha2_ContractServiceAgreementReceivedResponse_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_dsp_v1alpha2_ContractServiceAgreementReceivedResponse_fieldAccessorTable = new
@@ -238,7 +232,7 @@ public final class ContractProto {
     internal_static_dsp_v1alpha2_ContractServiceVerificationReceivedRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dsp_v1alpha2_ContractServiceVerificationReceivedRequest_descriptor,
-        new java.lang.String[] { "Pid", "NotifyOnly", });
+        new java.lang.String[] { "Pid", });
     internal_static_dsp_v1alpha2_ContractServiceVerificationReceivedResponse_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_dsp_v1alpha2_ContractServiceVerificationReceivedResponse_fieldAccessorTable = new
@@ -250,7 +244,7 @@ public final class ContractProto {
     internal_static_dsp_v1alpha2_ContractServiceFinalizationReceivedRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dsp_v1alpha2_ContractServiceFinalizationReceivedRequest_descriptor,
-        new java.lang.String[] { "Pid", "NotifyOnly", });
+        new java.lang.String[] { "Pid", });
     internal_static_dsp_v1alpha2_ContractServiceFinalizationReceivedResponse_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_dsp_v1alpha2_ContractServiceFinalizationReceivedResponse_fieldAccessorTable = new
@@ -262,7 +256,7 @@ public final class ContractProto {
     internal_static_dsp_v1alpha2_ContractServiceTerminationReceivedRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dsp_v1alpha2_ContractServiceTerminationReceivedRequest_descriptor,
-        new java.lang.String[] { "Pid", "Code", "Reason", "NotifyOnly", });
+        new java.lang.String[] { "Pid", "Code", "Reason", });
     internal_static_dsp_v1alpha2_ContractServiceTerminationReceivedResponse_descriptor =
       getDescriptor().getMessageTypes().get(15);
     internal_static_dsp_v1alpha2_ContractServiceTerminationReceivedResponse_fieldAccessorTable = new

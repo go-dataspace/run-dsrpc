@@ -51,7 +51,6 @@ export const ContractServiceRequestReceivedRequest = /*@__PURE__*/ proto3.makeMe
   () => [
     { no: 1, name: "pid", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "offer", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "notify_only", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
   ],
 );
 
@@ -73,7 +72,6 @@ export const ContractServiceOfferReceivedRequest = /*@__PURE__*/ proto3.makeMess
   () => [
     { no: 1, name: "pid", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "offer", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "notify_only", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
   ],
 );
 
@@ -94,7 +92,6 @@ export const ContractServiceAcceptedReceivedRequest = /*@__PURE__*/ proto3.makeM
   "dsp.v1alpha2.ContractServiceAcceptedReceivedRequest",
   () => [
     { no: 1, name: "pid", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "notify_only", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
   ],
 );
 
@@ -116,7 +113,6 @@ export const ContractServiceAgreementReceivedRequest = /*@__PURE__*/ proto3.make
   () => [
     { no: 1, name: "pid", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "agreement", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "notify_only", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
   ],
 );
 
@@ -137,7 +133,6 @@ export const ContractServiceVerificationReceivedRequest = /*@__PURE__*/ proto3.m
   "dsp.v1alpha2.ContractServiceVerificationReceivedRequest",
   () => [
     { no: 1, name: "pid", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "notify_only", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
   ],
 );
 
@@ -158,7 +153,6 @@ export const ContractServiceFinalizationReceivedRequest = /*@__PURE__*/ proto3.m
   "dsp.v1alpha2.ContractServiceFinalizationReceivedRequest",
   () => [
     { no: 1, name: "pid", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "notify_only", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
   ],
 );
 
@@ -182,7 +176,6 @@ export const ContractServiceTerminationReceivedRequest = /*@__PURE__*/ proto3.ma
     { no: 1, name: "pid", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "code", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "reason", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
-    { no: 4, name: "notify_only", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
   ],
 );
 

@@ -98,20 +98,20 @@ public object ContractOfferRequestKt {
     }
 
     /**
-     * `bool fast_forward = 4 [json_name = "fastForward"];`
+     * `bool auto_accept = 4 [json_name = "autoAccept"];`
      */
-    public var fastForward: kotlin.Boolean
-      @JvmName("getFastForward")
-      get() = _builder.getFastForward()
-      @JvmName("setFastForward")
+    public var autoAccept: kotlin.Boolean
+      @JvmName("getAutoAccept")
+      get() = _builder.getAutoAccept()
+      @JvmName("setAutoAccept")
       set(value) {
-        _builder.setFastForward(value)
+        _builder.setAutoAccept(value)
       }
     /**
-     * `bool fast_forward = 4 [json_name = "fastForward"];`
+     * `bool auto_accept = 4 [json_name = "autoAccept"];`
      */
-    public fun clearFastForward() {
-      _builder.clearFastForward()
+    public fun clearAutoAccept() {
+      _builder.clearAutoAccept()
     }
 
     /**

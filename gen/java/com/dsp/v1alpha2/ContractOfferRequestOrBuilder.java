@@ -55,10 +55,10 @@ public interface ContractOfferRequestOrBuilder extends
       getParticipantAddressBytes();
 
   /**
-   * <code>bool fast_forward = 4 [json_name = "fastForward"];</code>
-   * @return The fastForward.
+   * <code>bool auto_accept = 4 [json_name = "autoAccept"];</code>
+   * @return The autoAccept.
    */
-  boolean getFastForward();
+  boolean getAutoAccept();
 
   /**
    * <code>bool want_notifications = 5 [json_name = "wantNotifications"];</code>

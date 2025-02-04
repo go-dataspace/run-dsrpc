@@ -142,7 +142,7 @@ const ContractRequestRequest$json = {
     {'1': 'offer', '3': 1, '4': 1, '5': 9, '10': 'offer'},
     {'1': 'pid', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'pid', '17': true},
     {'1': 'participant_address', '3': 3, '4': 1, '5': 9, '9': 1, '10': 'participantAddress', '17': true},
-    {'1': 'fast_forward', '3': 4, '4': 1, '5': 8, '10': 'fastForward'},
+    {'1': 'auto_accept', '3': 4, '4': 1, '5': 8, '10': 'autoAccept'},
     {'1': 'want_notifications', '3': 5, '4': 1, '5': 8, '10': 'wantNotifications'},
   ],
   '8': [
@@ -155,9 +155,9 @@ const ContractRequestRequest$json = {
 final $typed_data.Uint8List contractRequestRequestDescriptor = $convert.base64Decode(
     'ChZDb250cmFjdFJlcXVlc3RSZXF1ZXN0EhQKBW9mZmVyGAEgASgJUgVvZmZlchIVCgNwaWQYAi'
     'ABKAlIAFIDcGlkiAEBEjQKE3BhcnRpY2lwYW50X2FkZHJlc3MYAyABKAlIAVIScGFydGljaXBh'
-    'bnRBZGRyZXNziAEBEiEKDGZhc3RfZm9yd2FyZBgEIAEoCFILZmFzdEZvcndhcmQSLQoSd2FudF'
-    '9ub3RpZmljYXRpb25zGAUgASgIUhF3YW50Tm90aWZpY2F0aW9uc0IGCgRfcGlkQhYKFF9wYXJ0'
-    'aWNpcGFudF9hZGRyZXNz');
+    'bnRBZGRyZXNziAEBEh8KC2F1dG9fYWNjZXB0GAQgASgIUgphdXRvQWNjZXB0Ei0KEndhbnRfbm'
+    '90aWZpY2F0aW9ucxgFIAEoCFIRd2FudE5vdGlmaWNhdGlvbnNCBgoEX3BpZEIWChRfcGFydGlj'
+    'aXBhbnRfYWRkcmVzcw==');
 
 @$core.Deprecated('Use contractRequestResponseDescriptor instead')
 const ContractRequestResponse$json = {
@@ -175,7 +175,7 @@ const ContractOfferRequest$json = {
     {'1': 'offer', '3': 1, '4': 1, '5': 9, '10': 'offer'},
     {'1': 'pid', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'pid', '17': true},
     {'1': 'participant_address', '3': 3, '4': 1, '5': 9, '9': 1, '10': 'participantAddress', '17': true},
-    {'1': 'fast_forward', '3': 4, '4': 1, '5': 8, '10': 'fastForward'},
+    {'1': 'auto_accept', '3': 4, '4': 1, '5': 8, '10': 'autoAccept'},
     {'1': 'want_notifications', '3': 5, '4': 1, '5': 8, '10': 'wantNotifications'},
   ],
   '8': [
@@ -188,9 +188,9 @@ const ContractOfferRequest$json = {
 final $typed_data.Uint8List contractOfferRequestDescriptor = $convert.base64Decode(
     'ChRDb250cmFjdE9mZmVyUmVxdWVzdBIUCgVvZmZlchgBIAEoCVIFb2ZmZXISFQoDcGlkGAIgAS'
     'gJSABSA3BpZIgBARI0ChNwYXJ0aWNpcGFudF9hZGRyZXNzGAMgASgJSAFSEnBhcnRpY2lwYW50'
-    'QWRkcmVzc4gBARIhCgxmYXN0X2ZvcndhcmQYBCABKAhSC2Zhc3RGb3J3YXJkEi0KEndhbnRfbm'
-    '90aWZpY2F0aW9ucxgFIAEoCFIRd2FudE5vdGlmaWNhdGlvbnNCBgoEX3BpZEIWChRfcGFydGlj'
-    'aXBhbnRfYWRkcmVzcw==');
+    'QWRkcmVzc4gBARIfCgthdXRvX2FjY2VwdBgEIAEoCFIKYXV0b0FjY2VwdBItChJ3YW50X25vdG'
+    'lmaWNhdGlvbnMYBSABKAhSEXdhbnROb3RpZmljYXRpb25zQgYKBF9waWRCFgoUX3BhcnRpY2lw'
+    'YW50X2FkZHJlc3M=');
 
 @$core.Deprecated('Use contractOfferResponseDescriptor instead')
 const ContractOfferResponse$json = {
@@ -206,16 +206,16 @@ const ContractAcceptRequest$json = {
   '1': 'ContractAcceptRequest',
   '2': [
     {'1': 'pid', '3': 1, '4': 1, '5': 9, '10': 'pid'},
-    {'1': 'fast_forward', '3': 2, '4': 1, '5': 8, '10': 'fastForward'},
+    {'1': 'auto_accept', '3': 2, '4': 1, '5': 8, '10': 'autoAccept'},
     {'1': 'want_notifications', '3': 3, '4': 1, '5': 8, '10': 'wantNotifications'},
   ],
 };
 
 /// Descriptor for `ContractAcceptRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List contractAcceptRequestDescriptor = $convert.base64Decode(
-    'ChVDb250cmFjdEFjY2VwdFJlcXVlc3QSEAoDcGlkGAEgASgJUgNwaWQSIQoMZmFzdF9mb3J3YX'
-    'JkGAIgASgIUgtmYXN0Rm9yd2FyZBItChJ3YW50X25vdGlmaWNhdGlvbnMYAyABKAhSEXdhbnRO'
-    'b3RpZmljYXRpb25z');
+    'ChVDb250cmFjdEFjY2VwdFJlcXVlc3QSEAoDcGlkGAEgASgJUgNwaWQSHwoLYXV0b19hY2NlcH'
+    'QYAiABKAhSCmF1dG9BY2NlcHQSLQoSd2FudF9ub3RpZmljYXRpb25zGAMgASgIUhF3YW50Tm90'
+    'aWZpY2F0aW9ucw==');
 
 @$core.Deprecated('Use contractAcceptResponseDescriptor instead')
 const ContractAcceptResponse$json = {
@@ -232,7 +232,7 @@ const ContractAgreeRequest$json = {
   '2': [
     {'1': 'agreement', '3': 1, '4': 1, '5': 9, '10': 'agreement'},
     {'1': 'pid', '3': 2, '4': 1, '5': 9, '10': 'pid'},
-    {'1': 'fast_forward', '3': 3, '4': 1, '5': 8, '10': 'fastForward'},
+    {'1': 'auto_accept', '3': 3, '4': 1, '5': 8, '10': 'autoAccept'},
     {'1': 'want_notifications', '3': 4, '4': 1, '5': 8, '10': 'wantNotifications'},
   ],
 };
@@ -240,8 +240,8 @@ const ContractAgreeRequest$json = {
 /// Descriptor for `ContractAgreeRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List contractAgreeRequestDescriptor = $convert.base64Decode(
     'ChRDb250cmFjdEFncmVlUmVxdWVzdBIcCglhZ3JlZW1lbnQYASABKAlSCWFncmVlbWVudBIQCg'
-    'NwaWQYAiABKAlSA3BpZBIhCgxmYXN0X2ZvcndhcmQYAyABKAhSC2Zhc3RGb3J3YXJkEi0KEndh'
-    'bnRfbm90aWZpY2F0aW9ucxgEIAEoCFIRd2FudE5vdGlmaWNhdGlvbnM=');
+    'NwaWQYAiABKAlSA3BpZBIfCgthdXRvX2FjY2VwdBgDIAEoCFIKYXV0b0FjY2VwdBItChJ3YW50'
+    'X25vdGlmaWNhdGlvbnMYBCABKAhSEXdhbnROb3RpZmljYXRpb25z');
 
 @$core.Deprecated('Use contractAgreeResponseDescriptor instead')
 const ContractAgreeResponse$json = {
@@ -257,16 +257,16 @@ const ContractVerifyRequest$json = {
   '1': 'ContractVerifyRequest',
   '2': [
     {'1': 'pid', '3': 1, '4': 1, '5': 9, '10': 'pid'},
-    {'1': 'fast_forward', '3': 2, '4': 1, '5': 8, '10': 'fastForward'},
+    {'1': 'auto_accept', '3': 2, '4': 1, '5': 8, '10': 'autoAccept'},
     {'1': 'want_notifications', '3': 3, '4': 1, '5': 8, '10': 'wantNotifications'},
   ],
 };
 
 /// Descriptor for `ContractVerifyRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List contractVerifyRequestDescriptor = $convert.base64Decode(
-    'ChVDb250cmFjdFZlcmlmeVJlcXVlc3QSEAoDcGlkGAEgASgJUgNwaWQSIQoMZmFzdF9mb3J3YX'
-    'JkGAIgASgIUgtmYXN0Rm9yd2FyZBItChJ3YW50X25vdGlmaWNhdGlvbnMYAyABKAhSEXdhbnRO'
-    'b3RpZmljYXRpb25z');
+    'ChVDb250cmFjdFZlcmlmeVJlcXVlc3QSEAoDcGlkGAEgASgJUgNwaWQSHwoLYXV0b19hY2NlcH'
+    'QYAiABKAhSCmF1dG9BY2NlcHQSLQoSd2FudF9ub3RpZmljYXRpb25zGAMgASgIUhF3YW50Tm90'
+    'aWZpY2F0aW9ucw==');
 
 @$core.Deprecated('Use contractVerifyResponseDescriptor instead')
 const ContractVerifyResponse$json = {
@@ -282,16 +282,16 @@ const ContractFinalizeRequest$json = {
   '1': 'ContractFinalizeRequest',
   '2': [
     {'1': 'pid', '3': 1, '4': 1, '5': 9, '10': 'pid'},
-    {'1': 'fast_forward', '3': 2, '4': 1, '5': 8, '10': 'fastForward'},
+    {'1': 'auto_accept', '3': 2, '4': 1, '5': 8, '10': 'autoAccept'},
     {'1': 'want_notifications', '3': 3, '4': 1, '5': 8, '10': 'wantNotifications'},
   ],
 };
 
 /// Descriptor for `ContractFinalizeRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List contractFinalizeRequestDescriptor = $convert.base64Decode(
-    'ChdDb250cmFjdEZpbmFsaXplUmVxdWVzdBIQCgNwaWQYASABKAlSA3BpZBIhCgxmYXN0X2Zvcn'
-    'dhcmQYAiABKAhSC2Zhc3RGb3J3YXJkEi0KEndhbnRfbm90aWZpY2F0aW9ucxgDIAEoCFIRd2Fu'
-    'dE5vdGlmaWNhdGlvbnM=');
+    'ChdDb250cmFjdEZpbmFsaXplUmVxdWVzdBIQCgNwaWQYASABKAlSA3BpZBIfCgthdXRvX2FjY2'
+    'VwdBgCIAEoCFIKYXV0b0FjY2VwdBItChJ3YW50X25vdGlmaWNhdGlvbnMYAyABKAhSEXdhbnRO'
+    'b3RpZmljYXRpb25z');
 
 @$core.Deprecated('Use contractFinalizeResponseDescriptor instead')
 const ContractFinalizeResponse$json = {
