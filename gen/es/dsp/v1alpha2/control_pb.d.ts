@@ -274,6 +274,11 @@ export declare class ContractRequestRequest extends Message<ContractRequestReque
    */
   participantAddress?: string;
 
+  /**
+   * @generated from field: bool auto_accept = 4;
+   */
+  autoAccept: boolean;
+
   constructor(data?: PartialMessage<ContractRequestRequest>);
 
   static readonly runtime: typeof proto3;
@@ -330,6 +335,11 @@ export declare class ContractOfferRequest extends Message<ContractOfferRequest> 
    */
   participantAddress?: string;
 
+  /**
+   * @generated from field: bool auto_accept = 4;
+   */
+  autoAccept: boolean;
+
   constructor(data?: PartialMessage<ContractOfferRequest>);
 
   static readonly runtime: typeof proto3;
@@ -374,6 +384,11 @@ export declare class ContractAcceptRequest extends Message<ContractAcceptRequest
    * @generated from field: string pid = 1;
    */
   pid: string;
+
+  /**
+   * @generated from field: bool auto_accept = 2;
+   */
+  autoAccept: boolean;
 
   constructor(data?: PartialMessage<ContractAcceptRequest>);
 
@@ -425,6 +440,11 @@ export declare class ContractAgreeRequest extends Message<ContractAgreeRequest> 
    */
   pid: string;
 
+  /**
+   * @generated from field: bool auto_accept = 3;
+   */
+  autoAccept: boolean;
+
   constructor(data?: PartialMessage<ContractAgreeRequest>);
 
   static readonly runtime: typeof proto3;
@@ -470,6 +490,13 @@ export declare class ContractVerifyRequest extends Message<ContractVerifyRequest
    */
   pid: string;
 
+  /**
+   * signals to RUN-DSP that it should auto accept the negotiation and not wait for any requests of the contract service.
+   *
+   * @generated from field: bool auto_accept = 2;
+   */
+  autoAccept: boolean;
+
   constructor(data?: PartialMessage<ContractVerifyRequest>);
 
   static readonly runtime: typeof proto3;
@@ -514,6 +541,11 @@ export declare class ContractFinalizeRequest extends Message<ContractFinalizeReq
    * @generated from field: string pid = 1;
    */
   pid: string;
+
+  /**
+   * @generated from field: bool auto_accept = 2;
+   */
+  autoAccept: boolean;
 
   constructor(data?: PartialMessage<ContractFinalizeRequest>);
 

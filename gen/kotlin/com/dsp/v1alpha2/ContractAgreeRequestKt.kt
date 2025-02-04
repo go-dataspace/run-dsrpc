@@ -64,6 +64,23 @@ public object ContractAgreeRequestKt {
     public fun clearPid() {
       _builder.clearPid()
     }
+
+    /**
+     * `bool auto_accept = 3 [json_name = "autoAccept"];`
+     */
+    public var autoAccept: kotlin.Boolean
+      @JvmName("getAutoAccept")
+      get() = _builder.getAutoAccept()
+      @JvmName("setAutoAccept")
+      set(value) {
+        _builder.setAutoAccept(value)
+      }
+    /**
+     * `bool auto_accept = 3 [json_name = "autoAccept"];`
+     */
+    public fun clearAutoAccept() {
+      _builder.clearAutoAccept()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

@@ -96,6 +96,23 @@ public object ContractRequestRequestKt {
     public fun hasParticipantAddress(): kotlin.Boolean {
       return _builder.hasParticipantAddress()
     }
+
+    /**
+     * `bool auto_accept = 4 [json_name = "autoAccept"];`
+     */
+    public var autoAccept: kotlin.Boolean
+      @JvmName("getAutoAccept")
+      get() = _builder.getAutoAccept()
+      @JvmName("setAutoAccept")
+      set(value) {
+        _builder.setAutoAccept(value)
+      }
+    /**
+     * `bool auto_accept = 4 [json_name = "autoAccept"];`
+     */
+    public fun clearAutoAccept() {
+      _builder.clearAutoAccept()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

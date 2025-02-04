@@ -31,4 +31,10 @@ public interface ContractAgreeRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPidBytes();
+
+  /**
+   * <code>bool auto_accept = 3 [json_name = "autoAccept"];</code>
+   * @return The autoAccept.
+   */
+  boolean getAutoAccept();
 }

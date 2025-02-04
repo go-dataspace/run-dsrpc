@@ -53,4 +53,10 @@ public interface ContractRequestRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getParticipantAddressBytes();
+
+  /**
+   * <code>bool auto_accept = 4 [json_name = "autoAccept"];</code>
+   * @return The autoAccept.
+   */
+  boolean getAutoAccept();
 }

@@ -19,4 +19,10 @@ public interface ContractFinalizeRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPidBytes();
+
+  /**
+   * <code>bool auto_accept = 2 [json_name = "autoAccept"];</code>
+   * @return The autoAccept.
+   */
+  boolean getAutoAccept();
 }

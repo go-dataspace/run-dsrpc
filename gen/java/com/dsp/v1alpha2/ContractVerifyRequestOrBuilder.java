@@ -19,4 +19,14 @@ public interface ContractVerifyRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPidBytes();
+
+  /**
+   * <pre>
+   * signals to RUN-DSP that it should auto accept the negotiation and not wait for any requests of the contract service.
+   * </pre>
+   *
+   * <code>bool auto_accept = 2 [json_name = "autoAccept"];</code>
+   * @return The autoAccept.
+   */
+  boolean getAutoAccept();
 }

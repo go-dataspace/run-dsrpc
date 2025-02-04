@@ -47,6 +47,31 @@ public object ContractVerifyRequestKt {
     public fun clearPid() {
       _builder.clearPid()
     }
+
+    /**
+     * ```
+     * signals to RUN-DSP that it should auto accept the negotiation and not wait for any requests of the contract service.
+     * ```
+     *
+     * `bool auto_accept = 2 [json_name = "autoAccept"];`
+     */
+    public var autoAccept: kotlin.Boolean
+      @JvmName("getAutoAccept")
+      get() = _builder.getAutoAccept()
+      @JvmName("setAutoAccept")
+      set(value) {
+        _builder.setAutoAccept(value)
+      }
+    /**
+     * ```
+     * signals to RUN-DSP that it should auto accept the negotiation and not wait for any requests of the contract service.
+     * ```
+     *
+     * `bool auto_accept = 2 [json_name = "autoAccept"];`
+     */
+    public fun clearAutoAccept() {
+      _builder.clearAutoAccept()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

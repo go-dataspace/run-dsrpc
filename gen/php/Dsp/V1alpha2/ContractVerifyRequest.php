@@ -20,6 +20,12 @@ class ContractVerifyRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string pid = 1 [json_name = "pid"];</code>
      */
     protected $pid = '';
+    /**
+     * signals to RUN-DSP that it should auto accept the negotiation and not wait for any requests of the contract service.
+     *
+     * Generated from protobuf field <code>bool auto_accept = 2 [json_name = "autoAccept"];</code>
+     */
+    protected $auto_accept = false;
 
     /**
      * Constructor.
@@ -28,6 +34,8 @@ class ContractVerifyRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $pid
+     *     @type bool $auto_accept
+     *           signals to RUN-DSP that it should auto accept the negotiation and not wait for any requests of the contract service.
      * }
      */
     public function __construct($data = NULL) {
@@ -53,6 +61,32 @@ class ContractVerifyRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->pid = $var;
+
+        return $this;
+    }
+
+    /**
+     * signals to RUN-DSP that it should auto accept the negotiation and not wait for any requests of the contract service.
+     *
+     * Generated from protobuf field <code>bool auto_accept = 2 [json_name = "autoAccept"];</code>
+     * @return bool
+     */
+    public function getAutoAccept()
+    {
+        return $this->auto_accept;
+    }
+
+    /**
+     * signals to RUN-DSP that it should auto accept the negotiation and not wait for any requests of the contract service.
+     *
+     * Generated from protobuf field <code>bool auto_accept = 2 [json_name = "autoAccept"];</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setAutoAccept($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->auto_accept = $var;
 
         return $this;
     }

@@ -123,6 +123,17 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int AUTO_ACCEPT_FIELD_NUMBER = 3;
+  private boolean autoAccept_ = false;
+  /**
+   * <code>bool auto_accept = 3 [json_name = "autoAccept"];</code>
+   * @return The autoAccept.
+   */
+  @java.lang.Override
+  public boolean getAutoAccept() {
+    return autoAccept_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -143,6 +154,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pid_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, pid_);
     }
+    if (autoAccept_ != false) {
+      output.writeBool(3, autoAccept_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -157,6 +171,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pid_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, pid_);
+    }
+    if (autoAccept_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(3, autoAccept_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -177,6 +195,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getAgreement())) return false;
     if (!getPid()
         .equals(other.getPid())) return false;
+    if (getAutoAccept()
+        != other.getAutoAccept()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -192,6 +212,9 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getAgreement().hashCode();
     hash = (37 * hash) + PID_FIELD_NUMBER;
     hash = (53 * hash) + getPid().hashCode();
+    hash = (37 * hash) + AUTO_ACCEPT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getAutoAccept());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -329,6 +352,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       agreement_ = "";
       pid_ = "";
+      autoAccept_ = false;
       return this;
     }
 
@@ -367,6 +391,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.pid_ = pid_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.autoAccept_ = autoAccept_;
       }
     }
 
@@ -424,6 +451,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
+      if (other.getAutoAccept() != false) {
+        setAutoAccept(other.getAutoAccept());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -460,6 +490,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 24: {
+              autoAccept_ = input.readBool();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -617,6 +652,38 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       pid_ = value;
       bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private boolean autoAccept_ ;
+    /**
+     * <code>bool auto_accept = 3 [json_name = "autoAccept"];</code>
+     * @return The autoAccept.
+     */
+    @java.lang.Override
+    public boolean getAutoAccept() {
+      return autoAccept_;
+    }
+    /**
+     * <code>bool auto_accept = 3 [json_name = "autoAccept"];</code>
+     * @param value The autoAccept to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAutoAccept(boolean value) {
+
+      autoAccept_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool auto_accept = 3 [json_name = "autoAccept"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAutoAccept() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      autoAccept_ = false;
       onChanged();
       return this;
     }

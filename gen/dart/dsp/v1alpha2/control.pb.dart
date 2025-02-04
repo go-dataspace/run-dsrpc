@@ -475,6 +475,7 @@ class ContractRequestRequest extends $pb.GeneratedMessage {
     $core.String? offer,
     $core.String? pid,
     $core.String? participantAddress,
+    $core.bool? autoAccept,
   }) {
     final $result = create();
     if (offer != null) {
@@ -486,6 +487,9 @@ class ContractRequestRequest extends $pb.GeneratedMessage {
     if (participantAddress != null) {
       $result.participantAddress = participantAddress;
     }
+    if (autoAccept != null) {
+      $result.autoAccept = autoAccept;
+    }
     return $result;
   }
   ContractRequestRequest._() : super();
@@ -496,6 +500,7 @@ class ContractRequestRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'offer')
     ..aOS(2, _omitFieldNames ? '' : 'pid')
     ..aOS(3, _omitFieldNames ? '' : 'participantAddress')
+    ..aOB(4, _omitFieldNames ? '' : 'autoAccept')
     ..hasRequiredFields = false
   ;
 
@@ -546,6 +551,15 @@ class ContractRequestRequest extends $pb.GeneratedMessage {
   $core.bool hasParticipantAddress() => $_has(2);
   @$pb.TagNumber(3)
   void clearParticipantAddress() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.bool get autoAccept => $_getBF(3);
+  @$pb.TagNumber(4)
+  set autoAccept($core.bool v) { $_setBool(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasAutoAccept() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearAutoAccept() => clearField(4);
 }
 
 class ContractRequestResponse extends $pb.GeneratedMessage {
@@ -587,6 +601,7 @@ class ContractOfferRequest extends $pb.GeneratedMessage {
     $core.String? offer,
     $core.String? pid,
     $core.String? participantAddress,
+    $core.bool? autoAccept,
   }) {
     final $result = create();
     if (offer != null) {
@@ -598,6 +613,9 @@ class ContractOfferRequest extends $pb.GeneratedMessage {
     if (participantAddress != null) {
       $result.participantAddress = participantAddress;
     }
+    if (autoAccept != null) {
+      $result.autoAccept = autoAccept;
+    }
     return $result;
   }
   ContractOfferRequest._() : super();
@@ -608,6 +626,7 @@ class ContractOfferRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'offer')
     ..aOS(2, _omitFieldNames ? '' : 'pid')
     ..aOS(3, _omitFieldNames ? '' : 'participantAddress')
+    ..aOB(4, _omitFieldNames ? '' : 'autoAccept')
     ..hasRequiredFields = false
   ;
 
@@ -658,6 +677,15 @@ class ContractOfferRequest extends $pb.GeneratedMessage {
   $core.bool hasParticipantAddress() => $_has(2);
   @$pb.TagNumber(3)
   void clearParticipantAddress() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.bool get autoAccept => $_getBF(3);
+  @$pb.TagNumber(4)
+  set autoAccept($core.bool v) { $_setBool(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasAutoAccept() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearAutoAccept() => clearField(4);
 }
 
 class ContractOfferResponse extends $pb.GeneratedMessage {
@@ -696,10 +724,14 @@ class ContractOfferResponse extends $pb.GeneratedMessage {
 class ContractAcceptRequest extends $pb.GeneratedMessage {
   factory ContractAcceptRequest({
     $core.String? pid,
+    $core.bool? autoAccept,
   }) {
     final $result = create();
     if (pid != null) {
       $result.pid = pid;
+    }
+    if (autoAccept != null) {
+      $result.autoAccept = autoAccept;
     }
     return $result;
   }
@@ -709,6 +741,7 @@ class ContractAcceptRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContractAcceptRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'pid')
+    ..aOB(2, _omitFieldNames ? '' : 'autoAccept')
     ..hasRequiredFields = false
   ;
 
@@ -741,6 +774,15 @@ class ContractAcceptRequest extends $pb.GeneratedMessage {
   $core.bool hasPid() => $_has(0);
   @$pb.TagNumber(1)
   void clearPid() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.bool get autoAccept => $_getBF(1);
+  @$pb.TagNumber(2)
+  set autoAccept($core.bool v) { $_setBool(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasAutoAccept() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAutoAccept() => clearField(2);
 }
 
 class ContractAcceptResponse extends $pb.GeneratedMessage {
@@ -780,6 +822,7 @@ class ContractAgreeRequest extends $pb.GeneratedMessage {
   factory ContractAgreeRequest({
     $core.String? agreement,
     $core.String? pid,
+    $core.bool? autoAccept,
   }) {
     final $result = create();
     if (agreement != null) {
@@ -787,6 +830,9 @@ class ContractAgreeRequest extends $pb.GeneratedMessage {
     }
     if (pid != null) {
       $result.pid = pid;
+    }
+    if (autoAccept != null) {
+      $result.autoAccept = autoAccept;
     }
     return $result;
   }
@@ -797,6 +843,7 @@ class ContractAgreeRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContractAgreeRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'agreement')
     ..aOS(2, _omitFieldNames ? '' : 'pid')
+    ..aOB(3, _omitFieldNames ? '' : 'autoAccept')
     ..hasRequiredFields = false
   ;
 
@@ -838,6 +885,15 @@ class ContractAgreeRequest extends $pb.GeneratedMessage {
   $core.bool hasPid() => $_has(1);
   @$pb.TagNumber(2)
   void clearPid() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.bool get autoAccept => $_getBF(2);
+  @$pb.TagNumber(3)
+  set autoAccept($core.bool v) { $_setBool(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasAutoAccept() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearAutoAccept() => clearField(3);
 }
 
 class ContractAgreeResponse extends $pb.GeneratedMessage {
@@ -876,10 +932,14 @@ class ContractAgreeResponse extends $pb.GeneratedMessage {
 class ContractVerifyRequest extends $pb.GeneratedMessage {
   factory ContractVerifyRequest({
     $core.String? pid,
+    $core.bool? autoAccept,
   }) {
     final $result = create();
     if (pid != null) {
       $result.pid = pid;
+    }
+    if (autoAccept != null) {
+      $result.autoAccept = autoAccept;
     }
     return $result;
   }
@@ -889,6 +949,7 @@ class ContractVerifyRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContractVerifyRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'pid')
+    ..aOB(2, _omitFieldNames ? '' : 'autoAccept')
     ..hasRequiredFields = false
   ;
 
@@ -921,6 +982,15 @@ class ContractVerifyRequest extends $pb.GeneratedMessage {
   $core.bool hasPid() => $_has(0);
   @$pb.TagNumber(1)
   void clearPid() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.bool get autoAccept => $_getBF(1);
+  @$pb.TagNumber(2)
+  set autoAccept($core.bool v) { $_setBool(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasAutoAccept() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAutoAccept() => clearField(2);
 }
 
 class ContractVerifyResponse extends $pb.GeneratedMessage {
@@ -959,10 +1029,14 @@ class ContractVerifyResponse extends $pb.GeneratedMessage {
 class ContractFinalizeRequest extends $pb.GeneratedMessage {
   factory ContractFinalizeRequest({
     $core.String? pid,
+    $core.bool? autoAccept,
   }) {
     final $result = create();
     if (pid != null) {
       $result.pid = pid;
+    }
+    if (autoAccept != null) {
+      $result.autoAccept = autoAccept;
     }
     return $result;
   }
@@ -972,6 +1046,7 @@ class ContractFinalizeRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContractFinalizeRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'dsp.v1alpha2'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'pid')
+    ..aOB(2, _omitFieldNames ? '' : 'autoAccept')
     ..hasRequiredFields = false
   ;
 
@@ -1004,6 +1079,15 @@ class ContractFinalizeRequest extends $pb.GeneratedMessage {
   $core.bool hasPid() => $_has(0);
   @$pb.TagNumber(1)
   void clearPid() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.bool get autoAccept => $_getBF(1);
+  @$pb.TagNumber(2)
+  set autoAccept($core.bool v) { $_setBool(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasAutoAccept() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAutoAccept() => clearField(2);
 }
 
 class ContractFinalizeResponse extends $pb.GeneratedMessage {

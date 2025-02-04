@@ -29,6 +29,10 @@ class ContractOfferRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>optional string participant_address = 3 [json_name = "participantAddress"];</code>
      */
     protected $participant_address = null;
+    /**
+     * Generated from protobuf field <code>bool auto_accept = 4 [json_name = "autoAccept"];</code>
+     */
+    protected $auto_accept = false;
 
     /**
      * Constructor.
@@ -39,6 +43,7 @@ class ContractOfferRequest extends \Google\Protobuf\Internal\Message
      *     @type string $offer
      *     @type string $pid
      *     @type string $participant_address
+     *     @type bool $auto_accept
      * }
      */
     public function __construct($data = NULL) {
@@ -128,6 +133,28 @@ class ContractOfferRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->participant_address = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool auto_accept = 4 [json_name = "autoAccept"];</code>
+     * @return bool
+     */
+    public function getAutoAccept()
+    {
+        return $this->auto_accept;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool auto_accept = 4 [json_name = "autoAccept"];</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setAutoAccept($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->auto_accept = $var;
 
         return $this;
     }

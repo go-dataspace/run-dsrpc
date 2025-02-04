@@ -2440,6 +2440,7 @@ class ContractVerifyRequest final : public ::google::protobuf::Message
   // accessors -------------------------------------------------------
   enum : int {
     kPidFieldNumber = 1,
+    kAutoAcceptFieldNumber = 2,
   };
   // string pid = 1 [json_name = "pid"];
   void clear_pid() ;
@@ -2457,12 +2458,22 @@ class ContractVerifyRequest final : public ::google::protobuf::Message
   std::string* _internal_mutable_pid();
 
   public:
+  // bool auto_accept = 2 [json_name = "autoAccept"];
+  void clear_auto_accept() ;
+  bool auto_accept() const;
+  void set_auto_accept(bool value);
+
+  private:
+  bool _internal_auto_accept() const;
+  void _internal_set_auto_accept(bool value);
+
+  public:
   // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractVerifyRequest)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      0, 1, 0,
+      1, 2, 0,
       46, 2>
       _table_;
 
@@ -2484,6 +2495,7 @@ class ContractVerifyRequest final : public ::google::protobuf::Message
                           ::google::protobuf::Arena* arena, const Impl_& from,
                           const ContractVerifyRequest& from_msg);
     ::google::protobuf::internal::ArenaStringPtr pid_;
+    bool auto_accept_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -3128,6 +3140,7 @@ class ContractRequestRequest final : public ::google::protobuf::Message
     kOfferFieldNumber = 1,
     kPidFieldNumber = 2,
     kParticipantAddressFieldNumber = 3,
+    kAutoAcceptFieldNumber = 4,
   };
   // string offer = 1 [json_name = "offer"];
   void clear_offer() ;
@@ -3179,12 +3192,22 @@ class ContractRequestRequest final : public ::google::protobuf::Message
   std::string* _internal_mutable_participant_address();
 
   public:
+  // bool auto_accept = 4 [json_name = "autoAccept"];
+  void clear_auto_accept() ;
+  bool auto_accept() const;
+  void set_auto_accept(bool value);
+
+  private:
+  bool _internal_auto_accept() const;
+  void _internal_set_auto_accept(bool value);
+
+  public:
   // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractRequestRequest)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      2, 3, 0,
+      2, 4, 0,
       71, 2>
       _table_;
 
@@ -3210,6 +3233,7 @@ class ContractRequestRequest final : public ::google::protobuf::Message
     ::google::protobuf::internal::ArenaStringPtr offer_;
     ::google::protobuf::internal::ArenaStringPtr pid_;
     ::google::protobuf::internal::ArenaStringPtr participant_address_;
+    bool auto_accept_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -3486,6 +3510,7 @@ class ContractOfferRequest final : public ::google::protobuf::Message
     kOfferFieldNumber = 1,
     kPidFieldNumber = 2,
     kParticipantAddressFieldNumber = 3,
+    kAutoAcceptFieldNumber = 4,
   };
   // string offer = 1 [json_name = "offer"];
   void clear_offer() ;
@@ -3537,12 +3562,22 @@ class ContractOfferRequest final : public ::google::protobuf::Message
   std::string* _internal_mutable_participant_address();
 
   public:
+  // bool auto_accept = 4 [json_name = "autoAccept"];
+  void clear_auto_accept() ;
+  bool auto_accept() const;
+  void set_auto_accept(bool value);
+
+  private:
+  bool _internal_auto_accept() const;
+  void _internal_set_auto_accept(bool value);
+
+  public:
   // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractOfferRequest)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      2, 3, 0,
+      2, 4, 0,
       69, 2>
       _table_;
 
@@ -3568,6 +3603,7 @@ class ContractOfferRequest final : public ::google::protobuf::Message
     ::google::protobuf::internal::ArenaStringPtr offer_;
     ::google::protobuf::internal::ArenaStringPtr pid_;
     ::google::protobuf::internal::ArenaStringPtr participant_address_;
+    bool auto_accept_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -3842,6 +3878,7 @@ class ContractFinalizeRequest final : public ::google::protobuf::Message
   // accessors -------------------------------------------------------
   enum : int {
     kPidFieldNumber = 1,
+    kAutoAcceptFieldNumber = 2,
   };
   // string pid = 1 [json_name = "pid"];
   void clear_pid() ;
@@ -3859,12 +3896,22 @@ class ContractFinalizeRequest final : public ::google::protobuf::Message
   std::string* _internal_mutable_pid();
 
   public:
+  // bool auto_accept = 2 [json_name = "autoAccept"];
+  void clear_auto_accept() ;
+  bool auto_accept() const;
+  void set_auto_accept(bool value);
+
+  private:
+  bool _internal_auto_accept() const;
+  void _internal_set_auto_accept(bool value);
+
+  public:
   // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractFinalizeRequest)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      0, 1, 0,
+      1, 2, 0,
       48, 2>
       _table_;
 
@@ -3886,6 +3933,7 @@ class ContractFinalizeRequest final : public ::google::protobuf::Message
                           ::google::protobuf::Arena* arena, const Impl_& from,
                           const ContractFinalizeRequest& from_msg);
     ::google::protobuf::internal::ArenaStringPtr pid_;
+    bool auto_accept_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -4162,6 +4210,7 @@ class ContractAgreeRequest final : public ::google::protobuf::Message
   enum : int {
     kAgreementFieldNumber = 1,
     kPidFieldNumber = 2,
+    kAutoAcceptFieldNumber = 3,
   };
   // string agreement = 1 [json_name = "agreement"];
   void clear_agreement() ;
@@ -4195,12 +4244,22 @@ class ContractAgreeRequest final : public ::google::protobuf::Message
   std::string* _internal_mutable_pid();
 
   public:
+  // bool auto_accept = 3 [json_name = "autoAccept"];
+  void clear_auto_accept() ;
+  bool auto_accept() const;
+  void set_auto_accept(bool value);
+
+  private:
+  bool _internal_auto_accept() const;
+  void _internal_set_auto_accept(bool value);
+
+  public:
   // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractAgreeRequest)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      1, 2, 0,
+      2, 3, 0,
       54, 2>
       _table_;
 
@@ -4223,6 +4282,7 @@ class ContractAgreeRequest final : public ::google::protobuf::Message
                           const ContractAgreeRequest& from_msg);
     ::google::protobuf::internal::ArenaStringPtr agreement_;
     ::google::protobuf::internal::ArenaStringPtr pid_;
+    bool auto_accept_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -4498,6 +4558,7 @@ class ContractAcceptRequest final : public ::google::protobuf::Message
   // accessors -------------------------------------------------------
   enum : int {
     kPidFieldNumber = 1,
+    kAutoAcceptFieldNumber = 2,
   };
   // string pid = 1 [json_name = "pid"];
   void clear_pid() ;
@@ -4515,12 +4576,22 @@ class ContractAcceptRequest final : public ::google::protobuf::Message
   std::string* _internal_mutable_pid();
 
   public:
+  // bool auto_accept = 2 [json_name = "autoAccept"];
+  void clear_auto_accept() ;
+  bool auto_accept() const;
+  void set_auto_accept(bool value);
+
+  private:
+  bool _internal_auto_accept() const;
+  void _internal_set_auto_accept(bool value);
+
+  public:
   // @@protoc_insertion_point(class_scope:dsp.v1alpha2.ContractAcceptRequest)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      0, 1, 0,
+      1, 2, 0,
       46, 2>
       _table_;
 
@@ -4542,6 +4613,7 @@ class ContractAcceptRequest final : public ::google::protobuf::Message
                           ::google::protobuf::Arena* arena, const Impl_& from,
                           const ContractAcceptRequest& from_msg);
     ::google::protobuf::internal::ArenaStringPtr pid_;
+    bool auto_accept_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -6211,6 +6283,28 @@ inline void ContractRequestRequest::set_allocated_participant_address(std::strin
   // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractRequestRequest.participant_address)
 }
 
+// bool auto_accept = 4 [json_name = "autoAccept"];
+inline void ContractRequestRequest::clear_auto_accept() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.auto_accept_ = false;
+}
+inline bool ContractRequestRequest::auto_accept() const {
+  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractRequestRequest.auto_accept)
+  return _internal_auto_accept();
+}
+inline void ContractRequestRequest::set_auto_accept(bool value) {
+  _internal_set_auto_accept(value);
+  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractRequestRequest.auto_accept)
+}
+inline bool ContractRequestRequest::_internal_auto_accept() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.auto_accept_;
+}
+inline void ContractRequestRequest::_internal_set_auto_accept(bool value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.auto_accept_ = value;
+}
+
 // -------------------------------------------------------------------
 
 // ContractRequestResponse
@@ -6411,6 +6505,28 @@ inline void ContractOfferRequest::set_allocated_participant_address(std::string*
   // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractOfferRequest.participant_address)
 }
 
+// bool auto_accept = 4 [json_name = "autoAccept"];
+inline void ContractOfferRequest::clear_auto_accept() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.auto_accept_ = false;
+}
+inline bool ContractOfferRequest::auto_accept() const {
+  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractOfferRequest.auto_accept)
+  return _internal_auto_accept();
+}
+inline void ContractOfferRequest::set_auto_accept(bool value) {
+  _internal_set_auto_accept(value);
+  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractOfferRequest.auto_accept)
+}
+inline bool ContractOfferRequest::_internal_auto_accept() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.auto_accept_;
+}
+inline void ContractOfferRequest::_internal_set_auto_accept(bool value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.auto_accept_ = value;
+}
+
 // -------------------------------------------------------------------
 
 // ContractOfferResponse
@@ -6467,6 +6583,28 @@ inline void ContractAcceptRequest::set_allocated_pid(std::string* value) {
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractAcceptRequest.pid)
+}
+
+// bool auto_accept = 2 [json_name = "autoAccept"];
+inline void ContractAcceptRequest::clear_auto_accept() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.auto_accept_ = false;
+}
+inline bool ContractAcceptRequest::auto_accept() const {
+  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractAcceptRequest.auto_accept)
+  return _internal_auto_accept();
+}
+inline void ContractAcceptRequest::set_auto_accept(bool value) {
+  _internal_set_auto_accept(value);
+  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractAcceptRequest.auto_accept)
+}
+inline bool ContractAcceptRequest::_internal_auto_accept() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.auto_accept_;
+}
+inline void ContractAcceptRequest::_internal_set_auto_accept(bool value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.auto_accept_ = value;
 }
 
 // -------------------------------------------------------------------
@@ -6577,6 +6715,28 @@ inline void ContractAgreeRequest::set_allocated_pid(std::string* value) {
   // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractAgreeRequest.pid)
 }
 
+// bool auto_accept = 3 [json_name = "autoAccept"];
+inline void ContractAgreeRequest::clear_auto_accept() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.auto_accept_ = false;
+}
+inline bool ContractAgreeRequest::auto_accept() const {
+  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractAgreeRequest.auto_accept)
+  return _internal_auto_accept();
+}
+inline void ContractAgreeRequest::set_auto_accept(bool value) {
+  _internal_set_auto_accept(value);
+  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractAgreeRequest.auto_accept)
+}
+inline bool ContractAgreeRequest::_internal_auto_accept() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.auto_accept_;
+}
+inline void ContractAgreeRequest::_internal_set_auto_accept(bool value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.auto_accept_ = value;
+}
+
 // -------------------------------------------------------------------
 
 // ContractAgreeResponse
@@ -6635,6 +6795,28 @@ inline void ContractVerifyRequest::set_allocated_pid(std::string* value) {
   // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractVerifyRequest.pid)
 }
 
+// bool auto_accept = 2 [json_name = "autoAccept"];
+inline void ContractVerifyRequest::clear_auto_accept() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.auto_accept_ = false;
+}
+inline bool ContractVerifyRequest::auto_accept() const {
+  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractVerifyRequest.auto_accept)
+  return _internal_auto_accept();
+}
+inline void ContractVerifyRequest::set_auto_accept(bool value) {
+  _internal_set_auto_accept(value);
+  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractVerifyRequest.auto_accept)
+}
+inline bool ContractVerifyRequest::_internal_auto_accept() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.auto_accept_;
+}
+inline void ContractVerifyRequest::_internal_set_auto_accept(bool value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.auto_accept_ = value;
+}
+
 // -------------------------------------------------------------------
 
 // ContractVerifyResponse
@@ -6691,6 +6873,28 @@ inline void ContractFinalizeRequest::set_allocated_pid(std::string* value) {
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   // @@protoc_insertion_point(field_set_allocated:dsp.v1alpha2.ContractFinalizeRequest.pid)
+}
+
+// bool auto_accept = 2 [json_name = "autoAccept"];
+inline void ContractFinalizeRequest::clear_auto_accept() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.auto_accept_ = false;
+}
+inline bool ContractFinalizeRequest::auto_accept() const {
+  // @@protoc_insertion_point(field_get:dsp.v1alpha2.ContractFinalizeRequest.auto_accept)
+  return _internal_auto_accept();
+}
+inline void ContractFinalizeRequest::set_auto_accept(bool value) {
+  _internal_set_auto_accept(value);
+  // @@protoc_insertion_point(field_set:dsp.v1alpha2.ContractFinalizeRequest.auto_accept)
+}
+inline bool ContractFinalizeRequest::_internal_auto_accept() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.auto_accept_;
+}
+inline void ContractFinalizeRequest::_internal_set_auto_accept(bool value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.auto_accept_ = value;
 }
 
 // -------------------------------------------------------------------

@@ -24,6 +24,10 @@ class ContractAgreeRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string pid = 2 [json_name = "pid"];</code>
      */
     protected $pid = '';
+    /**
+     * Generated from protobuf field <code>bool auto_accept = 3 [json_name = "autoAccept"];</code>
+     */
+    protected $auto_accept = false;
 
     /**
      * Constructor.
@@ -33,6 +37,7 @@ class ContractAgreeRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type string $agreement
      *     @type string $pid
+     *     @type bool $auto_accept
      * }
      */
     public function __construct($data = NULL) {
@@ -80,6 +85,28 @@ class ContractAgreeRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->pid = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool auto_accept = 3 [json_name = "autoAccept"];</code>
+     * @return bool
+     */
+    public function getAutoAccept()
+    {
+        return $this->auto_accept;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool auto_accept = 3 [json_name = "autoAccept"];</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setAutoAccept($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->auto_accept = $var;
 
         return $this;
     }
